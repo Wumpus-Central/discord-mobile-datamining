@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/account/native/SMSBackupWarningAlert.tsx
-import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

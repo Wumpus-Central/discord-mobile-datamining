@@ -1,8 +1,8 @@
 // discord_app/modules/message_previews/PreviewData.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_3 from "hasFlag" /* 4031 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import closure_3 from "../../records/MessageRecord.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/message_previews/PreviewData.tsx");

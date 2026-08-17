@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let closure_7 = createCacheKey.createStyles(() => ({ container: { width: 80, height: 80 } }));

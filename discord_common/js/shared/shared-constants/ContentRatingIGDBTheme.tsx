@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ContentRatingIGDBTheme.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null, ADULT_THEMES: null };
 let set = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);

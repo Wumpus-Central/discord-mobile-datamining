@@ -1,5 +1,5 @@
 // discord_app/utils/PlatformUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("utils/PlatformUtils.tsx");
 for (const key10018 in require("PlatformTypes")) {

@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/premium/native/UserSettingsGiftingBadgeProgress.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8936 */;
-import { getSingleRequirementThreshold as closure_8 } from "initialize" /* 8936 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../badges/BadgeDirectoryStore.tsx";
+import { getSingleRequirementThreshold as closure_8 } from "../../../badges/BadgeDirectoryStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function GiftingBadgeIntro(analyticsLocation) {

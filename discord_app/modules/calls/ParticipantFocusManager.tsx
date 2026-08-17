@@ -1,7 +1,7 @@
 // discord_app/modules/calls/ParticipantFocusManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_0 from "createRTCConnection" /* 4539 */;
-import closure_1 from "getParticipants" /* 4773 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_0 from "../../stores/RTCConnectionStore.tsx";
+import closure_1 from "ChannelRTCStore.tsx";
 
 initializeDefault;
 class ParticipantFocusManager extends tmp2 {

@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx
-import initialize from "initialize" /* 589 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9249 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10357 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import hasAtLeastOneGPlaySynced from "../CollectiblesUtils.tsx";
+import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");

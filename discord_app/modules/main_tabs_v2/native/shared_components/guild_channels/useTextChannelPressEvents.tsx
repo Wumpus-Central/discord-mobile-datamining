@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");

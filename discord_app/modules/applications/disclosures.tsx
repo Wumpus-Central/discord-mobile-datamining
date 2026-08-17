@@ -1,7 +1,7 @@
 // discord_app/modules/applications/disclosures.tsx
-import create from "create" /* 9769 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function _getDisclosures() {

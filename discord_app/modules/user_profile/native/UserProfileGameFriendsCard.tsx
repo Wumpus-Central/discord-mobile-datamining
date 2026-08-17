@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileGameFriendsCard.tsx
-import noopAll from "noop" /* 19 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import DividerDefault from "Divider" /* 7185 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
+import DividerDefault from "UserProfileCard.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx
-import closure_2 from "getEmojiToGroupId" /* 6727 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import closure_2 from "../../emojis/EmojiStore.tsx";
+import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/PreviewableListingImageUtil.tsx
-import set from "set" /* 2 */;
-import getSourceAll from "getSource" /* 16943 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSourceAll from "../ListingImageUtil.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/PreviewableListingImageUtil.tsx");
 

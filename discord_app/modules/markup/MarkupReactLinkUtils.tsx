@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupReactLinkUtils.tsx
-import set from "set" /* 2 */;
-import isLinkTrusted from "isLinkTrusted" /* 8775 */;
+import set from "../../../_runtime/00002_set.js";
+import isLinkTrusted from "../../utils/MaskedLinkUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 

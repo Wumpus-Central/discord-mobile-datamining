@@ -1,8 +1,8 @@
 // discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7514 */;
+import set from "../../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import trackForumChannelSeenBatch from "../../tracking/Tracking.tsx";
 
 let c3 = "create-forum-post";
 let result = set.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");

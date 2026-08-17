@@ -1,14 +1,14 @@
 // discord_app/design/void/Form/native/FreeFormTextInput.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 8578 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef38 from "../../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../native.tsx";
+import PressableBase from "../../Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../../_runtime/08578_registerAsset.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ClearButton(onPress) {

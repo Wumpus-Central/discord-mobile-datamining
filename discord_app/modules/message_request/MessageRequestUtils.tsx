@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/MessageRequestUtils.tsx
-import closure_2 from "processChannel" /* 4799 */;
-import closure_3 from "processChannel" /* 4800 */;
+import closure_2 from "MessageRequestStore.tsx";
+import closure_3 from "SpamMessageRequestStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/VoiceCallTriggerPointExperiment.tsx
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../_runtime/00002_set.js";
+import ExperimentBuckets from "../experiments/ExperimentConstants.tsx";
+import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Treatment", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_voice_call_trigger_point", label: "Voice Call Trigger Point Experiment", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items });

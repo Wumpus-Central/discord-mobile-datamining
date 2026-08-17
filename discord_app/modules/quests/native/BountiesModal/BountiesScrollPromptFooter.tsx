@@ -1,19 +1,19 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollPromptFooter.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import timingNone from "timingNone" /* 4667 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9275 */;
-import apexExperiment from "apexExperiment" /* 14363 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 14364 */;
-import closure_3 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timingNone from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import AnimatedRenderItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import apexExperiment from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
+import useVisibilityTransition from "useVisibilityTransition.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BountiesScrollPromptFooterContent(zIndex) {

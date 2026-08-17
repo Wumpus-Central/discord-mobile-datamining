@@ -1,24 +1,24 @@
 // discord_app/modules/create_guild/native/AcceptGuildTemplate.tsx
-import applyDefault from "apply" /* 12 */;
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import DividerDefault from "Divider" /* 7693 */;
-import _modDef8575 from "module_8575" /* 8575 */;
-import getInvalidLinkSource from "getInvalidLinkSource" /* 10975 */;
-import renderIconDefault from "renderIcon" /* 10977 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { isGuildVocalChannelType } from "createChannelRecord" /* 1395 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import ME from "ME" /* 676 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import DividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
+import _modDef8575 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import getInvalidLinkSource from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
+import renderIconDefault from "../../guild/native/GuildIconUploader.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isGuildVocalChannelType } from "../../../records/ChannelRecord.tsx";
+import { isEveryoneRole } from "../../../records/GuildRoleRecord.tsx";
+import ME from "../../../Constants.tsx";
+import { GuildTemplateStates } from "../../guild_templates/GuildTemplatesConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
 
 require = arg1;
 function GuildTemplateResolving() {

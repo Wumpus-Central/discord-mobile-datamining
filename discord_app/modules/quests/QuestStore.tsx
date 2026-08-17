@@ -1,19 +1,19 @@
 // discord_app/modules/quests/QuestStore.tsx
-import failsDefault from "fails" /* 584 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
-import getQuestLogger from "getQuestLogger" /* 7459 */;
-import progressFromServer from "progressFromServer" /* 7460 */;
-import result6 from "result" /* 7468 */;
-import AdCreativeType from "AdCreativeType" /* 7469 */;
-import closure_33 from "_slicedToArray" /* 32 */;
-import closure_34 from "useConsoleQuestUIStore" /* 7454 */;
-import closure_35 from "_toPropertyKey" /* 7455 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import getQuestDeliveryDataForPlacement from "utils/QuestDataUtils.tsx";
+import QuestRewardTypes from "../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
+import getQuestLogger from "lib/getQuestLogger.tsx";
+import progressFromServer from "utils/QuestServerUtils.tsx";
+import result6 from "../ads/utils/AdDecisionUtils.tsx";
+import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import closure_33 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_34 from "ConsoleQuestUIStore.tsx";
+import closure_35 from "VideoQuestUIStore.tsx";
+import { QuestsExperimentLocations } from "QuestConstants.tsx";
 import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
 
 require = arg1;

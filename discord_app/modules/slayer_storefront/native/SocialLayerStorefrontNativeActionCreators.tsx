@@ -1,12 +1,12 @@
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontNativeActionCreators.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import messagesProxyDefault from "messagesProxy" /* 3271 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import apexExperiment from "apexExperiment" /* 8323 */;
+import set from "../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import apexExperiment from "../experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx";
 
 const jsx = jsxProd.jsx;
 let c4 = "social-layer-storefront-product-details-native-modal";

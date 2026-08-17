@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/useTrialIntervalOptions.tsx
-import closure_2 from "noop" /* 19 */;
-import { TIER_TRIAL_INTERVALS } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { TIER_TRIAL_INTERVALS } from "GuildRoleSubscriptionsConstants.tsx";
+import { SubscriptionIntervalTypes } from "../premium/PremiumConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrialIntervalOptions.tsx");

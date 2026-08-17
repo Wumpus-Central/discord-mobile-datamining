@@ -1,6 +1,6 @@
 // discord_app/modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 const result = set.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
 

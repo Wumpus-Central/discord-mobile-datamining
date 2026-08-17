@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/native/transformStats.tsx
-import set from "set" /* 2 */;
-import formatSinkWantStat from "formatSinkWantStat" /* 4631 */;
+import set from "../../../../../_runtime/00002_set.js";
+import formatSinkWantStat from "../utils/transformStatsUtils.tsx";
 import { formatSinkWantStat } from "../utils/transformStatsUtils.tsx";
 
 function sumBytes(rtpStats) {

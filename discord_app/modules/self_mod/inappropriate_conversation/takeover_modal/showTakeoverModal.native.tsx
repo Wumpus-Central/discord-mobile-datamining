@@ -1,9 +1,9 @@
 // discord_app/modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
+import set from "../../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import LOCATION_CONTEXT_MOBILE from "../../Constants.tsx";
+import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 
 const TAKEOVER_MODAL_KEY = LOCATION_CONTEXT_MOBILE.TAKEOVER_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");

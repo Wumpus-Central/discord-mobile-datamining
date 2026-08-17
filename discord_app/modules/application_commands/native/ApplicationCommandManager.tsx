@@ -1,15 +1,15 @@
 // discord_app/modules/application_commands/native/ApplicationCommandManager.tsx
-import setActiveCommandAll from "setActiveCommand" /* 7525 */;
-import dispatcherDefault from "dispatcher" /* 8466 */;
-import findGameMentionTokens from "findGameMentionTokens" /* 11163 */;
-import addRule from "addRule" /* 11164 */;
-import addRuleDefault from "addRule" /* 11164 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_6 from "handleInit" /* 7527 */;
-import ME from "ME" /* 676 */;
-import regExp from "regExp" /* 6810 */;
-import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1624 */;
+import setActiveCommandAll from "../ApplicationCommandActionCreators.tsx";
+import dispatcherDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
+import findGameMentionTokens from "../../chat_input/native/ChatInputCommandOptionParser.tsx";
+import addRule from "../../chat_input/native/ChatInputParser.tsx";
+import addRuleDefault from "../../chat_input/native/ChatInputParser.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import closure_6 from "../ApplicationCommandStore.tsx";
+import ME from "../../../Constants.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { MediaKeyboardTarget } from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: error, AutoCompleteResultTypes: closure_8, WHITESPACE_RE: c9 } = ME);

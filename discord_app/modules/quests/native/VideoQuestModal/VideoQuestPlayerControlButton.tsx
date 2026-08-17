@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "n" /* 689 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import isBlurDisabledDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../../../../_runtime/00689_n.js";
 
 require = arg1;
 let obj = { disabled: { opacity: 0.5 }, container: null, blur: null };

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "initialize" /* 1982 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "shouldShowOnboarding" /* 6784 */;
-import { GuildOnboardingStatus } from "shouldShowOnboarding" /* 6784 */;
-import { GuildOnboardingMode } from "serverPromptToClientPrompt" /* 5286 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "GuildOnboardingStore.tsx";
+import { GuildOnboardingStatus } from "GuildOnboardingStore.tsx";
+import { GuildOnboardingMode } from "GuildOnboardingPromptsConstants.tsx";
 
 const require = arg1;
 function handleUpdate(arg0) {

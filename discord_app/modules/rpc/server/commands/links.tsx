@@ -1,17 +1,17 @@
 // discord_app/modules/rpc/server/commands/links.tsx
-import openUserSettings from "openUserSettings" /* 7360 */;
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
-import set from "set" /* 2 */;
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
+import getApplicationFlags from "../../../applications/utils/ApplicationFlagUtils.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../../applications/ApplicationStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import ME from "../../../../Constants.tsx";
+import items3 from "../../../activities/Constants.tsx";
+import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = RPC_SCOPE_CONFIG);

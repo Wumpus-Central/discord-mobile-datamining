@@ -1,12 +1,12 @@
 // discord_app/modules/reactions/ReactionUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import ReactionTypes from "ReactionTypes" /* 7510 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4033 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import ReactionTypes from "../messages/MessageReactionsTypes.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import ME from "../../Constants.tsx";
+import { NotificationSettingsUpdateType as closure_6 } from "../notifications/NotificationConstants.tsx";
 
 require = arg1;
 ({ AnalyticsSections: c4, AnalyticEvents: c5 } = ME);

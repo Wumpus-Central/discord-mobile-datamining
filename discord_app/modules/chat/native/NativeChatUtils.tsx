@@ -1,10 +1,10 @@
 // discord_app/modules/chat/native/NativeChatUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10474 */;
-import enforcingDefault from "enforcing" /* 10476 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 ({ NativeModules: c3, findNodeHandle: c4 } = get_ActivityIndicator);
 let obj = { TOP: 0, [0]: "TOP", MIDDLE: 1, [1]: "MIDDLE", BOTTOM: 2, [2]: "BOTTOM", NONE: 3, [3]: "NONE" };

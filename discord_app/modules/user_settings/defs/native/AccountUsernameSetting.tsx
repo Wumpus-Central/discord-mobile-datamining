@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AccountUsernameSetting.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11051 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useCurrentUserHasAutomodQuarantinedProfile from "../../../guild_automod/AutomodQuarantineUtils.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { UsernameStatusMessage } from "../../account/native/UserSettingsChangeUsername.tsx";
 
 require = arg1;

@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/PreloadedUserSettingsMigrations.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage4 from "Storage" /* 595 */;
-import create from "create" /* 1306 */;
-import defineProperty from "defineProperty" /* 1337 */;
-import b64ToProto from "b64ToProto" /* 1342 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import HotspotStore2 from "HotspotStore" /* 7193 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelNoticeTypes } from "ME" /* 676 */;
-import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 11586 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import defineProperty from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import b64ToProto from "UserSettingsUtils.tsx";
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import HotspotStore2 from "../hotspot/index.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import { ChannelNoticeTypes } from "../../Constants.tsx";
+import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "../multi_account/Constants.tsx";
 
 require = arg1;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {

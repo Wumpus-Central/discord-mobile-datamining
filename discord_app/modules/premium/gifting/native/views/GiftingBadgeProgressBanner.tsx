@@ -1,14 +1,14 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx
-import noopAll from "noop" /* 19 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import Text from "Text" /* 4734 */;
-import contextDefault from "context" /* 7139 */;
-import trackImpressionDefault from "trackImpression" /* 9177 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import encodeProperties from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../../GiftingBadge.messages.js";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import contextDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
+import trackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

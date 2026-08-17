@@ -1,25 +1,25 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import TrashIcon from "TrashIcon" /* 4333 */;
-import Text from "Text" /* 4734 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import TableRowArrow from "TableRowArrow" /* 6297 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import SearchField from "SearchField" /* 7337 */;
-import getSearchEmptySource from "getSearchEmptySource" /* 9383 */;
-import handleDCShownToUser from "handleDCShownToUser" /* 9987 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15070 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15071 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 1381 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import updateUserGuildSettings from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
+import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import SearchField from "../../../../../design/components/TextField/native/SearchField.native.tsx";
+import getSearchEmptySource from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
+import handleDCShownToUser from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
+import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
+import DoubleCheckmarkIcon from "../../../../../design/components/Icon/native/redesign/generated/DoubleCheckmarkIcon.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../dismissible_content/DismissibleContentFrameworkStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DismissableContentsEmpty() {

@@ -1,13 +1,13 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellManager.tsx
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import initializeDefault from "initialize" /* 5038 */;
-import _crypto from "_crypto" /* 8588 */;
-import _modDef14084 from "module_14084" /* 14084 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "hasFetchedCredentials" /* 14077 */;
-import { LoginStates } from "ME" /* 676 */;
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import _crypto from "../../../utils/MFAUtils.tsx";
+import _modDef14084 from "PasskeyUpsellActionCreators.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../WebAuthnStore.tsx";
+import { LoginStates } from "../../../Constants.tsx";
 
 require = arg1;
 let c7 = false;

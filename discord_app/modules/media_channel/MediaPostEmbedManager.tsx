@@ -1,13 +1,13 @@
 // discord_app/modules/media_channel/MediaPostEmbedManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
-import closure_3 from "isSubscriptionGated" /* 1981 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "getMediaPostEmbed" /* 10639 */;
-import { FetchState } from "getMediaPostEmbed" /* 10639 */;
-import { MessageFlags } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
+import closure_3 from "../channel/GatedChannelStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "MediaPostEmbedStore.tsx";
+import { FetchState } from "MediaPostEmbedStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 function resolveMediaPostEmbeds(embeds) {

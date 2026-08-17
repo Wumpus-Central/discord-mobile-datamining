@@ -1,17 +1,17 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingConnectionPrompt.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "get" /* 6801 */;
-import closure_7 from "recomputeFromAppTokens" /* 5289 */;
-import closure_8 from "set" /* 5221 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleUpdate" /* 6788 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5286 */;
-import { GuildOnboardingModalStates as closure_12 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../guild_member_verification/MemberVerificationFormStore.tsx";
+import closure_7 from "../../oauth2/AuthorizedAppsStore.tsx";
+import closure_8 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../GuildOnboardingPromptsStore.tsx";
+import { OnboardingConnectionType } from "../GuildOnboardingPromptsConstants.tsx";
+import { GuildOnboardingModalStates as closure_12 } from "GuildOnboardingConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);

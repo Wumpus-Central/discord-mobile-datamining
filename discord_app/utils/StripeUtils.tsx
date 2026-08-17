@@ -1,11 +1,11 @@
 // discord_app/utils/StripeUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initialize from "initialize" /* 589 */;
-import _typeof from "_typeof" /* 4473 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import initialize from "../../discord_common/js/packages/flux/index.tsx";
+import _typeof from "../../_runtime/metro/04473__typeof.js";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../modules/user_settings/LocaleStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function getStripe() {

@@ -1,8 +1,8 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../ModalActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function redeemGiftCode(arg0) {

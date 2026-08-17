@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapImage.tsx
-import closure_3 from "processMessage" /* 5013 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { MessageTypes } from "ME" /* 676 */;
+import closure_3 from "../../../replies/ReferencedMessageStore.tsx";
+import closure_4 from "../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import { MessageTypes } from "../../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapImage.tsx");

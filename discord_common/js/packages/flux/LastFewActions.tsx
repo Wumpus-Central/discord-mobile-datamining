@@ -1,5 +1,5 @@
 // discord_common/js/packages/flux/LastFewActions.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let closure_0 = [];
 const result = set.fileFinishedImporting("../discord_common/js/packages/flux/LastFewActions.tsx");

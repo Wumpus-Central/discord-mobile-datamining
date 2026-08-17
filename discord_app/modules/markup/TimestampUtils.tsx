@@ -1,8 +1,8 @@
 // discord_app/modules/markup/TimestampUtils.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import tDefault from "t" /* 3975 */;
-import resetCache from "resetCache" /* 4063 */;
+import set from "../../../_runtime/00002_set.js";
+import setDefault from "../../utils/Durations.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import resetCache from "../../utils/DateUtils.tsx";
 
 let obj = {
   t(date) {

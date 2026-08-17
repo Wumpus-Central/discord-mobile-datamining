@@ -1,9 +1,9 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../../../_runtime/00659_isUndefinedOrNull.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_3 from "../../../stores/SelectedChannelStore.tsx";
+import { VoiceCallOverlayType } from "ChannelCallConstants.tsx";
 
 let c4 = false;
 let c5 = false;

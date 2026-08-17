@@ -1,15 +1,15 @@
 // discord_app/modules/premium/premium_group/native/BoostingUnavailablePill.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import Text from "Text" /* 4734 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import messagesProxyDefault from "../PremiumGroup.messages.js";
+import SubscriptionStatusTypes from "../PremiumGroupConstants.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 function handlePress() {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;

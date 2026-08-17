@@ -1,18 +1,18 @@
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
-import tDefault from "t" /* 3975 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken" /* 11584 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4023 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_9 from "set" /* 11578 */;
-import { PermissionPromptType } from "set" /* 11578 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import ME from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus" /* 4839 */;
+import tDefault from "../../../../_runtime/03975_t.js";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import getOrRefreshPushSyncToken from "../../../actions/native/PushNotificationActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../threads/JoinedThreadsStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import { PermissionPromptType } from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import EventActionType from "components/notification/NotificationPermissionConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { NotificationAuthorizationStatus as closure_16 } from "../../native_permissions/NativePermissionConstants.tsx";
 
 require = arg1;
 function haveNotSeenPromptSince(arg0, arg1) {

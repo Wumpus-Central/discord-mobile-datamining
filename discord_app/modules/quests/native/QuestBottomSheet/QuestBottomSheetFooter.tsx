@@ -1,21 +1,21 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4745 */;
-import useAdContentImpressionTrackerProps from "useAdContentImpressionTrackerProps" /* 10687 */;
-import formatWatchRemainingDurationShort from "formatWatchRemainingDurationShort" /* 10705 */;
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 10953 */;
-import RefreshIcon from "RefreshIcon" /* 13952 */;
-import useWatchTaskPressHandler from "useWatchTaskPressHandler" /* 14475 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "initializeState" /* 7453 */;
-import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_9 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import useAdContentImpressionTrackerProps from "../../lib/analytics/ContentImpressionTrackerHooks.tsx";
+import formatWatchRemainingDurationShort from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
+import useTrackQuestEventWithImpression from "../../lib/analytics/AnalyticsHooks.tsx";
+import RefreshIcon from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
+import useWatchTaskPressHandler from "QuestBottomSheetHooks.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../QuestStore.tsx";
+import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_9 } from "../../../action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function useQuestRewardClaimHandler(quest) {

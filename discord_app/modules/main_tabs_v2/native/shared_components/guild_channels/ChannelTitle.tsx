@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { UnreadSetting } from "../../../../read_states/ReadStateConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyleProperties({ muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });

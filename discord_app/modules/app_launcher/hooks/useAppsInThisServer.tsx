@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/hooks/useAppsInThisServer.tsx
-import closure_4 from "noop" /* 19 */;
-import { useGuildIndexState } from "getIndexKey" /* 8448 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 5246 */;
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { useGuildIndexState } from "../../application_commands/ApplicationCommandIndexStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "../../application_commands/ApplicationCommandConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");

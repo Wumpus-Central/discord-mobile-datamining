@@ -1,5 +1,5 @@
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;

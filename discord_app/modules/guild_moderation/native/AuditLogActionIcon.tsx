@@ -1,17 +1,17 @@
 // discord_app/modules/guild_moderation/native/AuditLogActionIcon.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import ChatIcon from "ChatIcon" /* 6867 */;
-import RobotIcon2 from "RobotIcon" /* 9832 */;
-import registerAssetDefault from "registerAsset" /* 16773 */;
-import registerAssetDefault2 from "registerAsset" /* 16774 */;
-import registerAssetDefault3 from "registerAsset" /* 16775 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import getTargetType from "getTargetType" /* 16758 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import RobotIcon2 from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import registerAssetDefault from "../../../../_runtime/16773_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16774_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/16775_registerAsset.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import getTargetType from "../../../records/AuditLogRecord.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function AuditIcons(action) {

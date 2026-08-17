@@ -1,5 +1,5 @@
 // discord_app/modules/people/hooks/useFriendRequestActions.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
 let result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
 

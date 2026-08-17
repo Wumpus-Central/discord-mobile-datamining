@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/emoji/EmojiGrid.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import EmojiDefault from "../../../emojis/native/Emoji.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function Emoji(guildEmoji) {

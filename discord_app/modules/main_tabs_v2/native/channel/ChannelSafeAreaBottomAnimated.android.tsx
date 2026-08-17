@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx
-import _modDef4115 from "module_4115" /* 4115 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 10558 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10563 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue.android.tsx";
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;

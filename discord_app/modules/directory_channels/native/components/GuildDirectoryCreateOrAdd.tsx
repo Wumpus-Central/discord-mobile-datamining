@@ -1,18 +1,18 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 8799 */;
-import SegmentedControl from "SegmentedControl" /* 10096 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "isFetching" /* 11479 */;
-import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 11477 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
+import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../GuildDirectoryStore.tsx";
+import { GuildDirectoryCreate } from "../GuildDirectoryConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildDirectoryCreateOrAddHeader(arg0) {

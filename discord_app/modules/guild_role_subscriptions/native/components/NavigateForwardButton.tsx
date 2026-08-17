@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 14568 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../../_runtime/14568_registerAsset.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

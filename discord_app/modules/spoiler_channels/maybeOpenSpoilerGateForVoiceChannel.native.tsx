@@ -1,10 +1,10 @@
 // discord_app/modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx
-import useAlertStore from "useAlertStore" /* 4657 */;
-import isChannelSpoilerGated from "isChannelSpoilerGated" /* 5267 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12830 */;
-import VoicePanelSpoilerAlertDefault from "VoicePanelSpoilerAlert" /* 12830 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import isChannelSpoilerGated from "SpoilerChannelUtils.tsx";
+import VoicePanelSpoilerAlert from "native/VoicePanelSpoilerAlert.tsx";
+import VoicePanelSpoilerAlertDefault from "native/VoicePanelSpoilerAlert.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");

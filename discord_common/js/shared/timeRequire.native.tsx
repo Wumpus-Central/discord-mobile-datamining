@@ -1,6 +1,6 @@
 // discord_common/js/shared/timeRequire.native.tsx
-import set from "set" /* 2 */;
-import isTracingDefault from "isTracing" /* 10 */;
+import set from "../../../_runtime/00002_set.js";
+import isTracingDefault from "../packages/app-start-performance/AppStartPerformance.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
 

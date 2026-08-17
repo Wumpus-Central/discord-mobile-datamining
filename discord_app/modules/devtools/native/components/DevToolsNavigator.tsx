@@ -1,11 +1,11 @@
 // discord_app/modules/devtools/native/components/DevToolsNavigator.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import DevToolsContentSortButtonsDefault from "DevToolsContentSortButtons" /* 13947 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import importAllResult from "noop" /* 19 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import DevToolsContentSortButtonsDefault from "DevToolsContent.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;

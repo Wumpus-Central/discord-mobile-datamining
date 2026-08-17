@@ -1,8 +1,8 @@
 // discord_app/modules/checkpoint/native/onTapCheckpointCard.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");

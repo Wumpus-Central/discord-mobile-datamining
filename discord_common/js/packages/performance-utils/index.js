@@ -1,6 +1,6 @@
 // discord_common/js/packages/performance-utils/index.js
-import set from "set" /* 2 */;
-import u from "u" /* 654 */;
+import set from "../../../../_runtime/00002_set.js";
+import u from "performance-polyfill.js";
 
 try {
   let _Date = Date;

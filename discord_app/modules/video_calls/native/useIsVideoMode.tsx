@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/useIsVideoMode.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "reset" /* 4652 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../../stores/VoiceStateStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");

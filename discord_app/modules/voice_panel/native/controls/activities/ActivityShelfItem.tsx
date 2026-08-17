@@ -1,26 +1,26 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import Text from "Text" /* 4734 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import setDefault from "set" /* 7190 */;
-import isTestModeForApplication2 from "isTestModeForApplication" /* 7871 */;
-import postMessageToWebViewDefault from "postMessageToWebView" /* 8713 */;
-import useActivityAction from "useActivityAction" /* 11230 */;
-import useActivityActionDefault from "useActivityAction" /* 11230 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11319 */;
-import ParticipantsSummaryDefault from "ParticipantsSummary" /* 16364 */;
-import useActivityUsersDefault from "useActivityUsers" /* 16365 */;
-import closure_3 from "noop" /* 19 */;
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import getDevicePixelRatioDefault from "../../../../../utils/getDevicePixelRatio.native.tsx";
+import ManaContext from "../../../../../../discord_common/js/packages/design/native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import getNicknameDefault from "../../../../../utils/NicknameUtils.tsx";
+import ApplicationCommandSectionType from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import setDefault from "../../../../core/native/NativeView.tsx";
+import isTestModeForApplication2 from "../../../../game_store/TestModeUtils.tsx";
+import postMessageToWebViewDefault from "../../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import useActivityAction from "../../../../activities/utils/useActivityShelfItem.tsx";
+import useActivityActionDefault from "../../../../activities/utils/useActivityShelfItem.tsx";
+import useEmbeddedActivityBackgroundDefault from "../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
+import ParticipantsSummaryDefault from "ActivityShelfItemSummary.tsx";
+import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { ANDROID_FOREGROUND_RIPPLE } from "../../../../../design/void/Form/native/FormConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 function ActivityActionOverlay(arg0) {

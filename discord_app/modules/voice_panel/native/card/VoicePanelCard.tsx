@@ -1,22 +1,22 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "anyoneHasFlagInContext" /* 4774 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16307 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11443 */;
-import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_8 from "../../../../stores/SpeakingStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { VoicePanelPIPModes } from "../pip/VoicePanelPIPConstants.tsx";
+import { EDGE_GUTTER } from "VoicePanelCardConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import { SCALE_PHYSICS } from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function SelfStreamCard(sharedCoords) {

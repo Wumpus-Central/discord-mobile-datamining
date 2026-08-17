@@ -1,25 +1,25 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsPage.tsx
-import _modDef38 from "module_38" /* 38 */;
-import mapDefault from "map" /* 8995 */;
-import GuildNSFWDefault from "GuildNSFW" /* 11838 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 11840 */;
-import ClearAllHistoryDefault from "ClearAllHistory" /* 15864 */;
-import _modDef15906 from "module_15906" /* 15906 */;
-import SearchableMembersScreenDefault from "SearchableMembersScreen" /* 15908 */;
-import _modDef15912 from "module_15912" /* 15912 */;
-import _modDef15913 from "module_15913" /* 15913 */;
-import _modDef15921 from "module_15921" /* 15921 */;
-import _modDef15923 from "module_15923" /* 15923 */;
-import _modDef15930 from "module_15930" /* 15930 */;
-import InitialPinsScreenDefault from "InitialPinsScreen" /* 15937 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
-import { SearchTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
+import mapDefault from "../../../../reanimated/native/useStateFromSharedValue.tsx";
+import GuildNSFWDefault from "../../../../../components_native/warnings/GuildNSFW.tsx";
+import ChannelSpoilerDefault from "../../../../spoiler_channels/native/ChannelSpoiler.tsx";
+import ClearAllHistoryDefault from "pages/RecentScreen.tsx";
+import _modDef15906 from "pages/PeopleScreen.tsx";
+import SearchableMembersScreenDefault from "pages/MembersScreen.tsx";
+import _modDef15912 from "pages/ChannelsScreen.tsx";
+import _modDef15913 from "pages/messages/MediaScreen.tsx";
+import _modDef15921 from "pages/messages/FilesScreen.tsx";
+import _modDef15923 from "pages/messages/LinksScreen.tsx";
+import _modDef15930 from "pages/messages/MessagesScreen.tsx";
+import InitialPinsScreenDefault from "pages/messages/PinsScreen.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../../stores/ChannelStore.tsx";
+import { SearchTabs } from "../../../SearchConstants.tsx";
+import { SearchTypes } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function SearchTabsPage(selectMediaTab) {

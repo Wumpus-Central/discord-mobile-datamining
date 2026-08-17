@@ -1,10 +1,10 @@
 // discord_app/records/GiftCodeRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3975 */;
-import closure_3 from "createFromServer" /* 7426 */;
-import closure_4 from "createFromServer" /* 7629 */;
-import closure_5 from "createFromServer" /* 4040 */;
-import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1924 */;
+import toJSDefault from "../lib/Record.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import closure_3 from "../modules/billing/records/SubscriptionTrialRecord.tsx";
+import closure_4 from "PromotionRecord.tsx";
+import closure_5 from "SubscriptionPlanRecord.tsx";
+import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "../modules/premium/PremiumConstants.tsx";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/CheckoutError.tsx
-import set from "set" /* 2 */;
-import prototype2 from "prototype" /* 10650 */;
+import set from "../../../_runtime/00002_set.js";
+import prototype2 from "../revenue_components/errors/RevenueError.tsx";
 
 const RevenueError = prototype2.RevenueError;
 const prototype = function CheckoutError(arg0) {

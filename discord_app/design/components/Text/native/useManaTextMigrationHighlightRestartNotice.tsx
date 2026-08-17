@@ -1,6 +1,6 @@
 // discord_app/design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

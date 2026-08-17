@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED from "QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED" /* 14446 */;
+import set from "../../../../../_runtime/00002_set.js";
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import QuestsExperimentLocations from "../../QuestConstants.tsx";
+import QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED from "QuestDockUtils.tsx";
 
 const QuestDockMode = QuestsExperimentLocations.QuestDockMode;
 let c5 = false;

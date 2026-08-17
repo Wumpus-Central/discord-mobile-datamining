@@ -1,13 +1,13 @@
 // discord_app/modules/wishlists/records/CollectiblesWishlistItemRecord.tsx
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import fromServerDefault from "fromServer" /* 9188 */;
-import closure_2 from "fromServer" /* 5306 */;
-import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import closure_4 from "fromServer" /* 1947 */;
-import closure_5 from "fromServer" /* 5307 */;
-import closure_6 from "fromServer" /* 5308 */;
-import closure_7 from "createFromServer" /* 4515 */;
-import { SKUProductLines } from "ME" /* 676 */;
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import fromServerDefault from "BaseWishlistItemRecord.tsx";
+import closure_2 from "../../collectibles/records/AvatarDecorationRecord.tsx";
+import { transformSKUToCollectiblesItem as closure_3 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
+import closure_4 from "../../collectibles/records/NameplateRecord.tsx";
+import closure_5 from "../../collectibles/records/ProfileEffectRecord.tsx";
+import closure_6 from "../../collectibles/records/ProfileFrameRecord.tsx";
+import closure_7 from "../../skus/SKURecord.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
 
 require = arg1;
 function createCollectiblesItemFromServerResponse(collectibles_item) {

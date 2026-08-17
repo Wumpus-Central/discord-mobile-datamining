@@ -1,6 +1,6 @@
 // discord_app/modules/activities/panel/native/ActivityPanelNativeConstants.tsx
-import set from "set" /* 2 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ActivityPanelModes from "../ActivityPanelConstants.tsx";
 
 let obj = { top: null };
 obj = { disable: false, override: ActivityPanelModes.ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT };

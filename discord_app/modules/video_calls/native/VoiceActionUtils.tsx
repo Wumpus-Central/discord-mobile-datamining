@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/VoiceActionUtils.tsx
-import set from "set" /* 2 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
+import set from "../../../../_runtime/00002_set.js";
+import _handleToggleVideo from "../../voice_calls/native/CallsUtils.tsx";
 
 function NOOP() {
 

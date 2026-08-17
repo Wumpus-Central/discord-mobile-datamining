@@ -1,11 +1,11 @@
 // discord_app/modules/share/native/ShareAttachments.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

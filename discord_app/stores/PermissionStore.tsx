@@ -1,25 +1,25 @@
 // discord_app/stores/PermissionStore.tsx
-import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4028 */;
-import hasDefault from "has" /* 4029 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_7 from "storeThread" /* 4023 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_12 from "createdAt" /* 1930 */;
-import closure_13 from "ensureGuildLoaded" /* 1391 */;
-import closure_14 from "trackCommunicationDisabled" /* 1990 */;
-import closure_15 from "createGuildRecordFromRust" /* 1910 */;
-import closure_16 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import { MemberSafetyPagePermissions as closure_18 } from "MemberSafetyPagePermissions" /* 4025 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../utils/GuildRecordUtils.tsx";
+import applyOverwritesAll from "../utils/PermissionUtils.tsx";
+import doesThreadMembersActionAffectMe from "../modules/threads/ThreadActionUtils.tsx";
+import hasDefault from "../utils/BasicPermissionUtils.tsx";
+import closure_4 from "../modules/impersonate/ImpersonateStore.tsx";
+import closure_5 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_6 from "../modules/stage_channels/StageInstanceStore.tsx";
+import closure_7 from "../modules/threads/JoinedThreadsStore.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
+import closure_12 from "../records/UserRecord.tsx";
+import closure_13 from "ChannelStore.tsx";
+import closure_14 from "GuildMemberStore.tsx";
+import closure_15 from "GuildStore.tsx";
+import closure_16 from "UserStore.tsx";
+import { Permissions } from "../Constants.tsx";
+import { MemberSafetyPagePermissions as closure_18 } from "../modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx";
 
 require = arg1;
 function getUncachedChannelPermissions(id, arg1) {

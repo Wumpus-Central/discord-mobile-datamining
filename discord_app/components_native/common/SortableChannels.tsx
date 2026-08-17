@@ -1,9 +1,9 @@
 // discord_app/components_native/common/SortableChannels.tsx
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { createElement } from "noop" /* 19 */;
-import importDefaultResult from "apply" /* 12 */;
+import importAllResult from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import { createElement } from "../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 let require = arg1;
 ({ View: c3, Animated: c4, PanResponder: c5, SectionList: closure_6, StyleSheet } = get_ActivityIndicator);

@@ -1,12 +1,12 @@
 // discord_app/design/components/Sheet/native/BottomSheet.native.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ACTION_SHEET_START_HEIGHT_RATIO from "../../../../modules/action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 function Background(arg0) {

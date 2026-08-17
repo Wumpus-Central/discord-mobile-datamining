@@ -1,21 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import TrashIcon from "TrashIcon" /* 4333 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import stylesDefault from "styles" /* 13358 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "resetImperatively" /* 16973 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import TrashIcon from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import stylesDefault from "FormStyles.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import closure_9 from "GuildRoleSubscriptionBenefitEditorModalStateStore.tsx";
+import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;

@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import registerAssetDefault from "registerAsset" /* 8606 */;
-import registerAssetDefault2 from "registerAsset" /* 12610 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import closure_6 from "buildStageChannelUserRoles" /* 4990 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import registerAssetDefault from "../../../../../_runtime/08606_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12610_registerAsset.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../../stores/VoiceStateStore.tsx";
+import closure_6 from "../../StageChannelRoleStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };

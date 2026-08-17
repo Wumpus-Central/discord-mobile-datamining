@@ -1,20 +1,20 @@
 // discord_app/components_native/CreateChannelModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_13 from "markAllUserIdListsStale" /* 4030 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8064 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import useInitialValueDefault from "../hooks/useInitialValue.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import { isGuildOwner } from "../records/GuildRecord.tsx";
+import closure_10 from "../stores/ChannelStore.tsx";
+import closure_11 from "../stores/GuildStore.tsx";
+import closure_12 from "../stores/PermissionStore.tsx";
+import closure_13 from "../stores/RelationshipStore.tsx";
+import closure_14 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import { RowType } from "../modules/channel_permissions/ChannelPermissionsConstants.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;

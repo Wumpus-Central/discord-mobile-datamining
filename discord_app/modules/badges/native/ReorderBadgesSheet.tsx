@@ -1,19 +1,19 @@
 // discord_app/modules/badges/native/ReorderBadgesSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import DragIcon from "DragIcon" /* 6301 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 14041 */;
-import PX_16 from "PX_16" /* 14043 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleFormOpen" /* 8370 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "initialize" /* 8936 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import PressableCard from "../../../design/components/Card/native/Card.native.tsx";
+import DragIcon from "../../../design/components/Icon/native/redesign/generated/DragIcon.tsx";
+import BadgeCatalogIconDefault from "BadgeCatalogIcon.tsx";
+import PX_16 from "BadgeGrid.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../user_profile/UserProfileSettingsStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import closure_7 from "../BadgeDirectoryStore.tsx";
+import ME from "../../../Constants.tsx";
+import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BadgeTileContent(badge) {

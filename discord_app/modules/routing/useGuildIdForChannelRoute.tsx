@@ -1,8 +1,8 @@
 // discord_app/modules/routing/useGuildIdForChannelRoute.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "initializeFromUserSettings" /* 1394 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import { FAVORITES } from "ME" /* 676 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../favorites/FavoriteStore.tsx";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import { FAVORITES } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");

@@ -1,21 +1,21 @@
 // discord_app/modules/channel_list_v2/native/RedesignGuildHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import map from "map" /* 9288 */;
-import tDefault from "t" /* 11259 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15367 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15396 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "setContent" /* 4086 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import getFavoritesAwareGuildName from "../../favorites/FavoritesUtils.tsx";
+import getFontScale from "../../screen/native/useFontScale.tsx";
+import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
+import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import tDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
+import useIsGameCommunityServerPreviewDefault from "../../lurker_mode/native/useIsGameCommunityServerPreview.tsx";
+import useStickyServerHeaderSubtitleDefault from "hooks/useStickyServerHeaderSubtitle.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../a11y/AccessibilityStore.tsx";
+import closure_8 from "../../action_sheet/native/ActionSheetStore.tsx";
+import hairlineWidth from "RedesignChannelListConstants.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildInfoHeader(bannerHeight) {

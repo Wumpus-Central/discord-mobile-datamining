@@ -1,17 +1,17 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 1980 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "handleFormInit" /* 8875 */;
-import { calculateLocaleOptions } from "GuildPrimaryCategory" /* 15733 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "../../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
+import closure_10 from "../../GuildSettingsStore.tsx";
+import { calculateLocaleOptions } from "../../discovery/GuildSettingsDiscoveryConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = ME);

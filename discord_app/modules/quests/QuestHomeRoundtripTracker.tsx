@@ -1,10 +1,10 @@
 // discord_app/modules/quests/QuestHomeRoundtripTracker.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import setDefault from "set" /* 5006 */;
-import set2 from "set" /* 5011 */;
-import _modDef10501 from "module_10501" /* 10501 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import setDefault from "../monitoring/MonitoringAgent.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;

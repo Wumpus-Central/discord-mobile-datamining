@@ -1,17 +1,17 @@
 // discord_app/stores/RTCConnectionStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import sleep from "sleep" /* 4548 */;
-import updateVoiceStatesDefault from "updateVoiceStates" /* 13099 */;
-import useIsSpatialAudioAvailable from "useIsSpatialAudioAvailable" /* 13100 */;
-import trackVideoToggle from "trackVideoToggle" /* 13102 */;
-import closure_5 from "set" /* 4540 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import promise from "expandEventProperties" /* 698 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import updateVoiceStatesDefault from "../lib/VoiceStateAnalytics.tsx";
+import useIsSpatialAudioAvailable from "../modules/spatial_audio/useIsSpatialAudioAvailable.tsx";
+import trackVideoToggle from "../modules/media_engine/trackVideoToggle.tsx";
+import closure_5 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_6 from "AuthenticationStore.tsx";
+import closure_7 from "views/SortedVoiceStateStore.tsx";
+import ME from "../Constants.tsx";
+import { MediaEngineContextTypes } from "../../discord_common/js/packages/media-engine/Constants.tsx";
+import promise from "../utils/AnalyticsUtils.tsx";
 import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
 
 require = arg1;

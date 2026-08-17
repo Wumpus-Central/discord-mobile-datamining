@@ -1,11 +1,11 @@
 // discord_app/modules/threads/LazyLoadedThreadManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_handleConnectionOpen" /* 4495 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
-import { isStaticChannelRoute } from "set" /* 1398 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../gateway/GatewayConnectionStore.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/SelectedChannelStore.tsx";
+import ME from "../../Constants.tsx";
+import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
 import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 
 const require = arg1;

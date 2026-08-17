@@ -1,15 +1,15 @@
 // discord_app/stores/InviteSuggestionsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isGuildMember from "isGuildMember" /* 8920 */;
-import closure_8 from "handleConnectionOpen" /* 7592 */;
-import closure_9 from "recomputeAffinities" /* 5407 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import ME from "ME" /* 676 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isGuildMember from "../utils/InstantInviteUtils.tsx";
+import closure_8 from "../modules/quickswitcher/QuickSwitcherStore.tsx";
+import closure_9 from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
+import closure_10 from "ChannelStore.tsx";
+import closure_11 from "PermissionStore.tsx";
+import closure_12 from "RelationshipStore.tsx";
+import ME from "../Constants.tsx";
+import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function _computeRows(query) {

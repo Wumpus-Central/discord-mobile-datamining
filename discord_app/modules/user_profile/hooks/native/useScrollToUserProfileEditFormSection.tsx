@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx
-import closure_2 from "noop" /* 19 */;
-import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "zustandStore" /* 9537 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { findNodeHandle } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

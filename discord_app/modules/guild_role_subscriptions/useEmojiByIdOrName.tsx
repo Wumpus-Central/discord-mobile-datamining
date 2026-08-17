@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/useEmojiByIdOrName.tsx
-import closure_2 from "getEmojiToGroupId" /* 6727 */;
+import closure_2 from "../emojis/EmojiStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

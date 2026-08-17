@@ -1,9 +1,9 @@
 // discord_app/modules/headless_tasks/android/BackgroundSync.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import databaseNameDefault from "databaseName" /* 1971 */;
-import closure_3 from "_handleConnectionOpen" /* 4495 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "getState" /* 7383 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import databaseNameDefault from "../../app_database/system/DatabaseManager.tsx";
+import closure_3 from "../../gateway/GatewayConnectionStore.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/native/AppStateStore.tsx";
 
 const require = arg1;
 let closure_6 = new timestampDefault("BackgroundSync");

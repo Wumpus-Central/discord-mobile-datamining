@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/TwoWayLinkType.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null };
 let set = new Set(["desktop", "device_code", "mobile", "web"]);

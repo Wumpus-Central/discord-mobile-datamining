@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx
-import setDefault from "set" /* 687 */;
-import ThemesDefault from "Themes" /* 712 */;
-import tDefault from "t" /* 3975 */;
-import useCountdownDefault from "useCountdown" /* 7410 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "clearDismissUntil" /* 13270 */;
-import ME from "ME" /* 676 */;
-import { Gradients } from "items" /* 7403 */;
-import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import setDefault from "../../../../../utils/Durations.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import tDefault from "../../../../../../_runtime/03975_t.js";
+import useCountdownDefault from "../../../../../hooks/useCountdown.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../premium/native/NoticeStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import { Gradients } from "../../../../colors/native/ColorConstants.tsx";
+import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "../../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ AnalyticEvents: closure_6, HelpdeskArticles: error, HorizontalGradient: closure_8, NoticeTypes: c9 } = ME);

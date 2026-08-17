@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 15870 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import useFullscreenPlaceholderCount from "../../../../hooks/usePlaceholderStyles.tsx";
+import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

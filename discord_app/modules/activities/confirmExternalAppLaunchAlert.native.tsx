@@ -1,14 +1,14 @@
 // discord_app/modules/activities/confirmExternalAppLaunchAlert.native.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import setDefault from "set" /* 4827 */;
-import registerAssetDefault from "registerAsset" /* 8743 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PRIVATE_APPS_HELP_ARTICLE } from "items3" /* 4481 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
+import Button from "../../design/components/Button/native/Button.native.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import registerAssetDefault from "../../../_runtime/08743_registerAsset.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { PRIVATE_APPS_HELP_ARTICLE } from "Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ConfirmActivityGateContent(activityName) {

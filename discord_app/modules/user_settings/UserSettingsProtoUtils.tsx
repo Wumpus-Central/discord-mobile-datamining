@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/UserSettingsProtoUtils.tsx
-import set from "set" /* 2 */;
-import b64ToProto from "b64ToProto" /* 1342 */;
+import set from "../../../_runtime/00002_set.js";
+import b64ToProto from "UserSettingsUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 

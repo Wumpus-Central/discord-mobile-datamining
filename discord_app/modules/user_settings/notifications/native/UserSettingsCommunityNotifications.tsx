@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import noopAll from "noop" /* 19 */;
-import closure_3 from "computeAlertSettings" /* 10014 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../guild_antiraid/GuildIncidentsStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,11 +1,11 @@
 // discord_app/modules/frames/FramesStore.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 8703 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 8710 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ActivityPanelModes2 from "../activities/panel/ActivityPanelConstants.tsx";
+import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
+import FrameLayoutModes from "FramesConstants.tsx";
 
 ({ FrameIntent: obj1, FrameLayoutModes: c3, getFrameIntentForSurface: c4, isLaunched: c5, makeFrameId: closure_6 } = FrameLayoutModes);
 const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;

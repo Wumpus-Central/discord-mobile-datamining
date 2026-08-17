@@ -1,8 +1,8 @@
 // discord_app/modules/search/native/hooks/useAutoSearchMembersTab.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "prototype" /* 11510 */;
-import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_5 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11524 */;
-import { SearchTypes } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../stores/SearchQueryStore.tsx";
+import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_5 } from "../SearchPlatformConstants.tsx";
+import { SearchTypes } from "../../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");

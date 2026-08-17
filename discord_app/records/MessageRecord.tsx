@@ -1,9 +1,9 @@
 // discord_app/records/MessageRecord.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import toJSDefault from "toJS" /* 1931 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import toJSDefault from "../lib/Record.tsx";
+import isForwardMessageDefault from "../modules/forwarding/isForwardMessage.tsx";
+import ApplicationIntegrationType from "../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 toJSDefault;

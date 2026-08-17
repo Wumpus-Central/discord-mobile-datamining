@@ -1,25 +1,25 @@
 // discord_app/modules/messages/MessageParser.tsx
-import applyDefault from "apply" /* 12 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import closure_3 from "getEmojiToGroupId" /* 6727 */;
-import closure_4 from "rebuild" /* 5251 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1980 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "initialize" /* 4220 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { GAME_MENTION_SENTINEL } from "regExp" /* 6810 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import importDefaultResult from "t" /* 4092 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import parseLinkDefault from "../markup/MarkupRules.tsx";
+import textRegexpDefault from "../markup/MarkupTextRule.tsx";
+import closure_3 from "../emojis/EmojiStore.tsx";
+import closure_4 from "../threads/ActiveJoinedThreadsStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../stores/GuildRoleStore.tsx";
+import closure_10 from "../../stores/GuildStore.tsx";
+import closure_11 from "../../stores/PermissionStore.tsx";
+import closure_12 from "../../stores/RelationshipStore.tsx";
+import closure_13 from "../../stores/StreamerModeStore.tsx";
+import closure_14 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import { GAME_MENTION_SENTINEL } from "../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { EmojiIntention } from "../emojis/EmojiConstants.tsx";
+import importDefaultResult from "../../../_runtime/04092_t.js";
 
 let str7 = arg1;
 function rebuild(arr) {

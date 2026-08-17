@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx
-import resultDefault from "result" /* 8178 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import resultDefault from "../resolveMessageContentColors.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");

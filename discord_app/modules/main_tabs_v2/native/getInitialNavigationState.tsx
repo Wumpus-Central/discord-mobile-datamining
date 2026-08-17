@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/getInitialNavigationState.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import matchPath from "matchPath" /* 4202 */;
-import RouteParam5 from "RouteParam" /* 4215 */;
-import useChatLayout from "useChatLayout" /* 4232 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4235 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "initialize" /* 4201 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import transitionTo from "../../routing/router_utils.tsx";
+import matchPath from "../../routing/matchPathCompat.tsx";
+import RouteParam5 from "../../routing/RouteUtils.tsx";
+import useChatLayout from "../../chat/native/useChatLayout.tsx";
+import MobileHomeDrawerExperiment2 from "../../home_drawer/native/HomeDrawerExperiment.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/DefaultRouteStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 function getInitialGuildState(closure_6, channelId, flag, flag2) {

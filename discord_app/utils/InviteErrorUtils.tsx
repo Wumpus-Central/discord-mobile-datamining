@@ -1,9 +1,9 @@
 // discord_app/utils/InviteErrorUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../intl/index.native.tsx";
+import combinedDefault from "HelpdeskUtils.tsx";
+import getPremiumPlanItemDefault from "PremiumUtils.tsx";
+import closure_3 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 ({ AbortCodes: c4, HelpdeskArticles: c5, MAX_USER_GUILDS: closure_6, MAX_USER_GUILDS_PREMIUM: error } = ME);

@@ -1,5 +1,5 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx");
 

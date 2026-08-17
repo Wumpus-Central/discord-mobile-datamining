@@ -1,7 +1,7 @@
 // discord_app/stores/StatusPageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 require = arg1;
 const MaintenanceStore = "MaintenanceStore";

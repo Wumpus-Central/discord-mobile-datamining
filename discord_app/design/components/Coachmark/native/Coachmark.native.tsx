@@ -1,13 +1,13 @@
 // discord_app/design/components/Coachmark/native/Coachmark.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 class Coachmark {

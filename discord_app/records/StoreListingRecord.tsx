@@ -1,7 +1,7 @@
 // discord_app/records/StoreListingRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import transformStoreAssetFromServer from "transformStoreAssetFromServer" /* 13868 */;
-import closure_2 from "createdAt" /* 1930 */;
+import toJSDefault from "../lib/Record.tsx";
+import transformStoreAssetFromServer from "../modules/game_store/GameStoreAsset.tsx";
+import closure_2 from "UserRecord.tsx";
 
 require = arg1;
 toJSDefault;

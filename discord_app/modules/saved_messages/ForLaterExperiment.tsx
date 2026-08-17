@@ -1,10 +1,10 @@
 // discord_app/modules/saved_messages/ForLaterExperiment.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import hasForLaterPremiumType2 from "hasForLaterPremiumType" /* 8485 */;
-import hasForLaterPremiumTypeDefault from "hasForLaterPremiumType" /* 8485 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8481 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import hasForLaterPremiumType2 from "hasForLaterPremiumType.tsx";
+import hasForLaterPremiumTypeDefault from "hasForLaterPremiumType.tsx";
+import SAVED_BOOKMARKS_MAX from "../../../discord_common/js/shared/shared-constants/SavedMessagesConstants.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 ({ SAVED_BOOKMARKS_MAX: c3, SAVED_REMINDERS_MAX: c4 } = SAVED_BOOKMARKS_MAX);
 let obj = { 1: null, 2: { enabled: true } };

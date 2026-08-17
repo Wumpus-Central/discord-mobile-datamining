@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 7660 */;
-import apexExperiment from "apexExperiment" /* 13242 */;
+import set from "../../../../_runtime/00002_set.js";
+import ExperimentBuckets from "../ExperimentConstants.tsx";
+import registeredExperimentIds from "Helpers.tsx";
+import apexExperiment from "../../content_inventory/ContentInventoryExperiments.tsx";
 
 const items = [apexExperiment.HotwheelsActivityFeedNvidiaExperiment];
 const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(items, ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN, { location: "app open" });

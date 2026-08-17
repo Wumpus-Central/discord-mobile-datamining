@@ -1,10 +1,10 @@
 // discord_app/modules/a11y/AccessibilityActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import { SettingsOverrideReasonKeys as closure_5 } from "MAX_FAVORITES" /* 685 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "AccessibilityStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { StickerAnimationSettings } from "../stickers/StickersConstants.tsx";
+import { SettingsOverrideReasonKeys as closure_5 } from "../user_settings/UserSettingsConstants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");
 

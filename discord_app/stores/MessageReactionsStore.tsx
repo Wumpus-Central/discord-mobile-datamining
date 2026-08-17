@@ -1,11 +1,11 @@
 // discord_app/stores/MessageReactionsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import checkReactionResponseAll from "checkReactionResponse" /* 7511 */;
-import closure_2 from "initialize" /* 4022 */;
-import closure_3 from "createdAt" /* 1930 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import checkReactionResponseAll from "../modules/reactions/ReactionActionCreators.tsx";
+import closure_2 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_3 from "../records/UserRecord.tsx";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "UserStore.tsx";
 
 function reactionKey(arg0, arg1, item10022) {
   ({ name, id } = arg1);

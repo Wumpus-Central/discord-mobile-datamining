@@ -1,6 +1,6 @@
 // discord_app/design/animation/reanimated/ReanimatedConstants.tsx
-import set from "set" /* 2 */;
-import _mod4115 from "module_4115" /* 4115 */;
+import set from "../../../../_runtime/00002_set.js";
+import _mod4115 from "../../../modules/reanimated/ReanimatedRexport.tsx";
 
 let obj = { duration: 1, reduceMotion: _mod4115.ReduceMotion.Always };
 obj = {};

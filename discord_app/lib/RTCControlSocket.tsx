@@ -1,14 +1,14 @@
 // discord_app/lib/RTCControlSocket.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import set from "set" /* 500 */;
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import sleep from "sleep" /* 4548 */;
-import onDefault from "on" /* 4572 */;
-import closure_3 from "refreshSourceMapCookie" /* 706 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import set from "../utils/PlatformUtils.tsx";
+import failsDefault from "../../discord_common/js/packages/backoff/Backoff.tsx";
+import setDefault from "../utils/Durations.tsx";
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
+import closure_3 from "../stores/DeveloperOptionsStore.tsx";
+import closure_4 from "../stores/MediaEngineStore.tsx";
+import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 function noop() {

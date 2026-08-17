@@ -1,11 +1,11 @@
 // discord_app/modules/threads/native/components/ThreadLongPressActionSheet.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import closure_7 from "storeThread" /* 4023 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/VoiceStateStore.tsx";
+import closure_7 from "../../JoinedThreadsStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function ThreadLongPressActionSheetConnected(channel) {

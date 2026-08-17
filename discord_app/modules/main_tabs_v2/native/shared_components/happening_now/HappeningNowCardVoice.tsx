@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getNicknameDefault from "../../../../../utils/NicknameUtils.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
+import closure_7 from "../../../../../stores/VoiceStateStore.tsx";
+import { HappeningNowCardTrackingType as closure_8 } from "HappeningNowConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { apexExperiment } from "../../../../user_affinities/VoiceUserAffinityExperiment.tsx";
 

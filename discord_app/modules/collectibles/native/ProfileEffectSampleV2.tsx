@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/ProfileEffectSampleV2.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 9207 */;
-import metadataDefault from "metadata" /* 9209 */;
-import StaticEffectDefault from "StaticEffect" /* 9210 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import SAMPLE_PROFILE_ASPECT_RATIO from "CollectiblesPreviewConstants.tsx";
+import metadataDefault from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import StaticEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

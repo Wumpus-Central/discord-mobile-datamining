@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

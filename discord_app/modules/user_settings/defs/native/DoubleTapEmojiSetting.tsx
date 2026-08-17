@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 8192 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import createToggle from "createToggle" /* 10669 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import EmojiDefault from "../../../emojis/native/Emoji.tsx";
+import getFallbackDoubleTapDisambiguatedEmoji from "../../../double_tap_to_react/native/DoubleTapToReactUtils.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { EMOJI_PICKER_ACTION_SHEET_KEY } from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 
 require = arg1;

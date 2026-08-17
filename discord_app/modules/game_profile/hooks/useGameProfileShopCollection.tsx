@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/hooks/useGameProfileShopCollection.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "getSimilarGames" /* 9098 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../GameProfileStore.tsx";
 
 const useEffect = noop.useEffect;
 let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");

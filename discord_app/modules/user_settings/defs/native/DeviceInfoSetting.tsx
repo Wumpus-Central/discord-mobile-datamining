@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
-import getClientInfo from "getClientInfo" /* 14865 */;
-import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 14867 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
+import getClientInfo from "CopyClientInfoSetting.tsx";
+import MobilePhoneSettingsIcon from "../../../../design/components/Icon/native/redesign/generated/MobilePhoneSettingsIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 let obj = {
   useTitle() {

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
-import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5449 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import registerAssetDefault from "registerAsset" /* 9355 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 14587 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import EmojiDefault from "../../../emojis/native/Emoji.tsx";
+import registerAssetDefault from "../../../../../_runtime/09355_registerAsset.js";
+import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

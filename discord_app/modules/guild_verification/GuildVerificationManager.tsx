@@ -1,11 +1,11 @@
 // discord_app/modules/guild_verification/GuildVerificationManager.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import initializeDefault from "initialize" /* 5038 */;
-import set2 from "set" /* 8056 */;
-import _modDef12831 from "module_12831" /* 12831 */;
-import inviteGuildHasPendingMemberDisabledVerification from "inviteGuildHasPendingMemberDisabledVerification" /* 12832 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import _modDef12831 from "../hub/HubUtils.native.tsx";
+import inviteGuildHasPendingMemberDisabledVerification from "GuildVerificationUtils.tsx";
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;

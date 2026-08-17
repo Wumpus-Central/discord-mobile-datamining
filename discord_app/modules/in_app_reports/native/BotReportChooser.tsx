@@ -1,13 +1,13 @@
 // discord_app/modules/in_app_reports/native/BotReportChooser.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import fetchApplication from "fetchApplication" /* 7140 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
-import closure_3 from "addApplication" /* 4478 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import fetchApplication from "../../applications/ApplicationActionCreators.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ActionSheetRowIcon from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import closure_3 from "../../applications/ApplicationStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ReportAppProfile(arg0) {

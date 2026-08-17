@@ -1,9 +1,9 @@
 // discord_app/components_native/premium/PremiumRestorationAlert.tsx
-import componentDidMountDefault from "componentDidMount" /* 14591 */;
-import importDefaultResult from "updateProduct" /* 5319 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult1 from "initialize" /* 589 */;
+import componentDidMountDefault from "../common/UntouchableAlert.tsx";
+import importDefaultResult from "../../stores/native/IAPStore.android.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import importDefaultResult1 from "../../../discord_common/js/packages/flux/index.tsx";
 
 const PureComponent = importAllResult.PureComponent;
 class PremiumRestorationAlert extends PureComponent {

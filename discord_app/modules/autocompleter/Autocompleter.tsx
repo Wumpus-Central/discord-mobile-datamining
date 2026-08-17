@@ -1,17 +1,17 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import tDefault from "t" /* 4092 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
-import CodedLinkType from "CodedLinkType" /* 4363 */;
-import NOOP from "NOOP" /* 6714 */;
-import NOOPDefault from "NOOP" /* 6714 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 6777 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7597 */;
-import closure_3 from "handleUserUpdate" /* 7595 */;
-import closure_4 from "fromPath" /* 7596 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import isNullOrEmpty from "../../utils/StringUtils.tsx";
+import tDefault from "../../../_runtime/04092_t.js";
+import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
+import CodedLinkType from "../coded_links/CodedLink.tsx";
+import NOOP from "../../utils/AutocompleteUtils.tsx";
+import NOOPDefault from "../../utils/AutocompleteUtils.tsx";
+import getGuildNameSuggestionDefault from "../../utils/GuildUtils.tsx";
+import getTransformedUserDefault from "UserSearchManager.tsx";
+import closure_3 from "../threads/ThreadMemberListStore.tsx";
+import closure_4 from "../../records/LinkRecord.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../stores/RelationshipStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
 import { queryGamesAutocomplete } from "../games/autocomplete/queryGamesAutocomplete.tsx";
 
 require = arg1;

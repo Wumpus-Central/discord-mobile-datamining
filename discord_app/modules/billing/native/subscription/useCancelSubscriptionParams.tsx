@@ -1,6 +1,6 @@
 // discord_app/modules/billing/native/subscription/useCancelSubscriptionParams.tsx
-import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 7701 */;
-import closure_3 from "noop" /* 19 */;
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useCancelSubscriptionParams.tsx");

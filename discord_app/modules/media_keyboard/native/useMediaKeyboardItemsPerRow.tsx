@@ -1,5 +1,5 @@
 // discord_app/modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");

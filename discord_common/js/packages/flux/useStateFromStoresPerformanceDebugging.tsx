@@ -1,6 +1,6 @@
 // discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx
-import Storage2 from "Storage" /* 595 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import Storage2 from "../storage/Storage.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function hasExceededThreshold(name) {

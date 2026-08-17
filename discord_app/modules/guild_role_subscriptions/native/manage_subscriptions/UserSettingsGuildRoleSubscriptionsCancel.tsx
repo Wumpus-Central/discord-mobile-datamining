@@ -1,25 +1,25 @@
 // discord_app/modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptionsCancel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import tDefault from "t" /* 3975 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 14558 */;
-import FormSeparatorDefault from "FormSeparator" /* 14563 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 14569 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import registerAssetDefault from "registerAsset" /* 14581 */;
-import FastAssetImageDefault from "FastAssetImage" /* 14582 */;
-import SectionTitleAll from "SectionTitle" /* 14583 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "reset" /* 4045 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import tDefault from "../../../../../_runtime/03975_t.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import useFetchListingsForGuild from "../../GuildRoleSubscriptionsHooks.tsx";
+import FormSeparatorDefault from "../components/FormSeparator.tsx";
+import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/14581_registerAsset.js";
+import FastAssetImageDefault from "../components/FastAssetImage.tsx";
+import SectionTitleAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../../stores/billing/SubscriptionStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function WhatYouLose(subscription) {

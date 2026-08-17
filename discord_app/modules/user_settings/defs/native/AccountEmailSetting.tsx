@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/AccountEmailSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef8561 from "module_8561" /* 8561 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import _modDef8561 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

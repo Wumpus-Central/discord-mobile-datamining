@@ -1,12 +1,12 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusIndicator.tsx
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "setContent" /* 4086 */;
-import closure_8 from "getParticipants" /* 4773 */;
-import closure_9 from "initialize" /* 10046 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createRTCConnection" /* 4539 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_8 from "../../../calls/ChannelRTCStore.tsx";
+import closure_9 from "../../../native_menu/native/NativeMenuStore.tsx";
+import closure_10 from "../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../stores/RTCConnectionStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;

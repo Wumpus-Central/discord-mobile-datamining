@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getNextShownUpcomingEventNoticeType from "getNextShownUpcomingEventNoticeType" /* 8893 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getNextShownUpcomingEventNoticeType from "GuildScheduledEventUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "GuildScheduledEventStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 
 require = arg1;
 ({ GuildScheduledEventStatus: c4, UpcomingGuildEventNoticeTypes: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);

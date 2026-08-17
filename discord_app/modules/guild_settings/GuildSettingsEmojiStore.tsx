@@ -1,10 +1,10 @@
 // discord_app/modules/guild_settings/GuildSettingsEmojiStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "prototype" /* 16784 */;
-import closure_1 from "handleConnectionOpen" /* 4197 */;
-import importDefaultResult from "priv" /* 1405 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../records/EmojiRecord.tsx";
+import closure_1 from "../../stores/SelectedGuildStore.tsx";
+import importDefaultResult from "../../../_runtime/01405_priv.js";
 
 let closure_2 = {};
 let closure_3 = {};

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_rooms/GuildRoomActionCreators.shared.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getBaseProperties from "getBaseProperties" /* 9872 */;
-import experimentDefault from "experiment" /* 9882 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "resolveCreatingNotes" /* 9864 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getBaseProperties from "GuildRoomAnalytics.tsx";
+import experimentDefault from "GuildRoomsExperiment.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "GuildRoomStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function _guildRoomConnect() {

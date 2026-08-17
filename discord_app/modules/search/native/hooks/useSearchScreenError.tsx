@@ -1,8 +1,8 @@
 // discord_app/modules/search/native/hooks/useSearchScreenError.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleReaction" /* 4971 */;
-import closure_5 from "prototype" /* 11510 */;
-import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "MessageEmbedTypes" /* 8507 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../SearchMessageStore.tsx";
+import closure_5 from "../stores/SearchQueryStore.tsx";
+import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "../../SearchConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx
-import set from "set" /* 2 */;
-import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 9405 */;
+import set from "../../../_runtime/00002_set.js";
+import useMaybeAddPollsMarketingEasterEggNoteDefault from "../polls/useMaybeAddPollsMarketingEasterEggNote.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx");
 

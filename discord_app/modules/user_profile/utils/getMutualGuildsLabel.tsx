@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/utils/getMutualGuildsLabel.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
 
 const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 

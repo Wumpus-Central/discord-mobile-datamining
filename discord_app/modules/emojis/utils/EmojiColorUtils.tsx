@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/utils/EmojiColorUtils.tsx
-import set from "set" /* 2 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import hslToRgbDefault from "hslToRgb" /* 4224 */;
-import getURLDefault from "getURL" /* 7530 */;
+import set from "../../../../_runtime/00002_set.js";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import hslToRgbDefault from "../../../utils/Color.tsx";
+import getURLDefault from "../../../utils/EmojiUtilsPlatformed.native.tsx";
 
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   ({ colors, saturationFactor } = shouldProcessMobileColors);

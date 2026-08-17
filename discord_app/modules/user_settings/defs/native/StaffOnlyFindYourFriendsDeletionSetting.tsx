@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
-import isIterable from "isIterable" /* 4006 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import identity from "identity" /* 700 */;
-import createToggle from "createToggle" /* 10669 */;
+import isIterable from "../../../../../_runtime/04006_isIterable.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import identity from "../../../../../_runtime/00700_identity.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;

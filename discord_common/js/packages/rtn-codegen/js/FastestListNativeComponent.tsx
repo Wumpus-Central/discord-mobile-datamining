@@ -1,8 +1,8 @@
 // discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx
-import set from "set" /* 2 */;
-import renderElement from "renderElement" /* 114 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import set from "../../../../../_runtime/00002_set.js";
+import renderElement from "../../../../../_runtime/00114_renderElement.js";
+import weakSet from "../../../../../_runtime/00106_weakSet.js";
+import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "FastestList", directEventTypes: { topLayout: { registrationName: "onLayout" }, topScroll: { registrationName: "onScroll" }, topScrollBeginDrag: { registrationName: "onScrollBeginDrag" }, topScrollEndDrag: { registrationName: "onScrollEndDrag" }, topVisibleItemsChanged: { registrationName: "onVisibleItemsChanged" }, topUnexpectedItemSize: { registrationName: "onUnexpectedItemSize" } }, validAttributes: null };
 obj = { insetStart: true, insetEnd: true, horizontal: true, keyboardDismissOnDrag: true, placeholderConfig: true, renderAhead: true, scrollEventThrottle: true, sectionsVersioned: true, showsHorizontalScrollIndicator: true, showsVerticalScrollIndicator: true };

@@ -1,17 +1,17 @@
 // discord_app/stores/native/ShareStore.tsx
-import encodeProperties from "encodeProperties" /* 503 */;
-import initializeDefault from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import enforcingDefault from "enforcing" /* 9068 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { AppStates } from "ME" /* 676 */;
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
+import closure_6 from "../AuthenticationStore.tsx";
+import closure_7 from "../ChannelStore.tsx";
+import closure_8 from "../GuildStore.tsx";
+import closure_9 from "../SelectedChannelStore.tsx";
+import closure_10 from "../SelectedGuildStore.tsx";
+import closure_11 from "../UserStore.tsx";
+import { AppStates } from "../../Constants.tsx";
 
 require = arg1;
 function handleTokenUpdated(token) {

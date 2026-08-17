@@ -1,13 +1,13 @@
 // discord_app/modules/poggermode/PoggermodeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7579 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import closure_4 from "initialize" /* 7432 */;
-import ConfettiLocation from "ConfettiLocation" /* 7433 */;
-import { ComponentActions } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getComboShakeIntensity from "PoggermodeUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/SelectedChannelStore.tsx";
+import closure_4 from "PoggermodeSettingsStore.tsx";
+import ConfettiLocation from "PoggermodeConstants.tsx";
+import { ComponentActions } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function updateCombo(userId) {

@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/hooks/useTrackShopCardImpression.tsx
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import contextDefault from "context" /* 7139 */;
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import getPremiumPlanItemDefault from "../../../../utils/PremiumUtils.tsx";
+import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 import { context } from "../../CollectiblesAnalyticsContext.tsx";
 import { getItemRecordsFromPurchases } from "../../CollectiblesUtils.tsx";
 import { useCurrentUser } from "../../hooks/useCurrentUser.tsx";

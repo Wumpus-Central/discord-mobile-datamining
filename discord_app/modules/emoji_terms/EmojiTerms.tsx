@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_terms/EmojiTerms.tsx
-import setParamsDefault from "setParams" /* 6735 */;
-import emojiTermsImporter from "emojiTermsImporter" /* 6736 */;
+import setParamsDefault from "LazyPromiseInitializer.tsx";
+import emojiTermsImporter from "EmojiTermsImporter.js";
 
 require = arg1;
 let closure_2 = new setParamsDefault(function loadEmoji(arg0) {

@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/isListeningOnSpotify.tsx
-import set from "set" /* 2 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
+import SPOTIFY_APP_PROTOCOL from "../../spotify/SpotifyConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityTypes: obj1, PlatformTypes: c3 } = ME);
 const isSpotifyParty = SPOTIFY_APP_PROTOCOL.isSpotifyParty;

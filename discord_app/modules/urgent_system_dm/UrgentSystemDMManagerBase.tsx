@@ -1,11 +1,11 @@
 // discord_app/modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import _fetchProfileAll from "_fetchProfile" /* 8418 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { SYSTEM_USER } from "SYSTEM_USER" /* 16715 */;
-import { UserFlags } from "ME" /* 676 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import _fetchProfileAll from "../../actions/UserActionCreators.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/SelectedChannelStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import { SYSTEM_USER } from "Constants.tsx";
+import { UserFlags } from "../../Constants.tsx";
 
 function maybeShowUrgentMessageModal(arg0) {
   const currentUser = authStore2.getCurrentUser();

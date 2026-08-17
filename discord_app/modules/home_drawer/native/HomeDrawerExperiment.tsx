@@ -1,5 +1,5 @@
 // discord_app/modules/home_drawer/native/HomeDrawerExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../../experiments/apex/ApexExperiment.tsx";
 
 const obj = { 1: null, 2: { enableHome: true, landOnHome: false, enablePeekHint: true } };
 obj[2] = { enableHome: true, landOnHome: true, enablePeekHint: false };

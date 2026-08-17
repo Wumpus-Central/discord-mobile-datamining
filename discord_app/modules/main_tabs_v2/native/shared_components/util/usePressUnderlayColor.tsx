@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import CHANNEL_THEME_COLOR_PALETTE from "CHANNEL_THEME_COLOR_PALETTE" /* 16206 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../../design/tokens/native/useToken.tsx";
+import hexToRgba from "../../../../../utils/ColorUtils.tsx";
+import useThemeDefault from "../../../../../hooks/useTheme.tsx";
+import CHANNEL_THEME_COLOR_PALETTE from "../../../channel_emoji/ChannelEmojiConstants.tsx";
 
 let closure_3 = CHANNEL_THEME_COLOR_PALETTE.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");

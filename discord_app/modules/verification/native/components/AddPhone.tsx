@@ -1,16 +1,16 @@
 // discord_app/modules/verification/native/components/AddPhone.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleSetLocationMetadata" /* 8581 */;
-import closure_9 from "handleRequiredAction" /* 1385 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { UserFlags } from "ME" /* 676 */;
-import { NOOP_NULL } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../phone/PhoneStore.tsx";
+import closure_9 from "../../../../stores/UserRequiredActionStore.tsx";
+import closure_10 from "../../../../stores/UserStore.tsx";
+import { UserFlags } from "../../../../Constants.tsx";
+import { NOOP_NULL } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);

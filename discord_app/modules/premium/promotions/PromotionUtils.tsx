@@ -1,15 +1,15 @@
 // discord_app/modules/premium/promotions/PromotionUtils.tsx
-import set2 from "set" /* 500 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
-import CountryListMode from "CountryListMode" /* 7656 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "createFromServer" /* 7629 */;
-import closure_6 from "createEmptyPromotionsByType" /* 7628 */;
-import { PromotionFlags } from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import { ActivityPlatform } from "items3" /* 4481 */;
+import set2 from "../../../utils/PlatformUtils.tsx";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import addVersionedDismissedContent from "../../dismissible_content/DismissibleContentUtils.tsx";
+import CountryListMode from "constants.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../../records/PromotionRecord.tsx";
+import closure_6 from "PromotionsStore.tsx";
+import { PromotionFlags } from "../PremiumConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { ActivityPlatform } from "../../activities/Constants.tsx";
 
 require = arg1;
 function claimedOutboundPromotionCodeFromServer(code) {

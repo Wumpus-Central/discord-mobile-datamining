@@ -1,8 +1,8 @@
 // discord_app/modules/dismissible_content/native/SelectedDismissibleContent.tsx
-import noopAll from "noop" /* 19 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useSelectedDismissibleContent from "../hooks/useSelectedDismissibleContent.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

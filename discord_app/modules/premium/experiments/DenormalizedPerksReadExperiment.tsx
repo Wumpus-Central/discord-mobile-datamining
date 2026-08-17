@@ -1,6 +1,6 @@
 // discord_app/modules/premium/experiments/DenormalizedPerksReadExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { CONTROL: 0, [0]: "CONTROL", DUAL_READ_RETURN_OLD: 1, [1]: "DUAL_READ_RETURN_OLD", DUAL_READ_RETURN_NEW: 2, [2]: "DUAL_READ_RETURN_NEW" };
 obj = { name: "2026-03-denormalized-perks-access-read", kind: "user", defaultConfig: obj.CONTROL, variations: obj };

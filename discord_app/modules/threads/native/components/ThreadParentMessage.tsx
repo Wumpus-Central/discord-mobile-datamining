@@ -1,13 +1,13 @@
 // discord_app/modules/threads/native/components/ThreadParentMessage.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import setOptionsDefault from "setOptions" /* 8157 */;
-import DCDChatItemDefault from "DCDChatItem" /* 10066 */;
-import closure_3 from "processMessage" /* 5013 */;
-import { ReferencedMessageState } from "processMessage" /* 5013 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import setOptionsDefault from "../../../messages/native/renderer/RowGenerator.tsx";
+import DCDChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
+import closure_3 from "../../../replies/ReferencedMessageStore.tsx";
+import { ReferencedMessageState } from "../../../replies/ReferencedMessageStore.tsx";
+import closure_5 from "../../../../stores/MessageStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

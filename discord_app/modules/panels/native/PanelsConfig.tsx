@@ -1,6 +1,6 @@
 // discord_app/modules/panels/native/PanelsConfig.tsx
-import set from "set" /* 2 */;
-import Button from "Button" /* 1297 */;
+import set from "../../../../_runtime/00002_set.js";
+import Button from "../../../design/void/native.tsx";
 
 function isTimingConfig(duration) {
   return null != duration && null != duration.duration;

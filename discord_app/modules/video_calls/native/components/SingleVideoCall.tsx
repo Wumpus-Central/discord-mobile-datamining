@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/SingleVideoCall.tsx
-import closure_3 from "noop" /* 19 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import VoiceChatDrawerState from "../ChannelCallStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ resetFocus: c4, toggleFocus: c5 } = VoiceChatDrawerState);

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_automod/AutomodRuleUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import buildCommand from "buildCommand" /* 5245 */;
-import AutomodTriggerType from "AutomodTriggerType" /* 16764 */;
-import getRuleDefaultActionsFromConfig from "getRuleDefaultActionsFromConfig" /* 16765 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import { getRuleCountByTriggerType } from "withEqualityFn" /* 16762 */;
-import AutomodEventType from "AutomodEventType" /* 11042 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import buildCommand from "../application_commands/ApplicationCommandUtils.tsx";
+import AutomodTriggerType from "AutomodTriggerConfigs.tsx";
+import getRuleDefaultActionsFromConfig from "AutomodActionUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import { getRuleCountByTriggerType } from "AutomodStore.tsx";
+import AutomodEventType from "Constants.tsx";
 
 require = arg1;
 ({ AutomodTriggerType: c4, MAX_KEYWORDS_PER_KEYWORD_FILTER: c5, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6, MAX_CHARACTERS_PER_KEYWORD: error, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: c9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: unpackModuleId, AutomodEventType: closure_12 } = AutomodEventType);

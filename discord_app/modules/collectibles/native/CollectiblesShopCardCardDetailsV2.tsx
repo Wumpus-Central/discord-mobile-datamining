@@ -1,20 +1,20 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import map from "map" /* 4097 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
-import getCardProductName from "getCardProductName" /* 9259 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateProduct" /* 5319 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
+import getCardProductName from "../utils/getProductName.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/native/IAPStore.android.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

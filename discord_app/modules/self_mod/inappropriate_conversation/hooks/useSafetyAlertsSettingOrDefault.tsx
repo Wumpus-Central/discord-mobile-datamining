@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx
-import initialize from "initialize" /* 589 */;
-import useUserIsTeen from "useUserIsTeen" /* 8152 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
+import closure_2 from "../../../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");

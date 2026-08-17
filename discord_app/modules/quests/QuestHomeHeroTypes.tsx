@@ -1,7 +1,7 @@
 // discord_app/modules/quests/QuestHomeHeroTypes.tsx
-import set from "set" /* 2 */;
-import resolveAsset from "resolveAsset" /* 10486 */;
-import questHomeHeroCtaFromServer from "questHomeHeroCtaFromServer" /* 10504 */;
+import set from "../../../_runtime/00002_set.js";
+import resolveAsset from "lib/AssetUtils.tsx";
+import questHomeHeroCtaFromServer from "QuestHomeHeroCta.tsx";
 
 const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 

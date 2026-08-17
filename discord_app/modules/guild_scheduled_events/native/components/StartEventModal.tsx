@@ -1,19 +1,19 @@
 // discord_app/modules/guild_scheduled_events/native/components/StartEventModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 8176 */;
-import GuildEventCardControlsDefault from "GuildEventCardControls" /* 8899 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../../_runtime/08176_registerAsset.js";
+import GuildEventCardControlsDefault from "GuildEventCard.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/GuildStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "../../GuildScheduledEventsConstants.tsx";
+import { START_EVENT_MODAL_KEY } from "../GuildEventModalConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NavigationBar(onClose) {

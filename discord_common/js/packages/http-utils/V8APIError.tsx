@@ -1,5 +1,5 @@
 // discord_common/js/packages/http-utils/V8APIError.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 function convertStringArrayToSkemaErrorItems(arr) {
   return arr.map((message) => ({ code: "UNKNOWN", message }));

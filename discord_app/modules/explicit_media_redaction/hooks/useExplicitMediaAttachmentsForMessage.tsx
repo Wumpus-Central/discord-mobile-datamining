@@ -1,5 +1,5 @@
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx
-import closure_2 from "reinjectEphemerals" /* 4994 */;
+import closure_2 from "../../../stores/MessageStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "useContentHarmTypes.tsx";
 

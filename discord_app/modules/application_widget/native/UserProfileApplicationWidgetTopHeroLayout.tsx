@@ -1,14 +1,14 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6352 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HorizontalGradient } from "ME" /* 676 */;
-import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../_runtime/06352__isNativeReflectConstruct.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { HorizontalGradient } from "../../../Constants.tsx";
+import { CARD_PADDING } from "../../user_profile/native/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 

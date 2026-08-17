@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import MIN_HEADER_HEIGHT2 from "MIN_HEADER_HEIGHT" /* 8493 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import MIN_HEADER_HEIGHT2 from "../MainTabsV2Constants.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 const MIN_HEADER_HEIGHT = MIN_HEADER_HEIGHT2.MIN_HEADER_HEIGHT;

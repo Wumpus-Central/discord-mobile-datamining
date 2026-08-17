@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import ME from "../../../../../Constants.tsx";
 
 const require = arg1;
 ({ GuildSettingsSections: c4, AnalyticsSections: c5 } = ME);

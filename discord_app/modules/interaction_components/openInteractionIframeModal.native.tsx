@@ -1,6 +1,6 @@
 // discord_app/modules/interaction_components/openInteractionIframeModal.native.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY" /* 16613 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "native/InteractionIframeConstants.tsx";
 
 const require = arg1;
 function _openInteractionIframeModal() {

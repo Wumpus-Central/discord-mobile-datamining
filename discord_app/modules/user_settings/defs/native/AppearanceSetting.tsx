@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/AppearanceSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 2533 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import useActiveThemeType from "useActiveThemeType" /* 8503 */;
-import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
-import { ActiveThemeType } from "SystemThemeState" /* 1305 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getThemeForColor from "../../../client_themes/ClientThemesUtils.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import messagesProxyDefault from "../../../client_themes/intl/ClientThemes.messages.js";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import useActiveThemeType from "../../../client_themes/native/useActiveTheme.tsx";
+import closure_3 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
+import { ActiveThemeType } from "../../ThemeConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsAppearanceScreen } from "../../appearance/native/SettingsAppearanceScreen.tsx";
 
 require = arg1;

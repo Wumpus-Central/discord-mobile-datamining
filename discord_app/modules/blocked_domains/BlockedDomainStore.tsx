@@ -1,8 +1,8 @@
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const prototype = function BlockedDomainStore() {

@@ -1,19 +1,19 @@
 // discord_app/modules/app_database/modules/GuildsRequiringChannelSync.tsx
-import set2 from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import sum from "sum" /* 505 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import set3 from "set" /* 1398 */;
-import itemsDefault from "items" /* 1955 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import timestampDefault from "../../debug/Logger.tsx";
+import sum from "../../../../discord_common/js/shared/Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import set3 from "../../channel/ChannelConstants.tsx";
+import itemsDefault from "../DatabaseDaos.tsx";
+import createChannelRecord from "../../../records/ChannelRecord.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/GuildRoleStore.tsx";
+import closure_10 from "../../../stores/GuildStore.tsx";
+import closure_11 from "../../../stores/PermissionStore.tsx";
+import ME from "../../../Constants.tsx";
+import importAllResult from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 let obj = require;
 ({ createChannelRecordFromServer: c4, ChannelRecordBase: c5 } = createChannelRecord);

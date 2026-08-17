@@ -1,9 +1,9 @@
 // discord_app/modules/user_affinities/UserAffinitiesActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "hasConsented" /* 5258 */;
-import closure_4 from "recomputeAffinities" /* 5407 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../stores/ConsentStore.tsx";
+import closure_4 from "UserAffinitiesV2Store.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ Endpoints: c5, Consents: closure_6 } = ME);

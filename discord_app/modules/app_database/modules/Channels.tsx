@@ -1,8 +1,8 @@
 // discord_app/modules/app_database/modules/Channels.tsx
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import set from "../../../../_runtime/00002_set.js";
+import createChannelRecord from "../../../records/ChannelRecord.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
 
 let obj = importDefault;
 let closure_2 = createChannelRecord.createChannelRecordFromServer;

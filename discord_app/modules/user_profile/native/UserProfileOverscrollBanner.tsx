@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/native/UserProfileOverscrollBanner.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import _modDef8986 from "module_8986" /* 8986 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import _modDef8986 from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
+import UserProfileBannerDefault from "UserProfileBanner.tsx";
+import { StyleSheet } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 noopAll;

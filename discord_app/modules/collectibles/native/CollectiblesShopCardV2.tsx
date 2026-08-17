@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardV2.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import context from "context" /* 9175 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
-import items from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import context from "../CollectiblesAnalyticsContext.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../user_settings/ThemeStore.tsx";
+import closure_6 from "../CollectiblesCategoryStore.tsx";
+import items from "../CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function CollectiblesShopCardInternalV2(product) {

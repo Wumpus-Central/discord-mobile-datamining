@@ -1,6 +1,6 @@
 // discord_common/js/shared/hooks/useShallowArrayMemo.tsx
-import set from "set" /* 2 */;
-import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 15389 */;
+import set from "../../../../_runtime/00002_set.js";
+import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction.tsx";
 import { shallowEqual } from "../../packages/shallow-equal/shallowEqual.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/useShallowArrayMemo.tsx");

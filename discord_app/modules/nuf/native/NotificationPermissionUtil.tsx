@@ -1,14 +1,14 @@
 // discord_app/modules/nuf/native/NotificationPermissionUtil.tsx
-import initialize from "initialize" /* 589 */;
-import set from "set" /* 11591 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "set" /* 11578 */;
-import { EventActionType } from "EventActionType" /* 11582 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus" /* 4839 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import set from "../../regional_feature_config/RegionalTeenUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import { EventActionType } from "components/notification/NotificationPermissionConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { NotificationAuthorizationStatus as closure_10 } from "../../native_permissions/NativePermissionConstants.tsx";
 
 require = arg1;
 function _requestPushNotificationPermission() {

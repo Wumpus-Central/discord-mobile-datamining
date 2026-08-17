@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/appearance/native/hooks/getGradientStartPont.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 
 function getHorizontalOrVerticalStartPoint(arg0, arg1, arg2) {
   if (0 === arg0) {

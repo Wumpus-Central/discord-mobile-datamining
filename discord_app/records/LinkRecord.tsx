@@ -1,6 +1,6 @@
 // discord_app/records/LinkRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import { Routes } from "ME" /* 676 */;
+import toJSDefault from "../lib/Record.tsx";
+import { Routes } from "../Constants.tsx";
 
 toJSDefault;
 let prototype;

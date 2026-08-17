@@ -1,6 +1,6 @@
 // discord_app/modules/billing/records/DiscountRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
 toJSDefault;
 ({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = GuildFeatures);

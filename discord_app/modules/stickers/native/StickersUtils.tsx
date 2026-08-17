@@ -1,11 +1,11 @@
 // discord_app/modules/stickers/native/StickersUtils.tsx
-import closure_3 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10220 */;
-import { GuildNSFWContentLevel } from "ME" /* 676 */;
-import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import { useStickerPickerStore } from "StickerPickerStore.tsx";
+import { GuildNSFWContentLevel } from "../../../Constants.tsx";
+import { ExpressionPickerViewType } from "../../expression_picker/ExpressionPickerConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");

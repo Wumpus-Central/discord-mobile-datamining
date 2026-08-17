@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ReactionNotificationsSettings.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import MAX_REACTIONS from "../../../reactions/ReactionUtils.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function onChange(arg0) {
   const obj = MAX_REACTIONS;

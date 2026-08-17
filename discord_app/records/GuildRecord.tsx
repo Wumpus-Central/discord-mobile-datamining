@@ -1,11 +1,11 @@
 // discord_app/records/GuildRecord.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import apexExperiment from "apexExperiment" /* 1907 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import getAvatarURLDefault from "../utils/AvatarUtils.tsx";
+import isNullOrEmpty from "../utils/StringUtils.tsx";
+import apexExperiment from "../modules/age_gate/ServerNSFWLevelExperiment.tsx";
+import isValueEqual from "../lib/PlainRecord.tsx";
+import ME from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 ({ set: c3, TypeTag } = isValueEqual);
 const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;

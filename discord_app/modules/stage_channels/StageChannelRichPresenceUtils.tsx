@@ -1,11 +1,11 @@
 // discord_app/modules/stage_channels/StageChannelRichPresenceUtils.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "fetchFingerprint" /* 1218 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "buildStageChannelUserRoles" /* 4990 */;
-import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../stores/AuthenticationStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "StageChannelRoleStore.tsx";
+import { STAGE_APPLICATION_ID } from "StageChannelsConstants.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 function unpackStageChannelParty(c17) {
   if (null != c17) {

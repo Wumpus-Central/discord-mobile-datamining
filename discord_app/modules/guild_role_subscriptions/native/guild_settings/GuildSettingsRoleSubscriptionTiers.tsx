@@ -1,22 +1,22 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import renderDefault from "render" /* 8910 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 16955 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleFormInit" /* 8875 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import { MAX_SUBSCRIPTION_TIERS } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import ME from "ME" /* 676 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import renderDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import ApplicationRejectedNoticeDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../guild_settings/GuildSettingsStore.tsx";
+import closure_10 from "../../../../stores/GuildStore.tsx";
+import closure_11 from "../../GuildRoleSubscriptionsStore.tsx";
+import { MAX_SUBSCRIPTION_TIERS } from "../../GuildRoleSubscriptionsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { SubscriptionIntervalTypes } from "../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DraftBadge() {

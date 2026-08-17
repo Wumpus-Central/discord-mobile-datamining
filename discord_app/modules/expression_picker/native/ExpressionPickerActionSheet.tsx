@@ -1,16 +1,16 @@
 // discord_app/modules/expression_picker/native/ExpressionPickerActionSheet.tsx
-import initialize from "initialize" /* 589 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import useKeyboardType from "useKeyboardType" /* 4239 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import { STICKER_FORMATS } from "PADDING_HORIZONTAL" /* 10187 */;
-import jsxProd from "jsxProd" /* 21 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
+import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
+import NAV_BAR_HEIGHT from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "../../action_sheet/native/ActionSheetConstants.tsx";
+import { STICKER_FORMATS } from "../../stickers/native/StickerPickerConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);

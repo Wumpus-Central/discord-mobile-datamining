@@ -1,13 +1,13 @@
 // discord_app/modules/explicit_media_redaction/HarmTypeConfiguration.tsx
-import set from "set" /* 2 */;
-import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4810 */;
-import ObscureReason from "ObscureReason" /* 5021 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 5022 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import messageAttachmentToUnfurledMediaItem from "../media/MediaTypes.tsx";
+import ObscureReason from "ObscureMediaModels.tsx";
+import ContentHarmTypeChannel from "ExplicitMediaRedactionModels.tsx";
+import resolveExplicitContentSettingWithDefaults from "SensitiveMediaExplicitRedactionSettingsUtils.tsx";
+import resolveGoreSettingWithDefaults from "SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import ME from "../../Constants.tsx";
 
 ({ MessageAttachmentFlags, MessageEmbedFlags } = ME);
 let obj = { EXPLICIT: "explicit", GORE: "gore", SELF_HARM: "self_harm" };

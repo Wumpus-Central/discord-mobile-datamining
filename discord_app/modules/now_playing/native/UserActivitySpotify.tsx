@@ -1,13 +1,13 @@
 // discord_app/modules/now_playing/native/UserActivitySpotify.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import Button from "Button" /* 1297 */;
-import getConstantsAll from "getConstants" /* 1626 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import registerAssetDefault from "registerAsset" /* 8352 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
-import jsxProd from "jsxProd" /* 21 */;
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Button from "../../../design/void/native.tsx";
+import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import registerAssetDefault from "../../../../_runtime/08352_registerAsset.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import SPOTIFY_APP_PROTOCOL from "../../spotify/SpotifyConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import { Button } from "../../../design/void/native.tsx";
 
 require = arg1;

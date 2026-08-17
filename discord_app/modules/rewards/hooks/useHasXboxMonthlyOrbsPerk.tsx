@@ -1,8 +1,8 @@
 // discord_app/modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx
-import initialize from "initialize" /* 589 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");

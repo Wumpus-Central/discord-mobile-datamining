@@ -1,9 +1,9 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx
-import setDefault from "set" /* 687 */;
-import getReportInboundErrors from "getReportInboundErrors" /* 17058 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import setDefault from "../../../../utils/Durations.tsx";
+import getReportInboundErrors from "../AVErrorUtils.tsx";
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
 
 require = arg1;
 let closure_5 = 20 * setDefault.Millis.SECOND;

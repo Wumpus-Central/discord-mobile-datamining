@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import notSupportedDefault from "notSupported" /* 7935 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14559 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 15790 */;
-import SeparatorDefault from "Separator" /* 15791 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "initialize" /* 4201 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import notSupportedDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
+import useGroupListingsFetchContext from "../../GroupListingsFetchContext.tsx";
+import UnavailableNoticeDefault from "../components/UnavailableNotice.tsx";
+import SeparatorDefault from "../purchase_page/GuildRoleSubscriptionPurchasePage.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../../../../stores/DefaultRouteStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function serverNameHook(children) {

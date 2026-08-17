@@ -1,10 +1,10 @@
 // discord_app/design/components/Tooltip/native/useTooltip.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import timestampDefault from "../../../../modules/debug/Logger.tsx";
+import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { add } from "../../Layers/native/LayerContext.native.tsx";
 
 const require = arg1;

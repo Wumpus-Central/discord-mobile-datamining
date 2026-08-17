@@ -1,24 +1,24 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberList.tsx
-import Text from "Text" /* 4734 */;
-import Form from "Form" /* 8083 */;
-import registerAssetDefault from "registerAsset" /* 9992 */;
-import _modDef12659 from "module_12659" /* 12659 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "participantFromServer" /* 1390 */;
-import closure_10 from "createdAt" /* 1930 */;
-import closure_11 from "reset" /* 4652 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import { FORM_ROW_VERTICAL_PADDING } from "semanticColor" /* 1301 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import registerAssetDefault from "../../../../../_runtime/09992_registerAsset.js";
+import _modDef12659 from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_10 from "../../../../records/UserRecord.tsx";
+import closure_11 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_12 from "../../../../stores/PermissionStore.tsx";
+import closure_13 from "../../../../stores/UserStore.tsx";
+import closure_14 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { FORM_ROW_VERTICAL_PADDING } from "../../../../design/void/Form/native/FormConstants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../../action_sheet/native/ActionSheetConstants.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ItemSeparator() {

@@ -1,10 +1,10 @@
 // discord_app/modules/jank_stats/native/JankStatsManager.android.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
-import enforcingDefault from "enforcing" /* 16623 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import getDeviceMetadata from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ AppStates: c3, AnalyticEvents: c4 } = ME);
 initializeDefault;

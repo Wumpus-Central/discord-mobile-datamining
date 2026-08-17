@@ -1,16 +1,16 @@
 // discord_app/modules/opt_in_channels/native/ChannelBrowser.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "guildHasCommunity" /* 5276 */;
-import closure_7 from "setIndex" /* 5278 */;
-import closure_8 from "comparator" /* 1980 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../recent_channels/NewChannelsStore.tsx";
+import closure_7 from "../../../stores/GuildCategoryStore.tsx";
+import closure_8 from "../../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/UserGuildSettingsStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function keyExtractor(section) {

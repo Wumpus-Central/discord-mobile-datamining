@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/MemberVerificationFormStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 
 require = arg1;
 let obj = { version: "", description: "", formFields: [] };

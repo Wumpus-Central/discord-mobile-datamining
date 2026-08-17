@@ -1,13 +1,13 @@
 // discord_app/design/components/TableRow/native/TableSwitchRow.native.tsx
-import set from "set" /* 500 */;
-import getNodeText from "getNodeText" /* 4099 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import FormSwitch from "FormSwitch" /* 7179 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import getNodeText from "../../../utils/native.tsx";
+import TableRowInner from "TableRow.native.tsx";
+import FormSwitch from "../../Forms/native/FormSwitch.native.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

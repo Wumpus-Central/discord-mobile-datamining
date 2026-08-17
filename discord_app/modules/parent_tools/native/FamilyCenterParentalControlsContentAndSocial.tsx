@@ -1,13 +1,13 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import createToggle from "createToggle" /* 10669 */;
-import _modDef13991 from "module_13991" /* 13991 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import createToggle from "../../settings/native/renderer/SettingBuilders.tsx";
+import _modDef13991 from "../../settings/native/renderer/SettingLayout.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,11 +1,11 @@
 // discord_app/modules/experiments/apex/ApexExperiment.tsx
-import extractId from "extractId" /* 513 */;
-import initialize from "initialize" /* 589 */;
-import loggerDefault from "logger" /* 1369 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "initialize" /* 1212 */;
+import extractId from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import loggerDefault from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "ApexExperimentStore.tsx";
 
 require = arg1;
 function getUnitId(arg0, guildId) {

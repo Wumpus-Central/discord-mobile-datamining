@@ -1,17 +1,17 @@
 // discord_app/modules/user_profile/native/GuildProfileEditForm.tsx
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import ProfilePreviewButtonDefault from "ProfilePreviewButton" /* 14005 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createUserWidgetFromServer" /* 5365 */;
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import ProfilePreviewButtonDefault from "UserProfileEditBannerButton.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../UserProfileStore.tsx";
+import { FLOATING_UPSELL_HEIGHT } from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function EditGuildProfileBanner(user) {

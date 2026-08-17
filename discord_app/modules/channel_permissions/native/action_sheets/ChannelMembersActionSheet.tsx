@@ -1,17 +1,17 @@
 // discord_app/modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../stores/PermissionStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

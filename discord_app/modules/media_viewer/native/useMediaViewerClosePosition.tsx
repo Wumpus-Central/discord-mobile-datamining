@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/useMediaViewerClosePosition.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { NOOP } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { NOOP } from "../../../Constants.tsx";
 
 const require = arg1;
 let closure_6 = { code: "function useMediaViewerClosePositionTsx1(){const{index}=this.__closure;return index.get();}" };

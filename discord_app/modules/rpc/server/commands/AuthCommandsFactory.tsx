@@ -1,14 +1,14 @@
 // discord_app/modules/rpc/server/commands/AuthCommandsFactory.tsx
-import setDefault from "set" /* 687 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "addApplication" /* 4478 */;
-import closure_7 from "createExecutable" /* 4479 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "_processQueue" /* 8759 */;
+import setDefault from "../../../../utils/Durations.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../../applications/ApplicationStore.tsx";
+import closure_7 from "../../../../records/ApplicationRecord.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import ME from "../../../../Constants.tsx";
+import importDefaultResult from "../../../../../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx";
 import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { createRPCCommand } from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 

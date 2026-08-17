@@ -1,18 +1,18 @@
 // discord_app/modules/frames/panel/native/FramePanelHeader.tsx
-import initialize from "initialize" /* 589 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import useBaseActivityPanelHeaderContent from "useBaseActivityPanelHeaderContent" /* 16243 */;
-import _modDef16245 from "module_16245" /* 16245 */;
-import _modDef16249 from "module_16249" /* 16249 */;
-import QuestActivityButtonInnerDefault from "QuestActivityButtonInner" /* 16250 */;
-import contextDefault from "context" /* 16260 */;
-import _modDef16268 from "module_16268" /* 16268 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "map" /* 8708 */;
-import { asLaunched } from "FrameLayoutModes" /* 8709 */;
-import jsxProd from "jsxProd" /* 21 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
+import useBaseActivityPanelHeaderContent from "../../../activities/panel/native/ActivityPanelHeader.tsx";
+import _modDef16245 from "../../../activities/panel/native/InviteActivityButton.tsx";
+import _modDef16249 from "../../../activities/panel/native/MinimizeActivityButton.tsx";
+import QuestActivityButtonInnerDefault from "QuestActivityButton.tsx";
+import contextDefault from "FramePanelStateContext.tsx";
+import _modDef16268 from "LeaveActivityButton.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../FramesStore.tsx";
+import { asLaunched } from "../../FramesConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function FramePanelHeaderContentInner(arg0) {

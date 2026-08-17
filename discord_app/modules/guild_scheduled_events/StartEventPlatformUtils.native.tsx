@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import { GuildScheduledEventEntityTypes as closure_8 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { Routes } from "ME" /* 676 */;
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/RTCConnectionStore.tsx";
+import closure_7 from "../../stores/SelectedGuildStore.tsx";
+import { GuildScheduledEventEntityTypes as closure_8 } from "GuildScheduledEventsConstants.tsx";
+import { Routes } from "../../Constants.tsx";
 
 const require = arg1;
 function _navigateToEvent() {

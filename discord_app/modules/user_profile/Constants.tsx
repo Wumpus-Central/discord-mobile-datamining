@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/Constants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import BadgeId from "BadgeId" /* 8932 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/user_profile/Constants.tsx");

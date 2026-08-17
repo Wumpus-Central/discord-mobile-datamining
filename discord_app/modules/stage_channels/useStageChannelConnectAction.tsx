@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/useStageChannelConnectAction.tsx
-import set from "set" /* 2 */;
-import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 8060 */;
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 12489 */;
+import set from "../../../_runtime/00002_set.js";
+import useStageChannelIsLiveDefault from "useStateChannelIsLive.tsx";
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles.tsx";
 
 const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
 const result = set.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");

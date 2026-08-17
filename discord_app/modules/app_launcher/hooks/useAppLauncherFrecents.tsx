@@ -1,12 +1,12 @@
 // discord_app/modules/app_launcher/hooks/useAppLauncherFrecents.tsx
-import findCommandInSectionAll from "findCommandInSection" /* 9555 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "recomputeFromAppTokens" /* 5289 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "initialize" /* 11297 */;
-import { WATCH_YOUTUBE_PROD_APP_ID } from "items3" /* 4481 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
+import findCommandInSectionAll from "../../application_commands/ApplicationCommandQueryApi.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../oauth2/AuthorizedAppsStore.tsx";
+import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import closure_8 from "../AppLauncherLastUsedCommandStore.tsx";
+import { WATCH_YOUTUBE_PROD_APP_ID } from "../../activities/Constants.tsx";
+import TRUE_OPTION_NAME from "../../application_commands/ApplicationCommandConstants.tsx";
 
 const require = arg1;
 function useFrecentApps(onlyActivityApps) {

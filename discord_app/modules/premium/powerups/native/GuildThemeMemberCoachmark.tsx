@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/native/GuildThemeMemberCoachmark.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
-import { GUILD_THEME_POWERUP_BOOST_PRICE as closure_6 } from "BoostedGuildTiers" /* 4262 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../GuildPowerupsStore.tsx";
+import { GUILD_THEME_POWERUP_BOOST_PRICE as closure_6 } from "../constants/GuildPowerupsConstants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { coachmarkImage: null };

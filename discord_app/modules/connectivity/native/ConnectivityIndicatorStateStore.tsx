@@ -1,14 +1,14 @@
 // discord_app/modules/connectivity/native/ConnectivityIndicatorStateStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import awaitOnlineDefault from "awaitOnline" /* 1474 */;
-import closure_2 from "handleClearCaches" /* 5067 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import awaitOnlineDefault from "../../../utils/NetworkUtils.tsx";
+import closure_2 from "../../cache/CacheStore.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/MessageStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../../stores/native/AppStateStore.tsx";
+import { AppStates } from "../../../Constants.tsx";
 
 function updateState() {
   if (!c19) {

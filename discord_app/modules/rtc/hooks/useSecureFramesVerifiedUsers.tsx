@@ -1,6 +1,6 @@
 // discord_app/modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "initialize" /* 9692 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../VerifiedKeyStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");

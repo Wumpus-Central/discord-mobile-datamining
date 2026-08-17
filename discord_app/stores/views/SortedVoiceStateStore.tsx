@@ -1,20 +1,20 @@
 // discord_app/stores/views/SortedVoiceStateStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import version2 from "version" /* 4017 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initializeFromUserSettings" /* 1394 */;
-import closure_5 from "createdAt" /* 1930 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "updateVoiceState" /* 4542 */;
-import { ME } from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getFavoritesAwareGuildName from "../../modules/favorites/FavoritesUtils.tsx";
+import version2 from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../modules/favorites/FavoriteStore.tsx";
+import closure_5 from "../../records/UserRecord.tsx";
+import closure_6 from "../AuthenticationStore.tsx";
+import closure_7 from "../ChannelStore.tsx";
+import closure_8 from "../GuildMemberStore.tsx";
+import closure_9 from "../UserStore.tsx";
+import closure_10 from "../VoiceStateStore.tsx";
+import { ME } from "../../Constants.tsx";
 
 require = arg1;
 function getVoiceStatesForGuild(guildId) {

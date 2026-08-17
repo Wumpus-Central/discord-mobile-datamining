@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/FractionalNitroCoinIllustration.tsx
-import noopAll from "noop" /* 19 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
+import { EXTERNAL_PRODUCT_SKU_IDS } from "../CollectiblesShopConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

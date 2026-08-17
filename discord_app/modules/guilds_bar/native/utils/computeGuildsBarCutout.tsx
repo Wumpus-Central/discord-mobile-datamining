@@ -1,9 +1,9 @@
 // discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import Button from "Button" /* 1297 */;
-import SolidCutout from "SolidCutout" /* 8402 */;
-import GUILD_ITEM_SIZE2 from "GUILD_ITEM_SIZE" /* 15548 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import Button from "../../../../design/void/native.tsx";
+import SolidCutout from "../../../../design/components/Icon/native/ClipView.tsx";
+import GUILD_ITEM_SIZE2 from "../GuildsBarConstants.tsx";
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const GUILD_ITEM_SIZE = GUILD_ITEM_SIZE2.GUILD_ITEM_SIZE;

@@ -1,7 +1,7 @@
 // discord_app/modules/device/native/applyOrientationLock.tsx
-import set from "set" /* 2 */;
-import handleOrientationChange from "handleOrientationChange" /* 8671 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 8676 */;
+import set from "../../../../_runtime/00002_set.js";
+import handleOrientationChange from "DeviceOrientation.tsx";
+import isOrientationLockSupportedDefault from "isOrientationLockSupported.tsx";
 
 let result = set.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 

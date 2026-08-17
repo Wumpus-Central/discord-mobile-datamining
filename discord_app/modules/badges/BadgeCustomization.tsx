@@ -1,6 +1,6 @@
 // discord_app/modules/badges/BadgeCustomization.tsx
-import BadgeId from "BadgeId" /* 8932 */;
-import set from "set" /* 2 */;
+import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let items = [BadgeId.BadgeId.STAFF];
 let set = new Set(items);

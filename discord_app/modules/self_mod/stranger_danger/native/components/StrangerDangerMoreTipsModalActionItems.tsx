@@ -1,10 +1,10 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
+import { SafetyWarningTypes } from "../../../ChannelSafetyWarningsStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");

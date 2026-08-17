@@ -1,22 +1,22 @@
 // discord_app/modules/guild_automod/native/AutomodUserProfileQuarantineAlert.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import registerAssetDefault from "registerAsset" /* 11050 */;
-import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import { QUARANTINE_USER_ALERT_KEY } from "AutomodEventType" /* 11042 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
+import registerAssetDefault from "../../../../_runtime/11050_registerAsset.js";
+import closure_6 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_7 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../stores/GuildMemberStore.tsx";
+import closure_11 from "../../../stores/GuildStore.tsx";
+import { QUARANTINE_USER_ALERT_KEY } from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ChatBlockedAlert(arg0) {

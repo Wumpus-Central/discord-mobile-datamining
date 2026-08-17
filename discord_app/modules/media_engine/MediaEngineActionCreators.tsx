@@ -1,6 +1,6 @@
 // discord_app/modules/media_engine/MediaEngineActionCreators.tsx
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import closure_2 from "../../stores/MediaEngineStore.tsx";
+import { MediaEngineContextTypes } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/media_engine/MediaEngineActionCreators.tsx");
 

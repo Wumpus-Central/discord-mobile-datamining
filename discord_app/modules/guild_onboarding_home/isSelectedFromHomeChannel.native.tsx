@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 1979 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import handlePermissionsChangeDefault from "handlePermissionsChange" /* 4970 */;
-import { isGuildHomeChannel } from "set" /* 1398 */;
+import handleConnectionOpenDefault from "../../stores/SelectedChannelStore.tsx";
+import coerceMainRoute from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import handlePermissionsChangeDefault from "../../stores/ChannelSectionStore.tsx";
+import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
 handlePermissionsChangeDefault;

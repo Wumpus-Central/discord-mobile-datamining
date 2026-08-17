@@ -1,10 +1,10 @@
 // discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx
-import BaseRive from "BaseRive" /* 4109 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
-import metadataDefault from "metadata" /* 4190 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import BaseRive from "../BaseRive.tsx";
+import getDerivedStateFromError from "../RiveErrorBoundary.tsx";
+import metadataDefault from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
+import closure_4 from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance"];

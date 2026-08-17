@@ -1,10 +1,10 @@
 // discord_app/modules/age_gate/AgeGateActionCreators.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import result2 from "result" /* 1221 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15225 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import result2 from "AgeGateConstants.tsx";
+import trackAgeGateSubmittedDefault from "../auth/experiment/trackAgeGateSubmitted.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;

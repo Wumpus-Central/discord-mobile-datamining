@@ -1,7 +1,7 @@
 // discord_app/modules/custom_status/utils/useCustomStatusActivityForUser.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import { ActivityTypes } from "ME" /* 676 */;
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../stores/PresenceStore.tsx";
+import { ActivityTypes } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { _activityFromSetting } from "userSettingToActivity.tsx";
 

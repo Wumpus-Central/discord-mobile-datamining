@@ -1,15 +1,15 @@
 // discord_app/utils/web/DesktopNativeUtils.tsx
-import log from "log" /* 4 */;
-import Storage3 from "Storage" /* 595 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
-import GameTheme from "GameTheme" /* 4511 */;
-import DomainMigrationEventType from "DomainMigrationEventType" /* 6922 */;
-import IPCEvents from "IPCEvents" /* 6923 */;
-import decideFileExtension from "decideFileExtension" /* 6924 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { NativeFeatures } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import log from "../../../discord_common/js/packages/logger/Logger.tsx";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import GuildThemeSourcePreference from "../../flow/Client.tsx";
+import GameTheme from "../../modules/game_detection/GameDetectionTypes.tsx";
+import DomainMigrationEventType from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
+import IPCEvents from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
+import decideFileExtension from "../../modules/media/FileExtensionUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeFeatures } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { set } from "../PlatformUtils.tsx";
 

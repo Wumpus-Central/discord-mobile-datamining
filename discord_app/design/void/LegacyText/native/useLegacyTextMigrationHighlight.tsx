@@ -1,7 +1,7 @@
 // discord_app/design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "getUserAgnosticState" /* 4737 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_2 from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { highlight: null };

@@ -1,8 +1,8 @@
 // discord_app/actions/native/BundleUpdaterActionCreators.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import setDefault from "../AlertActionCreators.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let c4 = false;

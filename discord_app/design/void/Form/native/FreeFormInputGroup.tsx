@@ -1,13 +1,13 @@
 // discord_app/design/void/Form/native/FreeFormInputGroup.tsx
-import set from "set" /* 500 */;
-import context2 from "context" /* 6939 */;
-import FreeFormLabelDefault from "FreeFormLabel" /* 8576 */;
-import ClearButtonDefault from "ClearButton" /* 8577 */;
-import LabelDefault from "Label" /* 8579 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import FreeFormLabelDefault from "FreeFormLabel.tsx";
+import ClearButtonDefault from "FreeFormTextInput.tsx";
+import LabelDefault from "FreeFormErrorLabel.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

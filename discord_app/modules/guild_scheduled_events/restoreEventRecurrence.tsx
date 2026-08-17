@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/restoreEventRecurrence.tsx
-import set from "set" /* 2 */;
-import _modDef8783 from "module_8783" /* 8783 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef8783 from "GuildScheduledEventsActionCreators.tsx";
 
 let result = set.fileFinishedImporting("modules/guild_scheduled_events/restoreEventRecurrence.tsx");
 

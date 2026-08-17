@@ -1,12 +1,12 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx
-import fromStringAll from "fromString" /* 506 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4025 */;
-import ME from "ME" /* 676 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { isGuildOwner } from "../../records/GuildRecord.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyConstants.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

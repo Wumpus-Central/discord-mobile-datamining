@@ -1,10 +1,10 @@
 // discord_app/lib/VideoHealthManager.tsx
-import set2 from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import ME from "ME" /* 676 */;
-import isTablet from "isTablet" /* 4383 */;
-import sleep from "sleep" /* 4548 */;
-import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 13097 */;
+import set2 from "../../_runtime/00002_set.js";
+import timestampDefault from "../modules/debug/Logger.tsx";
+import ME from "../Constants.tsx";
+import isTablet from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import dispatchAutoDisableVideoDefault from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
 import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 
 const VideoToggleState = ME.VideoToggleState;

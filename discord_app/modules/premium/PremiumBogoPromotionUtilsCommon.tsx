@@ -1,23 +1,23 @@
 // discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
-import set from "set" /* 500 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import tDefault from "t" /* 3975 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import isTablet from "isTablet" /* 4383 */;
-import useBlockedPaymentsConfig from "useBlockedPaymentsConfig" /* 7388 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7625 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 12899 */;
-import apexExperiment from "apexExperiment" /* 12900 */;
-import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 12901 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4045 */;
-import closure_6 from "emitChanges" /* 7421 */;
-import closure_7 from "addEntitlement" /* 5357 */;
-import closure_8 from "createEmptyPromotionsByType" /* 7628 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
+import set from "../../utils/PlatformUtils.tsx";
+import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import isTablet from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import useBlockedPaymentsConfig from "../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
+import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
+import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
+import useEligibleActiveOutboundPromotions from "promotions/PromotionsHooks.tsx";
+import apexExperiment from "experiments/BogoPromotionExperiment.tsx";
+import useScheduledForcedUpdateDefault from "hooks/useScheduledForcedUpdate.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_6 from "../../stores/billing/UserOfferStore.tsx";
+import closure_7 from "../../stores/game_store/EntitlementStore.tsx";
+import closure_8 from "promotions/PromotionsStore.tsx";
+import GuildFeatures from "PremiumConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {

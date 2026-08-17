@@ -1,21 +1,21 @@
 // discord_app/modules/search/tokens/SearchTokens.tsx
-import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import NOOPDefault from "NOOP" /* 6714 */;
-import ANSWER_IN_REGEX from "ANSWER_IN_REGEX" /* 11515 */;
-import getMatch2 from "getMatch" /* 11517 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_7 from "comparator" /* 1980 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "initialize" /* 4220 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "handleUserSearchResults" /* 11513 */;
-import closure_13 from "handleReset" /* 11514 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import tDefault from "../../../../_runtime/03975_t.js";
+import NOOPDefault from "../../../utils/AutocompleteUtils.tsx";
+import ANSWER_IN_REGEX from "SearchTokensUtils.tsx";
+import getMatch2 from "../../../lib/QueryTokenizer.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import comparator from "../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../stores/SelectedChannelStore.tsx";
+import closure_10 from "../../../stores/StreamerModeStore.tsx";
+import closure_11 from "../../../stores/UserStore.tsx";
+import closure_12 from "../SearchAutocompleteStore.tsx";
+import closure_13 from "../SearchRecentMessageStore.tsx";
+import ME from "../../../Constants.tsx";
 import { SearchTokenTypes } from "../SearchUtils.tsx";
 
 require = arg1;

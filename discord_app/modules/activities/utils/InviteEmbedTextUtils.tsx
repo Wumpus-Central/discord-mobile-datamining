@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/InviteEmbedTextUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2789 */;
-import getNickname from "getNickname" /* 4796 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { ActivityActionTypes } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../request_to_stream/RequestToStream.messages.js";
+import getNickname from "../../../utils/NicknameUtils.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { ActivityActionTypes } from "../../../Constants.tsx";
 
 require = arg1;
 function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {

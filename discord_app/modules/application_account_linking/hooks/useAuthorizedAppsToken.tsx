@@ -1,7 +1,7 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeFromAppTokens" /* 5289 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../oauth2/AuthorizedAppsStore.tsx";
+import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
 const require = arg1;
 function useAuthorizedAppsTokens(closure_3, arg1) {

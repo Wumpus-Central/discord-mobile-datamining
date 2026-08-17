@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 11640 */;
-import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 14579 */;
-import EmojiIconDefault from "EmojiIcon" /* 14586 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Button from "../../../../design/void/native.tsx";
+import parseRawEmojiObjectDefault from "../../../emojis/UnicodeEmojis.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../../_runtime/11640_registerAsset.js";
+import getUsedTemplateChannelsForGuild from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
+import EmojiIconDefault from "EmojiIcon.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "../../GuildRoleSubscriptionsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BaseBenefitRow(isInteractive) {

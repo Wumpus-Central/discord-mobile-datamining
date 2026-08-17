@@ -1,11 +1,11 @@
 // discord_app/modules/soundboard/native/SoundboardHooks.tsx
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16284 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../user_settings/ThemeStore.tsx";
+import SOUND_BUTTON_HEIGHT from "SoundboardStyleConstants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
 
 const require = arg1;
 ({ SOUNDS_PER_ROW: error, SOUND_ROW_PADDING: closure_8 } = SOUND_BUTTON_HEIGHT);

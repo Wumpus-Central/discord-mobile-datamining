@@ -1,14 +1,14 @@
 // discord_app/modules/quests/native/QuestHomeOrbShopCarousel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import noop from "noop" /* 8029 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 7452 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../discord_common/js/packages/flash-list/index.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../BountyStore.tsx";
+import { QuestsExperimentLocations } from "../QuestConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ListEdgeSpacer() {

@@ -1,20 +1,20 @@
 // discord_app/modules/icymi/native/ICYMIServerRecommendationRow.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import _modDef8636 from "module_8636" /* 8636 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "filterStaffGuild" /* 9044 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import _modDef8636 from "../../fastest_list/FastestList.android.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../a11y/AccessibilityStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import closure_9 from "../ICYMIStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
 
 require = arg1;
 function CutoutGuildBanner(guild) {

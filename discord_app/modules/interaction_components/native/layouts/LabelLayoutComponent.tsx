@@ -1,10 +1,10 @@
 // discord_app/modules/interaction_components/native/layouts/LabelLayoutComponent.tsx
-import noopAll from "noop" /* 19 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import Input from "Input" /* 8072 */;
-import isInteractionComponent from "isInteractionComponent" /* 8326 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import PermissionOverwriteType from "../../../../flow/Server.tsx";
+import Input from "../../../../design/components/Input/native/Input.native.tsx";
+import isInteractionComponent from "../../ComponentStateContext.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

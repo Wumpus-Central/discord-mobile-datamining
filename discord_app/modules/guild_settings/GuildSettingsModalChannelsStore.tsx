@@ -1,14 +1,14 @@
 // discord_app/modules/guild_settings/GuildSettingsModalChannelsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5279 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import comparator from "comparator" /* 1980 */;
-import closure_9 from "comparator" /* 1980 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "apply" /* 12 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getFlattenedChannelListDefault from "../channel/getFlattedChannelList.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../stores/GuildChannelStore.tsx";
+import closure_10 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 
 const require = arg1;

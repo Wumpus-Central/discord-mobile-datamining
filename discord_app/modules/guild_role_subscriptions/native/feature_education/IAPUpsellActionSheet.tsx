@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import { Routes } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import { Routes } from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

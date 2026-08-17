@@ -1,11 +1,11 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";

@@ -1,6 +1,6 @@
 // discord_app/modules/game_console/ConsoleVoiceUpsellStore.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import set from "../../../_runtime/00002_set.js";
+import keys from "../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = Object.freeze({ voiceUpsellDismissed: false, showSparkles: false });

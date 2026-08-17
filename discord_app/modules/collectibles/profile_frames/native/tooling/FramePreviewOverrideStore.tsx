@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import OVERRIDE_DIR from "OVERRIDE_DIR" /* 8948 */;
-import keys from "keys" /* 644 */;
+import timestampDefault from "../../../../debug/Logger.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import OVERRIDE_DIR from "FrameOverrideConstants.tsx";
+import keys from "../../../../../../_runtime/00644_keys.js";
 
 const require = arg1;
 function measure(arg0) {

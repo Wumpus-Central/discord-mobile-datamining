@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx
-import contextDefault from "context" /* 7139 */;
-import _modDef9498 from "module_9498" /* 9498 */;
-import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 14835 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { getIconById } from "items" /* 7946 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import _modDef9498 from "../../../premium/components/native/NitroUpsellButton.tsx";
+import BackwardsCompatibleAppIconRowsDefault from "../../../app_icons/native/AppIconRows.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { getIconById } from "../../../app_icons/native/AppIconConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ UpsellTypes: closure_6, AnalyticsPages: error } = ME);

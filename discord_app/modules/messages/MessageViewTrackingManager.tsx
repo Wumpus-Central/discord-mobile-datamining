@@ -1,12 +1,12 @@
 // discord_app/modules/messages/MessageViewTrackingManager.tsx
-import set2 from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import privDefault from "priv" /* 1405 */;
-import initializeDefault from "initialize" /* 5038 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import set2 from "../../../_runtime/00002_set.js";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import privDefault from "../../../_runtime/01405_priv.js";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
 
 function getAnalyticsConfig(type) {
   type = type.type;

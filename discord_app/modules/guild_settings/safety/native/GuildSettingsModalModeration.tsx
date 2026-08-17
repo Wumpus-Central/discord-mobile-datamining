@@ -1,17 +1,17 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import combinedDefault from "combined" /* 1993 */;
-import Stack from "Stack" /* 4733 */;
-import NavScrim from "NavScrim" /* 6550 */;
-import Form from "Form" /* 8083 */;
-import useUserIsTeen from "useUserIsTeen" /* 8152 */;
-import _modDef8874 from "module_8874" /* 8874 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "handleFormInit" /* 8875 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import NavScrim from "../../../../design/components/Navigator/native/NavScrim.android.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import useUserIsTeen from "../../../self_mod/hooks/useUserIsTeen.tsx";
+import _modDef8874 from "../../GuildSettingsActionCreators.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/PermissionStore.tsx";
+import closure_5 from "../../GuildSettingsStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildSettingsOwnerConfiguredContentLevel(guild) {

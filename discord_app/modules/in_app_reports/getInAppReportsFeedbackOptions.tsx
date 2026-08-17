@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_reports/getInAppReportsFeedbackOptions.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
 
 let obj = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
 const result = set.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");

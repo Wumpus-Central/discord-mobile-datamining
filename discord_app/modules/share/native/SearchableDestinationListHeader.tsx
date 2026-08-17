@@ -1,12 +1,12 @@
 // discord_app/modules/share/native/SearchableDestinationListHeader.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import HeaderBackImage from "HeaderBackImage" /* 6314 */;
-import Background from "Background" /* 6319 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7925 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import Background from "../../../../_runtime/06319_Background.js";
+import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

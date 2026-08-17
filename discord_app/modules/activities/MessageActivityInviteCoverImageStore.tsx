@@ -1,7 +1,7 @@
 // discord_app/modules/activities/MessageActivityInviteCoverImageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import privDefault from "../../../_runtime/01405_priv.js";
 
 let closure_0 = new privDefault({ max: 500 });
 const Store = initializeDefault.Store;

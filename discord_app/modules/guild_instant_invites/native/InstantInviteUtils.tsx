@@ -1,8 +1,8 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { InstantInviteSources } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import { InstantInviteSources } from "../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUtils.tsx");

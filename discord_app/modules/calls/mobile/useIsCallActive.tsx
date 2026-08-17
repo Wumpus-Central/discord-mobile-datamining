@@ -1,7 +1,7 @@
 // discord_app/modules/calls/mobile/useIsCallActive.tsx
-import closure_2 from "callConnect" /* 4496 */;
-import closure_3 from "getParticipants" /* 4773 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import closure_2 from "../../../stores/CallStore.tsx";
+import closure_3 from "../ChannelRTCStore.tsx";
+import { ParticipantTypes } from "../CallConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

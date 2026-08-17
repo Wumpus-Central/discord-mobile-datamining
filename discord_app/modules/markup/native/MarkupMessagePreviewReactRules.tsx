@@ -1,11 +1,11 @@
 // discord_app/modules/markup/native/MarkupMessagePreviewReactRules.tsx
-import noopAll from "noop" /* 19 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
-import ICON_SIZE from "ICON_SIZE" /* 7187 */;
-import smartOutput from "smartOutput" /* 8308 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import parseLinkDefault from "../MarkupRules.tsx";
+import ICON_SIZE from "../../../design/components/Icon/IconSize.tsx";
+import smartOutput from "../MarkupRulesUtils.tsx";
+import getLayoutStyles from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import { MUTED_OPACITY_CONTENT } from "../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function defaultReactFn(content, output, state) {

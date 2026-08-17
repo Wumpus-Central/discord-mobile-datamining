@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
-import noopAll from "noop" /* 19 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import registerAssetDefault from "registerAsset" /* 7408 */;
-import registerAssetDefault2 from "registerAsset" /* 9331 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/07408_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09331_registerAsset.js";
+import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

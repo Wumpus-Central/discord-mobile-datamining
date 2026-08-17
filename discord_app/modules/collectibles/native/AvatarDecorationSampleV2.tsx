@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/AvatarDecorationSampleV2.tsx
-import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,9 +1,9 @@
 // discord_app/modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9661 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import isAnimatedBackgroundOption from "VideoBackgroundUtils.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx
-import closure_2 from "noop" /* 19 */;
-import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "items" /* 4483 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "../UserApplicationIdentityConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");

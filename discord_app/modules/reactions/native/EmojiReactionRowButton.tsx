@@ -1,17 +1,17 @@
 // discord_app/modules/reactions/native/EmojiReactionRowButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import EmojiTypes from "EmojiTypes" /* 4037 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import ReactionIcon from "ReactionIcon" /* 7939 */;
-import closure_3 from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import EmojiTypes from "../../emojis/EmojiTypes.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { Platform } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {

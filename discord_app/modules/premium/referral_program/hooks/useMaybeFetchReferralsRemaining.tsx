@@ -1,8 +1,8 @@
 // discord_app/modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "emitChanges" /* 7423 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../ReferralTrialStore.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
 
 const require = arg1;
 ({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);

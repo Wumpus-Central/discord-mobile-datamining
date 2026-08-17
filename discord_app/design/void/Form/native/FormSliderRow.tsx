@@ -1,11 +1,11 @@
 // discord_app/design/void/Form/native/FormSliderRow.tsx
-import _modDef6937 from "module_6937" /* 6937 */;
-import context2 from "context" /* 6939 */;
-import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8105 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef6937 from "FormRow.tsx";
+import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import _getRequireWildcardCacheDefault from "../../../../../_runtime/08105__getRequireWildcardCache.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);

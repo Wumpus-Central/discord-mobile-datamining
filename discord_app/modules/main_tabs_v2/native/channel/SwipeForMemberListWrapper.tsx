@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
-import { MIDNIGHT_BORDER_WIDTH } from "MIN_HEADER_HEIGHT" /* 8493 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import useChannelDetailsStore from "../sidebar/details/stores/ChannelDetailsStore.tsx";
+import { MIDNIGHT_BORDER_WIDTH } from "../shared_components/MainTabsV2Constants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

@@ -1,7 +1,7 @@
 // discord_app/lib/uploader/webpConversion.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import MurmurHashV3Default from "../../../_runtime/01217_MurmurHashV3.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function _shouldConvertToWebP() {

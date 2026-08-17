@@ -1,10 +1,10 @@
 // discord_app/modules/app_icons/native/AppIconPremiumManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { getIconById } from "items" /* 7946 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import { getIconById } from "AppIconConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 
 let require = arg1;

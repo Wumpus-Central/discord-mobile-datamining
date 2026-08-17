@@ -1,12 +1,12 @@
 // discord_app/components_native/common/ViewEmptyState.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../design/void/native.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { Fonts } from "../../Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../modules/rebrand/native/TextStyles.tsx";
 
 require = arg1;
 noopAll;

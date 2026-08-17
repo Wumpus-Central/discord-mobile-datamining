@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkStyles.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 let obj = { container: null, navHeader: null, content: null, title: null, stepHeader: null, body: null, bodyContent: null, footerContainer: null, footerButton: null };
 obj = { flex: 1, alignItems: "stretch", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };

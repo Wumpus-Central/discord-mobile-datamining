@@ -1,13 +1,13 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumSoundboardFeatureUpsell.tsx
-import noopAll from "noop" /* 19 */;
-import keys from "keys" /* 691 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8482 */;
-import PremiumFeatureUpsellPillDefault from "PremiumFeatureUpsellPill" /* 9394 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import keys from "../../../../../ConstantsIOS.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import PremiumFeatureUpsellPillDefault from "PremiumFeatureUpsell.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

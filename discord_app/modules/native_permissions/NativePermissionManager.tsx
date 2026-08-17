@@ -1,11 +1,11 @@
 // discord_app/modules/native_permissions/NativePermissionManager.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
-import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 4840 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import NativePermissionStatus from "NativePermissionConstants.tsx";
+import NativePermissionsRequestOptions from "NativePermissionUtils.tsx";
 
 const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
 const InputModes = ME.InputModes;

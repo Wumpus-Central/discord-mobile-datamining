@@ -1,5 +1,5 @@
 // discord_app/flow/Server.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("flow/Server.tsx");
 

@@ -1,21 +1,21 @@
 // discord_app/stores/SelectedChannelStore.tsx
-import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import set2 from "set" /* 1398 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_13 from "fetchFingerprint" /* 1218 */;
-import closure_14 from "ensureGuildLoaded" /* 1391 */;
-import closure_15 from "comparator" /* 1980 */;
-import closure_16 from "createGuildRecordFromRust" /* 1910 */;
-import closure_17 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_18 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_19 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
+import set2 from "../modules/channel/ChannelConstants.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import closure_13 from "AuthenticationStore.tsx";
+import closure_14 from "ChannelStore.tsx";
+import closure_15 from "GuildChannelStore.tsx";
+import closure_16 from "GuildStore.tsx";
+import closure_17 from "MediaEngineStore.tsx";
+import closure_18 from "PermissionStore.tsx";
+import closure_19 from "SelectedGuildStore.tsx";
+import ME from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 

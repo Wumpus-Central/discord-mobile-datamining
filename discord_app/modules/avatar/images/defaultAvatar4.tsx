@@ -1,5 +1,5 @@
 // discord_app/modules/avatar/images/defaultAvatar4.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/avatar/images/defaultAvatar4.tsx");
 

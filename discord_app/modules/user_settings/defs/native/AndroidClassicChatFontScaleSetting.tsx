@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isIterable from "isIterable" /* 4006 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14609 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import isIterable from "../../../../../_runtime/04006_isIterable.js";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import DEFAULT_FONT_SCALE_STORE_STATE from "../../appearance/native/FontScaleStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const useFontScaleStore = DEFAULT_FONT_SCALE_STORE_STATE.useFontScaleStore;

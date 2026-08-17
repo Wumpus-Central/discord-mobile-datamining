@@ -1,13 +1,13 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionToChannel from "transitionToChannel" /* 4768 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_7 from "set" /* 5049 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import transitionToChannel from "../routing/transitionToChannel.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../impersonate/ImpersonateStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "GuildOnboardingHomeSettingsStore.tsx";
+import closure_7 from "GuildOnboardingMemberActionStore.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/ShopFlashList.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import noop from "noop" /* 8029 */;
-import getNoResultsSource from "getNoResultsSource" /* 8974 */;
-import INITIAL_SCROLL_DELAY_MS from "INITIAL_SCROLL_DELAY_MS" /* 14957 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import noop from "../../../../discord_common/js/packages/flash-list/index.js";
+import getNoResultsSource from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import INITIAL_SCROLL_DELAY_MS from "hooks/useScrollToInitialIndexOnce.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ShopEmptyState() {

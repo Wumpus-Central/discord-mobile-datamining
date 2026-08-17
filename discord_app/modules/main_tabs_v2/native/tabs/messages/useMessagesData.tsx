@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "makeSortedChannel" /* 5388 */;
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../../stores/views/PrivateChannelSortStore.tsx";
 
 const require = arg1;
 let obj = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };

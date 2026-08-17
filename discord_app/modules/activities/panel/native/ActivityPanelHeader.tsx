@@ -1,19 +1,19 @@
 // discord_app/modules/activities/panel/native/ActivityPanelHeader.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import _modDef16244 from "module_16244" /* 16244 */;
-import _modDef16245 from "module_16245" /* 16245 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "participantFromServer" /* 1390 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06377_LegacyBaseButton.js";
+import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
+import _modDef16244 from "BlurVisualEffectView.tsx";
+import _modDef16245 from "InviteActivityButton.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../EmbeddedActivitiesStore.tsx";
+import ActivityPanelModes from "../ActivityPanelConstants.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function useBaseActivityPanelHeaderContent(landscape) {

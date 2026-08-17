@@ -1,12 +1,12 @@
 // discord_app/modules/auth/register.tsx
-import encodeProperties from "encodeProperties" /* 503 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import initialize from "initialize" /* 15224 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
-import result from "result" /* 1221 */;
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "../parent_tools/ParentalConsentStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import ME from "../../Constants.tsx";
+import result from "../age_gate/AgeGateConstants.tsx";
 
 require = arg1;
 function _scorePassword() {

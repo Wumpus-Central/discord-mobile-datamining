@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/FunctionUtils.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
 function promiseThrottle(arg0) {

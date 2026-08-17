@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/channel_permissions/ViewModerators.tsx
-import noopAll from "noop" /* 19 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8064 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { RowType } from "../../../channel_permissions/ChannelPermissionsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

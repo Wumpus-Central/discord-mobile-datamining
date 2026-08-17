@@ -1,18 +1,18 @@
 // discord_app/modules/oauth2/native/ConnectAccountStep.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4326 */;
-import Text from "Text" /* 4734 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import getAvatarURL from "../../../utils/AvatarUtils.tsx";
+import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../applications/ApplicationStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

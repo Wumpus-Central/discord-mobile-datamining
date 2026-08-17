@@ -1,15 +1,15 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "computeAlertSettings" /* 10014 */;
-import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../guild_antiraid/GuildIncidentsStore.tsx";
+import closure_7 from "../../../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_8 from "../../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_3 = ["guildActivityIndicatorSource"];

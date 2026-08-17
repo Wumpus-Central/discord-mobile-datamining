@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/utils/EntityUtils.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import closure_0 from "../../../stores/ChannelStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
 
 ({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: obj1 } = GUILD_EVENT_MAX_NAME_LENGTH);
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");

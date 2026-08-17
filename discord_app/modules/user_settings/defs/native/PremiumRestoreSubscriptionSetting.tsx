@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
-import set from "set" /* 500 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import applyAppleReceiptDefault from "applyAppleReceipt" /* 7390 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
+import applyAppleReceiptDefault from "../../../../actions/native/BillingActionCreators.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

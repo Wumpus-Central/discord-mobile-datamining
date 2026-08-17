@@ -1,7 +1,7 @@
 // discord_app/i18n/native/i18nMessagesProvider.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 17120 */;
-import set from "set" /* 500 */;
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeI18nModule.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 if (set.isAndroid()) {
   let i18nManager = enforcingDefault;

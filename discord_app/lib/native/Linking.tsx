@@ -1,7 +1,7 @@
 // discord_app/lib/native/Linking.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import sanitizeURLPart from "sanitizeURLPart" /* 4085 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import sanitizeURLPart from "../../modules/links/native/handleURL.tsx";
 
 const Linking = get_ActivityIndicator.Linking;
 const result = set.fileFinishedImporting("lib/native/Linking.tsx");

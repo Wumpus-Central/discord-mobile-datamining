@@ -1,8 +1,8 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7641 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import create from "gradient.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class GiftIcon$Type extends MessageType {

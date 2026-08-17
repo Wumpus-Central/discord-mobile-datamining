@@ -1,6 +1,6 @@
 // discord_app/modules/media_channel/useShouldHideMediaOptions.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import regExp from "regExp" /* 6810 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import getApplicationCommand from "getApplicationCommand" /* 8229 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../Constants.tsx";
+import regExp from "../../../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import getApplicationCommand from "../../../ApplicationCommands.tsx";
 
 const MessageTypes = ME.MessageTypes;
 const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;

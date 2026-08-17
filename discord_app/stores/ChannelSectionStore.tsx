@@ -1,20 +1,20 @@
 // discord_app/stores/ChannelSectionStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import SidebarType from "SidebarType" /* 4972 */;
-import closure_3 from "getHash" /* 4288 */;
-import closure_4 from "handleReaction" /* 4971 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1398 */;
-import { Permissions } from "sum" /* 505 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import ComponentDispatcher from "../utils/ComponentDispatchUtils.tsx";
+import SidebarType from "../modules/sidebar/SidebarActionTypes.tsx";
+import closure_3 from "../modules/experiments/ExperimentStore.tsx";
+import closure_4 from "../modules/search/SearchMessageStore.tsx";
+import closure_5 from "ChannelStore.tsx";
+import closure_6 from "GuildStore.tsx";
+import closure_7 from "PermissionStore.tsx";
+import closure_8 from "SelectedChannelStore.tsx";
+import closure_9 from "SelectedGuildStore.tsx";
+import closure_10 from "UserStore.tsx";
+import ME from "../Constants.tsx";
+import set from "../modules/channel/ChannelConstants.tsx";
+import { Permissions } from "../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 function handlePermissionsChange() {

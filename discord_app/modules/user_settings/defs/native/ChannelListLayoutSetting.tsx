@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ChannelListLayoutSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function useChannelListLayoutPredicate() {
   return false;

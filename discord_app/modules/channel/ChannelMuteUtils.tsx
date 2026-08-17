@@ -1,6 +1,6 @@
 // discord_app/modules/channel/ChannelMuteUtils.tsx
-import set from "set" /* 2 */;
-import tDefault from "t" /* 3975 */;
+import set from "../../../_runtime/00002_set.js";
+import tDefault from "../../../_runtime/03975_t.js";
 
 const result = set.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 

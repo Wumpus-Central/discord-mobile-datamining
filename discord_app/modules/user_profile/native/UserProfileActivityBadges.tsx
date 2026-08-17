@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/UserProfileActivityBadges.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8348 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 12103 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 12104 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ActivityTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import calculateTimestampDurations from "../../content_inventory/utils.tsx";
+import useTimestampTickedNow from "../../content_inventory/memberlist/useTimestampTickedNow.tsx";
+import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ActivityTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

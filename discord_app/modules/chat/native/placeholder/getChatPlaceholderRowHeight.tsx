@@ -1,5 +1,5 @@
 // discord_app/modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const PX_24 = ThemesDefault.space.PX_24;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];

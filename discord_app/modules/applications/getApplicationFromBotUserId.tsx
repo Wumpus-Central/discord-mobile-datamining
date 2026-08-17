@@ -1,6 +1,6 @@
 // discord_app/modules/applications/getApplicationFromBotUserId.tsx
-import closure_2 from "createUserWidgetFromServer" /* 5365 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import closure_2 from "../user_profile/UserProfileStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

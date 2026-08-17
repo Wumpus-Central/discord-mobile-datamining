@@ -1,6 +1,6 @@
 // discord_app/modules/activities/useIframeLifecycle.tsx
-import closure_2 from "noop" /* 19 */;
-import { ComponentActions } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { ComponentActions } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");

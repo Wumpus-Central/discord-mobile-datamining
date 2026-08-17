@@ -1,12 +1,12 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 9921 */;
-import { SafetyWarningFeedbackTypes as closure_7 } from "handleConnectionOpen" /* 9921 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../ChannelSafetyWarningsStore.tsx";
+import { SafetyWarningFeedbackTypes as closure_7 } from "../../../../ChannelSafetyWarningsStore.tsx";
+import LOCATION_CONTEXT_MOBILE from "../../../../Constants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);

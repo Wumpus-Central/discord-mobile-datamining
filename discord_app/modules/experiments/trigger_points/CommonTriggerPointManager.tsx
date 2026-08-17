@@ -1,7 +1,7 @@
 // discord_app/modules/experiments/trigger_points/CommonTriggerPointManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 16120 */;
-import commonTriggerPointConfiguration2 from "commonTriggerPointConfiguration" /* 16547 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import commonTriggerPointConfiguration from "OpenUserSettingsTriggerPoint.tsx";
+import commonTriggerPointConfiguration2 from "VoiceCallTriggerPoint.tsx";
 
 require = arg1;
 initializeDefault;

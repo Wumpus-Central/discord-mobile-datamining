@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/PrivateProfilesExperiment.tsx
-import set from "set" /* 2 */;
-import apexExperiment2 from "apexExperiment" /* 12307 */;
-import apexExperiment3 from "apexExperiment" /* 12308 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import apexExperiment2 from "PrivateProfilesStrictExperiment.tsx";
+import apexExperiment3 from "PrivateProfilesStrictGbExperiment.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-private-profiles", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = set.fileFinishedImporting("modules/user_profile/PrivateProfilesExperiment.tsx");

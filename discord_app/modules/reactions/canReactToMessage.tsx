@@ -1,11 +1,11 @@
 // discord_app/modules/reactions/canReactToMessage.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "recomputeGuild" /* 4977 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isCommunicationDisabled from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/GuildVerificationStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

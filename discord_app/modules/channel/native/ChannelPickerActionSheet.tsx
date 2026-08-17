@@ -1,8 +1,8 @@
 // discord_app/modules/channel/native/ChannelPickerActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/RelationshipStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

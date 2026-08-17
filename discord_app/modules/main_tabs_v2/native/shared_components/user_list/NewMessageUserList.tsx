@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import computeChannelName from "../../../../channel/useChannelName.tsx";
+import fuzzysearchDefault from "../../../../../../_runtime/06775_fuzzysearch.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../../stores/UserStore.tsx";
+import { UserRowModes } from "UserRowConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function matchGroupDMRecipients(trimmed1, recipients) {

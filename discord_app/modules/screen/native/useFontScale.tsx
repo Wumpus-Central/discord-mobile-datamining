@@ -1,6 +1,6 @@
 // discord_app/modules/screen/native/useFontScale.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getDimensionsStoreStateForEntry" /* 1495 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "DimensionsStore.android.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/screen/native/useFontScale.tsx");

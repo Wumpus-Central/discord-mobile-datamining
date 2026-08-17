@@ -1,8 +1,8 @@
 // discord_app/modules/phone/PhoneStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DEFAULT_COUNTRY_CODE_NAME from "../i18n/CountryCodeUtils.tsx";
 
 function handleSetLocationMetadata(countryCode) {
   countryCode = countryCode.countryCode;

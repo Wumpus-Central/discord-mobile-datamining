@@ -1,16 +1,16 @@
 // discord_app/components_native/common/IconUploader.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import registerAssetDefault from "registerAsset" /* 9945 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
+import GuildIconSizes from "../../modules/guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../modules/guild/native/GuildIcon.tsx";
+import registerAssetDefault from "../../../_runtime/09945_registerAsset.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { UPLOAD_MEDIUM_SIZE } from "../../Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);

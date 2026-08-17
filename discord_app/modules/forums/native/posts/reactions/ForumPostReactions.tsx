@@ -1,11 +1,11 @@
 // discord_app/modules/forums/native/posts/reactions/ForumPostReactions.tsx
-import noopAll from "noop" /* 19 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
-import BurstReactionButton from "BurstReactionButton" /* 10159 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 10517 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import useLoadForumUnreadCounts from "../../../ForumHooks.tsx";
+import BurstReactionButton from "ForumPostReactionButton.tsx";
+import useReactionPermissionsDefault from "../../../../messages/useReactionPermissions.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

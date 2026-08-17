@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/core/native/openUserSettings.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import handleFormClose from "handleFormClose" /* 7361 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import handleFormClose from "../../../../stores/UserSettingsAccountStore.tsx";
 
 const UserSettingsSections = ME.UserSettingsSections;
 const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");

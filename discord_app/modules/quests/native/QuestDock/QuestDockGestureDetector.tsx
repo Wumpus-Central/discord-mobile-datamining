@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import importAllResult from "noop" /* 19 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
-import { jsx } from "jsxProd" /* 21 */;
+import LegacyBaseButton from "../../../../../_runtime/06377_LegacyBaseButton.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { QuestDockMode } from "../../QuestConstants.tsx";
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function useQuestDockSwipeGesture() {

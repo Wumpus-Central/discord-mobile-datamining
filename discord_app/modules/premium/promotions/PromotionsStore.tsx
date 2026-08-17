@@ -1,10 +1,10 @@
 // discord_app/modules/premium/promotions/PromotionsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "createFromServer" /* 7629 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "createFromServer" /* 7630 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_3 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../../records/PromotionRecord.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import closure_6 from "MarketingComponentRecord.tsx";
 
 const require = arg1;
 function createEmptyPromotionsByType() {

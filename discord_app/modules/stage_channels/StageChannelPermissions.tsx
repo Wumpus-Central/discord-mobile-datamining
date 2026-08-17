@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelPermissions.tsx
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const Permissions = ME.Permissions;
 const combineResult = importAllResult.combine(Permissions.MANAGE_CHANNELS, Permissions.MUTE_MEMBERS, Permissions.MOVE_MEMBERS);

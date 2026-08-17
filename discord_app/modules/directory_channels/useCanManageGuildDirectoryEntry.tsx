@@ -1,8 +1,8 @@
 // discord_app/modules/directory_channels/useCanManageGuildDirectoryEntry.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

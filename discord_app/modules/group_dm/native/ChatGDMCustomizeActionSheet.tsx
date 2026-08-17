@@ -1,8 +1,8 @@
 // discord_app/modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 9928 */;
-import _modDef9930 from "module_9930" /* 9930 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useNavigatorConfirmChangesOnBackDefault from "../../main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx";
+import _modDef9930 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

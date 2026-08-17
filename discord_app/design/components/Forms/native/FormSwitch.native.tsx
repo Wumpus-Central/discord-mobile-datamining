@@ -1,13 +1,13 @@
 // discord_app/design/components/Forms/native/FormSwitch.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4748 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../animation/reanimated/spring/spring.tsx";
+import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
+import SUBTLE_SPRING from "../../../animation/reanimated/spring/springPresets.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/navigator/ICYMINavigator.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 ({ jsx: obj1, jsxs: c3 } = jsxProd);

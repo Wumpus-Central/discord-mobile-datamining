@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 class ModalDispatchQueue {
   constructor() {

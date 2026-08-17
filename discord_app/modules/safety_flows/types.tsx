@@ -1,7 +1,7 @@
 // discord_app/modules/safety_flows/types.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "SafetyFlows.messages.js";
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { REFRESH_APP: -1, [-1]: "REFRESH_APP", EMAIL_VERIFICATION: 3, [3]: "EMAIL_VERIFICATION", AGE_VERIFICATION: 9, [9]: "AGE_VERIFICATION", PARENTAL_CONSENT_CONNECTION: 10, [10]: "PARENTAL_CONSENT_CONNECTION" };
 obj = { EMAIL_VERIFICATION: "email_verification", PHONE_VERIFICATION: "phone_verification", GENERIC_CALL_TO_ACTION: "generic_call_to_action", REFRESH_APP: "refresh_app", AGE_VERIFICATION: "age_verification", PARENTAL_CONSENT_CONNECTION: "parental_consent_connection" };

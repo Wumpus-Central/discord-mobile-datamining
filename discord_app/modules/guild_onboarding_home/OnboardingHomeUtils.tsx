@@ -1,12 +1,12 @@
 // discord_app/modules/guild_onboarding_home/OnboardingHomeUtils.tsx
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
-import closure_3 from "initialize" /* 1982 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
-import ME from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
+import useIsNewMemberDefault from "useIsNewMember.tsx";
+import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "GuildOnboardingHomeSettingsStore.tsx";
+import ME from "../../Constants.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 require = arg1;

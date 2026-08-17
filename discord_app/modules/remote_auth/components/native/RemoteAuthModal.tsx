@@ -1,25 +1,25 @@
 // discord_app/modules/remote_auth/components/native/RemoteAuthModal.tsx
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import ButtonGroup from "ButtonGroup" /* 6687 */;
-import registerAssetDefault from "registerAsset" /* 13322 */;
-import registerAssetDefault2 from "registerAsset" /* 13324 */;
-import registerAssetDefault3 from "registerAsset" /* 13325 */;
-import registerAssetDefault4 from "registerAsset" /* 13326 */;
-import registerAssetDefault5 from "registerAsset" /* 13327 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Endpoints } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import registerAssetDefault from "../../../../../_runtime/13322_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13324_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13325_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/13326_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/13327_registerAsset.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Endpoints } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RemoteAuthBody(remoteAuthFingerprint) {

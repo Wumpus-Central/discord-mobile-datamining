@@ -1,8 +1,8 @@
 // discord_app/modules/guild_sidebar/native/ConnectedUserLimit.tsx
-import noopAll from "noop" /* 19 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9653 */;
-import _modDef15382 from "module_15382" /* 15382 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useChannelVideoLimitDefault from "../../video_calls/useChannelVideoLimit.tsx";
+import _modDef15382 from "VoiceChannelUserLimit.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");

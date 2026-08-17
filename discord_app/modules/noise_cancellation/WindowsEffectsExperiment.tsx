@@ -1,6 +1,6 @@
 // discord_app/modules/noise_cancellation/WindowsEffectsExperiment.tsx
-import closure_2 from "initialize" /* 1212 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import closure_2 from "../experiments/apex/ApexExperimentStore.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const require = arg1;
 let obj = { preferSystemEffects: false };

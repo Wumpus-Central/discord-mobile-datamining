@@ -1,6 +1,6 @@
 // discord_app/modules/errors/hooks/useCameraEncodeError.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "isAVErrorContextOfType" /* 12440 */;
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../av_errors/AVErrorStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,18 +1,18 @@
 // discord_app/modules/feedback/native/RequestReviewStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import keys from "keys" /* 691 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import sleep from "sleep" /* 4548 */;
-import apexExperiment from "apexExperiment" /* 13246 */;
-import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13247 */;
-import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13249 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "initialize" /* 1212 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import keys from "../../../ConstantsIOS.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import sleep from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import apexExperiment from "RequestReviewNoTTIExperiment.tsx";
+import _showAndroidRatingRequestDefault from "requestReviewModal.tsx";
+import getFirstInstallTimeMillis from "../../install/native/InstallTime.tsx";
+import closure_4 from "../../experiments/ExperimentStore.tsx";
+import closure_5 from "../../experiments/apex/ApexExperimentStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 function showReviewRequestModal() {

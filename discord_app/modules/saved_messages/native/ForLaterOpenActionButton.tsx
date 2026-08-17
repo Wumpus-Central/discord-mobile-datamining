@@ -1,15 +1,15 @@
 // discord_app/modules/saved_messages/native/ForLaterOpenActionButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import styleProperties from "styleProperties" /* 4750 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getTimeSafe" /* 10850 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import styleProperties from "../../../design/components/Button/native/ButtonHooks.native.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import SavedMessageSortTypes from "../SavedMessagesTypes.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../SavedMessagesStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BadgedIcon(arg0) {

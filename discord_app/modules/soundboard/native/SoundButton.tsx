@@ -1,14 +1,14 @@
 // discord_app/modules/soundboard/native/SoundButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11121 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import getSoundboardEmojiUrlDefault from "utils/getSoundboardEmojiUrl.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../reanimated/ReanimatedRexport.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 function SoundButtonEmoji(arg0) {

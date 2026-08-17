@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/GuildsBarConstants.tsx
-import set from "set" /* 2 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
+import set from "../../../_runtime/00002_set.js";
+import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import unsafe_getRawColor from "../../../discord_common/js/packages/tokens/shims.native.tsx";
 
 const hex2intResult = int2hslRaw.hex2int(unsafe_getRawColor.unsafe_getResolvedRawColor("BRAND_500", { saturation: 1 }));
 const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/device/hasPerformanceForKrispFullband.tsx
-import set from "set" /* 2 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5418 */;
+import set from "../../../_runtime/00002_set.js";
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass.android.tsx";
 
 const result = set.fileFinishedImporting("modules/device/hasPerformanceForKrispFullband.tsx");
 

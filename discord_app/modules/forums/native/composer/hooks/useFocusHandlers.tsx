@@ -1,6 +1,6 @@
 // discord_app/modules/forums/native/composer/hooks/useFocusHandlers.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import closure_0 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../../../_runtime/00019_noop.js";
 
 const obj = { TITLE: 0, [0]: "TITLE", CONTENT: 1, [1]: "CONTENT" };
 const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/useFocusHandlers.tsx");

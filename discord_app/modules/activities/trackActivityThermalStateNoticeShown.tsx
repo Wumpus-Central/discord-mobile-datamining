@@ -1,10 +1,10 @@
 // discord_app/modules/activities/trackActivityThermalStateNoticeShown.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getEmbeddedActivityLocationChannelId from "utils/embeddedActivityLocationUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import closure_5 from "EmbeddedActivitiesStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");

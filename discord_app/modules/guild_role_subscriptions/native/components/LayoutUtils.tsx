@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/LayoutUtils.tsx
-import closure_2 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);

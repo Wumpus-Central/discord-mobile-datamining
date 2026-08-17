@@ -1,13 +1,13 @@
 // discord_app/modules/forums/ForumPostDataLoader.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { computeThreadIdsSnapshot } from "maybeRebuildState" /* 7270 */;
-import closure_6 from "handleLoadThreadsSuccess" /* 7239 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 7274 */;
-import { Endpoints } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import { computeThreadIdsSnapshot } from "ForumActivePostStore.tsx";
+import closure_6 from "ForumPostMessagesStore.tsx";
+import closure_7 from "ForumPostRecentMessageStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

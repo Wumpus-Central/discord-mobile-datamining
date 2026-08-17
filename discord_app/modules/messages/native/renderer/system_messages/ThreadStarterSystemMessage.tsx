@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx
-import _modDef38 from "module_38" /* 38 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_3 from "processMessage" /* 5013 */;
-import { ReferencedMessageState } from "processMessage" /* 5013 */;
-import { MessageTypes } from "ME" /* 676 */;
+import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import closure_3 from "../../../../replies/ReferencedMessageStore.tsx";
+import { ReferencedMessageState } from "../../../../replies/ReferencedMessageStore.tsx";
+import { MessageTypes } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");

@@ -1,12 +1,12 @@
 // discord_app/modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 8395 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isProfileFrameRecord } from "fromServer" /* 5308 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_6 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useCollectibleListLayout from "../../native/useCollectibleListLayout.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isProfileFrameRecord } from "../../records/ProfileFrameRecord.tsx";
+import { PROFILE_FRAME_ASPECT_RATIO as closure_6 } from "ProfileFrameConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

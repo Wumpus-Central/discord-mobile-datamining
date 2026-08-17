@@ -1,8 +1,8 @@
 // discord_app/modules/quests/types/v2/Quest.tsx
-import set from "set" /* 2 */;
-import _firstPartyTasksFromServer from "_firstPartyTasksFromServer" /* 7462 */;
-import _rewardRedemptionInstructionsFromServer from "_rewardRedemptionInstructionsFromServer" /* 7466 */;
-import questCtaConfigFromServer from "questCtaConfigFromServer" /* 7467 */;
+import set from "../../../../../_runtime/00002_set.js";
+import _firstPartyTasksFromServer from "Task.tsx";
+import _rewardRedemptionInstructionsFromServer from "Reward.tsx";
+import questCtaConfigFromServer from "CTA.tsx";
 
 const result = set.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 

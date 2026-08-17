@@ -1,12 +1,12 @@
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import hairlineWidth from "../RedesignChannelListConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

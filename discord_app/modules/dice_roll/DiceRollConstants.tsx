@@ -1,5 +1,5 @@
 // discord_app/modules/dice_roll/DiceRollConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const items = [4, 6, 8, 10, 12, 20];
 let set = new Set(items);

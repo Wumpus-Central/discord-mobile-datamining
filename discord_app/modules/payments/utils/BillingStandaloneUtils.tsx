@@ -1,9 +1,9 @@
 // discord_app/modules/payments/utils/BillingStandaloneUtils.tsx
-import set from "set" /* 2 */;
-import v1 from "v1" /* 514 */;
-import sendRequest from "sendRequest" /* 530 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import v1 from "../../../../_runtime/00514_v1.js";
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
+import ME from "../../../Constants.tsx";
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 

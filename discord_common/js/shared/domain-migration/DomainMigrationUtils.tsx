@@ -1,5 +1,5 @@
 // discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let obj = { MIGRATION_SOURCE_DOMAIN: 0, [0]: "MIGRATION_SOURCE_DOMAIN", MIGRATION_DESTINATION_DOMAIN: 1, [1]: "MIGRATION_DESTINATION_DOMAIN" };
 const result = set.fileFinishedImporting("../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx");

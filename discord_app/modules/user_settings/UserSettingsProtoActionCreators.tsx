@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/UserSettingsProtoActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import timestampDefault from "../debug/Logger.tsx";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "UserSettingsProtoStore.tsx";
+import MAX_FAVORITES from "UserSettingsConstants.tsx";
+import ME from "../../Constants.tsx";
+import importDefaultResult1 from "../../Dispatcher.tsx";
 
 let obj = arg1;
 function updateUserGuildSettings(closure_0, arg1, INFREQUENT_USER_ACTION) {

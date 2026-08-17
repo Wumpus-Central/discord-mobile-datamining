@@ -1,5 +1,5 @@
 // discord_app/modules/app_dms/useIsAppDM.tsx
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "../../stores/UserStore.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/components/useShouldForcePipOrientation.tsx
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 8687 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import { OrientationLockState } from "items3" /* 4481 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import usePipVideoOrStreamDefault from "../usePipVideoOrStream.tsx";
+import closure_3 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
+import { OrientationLockState } from "../../../activities/Constants.tsx";
+import ParticipantTypes from "../../../calls/CallConstants.tsx";
 
 const require = arg1;
 ({ isStreamParticipant: error, ParticipantTypes: closure_8 } = ParticipantTypes);

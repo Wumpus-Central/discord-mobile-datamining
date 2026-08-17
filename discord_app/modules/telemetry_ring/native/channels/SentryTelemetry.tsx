@@ -1,7 +1,7 @@
 // discord_app/modules/telemetry_ring/native/channels/SentryTelemetry.tsx
-import appendDefault from "append" /* 13561 */;
-import TelemetryChannel from "TelemetryChannel" /* 13562 */;
-import importDefaultResult1 from "TelemetryChannel" /* 13562 */;
+import appendDefault from "BaseTelemetryChannel.tsx";
+import TelemetryChannel from "../TelemetryRingNative.android.tsx";
+import importDefaultResult1 from "../TelemetryRingNative.android.tsx";
 
 require = arg1;
 let closure_3 = { type: "BYTES", limit: 1048576 };

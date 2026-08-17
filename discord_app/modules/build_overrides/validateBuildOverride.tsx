@@ -1,10 +1,10 @@
 // discord_app/modules/build_overrides/validateBuildOverride.tsx
-import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BUILD_OVERRIDE_TARGET_NAMES" /* 4291 */;
-import { PublicReleaseChannels } from "ME" /* 676 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BuildOverrideConstants.tsx";
+import { PublicReleaseChannels } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");

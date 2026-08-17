@@ -1,6 +1,6 @@
 // discord_app/modules/debug/serializePushNotifcationLogs.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 ({ DEVICE_TOKEN: obj1, DEVICE_VOIP_TOKEN: c3 } = ME);

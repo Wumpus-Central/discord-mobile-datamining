@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/server/commands/guilds.tsx
-import set from "set" /* 2 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import set2 from "set" /* 4375 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import GuildNSFWContentLevel from "../../../../records/GuildRecord.tsx";
+import set2 from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 const getGuildIconURL = GuildNSFWContentLevel.getGuildIconURL;
 ({ RPCCommands, RPCErrors: c4 } = ME);

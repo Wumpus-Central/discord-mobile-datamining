@@ -1,14 +1,14 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgress.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import Text from "Text" /* 4734 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10302 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8936 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../GiftingBadge.messages.js";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getSingleRequirementThreshold as closure_4 } from "../../../../badges/BadgeDirectoryStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GiftingBadgeProgressBar(percent) {

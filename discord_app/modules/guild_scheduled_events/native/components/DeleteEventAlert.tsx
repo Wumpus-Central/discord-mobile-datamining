@@ -1,9 +1,9 @@
 // discord_app/modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "scheduledEventSort" /* 4370 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../GuildScheduledEventStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

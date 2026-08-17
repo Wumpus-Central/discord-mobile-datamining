@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingTabTooltipRecord.tsx
-import set from "set" /* 2 */;
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 5332 */;
+import set from "../../../../_runtime/00002_set.js";
+import CollectiblesMarketingType from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
 
 let prototype;
 prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {

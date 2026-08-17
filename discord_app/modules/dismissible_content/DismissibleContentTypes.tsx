@@ -1,6 +1,6 @@
 // discord_app/modules/dismissible_content/DismissibleContentTypes.tsx
-import set from "set" /* 2 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
+import set from "../../../_runtime/00002_set.js";
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 
 function isSingleUseDismissibleContent(item10020) {
   let hasItem = items1.includes(item10020);

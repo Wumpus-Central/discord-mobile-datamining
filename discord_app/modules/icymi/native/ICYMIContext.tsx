@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/native/ICYMIContext.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 
 const jsx = jsxProd.jsx;
 const context = noop.createContext({ width: 0, margin: 0, inset: 0 });

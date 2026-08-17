@@ -1,6 +1,6 @@
 // discord_app/modules/routing/matchPathCompat.tsx
-import set from "set" /* 2 */;
-import _extends from "_extends" /* 4203 */;
+import set from "../../../_runtime/00002_set.js";
+import _extends from "../../../_runtime/metro/04203__extends.js";
 
 const result = set.fileFinishedImporting("modules/routing/matchPathCompat.tsx");
 

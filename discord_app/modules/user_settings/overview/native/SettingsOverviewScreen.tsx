@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/overview/native/SettingsOverviewScreen.tsx
-import closure_2 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");

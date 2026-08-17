@@ -1,9 +1,9 @@
 // discord_app/modules/media/MediaTypes.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
   obj = hasFlag;

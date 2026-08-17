@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 11665 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled.tsx";
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 

@@ -1,8 +1,8 @@
 // discord_app/design/void/ThumbnailImage/native/ThumbnailImage.tsx
-import noopAll from "noop" /* 19 */;
-import { Image as _default } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import { Image as _default } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 noopAll;
 if (set.isAndroid()) {

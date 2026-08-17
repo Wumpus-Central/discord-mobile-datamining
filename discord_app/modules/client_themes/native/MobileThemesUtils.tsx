@@ -1,15 +1,15 @@
 // discord_app/modules/client_themes/native/MobileThemesUtils.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClientThemeType from "ClientThemeType" /* 1349 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 2533 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4309 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import closure_4 from "validateSavedTheme" /* 4308 */;
-import closure_5 from "reset" /* 1346 */;
-import ThemeTypes from "ThemeTypes" /* 1348 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ClientThemeType from "../ClientThemesTypes.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import messagesProxyDefault from "../intl/ClientThemes.messages.js";
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
+import closure_3 from "../../user_settings/ThemeStore.tsx";
+import closure_4 from "../SavedCustomThemeStore.tsx";
+import closure_5 from "CustomThemeMobileStore.tsx";
+import ThemeTypes from "../ClientThemesConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,20 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import _modDef11881 from "module_11881" /* 11881 */;
-import registerAssetDefault from "registerAsset" /* 15533 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
+import _modDef11881 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/15533_registerAsset.js";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../../../stores/SelectedGuildStore.tsx";
+import ME from "../../../../../../Constants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handleJoinGuild() {

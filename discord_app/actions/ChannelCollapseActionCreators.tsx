@@ -1,7 +1,7 @@
 // discord_app/actions/ChannelCollapseActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 6797 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import handleConnectionOpenDefault from "../modules/user_settings/UserGuildSettingsManager.tsx";
+import closure_2 from "../stores/UserGuildSettingsStore.tsx";
 
 let result = require("set").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
 

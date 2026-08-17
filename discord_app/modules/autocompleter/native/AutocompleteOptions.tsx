@@ -1,17 +1,17 @@
 // discord_app/modules/autocompleter/native/AutocompleteOptions.tsx
-import applyDefault from "apply" /* 12 */;
-import _executeCommandDefault from "_executeCommand" /* 10255 */;
-import closure_3 from "handleInit" /* 7526 */;
-import closure_4 from "handleInit" /* 7527 */;
-import closure_5 from "set" /* 6899 */;
-import closure_6 from "loadSavedGuildStickers" /* 6769 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import regExp from "regExp" /* 6810 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10254 */;
-import set from "set" /* 1925 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import _executeCommandDefault from "../../application_commands/executeCommand.tsx";
+import closure_3 from "../../application_commands/ApplicationCommandAutocompleteStore.tsx";
+import closure_4 from "../../application_commands/ApplicationCommandStore.tsx";
+import closure_5 from "../../games/autocomplete/GameAutocompleteStore.tsx";
+import closure_6 from "../../stickers/StickersStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import ME from "../../../Constants.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { AutocompleteTypes } from "../../channel_text_area/native/ChannelAutocompleteConstants.tsx";
+import set from "../../emojis/EmojiConstants.tsx";
 
 const require = arg1;
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: unpackModuleId } = ME);

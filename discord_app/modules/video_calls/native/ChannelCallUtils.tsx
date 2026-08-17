@@ -1,14 +1,14 @@
 // discord_app/modules/video_calls/native/ChannelCallUtils.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import registerAssetDefault from "registerAsset" /* 8134 */;
-import registerAssetDefault2 from "registerAsset" /* 12565 */;
-import registerAssetDefault3 from "registerAsset" /* 16428 */;
-import registerAssetDefault4 from "registerAsset" /* 16429 */;
-import closure_3 from "initialize" /* 4558 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/08134_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/12565_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/16428_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/16429_registerAsset.js";
+import closure_3 from "../../../stores/StreamRTCConnectionStore.tsx";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 require = arg1;

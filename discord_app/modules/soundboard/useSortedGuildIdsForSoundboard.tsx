@@ -1,10 +1,10 @@
 // discord_app/modules/soundboard/useSortedGuildIdsForSoundboard.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/SortedGuildStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");

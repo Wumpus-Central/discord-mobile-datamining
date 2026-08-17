@@ -1,6 +1,6 @@
 // discord_app/modules/blocked_domains/BlockedDomainManager.tsx
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
-import initializeDefault from "initialize" /* 5038 */;
+import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = arg1;
 initializeDefault;

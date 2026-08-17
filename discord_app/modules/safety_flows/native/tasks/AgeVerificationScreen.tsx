@@ -1,10 +1,10 @@
 // discord_app/modules/safety_flows/native/tasks/AgeVerificationScreen.tsx
-import closure_3 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import { HelpdeskArticles } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ helpLink: { textAlign: "center" } });

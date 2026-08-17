@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Changeset from "Changeset" /* 8158 */;
-import frozen from "frozen" /* 8171 */;
-import registerAssetDefault from "registerAsset" /* 8365 */;
-import registerAssetDefault2 from "registerAsset" /* 8366 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Changeset from "RowGeneratorConstants.tsx";
+import frozen from "EmbedUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/08365_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08366_registerAsset.js";
 
 const MessageFailureState = Changeset.MessageFailureState;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

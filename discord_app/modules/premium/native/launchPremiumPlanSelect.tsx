@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 7357 */;
-import PremiumModal from "PremiumModal" /* 7381 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import getSanitizedRestrictedGuilds from "../../../utils/UserSettingsUtils.tsx";
+import PremiumModal from "../../../components_native/premium/PremiumModal.tsx";
 
 const UserSettingsSections = ME.UserSettingsSections;
 let result = set.fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");

@@ -1,12 +1,12 @@
 // discord_app/modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 16670 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EventActionType } from "EventActionType" /* 11582 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../../_runtime/16670_registerAsset.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EventActionType } from "NotificationPermissionConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);

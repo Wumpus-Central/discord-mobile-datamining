@@ -1,17 +1,17 @@
 // discord_app/modules/markup/MarkupChannelMentionRule.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import tDefault from "t" /* 4092 */;
-import ME2 from "ME" /* 4488 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import closure_3 from "isSubscriptionGated" /* 1981 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import isNullOrEmpty from "../../utils/StringUtils.tsx";
+import tDefault from "../../../_runtime/04092_t.js";
+import ME2 from "../links/LinkUtils.tsx";
+import textRegexpDefault from "MarkupTextRule.tsx";
+import closure_3 from "../channel/GatedChannelStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { allowChannelAccess } from "../../utils/ChannelUtils.tsx";
 import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
 

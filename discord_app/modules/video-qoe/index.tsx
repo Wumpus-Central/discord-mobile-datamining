@@ -1,11 +1,11 @@
 // discord_app/modules/video-qoe/index.tsx
-import set from "set" /* 2 */;
-import logger from "logger" /* 14490 */;
-import generateSessionId from "generateSessionId" /* 14491 */;
-import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 14492 */;
-import logger2 from "logger" /* 14494 */;
-import logger3 from "logger" /* 14495 */;
-import getVideoQoEMetricsConfig from "getVideoQoEMetricsConfig" /* 14496 */;
+import set from "../../../_runtime/00002_set.js";
+import logger from "SimpleMuxWrapper.tsx";
+import generateSessionId from "utils/SessionManager.tsx";
+import mapDiscordToMuxMetadata from "integrations/MuxIntegration.tsx";
+import logger2 from "MobileMuxWrapper.tsx";
+import logger3 from "integrations/MobileCustomMuxIntegration.tsx";
+import getVideoQoEMetricsConfig from "experiments/VideoQoEMetricsExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/video-qoe/index.tsx");
 

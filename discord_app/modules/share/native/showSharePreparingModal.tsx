@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/showSharePreparingModal.tsx
-import set from "set" /* 2 */;
-import SHARE_PREPARING_MODAL_KEY2 from "SHARE_PREPARING_MODAL_KEY" /* 9070 */;
+import set from "../../../../_runtime/00002_set.js";
+import SHARE_PREPARING_MODAL_KEY2 from "SharePreparingModalConstants.tsx";
 
 const SHARE_PREPARING_MODAL_KEY = SHARE_PREPARING_MODAL_KEY2.SHARE_PREPARING_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");

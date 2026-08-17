@@ -1,9 +1,9 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
-import batchUpdates from "batchUpdates" /* 705 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4343 */;
-import closure_2 from "noop" /* 19 */;
-import keys from "keys" /* 644 */;
+import batchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _mod4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import HapticFeedbackTypes from "../../../../modules/haptics/HapticUtils.native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import keys from "../../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;

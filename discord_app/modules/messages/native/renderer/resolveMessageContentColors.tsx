@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/resolveMessageContentColors.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../../design/shared.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const result = createCacheKey.experimental_createToken((theme) => {
   obj = AccessibilityAnnouncer;

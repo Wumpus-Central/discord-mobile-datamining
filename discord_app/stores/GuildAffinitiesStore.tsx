@@ -1,8 +1,8 @@
 // discord_app/stores/GuildAffinitiesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchGuildAffinities from "fetchGuildAffinities" /* 9053 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import fetchGuildAffinities from "../actions/GuildAffinitiesActionCreators.tsx";
+import closure_2 from "GuildStore.tsx";
 
 require = arg1;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };

@@ -1,10 +1,10 @@
 // discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import parseDefault from "parse" /* 1484 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
+import parseDefault from "../../../_runtime/01484_parse.js";
+import AssetOriginTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 
 function getArchivedAvatarURL(allowWebp) {
   ({ userId, avatarId, storageHash, canAnimate } = allowWebp);

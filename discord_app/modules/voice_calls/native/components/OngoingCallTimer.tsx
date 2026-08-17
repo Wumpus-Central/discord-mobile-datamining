@@ -1,9 +1,9 @@
 // discord_app/modules/voice_calls/native/components/OngoingCallTimer.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 12678 */;
-import closure_3 from "callConnect" /* 4496 */;
-import { jsx } from "jsxProd" /* 21 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import componentDidMountDefault from "Timer.tsx";
+import closure_3 from "../../../../stores/CallStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

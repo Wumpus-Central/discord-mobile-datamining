@@ -1,5 +1,5 @@
 // discord_app/utils/GameUtils.native.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 let c0 = "not supported";
 const result = set.fileFinishedImporting("utils/GameUtils.native.tsx");

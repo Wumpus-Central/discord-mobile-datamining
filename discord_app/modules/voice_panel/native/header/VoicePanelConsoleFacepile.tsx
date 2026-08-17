@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9747 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9884 */;
-import closure_3 from "noop" /* 19 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useGameConsoleAccountsDefault from "../../../game_console/useGameConsoleAccounts.tsx";
+import getConsoleIconDefault from "../../../game_console/native/getConsoleIcon.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { PlatformTypes } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
 require = arg1;

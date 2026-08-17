@@ -1,7 +1,7 @@
 // discord_app/modules/native_menu/native/NativeMenuPresenter.tsx
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4732 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 10046 */;
+import useBackPressHandlerDefault from "../../routing/native/useBackPressHandler.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "NativeMenuStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");

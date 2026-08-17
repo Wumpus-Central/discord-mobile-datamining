@@ -1,16 +1,16 @@
 // discord_app/stores/billing/UserOfferStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import apexExperiment from "apexExperiment" /* 7611 */;
-import closure_2 from "createFromServer" /* 7422 */;
-import closure_3 from "emitChanges" /* 7423 */;
-import closure_4 from "createFromServer" /* 7610 */;
-import closure_5 from "createFromServer" /* 7425 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addEntitlement" /* 5357 */;
-import closure_8 from "reset" /* 4045 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
+import apexExperiment from "../../modules/premium/experiments/PremiumOfferReminderExperiment.tsx";
+import closure_2 from "../../modules/billing/records/DiscountRecord.tsx";
+import closure_3 from "../../modules/premium/ReferralTrialStore.tsx";
+import closure_4 from "../../modules/user_offers/records/UserDiscountOfferRecord.tsx";
+import closure_5 from "../../modules/user_offers/records/UserTrialOfferRecord.tsx";
+import closure_6 from "../UserStore.tsx";
+import closure_7 from "../game_store/EntitlementStore.tsx";
+import closure_8 from "SubscriptionStore.tsx";
+import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 require = arg1;

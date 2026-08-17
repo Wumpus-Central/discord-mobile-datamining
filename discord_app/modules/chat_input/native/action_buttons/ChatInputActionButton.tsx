@@ -1,12 +1,12 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0, height, marginHorizontal) => {

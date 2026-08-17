@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/QuestDockDismissalToast.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import registerAssetDefault from "registerAsset" /* 7919 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/07919_registerAsset.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

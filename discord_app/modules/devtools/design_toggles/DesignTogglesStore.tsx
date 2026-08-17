@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/design_toggles/DesignTogglesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 let obj = { enable_recently_active: "Enable recently active channels", theme_setting_in_account_sheet: "Show theme settings in the Account action sheet", nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer", show_icymi_debug_scores: "Show ICYMI debug scores", channel_list_scrim: "Dim the channel list when chat appears", mana_radio_large_variant: "Larger Radio", mana_checkbox_large_variant: "Larger Checkbox", mana_switch_large_variant: "Larger Switch", show_header_debug_info: "Show header component debug overlays" };
 let closure_1 = {};

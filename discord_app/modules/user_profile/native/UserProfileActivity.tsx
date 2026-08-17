@@ -1,23 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileActivity.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "addApplication" /* 4478 */;
-import closure_9 from "reset" /* 4652 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_13 from "sortActivity" /* 4559 */;
-import closure_14 from "filterPlayingActivities" /* 7250 */;
-import closure_15 from "updateVoiceState" /* 4542 */;
-import closure_16 from "createUserWidgetFromServer" /* 5365 */;
-import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../applications/ApplicationStore.tsx";
+import closure_9 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_10 from "../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../stores/GuildStore.tsx";
+import closure_12 from "../../../stores/PermissionStore.tsx";
+import closure_13 from "../../../stores/PresenceStore.tsx";
+import closure_14 from "../../../stores/SelfPresenceStore.tsx";
+import closure_15 from "../../../stores/VoiceStateStore.tsx";
+import closure_16 from "../UserProfileStore.tsx";
+import { CARD_PADDING } from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function ActivityCardText(children) {

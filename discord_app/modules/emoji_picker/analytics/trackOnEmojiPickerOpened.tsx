@@ -1,14 +1,14 @@
 // discord_app/modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9306 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9307 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
+import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import useTopAndNewlyAddedEmojis from "../hooks/useTopAndNewlyAddedEmojis.tsx";
+import useEmojiHotrail from "../hooks/useEmojiHotrail.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../emojis/EmojiStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
+import { ExpressionPickerViewType } from "../../expression_picker/ExpressionPickerConstants.tsx";
 
 require = arg1;
 function trackOnEmojiPickerOpened(arg0) {

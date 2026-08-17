@@ -1,13 +1,13 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncInviteFriends.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 11874 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../../_runtime/11874_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

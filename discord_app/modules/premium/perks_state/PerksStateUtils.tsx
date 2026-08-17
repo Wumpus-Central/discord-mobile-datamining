@@ -1,8 +1,8 @@
 // discord_app/modules/premium/perks_state/PerksStateUtils.tsx
-import fromStringAll from "fromString" /* 506 */;
-import PerkConfigType from "PerkConfigType" /* 1939 */;
-import create from "create" /* 1940 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import PerkConfigType from "types.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function parseServerPerkConfigKind(kind) {

@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/SpamMessageRequestStore.tsx
-import clearAllDefault from "clearAll" /* 1220 */;
-import prototype from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
+import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
+import prototype from "../../stores/ChannelStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function processChannel(isSpam) {
   isSpam = isSpam.isSpam;

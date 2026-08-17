@@ -1,9 +1,9 @@
 // discord_app/modules/multi_account/useMultiAccount.tsx
-import initialize from "initialize" /* 589 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "initialize" /* 11585 */;
-import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "MultiAccountStore.tsx";
+import { MultiAccountTokenStatus } from "MultiAccountStore.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx
-import noopAll from "noop" /* 19 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 15790 */;
-import PlaceholderDefault from "Placeholder" /* 16901 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import UnavailableNoticeDefault from "../components/UnavailableNotice.tsx";
+import PlaceholderDefault from "../components/Placeholder.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

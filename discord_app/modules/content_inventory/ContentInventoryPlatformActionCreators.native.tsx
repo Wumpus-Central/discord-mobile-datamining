@@ -1,6 +1,6 @@
 // discord_app/modules/content_inventory/ContentInventoryPlatformActionCreators.native.tsx
-import set from "set" /* 2 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8929 */;
+import set from "../../../_runtime/00002_set.js";
+import showUserProfileActionSheetDefault from "../user_profile/native/showUserProfileActionSheet.tsx";
 
 const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryPlatformActionCreators.native.tsx");
 

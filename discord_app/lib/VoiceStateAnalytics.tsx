@@ -1,9 +1,9 @@
 // discord_app/lib/VoiceStateAnalytics.tsx
-import apply from "apply" /* 12 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "updateVoiceState" /* 4542 */;
-import closure_4 from "getVoiceStatesForGuild" /* 4545 */;
-import { SpeakingFlags } from "DesktopSources" /* 4529 */;
+import apply from "../../_runtime/00012_apply.js";
+import closure_2 from "../stores/MediaEngineStore.tsx";
+import closure_3 from "../stores/VoiceStateStore.tsx";
+import closure_4 from "../stores/views/SortedVoiceStateStore.tsx";
+import { SpeakingFlags } from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("lib/VoiceStateAnalytics.tsx");

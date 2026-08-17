@@ -1,6 +1,6 @@
 // discord_app/modules/game_server/GameServerExperiment.tsx
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../_runtime/00002_set.js";
+import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2025-08_portkey_enabled", label: "GameServer Enabled", defaultConfig: { enabled: false }, treatments: items });

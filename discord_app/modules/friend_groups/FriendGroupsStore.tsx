@@ -1,10 +1,10 @@
 // discord_app/modules/friend_groups/FriendGroupsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "recomputeAffinities" /* 5407 */;
-import closure_1 from "hasConsented" /* 5258 */;
-import closure_2 from "markAllUserIdListsStale" /* 4030 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_1 from "../../stores/ConsentStore.tsx";
+import closure_2 from "../../stores/RelationshipStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 let closure_4 = [];
 let c5 = false;

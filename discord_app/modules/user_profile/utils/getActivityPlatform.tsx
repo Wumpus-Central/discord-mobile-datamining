@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/utils/getActivityPlatform.tsx
-import ME from "ME" /* 676 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12112 */;
-import set from "set" /* 2 */;
+import ME from "../../../Constants.tsx";
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const PlatformTypes = ME.PlatformTypes;
 const items = [, , , ];

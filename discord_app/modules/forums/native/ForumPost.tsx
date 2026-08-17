@@ -1,12 +1,12 @@
 // discord_app/modules/forums/native/ForumPost.tsx
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11178 */;
-import GIFIconDefault from "GIFIcon" /* 11182 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11193 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import { useForumChannelStore } from "set" /* 11177 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import ForumPostGridHeaderDefault from "posts/grid/ForumPostGridHeader.tsx";
+import GIFIconDefault from "posts/grid/ForumPostGridBody.tsx";
+import ForumPostGridFooterDefault from "posts/grid/ForumPostGridFooter.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/RelationshipStore.tsx";
+import { useForumChannelStore } from "../ForumChannelStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx
-import set from "set" /* 2 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4265 */;
-import experiment from "experiment" /* 4302 */;
+import set from "../../../../../_runtime/00002_set.js";
+import VANITY_URL_POWERUP_SKU_ID from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import experiment from "../experiments/FileUpload250MbPowerupExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 

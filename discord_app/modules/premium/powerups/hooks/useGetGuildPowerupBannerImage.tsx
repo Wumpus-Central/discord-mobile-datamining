@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../a11y/AccessibilityStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");

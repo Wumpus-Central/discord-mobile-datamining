@@ -1,12 +1,12 @@
 // discord_app/actions/ConnectedAccountsActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5221 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/ConnectedAccountsStore.tsx";
+import ME from "../Constants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

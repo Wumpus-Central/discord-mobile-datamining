@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildActiveSetting.tsx
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import closure_2 from "checkForNewerBuild" /* 13770 */;
-import createToggle from "createToggle" /* 10669 */;
+import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import closure_2 from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

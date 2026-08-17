@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/isPerModeThemingActive.tsx
-import closure_0 from "handleThemeChange" /* 1302 */;
-import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import { SystemThemeState } from "SystemThemeState" /* 1305 */;
+import closure_0 from "ThemeStore.tsx";
+import closure_1 from "UnsyncedUserSettingsStore.tsx";
+import { SystemThemeState } from "ThemeConstants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 

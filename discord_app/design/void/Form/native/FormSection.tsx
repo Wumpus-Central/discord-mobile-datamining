@@ -1,13 +1,13 @@
 // discord_app/design/void/Form/native/FormSection.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import context from "context" /* 6939 */;
-import DividerDefault from "Divider" /* 7693 */;
-import FormTitleDefault from "FormTitle" /* 7694 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { TitleStyleType } from "semanticColor" /* 1301 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import context from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import DividerDefault from "FormDivider.tsx";
+import FormTitleDefault from "FormTitle.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { TitleStyleType } from "FormConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c4, StyleSheet, Platform } = get_ActivityIndicator);

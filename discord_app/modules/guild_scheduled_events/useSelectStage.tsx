@@ -1,9 +1,9 @@
 // discord_app/modules/guild_scheduled_events/useSelectStage.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapToReactUtils.tsx
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import closure_3 from "noop" /* 19 */;
-import { isContentShown } from "withContent" /* 1383 */;
-import closure_5 from "getEmojiToGroupId" /* 6727 */;
-import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 8193 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import set from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
+import parseRawEmojiObjectDefault from "../../emojis/UnicodeEmojis.tsx";
+import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { isContentShown } from "../../dismissible_content/DismissibleContentShownStateStore.tsx";
+import closure_5 from "../../emojis/EmojiStore.tsx";
+import { NITRO_UPSELL_ALERT_KEY } from "../DoubleTapToRaectConstants.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import set from "../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ EmojiDisabledReasons: closure_8, EmojiIntention: c9 } = set);

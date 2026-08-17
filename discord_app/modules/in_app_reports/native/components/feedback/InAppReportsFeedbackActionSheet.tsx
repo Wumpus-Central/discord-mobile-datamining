@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
-import getInAppReportsFeedbackOptionsDefault from "getInAppReportsFeedbackOptions" /* 16575 */;
-import newGetEnglishMessageText from "newGetEnglishMessageText" /* 16576 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { FeedbackType } from "FeedbackRating" /* 10811 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import closeActionSheetDefault from "../../../../feedback/native/FeedbackActionSheet.tsx";
+import getInAppReportsFeedbackOptionsDefault from "../../../getInAppReportsFeedbackOptions.tsx";
+import newGetEnglishMessageText from "../../../../../intl/migration.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { FeedbackType } from "../../../../feedback/Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

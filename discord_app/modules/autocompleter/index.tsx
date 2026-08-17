@@ -1,10 +1,10 @@
 // discord_app/modules/autocompleter/index.tsx
-import set from "set" /* 2 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 6776 */;
-import getAutocompleterBoosterMapDefault from "getAutocompleterBoosterMap" /* 7594 */;
-import HeaderRecord2 from "HeaderRecord" /* 7602 */;
-import _modDef7603 from "module_7603" /* 7603 */;
-import HeaderRecord from "HeaderRecord" /* 6773 */;
+import set from "../../../_runtime/00002_set.js";
+import sortByMatchScoreDefault from "sortByMatchScore.tsx";
+import getAutocompleterBoosterMapDefault from "Autocompleter.tsx";
+import HeaderRecord2 from "createAutocompleterResult.tsx";
+import _modDef7603 from "findNextSelectedResult.tsx";
+import HeaderRecord from "AutocompleterConstants.tsx";
 
 const result = set.fileFinishedImporting("modules/autocompleter/index.tsx");
 for (const key10022 in _module1) {

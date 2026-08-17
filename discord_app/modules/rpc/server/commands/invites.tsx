@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/server/commands/invites.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { InstantInviteSources } from "ME" /* 676 */;
-import sum from "sum" /* 505 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import { InstantInviteSources } from "../../../../Constants.tsx";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
+import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
 const require = arg1;
 ({ RPCCommands, RPCErrors: closure_6 } = sum);

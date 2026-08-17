@@ -1,10 +1,10 @@
 // discord_app/modules/analytics_sessions/SessionAdManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import start from "start" /* 4259 */;
-import initializeDefault from "initialize" /* 4720 */;
-import isForegrounded from "isForegrounded" /* 5055 */;
-import importDefaultResult from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import start from "../../../discord_common/js/packages/timers/Timers.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import isForegrounded from "SessionForegroundUtils.native.tsx";
+import importDefaultResult from "../../stores/AuthenticationStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 let c3 = importDefaultResult;

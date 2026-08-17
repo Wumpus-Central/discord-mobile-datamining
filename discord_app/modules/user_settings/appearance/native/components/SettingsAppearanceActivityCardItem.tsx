@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardItem.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../LocaleStore.tsx";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "../../../../main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 noopAll;

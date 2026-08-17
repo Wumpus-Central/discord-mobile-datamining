@@ -1,6 +1,6 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import fetchStore from "fetchStore" /* 12286 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import fetchStore from "UserApplicationIdentityActionCreators.tsx";
 
 require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {

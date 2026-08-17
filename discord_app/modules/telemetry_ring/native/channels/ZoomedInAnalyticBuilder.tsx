@@ -1,9 +1,9 @@
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
-import noop from "noop" /* 13081 */;
-import Opcode from "Opcode" /* 13193 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getHermesInstrumentedStatsSummaryDefault from "../../../../utils/ProcessUtils.native.tsx";
+import noop from "../../../../lib/RTCControlSocket.tsx";
+import Opcode from "../../../gateway/GatewaySocketOpcode.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };

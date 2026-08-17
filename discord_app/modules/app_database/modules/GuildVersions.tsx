@@ -1,10 +1,10 @@
 // discord_app/modules/app_database/modules/GuildVersions.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1955 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import itemsDefault from "../DatabaseDaos.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = arg1;
 let closure_6 = new timestampDefault("GuildVersions");

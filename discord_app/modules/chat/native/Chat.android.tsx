@@ -1,14 +1,14 @@
 // discord_app/modules/chat/native/Chat.android.tsx
-import initialize from "initialize" /* 589 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10474 */;
-import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11074 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11075 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import LegacyBaseButton from "../../../../_runtime/06377_LegacyBaseButton.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
+import __INTERNAL_VIEW_CONFIGDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
+import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DCDChatList() {

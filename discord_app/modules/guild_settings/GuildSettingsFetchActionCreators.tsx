@@ -1,9 +1,9 @@
 // discord_app/modules/guild_settings/GuildSettingsFetchActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { BasicApplicationRecord } from "createExecutable" /* 4479 */;
-import closure_5 from "createdAt" /* 1930 */;
-import { Endpoints } from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { BasicApplicationRecord } from "../../records/ApplicationRecord.tsx";
+import closure_5 from "../../records/UserRecord.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function _fetchGuildIntegrationsApplications() {

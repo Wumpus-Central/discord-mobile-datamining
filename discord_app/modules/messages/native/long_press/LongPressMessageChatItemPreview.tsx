@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 8157 */;
-import DCDChatItemDefault from "DCDChatItem" /* 10066 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import setOptionsDefault from "../renderer/RowGenerator.tsx";
+import DCDChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const jsx = jsxProd.jsx;
 let obj = { chatItem: null };

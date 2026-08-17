@@ -1,14 +1,14 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPrice from "getPrice" /* 7200 */;
-import useSKUPrice from "useSKUPrice" /* 7205 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "addSku" /* 4521 */;
-import { PaymentGateways } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getPrice from "../SlayerStorefrontUtils.tsx";
+import useSKUPrice from "../../storefront/StorefrontUtils.tsx";
+import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../applications/ApplicationStore.tsx";
+import closure_6 from "../../../stores/game_store/SKUStore.tsx";
+import { PaymentGateways } from "../../../Constants.tsx";
+import { InviteTypes } from "../../instant_invite/Constants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");

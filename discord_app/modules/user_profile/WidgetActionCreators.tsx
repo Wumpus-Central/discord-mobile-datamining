@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/WidgetActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");

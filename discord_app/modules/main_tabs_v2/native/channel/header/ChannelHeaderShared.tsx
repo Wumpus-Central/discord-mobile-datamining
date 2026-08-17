@@ -1,22 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import _modDef12713 from "module_12713" /* 12713 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT" /* 8493 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../../../design/tokens/native/useToken.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import computeChannelName from "../../../../channel/useChannelName.tsx";
+import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
+import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
+import _modDef12713 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
+import { getMinHeaderHeight } from "../../shared_components/MainTabsV2Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function TitleWrapper(headerAccessibilityLabel) {

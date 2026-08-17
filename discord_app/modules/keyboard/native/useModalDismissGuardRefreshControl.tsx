@@ -1,7 +1,7 @@
 // discord_app/modules/keyboard/native/useModalDismissGuardRefreshControl.tsx
-import closure_2 from "noop" /* 19 */;
-import { RefreshControl } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { RefreshControl } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function noop() {

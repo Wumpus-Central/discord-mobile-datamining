@@ -1,7 +1,7 @@
 // discord_app/modules/guild_sidebar/useShowConnectedUserLimit.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9653 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import useChannelVideoLimitDefault from "../video_calls/useChannelVideoLimit.tsx";
 
 let closure_2 = ME.MAX_STAGE_VOICE_USER_LIMIT;
 const result = set.fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");

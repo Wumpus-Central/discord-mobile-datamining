@@ -1,17 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsChannelLongPressActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import Form from "Form" /* 8083 */;
-import registerAssetDefault from "registerAsset" /* 11954 */;
-import registerAssetDefault2 from "registerAsset" /* 15362 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import registerAssetDefault from "../../../../../_runtime/11954_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/15362_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

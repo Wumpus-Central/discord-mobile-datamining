@@ -1,11 +1,11 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerList.tsx
-import importAllResult from "noop" /* 19 */;
-import { IMAGE_SIZE } from "IMAGE_SIZE" /* 9301 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1925 */;
-import { MIN_MARGIN } from "ExpressionPickerViewType" /* 1338 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { IMAGE_SIZE } from "EmojiPickerListConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import set from "../../../emojis/EmojiConstants.tsx";
+import { MIN_MARGIN } from "../../../expression_picker/ExpressionPickerConstants.tsx";
+import { PremiumUpsellTypes } from "../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

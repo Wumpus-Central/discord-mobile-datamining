@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/useIsOnStartStageScreenStore.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import keys from "keys" /* 644 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import keys from "../../../_runtime/00644_keys.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 

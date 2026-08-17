@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/screens/home/FrecencySectionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../../Dispatcher.tsx";
 
 let obj = { APPS: "apps", COMMANDS: "commands" };
 let closure_1 = { selection: null };

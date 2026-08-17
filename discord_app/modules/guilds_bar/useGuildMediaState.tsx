@@ -1,18 +1,18 @@
 // discord_app/modules/guilds_bar/useGuildMediaState.tsx
-import set from "set" /* 692 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { isVoiceChannel } from "createChannelRecord" /* 1395 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "markAllUserIdListsStale" /* 4030 */;
-import closure_12 from "handleConnectionOpen" /* 1979 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_14 from "updateVoiceState" /* 4542 */;
-import { BasicPermissions } from "ME" /* 676 */;
+import set from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../stage_channels/StageInstanceStore.tsx";
+import { isVoiceChannel } from "../../records/ChannelRecord.tsx";
+import closure_6 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "../../stores/GuildStore.tsx";
+import closure_10 from "../../stores/PermissionStore.tsx";
+import closure_11 from "../../stores/RelationshipStore.tsx";
+import closure_12 from "../../stores/SelectedChannelStore.tsx";
+import closure_13 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_14 from "../../stores/VoiceStateStore.tsx";
+import { BasicPermissions } from "../../Constants.tsx";
 
 require = arg1;
 function canConnectToChannel(type) {

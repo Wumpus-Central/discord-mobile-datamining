@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import registerAssetDefault from "registerAsset" /* 1623 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import registerAssetDefault from "../../../../_runtime/01623_registerAsset.js";
 
 const result = set.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 

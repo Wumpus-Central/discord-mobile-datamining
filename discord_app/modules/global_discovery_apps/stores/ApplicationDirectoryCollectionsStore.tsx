@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = [];

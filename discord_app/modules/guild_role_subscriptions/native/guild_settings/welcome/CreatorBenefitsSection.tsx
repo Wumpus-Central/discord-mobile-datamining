@@ -1,21 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorBenefitsSection.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 16920 */;
-import registerAssetDefault2 from "registerAsset" /* 16923 */;
-import registerAssetDefault3 from "registerAsset" /* 16924 */;
-import registerAssetDefault4 from "registerAsset" /* 16925 */;
-import registerAssetDefault5 from "registerAsset" /* 16926 */;
-import registerAssetDefault6 from "registerAsset" /* 16927 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
+import useThemeDefault from "../../../../../hooks/useTheme.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../../../_runtime/16920_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/16923_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/16924_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../_runtime/16925_registerAsset.js";
+import registerAssetDefault5 from "../../../../../../_runtime/16926_registerAsset.js";
+import registerAssetDefault6 from "../../../../../../_runtime/16927_registerAsset.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "../../../GuildRoleSubscriptionsConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function EarningPreview() {

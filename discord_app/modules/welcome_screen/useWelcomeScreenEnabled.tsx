@@ -1,10 +1,10 @@
 // discord_app/modules/welcome_screen/useWelcomeScreenEnabled.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const isGuildTextChannelType = createChannelRecord.isGuildTextChannelType;

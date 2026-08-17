@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/useCollectiblesShopStyles.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 10392 */;
-import importDefaultResult from "tinycolor" /* 5311 */;
-import saturateResult from "module_1" /* 1 */;
-import saturateResult1 from "module_1" /* 1 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles.tsx";
+import importDefaultResult from "../../../_runtime/05311_tinycolor.js";
+import saturateResult from "../debug/logAppStart.tsx";
+import saturateResult1 from "../debug/logAppStart.tsx";
 
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.WHITE);
 const importDefaultResult1 = importDefaultResult;

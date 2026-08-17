@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageStartSystemMessage.tsx");
 

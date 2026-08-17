@@ -1,10 +1,10 @@
 // discord_app/records/SubscriptionRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_3 from "createFromServer" /* 4047 */;
-import closure_4 from "createFromServer" /* 4048 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 4050 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import toJSDefault from "../lib/Record.tsx";
+import closure_3 from "../modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx";
+import closure_4 from "InvoiceRecord.tsx";
+import ME from "../Constants.tsx";
+import set from "../components/billing/BillingConstants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 import { 00038__ } from "../../_runtime/metro/00038__.js";
 import { isPremiumGiftingSupported } from "../modules/device/BillingPlatformUtils.tsx";
 import { set } from "../utils/PlatformUtils.tsx";

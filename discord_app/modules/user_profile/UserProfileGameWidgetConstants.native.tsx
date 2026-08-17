@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetConstants.native.tsx
-import set from "set" /* 2 */;
-import FriendsIcon from "FriendsIcon" /* 4095 */;
-import RibbonIcon from "RibbonIcon" /* 12177 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 12179 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 12181 */;
-import WidgetGameTagIconRole from "WidgetGameTagIconRole" /* 12176 */;
+import set from "../../../_runtime/00002_set.js";
+import FriendsIcon from "../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
+import RibbonIcon from "../../design/components/Icon/native/redesign/generated/RibbonIcon.tsx";
+import ThumbsUpIcon from "../../design/components/Icon/native/redesign/generated/ThumbsUpIcon.tsx";
+import ThumbsDownIcon from "../../design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx";
+import WidgetGameTagIconRole from "UserProfileGameWidgetTagMetadata.tsx";
 
 const obj = {};
 obj[WidgetGameTagIconRole.WidgetGameTagIconRole.RIBBON] = RibbonIcon.RibbonIcon;

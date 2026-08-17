@@ -1,11 +1,11 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 13318 */;
-import { dismissUpsellCTA } from "setStoredContacts" /* 11852 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../_runtime/13318_registerAsset.js";
+import { dismissUpsellCTA } from "../ContactSyncPersistedStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ AnalyticEvents: c4, AnalyticsSections: c5 } = ME);

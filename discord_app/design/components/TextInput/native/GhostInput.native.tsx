@@ -1,13 +1,13 @@
 // discord_app/design/components/TextInput/native/GhostInput.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import useTextFieldState from "useTextFieldState" /* 7339 */;
-import useInputStyles from "useInputStyles" /* 7345 */;
-import useKeyboardBlurring from "useKeyboardBlurring" /* 7348 */;
-import Input from "Input" /* 8072 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../Text/native/Text.tsx";
+import useTextFieldState from "../../TextField/native/useTextField.native.tsx";
+import useInputStyles from "../../Input/native/InputFieldContainer.native.tsx";
+import useKeyboardBlurring from "../../Input/native/NativeTextInput.native.tsx";
+import Input from "../../Input/native/Input.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

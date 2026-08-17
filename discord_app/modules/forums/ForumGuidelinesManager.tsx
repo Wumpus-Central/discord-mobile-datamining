@@ -1,6 +1,6 @@
 // discord_app/modules/forums/ForumGuidelinesManager.tsx
-import Storage2 from "Storage" /* 595 */;
-import initializeDefault from "initialize" /* 5038 */;
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = arg1;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";

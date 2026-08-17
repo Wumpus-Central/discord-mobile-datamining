@@ -1,8 +1,8 @@
 // discord_app/components_native/common/MessagePreview.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "messages" /* 9066 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/native/MessagePreviewStore.tsx";
+import ME from "../../Constants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ AnalyticsSections, AnalyticsObjects } = ME);

@@ -1,19 +1,19 @@
 // discord_app/modules/threads/ActiveJoinedThreadsStore.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set2 from "set" /* 1398 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5269 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_10 from "storeThread" /* 4023 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import set2 from "../channel/ChannelConstants.tsx";
+import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/ReadStateStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import closure_9 from "ActiveThreadsStore.tsx";
+import closure_10 from "JoinedThreadsStore.tsx";
 
 function rebuild() {
   closure_12 = {};

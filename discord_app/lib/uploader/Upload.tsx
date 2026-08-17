@@ -1,10 +1,10 @@
 // discord_app/lib/uploader/Upload.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import v1 from "v1" /* 514 */;
-import EventEmitter2 from "EventEmitter" /* 652 */;
-import items from "items" /* 4830 */;
-import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 4834 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import v1 from "../../../_runtime/00514_v1.js";
+import EventEmitter2 from "../../../_runtime/00652_EventEmitter.js";
+import items from "../../utils/UploadUtils.tsx";
+import getUploadFileSizeSumAll from "../../utils/FileUtils.tsx";
 
 let obj = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };
 const EventEmitter = EventEmitter2.EventEmitter;

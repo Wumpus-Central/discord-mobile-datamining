@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/useEventException.tsx
-import closure_2 from "scheduledEventSort" /* 4370 */;
+import closure_2 from "GuildScheduledEventStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

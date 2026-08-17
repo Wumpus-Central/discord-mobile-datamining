@@ -1,12 +1,12 @@
 // discord_app/stores/billing/SubscriptionPlanStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
-import closure_3 from "createFromServer" /* 4040 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import areArraysShallowlyEqual from "../../utils/FunctionUtils.tsx";
+import closure_3 from "../../records/SubscriptionPlanRecord.tsx";
+import ME from "../../Constants.tsx";
+import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function addSubscriptionPlan(fromServer) {

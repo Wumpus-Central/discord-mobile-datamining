@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateProductPreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 9205 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import getNameplateData from "../utils.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import firstAvatarDecoration from "../../hooks/useShopProductItems.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NameplateUser(arg0) {

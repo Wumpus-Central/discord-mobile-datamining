@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
+import set from "../../../../_runtime/00002_set.js";
+import apply from "../../../../_runtime/00012_apply.js";
+import parseSkuIdFromServerData from "../utils/mappers.tsx";
 
 let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 

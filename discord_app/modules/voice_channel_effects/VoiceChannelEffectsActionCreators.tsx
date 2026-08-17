@@ -1,10 +1,10 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx
-import closure_3 from "getEmojiToGroupId" /* 6727 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "initialize" /* 7307 */;
-import { VoiceChannelEffectAnimationType as closure_6 } from "VoiceChannelEffectAnimationType" /* 7308 */;
-import ME from "ME" /* 676 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
+import closure_3 from "../emojis/EmojiStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import closure_5 from "VoiceChannelEffectsPersistedStore.tsx";
+import { VoiceChannelEffectAnimationType as closure_6 } from "VoiceChannelEffectsConstants.tsx";
+import ME from "../../Constants.tsx";
+import { DEFAULT_SOUND_GUILD_ID } from "../soundboard/SoundboardConstants.tsx";
 
 const require = arg1;
 ({ Endpoints: error, NOOP_NULL: closure_8 } = ME);

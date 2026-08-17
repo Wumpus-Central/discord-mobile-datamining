@@ -1,9 +1,9 @@
 // discord_app/modules/keyboard/native/PortalKeyboardRenderer.tsx
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import _modDef15976 from "module_15976" /* 15976 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "subscribeToKeyboardUIStore" /* 1496 */;
-import { jsx } from "jsxProd" /* 21 */;
+import wrapChildrenDefault from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import _modDef15976 from "PortalKeyboardRendererComponent.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "subscribeToKeyboardUIStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function transitionGroupGetItemKey(id) {

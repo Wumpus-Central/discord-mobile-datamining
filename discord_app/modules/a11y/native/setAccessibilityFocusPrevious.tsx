@@ -1,6 +1,6 @@
 // discord_app/modules/a11y/native/setAccessibilityFocusPrevious.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/a11y/native/setAccessibilityFocusPrevious.tsx");

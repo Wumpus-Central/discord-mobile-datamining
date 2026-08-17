@@ -1,10 +1,10 @@
 // discord_app/modules/quests/utils/QuestDataUtils.tsx
-import _modDef1208 from "module_1208" /* 1208 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "set" /* 7452 */;
-import closure_5 from "initializeState" /* 7453 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import QuestsVisibleMessagesChangedSource from "../QuestTypes.tsx";
+import closure_3 from "../../user_settings/LocaleStore.tsx";
+import closure_4 from "../BountyStore.tsx";
+import closure_5 from "../QuestStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
 
 require = arg1;
 function getQuestDeliveryDataForPlacement(arg0, adContentId) {

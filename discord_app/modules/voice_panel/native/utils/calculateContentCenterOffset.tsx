@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/utils/calculateContentCenterOffset.tsx
-import set from "set" /* 2 */;
-import tDefault from "t" /* 11259 */;
-import CARD_SIZE from "CARD_SIZE" /* 11443 */;
+import set from "../../../../../_runtime/00002_set.js";
+import tDefault from "roundToNearestPixel.tsx";
+import CARD_SIZE from "../card/VoicePanelCardConstants.tsx";
 
 const EDGE_GUTTER = CARD_SIZE.EDGE_GUTTER;
 const fn = function t(arg0) {

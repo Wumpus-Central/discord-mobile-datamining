@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/getDisplayNameStylesFontName.tsx
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
+import messagesProxyDefault from "intl/DisplayNameStyles.messages.js";
 
 const obj = {};
 obj[require("DisplayNameFont").DisplayNameFont.DEFAULT] = messagesProxyDefault.ZEL6mz;

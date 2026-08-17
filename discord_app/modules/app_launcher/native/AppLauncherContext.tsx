@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/AppLauncherContext.tsx
-import importAllResult from "noop" /* 19 */;
+import importAllResult from "../../../../_runtime/00019_noop.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { AppLauncherEntrypoint } from "../AppLauncherTypes.tsx";
 import { useDefaultAppLauncherWidth } from "hooks/useDefaultAppLauncherWidth.tsx";

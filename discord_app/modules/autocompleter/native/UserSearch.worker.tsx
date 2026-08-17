@@ -1,6 +1,6 @@
 // discord_app/modules/autocompleter/native/UserSearch.worker.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;

@@ -1,12 +1,12 @@
 // discord_app/design/components/Input/native/InputFieldContainer.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
-import InputHeights from "InputHeights" /* 7346 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../tokens/native/useToken.tsx";
+import Text from "../../Text/native/Text.tsx";
+import InputHeights from "InputTypes.native.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 function useInputStyles(size) {

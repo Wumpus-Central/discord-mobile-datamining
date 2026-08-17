@@ -1,6 +1,6 @@
 // discord_app/modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../SocialLayerStorefrontStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");

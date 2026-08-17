@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/DefaultInviteExpirationExperiments.tsx
-import isGuildMemberDefault from "isGuildMember" /* 8920 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import isGuildMemberDefault from "../../utils/InstantInviteUtils.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import ME from "../../Constants.tsx";
+import createExperiment from "../experiments/index.tsx";
 
 const require = arg1;
 function getDefaultInviteExpiration(arg0) {

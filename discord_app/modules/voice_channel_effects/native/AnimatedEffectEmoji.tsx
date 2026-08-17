@@ -1,13 +1,13 @@
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
-import setDefault from "set" /* 687 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import preloadDefault from "preload" /* 5449 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import setDefault from "../../../utils/Durations.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function Emoji(url) {

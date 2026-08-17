@@ -1,7 +1,7 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardExperiment.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };

@@ -1,9 +1,9 @@
 // discord_app/modules/guild/BasicGuildActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getGuild" /* 8180 */;
-import { Endpoints } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "BasicGuildStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 function _fetchBasicGuild() {

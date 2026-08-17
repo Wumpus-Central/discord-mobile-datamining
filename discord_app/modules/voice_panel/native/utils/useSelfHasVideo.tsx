@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/utils/useSelfHasVideo.tsx
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_2 from "../../../calls/ChannelRTCStore.tsx";
+import closure_3 from "../../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../../stores/MediaEngineStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

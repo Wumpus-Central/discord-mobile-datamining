@@ -1,9 +1,9 @@
 // discord_app/modules/go_live/GoLiveAutoQualityExperiment.tsx
-import Storage3 from "Storage" /* 595 */;
-import closure_2 from "initialize" /* 1212 */;
-import closure_3 from "ApplicationStreamPresets" /* 4562 */;
-import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4524 */;
-import importDefaultResult from "getUnitId" /* 1368 */;
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import closure_2 from "../experiments/apex/ApexExperimentStore.tsx";
+import closure_3 from "../../stores/ApplicationStreamingSettingsStore.tsx";
+import { ApplicationStreamPresets } from "StreamSettingsConstants.tsx";
+import importDefaultResult from "../experiments/apex/ApexExperiment.tsx";
 
 require = arg1;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };

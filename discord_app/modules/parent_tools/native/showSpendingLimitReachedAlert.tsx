@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
-import set from "set" /* 2 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import _modDef4656 from "module_4656" /* 4656 */;
+import set from "../../../../_runtime/00002_set.js";
+import V6OrEarlierAPIError from "../../../errors/index.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 

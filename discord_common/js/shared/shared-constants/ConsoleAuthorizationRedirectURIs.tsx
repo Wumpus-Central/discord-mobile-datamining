@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ConsoleAuthorizationRedirectURIs.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null };
 let set = new Set(["https://discord.com/connections/playstation-stg/link", "https://discord.com/connections/playstation/link"]);

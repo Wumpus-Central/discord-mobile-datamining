@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/hooks/useScrollHandlers.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "noop" /* 19 */;
-import updateChatInputContainerHeight from "updateChatInputContainerHeight" /* 8682 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import updateChatInputContainerHeight from "../../../chat_input/native/useChatBottomManagerUIStore.tsx";
 
 const require = arg1;
 ({ updateIsAtBottom: c4, updateShouldShowJumpToPresentButton: c5 } = updateChatInputContainerHeight);

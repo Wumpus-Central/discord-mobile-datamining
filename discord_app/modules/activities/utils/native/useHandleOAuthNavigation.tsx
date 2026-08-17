@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/native/useHandleOAuthNavigation.tsx
-import closure_3 from "noop" /* 19 */;
-import { ComponentActions } from "ME" /* 676 */;
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { ComponentActions } from "../../../../Constants.tsx";
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "../../../oauth2/native/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");

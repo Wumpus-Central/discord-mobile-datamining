@@ -1,7 +1,7 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15199 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useScreenRecordingStore } from "ScreenRecordingStore.tsx";
 
 const require = arg1;
 function _getLatestVideo() {

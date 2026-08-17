@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleDismissWithDismissed" /* 11264 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../AppLauncherStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");

@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/StickerAutocompleteSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import UserSettingsText from "UserSettingsText" /* 14771 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
-import canLaunchFrame from "canLaunchFrame" /* 8704 */;
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 8705 */;
-import closure_3 from "addApplication" /* 4478 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 8709 */;
+import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
+import _launchFrameOnNativeDefault from "../../frames/FramesActionCreators.native.tsx";
+import closure_3 from "../../applications/ApplicationStore.tsx";
+import { MAIN_SURFACE } from "../../frames/FramesConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");

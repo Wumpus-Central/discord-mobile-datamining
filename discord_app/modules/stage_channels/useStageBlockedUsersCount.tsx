@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/useStageBlockedUsersCount.tsx
-import sortKey from "sortKey" /* 6703 */;
-import closure_2 from "getActiveStageChannelIds" /* 4989 */;
+import sortKey from "StageChannelParticipants.tsx";
+import closure_2 from "StageChannelParticipantStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

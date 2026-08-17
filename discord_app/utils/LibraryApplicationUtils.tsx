@@ -1,9 +1,9 @@
 // discord_app/utils/LibraryApplicationUtils.tsx
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "addSku" /* 4521 */;
-import ME from "ME" /* 676 */;
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import closure_2 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../stores/UserStore.tsx";
+import closure_4 from "../stores/game_store/SKUStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 ({ LibraryApplicationFlags: c5, LocalDispatchApplicationStates: closure_6, StatusTypes: error } = ME);

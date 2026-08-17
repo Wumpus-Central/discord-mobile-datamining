@@ -1,16 +1,16 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "updateWithLatestInvite" /* 8919 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "_computeRows" /* 11502 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import setSendState from "setSendState" /* 11887 */;
-import { InviteSendStates } from "InviteSendStates" /* 4371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/CreateInviteModalStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/InviteSuggestionsStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import setSendState from "../../InstantInviteSendStateStore.tsx";
+import { InviteSendStates } from "../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ setSendState: c9, useInstantInviteSendStates: c10 } = setSendState);

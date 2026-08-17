@@ -1,8 +1,8 @@
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
-import noopAll from "noop" /* 19 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import Portal from "Portal" /* 4244 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import Portal from "../../../../_runtime/04244_Portal.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

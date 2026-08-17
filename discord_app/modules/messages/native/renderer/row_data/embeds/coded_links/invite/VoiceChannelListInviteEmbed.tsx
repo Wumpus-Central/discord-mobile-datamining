@@ -1,21 +1,21 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import CodedLinkExtendedType2 from "CodedLinkExtendedType" /* 10510 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10511 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "_toTimestampMs" /* 10509 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "markAllUserIdListsStale" /* 4030 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "updateVoiceState" /* 4542 */;
-import closure_14 from "getVoiceStatesForGuild" /* 4545 */;
+import set from "../../../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../../../../Constants.tsx";
+import GuildNSFWContentLevel from "../../../../../../../../records/GuildRecord.tsx";
+import InviteSendStates from "../../../../../../../instant_invite/Constants.tsx";
+import CodedLinkExtendedType2 from "../CodedLinksConstants.tsx";
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
+import closure_4 from "../../../../../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../../../../../channel/VoiceChannelStartTimeStore.tsx";
+import closure_7 from "../../../../../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../../../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../../../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../../../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../../../../../../stores/RelationshipStore.tsx";
+import closure_12 from "../../../../../../../../stores/UserStore.tsx";
+import closure_13 from "../../../../../../../../stores/VoiceStateStore.tsx";
+import closure_14 from "../../../../../../../../stores/views/SortedVoiceStateStore.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
 const getGuildIconSource = GuildNSFWContentLevel.getGuildIconSource;

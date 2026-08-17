@@ -1,7 +1,7 @@
 // discord_app/modules/guests/GuestUtils.tsx
-import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4009 */;
+import set from "../../../_runtime/00002_set.js";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import GuildMemberFlags2 from "../guild_member/GuildMemberConstants.tsx";
 
 const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
 const result = set.fileFinishedImporting("modules/guests/GuestUtils.tsx");

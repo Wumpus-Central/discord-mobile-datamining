@@ -1,16 +1,16 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import resetCache from "resetCache" /* 4063 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 11749 */;
-import useMaybeGetSortedBoostsDefault from "useMaybeGetSortedBoosts" /* 11749 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 11755 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import resetCache from "../../../../utils/DateUtils.tsx";
+import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import useMaybeGetSortedBoosts from "../hooks/useMaybeGetSortedBoosts.tsx";
+import useMaybeGetSortedBoostsDefault from "../hooks/useMaybeGetSortedBoosts.tsx";
+import getBoostRowMessageTextDefault from "../utils/getBoostRowMessageText.tsx";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 function GuildPowerupsRecentActivityRow(row) {
   row = row.row;

@@ -1,19 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Form from "Form" /* 8083 */;
-import FormHeaderDefault from "FormHeader" /* 8913 */;
-import stylesDefault from "styles" /* 13358 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import pickImage from "pickImage" /* 16951 */;
-import HeaderDefault from "Header" /* 16954 */;
-import useEditStateContext from "useEditStateContext" /* 16962 */;
-import FormPriceTierDefault from "FormPriceTier" /* 16991 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
+import stylesDefault from "FormStyles.tsx";
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import pickImage from "FormImagePicker.tsx";
+import HeaderDefault from "GuildRoleSubscriptionTierEditStep.tsx";
+import useEditStateContext from "../../edit_state/EditStateContextProvider.tsx";
+import FormPriceTierDefault from "FormPriceTier.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
+import { UPLOAD_MEDIUM_SIZE } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function Content() {

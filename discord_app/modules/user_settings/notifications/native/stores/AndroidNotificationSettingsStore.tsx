@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
-import isIterable from "isIterable" /* 4006 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import identity from "identity" /* 700 */;
+import isIterable from "../../../../../../_runtime/04006_isIterable.js";
+import NativeModulesDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import identity from "../../../../../../_runtime/00700_identity.js";
 import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;

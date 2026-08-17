@@ -1,9 +1,9 @@
 // discord_app/modules/harvester/DataHarvestActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 8620 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import saveProfileAndAccountRequest from "../../actions/UserSettingsAccountActionCreators.tsx";
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");

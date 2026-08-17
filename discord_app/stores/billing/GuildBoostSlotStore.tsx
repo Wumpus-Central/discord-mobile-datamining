@@ -1,7 +1,7 @@
 // discord_app/stores/billing/GuildBoostSlotStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "reset" /* 4045 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "SubscriptionStore.tsx";
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;

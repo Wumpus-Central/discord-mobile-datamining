@@ -1,13 +1,13 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelController.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "withEqualityFn" /* 8664 */;
-import { MediaPlaybackPanelModes } from "MediaPlaybackPanelModes" /* 13902 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { MorphablePanelModes } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../voice_panel/VoicePanelStore.tsx";
+import { MediaPlaybackPanelModes } from "MediaPlaybackPanelConstants.tsx";
+import { ActivityPanelModes } from "../../activities/panel/ActivityPanelConstants.tsx";
+import { MorphablePanelModes } from "../../panels/morphable/native/MorphablePanelConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_12 = { code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}" };

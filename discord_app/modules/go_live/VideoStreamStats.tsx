@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/VideoStreamStats.tsx
-import sleep from "sleep" /* 4548 */;
-import closure_2 from "ApplicationStreamPresets" /* 4562 */;
-import { StreamLayouts } from "ME" /* 676 */;
+import sleep from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import closure_2 from "../../stores/ApplicationStreamingSettingsStore.tsx";
+import { StreamLayouts } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/threads/native/useHandleJoinThreadVoice.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4023 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../JoinedThreadsStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");

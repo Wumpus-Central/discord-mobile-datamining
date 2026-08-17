@@ -1,19 +1,19 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 14472 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14473 */;
-import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 14474 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initializeState" /* 7453 */;
-import closure_7 from "QuestDockMode" /* 14445 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
+import QuestBottomSheet from "../QuestBottomSheet/QuestBottomSheet.tsx";
+import QuestBottomSheetHeaderDefault from "../QuestBottomSheet/QuestBottomSheetHeader.tsx";
+import useQuestRewardClaimHandlerDefault from "../QuestBottomSheet/QuestBottomSheetFooter.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../QuestStore.tsx";
+import closure_7 from "QuestDockStore.tsx";
+import QuestsExperimentLocations from "../../QuestConstants.tsx";
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function EnrolledBodyWatchTask(quest) {

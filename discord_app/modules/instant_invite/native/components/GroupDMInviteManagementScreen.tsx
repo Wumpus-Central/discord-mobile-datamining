@@ -1,13 +1,13 @@
 // discord_app/modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "createFromServer" /* 8044 */;
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8133 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../records/InviteRecord.tsx";
+import normalizeChannelPropertyForCompare from "../../../../stores/ChannelSettingsStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function GroupDMInviteManagement(channelId) {

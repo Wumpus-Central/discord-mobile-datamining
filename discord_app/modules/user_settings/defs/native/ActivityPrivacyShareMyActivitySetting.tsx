@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2469 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

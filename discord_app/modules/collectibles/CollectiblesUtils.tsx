@@ -1,19 +1,19 @@
 // discord_app/modules/collectibles/CollectiblesUtils.tsx
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
-import set2 from "set" /* 500 */;
-import sum from "sum" /* 505 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1938 */;
-import fromServer from "fromServer" /* 1947 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import fromServer2 from "fromServer" /* 5306 */;
-import fromServer3 from "fromServer" /* 5307 */;
-import fromServer4 from "fromServer" /* 5308 */;
-import fromServer5 from "fromServer" /* 5314 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import items from "items" /* 678 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import apply from "../../../_runtime/00012_apply.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import parseServerPerkConfigKind from "../premium/perks_state/PerksStateUtils.tsx";
+import fromServer from "records/NameplateRecord.tsx";
+import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import fromServer2 from "records/AvatarDecorationRecord.tsx";
+import fromServer3 from "records/ProfileEffectRecord.tsx";
+import fromServer4 from "records/ProfileFrameRecord.tsx";
+import fromServer5 from "records/ShopAssetConfigRecord.tsx";
+import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
+import items from "CollectiblesShopConstants.tsx";
+import ME from "../../Constants.tsx";
 import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 

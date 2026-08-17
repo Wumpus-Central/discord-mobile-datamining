@@ -1,8 +1,8 @@
 // discord_app/modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx
-import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15185 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import TableRowInner from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import useFrameMonitorDefault from "useFrameMonitor.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

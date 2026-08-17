@@ -1,7 +1,7 @@
 // discord_app/actions/PruneGuildModalActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");

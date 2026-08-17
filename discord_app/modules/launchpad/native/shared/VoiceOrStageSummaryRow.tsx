@@ -1,11 +1,11 @@
 // discord_app/modules/launchpad/native/shared/VoiceOrStageSummaryRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 15882 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../_runtime/15882_registerAsset.js";
+import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

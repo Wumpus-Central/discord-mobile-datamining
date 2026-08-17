@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14222 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14223 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
+import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { FamilyCenterLoading } from "../../family_center/native/UserSettingsFamilyCenter.tsx";
 
 require = arg1;

@@ -1,20 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfileWishlistSuggestionsGrid.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import contextDefault from "context" /* 7139 */;
-import useIsMobileWishlistSuggestionsEnabled from "useIsMobileWishlistSuggestionsEnabled" /* 12316 */;
-import useCardGridLayoutDefault from "useCardGridLayout" /* 12317 */;
-import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 12323 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "get" /* 9186 */;
-import { TrackUserProfileWishlistActions as closure_7 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { SKUProductLines } from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_11 } from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import useIsMobileWishlistSuggestionsEnabled from "../../wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx";
+import useCardGridLayoutDefault from "../hooks/native/useCardGridLayout.tsx";
+import useWishlistSuggestionsDismissibleContentDefault from "../hooks/useWishlistSuggestionsDismissibleContent.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../wishlists/WishlistStore.tsx";
+import { TrackUserProfileWishlistActions as closure_7 } from "../Constants.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
+import { CollectiblesMobileShopScreen as closure_11 } from "../../collectibles/CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function UserProfileWishlistSuggestionsGridContent(arg0) {

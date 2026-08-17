@@ -1,9 +1,9 @@
 // discord_app/modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx
-import set2 from "set" /* 2 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9505 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "insertUnsortedGuilds" /* 5078 */;
+import set2 from "../../../../../_runtime/00002_set.js";
+import insertUnsortedGuilds from "../../../../stores/SortedGuildStore.tsx";
+import SidebarVisibilityMethodStore from "../../../guild_sidebar/SidebarVisibilityMethodStore.tsx";
+import closure_2 from "../../../../stores/GuildStore.tsx";
+import closure_3 from "../../../../stores/SortedGuildStore.tsx";
 
 ({ setGetVisibleChannelIds: c0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;

@@ -1,8 +1,8 @@
 // discord_app/modules/client_themes/native/useCustomThemeDisplaySettings.tsx
-import initialize from "initialize" /* 589 */;
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "reset" /* 1346 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getThemeForColor from "../ClientThemesUtils.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "CustomThemeMobileStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");

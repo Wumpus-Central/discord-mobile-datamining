@@ -1,8 +1,8 @@
 // discord_app/stores/RTCRegionStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
 const HOUR = setDefault.Millis.HOUR;

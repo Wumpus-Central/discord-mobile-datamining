@@ -1,20 +1,20 @@
 // discord_app/modules/recent_channels/NewChannelsStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SidebarType from "SidebarType" /* 4972 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1980 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "generateOldThreadCutoff" /* 4772 */;
-import closure_11 from "updateUserGuildSettingsInternal" /* 5043 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import SidebarType from "../sidebar/SidebarActionTypes.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../stores/GuildStore.tsx";
+import closure_10 from "../../stores/ReadStateStore.tsx";
+import closure_11 from "../../stores/UserGuildSettingsStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function guildHasCommunity(nextResult) {

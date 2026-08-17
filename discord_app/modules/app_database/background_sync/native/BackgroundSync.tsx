@@ -1,18 +1,18 @@
 // discord_app/modules/app_database/background_sync/native/BackgroundSync.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "getState" /* 7383 */;
-import closure_10 from "result" /* 5070 */;
-import ME from "ME" /* 676 */;
-import loadSavedGuildStickers from "loadSavedGuildStickers" /* 6769 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import createChannelRecord from "../../../../records/ChannelRecord.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/native/AppStateStore.tsx";
+import closure_10 from "../../stores/FileSystemStore.tsx";
+import ME from "../../../../Constants.tsx";
+import loadSavedGuildStickers from "../../../stickers/StickersStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import getEmojiToGroupId from "../../../emojis/EmojiStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
 
 const require = arg1;
 function _backgroundSync() {

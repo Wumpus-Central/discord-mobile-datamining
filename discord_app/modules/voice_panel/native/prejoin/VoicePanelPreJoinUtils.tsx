@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx
-import set from "set" /* 2 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
+import set from "../../../../../_runtime/00002_set.js";
+import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 

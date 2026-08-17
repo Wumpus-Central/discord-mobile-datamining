@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import frozen from "frozen" /* 8171 */;
-import apexExperiment from "apexExperiment" /* 8177 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../Constants.tsx";
+import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
+import getEmojiUnavailableReasonDefault from "../../../../../utils/EmojiUtils.tsx";
+import frozen from "../EmbedUtils.tsx";
+import apexExperiment from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/ForumPostActions.tsx");

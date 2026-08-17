@@ -1,6 +1,6 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteUtils.tsx
-import set from "set" /* 2 */;
-import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
+import set from "../../../../_runtime/00002_set.js";
+import GAME_WIDGET_LIMITS_BY_TYPE from "../../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 
 const result = set.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
 

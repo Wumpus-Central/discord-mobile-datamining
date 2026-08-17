@@ -1,5 +1,5 @@
 // discord_app/modules/rich_presence/PresenceActivityFiltering.tsx
-import closure_2 from "addApplication" /* 4478 */;
+import closure_2 from "../applications/ApplicationStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");

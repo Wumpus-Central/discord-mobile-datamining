@@ -1,22 +1,22 @@
 // discord_app/modules/interaction_components/native/InteractionModal.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import isInteractionComponent from "isInteractionComponent" /* 8326 */;
-import getData from "getData" /* 16602 */;
-import renderComponents from "renderComponents" /* 16603 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { InteractionModalState } from "getModalState" /* 13773 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button2 from "../../../design/components/Button/native/Button.native.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import isInteractionComponent from "../ComponentStateContext.tsx";
+import getData from "../InteractionModalUtils.tsx";
+import renderComponents from "renderComponents.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { InteractionModalState } from "../InteractionModalStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function onClose() {

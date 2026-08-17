@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import HeaderActionButton from "HeaderActionButton" /* 5432 */;
-import registerAssetDefault from "registerAsset" /* 8143 */;
-import closure_3 from "noop" /* 19 */;
-import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9752 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/08143_registerAsset.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import { XboxLinkModalScenes } from "XboxLinkConstants.tsx";
+import { PlatformTypes } from "../../../../../../Constants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function CloseButton() {

@@ -1,6 +1,6 @@
 // discord_app/modules/panels/morphable/native/SafeAreaDisabledStore.tsx
-import set2 from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import set2 from "../../../../../_runtime/00002_set.js";
+import keys from "../../../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0, arg1) => {
   closure_0 = arg0;

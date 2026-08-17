@@ -1,6 +1,6 @@
 // discord_app/modules/applications/utils/ApplicationFlagUtils.tsx
-import fromStringAll from "fromString" /* 506 */;
-import closure_2 from "createExecutable" /* 4479 */;
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import closure_2 from "../../../records/ApplicationRecord.tsx";
 
 function getApplicationFlags(application) {
   if (null == application) {

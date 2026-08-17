@@ -1,9 +1,9 @@
 // discord_app/modules/poggermode/trackPoggermodeSettingsUpdated.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ConfettiLocation from "ConfettiLocation" /* 7433 */;
-import importDefaultResult from "apply" /* 12 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import ConfettiLocation from "PoggermodeConstants.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 function getScreenshakeLocationName(arg0) {
   if (constants.CHAT_INPUT === arg0) {

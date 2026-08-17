@@ -1,21 +1,21 @@
 // discord_app/utils/native/UploadUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import set from "set" /* 500 */;
-import enforcingDefault from "enforcing" /* 1271 */;
-import cancel from "cancel" /* 4829 */;
-import items2 from "items" /* 4830 */;
-import getUploadFileSizeSum from "getUploadFileSizeSum" /* 4834 */;
-import toString from "toString" /* 4862 */;
-import getTimeFormat from "getTimeFormat" /* 4869 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_10 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_11 from "handleConnectionInfoChange" /* 4564 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import set from "../PlatformUtils.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import cancel from "../../lib/uploader/Upload.tsx";
+import items2 from "../UploadUtils.tsx";
+import getUploadFileSizeSum from "../FileUtils.tsx";
+import toString from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
+import getTimeFormat from "TimeUtils.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import CHANNEL_SIDEBAR_WIDTH from "../../modules/user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_10 from "../../modules/user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_11 from "../../stores/NetworkStore.tsx";
+import closure_12 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import { NativePermissionTypes } from "../../modules/native_permissions/NativePermissionConstants.tsx";
 
 require = arg1;
 function openImagePickerUnhandled() {

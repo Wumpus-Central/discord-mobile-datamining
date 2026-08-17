@@ -1,6 +1,6 @@
 // discord_app/lib/WindowVisibilityUtils.native.tsx
-import closure_2 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
+import closure_2 from "../stores/native/AppStateStore.tsx";
+import { AppStates } from "../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
 

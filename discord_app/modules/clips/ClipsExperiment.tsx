@@ -1,11 +1,11 @@
 // discord_app/modules/clips/ClipsExperiment.tsx
-import initialize from "initialize" /* 589 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 4528 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import isClientClipsCapableDefault from "isClientClipsCapable.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 require = arg1;
 ApexExperiment = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };

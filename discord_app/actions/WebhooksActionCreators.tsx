@@ -1,8 +1,8 @@
 // discord_app/actions/WebhooksActionCreators.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import applyDefault from "../../_runtime/00012_apply.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 ({ AbortCodes: c3, Endpoints: c4 } = ME);

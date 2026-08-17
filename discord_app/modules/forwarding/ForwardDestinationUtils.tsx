@@ -1,13 +1,13 @@
 // discord_app/modules/forwarding/ForwardDestinationUtils.tsx
-import canBypassSlowmodeHelper from "canBypassSlowmodeHelper" /* 7441 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "loadSavedGuildStickers" /* 6769 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import canBypassSlowmodeHelper from "../chat/SlowmodeUtils.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../stickers/StickersStore.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "../../stores/PermissionStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";

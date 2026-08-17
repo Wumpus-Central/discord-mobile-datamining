@@ -1,8 +1,8 @@
 // discord_app/design/tokens/native/SemanticColorContext.native.tsx
-import set from "set" /* 2 */;
-import nDefault from "n" /* 689 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4103 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4194 */;
+import set from "../../../../_runtime/00002_set.js";
+import nDefault from "../../../../_runtime/00689_n.js";
+import getGradientThemeFromFlags from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
+import getGradientColorByPercentage from "../../../modules/client_themes/native/ClientThemesUtils.tsx";
 
 const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 

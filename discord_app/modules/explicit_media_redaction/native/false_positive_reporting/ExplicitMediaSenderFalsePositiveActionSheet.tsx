@@ -1,8 +1,8 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getFpMessageInfo" /* 5002 */;
-import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../ExplicitMediaStore.tsx";
+import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "../../ExplicitMediaRedactionConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/launchpad/native/shared/getLayoutStyles.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import GameIcon from "GameIcon" /* 7149 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import GameIcon from "../../../game_detection/native/GameIcon.tsx";
+import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 
 let obj = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
 obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } };

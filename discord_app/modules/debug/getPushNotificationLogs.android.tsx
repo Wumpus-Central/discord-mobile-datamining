@@ -1,6 +1,6 @@
 // discord_app/modules/debug/getPushNotificationLogs.android.tsx
-import enforcingDefault from "enforcing" /* 10134 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/debug/getPushNotificationLogs.android.tsx");
 

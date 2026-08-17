@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/StickerSendability.tsx
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "parseServerPackSticker" /* 6771 */;
-import { Permissions } from "ME" /* 676 */;
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import getStickerExtensionFromFormatType from "StickersUtils.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "StickersPackStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 require = arg1;
 function getStickerSendability(stickerById, closure_1_3, channel) {

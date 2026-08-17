@@ -1,21 +1,21 @@
 // discord_app/modules/voice_messages/native/components/VoiceMessageOverlay.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import result2 from "result" /* 6289 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11147 */;
-import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11148 */;
-import { ComponentActionsKeyed } from "ME" /* 676 */;
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11149 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult3 from "apply" /* 12 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import result2 from "../../../../design/migrations/native/LegacyTokens.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../../../stores/ChannelStore.tsx";
+import { useVoiceMessagesUIStore } from "../VoiceMessagesUIStore.tsx";
+import { VoiceMessageAnimationState } from "../../VoiceMessageConstants.tsx";
+import { ComponentActionsKeyed } from "../../../../Constants.tsx";
+import { ANDROID_FOREGROUND_RIPPLE } from "../../../../design/void/Form/native/FormConstants.tsx";
+import { CHAT_INPUT_HEIGHT } from "../../../chat_input/native/ChatInputConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult3 from "../../../../../_runtime/00012_apply.js";
 
 require = arg1;
 function LockPill(safeAreaBottom) {

@@ -1,23 +1,23 @@
 // discord_app/modules/parent_tools/native/FamilyCenterDataConfirmation.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import UserPlusIcon from "UserPlusIcon" /* 4312 */;
-import ClockIcon from "ClockIcon" /* 4338 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import ForumIcon from "ForumIcon" /* 6883 */;
-import SettingsIcon from "SettingsIcon" /* 7355 */;
-import FlagIcon from "FlagIcon" /* 9435 */;
-import GiftIcon from "GiftIcon" /* 9589 */;
-import ServerIcon from "ServerIcon" /* 9813 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11107 */;
-import PhoneIcon from "PhoneIcon" /* 11108 */;
-import CreditCardIcon from "CreditCardIcon" /* 11110 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11112 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import UserPlusIcon from "../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
+import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import ForumIcon from "../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
+import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
+import ServerIcon from "../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
+import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
+import PhoneIcon from "../../../design/components/Icon/native/redesign/generated/PhoneIcon.tsx";
+import CreditCardIcon from "../../../design/components/Icon/native/redesign/generated/CreditCardIcon.tsx";
+import PiggyBankIcon from "../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function RowGroup(children) {

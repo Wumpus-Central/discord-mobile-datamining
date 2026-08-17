@@ -1,13 +1,13 @@
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "handleSyncedStoresUpdate" /* 9660 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleAudioRouteChanged" /* 9648 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../video_backgrounds/VideoBackgroundStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/MediaEngineStore.tsx";
+import closure_6 from "../../stores/RTCConnectionStore.tsx";
+import closure_7 from "../../stores/SelectedChannelStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "AudioRouteStore.native.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");

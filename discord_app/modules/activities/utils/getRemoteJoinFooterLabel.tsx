@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getRemoteJoinFooterLabel.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
 
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
 const result = set.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");

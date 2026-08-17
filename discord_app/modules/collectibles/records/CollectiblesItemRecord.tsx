@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import closure_2 from "fromServer" /* 5306 */;
-import closure_3 from "fromServer" /* 1947 */;
-import closure_4 from "fromServer" /* 5307 */;
-import closure_5 from "fromServer" /* 5308 */;
-import closure_6 from "fromServer" /* 5309 */;
-import ME from "ME" /* 676 */;
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import closure_2 from "AvatarDecorationRecord.tsx";
+import closure_3 from "NameplateRecord.tsx";
+import closure_4 from "ProfileEffectRecord.tsx";
+import closure_5 from "ProfileFrameRecord.tsx";
+import closure_6 from "UnknownCollectiblesItemRecord.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ SKUProductLines: error, SKUTypes: closure_8 } = ME);

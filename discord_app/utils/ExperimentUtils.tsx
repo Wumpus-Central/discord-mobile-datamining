@@ -1,9 +1,9 @@
 // discord_app/utils/ExperimentUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4288 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import trackExposureToExperiment from "../modules/experiments/ExperimentManager.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../modules/experiments/ExperimentStore.tsx";
+import ExperimentBuckets from "../modules/experiments/ExperimentConstants.tsx";
 
 require = arg1;
 function getFirstEligibleUserExperiment(arg0) {

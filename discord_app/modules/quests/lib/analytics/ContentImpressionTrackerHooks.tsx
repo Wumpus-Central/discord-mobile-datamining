@@ -1,7 +1,7 @@
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx
-import set from "set" /* 10688 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initializeState" /* 7453 */;
+import set from "ContentImpressionTracker.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../QuestStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");

@@ -1,10 +1,10 @@
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "addApplication" /* 4478 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import { ActivityGamePlatforms } from "ME" /* 676 */;
-import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "items3" /* 4481 */;
+import getQuestDeliveryDataForPlacement from "QuestDataUtils.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../applications/ApplicationStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
+import { ActivityGamePlatforms } from "../../../Constants.tsx";
+import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "../../activities/Constants.tsx";
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 
 require = arg1;

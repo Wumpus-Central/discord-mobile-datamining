@@ -1,22 +1,22 @@
 // discord_app/modules/user_profile/UserProfileAnalyticsUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import useDisplayProfile from "useDisplayProfile" /* 8416 */;
-import isUserProfilePerformanceAnalyticsEnabled from "isUserProfilePerformanceAnalyticsEnabled" /* 8940 */;
-import closure_3 from "initialize" /* 8936 */;
-import closure_4 from "recomputeFromAppTokens" /* 5289 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
-import closure_6 from "recomputeAffinities" /* 5407 */;
-import closure_7 from "reset" /* 4652 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "sortActivity" /* 4559 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "createUserWidgetFromServer" /* 5365 */;
-import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import ME from "ME" /* 676 */;
-import { StatusTypes } from "sum" /* 505 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import useDisplayProfile from "hooks/useDisplayProfile.tsx";
+import isUserProfilePerformanceAnalyticsEnabled from "experiments/UserProfilePerformanceAnalyticsExperiment.tsx";
+import closure_3 from "../badges/BadgeDirectoryStore.tsx";
+import closure_4 from "../oauth2/AuthorizedAppsStore.tsx";
+import { FetchState } from "../oauth2/AuthorizedAppsStore.tsx";
+import closure_6 from "../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_7 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_8 from "../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../stores/PresenceStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
+import closure_12 from "UserProfileStore.tsx";
+import { TrackUserProfileProperties as closure_13 } from "Constants.tsx";
+import ME from "../../Constants.tsx";
+import { StatusTypes } from "../../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 function getProfileProperties(guildMemberProfile) {

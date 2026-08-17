@@ -1,12 +1,12 @@
 // discord_app/modules/lurker_mode/LurkingStore.tsx
-import set2 from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_1 from "trackCommunicationDisabled" /* 1990 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import set2 from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
+import closure_1 from "../../stores/GuildMemberStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 const isGuildLurker = GuildNSFWContentLevel.isGuildLurker;
 ({ JoinGuildSources: c4, ME: c5 } = ME);

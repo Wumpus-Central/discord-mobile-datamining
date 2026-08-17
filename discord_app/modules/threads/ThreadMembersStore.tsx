@@ -1,9 +1,9 @@
 // discord_app/modules/threads/ThreadMembersStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
 
 function updateFromGuild(threads) {
   threads = threads.threads;

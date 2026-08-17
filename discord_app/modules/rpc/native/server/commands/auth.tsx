@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/native/server/commands/auth.tsx
-import authorizeWithPromptDefault from "authorizeWithPrompt" /* 13882 */;
-import closure_3 from "addApplication" /* 4478 */;
-import ME from "ME" /* 676 */;
+import authorizeWithPromptDefault from "../../../server/commands/AuthCommandsFactory.tsx";
+import closure_3 from "../../../../applications/ApplicationStore.tsx";
+import ME from "../../../../../Constants.tsx";
 
 const require = arg1;
 ({ ComponentActions: c4, ApplicationFlags: c5, RPCErrors: closure_6 } = ME);

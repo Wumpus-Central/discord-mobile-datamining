@@ -1,11 +1,11 @@
 // discord_app/modules/js_watchdog/native/JSWatchdogManager.android.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import setDefault from "../../../utils/Durations.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import getDeviceMetadata from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ AppStates: c4, AnalyticEvents: c5 } = ME);

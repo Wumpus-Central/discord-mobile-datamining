@@ -1,7 +1,7 @@
 // discord_app/utils/ProcessUtils.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ElectronProcessType from "ElectronProcessType" /* 5423 */;
+import set from "../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import ElectronProcessType from "ProcessUtilsBase.tsx";
 
 let closure_1 = function getHermesInstrumentedStatsSummary() {
   const _HermesInternal = HermesInternal;

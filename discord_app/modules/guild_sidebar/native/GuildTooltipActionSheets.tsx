@@ -1,12 +1,12 @@
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10261 */;
-import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 15515 */;
-import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 15516 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { DismissibleContentGroupName as closure_5 } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
+import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "../../guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx";
+import useIsEligibleForTierTemplateUpsellDefault from "../../guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { DismissibleContentGroupName as closure_5 } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function NUFChannelsActionSheetImporter() {

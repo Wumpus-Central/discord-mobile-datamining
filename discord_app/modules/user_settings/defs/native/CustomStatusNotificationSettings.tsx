@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4033 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import AccountNotificationFlags from "../../../notifications/NotificationConstants.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function onChange(custom_status_push_notifications) {
   const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;

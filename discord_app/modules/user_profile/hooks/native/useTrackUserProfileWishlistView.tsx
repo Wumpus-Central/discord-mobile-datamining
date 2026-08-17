@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "get" /* 9186 */;
+import set from "../../../../../_runtime/00002_set.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../wishlists/WishlistStore.tsx";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");

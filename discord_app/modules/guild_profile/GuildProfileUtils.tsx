@@ -1,8 +1,8 @@
 // discord_app/modules/guild_profile/GuildProfileUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
 
 let closure_2 = createChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = ME.GuildFeatures;

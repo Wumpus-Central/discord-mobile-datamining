@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/useProfileThemeValues.native.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import closure_4 from "../a11y/AccessibilityStore.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const useMemo = noop.useMemo;

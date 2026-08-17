@@ -1,8 +1,8 @@
 // discord_app/modules/custom_status/utils/getClearAfterDuration.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import setDefault from "set" /* 687 */;
-import StatusTypes from "StatusTypes" /* 9292 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import setDefault from "../../../utils/Durations.tsx";
+import StatusTypes from "../Constants.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const result = set.fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/application_account_linking/AccountLinkManager.tsx
-import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recomputeFromAppTokens" /* 5289 */;
-import closure_5 from "map" /* 16159 */;
-import ME from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../oauth2/AuthorizedAppsStore.tsx";
+import closure_5 from "AccountLinkStore.tsx";
+import ME from "../../Constants.tsx";
 
 let require = arg1;
 function _claimIncentivizedAccountLinkingReward() {

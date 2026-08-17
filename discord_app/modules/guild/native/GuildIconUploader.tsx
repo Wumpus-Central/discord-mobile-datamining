@@ -1,16 +1,16 @@
 // discord_app/modules/guild/native/GuildIconUploader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 10980 */;
-import registerAssetDefault2 from "registerAsset" /* 10981 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../_runtime/10980_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10981_registerAsset.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../user_settings/ThemeStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);

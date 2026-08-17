@@ -1,8 +1,8 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import privDefault from "../../../_runtime/01405_priv.js";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: { migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "r" }, source: "ct", fetched: "RNSVGFeBlend" } } };

@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import filterLayerDefault from "filterLayer" /* 9284 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import filterLayerDefault from "../../../../user_profile/native/UserProfilePreview.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

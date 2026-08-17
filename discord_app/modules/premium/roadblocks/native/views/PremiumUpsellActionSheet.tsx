@@ -1,23 +1,23 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx
-import set from "set" /* 500 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9217 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4524 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8481 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../utils/PlatformUtils.tsx";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
+import useAPNGPlayerControls from "../../../../image/native/APNGPlayer.android.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../../user_settings/ThemeStore.tsx";
+import closure_8 from "../../../../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_9 from "../../../../../stores/SelectedGuildStore.tsx";
+import closure_10 from "../../../../../stores/UserStore.tsx";
+import GuildFeatures from "../../../PremiumConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import { ApplicationStreamFPS } from "../../../../go_live/StreamSettingsConstants.tsx";
+import SAVED_BOOKMARKS_MAX from "../../../../../../discord_common/js/shared/shared-constants/SavedMessagesConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {

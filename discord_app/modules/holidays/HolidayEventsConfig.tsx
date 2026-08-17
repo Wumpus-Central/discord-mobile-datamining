@@ -1,10 +1,10 @@
 // discord_app/modules/holidays/HolidayEventsConfig.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import Soundpacks from "Soundpacks" /* 10042 */;
-import registerAssetDefault from "registerAsset" /* 16594 */;
-import registerAssetDefault2 from "registerAsset" /* 16595 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import Soundpacks from "../soundpacks/Constants.tsx";
+import registerAssetDefault from "../../../_runtime/16594_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/16595_registerAsset.js";
 
 let obj = {
   experiment: null,

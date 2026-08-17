@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleModifyingAppliedBoostStart" /* 11731 */;
-import closure_6 from "handleConnectionReset" /* 6704 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/AppliedGuildBoostStore.tsx";
+import closure_6 from "../../../../stores/GuildMemberRequesterStore.tsx";
+import closure_7 from "../../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../../stores/GuildStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

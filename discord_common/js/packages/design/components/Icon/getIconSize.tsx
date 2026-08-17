@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/components/Icon/getIconSize.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 
 let obj = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "disabled", refresh_sm: true };
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Icon/getIconSize.tsx");

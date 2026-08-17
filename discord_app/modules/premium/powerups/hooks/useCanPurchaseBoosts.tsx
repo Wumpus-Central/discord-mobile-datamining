@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx
-import initialize from "initialize" /* 589 */;
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import calculateFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import { FractionalPremiumStates } from "../../PremiumConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");

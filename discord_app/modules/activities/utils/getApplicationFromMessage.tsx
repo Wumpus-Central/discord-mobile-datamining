@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getApplicationFromMessage.tsx
-import closure_0 from "createExecutable" /* 4479 */;
-import { SpotifyApplication } from "getIconURL" /* 12779 */;
-import { isSpotifyParty } from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
+import closure_0 from "../../../records/ApplicationRecord.tsx";
+import { SpotifyApplication } from "../../../records/SpotifyApplicationRecord.tsx";
+import { isSpotifyParty } from "../../spotify/SpotifyConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
 

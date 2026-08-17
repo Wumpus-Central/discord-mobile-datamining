@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/SelectivelySyncedUserSettingsStore.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage4 from "Storage" /* 595 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 const UserSettingsSections = ME.UserSettingsSections;
 let closure_4 = {};

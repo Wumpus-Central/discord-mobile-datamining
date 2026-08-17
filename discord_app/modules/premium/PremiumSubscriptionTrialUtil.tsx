@@ -1,9 +1,9 @@
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "reset" /* 4045 */;
-import closure_4 from "emitChanges" /* 7421 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import closure_3 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../stores/billing/UserOfferStore.tsx";
+import GuildFeatures from "PremiumConstants.tsx";
 
 require = arg1;
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c5, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6, PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: error, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8, PREMIUM_TRIAL_IDS_ALL: c9 } = GuildFeatures);

@@ -1,11 +1,11 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
-import _modDef10643 from "module_10643" /* 10643 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
-import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 5309 */;
-import ME from "ME" /* 676 */;
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1924 */;
+import _modDef10643 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/applications/ApplicationStore.tsx";
+import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
+import { isUnknownCollectiblesItemRecord as closure_6 } from "../modules/collectibles/records/UnknownCollectiblesItemRecord.tsx";
+import ME from "../Constants.tsx";
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "../modules/premium/PremiumConstants.tsx";
 
 const require = arg1;
 function resolveGiftCode() {

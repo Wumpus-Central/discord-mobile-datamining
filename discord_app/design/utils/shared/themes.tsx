@@ -1,6 +1,6 @@
 // discord_app/design/utils/shared/themes.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
+import set from "../../../../_runtime/00002_set.js";
+import sum from "../../../../discord_common/js/shared/Constants.tsx";
 
 const ThemeTypes = sum.ThemeTypes;
 const result = set.fileFinishedImporting("design/utils/shared/themes.tsx");

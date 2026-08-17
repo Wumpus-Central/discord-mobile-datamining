@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingSearchManager.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../../_runtime/00002_set.js";
 
 let result = set2.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
 class SettingSearchManager {

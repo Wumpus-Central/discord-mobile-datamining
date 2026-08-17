@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/ThemeConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import create from "create" /* 1306 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 const ThemeTypes = ME.ThemeTypes;
 let obj = { DARK: "dark", LIGHT: "light", NO_PREFERENCE: "unknown" };

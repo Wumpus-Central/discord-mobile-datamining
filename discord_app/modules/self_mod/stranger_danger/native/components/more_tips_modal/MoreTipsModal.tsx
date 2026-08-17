@@ -1,16 +1,16 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 10588 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10589 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 9921 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import useSafeAreaInsetsDefault from "../../../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../../../../design/components/Text/native/Text.tsx";
+import SafetyTipsContainerDefault from "../../../../shared/native/SafetyTipsSection.tsx";
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection.tsx";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../ChannelSafetyWarningsStore.tsx";
+import { AnalyticEvents } from "../../../../../../Constants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { NavigationStack } from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 

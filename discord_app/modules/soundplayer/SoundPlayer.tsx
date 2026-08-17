@@ -1,25 +1,25 @@
 // discord_app/modules/soundplayer/SoundPlayer.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import { NO_ACTIVITIES } from "participantFromServer" /* 1390 */;
-import closure_5 from "map" /* 8708 */;
-import closure_6 from "set" /* 4540 */;
-import closure_7 from "handleProjectUpsert" /* 16140 */;
-import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_8 } from "createChannelRecord" /* 1395 */;
-import closure_9 from "reset" /* 4652 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_14 from "DesktopNotificationTypes" /* 10015 */;
-import closure_15 from "createRTCConnection" /* 4539 */;
-import closure_16 from "handleConnectionOpen" /* 1979 */;
-import closure_17 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_18 from "updateVoiceState" /* 4542 */;
-import closure_19 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import { NO_ACTIVITIES } from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../frames/FramesStore.tsx";
+import closure_6 from "../game_console/GameConsoleStore.tsx";
+import closure_7 from "../vibegrations/stores/VibegrationsProjectStore.tsx";
+import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_8 } from "../../records/ChannelRecord.tsx";
+import closure_9 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_10 from "../../stores/AuthenticationStore.tsx";
+import closure_11 from "../../stores/ChannelStore.tsx";
+import closure_12 from "../../stores/GuildStore.tsx";
+import closure_13 from "../../stores/MediaEngineStore.tsx";
+import closure_14 from "../../stores/NotificationSettingsStore.tsx";
+import closure_15 from "../../stores/RTCConnectionStore.tsx";
+import closure_16 from "../../stores/SelectedChannelStore.tsx";
+import closure_17 from "../../stores/SpeakingStore.tsx";
+import closure_18 from "../../stores/VoiceStateStore.tsx";
+import closure_19 from "../../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../../Constants.tsx";
+import FrameLayoutModes from "../frames/FramesConstants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function MuteDeafen() {

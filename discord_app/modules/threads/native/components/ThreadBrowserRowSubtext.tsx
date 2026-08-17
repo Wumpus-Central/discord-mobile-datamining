@@ -1,17 +1,17 @@
 // discord_app/modules/threads/native/components/ThreadBrowserRowSubtext.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4814 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6814 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "updateState" /* 7271 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useNullableMessageAuthorDefault from "../../../messages/useMessageAuthor.tsx";
+import useHasEnhancedRoleColorsDefault from "../../../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../ThreadMessageStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MessageContent(arg0) {

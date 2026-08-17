@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx
-import ManaContext from "ManaContext" /* 4104 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 10685 */;
-import QuestDockMode from "QuestDockMode" /* 14451 */;
-import QuestDockWithGestureAnimationDefault from "QuestDockWithGestureAnimation" /* 14534 */;
-import trackTabPressed from "trackTabPressed" /* 15280 */;
-import LeftPanelContentDefault from "LeftPanelContent" /* 15281 */;
-import _modDef15625 from "module_15625" /* 15625 */;
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 9588 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import ManaContext from "../../../../../../discord_common/js/packages/design/native.tsx";
+import getGuildThemeNameDefault from "../../../../client_themes/native/useColorThemeBackground.tsx";
+import getIsEligibleForQuests from "../../../../quests/lib/QuestsEligibility.tsx";
+import QuestDockMode from "../../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
+import QuestDockWithGestureAnimationDefault from "../../../../quests/native/QuestDock/QuestDock.tsx";
+import trackTabPressed from "../TabsPerformanceTracker.tsx";
+import LeftPanelContentDefault from "../../../../../components_native/MainChannels.tsx";
+import _modDef15625 from "../../you_bar/YouBar.tsx";
+import { YouBarNavigatorScreens } from "../../MainTabsConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

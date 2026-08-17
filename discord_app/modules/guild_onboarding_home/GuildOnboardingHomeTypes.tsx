@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function newMemberActionFromServer(channelId) {

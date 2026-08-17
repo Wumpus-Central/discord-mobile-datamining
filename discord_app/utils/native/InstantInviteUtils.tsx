@@ -1,9 +1,9 @@
 // discord_app/utils/native/InstantInviteUtils.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 let f45578 = arg1;
 let f45579 = dependencyMap;

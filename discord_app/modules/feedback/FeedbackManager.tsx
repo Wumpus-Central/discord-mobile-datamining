@@ -1,11 +1,11 @@
 // discord_app/modules/feedback/FeedbackManager.tsx
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 5038 */;
-import useIsSearchResultsFeedbackExperimentEnabled from "useIsSearchResultsFeedbackExperimentEnabled" /* 16564 */;
-import closure_2 from "set" /* 7194 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "initialize" /* 16563 */;
-import FeedbackRating from "FeedbackRating" /* 10811 */;
+import apply from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import useIsSearchResultsFeedbackExperimentEnabled from "../search/experiments/SearchResultsFeedbackExperiment.tsx";
+import closure_2 from "../hotspot/HotspotStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "FeedbackOverrideStore.tsx";
+import FeedbackRating from "Constants.tsx";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 

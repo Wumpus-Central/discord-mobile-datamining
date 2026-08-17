@@ -1,11 +1,11 @@
 // discord_app/modules/stage_channels/native/components/MediaTile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../calls/ChannelRTCStore.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: null };

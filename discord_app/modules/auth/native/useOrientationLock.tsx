@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/useOrientationLock.tsx
-import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
-import closure_3 from "noop" /* 19 */;
+import useWideAuthViewDefault from "useWideAuthView.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");

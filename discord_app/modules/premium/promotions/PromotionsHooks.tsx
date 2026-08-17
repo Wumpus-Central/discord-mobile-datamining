@@ -1,9 +1,9 @@
 // discord_app/modules/premium/promotions/PromotionsHooks.tsx
-import initialize from "initialize" /* 589 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createEmptyPromotionsByType" /* 7628 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "PromotionsStore.tsx";
+import { PremiumTypes } from "../PremiumConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

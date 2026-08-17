@@ -1,21 +1,21 @@
 // discord_app/modules/video_calls/native/components/ChannelCallConnectingScreen.tsx
-import useThemeDefault from "useTheme" /* 4310 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import Background from "Background" /* 6950 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 12547 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 12566 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 4540 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleUpdate" /* 4541 */;
-import { resetFocus } from "VoiceChatDrawerState" /* 8669 */;
-import { InstantInviteSources } from "ME" /* 676 */;
-import { Permissions } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import BottomSheetModal from "../../../../../_runtime/06952_BottomSheetModal.js";
+import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
+import ChannelCallMicButton from "ChannelCallMicButton.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../game_console/GameConsoleStore.tsx";
+import closure_6 from "../../../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/SessionsStore.tsx";
+import { resetFocus } from "../ChannelCallStore.tsx";
+import { InstantInviteSources } from "../../../../Constants.tsx";
+import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VoiceSettingsActionSheet() {

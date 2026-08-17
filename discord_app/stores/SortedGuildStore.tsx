@@ -1,17 +1,17 @@
 // discord_app/stores/SortedGuildStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import clearAllDefault from "clearAll" /* 1220 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_7 from "set" /* 5079 */;
-import closure_8 from "handleConnectionOpen" /* 4826 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import clearAllDefault from "MobileCacheSnapshotStore.tsx";
+import closure_4 from "../modules/guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_5 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_6 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_7 from "ExpandedGuildFolderStore.tsx";
+import closure_8 from "GuildAvailabilityStore.tsx";
+import closure_9 from "GuildMemberStore.tsx";
+import closure_10 from "GuildStore.tsx";
+import closure_11 from "UserGuildSettingsStore.tsx";
+import closure_12 from "UserStore.tsx";
+import areArraysShallowlyEqual from "../utils/FunctionUtils.tsx";
 
 let areArraysShallowlyEqual = arg1;
 function insertUnsortedGuilds(arg0, arg1) {

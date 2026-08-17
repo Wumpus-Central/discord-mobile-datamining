@@ -1,6 +1,6 @@
 // discord_app/modules/messages/EmbedConstants.tsx
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const MessageEmbedTypes = ME.MessageEmbedTypes;
 const items = [, , , , , , , ];

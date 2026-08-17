@@ -1,13 +1,13 @@
 // discord_app/stores/VoiceStateStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "isVoiceMuted" /* 4543 */;
-import { ME } from "ME" /* 676 */;
-import { VoicePlatforms } from "ParticipantTypes" /* 4544 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isMetaQuest from "../modules/device/MetaQuestUtils.android.tsx";
+import closure_5 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../records/VoiceStateRecord.tsx";
+import { ME } from "../Constants.tsx";
+import { VoicePlatforms } from "../modules/calls/CallConstants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function updateVoiceState(arg0, arg1, arg2) {

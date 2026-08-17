@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/hooks/usePremiumPlanPrice.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addSubscriptionPlan" /* 4044 */;
-import closure_5 from "reset" /* 4045 */;
-import closure_6 from "updateProduct" /* 5319 */;
-import { PaymentGateways } from "sum" /* 505 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/billing/SubscriptionPlanStore.tsx";
+import closure_5 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_6 from "../../../../stores/native/IAPStore.android.tsx";
+import { PaymentGateways } from "../../../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");

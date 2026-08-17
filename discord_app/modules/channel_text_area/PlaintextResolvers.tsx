@@ -1,21 +1,21 @@
 // discord_app/modules/channel_text_area/PlaintextResolvers.tsx
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import createEmptyState from "createEmptyState" /* 7439 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "rebuild" /* 5251 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1980 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_13 from "markAllUserIdListsStale" /* 4030 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
+import createEmptyState from "slate/SlateUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../emojis/EmojiStore.tsx";
+import closure_5 from "../threads/ActiveJoinedThreadsStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../stores/GuildMemberStore.tsx";
+import closure_10 from "../../stores/GuildRoleStore.tsx";
+import closure_11 from "../../stores/GuildStore.tsx";
+import closure_12 from "../../stores/PermissionStore.tsx";
+import closure_13 from "../../stores/RelationshipStore.tsx";
+import closure_14 from "../../stores/UserStore.tsx";
+import { Permissions } from "../../Constants.tsx";
+import { EmojiIntention } from "../emojis/EmojiConstants.tsx";
 
 require = arg1;
 function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {

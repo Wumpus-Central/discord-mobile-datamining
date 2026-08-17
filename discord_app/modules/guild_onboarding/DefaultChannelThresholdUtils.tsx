@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding/DefaultChannelThresholdUtils.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleUpdate" /* 6788 */;
-import { NUM_DEFAULT_CHATTABLE_CHANNELS_MIN as closure_7 } from "serverPromptToClientPrompt" /* 5286 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "GuildOnboardingPromptsStore.tsx";
+import { NUM_DEFAULT_CHATTABLE_CHANNELS_MIN as closure_7 } from "GuildOnboardingPromptsConstants.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function _isDefaultChannelThresholdMetAfterDelete() {

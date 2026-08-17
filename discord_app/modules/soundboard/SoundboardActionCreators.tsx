@@ -1,10 +1,10 @@
 // discord_app/modules/soundboard/SoundboardActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4780 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
-import ME from "ME" /* 676 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "SoundboardStore.tsx";
+import { DEFAULT_SOUND_GUILD_ID } from "SoundboardConstants.tsx";
+import ME from "../../Constants.tsx";
+import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/nameplates/constants.tsx
-import set from "set" /* 2 */;
-import PaletteKeys from "PaletteKeys" /* 1951 */;
+import set from "../../../../_runtime/00002_set.js";
+import PaletteKeys from "types.tsx";
 
 let obj = {};
 obj = { darkBackground: "#900007", lightBackground: "#E7040F", name: PaletteKeys.PaletteKeys.Crimson };

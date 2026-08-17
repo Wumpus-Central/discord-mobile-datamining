@@ -1,7 +1,7 @@
 // discord_app/modules/rewards/ProgramRewardsTypes.tsx
-import set from "set" /* 2 */;
-import RewardProgram from "RewardProgram" /* 13276 */;
-import ProgramCurrentState from "ProgramCurrentState" /* 13277 */;
+import set from "../../../_runtime/00002_set.js";
+import RewardProgram from "../../../discord_common/js/shared/shared-constants/RewardProgram.tsx";
+import ProgramCurrentState from "../../../discord_common/js/shared/shared-constants/ProgramCurrentState.tsx";
 
 const result = set.fileFinishedImporting("modules/rewards/ProgramRewardsTypes.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/noise_cancellation/queryAudioEffects.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const require = arg1;
 function _queryAudioEffects() {

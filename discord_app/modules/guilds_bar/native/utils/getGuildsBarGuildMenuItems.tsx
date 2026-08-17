@@ -1,8 +1,8 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { AnalyticsSections } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { AnalyticsSections } from "../../../../Constants.tsx";
 import { BellIcon } from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
 import { EnvelopeIcon } from "../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
 import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";

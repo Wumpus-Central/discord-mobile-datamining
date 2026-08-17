@@ -1,22 +1,22 @@
 // discord_app/modules/notification_center/native/ForYouShowAllRow.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 6299 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 13541 */;
-import renderChannelPressableWrapper from "renderChannelPressableWrapper" /* 15696 */;
-import renderChannelWrapper from "renderChannelWrapper" /* 15697 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { Sections } from "SuggestedFriendSource" /* 11872 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getFontScale from "../../screen/native/useFontScale.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../_runtime/06299_registerAsset.js";
+import getLayoutStyles from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import AvatarDuoPile from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
+import renderChannelPressableWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx";
+import renderChannelWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { Sections } from "../../main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ForYouShowAllRow(panelVariant) {

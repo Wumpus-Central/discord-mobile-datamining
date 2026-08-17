@@ -1,8 +1,8 @@
 // discord_app/stores/ExpandedGuildFolderStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "handleConnectionClosedOrResumed" /* 1340 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_0 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import set from "../../_runtime/00002_set.js";
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;

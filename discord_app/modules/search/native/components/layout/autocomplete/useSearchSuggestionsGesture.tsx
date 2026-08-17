@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 function inBoundingBox(arg0, left) {

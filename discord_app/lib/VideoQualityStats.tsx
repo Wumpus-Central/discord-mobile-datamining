@@ -1,8 +1,8 @@
 // discord_app/lib/VideoQualityStats.tsx
-import getSamples from "getSamples" /* 7490 */;
-import getStatsDefault from "getStats" /* 7496 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import set from "set" /* 2 */;
+import getSamples from "Histogram.tsx";
+import getStatsDefault from "SystemResources.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function parseEncoder(encoderImplementationName) {

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/native/RoleIconUtils.tsx
-import getRoleIconData from "getRoleIconData" /* 7164 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getRoleIconData from "../RoleIconUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_boosting/native/RoleIconUtils.tsx");

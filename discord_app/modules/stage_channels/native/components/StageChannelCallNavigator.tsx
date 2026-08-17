@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 12505 */;
-import JoinStageViewDefault from "JoinStageView" /* 12537 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 12631 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import AgeVerificationSpeakerActionSheet from "StageActionBarButtons.tsx";
+import JoinStageViewDefault from "JoinStageView.tsx";
+import RootThemeContextProvider from "../../../../design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ModeratorViewOverlay(channel) {

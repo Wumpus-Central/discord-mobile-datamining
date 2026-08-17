@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/useResourceChannels.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "GuildOnboardingHomeSettingsStore.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

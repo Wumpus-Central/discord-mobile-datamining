@@ -1,7 +1,7 @@
 // discord_app/modules/verification/ChangeEmailUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChangeEmailReasons2 from "ChangeEmailReasons" /* 8565 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import ChangeEmailReasons2 from "VerificationConstants.tsx";
 
 const ChangeEmailReasons = ChangeEmailReasons2.ChangeEmailReasons;
 let closure_2 = {

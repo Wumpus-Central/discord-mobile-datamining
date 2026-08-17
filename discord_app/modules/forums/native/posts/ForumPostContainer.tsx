@@ -1,12 +1,12 @@
 // discord_app/modules/forums/native/posts/ForumPostContainer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10160 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import useNativeForumPostHandlersDefault from "hooks/useNativeForumPostHandlers.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

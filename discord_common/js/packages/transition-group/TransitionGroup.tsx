@@ -1,7 +1,7 @@
 // discord_common/js/packages/transition-group/TransitionGroup.tsx
-import getChildMapping from "getChildMapping" /* 11596 */;
-import closure_2 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
+import getChildMapping from "TransitionChildMapping.tsx";
+import closure_2 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 import { getChildMapping } from "TransitionChildMapping.tsx";
 
 require = arg1;

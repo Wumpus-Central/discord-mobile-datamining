@@ -1,7 +1,7 @@
 // discord_app/modules/guild_rooms/GuildRoomConstants.tsx
-import messagesProxyDefault from "messagesProxy" /* 2237 */;
-import metadataDefault from "metadata" /* 9869 */;
-import metadataDefault2 from "metadata" /* 9870 */;
+import messagesProxyDefault from "GuildRooms.messages.js";
+import metadataDefault from "../../../discord_assets/assets/guild-room/lr-bg-tv.webp.js";
+import metadataDefault2 from "../../../discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js";
 
 let IE3e0y = arg1;
 let YpJ7QS = importDefault;

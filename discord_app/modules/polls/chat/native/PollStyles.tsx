@@ -1,6 +1,6 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
-import set from "set" /* 2 */;
-import NativeShadowType from "NativeShadowType" /* 8435 */;
+import set from "../../../../../_runtime/00002_set.js";
+import NativeShadowType from "../PollMessageChatDataTypes.tsx";
 import { t } from "../../../../../_runtime/04486_t.js";
 import { PollLayoutTypes } from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import { NativeShadowType } from "../PollMessageChatDataTypes.tsx";

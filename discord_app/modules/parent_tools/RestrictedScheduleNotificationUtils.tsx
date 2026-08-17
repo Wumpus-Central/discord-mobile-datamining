@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
-import set2 from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import setsEqual from "setsEqual" /* 10017 */;
+import set2 from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import setsEqual from "FamilyCenterRestrictedHoursUtils.tsx";
 
 function isOnlyDayLoss(label, label2) {
   if (label.label !== label2.label) {

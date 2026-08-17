@@ -1,5 +1,5 @@
 // discord_app/modules/activities/useDispatchOpenActivity.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
 

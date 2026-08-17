@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import apexExperiment from "apexExperiment" /* 4303 */;
-import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import apexExperiment from "../../../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

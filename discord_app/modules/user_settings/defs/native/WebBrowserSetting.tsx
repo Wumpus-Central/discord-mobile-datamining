@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/WebBrowserSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9826 */;
-import useWebBrowserSettingOptions from "useWebBrowserSettingOptions" /* 14784 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
+import useWebBrowserSettingOptions from "SelectWebBrowserSetting.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsWebBrowserScreen } from "../../web_browser/native/SettingsWebBrowserScreen.tsx";
 
 obj = {

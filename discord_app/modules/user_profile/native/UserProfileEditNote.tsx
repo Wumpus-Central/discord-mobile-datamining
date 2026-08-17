@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileEditNote.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { NOTE_MAX_LENGTH } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NOTE_MAX_LENGTH } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

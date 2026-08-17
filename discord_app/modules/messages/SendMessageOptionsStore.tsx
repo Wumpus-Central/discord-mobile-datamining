@@ -1,8 +1,8 @@
 // discord_app/modules/messages/SendMessageOptionsStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import MESSAGE_GROUP_SPACING from "MessageConstants.tsx";
 
 const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
 let closure_1 = {};

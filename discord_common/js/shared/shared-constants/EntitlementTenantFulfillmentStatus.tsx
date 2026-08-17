@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ELIGIBLE_FOR_ATTEMPTS: null, ELIGIBLE_FOR_FULFILLMENT: null };
 let set = new Set([2, 5, 9]);

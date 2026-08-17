@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx
-import noopAll from "noop" /* 19 */;
-import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1892 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import dismissGlobalKeyboardAll from "../../../utils/native/KeyboardManagerUtils.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

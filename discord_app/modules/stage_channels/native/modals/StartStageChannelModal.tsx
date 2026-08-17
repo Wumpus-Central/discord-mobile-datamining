@@ -1,26 +1,26 @@
 // discord_app/modules/stage_channels/native/modals/StartStageChannelModal.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import HotspotStore2 from "HotspotStore" /* 7193 */;
-import StageSparkleInnerDefault from "StageSparkleInner" /* 8068 */;
-import Form from "Form" /* 8083 */;
-import registerAssetDefault from "registerAsset" /* 8176 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import HotspotStore2 from "../../../hotspot/index.tsx";
+import StageSparkleInnerDefault from "../components/StageSparkle.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import registerAssetDefault from "../../../../../_runtime/08176_registerAsset.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../StageInstanceStore.tsx";
+import MAX_STAGE_TOPIC_LENGTH from "../../StageChannelsConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { GuildScheduledEventPrivacyLevel as closure_13 } from "../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function closeModal() {

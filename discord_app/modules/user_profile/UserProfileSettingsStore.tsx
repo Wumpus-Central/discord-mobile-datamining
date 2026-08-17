@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/UserProfileSettingsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import INVITE from "INVITE" /* 677 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import date from "date" /* 1429 */;
-import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8371 */;
-import useBioMaxLength from "useBioMaxLength" /* 8372 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import INVITE from "../routing/RouteConstants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import date from "../favorites/FavoritesConstants.tsx";
+import ANALYTICS_NAME from "../notifications_inbox/NotificationsInboxConstants.tsx";
+import useBioMaxLength from "experiments/BioMaxLengthExperiment.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function handleFormOpen() {
   const OPEN = FormStates.OPEN;

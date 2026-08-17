@@ -1,16 +1,16 @@
 // discord_app/modules/guild_profile/native/components/RestrictedGuildProfileView.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import map from "map" /* 4097 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import GuildProfileBackground from "GuildProfileBackground" /* 9513 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import GuildProfileBackground from "GuildProfileView.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

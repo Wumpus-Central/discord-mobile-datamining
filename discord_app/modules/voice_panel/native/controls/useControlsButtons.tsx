@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
-import PTTButton from "PTTButton" /* 16396 */;
-import ConnectButtonDefault from "ConnectButton" /* 16399 */;
-import ChatButtonDefault from "ChatButton" /* 16405 */;
-import DisconnectCancelButtonDefault from "DisconnectCancelButton" /* 16408 */;
-import VideoButtonRiveDefault from "VideoButtonRive" /* 16410 */;
-import SoundboardButtonDefault from "SoundboardButton" /* 16412 */;
-import MobilePhoneShareIconDefault from "MobilePhoneShareIcon" /* 16414 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 16417 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
-import { InputModes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import PTTButton from "buttons/VoicePanelMicButton.tsx";
+import ConnectButtonDefault from "buttons/VoicePanelConnectButton.tsx";
+import ChatButtonDefault from "buttons/VoicePanelChatButton.tsx";
+import DisconnectCancelButtonDefault from "buttons/VoicePanelDisconnectCancelButton.tsx";
+import VideoButtonRiveDefault from "buttons/VoicePanelVideoButton.tsx";
+import SoundboardButtonDefault from "buttons/VoicePanelSoundboardButton.tsx";
+import MobilePhoneShareIconDefault from "buttons/VoicePanelScreenshareButton.tsx";
+import VoicePanelDrawerToggleButtonDefault from "buttons/VoicePanelDrawerToggleButton.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/MediaEngineStore.tsx";
+import VoicePanelControlsModes from "VoicePanelControlsConstants.tsx";
+import { InputModes } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ CONTROLS_BUTTON_SIZE_LARGE: c5, CONTROLS_BUTTON_SIZE_NORMAL: closure_6 } = VoicePanelControlsModes);

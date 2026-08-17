@@ -1,10 +1,10 @@
 // discord_app/modules/activity_status/native/VoiceActivityStatus.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 9901 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 9910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ActivityStatusTextDefault from "ActivityStatusText.tsx";
+import UserProfileVoiceActivityIconDefault from "../../user_profile/native/UserProfileVoiceActivityIcon.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,13 +1,13 @@
 // discord_app/modules/video_calls/native/usePipVideoOrStream.tsx
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "updateSpeaker" /* 8688 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_10 from "createRTCConnection" /* 4539 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../calls/VideoSpeakerStore.tsx";
+import closure_6 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../stores/MediaEngineStore.tsx";
+import closure_10 from "../../../stores/RTCConnectionStore.tsx";
+import ParticipantTypes from "../../calls/CallConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

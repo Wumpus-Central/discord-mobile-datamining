@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11669 */;
-import closure_3 from "calculateAppliedBoosts" /* 4261 */;
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
+import closure_3 from "../GuildPowerupsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

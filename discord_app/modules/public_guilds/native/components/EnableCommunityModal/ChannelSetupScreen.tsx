@@ -1,15 +1,15 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 8875 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "comparator" /* 1980 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { CREATE_NEW_CHANNEL_VALUE } from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8254 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../guild_settings/GuildSettingsStore.tsx";
+import closure_7 from "../../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "../../../../../stores/GuildChannelStore.tsx";
+import closure_10 from "../../../../../stores/RelationshipStore.tsx";
+import closure_11 from "../../../../../stores/UserStore.tsx";
+import { CREATE_NEW_CHANNEL_VALUE } from "../../../PublicGuildsConstants.tsx";
+import { ChannelTypes } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);

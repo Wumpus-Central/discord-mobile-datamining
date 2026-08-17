@@ -1,9 +1,9 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
-import ReportNames from "ReportNames" /* 8137 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import resolveExplicitContentSettingWithDefaults from "../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
+import ReportNames from "MenuTypes.tsx";
 
 let obj = {
   getTitle() {

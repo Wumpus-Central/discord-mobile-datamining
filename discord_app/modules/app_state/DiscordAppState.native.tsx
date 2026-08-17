@@ -1,6 +1,6 @@
 // discord_app/modules/app_state/DiscordAppState.native.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "getState" /* 7383 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../stores/native/AppStateStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");

@@ -1,22 +1,22 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIP.tsx
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import mapDefault from "map" /* 8995 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import context2 from "context" /* 16311 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "participantFromServer" /* 1390 */;
-import closure_8 from "map" /* 8708 */;
-import closure_9 from "withEqualityFn" /* 8664 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16307 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { isLaunched } from "FrameLayoutModes" /* 8709 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import wrapChildrenDefault from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
+import mapDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import context2 from "VoicePanelPIPStateContext.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_8 from "../../../frames/FramesStore.tsx";
+import closure_9 from "../../VoicePanelStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { VoicePanelPIPModes } from "VoicePanelPIPConstants.tsx";
+import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
+import { isLaunched } from "../../../frames/FramesConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VoicePanelPIP() {

@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileCustomStatusActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import _modDef8409 from "module_8409" /* 8409 */;
-import EmojiImageDefault from "EmojiImage" /* 9286 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 9449 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9450 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import _modDef8409 from "../../profile_customization/native/HeaderAvatar.tsx";
+import EmojiImageDefault from "UserProfileCustomStatusBubble.tsx";
+import useCustomStatusActivityForUserDefault from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

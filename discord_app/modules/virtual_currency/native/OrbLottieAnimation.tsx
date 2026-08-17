@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/OrbLottieAnimation.tsx
-import closure_2 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ useRef: c3, useEffect: c4, forwardRef } = noop);

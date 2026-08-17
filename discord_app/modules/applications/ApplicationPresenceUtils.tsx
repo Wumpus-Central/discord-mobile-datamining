@@ -1,5 +1,5 @@
 // discord_app/modules/applications/ApplicationPresenceUtils.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_0 from "../../stores/ChannelStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
 

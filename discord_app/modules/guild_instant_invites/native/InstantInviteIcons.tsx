@@ -1,6 +1,6 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteIcons.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { registerAsset } from "../../../../_runtime/09954_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/09955_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/09956_registerAsset.js";

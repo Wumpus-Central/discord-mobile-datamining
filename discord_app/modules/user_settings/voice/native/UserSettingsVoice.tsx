@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoice.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import apexExperimentDefault from "apexExperiment" /* 12136 */;
-import handleInputModePressDefault from "handleInputModePress" /* 12550 */;
-import SoundboardVolumeDefault from "SoundboardVolume" /* 12553 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 12554 */;
-import VoiceProcessingOptionsDefault from "VoiceProcessingOptions" /* 12556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isMobileOverlaySupported } from "getUserAgnosticState" /* 12548 */;
-import { USER_SETTINGS_VOICE_GUILD_URL as closure_5 } from "combined" /* 12549 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
+import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import handleInputModePressDefault from "UserSettingsVoiceInputOptions.tsx";
+import SoundboardVolumeDefault from "UserSettingsSoundboardVolume.tsx";
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay.tsx";
+import VoiceProcessingOptionsDefault from "UserSettingsVoiceProcessing.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isMobileOverlaySupported } from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
+import { USER_SETTINGS_VOICE_GUILD_URL as closure_5 } from "UserSettingsVoiceConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

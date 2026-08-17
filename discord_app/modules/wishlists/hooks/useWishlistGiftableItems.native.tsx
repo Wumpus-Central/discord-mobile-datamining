@@ -1,6 +1,6 @@
 // discord_app/modules/wishlists/hooks/useWishlistGiftableItems.native.tsx
-import closure_0 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import closure_0 from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
 let items = [, , ];
 ({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = require("ME").SKUProductLines);

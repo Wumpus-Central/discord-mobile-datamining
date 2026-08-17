@@ -1,10 +1,10 @@
 // discord_app/design/void/Form/native/FormCheckboxRow.tsx
-import noopAll from "noop" /* 19 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import _modDef6937 from "module_6937" /* 6937 */;
-import FormCheckboxDefault from "FormCheckbox" /* 6946 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import _modDef6937 from "FormRow.tsx";
+import FormCheckboxDefault from "FormCheckbox.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

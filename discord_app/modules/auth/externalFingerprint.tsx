@@ -1,7 +1,7 @@
 // discord_app/modules/auth/externalFingerprint.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import keysSorter from "keysSorter" /* 4376 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import keysSorter from "../../../_runtime/04376_keysSorter.js";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth/externalFingerprint.tsx");

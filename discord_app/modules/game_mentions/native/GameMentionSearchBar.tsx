@@ -1,14 +1,14 @@
 // discord_app/modules/game_mentions/native/GameMentionSearchBar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Form from "Form" /* 8083 */;
-import GameControllerIcon from "GameControllerIcon" /* 9430 */;
-import useGameMentionSearchBarHeight from "useGameMentionSearchBarHeight" /* 11562 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Form from "../../../design/void/Form/native/index.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import useGameMentionSearchBarHeight from "../hooks/native/useGameMentionSearchBarHeight.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

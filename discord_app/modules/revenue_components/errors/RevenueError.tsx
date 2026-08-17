@@ -1,5 +1,5 @@
 // discord_app/modules/revenue_components/errors/RevenueError.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const prototype = function RevenueError(errorHandlingBehavior) {
   ({ message, extraSentryInformation } = errorHandlingBehavior);

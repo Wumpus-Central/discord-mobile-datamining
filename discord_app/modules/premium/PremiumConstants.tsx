@@ -1,11 +1,11 @@
 // discord_app/modules/premium/PremiumConstants.tsx
-import set7 from "set" /* 679 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import set8 from "set" /* 1925 */;
-import BadgeRarity from "BadgeRarity" /* 1926 */;
-import GiftIntentType from "GiftIntentType" /* 1927 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import set7 from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import set8 from "../emojis/EmojiConstants.tsx";
+import BadgeRarity from "../../../discord_common/js/shared/shared-constants/BadgeRarity.tsx";
+import GiftIntentType from "../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_intent_type.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 ({ BoostedGuildTiers, MAX_ATTACHMENT_SIZE, GuildFeatures, MAX_STAGE_VIDEO_USER_LIMIT_TIER01, BITRATE_MAX, MAX_STAGE_VIDEO_USER_LIMIT_TIER2, MAX_STAGE_VIDEO_USER_LIMIT_TIER3 } = ME);
 let obj = { TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_0: 3, [3]: "TIER_0" };

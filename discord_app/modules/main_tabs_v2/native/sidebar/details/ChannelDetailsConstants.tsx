@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import MessageEmbedTypes from "../../../../search/SearchConstants.tsx";
 
 const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");

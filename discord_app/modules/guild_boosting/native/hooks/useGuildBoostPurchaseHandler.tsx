@@ -1,8 +1,8 @@
 // discord_app/modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../../payments/utils/MobileWebRedirectCheckoutUtils.tsx";
 
 const require = arg1;

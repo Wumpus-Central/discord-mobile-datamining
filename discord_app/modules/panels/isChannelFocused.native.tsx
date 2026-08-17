@@ -1,15 +1,15 @@
 // discord_app/modules/panels/isChannelFocused.native.tsx
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import getInitialGuildStateDefault from "getInitialGuildState" /* 4231 */;
-import useChatLayout from "useChatLayout" /* 4232 */;
-import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import closure_6 from "getIdFromHistoryItem" /* 7291 */;
-import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 7291 */;
-import closure_8 from "withEqualityFn" /* 8664 */;
+import coerceMainRoute from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import getInitialGuildStateDefault from "../main_tabs_v2/native/getInitialNavigationState.tsx";
+import useChatLayout from "../chat/native/useChatLayout.tsx";
+import useChatLayoutDefault from "../chat/native/useChatLayout.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../calls/ChannelRTCStore.tsx";
+import closure_6 from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import { CHANNEL_PREFIX } from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import closure_8 from "../voice_panel/VoicePanelStore.tsx";
 
 require = arg1;
 function getFocusedChannelId() {

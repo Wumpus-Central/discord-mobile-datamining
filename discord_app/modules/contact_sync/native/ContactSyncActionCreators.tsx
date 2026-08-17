@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/ContactSyncActionCreators.tsx
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5221 */;
-import ME from "ME" /* 676 */;
+import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ConnectedAccountsStore.tsx";
+import ME from "../../../Constants.tsx";
 
 let closure_0 = arg1;
 function _updateDiscoverability() {

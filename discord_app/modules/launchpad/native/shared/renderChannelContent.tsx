@@ -1,16 +1,16 @@
 // discord_app/modules/launchpad/native/shared/renderChannelContent.tsx
-import Text from "Text" /* 4734 */;
-import LockIcon from "LockIcon" /* 6890 */;
-import WarningIcon from "WarningIcon" /* 8078 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import _modDef16202 from "module_16202" /* 16202 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10055 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import _modDef16202 from "ChannelTitle.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { SUBTITLE_OPACITY_NORMAL } from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function ChannelContent(arg0) {

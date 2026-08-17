@@ -1,11 +1,11 @@
 // discord_app/modules/oauth2/actions.tsx
-import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
-import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 5256 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
+import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import handleLogoutDefault from "../../actions/AuthenticationActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function getLocationContextServer() {

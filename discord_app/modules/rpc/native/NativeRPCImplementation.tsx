@@ -1,14 +1,14 @@
 // discord_app/modules/rpc/native/NativeRPCImplementation.tsx
-import set from "set" /* 2 */;
-import _modDef8748 from "module_8748" /* 8748 */;
-import crossPlatformCommands from "crossPlatformCommands" /* 13836 */;
-import RPC_LOCAL_SCOPEDefault from "RPC_LOCAL_SCOPE" /* 13880 */;
-import _modDef13881 from "module_13881" /* 13881 */;
-import itemsDefault from "items" /* 13883 */;
-import _modDef13884 from "module_13884" /* 13884 */;
-import messageEventsValidationDefault from "messageEventsValidation" /* 13886 */;
-import voiceSettingsEventHandlers from "voiceSettingsEventHandlers" /* 13889 */;
-import _modDef13891 from "module_13891" /* 13891 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef8748 from "server/transports/WebViewPostMessageTransport.tsx";
+import crossPlatformCommands from "../server/commands/crossPlatformRPCCommands.tsx";
+import RPC_LOCAL_SCOPEDefault from "server/commands/activities.tsx";
+import _modDef13881 from "server/commands/auth.tsx";
+import itemsDefault from "server/commands/voiceSettings.tsx";
+import _modDef13884 from "server/commands/unsupported.tsx";
+import messageEventsValidationDefault from "../server/events/crossPlatformRPCEventHandlers.tsx";
+import voiceSettingsEventHandlers from "events/voiceSettingsEventHandlers.tsx";
+import _modDef13891 from "NativeRPCServer.tsx";
 
 let obj = {};
 const merged = Object.assign(crossPlatformCommands.crossPlatformCommands);

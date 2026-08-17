@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx
-import closure_2 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");

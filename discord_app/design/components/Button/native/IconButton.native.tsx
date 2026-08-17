@@ -1,11 +1,11 @@
 // discord_app/design/components/Button/native/IconButton.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import BaseButton from "BaseButton" /* 4752 */;
-import BaseIconButton from "BaseIconButton" /* 8036 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../Text/native/Text.tsx";
+import BaseButton from "BaseButton.native.tsx";
+import BaseIconButton from "BaseIconButton.native.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

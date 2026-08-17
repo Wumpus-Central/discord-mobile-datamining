@@ -1,7 +1,7 @@
 // discord_app/modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../AccessibilityStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx");

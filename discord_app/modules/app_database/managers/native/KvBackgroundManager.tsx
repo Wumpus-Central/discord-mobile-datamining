@@ -1,13 +1,13 @@
 // discord_app/modules/app_database/managers/native/KvBackgroundManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 11585 */;
-import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 5069 */;
-import closure_8 from "handleSelectedChannelStoreChanged" /* 5069 */;
-import closure_9 from "result" /* 5070 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../multi_account/MultiAccountStore.tsx";
+import handleSelectedChannelStoreChanged from "../../modules/messages/SaveableChannelsStore.tsx";
+import closure_8 from "../../modules/messages/SaveableChannelsStore.tsx";
+import closure_9 from "../../stores/FileSystemStore.tsx";
 
 let require = arg1;
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } = handleSelectedChannelStoreChanged);

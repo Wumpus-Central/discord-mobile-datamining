@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14641 */;
-import useLiveStageData from "useLiveStageData" /* 15334 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getNicknameDefault from "../../../../../utils/NicknameUtils.tsx";
+import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HappeningNowCard.tsx";
+import useLiveStageData from "useLiveStageData.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class HappeningNowLiveStageContent {

@@ -1,13 +1,13 @@
 // discord_app/modules/voice_calls/VoicePermissionManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
-import closure_4 from "isVoiceMuted" /* 4543 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import { InputModes } from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../stage_channels/StageChannelRoleStore.tsx";
+import closure_4 from "../../records/VoiceStateRecord.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../stores/RTCConnectionStore.tsx";
+import { InputModes } from "../../Constants.tsx";
+import { NativePermissionTypes } from "../native_permissions/NativePermissionConstants.tsx";
 
 const require = arg1;
 let c11 = null;

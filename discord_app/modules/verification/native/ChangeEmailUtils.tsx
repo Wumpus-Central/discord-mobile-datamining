@@ -1,7 +1,7 @@
 // discord_app/modules/verification/native/ChangeEmailUtils.tsx
-import keys from "keys" /* 691 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ChangeEmailFields from "ChangeEmailFields" /* 8563 */;
+import keys from "../../../ConstantsIOS.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ChangeEmailFields from "../ChangeEmailStore.tsx";
 
 require = arg1;
 function _saveEmail() {

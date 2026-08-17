@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
 
 const GiftIntentType = GuildFeatures.GiftIntentType;
 const AnalyticsLocations = ME.AnalyticsLocations;

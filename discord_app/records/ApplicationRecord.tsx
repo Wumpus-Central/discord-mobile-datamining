@@ -1,13 +1,13 @@
 // discord_app/records/ApplicationRecord.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 506 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import toJSDefault from "toJS" /* 1931 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 4485 */;
-import closure_4 from "createFromServer" /* 4480 */;
-import closure_5 from "createdAt" /* 1930 */;
-import items3 from "items3" /* 4481 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import getAvatarURLDefault from "../utils/AvatarUtils.tsx";
+import toJSDefault from "../lib/Record.tsx";
+import ApplicationOverlayMethodFlags from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
+import closure_4 from "CompanyRecord.tsx";
+import closure_5 from "UserRecord.tsx";
+import items3 from "../modules/activities/Constants.tsx";
+import { ApplicationTypes } from "../modules/applications/ApplicationConstants.tsx";
 import { items } from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
 
 require = arg1;

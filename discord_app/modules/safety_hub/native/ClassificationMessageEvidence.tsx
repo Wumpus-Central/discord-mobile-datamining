@@ -1,15 +1,15 @@
 // discord_app/modules/safety_hub/native/ClassificationMessageEvidence.tsx
-import setOptionsDefault from "setOptions" /* 8157 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleThemeChange" /* 1302 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import { MessageTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import setOptionsDefault from "../../messages/native/renderer/RowGenerator.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../user_settings/ThemeStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import closure_11 from "../SafetyHubStore.tsx";
+import SafetyHubView from "../SafetyHubConstants.tsx";
+import { MessageTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c5, findNodeHandle: closure_6, Image: error, ActivityIndicator: closure_8 } = get_ActivityIndicator);

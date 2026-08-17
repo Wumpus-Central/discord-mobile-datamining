@@ -1,9 +1,9 @@
 // discord_app/design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7907 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import AccessibilityAnnouncer from "../../../../../shared.tsx";
+import getIllustrationSource from "../../index.tsx";
+import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

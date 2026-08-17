@@ -1,25 +1,25 @@
 // discord_app/stores/GuildMemberStore.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
-import items2 from "items" /* 1933 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1953 */;
-import compareGuildRoles from "compareGuildRoles" /* 1987 */;
-import DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY from "DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY" /* 1991 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4009 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import set from "../../_runtime/00002_set.js";
+import timestampDefault from "../modules/debug/Logger.tsx";
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import parseSkuIdFromServerData from "../modules/collectibles/utils/mappers.tsx";
+import items2 from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
+import isActivityParticipantValidGuildMemberDefault from "../modules/activities/isActivityParticipantValidGuildMember.tsx";
+import compareGuildRoles from "../utils/GuildRoleUtils.tsx";
+import DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY from "../modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx";
+import GuildMemberFlags2 from "../modules/guild_member/GuildMemberConstants.tsx";
+import isCommunicationDisabled from "../modules/guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import getEmbeddedActivityLocationChannelId from "../modules/activities/utils/embeddedActivityLocationUtils.tsx";
+import closure_4 from "../modules/impersonate/ImpersonateStore.tsx";
+import closure_5 from "AuthenticationStore.tsx";
+import closure_6 from "ChannelStore.tsx";
+import closure_7 from "GuildRoleStore.tsx";
+import closure_8 from "GuildStore.tsx";
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
   if (null != tmp10Result.communicationDisabledUntil) {

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/AutomodPermissionUtils.tsx
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

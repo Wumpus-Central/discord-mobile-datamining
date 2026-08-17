@@ -1,7 +1,7 @@
 // discord_app/hooks/useTheme.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import AccessibilityAnnouncer from "../design/shared.tsx";
 
 function useTheme() {
   return AccessibilityAnnouncer.useThemeContext().theme;

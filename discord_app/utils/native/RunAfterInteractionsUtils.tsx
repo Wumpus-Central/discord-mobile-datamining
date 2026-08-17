@@ -1,6 +1,6 @@
 // discord_app/utils/native/RunAfterInteractionsUtils.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 
 function runAfterInteractions(arg0, MINUTE) {

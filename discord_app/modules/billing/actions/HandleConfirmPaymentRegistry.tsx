@@ -1,8 +1,8 @@
 // discord_app/modules/billing/actions/HandleConfirmPaymentRegistry.tsx
-import _validatePaymentSourceBillingAddress from "_validatePaymentSourceBillingAddress" /* 4467 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import { PaymentSourceTypes } from "sum" /* 505 */;
+import _validatePaymentSourceBillingAddress from "BillingSharedActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../Constants.tsx";
+import { PaymentSourceTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 ({ Endpoints: c4, REDIRECTED_PAYMENT_SOURCES: c5 } = ME);

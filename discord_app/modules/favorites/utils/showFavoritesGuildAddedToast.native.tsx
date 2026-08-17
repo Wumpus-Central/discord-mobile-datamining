@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import StarIcon from "StarIcon" /* 9410 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 
 const result = set.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");
 

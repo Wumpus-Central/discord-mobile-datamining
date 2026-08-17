@@ -1,10 +1,10 @@
 // discord_app/stores/game_store/StoreListingStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "createFromServer" /* 13867 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import closure_3 from "../../modules/user_settings/LocaleStore.tsx";
+import closure_4 from "../../records/StoreListingRecord.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function addRegularStoreListing(id) {

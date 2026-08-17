@@ -1,9 +1,9 @@
 // discord_app/stores/ConnectedAccountsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import callbackDefault from "callback" /* 5223 */;
-import closure_3 from "toString" /* 5222 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import callbackDefault from "../actions/ConnectedAccountsActionCreators.tsx";
+import closure_3 from "../records/ConnectedAccountRecord.tsx";
+import set from "../../_runtime/00002_set.js";
 
 const require = arg1;
 const items = [require("ME").PlatformTypes.CONTACTS];

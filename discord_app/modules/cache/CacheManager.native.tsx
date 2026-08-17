@@ -1,13 +1,13 @@
 // discord_app/modules/cache/CacheManager.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import set from "set" /* 500 */;
-import setDefault from "set" /* 687 */;
-import keys from "keys" /* 691 */;
-import initializeDefault from "initialize" /* 5038 */;
-import okAsyncDefault from "okAsync" /* 5402 */;
-import _writeCaches from "_writeCaches" /* 14878 */;
-import closure_3 from "_handleConnectionOpen" /* 4495 */;
-import closure_4 from "handleClearCaches" /* 5067 */;
+import timestampDefault from "../debug/Logger.tsx";
+import set from "../../utils/PlatformUtils.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import keys from "../../ConstantsIOS.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import okAsyncDefault from "../app_database/modules/KvCacheVersion.tsx";
+import _writeCaches from "CacheActionCreators.tsx";
+import closure_3 from "../gateway/GatewayConnectionStore.tsx";
+import closure_4 from "CacheStore.tsx";
 
 require = arg1;
 let closure_5 = new timestampDefault("CacheStore");

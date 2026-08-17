@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/images.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 const require = arg1;
 const RPCErrors = ME.RPCErrors;

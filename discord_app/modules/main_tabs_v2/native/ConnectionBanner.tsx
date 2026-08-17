@@ -1,19 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6352 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateState" /* 13236 */;
-import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13236 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../_runtime/06352__isNativeReflectConstruct.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
+import { ConnectivityIndicatorState as closure_8 } from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
+import CONNECTION_BANNER_HEIGHT from "you_bar/YouBarConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ConnectionBannerIcon(state) {

@@ -1,7 +1,7 @@
 // discord_app/components_native/common/SwipeableFastList.tsx
-import renderDefaultEmptyDefault from "renderDefaultEmpty" /* 8124 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import renderDefaultEmptyDefault from "../../lib/native/FastList.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 const Component = importAllResult.Component;
 class SwipeableFastList extends Component {

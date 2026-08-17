@@ -1,11 +1,11 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "handleSettingsLoadSuccess" /* 5048 */;
-import { NO_SETTINGS } from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_7 from "set" /* 5049 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../experiments/ExperimentStore.tsx";
+import closure_5 from "../GuildOnboardingHomeSettingsStore.tsx";
+import { NO_SETTINGS } from "../GuildOnboardingHomeSettingsStore.tsx";
+import closure_7 from "../GuildOnboardingMemberActionStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function GuildOnboardingHomePage(guildId) {

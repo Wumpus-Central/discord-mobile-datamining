@@ -1,10 +1,10 @@
 // discord_app/modules/instant_invite/useInviteAssignableRoles.tsx
-import closure_3 from "noop" /* 19 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import { isEveryoneRole } from "../../records/GuildRoleRecord.tsx";
+import closure_5 from "../../stores/GuildRoleStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");

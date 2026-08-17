@@ -1,18 +1,18 @@
 // discord_app/modules/threads/ThreadMemberListStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "handleConnectionOpenOrResumed" /* 7240 */;
-import closure_8 from "sortActivity" /* 4559 */;
-import closure_9 from "filterPlayingActivities" /* 7250 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../stores/GuildSubscriptionsStore.tsx";
+import closure_8 from "../../stores/PresenceStore.tsx";
+import closure_9 from "../../stores/SelfPresenceStore.tsx";
+import closure_10 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function handleUserUpdate(user) {

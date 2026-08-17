@@ -1,8 +1,8 @@
 // discord_app/modules/build_overrides/native/BuildOverrideUtils.tsx
-import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 10970 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getCurrentBuildOverride" /* 10638 */;
-import set from "set" /* 500 */;
+import BundleUpdaterManagerDefault from "../../../lib/native/BundleUpdater.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../BuildOverrideStore.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 function setBuildOverrideForBranch(id) {

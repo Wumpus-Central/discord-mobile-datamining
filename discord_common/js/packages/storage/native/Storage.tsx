@@ -1,8 +1,8 @@
 // discord_common/js/packages/storage/native/Storage.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_3 from "enforcing" /* 597 */;
-import set from "set" /* 2 */;
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_3 from "../../rtn-codegen/js/NativeCacheModule.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 let set = importDefault;
 function parseValue(arg0) {

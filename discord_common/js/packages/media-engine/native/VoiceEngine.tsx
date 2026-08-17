@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/native/VoiceEngine.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/VoiceEngine.tsx");
 

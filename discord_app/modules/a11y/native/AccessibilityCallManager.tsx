@@ -1,11 +1,11 @@
 // discord_app/modules/a11y/native/AccessibilityCallManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import set from "set" /* 2 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set();

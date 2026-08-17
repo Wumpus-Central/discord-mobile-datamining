@@ -1,8 +1,8 @@
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import MIDJOURNEY_GUILD_ID from "MIDJOURNEY_GUILD_ID" /* 13320 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import MIDJOURNEY_GUILD_ID from "MidjourneyOnboardingConstants.tsx";
 
 require = arg1;
 ({ MIDJOURNEY_BOT_ID: c4, MIDJOURNEY_GUILD_ID: c5 } = MIDJOURNEY_GUILD_ID);

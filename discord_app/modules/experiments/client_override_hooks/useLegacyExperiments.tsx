@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/client_override_hooks/useLegacyExperiments.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4288 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { useMemo } from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../ExperimentStore.tsx";
+import ExperimentBuckets from "../ExperimentConstants.tsx";
 
 const require = arg1;
 function parseRegisteredExperiments(registeredExperiments) {

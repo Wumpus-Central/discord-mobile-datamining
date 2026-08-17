@@ -1,14 +1,14 @@
 // discord_app/modules/voice_panel/native/pip/useControllerPIPState.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import closure_7 from "map" /* 8708 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "anyoneHasFlagInContext" /* 4774 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { asLaunched } from "FrameLayoutModes" /* 8709 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_6 from "../../../calls/ChannelRTCStore.tsx";
+import closure_7 from "../../../frames/FramesStore.tsx";
+import closure_8 from "../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../stores/SpeakingStore.tsx";
+import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
+import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
+import { asLaunched } from "../../../frames/FramesConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");

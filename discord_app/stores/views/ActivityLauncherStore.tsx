@@ -1,9 +1,9 @@
 // discord_app/stores/views/ActivityLauncherStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "updateActivities" /* 7251 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../LocalActivityStore.tsx";
+import closure_4 from "../SelfPresenceStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {

@@ -1,15 +1,15 @@
 // discord_app/modules/app_database/modules/Guilds.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import fromServerArrayAll from "fromServerArray" /* 1985 */;
-import compareGuildRolesAll from "compareGuildRoles" /* 1987 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { updateJoinedAt } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import fromGuildPropertiesWithAdditionalFieldsAll from "../../../utils/GuildRecordUtils.tsx";
+import fromServerArrayAll from "../../../utils/GuildRoleRecordUtils.tsx";
+import compareGuildRolesAll from "../../../utils/GuildRoleUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { updateJoinedAt } from "../../../records/GuildRecord.tsx";
+import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../stores/GuildRoleStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = importDefault;
 let closure_9 = new timestampDefault("Guilds");

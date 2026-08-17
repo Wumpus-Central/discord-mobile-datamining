@@ -1,6 +1,6 @@
 // discord_app/modules/chat/useTypingText.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/UserStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/useTypingText.tsx");

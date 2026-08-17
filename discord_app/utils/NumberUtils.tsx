@@ -1,6 +1,6 @@
 // discord_app/utils/NumberUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../_runtime/00002_set.js";
+import getSystemLocale from "../intl/index.native.tsx";
 
 let c2 = 1000000;
 let result = set.fileFinishedImporting("utils/NumberUtils.tsx");

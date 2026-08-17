@@ -1,12 +1,12 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import DetectableAppNames from "DetectableAppNames" /* 13259 */;
-import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13261 */;
-import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "DETECTABLE_GAME_TO_APPLICATION_ID_MAP" /* 15075 */;
-import fetchMobileGameCommunitiesAll from "fetchMobileGameCommunities" /* 15529 */;
-import closure_3 from "initialize" /* 13258 */;
-import closure_4 from "set" /* 15074 */;
-import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 15528 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import DetectableAppNames from "../../local_app_detection/LocalAppDetectionTypes.tsx";
+import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GameCommunityUpsellExperiment.tsx";
+import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "GameCommunityConfig.tsx";
+import fetchMobileGameCommunitiesAll from "MobileGameCommunitiesActionCreators.tsx";
+import closure_3 from "../../local_app_detection/native/LocalAppDetectionStore.tsx";
+import closure_4 from "MobileGameCommunitiesStore.tsx";
+import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MobileGameCommunitiesConstants.tsx";
 
 require = arg1;
 initializeDefault;

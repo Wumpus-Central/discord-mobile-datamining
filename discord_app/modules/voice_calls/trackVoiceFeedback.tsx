@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/trackVoiceFeedback.tsx
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/MediaEngineStore.tsx";
 
 function _trackVoiceFeedback() {
   const self = this;

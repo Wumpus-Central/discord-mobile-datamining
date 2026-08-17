@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import registerAssetDefault from "registerAsset" /* 9803 */;
-import closure_3 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9799 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 9047 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import registerAssetDefault from "../../../../../../../_runtime/09803_registerAsset.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkConstants.tsx";
+import { PlatformTypes } from "../../../../../../Constants.tsx";
+import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ image: { width: 152, height: 123 } });

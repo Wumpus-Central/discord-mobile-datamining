@@ -1,10 +1,10 @@
 // discord_app/modules/instant_invite/resolveInvite.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import InviteSendStates from "Constants.tsx";
+import ME from "../../Constants.tsx";
 import { readSnowflake } from "InviteCodeUtils.tsx";
 
 const require = arg1;

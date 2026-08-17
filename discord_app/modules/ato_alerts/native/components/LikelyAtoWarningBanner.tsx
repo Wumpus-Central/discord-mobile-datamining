@@ -1,12 +1,12 @@
 // discord_app/modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
-import LIKELY_ATO_MORE_TIPS_MODAL_KEY from "LIKELY_ATO_MORE_TIPS_MODAL_KEY" /* 10581 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { MuteUntilSeconds } from "MAX_FAVORITES" /* 685 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { SafetyWarningTypes } from "../../../self_mod/ChannelSafetyWarningsStore.tsx";
+import LIKELY_ATO_MORE_TIPS_MODAL_KEY from "../../Constants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { MuteUntilSeconds } from "../../../user_settings/UserSettingsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class LikelyAtoWarningBanner {

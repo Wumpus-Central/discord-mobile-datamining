@@ -1,7 +1,7 @@
 // discord_app/modules/read_states/ReadStateUtils.tsx
-import closure_2 from "generateOldThreadCutoff" /* 4772 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import closure_2 from "../../stores/ReadStateStore.tsx";
+import closure_3 from "../../stores/UserGuildSettingsStore.tsx";
+import { UnreadSetting } from "ReadStateConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

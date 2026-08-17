@@ -1,12 +1,12 @@
 // discord_app/utils/PriceUtils.tsx
-import set from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import CurrencyCodes2 from "CurrencyCodes" /* 5317 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
-import closure_3 from "handlePaymentSourceCreateEnd" /* 4041 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
-import { CurrencyCodes } from "sum" /* 505 */;
+import set from "PlatformUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import getPremiumPlanItem from "PremiumUtils.tsx";
+import CurrencyCodes2 from "../../discord_common/js/shared/utils/PriceUtils.tsx";
+import closure_2 from "../modules/user_settings/LocaleStore.tsx";
+import closure_3 from "../stores/billing/BillingInfoStore.tsx";
+import { SubscriptionIntervalTypes } from "../modules/premium/PremiumConstants.tsx";
+import { CurrencyCodes } from "../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {

@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/FamilyCenterStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import clearAllDefault from "clearAll" /* 1220 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { getCountryCodeByAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import items from "items" /* 5297 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
+import maybeFetchCollectiblesForInvoicesDefault from "FamilyCenterActionCreators.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { getCountryCodeByAlpha2 } from "../i18n/CountryCodeUtils.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import items from "FamilyCenterConstants.tsx";
 
 let prototype = arg1;
 function freshTeenActivityWithMap() {

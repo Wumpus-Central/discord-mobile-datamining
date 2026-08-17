@@ -1,6 +1,6 @@
 // discord_app/modules/launchpad/native/useLaunchPadPullTabMinimized.tsx
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 const DCDScrollTracker = get_ActivityIndicator.NativeModules.DCDScrollTracker;

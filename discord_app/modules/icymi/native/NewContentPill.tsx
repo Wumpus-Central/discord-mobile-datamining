@@ -1,16 +1,16 @@
 // discord_app/modules/icymi/native/NewContentPill.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import SolidCutout from "SolidCutout" /* 8402 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "filterStaffGuild" /* 9044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import SolidCutout from "../../../design/components/Icon/native/ClipView.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import closure_8 from "../ICYMIStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function CutoutGuildIcon(guild) {

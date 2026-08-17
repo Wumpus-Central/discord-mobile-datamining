@@ -1,18 +1,18 @@
 // discord_app/modules/video_calls/native/components/CameraPreview.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "participantFromServer" /* 1390 */;
-import closure_8 from "getParticipants" /* 4773 */;
-import { useBestActiveChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight" /* 8682 */;
-import closure_10 from "reset" /* 4652 */;
-import closure_11 from "fetchFingerprint" /* 1218 */;
-import closure_12 from "initialize" /* 8683 */;
-import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
-import { ApplicationStreamStates } from "ME" /* 676 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_8 from "../../../calls/ChannelRTCStore.tsx";
+import { useBestActiveChatInputContainerHeight as closure_9 } from "../../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import closure_10 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_11 from "../../../../stores/AuthenticationStore.tsx";
+import closure_12 from "../ChannelCallLifecycleStore.tsx";
+import { useChannelCallStore } from "../ChannelCallStore.tsx";
+import BOX_MODE_ACTIONSHEET_WIDTH from "../ChannelCallConstants.tsx";
+import { ApplicationStreamStates } from "../../../../Constants.tsx";
+import ParticipantTypes from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function CameraPreview(arg0) {

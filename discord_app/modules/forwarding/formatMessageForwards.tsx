@@ -1,13 +1,13 @@
 // discord_app/modules/forwarding/formatMessageForwards.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import resetCache from "resetCache" /* 4063 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
-import closure_3 from "getGuild" /* 8180 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import resetCache from "../../utils/DateUtils.tsx";
+import isForwardMessageDefault from "isForwardMessage.tsx";
+import closure_3 from "../guild/BasicGuildStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
 
 require = arg1;
 class MessageForward {

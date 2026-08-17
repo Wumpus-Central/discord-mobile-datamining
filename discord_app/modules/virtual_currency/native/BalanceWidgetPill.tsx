@@ -1,15 +1,15 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPill.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 10401 */;
-import forwardRef from "forwardRef" /* 10402 */;
-import BalanceCounter from "BalanceCounter" /* 10408 */;
-import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS" /* 10409 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useVirtualCurrencyBalanceAnimationData from "../hooks/native/useVirtualCurrencyBalanceAnimationData.tsx";
+import forwardRef from "OrbLottieAnimation.tsx";
+import BalanceCounter from "BalanceCounter.tsx";
+import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "../shared/AnimationUtils.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 noopAll;

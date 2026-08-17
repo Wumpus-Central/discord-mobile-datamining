@@ -1,12 +1,12 @@
 // discord_app/modules/messages/useMessageAuthor.tsx
-import _modDef38 from "module_38" /* 38 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../stores/GuildRoleStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
 
 const require = arg1;
 function useNullableMessageAuthor(message) {

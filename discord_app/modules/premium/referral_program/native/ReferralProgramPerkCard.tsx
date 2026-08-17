@@ -1,18 +1,18 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramPerkCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import combinedDefault from "combined" /* 1993 */;
-import Text from "Text" /* 4734 */;
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 12880 */;
-import ProgressWheelDefault from "ProgressWheel" /* 12888 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "emitChanges" /* 7423 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import MAX_REFERRALS_SENT from "../hooks/useReferralProgramBannerDetails.tsx";
+import ProgressWheelDefault from "ProgressWheel.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../ReferralTrialStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ReferredFriendAvatar(user) {

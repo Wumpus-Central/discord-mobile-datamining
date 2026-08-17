@@ -1,7 +1,7 @@
 // discord_app/utils/EmbedUtils.tsx
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 4822 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import MessageEmbedTypes from "../modules/messages/EmbedConstants.tsx";
+import ME from "../Constants.tsx";
 
 function getEffectiveVideoProvider(name, url) {
   if ("YouTube" !== name) {

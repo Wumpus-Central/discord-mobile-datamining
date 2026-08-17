@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/useChannelFloatingCTAContent.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");

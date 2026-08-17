@@ -1,11 +1,11 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPicker.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,15 +1,15 @@
 // discord_app/components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Form from "Form" /* 8083 */;
-import TableRadioRow from "TableRadioRow" /* 8100 */;
-import closure_3 from "_toArray" /* 853 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "initialize" /* 16029 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Form from "../../design/void/Form/native/index.tsx";
+import TableRadioRow from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import closure_3 from "../../../_runtime/00853__toArray.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/RegionStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";

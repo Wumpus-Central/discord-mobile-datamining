@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/native/server/commands/voiceSettings.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import set2 from "set" /* 4375 */;
-import validateSocketClient from "validateSocketClient" /* 8756 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../Constants.tsx";
+import RPC_SCOPE_CONFIG from "../../../Constants.tsx";
+import set2 from "../../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import validateSocketClient from "../NativeRPCHelpers.tsx";
 
 let obj = {};
 obj = { scope: null, handler: null };

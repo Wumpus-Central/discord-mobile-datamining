@@ -1,13 +1,13 @@
 // discord_app/modules/replies/native/replyToMessage.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import handleEdit from "handleEdit" /* 10857 */;
-import createPendingReply from "createPendingReply" /* 10859 */;
-import closure_3 from "initialize" /* 7435 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getState" /* 7434 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
+import trackInviteDefault from "../../../actions/MessageActionCreators.tsx";
+import handleEdit from "../../messages/native/long_press/LongPressMessageActionSheetUtils.tsx";
+import createPendingReply from "../PendingReplyActionCreators.tsx";
+import closure_3 from "../../../stores/EditMessageStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../PendingReplyStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");

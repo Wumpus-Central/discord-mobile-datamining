@@ -1,17 +1,17 @@
 // discord_app/modules/contact_sync/native/ContactSyncModalActionCreators.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 8918 */;
-import _uploadContacts from "_uploadContacts" /* 11853 */;
-import Steps from "Steps" /* 11855 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5221 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ContactSyncModes from "ContactSyncModes" /* 11850 */;
-import setStoredContacts from "setStoredContacts" /* 11852 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 11851 */;
-import ME from "ME" /* 676 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import showInstantInviteActionSheet from "../../instant_invite/native/InstantInviteUtils.tsx";
+import _uploadContacts from "ContactSyncUtils.tsx";
+import Steps from "ContactSyncAnalyticsUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import ContactSyncModes from "ContactSyncModalStore.tsx";
+import setStoredContacts from "ContactSyncPersistedStore.tsx";
+import ContactSyncLandingPage from "ContactSyncConstants.tsx";
+import ME from "../../../Constants.tsx";
+import NativePermissionStatus from "../../native_permissions/NativePermissionConstants.tsx";
 
 require = arg1;
 function handleNameInputScreenOrSuggestions() {

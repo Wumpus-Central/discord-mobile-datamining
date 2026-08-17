@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import t from "t" /* 4486 */;
-import playDefault from "play" /* 7130 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { PremiumGiftStyles } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import t from "../../../../../_runtime/04486_t.js";
+import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { PremiumGiftStyles } from "../../PremiumConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

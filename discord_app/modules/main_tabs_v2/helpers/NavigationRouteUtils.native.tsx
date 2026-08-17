@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import enforcingDefault from "enforcing" /* 4236 */;
-import getBestActiveInput from "getBestActiveInput" /* 4237 */;
-import CREATE_THREAD_SCREEN_KEY from "CREATE_THREAD_SCREEN_KEY" /* 4254 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import createStandardNavigationFactories from "../../../../_runtime/01501_createStandardNavigationFactories.js";
+import getRootNavigationRef from "../RootNavigationRef.native.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
+import getBestActiveInput from "../../../utils/native/ChatInputUtils.tsx";
+import CREATE_THREAD_SCREEN_KEY from "../Types.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 

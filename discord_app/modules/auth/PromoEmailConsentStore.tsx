@@ -1,6 +1,6 @@
 // discord_app/modules/auth/PromoEmailConsentStore.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import set from "../../../_runtime/00002_set.js";
+import keys from "../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const obj = keys.create(() => ({ required: false, checked: false, preChecked: false }));

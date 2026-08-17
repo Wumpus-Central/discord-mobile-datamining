@@ -1,10 +1,10 @@
 // discord_app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import PressableBase from "../../../void/Pressables/native/Pressables.tsx";
+import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

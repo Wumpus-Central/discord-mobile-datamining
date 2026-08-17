@@ -1,13 +1,13 @@
 // discord_app/modules/share/formatResults.tsx
-import sortByMatchScore from "sortByMatchScore" /* 7593 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 7604 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionOpen" /* 7592 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { isAllowedType } from "ALLOWED_TYPES" /* 7606 */;
-import ME from "ME" /* 676 */;
+import sortByMatchScore from "../autocompleter/index.tsx";
+import createAutocompleterResultForChannelIdDefault from "../autocompleter/createAutocompleterResultForChannelId.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../quickswitcher/QuickSwitcherStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import { isAllowedType } from "ShareConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function getChannelIdFromDestinationId(type) {

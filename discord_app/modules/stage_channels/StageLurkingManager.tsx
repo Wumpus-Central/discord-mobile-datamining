@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/StageLurkingManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/SelectedGuildStore.tsx";
 
 let require = arg1;
 initializeDefault;

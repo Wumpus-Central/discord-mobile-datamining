@@ -1,21 +1,21 @@
 // discord_app/modules/avatar/native/components/PresetAvatarSelect.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import preloadDefault from "preload" /* 5449 */;
-import setDefault from "set" /* 16649 */;
-import setDefault2 from "set" /* 16650 */;
-import setDefault3 from "set" /* 16651 */;
-import setDefault4 from "set" /* 16652 */;
-import setDefault5 from "set" /* 16653 */;
-import setDefault6 from "set" /* 16654 */;
-import setDefault7 from "set" /* 16655 */;
-import setDefault8 from "set" /* 16656 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import setDefault from "../../images/defaultAvatar1.tsx";
+import setDefault2 from "../../images/defaultAvatar2.tsx";
+import setDefault3 from "../../images/defaultAvatar3.tsx";
+import setDefault4 from "../../images/defaultAvatar4.tsx";
+import setDefault5 from "../../images/defaultAvatar5.tsx";
+import setDefault6 from "../../images/defaultAvatar6.tsx";
+import setDefault7 from "../../images/defaultAvatar7.tsx";
+import setDefault8 from "../../images/defaultAvatar8.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DefaultAvatarButton(selected) {

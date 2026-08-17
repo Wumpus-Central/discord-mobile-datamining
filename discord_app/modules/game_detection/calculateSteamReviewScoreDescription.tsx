@@ -1,6 +1,6 @@
 // discord_app/modules/game_detection/calculateSteamReviewScoreDescription.tsx
-import set from "set" /* 2 */;
-import GameTheme from "GameTheme" /* 4511 */;
+import set from "../../../_runtime/00002_set.js";
+import GameTheme from "GameDetectionTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 

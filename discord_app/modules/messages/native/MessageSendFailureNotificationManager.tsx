@@ -1,15 +1,15 @@
 // discord_app/modules/messages/native/MessageSendFailureNotificationManager.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import initializeDefault from "initialize" /* 5038 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
-import dispatcherDefault from "dispatcher" /* 10031 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "getState" /* 7383 */;
-import ME from "ME" /* 676 */;
-import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13263 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import isReactionMilestoneNotification from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
+import dispatcherDefault from "../../../actions/native/InAppNotificationActionCreators.tsx";
+import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
+import closure_3 from "../../../stores/SelectedChannelStore.tsx";
+import closure_4 from "../../../stores/SelectedGuildStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/native/AppStateStore.tsx";
+import ME from "../../../Constants.tsx";
+import { LocalNotificationTypes } from "../../local_push_notification/native/Constants.tsx";
 
 require = arg1;
 function handleMessageSendFailure(shouldNotify) {

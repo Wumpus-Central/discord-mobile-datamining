@@ -1,7 +1,7 @@
 // discord_app/modules/labs/LabFeatureStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hide_icymi_tabDefault from "hide_icymi_tab" /* 9060 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import hide_icymi_tabDefault from "LabFeatures.tsx";
 
 let closure_2 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

@@ -1,9 +1,9 @@
 // discord_app/utils/CreateInstantInviteUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import comparator from "comparator" /* 1980 */;
-import closure_2 from "comparator" /* 1980 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import comparator from "../stores/GuildChannelStore.tsx";
+import closure_2 from "../stores/GuildChannelStore.tsx";
+import closure_3 from "../stores/PermissionStore.tsx";
 
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = comparator);
 const Permissions = ME.Permissions;

@@ -1,11 +1,11 @@
 // discord_app/modules/app_analytics/clickstream/Clickstream.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 5058 */;
-import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 5059 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import clickstreamExperimentEnabled from "ClickstreamExperiment.tsx";
+import getClickstreamDrainEvent from "ClickstreamEvents.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
 
 require = arg1;
 function isClickstreamEnabled(flag) {

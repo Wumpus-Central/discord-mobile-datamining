@@ -1,10 +1,10 @@
 // discord_app/modules/mfa/native/MFAModal.tsx
-import _modDef4656 from "module_4656" /* 4656 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 class MFAModal {

@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/WebAuthnSignalManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
 
 initializeDefault;
 class WebAuthnSignalManager extends tmp2 {

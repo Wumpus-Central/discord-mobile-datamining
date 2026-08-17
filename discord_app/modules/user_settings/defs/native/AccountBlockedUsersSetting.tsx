@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "markAllUserIdListsStale" /* 4030 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import closure_2 from "../../../../stores/RelationshipStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { BlockedUsersList } from "../../content_and_social/native/BlockedUsersListV2.tsx";
 
 require = arg1;

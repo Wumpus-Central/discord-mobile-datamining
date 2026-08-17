@@ -1,6 +1,6 @@
 // discord_app/utils/Queue.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import DequeDefault from "Deque" /* 8 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import DequeDefault from "../../_runtime/00008_Deque.js";
 
 let closure_2 = new timestampDefault("Queue");
 const tmp2 = new timestampDefault("Queue");

@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSheetWrapper.tsx
-import closure_2 from "noop" /* 19 */;
-import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
 

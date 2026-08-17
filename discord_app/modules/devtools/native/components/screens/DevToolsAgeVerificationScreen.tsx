@@ -1,15 +1,15 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import TableRowArrow from "TableRowArrow" /* 6297 */;
-import KeyIcon from "KeyIcon" /* 8595 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import KeyIcon from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function showAgeVerificationTestModal() {

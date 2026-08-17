@@ -1,15 +1,15 @@
 // discord_app/actions/RelationshipActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6780 */;
-import openContextMenu from "openContextMenu" /* 6911 */;
-import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9739 */;
-import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9741 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9737 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import setDefault from "AlertActionCreators.tsx";
+import openQuarantineModeInfoModalDefault from "../modules/quarantine/openQuarantineModeInfoModal.native.tsx";
+import openContextMenu from "ContextMenuActionCreators.tsx";
+import isLimitedAccessErrorCode from "../modules/user_limited_access/UserLimitedAccessUtils.tsx";
+import openClearAllIncomingRequestsConfirmationModalDefault from "../modules/people/ClearAllIncomingRequestsConfirmationModal.tsx";
+import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import { ClearFriendRequestFilters } from "../modules/relationships/RelationshipConstants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

@@ -1,16 +1,16 @@
 // discord_app/modules/forwarding/native/ForwardPreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1493 */;
-import messagesProxyDefault from "messagesProxy" /* 2821 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import preloadDefault from "preload" /* 5449 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import DCDChatItemDefault from "DCDChatItem" /* 10066 */;
-import useForwardPreviewContent from "useForwardPreviewContent" /* 12040 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSrcWithWidthAndHeightDefault from "../../../utils/native/ImageUtils.tsx";
+import messagesProxyDefault from "../../checkpoint/Checkpoint.messages.js";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import DCDChatItemDefault from "../../../components_native/chat/ChatItem.tsx";
+import useForwardPreviewContent from "../ForwardPreviewUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MessagePreview(content) {

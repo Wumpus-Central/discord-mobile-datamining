@@ -1,15 +1,15 @@
 // discord_app/stores/IdleStore.tsx
-import set from "set" /* 500 */;
-import initializeDefault from "initialize" /* 589 */;
-import debounceDefault from "debounce" /* 636 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault2 from "set" /* 4004 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
-import { SpeakingFlags } from "DesktopSources" /* 4529 */;
+import set from "../utils/PlatformUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import debounceDefault from "../../_runtime/00636_debounce.js";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import setDefault2 from "../lib/DiscordNative.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import _modDef4975 from "../actions/SelectedChannelActionCreators.tsx";
+import closure_4 from "AuthenticationStore.tsx";
+import ME from "../Constants.tsx";
+import { SpeakingFlags } from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 function checkIdleAFK() {

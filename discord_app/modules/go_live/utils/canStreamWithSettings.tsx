@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/utils/canStreamWithSettings.tsx
-import set from "set" /* 2 */;
-import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 10936 */;
-import canUseStreamSettingDefault from "canUseStreamSetting" /* 10937 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
+import set from "../../../../_runtime/00002_set.js";
+import getGoLiveAutoQualityExperimentConfig from "../GoLiveAutoQualityExperiment.tsx";
+import canUseStreamSettingDefault from "canUseStreamSetting.tsx";
+import RESOLUTION_720 from "../StreamSettingsConstants.tsx";
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);
 const result = set.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");

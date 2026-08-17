@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/HomeDrawerAddServerRow.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15569 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import HomeDrawerSharedItem from "HomeDrawerShared.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

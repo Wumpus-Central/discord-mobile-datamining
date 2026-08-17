@@ -1,11 +1,11 @@
 // discord_app/modules/hub/useIsHubRealNamePromptShowing.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 11823 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { GuildPrompts } from "GuildPrompts" /* 11824 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../guild/GuildPromptsStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
+import { GuildPrompts } from "../guild/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

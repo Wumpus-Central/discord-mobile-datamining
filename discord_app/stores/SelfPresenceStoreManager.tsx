@@ -1,7 +1,7 @@
 // discord_app/stores/SelfPresenceStoreManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "filterPlayingActivities" /* 7250 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import initializeDefault from "../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "SelfPresenceStore.tsx";
 
 function handleChange() {
   let obj = dispatcherDefault;

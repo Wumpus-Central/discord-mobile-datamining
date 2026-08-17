@@ -1,14 +1,14 @@
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import contextDefault from "context" /* 7139 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import getLayoutStyles from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ AnalyticEvents: error, RelationshipTypes: closure_8 } = ME);

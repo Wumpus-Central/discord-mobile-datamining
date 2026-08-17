@@ -1,10 +1,10 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/isSoundValid.tsx
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
-import { Permissions } from "sum" /* 505 */;
+import getPremiumPlanItemDefault from "../../../../../utils/PremiumUtils.tsx";
+import closure_2 from "../../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../../../stores/UserStore.tsx";
+import { DEFAULT_SOUND_GUILD_ID } from "../../../../soundboard/SoundboardConstants.tsx";
+import { Permissions } from "../../../../../../discord_common/js/shared/Constants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
 

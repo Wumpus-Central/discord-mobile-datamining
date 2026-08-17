@@ -1,11 +1,11 @@
 // discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import decideFileExtension from "decideFileExtension" /* 6924 */;
-import SHARE_PREPARING_MODAL_KEY from "SHARE_PREPARING_MODAL_KEY" /* 9070 */;
-import apexExperiment from "apexExperiment" /* 9071 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
+import decideFileExtension from "../../media/FileExtensionUtils.tsx";
+import SHARE_PREPARING_MODAL_KEY from "../../share/native/SharePreparingModalConstants.tsx";
+import apexExperiment from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = SHARE_PREPARING_MODAL_KEY.SHARE_SHEET_PRESENT_DELAY_MS;

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createdAt" /* 1930 */;
+import toJSDefault from "../../../../lib/Record.tsx";
+import closure_0 from "../../../../records/UserRecord.tsx";
 
 toJSDefault;
 const obj = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };

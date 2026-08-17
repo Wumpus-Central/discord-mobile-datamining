@@ -1,13 +1,13 @@
 // discord_app/modules/quests/native/BountiesNuxPromoSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4745 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5554 */;
-import PromoSheet from "PromoSheet" /* 8017 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import BountiesPosterSpotIllustration from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
+import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { illustrationContainer: null };

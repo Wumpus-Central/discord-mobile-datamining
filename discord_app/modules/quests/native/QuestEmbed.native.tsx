@@ -1,14 +1,14 @@
 // discord_app/modules/quests/native/QuestEmbed.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import registerAssetDefault from "registerAsset" /* 12775 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import closure_5 from "initializeState" /* 7453 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import InviteSendStates from "../../instant_invite/Constants.tsx";
+import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import registerAssetDefault from "../../../../_runtime/12775_registerAsset.js";
+import closure_4 from "../../user_settings/ThemeStore.tsx";
+import closure_5 from "../QuestStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
 
 const Image = get_ActivityIndicator.Image;
 ({ QuestsExperimentLocations: closure_6, QuestEmbedFallbackReason: error } = QuestsExperimentLocations);

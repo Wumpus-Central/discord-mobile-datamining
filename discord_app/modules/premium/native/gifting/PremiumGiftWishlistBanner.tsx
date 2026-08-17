@@ -1,15 +1,15 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftWishlistBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { WishlistRecommendationReason as closure_7 } from "fromServer" /* 7201 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_12 } from "items" /* 678 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { WishlistRecommendationReason as closure_7 } from "../../../wishlists/records/WishlistRecommendationRecord.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { CollectiblesMobileShopScreen as closure_12 } from "../../../collectibles/CollectiblesShopConstants.tsx";
+import { UserProfileSections } from "../../../user_profile/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);

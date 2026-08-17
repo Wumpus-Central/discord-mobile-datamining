@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/ParentalConsentStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = false;
 const PersistedStore = initializeDefault.PersistedStore;

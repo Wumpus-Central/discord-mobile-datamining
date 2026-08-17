@@ -1,26 +1,26 @@
 // discord_app/modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import noopAll from "noop" /* 19 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import allowChannelAccess from "allowChannelAccess" /* 4979 */;
-import _copy from "_copy" /* 7167 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import patchThreadDefault from "patchThread" /* 7512 */;
-import openCreateForumPostModal from "openCreateForumPostModal" /* 10165 */;
-import createPendingReply from "createPendingReply" /* 10859 */;
-import closure_3 from "getState" /* 7434 */;
-import { isMessageComponentsV2 } from "hasFlag" /* 4031 */;
-import closure_5 from "initialize" /* 7435 */;
-import closure_6 from "initialize" /* 7582 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "getOptions" /* 10858 */;
-import ME from "ME" /* 676 */;
-import { isStaticChannelRoute } from "set" /* 1398 */;
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_19 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
-import { jsx } from "jsxProd" /* 21 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import transitionTo from "../../../routing/router_utils.tsx";
+import presentAddedFriendToast from "../../../toast/native/ToastUtils.tsx";
+import coerceMainRoute from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import allowChannelAccess from "../../../../utils/ChannelUtils.tsx";
+import _copy from "../../../../utils/ClipboardUtils.native.tsx";
+import trackInviteDefault from "../../../../actions/MessageActionCreators.tsx";
+import patchThreadDefault from "../../../threads/ThreadActionCreators.tsx";
+import openCreateForumPostModal from "../../../forums/native/composer/ForumComposerModalActionCreators.tsx";
+import createPendingReply from "../../../replies/PendingReplyActionCreators.tsx";
+import closure_3 from "../../../replies/PendingReplyStore.tsx";
+import { isMessageComponentsV2 } from "../../../../records/MessageRecord.tsx";
+import closure_5 from "../../../../stores/EditMessageStore.tsx";
+import closure_6 from "../../../../stores/UploadStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../SendMessageOptionsStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { isStaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_19 } from "../../../explicit_media_redaction/ExplicitMediaRedactionConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function handleEdit(id, isForumPost, current, source) {

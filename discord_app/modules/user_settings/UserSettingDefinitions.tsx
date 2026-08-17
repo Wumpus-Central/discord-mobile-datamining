@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingDefinitions.tsx
-import closure_3 from "initialize" /* 1303 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { UserSettingsDelay } from "MAX_FAVORITES" /* 685 */;
+import closure_3 from "SelectivelySyncedUserSettingsStore.tsx";
+import closure_4 from "UserSettingsProtoStore.tsx";
+import { UserSettingsDelay } from "UserSettingsConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");

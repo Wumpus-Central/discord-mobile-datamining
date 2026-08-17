@@ -1,5 +1,5 @@
 // discord_app/modules/threads/useGetThreadDraftSettings.tsx
-import closure_3 from "handleChanged" /* 4825 */;
+import closure_3 from "../../stores/DraftStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

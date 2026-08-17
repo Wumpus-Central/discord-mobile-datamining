@@ -1,10 +1,10 @@
 // discord_app/modules/welcome_cta/WelcomeCTAUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { WELCOME_STICKERS } from "items" /* 8221 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import { WELCOME_STICKERS } from "WelcomeCTAConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");
 

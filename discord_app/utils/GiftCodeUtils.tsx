@@ -1,16 +1,16 @@
 // discord_app/utils/GiftCodeUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 4477 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "handleSubscribeFailure" /* 4382 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import importDefaultResult from "set" /* 4362 */;
-import ArrayResult from "module_4" /* 4 */;
-import ArrayResult1 from "module_6" /* 6 */;
-import ArrayResult2 from "module_3" /* 3 */;
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
+import getAnalyticsDataForSKUDefault from "../modules/game_store/getAnalyticsDataForSKU.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../stores/PremiumPaymentModalStore.tsx";
+import closure_6 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
+import importDefaultResult from "RegexUtils.tsx";
+import ArrayResult from "../../discord_common/js/packages/logger/Logger.tsx";
+import ArrayResult1 from "../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx";
+import ArrayResult2 from "../modules/debug/Logger.tsx";
 
 let c0 = arg1;
 function _resolveGiftCode() {

@@ -1,12 +1,12 @@
 // discord_app/modules/feedback/native/RatingSelector.tsx
-import noopAll from "noop" /* 19 */;
-import registerAssetDefault from "registerAsset" /* 10816 */;
-import registerAssetDefault2 from "registerAsset" /* 10821 */;
-import registerAssetDefault3 from "registerAsset" /* 10826 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import FeedbackRating from "FeedbackRating" /* 10811 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import registerAssetDefault from "../../../../_runtime/10816_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10821_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/10826_registerAsset.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import FeedbackRating from "../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

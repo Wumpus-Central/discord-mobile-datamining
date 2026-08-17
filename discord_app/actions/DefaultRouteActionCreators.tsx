@@ -1,9 +1,9 @@
 // discord_app/actions/DefaultRouteActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import matchPath from "matchPath" /* 4202 */;
-import RouteParam2 from "RouteParam" /* 4215 */;
-import closure_3 from "initialize" /* 4022 */;
-import { Routes } from "ME" /* 676 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import matchPath from "../modules/routing/matchPathCompat.tsx";
+import RouteParam2 from "../modules/routing/RouteUtils.tsx";
+import closure_3 from "../modules/lurker_mode/LurkingStore.tsx";
+import { Routes } from "../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");

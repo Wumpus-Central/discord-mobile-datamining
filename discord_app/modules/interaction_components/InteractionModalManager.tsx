@@ -1,9 +1,9 @@
 // discord_app/modules/interaction_components/InteractionModalManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "deleteNonce" /* 8165 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../applications/ApplicationStore.tsx";
+import closure_5 from "../interactions/InteractionStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 let require = arg1;
 function _handleInteractionModalCreate() {

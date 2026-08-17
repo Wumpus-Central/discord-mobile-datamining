@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "initialize" /* 8683 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_6 from "../../../video_calls/native/ChannelCallLifecycleStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { ThemeTypes } from "../../../../Constants.tsx";
+import items3 from "../../../activities/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VoicePanelAnimatedActivityCardInner(applicationId) {

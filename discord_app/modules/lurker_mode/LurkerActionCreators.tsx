@@ -1,8 +1,8 @@
 // discord_app/modules/lurker_mode/LurkerActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "initialize" /* 4022 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import closure_5 from "LurkingStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function stopLurkingAll(items) {

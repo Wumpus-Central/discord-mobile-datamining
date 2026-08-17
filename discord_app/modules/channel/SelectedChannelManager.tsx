@@ -1,14 +1,14 @@
 // discord_app/modules/channel/SelectedChannelManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import initializeDefault from "initialize" /* 5038 */;
-import transitionToGuild from "transitionToGuild" /* 7302 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import { findFirstVoiceChannelId } from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import transitionTo from "../routing/router_utils.tsx";
+import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import transitionToGuild from "../routing/transitionToGuild.native.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import { findFirstVoiceChannelId } from "../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../stores/SelectedGuildStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ ChannelTypes: error, Routes: closure_8, ME: c9, NULL_STRING_GUILD_ID: c10 } = ME);

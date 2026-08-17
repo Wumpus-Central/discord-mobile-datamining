@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import experiment from "experiment" /* 8439 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../Constants.tsx";
+import experiment from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../../../stores/VoiceStateStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const Permissions = ME.Permissions;

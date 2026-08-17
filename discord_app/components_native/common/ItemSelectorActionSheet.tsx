@@ -1,8 +1,8 @@
 // discord_app/components_native/common/ItemSelectorActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

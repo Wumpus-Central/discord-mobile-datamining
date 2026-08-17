@@ -1,11 +1,11 @@
 // discord_app/modules/stickers/native/NativeLottieView.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8219 */;
-import noop from "noop" /* 19 */;
-import closure_2 from "noop" /* 19 */;
-import set from "set" /* 500 */;
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import codegenNativeCommandsDefault from "../../../../_runtime/00113_codegenNativeCommands.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import set from "../../../utils/PlatformUtils.tsx";
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 let jsx = jsxProd.jsx;

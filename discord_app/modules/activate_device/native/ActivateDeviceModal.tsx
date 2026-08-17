@@ -1,6 +1,6 @@
 // discord_app/modules/activate_device/native/ActivateDeviceModal.tsx
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_5 = { ACTIVATE_DEVICE: "activate-device" };

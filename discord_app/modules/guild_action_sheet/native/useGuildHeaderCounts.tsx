@@ -1,7 +1,7 @@
 // discord_app/modules/guild_action_sheet/native/useGuildHeaderCounts.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "initialize" /* 13431 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/GuildMemberCountStore.tsx";
+import closure_5 from "GuildHeaderCountsStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");

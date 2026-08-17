@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/DevToolsActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "initialize" /* 7471 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "DevToolsSettingsStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 

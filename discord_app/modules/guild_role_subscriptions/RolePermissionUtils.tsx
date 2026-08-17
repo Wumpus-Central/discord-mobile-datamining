@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/RolePermissionUtils.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import ME from "ME" /* 676 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
+import set from "../../../_runtime/00002_set.js";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import ME from "../../Constants.tsx";
+import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
 
 const hasPermission = GuildRoleRecordTypeTag.hasPermission;
 const Permissions = ME.Permissions;

@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/hooks/useEmojiColorPalette.tsx
-import initialize from "initialize" /* 589 */;
-import buildPlatformedThemedEmojiColorPalette from "buildPlatformedThemedEmojiColorPalette" /* 8182 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import buildPlatformedThemedEmojiColorPalette from "../utils/EmojiColorUtils.tsx";
+import closure_2 from "../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../user_settings/ThemeStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");

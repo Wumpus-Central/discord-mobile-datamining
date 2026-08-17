@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/EphemeralIndication.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import getEphemeralReasonMessage from "getEphemeralReasonMessage" /* 8298 */;
-import closure_3 from "handleMessageSendFailedAutomod" /* 8163 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
+import getEphemeralReasonMessage from "../../../../application_commands/ApplicationCommandUserAppUtils.tsx";
+import closure_3 from "../../../../guild_automod/GuildAutomodMessageStore.tsx";
+import ME from "../../../../../Constants.tsx";
 
 require = arg1;
 ({ HelpdeskArticles: c4, MessageFlags: c5 } = ME);

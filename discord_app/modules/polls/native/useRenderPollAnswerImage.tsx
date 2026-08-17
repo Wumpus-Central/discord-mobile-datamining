@@ -1,11 +1,11 @@
 // discord_app/modules/polls/native/useRenderPollAnswerImage.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_7 from "map" /* 4824 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { ActivityIndicator } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import closure_7 from "../../../stores/UploadAttachmentStore.tsx";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { PollMediaUploadAttachmentStatus } from "../PollTypes.tsx";
 

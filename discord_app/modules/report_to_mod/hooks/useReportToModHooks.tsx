@@ -1,10 +1,10 @@
 // discord_app/modules/report_to_mod/hooks/useReportToModHooks.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import canReportMessageToMods from "canReportMessageToMods" /* 7238 */;
-import _fetchProfile from "_fetchProfile" /* 8418 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import canReportMessageToMods from "../ReportToModUtils.tsx";
+import _fetchProfile from "../../../actions/UserActionCreators.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/MessageStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const useEffect = noop.useEffect;

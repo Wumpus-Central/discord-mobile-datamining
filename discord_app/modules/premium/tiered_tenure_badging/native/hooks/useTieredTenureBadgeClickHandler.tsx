@@ -1,10 +1,10 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { DEFAULT_PREMIUM_BADGE_ID } from "DEFAULT_PREMIUM_BADGE_ID" /* 9467 */;
-import ME from "ME" /* 676 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/UserStore.tsx";
+import { PremiumTypes } from "../../../PremiumConstants.tsx";
+import { DEFAULT_PREMIUM_BADGE_ID } from "../../Constants.tsx";
+import ME from "../../../../../Constants.tsx";
+import { UserProfileThemeTypes } from "../../../../user_profile/native/Constants.tsx";
 import { useIsPremiumSubscriber } from "../../../useIsPremiumSubscriber.tsx";
 
 const require = arg1;

@@ -1,21 +1,21 @@
 // discord_app/stores/LocalActivityStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "initialize" /* 4504 */;
-import closure_7 from "updateActivities" /* 7252 */;
-import closure_8 from "upsertAccount" /* 7241 */;
-import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_10 from "reset" /* 4652 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "gameFromServer" /* 4509 */;
-import closure_13 from "makeTwitchRequest" /* 7255 */;
-import closure_14 from "handleConnectionOpen" /* 1979 */;
-import closure_15 from "handleUpdate" /* 4541 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../modules/activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../modules/applications/ApplicationStore.tsx";
+import closure_6 from "../modules/game_detection/RunningGameStore.native.tsx";
+import closure_7 from "../modules/rich_presence/FirstPartyRichPresenceStore.tsx";
+import closure_8 from "../modules/spotify/SpotifyStore.tsx";
+import closure_9 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_10 from "ApplicationStreamingStore.tsx";
+import closure_11 from "ChannelStore.tsx";
+import closure_12 from "DetectableGameStore.tsx";
+import closure_13 from "ExternalStreamingStore.tsx";
+import closure_14 from "SelectedChannelStore.tsx";
+import closure_15 from "SessionsStore.tsx";
+import ME from "../Constants.tsx";
 
 const require = arg1;
 function updateActivities() {

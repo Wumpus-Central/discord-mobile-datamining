@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/voice/native/SettingsVoiceScreen.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4734 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
-import handleKrispLinkPressed from "handleKrispLinkPressed" /* 12561 */;
-import _modDef13991 from "module_13991" /* 13991 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "combined" /* 1993 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../../design/shared.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06377_LegacyBaseButton.js";
+import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
+import handleKrispLinkPressed from "KrispLogo.tsx";
+import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/MediaEngineStore.tsx";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import { HelpdeskArticles } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../utils/HelpdeskUtils.tsx";
 
 require = arg1;
 function KrispLogo() {

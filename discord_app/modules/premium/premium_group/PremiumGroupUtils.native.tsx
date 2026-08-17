@@ -1,7 +1,7 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.native.tsx
-import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
+import messagesProxyDefault from "PremiumGroup.messages.js";
+import closure_3 from "../../../stores/UserStore.tsx";
+import SubscriptionStatusTypes from "PremiumGroupConstants.tsx";
 
 const require = arg1;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);

@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 687 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleInviteData" /* 4295 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "initialize" /* 11217 */;
-import closure_8 from "initialize" /* 11218 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
+import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import setDefault from "../../../../../utils/Durations.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/GuildMemberCountStore.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
+import closure_7 from "../stores/AppLauncherOnboardingPersistedStore.tsx";
+import closure_8 from "../stores/AppLauncherOnboardingStore.tsx";
+import { BuiltInSectionId } from "../../../../application_commands/ApplicationCommandConstants.tsx";
 
 const require = arg1;
 let result = 5 * setDefault.Millis.SECOND;

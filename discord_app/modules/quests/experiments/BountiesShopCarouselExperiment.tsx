@@ -1,6 +1,6 @@
 // discord_app/modules/quests/experiments/BountiesShopCarouselExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { BASE: 0, [0]: "BASE", POPULARITY: 1, [1]: "POPULARITY", RECENCY: 2, [2]: "RECENCY" };
 obj = { enabled: false, variation: obj.BASE };

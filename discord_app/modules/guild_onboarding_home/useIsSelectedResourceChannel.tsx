@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx
-import closure_3 from "handlePermissionsChange" /* 4970 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import closure_3 from "../../stores/ChannelSectionStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useCanSeeOnboardingHome } from "OnboardingHomeUtils.tsx";
 

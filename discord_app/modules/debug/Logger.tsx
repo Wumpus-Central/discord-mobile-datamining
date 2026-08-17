@@ -1,7 +1,7 @@
 // discord_app/modules/debug/Logger.tsx
-import set from "set" /* 2 */;
-import reportAll from "report" /* 7 */;
-import log from "log" /* 4 */;
+import set from "../../../_runtime/00002_set.js";
+import reportAll from "LogAggregator.tsx";
+import log from "../../../discord_common/js/packages/logger/Logger.tsx";
 
 let timestamp = Date.now();
 log.setLogFn((name) => {

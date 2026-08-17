@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/quests/native/QuestEmbedPreview.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFlag" /* 4031 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { MessageTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../records/MessageRecord.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import { MessageTypes } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/quests/native/QuestEmbedPreview.tsx");

@@ -1,14 +1,14 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 7150 */;
-import registerAssetDefault2 from "registerAsset" /* 7151 */;
-import registerAssetDefault3 from "registerAsset" /* 7152 */;
-import registerAssetDefault4 from "registerAsset" /* 7153 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../_runtime/07150_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/07151_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/07152_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/07153_registerAsset.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PremiumSubscriptionSKUs } from "../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 class GameIcon {
   constructor(arg0) {

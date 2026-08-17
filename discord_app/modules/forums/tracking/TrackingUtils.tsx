@@ -1,21 +1,21 @@
 // discord_app/modules/forums/tracking/TrackingUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import set2 from "set" /* 1400 */;
-import getForumChannelSessionIdDefault from "getForumChannelSessionId" /* 7518 */;
-import setFilterTagIdsDefault from "setFilterTagIds" /* 7519 */;
-import closure_3 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_4 from "storeThread" /* 4023 */;
-import closure_5 from "updateFromGuild" /* 7517 */;
-import closure_6 from "updateState" /* 7271 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "map" /* 4824 */;
-import closure_12 from "handleLoadThreadsSuccess" /* 7239 */;
-import { Permissions } from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
-import { ThreadSortOrderReadableForAnalytics as closure_15 } from "AbortCodes" /* 1235 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import set2 from "../../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import getForumChannelSessionIdDefault from "ForumSessionAnalyticsManager.tsx";
+import setFilterTagIdsDefault from "ForumChannelAnalyticsManager.tsx";
+import closure_3 from "../../threads/ActiveThreadsStore.tsx";
+import closure_4 from "../../threads/JoinedThreadsStore.tsx";
+import closure_5 from "../../threads/ThreadMembersStore.tsx";
+import closure_6 from "../../threads/ThreadMessageStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/DraftStore.tsx";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import closure_10 from "../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../stores/UploadAttachmentStore.tsx";
+import closure_12 from "../ForumPostMessagesStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
+import { ChannelFlags } from "../../channel/ChannelConstants.tsx";
+import { ThreadSortOrderReadableForAnalytics as closure_15 } from "../../threads/ThreadConstants.tsx";
 
 require = arg1;
 function collectForumAnalyticsMetadata(sessionId) {

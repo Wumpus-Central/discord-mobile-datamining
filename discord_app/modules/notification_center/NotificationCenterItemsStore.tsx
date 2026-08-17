@@ -1,14 +1,14 @@
 // discord_app/modules/notification_center/NotificationCenterItemsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
-import closure_3 from "getHash" /* 4288 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
-import closure_5 from "hasFlag" /* 4031 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import NotificationCenterScenes from "NotificationCenterItemsTypes.tsx";
+import closure_3 from "../experiments/ExperimentStore.tsx";
+import { isGuildEventEnded } from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import closure_5 from "../../records/MessageRecord.tsx";
+import closure_6 from "../../stores/RelationshipStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import { RelationshipTypes } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 
 require = arg1;

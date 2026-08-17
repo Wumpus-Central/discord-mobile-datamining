@@ -1,6 +1,6 @@
 // discord_common/js/packages/tokens/shims.native.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "native.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
 

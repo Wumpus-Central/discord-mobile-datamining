@@ -1,10 +1,10 @@
 // discord_app/modules/jank_stats/native/JankSessionManager.android.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import clientLaunchId from "clientLaunchId" /* 668 */;
-import initializeDefault from "initialize" /* 5038 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 16621 */;
-import closure_3 from "result" /* 5053 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import clientLaunchId from "../../../../discord_common/js/packages/analytics-utils/clientLaunchId.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import NativeJankSessionModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankSessionModule.tsx";
+import closure_3 from "../../../stores/AnalyticsTrackingStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c4, AppStates: c5 } = ME);

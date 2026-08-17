@@ -1,9 +1,9 @@
 // discord_app/modules/user/UserStoreUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import Environments2 from "Environments" /* 1929 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import Environments2 from "UserStoreConstants.tsx";
+import ME from "../../Constants.tsx";
 
 const Environments = Environments2.Environments;
 ({ PREMIUM_TYPE_NONE: c4, UserFlags: c5 } = ME);

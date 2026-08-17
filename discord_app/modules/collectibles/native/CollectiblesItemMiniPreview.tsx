@@ -1,18 +1,18 @@
 // discord_app/modules/collectibles/native/CollectiblesItemMiniPreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import preloadDefault from "preload" /* 5449 */;
-import StaticEffectDefault from "StaticEffect" /* 9210 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9218 */;
-import NameplateInnerDefault from "NameplateInner" /* 9221 */;
-import filterLayerDefault from "filterLayer" /* 9225 */;
-import metadataDefault from "metadata" /* 9226 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 5306 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getNameplateData from "../nameplates/utils.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import StaticEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import NameplateInnerDefault from "../nameplates/native/Nameplate.tsx";
+import filterLayerDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
+import metadataDefault from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "../records/AvatarDecorationRecord.tsx";
+import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "../profile_frames/native/ProfileFrameConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);

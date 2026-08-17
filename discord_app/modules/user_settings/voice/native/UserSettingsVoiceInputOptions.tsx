@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7172 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 12551 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import { InputModes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
+import VoiceSensitivityDefault from "../../../../components_native/common/VoiceSensitivity.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/MediaEngineStore.tsx";
+import { InputModes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handleInputModePress() {

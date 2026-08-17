@@ -1,14 +1,14 @@
 // discord_app/modules/quests/utils/VideoQuestUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
-import trackQuestEvent from "trackQuestEvent" /* 7470 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10477 */;
-import closure_2 from "handleConnectionInfoChange" /* 4564 */;
-import closure_3 from "initializeState" /* 7453 */;
-import closure_4 from "_toPropertyKey" /* 7455 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import getQuestDeliveryDataForPlacement from "QuestDataUtils.tsx";
+import trackQuestEvent from "../lib/analytics/AnalyticsActions.tsx";
+import getApplicationIdsByTaskTypes from "QuestTaskUtils.tsx";
+import _manuallyStartConsoleQuest from "../QuestActionCreators.tsx";
+import closure_2 from "../../../stores/NetworkStore.tsx";
+import closure_3 from "../QuestStore.tsx";
+import closure_4 from "../VideoQuestUIStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 const portrait = "portrait";

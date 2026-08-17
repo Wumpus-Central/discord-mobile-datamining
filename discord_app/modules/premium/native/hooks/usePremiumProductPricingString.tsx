@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/hooks/usePremiumProductPricingString.tsx
-import closure_2 from "updateProduct" /* 5319 */;
-import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1924 */;
+import closure_2 from "../../../../stores/native/IAPStore.android.tsx";
+import { PRICE_PLACEHOLDER } from "../../PremiumConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 import { SubscriptionPlans } from "../ProductIds.android.tsx";

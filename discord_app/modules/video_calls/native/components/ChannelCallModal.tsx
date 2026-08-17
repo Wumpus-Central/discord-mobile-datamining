@@ -1,17 +1,17 @@
 // discord_app/modules/video_calls/native/components/ChannelCallModal.tsx
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 8675 */;
-import useRevealProviderValue from "useRevealProviderValue" /* 8678 */;
-import CameraPreviewDefault from "CameraPreview" /* 8681 */;
-import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 12484 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
-import jsxProd from "jsxProd" /* 21 */;
+import coerceMainRoute from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import useIsConnectedToVoiceChannel from "../../../voice_chat/VoiceChatHooks.tsx";
+import useRevealProviderValue from "RevealProvider.tsx";
+import CameraPreviewDefault from "CameraPreview.tsx";
+import CallWithVoiceChatDefault from "ChannelCallNavigator.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import VoiceChatDrawerState from "../ChannelCallStore.tsx";
+import { VoiceChatDrawerState } from "../ChannelCallConstants.tsx";
+import PIP_GESTURE_ACTIVE_OFFSET from "Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class ChannelCallCameraPreview {

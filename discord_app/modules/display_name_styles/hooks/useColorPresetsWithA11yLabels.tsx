@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx
-import closure_3 from "noop" /* 19 */;
-import { getColorPresetsForEffect } from "items3" /* 1934 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { getColorPresetsForEffect } from "../DisplayNameStylesConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");

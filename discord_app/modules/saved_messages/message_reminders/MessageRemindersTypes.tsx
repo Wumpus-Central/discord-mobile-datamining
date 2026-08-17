@@ -1,7 +1,7 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersTypes.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import tDefault from "../../../../_runtime/03975_t.js";
 
 const items = [
   {

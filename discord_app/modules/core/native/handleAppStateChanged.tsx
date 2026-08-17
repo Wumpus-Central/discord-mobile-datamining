@@ -1,13 +1,13 @@
 // discord_app/modules/core/native/handleAppStateChanged.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import isTracingDefault from "isTracing" /* 10 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setSystemTheme from "setSystemTheme" /* 4222 */;
-import createRTCConnection from "createRTCConnection" /* 4539 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "getState" /* 7383 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import isTracingDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import setSystemTheme from "../../user_settings/ThemeActionCreators.tsx";
+import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import getDeviceMetadata from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/native/AppStateStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, AppStates: closure_6 } = ME);

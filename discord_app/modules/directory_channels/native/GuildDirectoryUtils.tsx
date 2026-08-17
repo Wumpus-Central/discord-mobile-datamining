@@ -1,7 +1,7 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryUtils.tsx
-import noopAll from "noop" /* 19 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function _onAddDirectoryGuildEntry() {

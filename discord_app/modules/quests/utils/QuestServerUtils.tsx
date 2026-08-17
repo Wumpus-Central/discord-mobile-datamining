@@ -1,8 +1,8 @@
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
-import t from "t" /* 4486 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
-import questFromServerV2 from "questFromServerV2" /* 7461 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import t from "../../../../_runtime/04486_t.js";
+import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
+import questFromServerV2 from "../types/v2/Quest.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function progressFromServer(progress) {

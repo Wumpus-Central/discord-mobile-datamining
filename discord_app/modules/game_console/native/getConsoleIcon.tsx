@@ -1,9 +1,9 @@
 // discord_app/modules/game_console/native/getConsoleIcon.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import registerAssetDefault from "registerAsset" /* 9839 */;
-import registerAssetDefault2 from "registerAsset" /* 9885 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import ParticipantTypes from "../../calls/CallConstants.tsx";
+import registerAssetDefault from "../../../../_runtime/09839_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/09885_registerAsset.js";
 
 const VoicePlatforms = ParticipantTypes.VoicePlatforms;
 const obj = { [XBOX]: registerAssetDefault, [PLAYSTATION]: registerAssetDefault2, [PLAYSTATION_STAGING]: registerAssetDefault2 };

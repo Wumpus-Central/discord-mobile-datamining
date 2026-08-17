@@ -1,6 +1,6 @@
 // discord_app/modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = importDefault;
 class GuildsRequiringDeletedIdsSync {

@@ -1,5 +1,5 @@
 // discord_app/modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx
-import closure_0 from "zustandStore" /* 13993 */;
+import closure_0 from "../../../../user_settings/UserSettingSearchStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
 

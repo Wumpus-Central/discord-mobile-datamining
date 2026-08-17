@@ -1,11 +1,11 @@
 // discord_common/js/packages/flux/Dispatcher.tsx
-import log from "log" /* 4 */;
-import _modDef38 from "module_38" /* 38 */;
-import loggerDefault from "logger" /* 593 */;
-import addAll from "add" /* 594 */;
-import logger2 from "logger" /* 651 */;
-import DepGraph from "DepGraph" /* 656 */;
-import set from "set" /* 2 */;
+import log from "../logger/Logger.tsx";
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import loggerDefault from "Emitter.tsx";
+import addAll from "LastFewActions.tsx";
+import logger2 from "LoggingUtils.tsx";
+import DepGraph from "../../../../_runtime/00656_DepGraph.js";
+import set from "../../../../_runtime/00002_set.js";
 import { mark } from "../../shared/utils/profiling.tsx";
 
 function setDisplayName(arg0, displayName) {

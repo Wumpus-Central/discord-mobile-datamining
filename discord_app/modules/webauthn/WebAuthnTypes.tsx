@@ -1,5 +1,5 @@
 // discord_app/modules/webauthn/WebAuthnTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const prototype = function IgnorableWebAuthnError() {
   return HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,14 +1,14 @@
 // discord_app/modules/activities/native/ActivitiesDebugOverlay.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import useThermalState from "useThermalState" /* 8763 */;
-import useThermalStateDefault from "useThermalState" /* 8763 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import useThermalState from "../../device/useThermalState.tsx";
+import useThermalStateDefault from "../../device/useThermalState.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
 
 require = arg1;
 noopAll;

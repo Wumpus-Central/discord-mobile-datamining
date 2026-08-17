@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/LocalPresenceStateManager.tsx
-import shouldCommitDefault from "shouldCommit" /* 13228 */;
-import rateLimitDefault from "rateLimit" /* 13229 */;
-import closure_2 from "filterPlayingActivities" /* 7250 */;
+import shouldCommitDefault from "../../lib/StateManager.tsx";
+import rateLimitDefault from "../../lib/rateLimit.tsx";
+import closure_2 from "../../stores/SelfPresenceStore.tsx";
 
 shouldCommitDefault;
 class LocalPresenceStateManager extends tmp2 {

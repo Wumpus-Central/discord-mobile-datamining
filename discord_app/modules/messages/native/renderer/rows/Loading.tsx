@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/rows/Loading.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Changeset from "Changeset" /* 8158 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Changeset from "../RowGeneratorConstants.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 ({ LoadingType: c0, RowType: closure_1, SeparatorAction: obj1 } = Changeset);
 let closure_3 = createCacheKey.createNativeStyleProperties({ loadButtonBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, loadButtonColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, loadingColor: ThemesDefault.colors.ICON_SUBTLE });

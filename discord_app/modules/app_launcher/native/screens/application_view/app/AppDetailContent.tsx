@@ -1,17 +1,17 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 11227 */;
-import CommandRowIconDefault from "CommandRowIcon" /* 11282 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 5246 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import TableRowInner from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import usePlaceholderWidth from "../../../hooks/usePlaceholderSize.tsx";
+import CommandRowIconDefault from "../../../base_components/CommandRowButton.tsx";
+import closure_4 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import getIndexKey from "../../../../../application_commands/ApplicationCommandIndexStore.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../../AppLauncherNativeConstants.tsx";
+import { AnalyticEvents } from "../../../../../../Constants.tsx";
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "../../../../../application_commands/ApplicationCommandConstants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PlaceholderCommandRow(isFirstRow) {

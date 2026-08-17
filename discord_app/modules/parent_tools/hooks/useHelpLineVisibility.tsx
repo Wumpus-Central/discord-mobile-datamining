@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/hooks/useHelpLineVisibility.tsx
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
-import set from "set" /* 2 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import closure_5 from "../FamilyCenterStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set(["US"]);

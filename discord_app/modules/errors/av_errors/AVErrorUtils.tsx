@@ -1,7 +1,7 @@
 // discord_app/modules/errors/av_errors/AVErrorUtils.tsx
-import setDefault from "set" /* 687 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 12450 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4557 */;
+import setDefault from "../../../utils/Durations.tsx";
+import isIncomingVideoEnabled from "../../../lib/WindowVisibilityVideoManager.tsx";
+import closure_2 from "../../media_engine/MediaEngineStatsStore.tsx";
 
 require = arg1;
 let closure_3 = 10 * setDefault.Millis.SECOND;

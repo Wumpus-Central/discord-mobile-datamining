@@ -1,6 +1,6 @@
 // discord_app/modules/discord_md5/DiscordMd5.tsx
-import _modDef4859 from "module_4859" /* 4859 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import _modDef4859 from "../../../_runtime/metro/04859__.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let prototype;
 prototype = function DiscordMd5() {

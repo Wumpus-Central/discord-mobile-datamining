@@ -1,23 +1,23 @@
 // discord_app/stores/ApplicationStreamingStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 4654 */;
-import canStreamInChannel from "canStreamInChannel" /* 7478 */;
-import canSpectateDefault from "canSpectate" /* 13074 */;
-import closure_8 from "set" /* 4540 */;
-import closure_9 from "initialize" /* 4504 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_15 from "createRTCConnection" /* 4539 */;
-import closure_16 from "handleConnectionOpen" /* 1979 */;
-import closure_17 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
-import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
+import canStreamInChannel from "../modules/go_live/utils/StreamPermissionUtils.tsx";
+import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
+import closure_8 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_9 from "../modules/game_detection/RunningGameStore.native.tsx";
+import closure_10 from "AuthenticationStore.tsx";
+import closure_11 from "ChannelStore.tsx";
+import closure_12 from "GuildStore.tsx";
+import closure_13 from "MediaEngineStore.tsx";
+import closure_14 from "PermissionStore.tsx";
+import closure_15 from "RTCConnectionStore.tsx";
+import closure_16 from "SelectedChannelStore.tsx";
+import closure_17 from "VoiceStateStore.tsx";
+import ME from "../Constants.tsx";
+import { StreamTypes } from "../modules/go_live/Constants.tsx";
 
 require = arg1;
 function reset() {

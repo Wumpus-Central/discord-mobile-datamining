@@ -1,7 +1,7 @@
 // discord_app/intl/migration.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _mod1274 from "module_1274" /* 1274 */;
+import set from "../../_runtime/00002_set.js";
+import getSystemLocale from "index.native.tsx";
+import _mod1274 from "../../_runtime/metro/01274__.js";
 
 const result = set.fileFinishedImporting("intl/migration.tsx");
 

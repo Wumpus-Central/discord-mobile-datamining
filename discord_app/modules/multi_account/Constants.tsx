@@ -1,5 +1,5 @@
 // discord_app/modules/multi_account/Constants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/multi_account/Constants.tsx");
 

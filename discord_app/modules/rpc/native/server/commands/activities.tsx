@@ -1,11 +1,11 @@
 // discord_app/modules/rpc/native/server/commands/activities.tsx
-import prototypeDefault from "prototype" /* 8752 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 8918 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 13849 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import prototypeDefault from "../../../RPCError.tsx";
+import showInstantInviteActionSheet from "../../../../instant_invite/native/InstantInviteUtils.tsx";
+import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import RPC_SCOPE_CONFIG from "../../../Constants.tsx";
+import ME from "../../../../../Constants.tsx";
+import { NativePermissionTypes } from "../../../../native_permissions/NativePermissionConstants.tsx";
 
 require = arg1;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);

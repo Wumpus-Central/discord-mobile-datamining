@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/CallSystemMessage.tsx
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
-import useIsCallActive from "useIsCallActive" /* 8204 */;
-import closure_3 from "getParticipants" /* 4773 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import { ME } from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
+import useIsCallActive from "../../../../calls/mobile/useIsCallActive.tsx";
+import closure_3 from "../../../../calls/ChannelRTCStore.tsx";
+import closure_4 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../../stores/VoiceStateStore.tsx";
+import { ME } from "../../../../../Constants.tsx";
+import { ParticipantTypes } from "../../../../calls/CallConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");

@@ -1,10 +1,10 @@
 // discord_app/modules/application_commands/ApplicationCommandValidationUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import getString from "getString" /* 10256 */;
-import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 11334 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
+import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
+import getString from "ApplicationCommandOptionUtils.tsx";
+import validateNumericOptionRangeDefault from "ApplicationCommandValidators.tsx";
 
 function validateOptionContent(allowEmptyValues) {
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);

@@ -1,6 +1,6 @@
 // discord_app/modules/directory_channels/GuildDirectorySearchStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 const require = arg1;
 let closure_2 = [];

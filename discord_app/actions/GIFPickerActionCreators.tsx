@@ -1,16 +1,16 @@
 // discord_app/actions/GIFPickerActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import shouldRefreshAttachmentUrl from "shouldRefreshAttachmentUrl" /* 9085 */;
-import GIF_PROVIDER from "GIF_PROVIDER" /* 10196 */;
-import isKlipyProvider from "isKlipyProvider" /* 10197 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "getFormatFromUrl" /* 10194 */;
-import ME from "ME" /* 676 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import importDefaultResult from "apply" /* 12 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import shouldRefreshAttachmentUrl from "../modules/messages/SignedAttachmentLinkUtils.tsx";
+import GIF_PROVIDER from "../modules/gif_picker/GifProvider.tsx";
+import isKlipyProvider from "../utils/GIFPickerUtils.tsx";
+import closure_3 from "../modules/user_settings/LocaleStore.tsx";
+import closure_4 from "../stores/views/GIFPickerViewStore.tsx";
+import ME from "../Constants.tsx";
+import MAX_FAVORITES from "../modules/user_settings/UserSettingsConstants.tsx";
+import importDefaultResult from "../../_runtime/00012_apply.js";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { GIF_PROVIDER } from "../modules/gif_picker/GifProvider.tsx";
 import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";

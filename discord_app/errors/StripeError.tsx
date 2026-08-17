@@ -1,5 +1,5 @@
 // discord_app/errors/StripeError.tsx
-import setDefault from "set" /* 4061 */;
+import setDefault from "BillingError.tsx";
 
 setDefault;
 const prototype = function StripeError(error) {

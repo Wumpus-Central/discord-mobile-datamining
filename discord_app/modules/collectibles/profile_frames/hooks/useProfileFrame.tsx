@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useProfileFrame.tsx
-import closure_2 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_3 from "map" /* 5324 */;
-import { isProfileFrameRecord } from "fromServer" /* 5308 */;
+import closure_2 from "../../CollectiblesCategoryStore.tsx";
+import closure_3 from "../../CollectiblesPurchaseStore.tsx";
+import { isProfileFrameRecord } from "../../records/ProfileFrameRecord.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

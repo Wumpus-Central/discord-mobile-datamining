@@ -1,9 +1,9 @@
 // discord_app/modules/local_message_caching/LocalMessageCacheStatsManager.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import recordChannelFetchStartDefault from "recordChannelFetchStart" /* 5082 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import recordChannelFetchStartDefault from "MessageCacheStats.tsx";
+import ME from "../../Constants.tsx";
 
 function makeLogLine(channelId) {
   const items = [channelId.channelId, , , ];

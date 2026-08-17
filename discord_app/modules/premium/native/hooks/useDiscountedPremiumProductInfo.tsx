@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateProduct" /* 5319 */;
-import { CurrencyCodes } from "sum" /* 505 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/native/IAPStore.android.tsx";
+import { CurrencyCodes } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

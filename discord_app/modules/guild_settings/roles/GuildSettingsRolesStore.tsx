@@ -1,20 +1,20 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesStore.tsx
-import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 11588 */;
-import MAX_SUBCATEGORIES from "MAX_SUBCATEGORIES" /* 16826 */;
-import closure_8 from "map" /* 16832 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_11 from "handleFormInit" /* 8875 */;
-import ME from "ME" /* 676 */;
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import isValueEqual from "../../../lib/PlainRecord.tsx";
+import GuildRoleRecordTypeTag from "../../../records/GuildRoleRecord.tsx";
+import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
+import calculatePositionDeltasDefault from "../../../utils/DragAndDropUtils.tsx";
+import MAX_SUBCATEGORIES from "../GuildSettingsConstants.tsx";
+import closure_8 from "../../connections/GuildRoleConnectionsConfigurationStore.tsx";
+import closure_10 from "../../../stores/GuildRoleStore.tsx";
+import closure_11 from "../GuildSettingsStore.tsx";
+import ME from "../../../Constants.tsx";
+import HOLOGRAPHIC_ROLE_COLORS from "../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 function handleSetSection(arg0) {
   if (null == closure_4) {

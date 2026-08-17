@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 9288 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");

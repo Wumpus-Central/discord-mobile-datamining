@@ -1,9 +1,9 @@
 // discord_app/design/components/Sheet/native/ActionSheet.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Background from "Background" /* 6950 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Background from "BottomSheet.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { content: null, body: null };

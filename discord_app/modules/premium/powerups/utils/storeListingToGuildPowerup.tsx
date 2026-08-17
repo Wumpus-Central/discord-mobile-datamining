@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/utils/storeListingToGuildPowerup.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 1925 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../../../_runtime/00002_set.js";
+import set2 from "../../../emojis/EmojiConstants.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
 
 ({ DEFAULT_SOUND_SLOTS: c0, DEFAULT_STICKER_SLOTS: closure_1 } = GuildFeatures);
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;

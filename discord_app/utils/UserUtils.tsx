@@ -1,9 +1,9 @@
 // discord_app/utils/UserUtils.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "initialize" /* 4220 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import initialize from "../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import closure_2 from "../stores/StreamerModeStore.tsx";
+import closure_3 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

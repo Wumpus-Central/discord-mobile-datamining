@@ -1,5 +1,5 @@
 // discord_common/js/shared/lib/RPCError.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const prototype = function RPCError(arg0, message) {
   const tmp = new prototype(message, new.target, new.target, arg0);

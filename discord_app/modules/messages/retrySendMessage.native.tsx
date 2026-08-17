@@ -1,7 +1,7 @@
 // discord_app/modules/messages/retrySendMessage.native.tsx
-import set from "set" /* 2 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
+import set from "../../../_runtime/00002_set.js";
+import MESSAGE_GROUP_SPACING from "MessageConstants.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import { _executeCommand } from "../application_commands/executeCommand.tsx";
 
 const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;

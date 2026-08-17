@@ -1,9 +1,9 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellActionCreators.tsx
-import set from "set" /* 2 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+import set from "../../../../_runtime/00002_set.js";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 
 const PASSKEY_UPSELL_KEY = "PASSKEY_UPSELL_KEY";
 let result = set.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellActionCreators.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/RelationshipStore.tsx";
+import { SafetyWarningTypes } from "../../../ChannelSafetyWarningsStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 class InappropriateConversationWarningBanner {

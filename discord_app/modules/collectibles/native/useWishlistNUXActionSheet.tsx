@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/useWishlistNUXActionSheet.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

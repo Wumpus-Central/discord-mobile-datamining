@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/ApplicationIconAndName.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((width) => {

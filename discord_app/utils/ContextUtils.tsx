@@ -1,6 +1,6 @@
 // discord_app/utils/ContextUtils.tsx
-import closure_0 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_0 from "../../_runtime/00019_noop.js";
+import { jsx } from "../../_runtime/react/00021_jsxProd.js";
 
 const result = require("set").fileFinishedImporting("utils/ContextUtils.tsx");
 

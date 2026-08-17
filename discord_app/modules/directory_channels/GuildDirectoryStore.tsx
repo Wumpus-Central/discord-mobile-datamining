@@ -1,9 +1,9 @@
 // discord_app/modules/directory_channels/GuildDirectoryStore.tsx
-import set2 from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import guildDirectoryEntryFromServer from "guildDirectoryEntryFromServer" /* 11471 */;
-import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
+import set2 from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import guildDirectoryEntryFromServer from "GuildDirectoryUtils.tsx";
+import DirectoryEntryTypes from "GuildDirectoryConstants.tsx";
 
 const DirectoryEntryCategories = DirectoryEntryTypes.DirectoryEntryCategories;
 let closure_3 = Object.freeze({});

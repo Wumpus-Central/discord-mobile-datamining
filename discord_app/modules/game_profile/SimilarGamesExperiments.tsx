@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/SimilarGamesExperiments.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const obj = { enabled: false, dense: false };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-06-similar-games-desktop", defaultConfig: obj, variations: { 0: obj, 1: { enabled: true, dense: true }, 2: { enabled: true, dense: false } } });

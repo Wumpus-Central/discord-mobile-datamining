@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/useGuildMemberDisplayRole.tsx
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

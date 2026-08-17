@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/useCurrentUserStageRoles.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "StageChannelRoleStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");

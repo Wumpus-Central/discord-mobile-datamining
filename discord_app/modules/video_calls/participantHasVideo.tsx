@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/participantHasVideo.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import { Features } from "DesktopSources" /* 4529 */;
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import ParticipantTypes from "../calls/CallConstants.tsx";
+import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

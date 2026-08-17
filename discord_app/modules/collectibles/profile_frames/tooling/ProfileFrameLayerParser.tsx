@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx
-import ProfileFrameLayerType from "ProfileFrameLayerType" /* 8952 */;
-import closure_2 from "_toArray" /* 853 */;
-import set from "set" /* 2 */;
+import ProfileFrameLayerType from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
+import closure_2 from "../../../../../_runtime/00853__toArray.js";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 const preview = "preview";

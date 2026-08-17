@@ -1,9 +1,9 @@
 // discord_app/modules/launchpad/native/shared/renderChannelWrapper.tsx
-import noopAll from "noop" /* 19 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 16199 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
 let closure_4 = getLayoutStyleDefault();

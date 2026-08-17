@@ -1,6 +1,6 @@
 // discord_app/modules/channel/getFlattedChannelList.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 
 const result = set.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 

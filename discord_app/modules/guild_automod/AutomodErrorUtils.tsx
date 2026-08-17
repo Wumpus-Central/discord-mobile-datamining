@@ -1,8 +1,8 @@
 // discord_app/modules/guild_automod/AutomodErrorUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import { AbortCodes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import { AbortCodes } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {

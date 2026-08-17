@@ -1,17 +1,17 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuild.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_6 from "handleConnectionOpen" /* 4826 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
-import closure_10 from "insertUnsortedGuilds" /* 5078 */;
-import { useItemDragState } from "withEqualityFn" /* 15547 */;
-import { TRANSITION_PHYSICS } from "GUILD_ITEM_SIZE" /* 15548 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
+import closure_6 from "../../../stores/GuildAvailabilityStore.tsx";
+import closure_7 from "../../../stores/GuildReadStateStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import closure_9 from "../../../stores/SelectedGuildStore.tsx";
+import closure_10 from "../../../stores/SortedGuildStore.tsx";
+import { useItemDragState } from "GuildsBarDnDStore.tsx";
+import { TRANSITION_PHYSICS } from "GuildsBarConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,11 +1,11 @@
 // discord_app/modules/feedback/FeedbackUtils.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2565 */;
-import FeedbackRating from "FeedbackRating" /* 10811 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "intl/Feedback.messages.js";
+import FeedbackRating from "Constants.tsx";
 
 ({ ConnectionFeedbackOption: c3, AudioFeedbackOption: c4, VideoFeedbackOption: c5, VideoBackgroundFeedbackOption: closure_6, StreamFeedbackOption: error, FeedbackOptionVariant: closure_8, FeedbackType: c9, MAX_REPRESENTABLE_DATE: c10, PeopleFeedbackOption: unpackModuleId } = FeedbackRating);
 const AnalyticEvents = ME.AnalyticEvents;

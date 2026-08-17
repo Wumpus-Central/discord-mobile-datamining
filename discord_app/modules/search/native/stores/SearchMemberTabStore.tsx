@@ -1,10 +1,10 @@
 // discord_app/modules/search/native/stores/SearchMemberTabStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 6777 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 7593 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { Permissions } from "ME" /* 676 */;
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import getGuildNameSuggestionDefault from "../../../../utils/GuildUtils.tsx";
+import sortByMatchScoreDefault from "../../../autocompleter/index.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import { Permissions } from "../../../../Constants.tsx";
 
 const require = arg1;
 let closure_6 = [];

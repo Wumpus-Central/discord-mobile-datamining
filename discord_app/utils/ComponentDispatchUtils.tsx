@@ -1,9 +1,9 @@
 // discord_app/utils/ComponentDispatchUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import ME from "ME" /* 676 */;
-import logFluxActionAll from "logFluxAction" /* 1232 */;
-import safeDispatch from "safeDispatch" /* 1233 */;
+import set from "../../_runtime/00002_set.js";
+import timestampDefault from "../modules/debug/Logger.tsx";
+import ME from "../Constants.tsx";
+import logFluxActionAll from "../../discord_common/js/shared/DevtoolsExtension.tsx";
+import safeDispatch from "../../discord_common/js/shared/utils/ComponentDispatchUtils.tsx";
 
 const ComponentActionsKeyed = ME.ComponentActionsKeyed;
 let closure_3 = new timestampDefault("ComponentDispatchUtils");

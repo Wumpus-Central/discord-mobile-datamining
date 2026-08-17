@@ -1,13 +1,13 @@
 // discord_app/modules/forums/native/ForumGuidelinesActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { FORUM_GUIDELINES_ACTION_SHEET as closure_6 } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { FORUM_GUIDELINES_ACTION_SHEET as closure_6 } from "../ForumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);

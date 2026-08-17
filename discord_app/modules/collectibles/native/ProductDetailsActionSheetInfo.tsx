@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import Text from "Text" /* 4734 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 9243 */;
-import getBundleDescription from "getBundleDescription" /* 9579 */;
-import PriceTagDefault from "PriceTag" /* 9580 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
+import getProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
+import getBundleDescription from "../hooks/useProductDescription.tsx";
+import PriceTagDefault from "InlinePriceTag.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 function ProductNameAndDescription(product) {
   product = product.product;

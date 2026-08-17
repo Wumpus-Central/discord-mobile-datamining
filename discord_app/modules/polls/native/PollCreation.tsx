@@ -1,17 +1,17 @@
 // discord_app/modules/polls/native/PollCreation.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import Text from "Text" /* 4734 */;
-import TextInput from "TextInput" /* 8071 */;
-import registerAssetDefault from "registerAsset" /* 11374 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import TextInput from "../../../design/components/TextInput/native/TextInput.native.tsx";
+import registerAssetDefault from "../../../../_runtime/11374_registerAsset.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import POLL_ATTACHMENT_FOLDER from "../PollsConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function UnsavedChangesAlertModal(onConfirm) {

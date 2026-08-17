@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");

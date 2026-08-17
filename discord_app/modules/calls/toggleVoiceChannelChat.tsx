@@ -1,8 +1,8 @@
 // discord_app/modules/calls/toggleVoiceChannelChat.tsx
-import _modDef8666 from "module_8666" /* 8666 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "getParticipants" /* 4773 */;
+import _modDef8666 from "../../actions/ChannelRTCActionCreators.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "ChannelRTCStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 

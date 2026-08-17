@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/useHasVideoPermission.tsx
-import canStreamInChannel from "canStreamInChannel" /* 7478 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import canStreamInChannel from "../go_live/utils/StreamPermissionUtils.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

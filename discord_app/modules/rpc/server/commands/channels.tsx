@@ -1,20 +1,20 @@
 // discord_app/modules/rpc/server/commands/channels.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4277 */;
-import set2 from "set" /* 4375 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 13838 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import RPC_SCOPE_CONFIG2 from "../../Constants.tsx";
+import set2 from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import generateAcceptInviteOptionsDefault from "../../../../actions/InstantInviteActionCreators.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import getCurrentEmbeddedActivityChannelDefault from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import createChannelRecord from "../../../../records/ChannelRecord.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../../../stores/VoiceStateStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 ({ isVoiceChannel: c3, isTextChannel: c4 } = createChannelRecord);
 const RPC_SCOPE_CONFIG = RPC_SCOPE_CONFIG2.RPC_SCOPE_CONFIG;

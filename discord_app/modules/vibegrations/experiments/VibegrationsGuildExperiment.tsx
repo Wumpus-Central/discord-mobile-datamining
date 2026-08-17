@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const EMPTY_STRING_SNOWFLAKE_ID = ME.EMPTY_STRING_SNOWFLAKE_ID;
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

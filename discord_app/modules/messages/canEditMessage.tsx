@@ -1,8 +1,8 @@
 // discord_app/modules/messages/canEditMessage.tsx
-import set from "set" /* 2 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import createMinimalMessageRecord from "MessageRecordUtils.tsx";
+import isSystemMessageDefault from "isSystemMessage.tsx";
+import ME from "../../Constants.tsx";
 
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
 let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");

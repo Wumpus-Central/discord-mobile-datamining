@@ -1,7 +1,7 @@
 // discord_app/modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_3 from "handleChange" /* 5280 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../guild_sidebar/ChannelListVoiceCategoryStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const memoResult = importAllResult.memo((guildId) => {

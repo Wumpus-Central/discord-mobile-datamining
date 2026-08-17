@@ -1,13 +1,13 @@
 // discord_app/modules/safety_hub/native/AppealIngestionSpeedBump.tsx
-import noopAll from "noop" /* 19 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11084 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11085 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary.tsx";
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../SafetyHubStore.tsx";
+import SafetyHubView from "../SafetyHubConstants.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useEmitAppealIngestionEvent } from "../hooks/useEmitAppealIngestionEvent.tsx";

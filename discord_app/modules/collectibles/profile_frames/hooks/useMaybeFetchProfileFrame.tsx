@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8946 */;
-import useProfileFrameDefault from "useProfileFrame" /* 8957 */;
-import closure_3 from "noop" /* 19 */;
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame.native.tsx";
+import useProfileFrameDefault from "useProfileFrame.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { apexExperiment } from "../../experiments/CollectiblesProfileFramesExperiment.tsx";
 
 const require = arg1;

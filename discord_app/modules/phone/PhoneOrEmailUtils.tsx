@@ -1,5 +1,5 @@
 // discord_app/modules/phone/PhoneOrEmailUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { PHONE: "phone", EMAIL: "email" };
 const re1 = /^[-() \d]+$/;

@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/profile_effects/useProfileEffect.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_4 from "map" /* 5324 */;
-import { isProfileEffectRecord } from "fromServer" /* 5307 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../CollectiblesCategoryStore.tsx";
+import closure_4 from "../CollectiblesPurchaseStore.tsx";
+import { isProfileEffectRecord } from "../records/ProfileEffectRecord.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

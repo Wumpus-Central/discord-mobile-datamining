@@ -1,17 +1,17 @@
 // discord_app/modules/report_to_mod/ReportToModUtils.tsx
-import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 5005 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 5291 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 5292 */;
-import getContextForPermission from "getContextForPermission" /* 7231 */;
-import canReportUser from "canReportUser" /* 7267 */;
-import closure_4 from "handleLoadThreadsSuccess" /* 7239 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { ReportToModPermissions } from "ReportToModPermissions" /* 7266 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled.tsx";
+import getContextForPermission from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
+import canReportUser from "../../utils/ReportUtils.tsx";
+import closure_4 from "../forums/ForumPostMessagesStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/MessageStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import { ReportToModPermissions } from "ReportToModConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");

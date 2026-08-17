@@ -1,15 +1,15 @@
 // discord_app/modules/guild_settings/native/AssetChooser.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 16753 */;
-import registerAssetDefault2 from "registerAsset" /* 16754 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../_runtime/16753_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16754_registerAsset.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UPLOAD_MEDIUM_SIZE } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ View: c4, Image: c5, ImageBackground: closure_6, TouchableWithoutFeedback: error } = get_ActivityIndicator);

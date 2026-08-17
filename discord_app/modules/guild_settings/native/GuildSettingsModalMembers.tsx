@@ -1,19 +1,19 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMembers.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "handleInviteData" /* 4295 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "handleFormInit" /* 8875 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/GuildMemberCountStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/GuildRoleStore.tsx";
+import closure_10 from "../../../stores/GuildStore.tsx";
+import closure_11 from "../../../stores/PermissionStore.tsx";
+import closure_12 from "../../../stores/UserStore.tsx";
+import closure_13 from "../GuildSettingsStore.tsx";
+import { GuildSettingsSections } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

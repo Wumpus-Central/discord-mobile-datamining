@@ -1,16 +1,16 @@
 // discord_app/modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 5437 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11066 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 11081 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11090 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import parseMessageEmbedForProps from "../SafetyHubUtils.tsx";
+import useSafetyHubClassifications from "../hooks/useSafetyHubClassifications.tsx";
+import AppealIngestionModal from "AppealIngestionModal.tsx";
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../SafetyHubStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

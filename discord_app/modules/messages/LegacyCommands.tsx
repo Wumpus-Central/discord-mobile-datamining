@@ -1,15 +1,15 @@
 // discord_app/modules/messages/LegacyCommands.tsx
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import checkReactionResponse from "checkReactionResponse" /* 7511 */;
-import _modDef8461 from "module_8461" /* 8461 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "t" /* 4092 */;
+import MAX_REACTIONS from "../reactions/ReactionUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import checkReactionResponse from "../reactions/ReactionActionCreators.tsx";
+import _modDef8461 from "../../actions/ChangeNicknameActionCreators.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../emojis/EmojiStore.tsx";
+import closure_5 from "../../stores/MessageStore.tsx";
+import ME from "../../Constants.tsx";
+import importDefaultResult from "../../../_runtime/04092_t.js";
 
 require = arg1;
 ({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: closure_8 } = ME);

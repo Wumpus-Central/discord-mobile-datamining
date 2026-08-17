@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/HighlightNotificationsSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import closure_2 from "../../../../stores/GuildStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { Row } from "../../notifications/native/UserSettingsHighlightNotifications.tsx";
 
 require = arg1;

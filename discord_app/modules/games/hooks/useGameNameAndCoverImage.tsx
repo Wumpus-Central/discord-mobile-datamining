@@ -1,6 +1,6 @@
 // discord_app/modules/games/hooks/useGameNameAndCoverImage.tsx
-import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
+import set from "../../../../_runtime/00002_set.js";
+import importDefaultResult1 from "useGame.tsx";
 
 const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 

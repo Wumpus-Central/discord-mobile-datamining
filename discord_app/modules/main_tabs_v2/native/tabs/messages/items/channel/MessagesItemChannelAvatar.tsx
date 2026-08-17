@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "handleTypingStart" /* 11152 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import FacepileGroupDMAvatarDefault from "../../../../../../group_dm/native/GroupDMAvatar.tsx";
+import closure_3 from "../../../../../../a11y/AccessibilityStore.tsx";
+import closure_4 from "../../../../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../../../../../stores/TypingStore.tsx";
+import closure_7 from "../../../../../../../stores/UserStore.tsx";
+import { MUTED_OPACITY_CONTENT } from "../../../../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_10 = createCacheKey.createStyles((arg0) => {

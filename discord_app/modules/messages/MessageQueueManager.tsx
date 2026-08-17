@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageQueueManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import itemsDefault from "items" /* 5040 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import itemsDefault from "../../lib/MessageQueue.tsx";
 
 initializeDefault;
 class MessageQueueManager extends tmp2 {

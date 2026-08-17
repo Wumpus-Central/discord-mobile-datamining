@@ -1,11 +1,11 @@
 // discord_app/modules/virtual_currency/native/BalanceCounter.tsx
-import context from "context" /* 1356 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import closure_8 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import context from "../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
+import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_8 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ useState: c4, useEffect: c5, useRef: closure_6, useCallback: error } = noop);

@@ -1,10 +1,10 @@
 // discord_app/design/components/Input/native/useInputAttachments.native.tsx
-import Text from "Text" /* 4734 */;
-import ICON_SIZE from "ICON_SIZE" /* 7187 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import Text from "../../Text/native/Text.tsx";
+import ICON_SIZE from "../../Icon/IconSize.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class InputAttachmentContainer {

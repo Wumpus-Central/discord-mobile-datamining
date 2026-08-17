@@ -1,13 +1,13 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import PremiumTypes from "PremiumTypes" /* 7933 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 8021 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ACTION_SHEET_HEIGHT_HALF from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import PremiumTypes from "../hooks/useBuyNitroPlanSelection.tsx";
+import BuyNitroPurchaseButtonDefault from "purchase_button/BuyNitroPurchaseButton.tsx";
+import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

@@ -1,17 +1,17 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import BoostGemIcon from "BoostGemIcon" /* 7979 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 11736 */;
-import importDefaultResult1Default from "importDefaultResult1" /* 11737 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import ME from "ME" /* 676 */;
-import { TIER_CARDS } from "BoostedGuildTiers" /* 11735 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
+import useGuildPowerupOnShowMoreDefault from "hooks/useGuildPowerupOnShowMore.tsx";
+import importDefaultResult1Default from "GuildPowerupsCard.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { TIER_CARDS } from "../../../guild_boosting/GuildBoostingMarketingConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildLevelPowerupHeader(arg0) {

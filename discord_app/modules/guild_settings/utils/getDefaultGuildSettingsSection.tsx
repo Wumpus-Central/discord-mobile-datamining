@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings/utils/getDefaultGuildSettingsSection.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
 
 const GuildSettingsSections = ME.GuildSettingsSections;
 const result = set.fileFinishedImporting("modules/guild_settings/utils/getDefaultGuildSettingsSection.tsx");

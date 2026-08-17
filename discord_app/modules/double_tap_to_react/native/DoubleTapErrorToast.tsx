@@ -1,12 +1,12 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapErrorToast.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 8196 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { EmojiDisabledReasons } from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import XSmallBoldIcon from "../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EmojiDisabledReasons } from "../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DoubleTapErrorToastIcon() {

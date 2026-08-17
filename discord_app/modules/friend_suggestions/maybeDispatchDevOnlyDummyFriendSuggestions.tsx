@@ -1,5 +1,5 @@
 // discord_app/modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx
-import closure_0 from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "../../stores/UserStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
 

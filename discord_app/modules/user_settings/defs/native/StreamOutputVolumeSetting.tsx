@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import apexExperimentDefault from "apexExperiment" /* 12136 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import createToggle from "createToggle" /* 10669 */;
+import _modDef38 from "../../../../../_runtime/metro/00038__.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import BaseConnectionEvent from "../../../../../discord_common/js/packages/media-engine/index.tsx";
+import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
+import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/MediaEngineStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

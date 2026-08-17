@@ -1,11 +1,11 @@
 // discord_app/modules/launchpad/native/shared/SimpleGuildContainer.tsx
-import MaskedBadgeDefault from "MaskedBadge" /* 8497 */;
-import getMediaIcon from "getMediaIcon" /* 15596 */;
-import getMediaIconDefault from "getMediaIcon" /* 15596 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import MaskedBadgeDefault from "../../../main_tabs_v2/native/shared_components/MaskedBadge.tsx";
+import getMediaIcon from "../../../guilds_bar/native/GuildsBarActivityIndicator.tsx";
+import getMediaIconDefault from "../../../guilds_bar/native/GuildsBarActivityIndicator.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

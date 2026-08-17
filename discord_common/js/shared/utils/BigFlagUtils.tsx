@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/BigFlagUtils.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import tmp6Result from "module_0" /* 0 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import tmp6Result from "../../../../discord_app/index.native.tsx";
 
 let HighLow;
 class HighLow {

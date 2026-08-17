@@ -1,14 +1,14 @@
 // discord_app/modules/app_icons/native/AppIconRows.tsx
-import initialize from "initialize" /* 589 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7945 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { createElement } from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import isPremiumAtLeast from "../../../utils/PremiumTypeUtils.tsx";
+import fetchCurrentAppIcon from "AppIconUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/UserStore.tsx";
+import { createElement } from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BackwardsCompatibleAppIconRows(arg0) {

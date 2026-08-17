@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/useEventSchedule.tsx
-import getRRule from "getRRule" /* 8785 */;
-import useEventException from "useEventException" /* 8790 */;
-import useEventExceptionDefault from "useEventException" /* 8790 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
+import getRRule from "utils/ScheduleUtils.tsx";
+import useEventException from "useEventException.tsx";
+import useEventExceptionDefault from "useEventException.tsx";
+import closure_3 from "GuildScheduledEventStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

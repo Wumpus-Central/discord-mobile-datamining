@@ -1,18 +1,18 @@
 // discord_app/actions/ChannelActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import transitionToChannel from "transitionToChannel" /* 4768 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8779 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 4771 */;
-import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import transitionTo from "../modules/routing/router_utils.tsx";
+import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import transitionToChannel from "../modules/routing/transitionToChannel.tsx";
+import _modDef4975 from "SelectedChannelActionCreators.tsx";
+import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../modules/changelog/ChangelogStore.tsx";
+import { createChannelRecordFromServer as closure_6 } from "../records/ChannelRecord.tsx";
+import closure_7 from "../stores/ChannelStore.tsx";
+import closure_8 from "../stores/ReadStateStore.tsx";
+import ME from "../Constants.tsx";
 import { _httpGetWithCountryCodeQuery } from "../utils/StoreUtils.tsx";
 
 require = arg1;

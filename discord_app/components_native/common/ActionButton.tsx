@@ -1,9 +1,9 @@
 // discord_app/components_native/common/ActionButton.tsx
-import noopAll from "noop" /* 19 */;
-import styleProperties from "styleProperties" /* 4750 */;
-import IconButton from "IconButton" /* 8035 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import styleProperties from "../../design/components/Button/native/ButtonHooks.native.tsx";
+import IconButton from "../../design/components/Button/native/IconButton.native.tsx";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

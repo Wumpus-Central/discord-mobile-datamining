@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileApplicationWidgetTypes.tsx
-import set from "set" /* 2 */;
-import WidgetType from "WidgetType" /* 5366 */;
+import set from "../../../_runtime/00002_set.js";
+import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 
 let ApplicationWidget;
 class ApplicationWidget {

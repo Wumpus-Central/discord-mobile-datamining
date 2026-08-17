@@ -1,12 +1,12 @@
 // discord_app/modules/multi_account/MultiAccountActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleLogoutDefault from "handleLogout" /* 5256 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "initialize" /* 11585 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import handleLogoutDefault from "../../actions/AuthenticationActionCreators.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "MultiAccountStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 ({ AnalyticEvents: error, Endpoints: closure_8 } = ME);

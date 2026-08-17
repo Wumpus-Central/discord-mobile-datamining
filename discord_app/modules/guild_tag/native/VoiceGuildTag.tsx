@@ -1,12 +1,12 @@
 // discord_app/modules/guild_tag/native/VoiceGuildTag.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { GuildTagBadgeSize } from "items" /* 8168 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { GuildTagBadgeSize } from "../GuildTagConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

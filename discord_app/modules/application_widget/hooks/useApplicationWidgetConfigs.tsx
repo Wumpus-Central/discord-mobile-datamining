@@ -1,7 +1,7 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetConfigs.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateApplicationConfigs" /* 12288 */;
-import { FetchState } from "updateApplicationConfigs" /* 12288 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../ApplicationWidgetConfigStore.tsx";
+import { FetchState } from "../ApplicationWidgetConfigStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");

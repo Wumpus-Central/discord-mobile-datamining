@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarConstants.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import roundToNearestPixelResult from "module_14" /* 14 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import roundToNearestPixelResult from "../../../../../_runtime/00014_Integer.js";
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const PX_12 = ThemesDefault.space.PX_12;

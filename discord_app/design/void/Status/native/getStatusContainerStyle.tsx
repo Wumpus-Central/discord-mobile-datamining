@@ -1,6 +1,6 @@
 // discord_app/design/void/Status/native/getStatusContainerStyle.tsx
-import set from "set" /* 2 */;
-import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
+import set from "../../../../../_runtime/00002_set.js";
+import STATUS_PADDING from "StatusConstants.tsx";
 
 STATUS_PADDING = STATUS_PADDING.STATUS_PADDING;
 const StatusSizes = STATUS_PADDING.StatusSizes;

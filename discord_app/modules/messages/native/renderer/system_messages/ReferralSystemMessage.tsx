@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 7989 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import createReferralTrialEmbedRedesign from "createReferralTrialEmbedRedesign" /* 8271 */;
-import createReferralTrialEmbedRedeemable from "createReferralTrialEmbedRedeemable" /* 8280 */;
-import closure_3 from "emitChanges" /* 7423 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../../_runtime/07989_registerAsset.js";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import createReferralTrialEmbedRedesign from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
+import createReferralTrialEmbedRedeemable from "../row_data/embeds/ReferralTrialEmbed.tsx";
+import closure_3 from "../../../../premium/ReferralTrialStore.tsx";
+import closure_4 from "../../../../../stores/AuthenticationStore.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };

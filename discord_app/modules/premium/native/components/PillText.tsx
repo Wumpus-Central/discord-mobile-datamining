@@ -1,12 +1,12 @@
 // discord_app/modules/premium/native/components/PillText.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 12872 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ME from "../../../../Constants.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import usePremiumPrimaryGradientColorsDefault from "../usePremiumPrimaryGradientColors.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const HorizontalGradient = ME.HorizontalGradient;
 const jsx = jsxProd.jsx;

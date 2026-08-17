@@ -1,15 +1,15 @@
 // discord_common/js/packages/media-engine/native/index.tsx
-import formatDefault from "format" /* 669 */;
-import inject from "inject" /* 4499 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import onDefault from "on" /* 4572 */;
-import VideoDefault from "Video" /* 4573 */;
-import createDefault from "create" /* 4579 */;
-import sanitizeDevices from "sanitizeDevices" /* 4639 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import AudioSubsystems from "AudioSubsystems" /* 4571 */;
+import formatDefault from "../../../../../_runtime/00669_format.js";
+import inject from "inject.tsx";
+import BaseConnectionEvent from "../index.tsx";
+import onDefault from "../../../shared/utils/TypedEventEmitter.tsx";
+import VideoDefault from "ui/Video.tsx";
+import createDefault from "Connection.tsx";
+import sanitizeDevices from "Devices.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import DesktopSources from "../Constants.tsx";
+import AudioSubsystems from "Constants.tsx";
 import { BaseConnectionEvent } from "../index.tsx";
 import { inject } from "inject.tsx";
 

@@ -1,22 +1,22 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
-import _modDef10047 from "module_10047" /* 10047 */;
-import _modDef10122 from "module_10122" /* 10122 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10125 */;
-import BugReporterNotification from "BugReporterNotification" /* 10126 */;
-import AlertNotificationDefault from "AlertNotification" /* 10157 */;
-import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10158 */;
-import NotificationAvatarDefault from "NotificationAvatar" /* 10521 */;
-import _modDef10522 from "module_10522" /* 10522 */;
-import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 10525 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 10046 */;
-import set from "set" /* 10030 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { Easing } from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef10047 from "MessageNotification.tsx";
+import _modDef10122 from "MessageFailedToSendNotification.tsx";
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification.tsx";
+import BugReporterNotification from "../../bug_reporter/native/BugReporterNotification.tsx";
+import AlertNotificationDefault from "AlertNotification.tsx";
+import ReactionNotificationBodyDefault from "ReactionNotification.tsx";
+import NotificationAvatarDefault from "ReminderNotification.tsx";
+import _modDef10522 from "RestrictedHoursWarningNotification.tsx";
+import MessageRequestInAppNotificationDefault from "MessageRequestNotification.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../native_menu/native/NativeMenuStore.tsx";
+import set from "InAppNotificationConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import { Easing } from "../../reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NotificationWrapper(notification) {

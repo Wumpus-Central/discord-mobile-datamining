@@ -1,9 +1,9 @@
 // discord_app/records/AuditLogRecord.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3975 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import _modDef1208 from "../utils/SentryUtils.native.tsx";
+import toJSDefault from "../lib/Record.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import ME from "../Constants.tsx";
 
 function getTargetType(action) {
   if (action === constants2.ALL) {

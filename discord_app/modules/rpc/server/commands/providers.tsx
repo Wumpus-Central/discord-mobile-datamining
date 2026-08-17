@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/server/commands/providers.tsx
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "set" /* 5221 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
-import sum from "sum" /* 505 */;
-import set from "set" /* 2 */;
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import importDefaultResult from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../stores/ConnectedAccountsStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import ME from "../../../../Constants.tsx";
+import items3 from "../../../activities/Constants.tsx";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
 const require = arg1;

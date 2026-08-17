@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx";
 

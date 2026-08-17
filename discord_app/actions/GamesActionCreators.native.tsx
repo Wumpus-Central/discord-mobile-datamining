@@ -1,9 +1,9 @@
 // discord_app/actions/GamesActionCreators.native.tsx
-import _modDef4090 from "module_4090" /* 4090 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import { ActivityIntent } from "items3" /* 4481 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 8709 */;
+import _modDef4090 from "../lib/native/Linking.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../Constants.tsx";
+import { ActivityIntent } from "../modules/activities/Constants.tsx";
+import { MAIN_SURFACE } from "../modules/frames/FramesConstants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;

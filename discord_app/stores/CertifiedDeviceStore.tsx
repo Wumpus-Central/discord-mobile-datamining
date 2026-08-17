@@ -1,10 +1,10 @@
 // discord_app/stores/CertifiedDeviceStore.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../_runtime/00002_set.js";
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const DeviceTypes = DesktopSources.DeviceTypes;
 const CertifiedDeviceStore = "CertifiedDeviceStore";

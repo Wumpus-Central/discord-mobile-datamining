@@ -1,12 +1,12 @@
 // discord_app/modules/a11y/native/AccessibilitySystemFeatures.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import uDefault from "u" /* 10561 */;
-import AccessibilityFeatureFlags2 from "AccessibilityFeatureFlags" /* 13570 */;
-import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 13812 */;
-import setFontSize from "setFontSize" /* 13813 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import set from "../../../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import uDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import AccessibilityFeatureFlags2 from "../AccessibilityConstants.tsx";
+import A11Y_FEATURE_MAP from "AccessibilityPreferencesSharedValue.tsx";
+import setFontSize from "../AccessibilityActionCreators.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../AccessibilityStore.tsx";
 
 ({ AccessibilityInfo: c3, Appearance: c4, AppState: c5 } = get_ActivityIndicator);
 const AccessibilityFeatureFlags = AccessibilityFeatureFlags2.AccessibilityFeatureFlags;

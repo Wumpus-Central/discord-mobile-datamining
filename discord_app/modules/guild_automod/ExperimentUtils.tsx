@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/ExperimentUtils.tsx
-import set from "set" /* 2 */;
-import experiment from "experiment" /* 10036 */;
+import set from "../../../_runtime/00002_set.js";
+import experiment from "AutomodExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 

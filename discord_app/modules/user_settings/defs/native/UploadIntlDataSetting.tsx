@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/UploadIntlDataSetting.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import keys from "keys" /* 644 */;
-import createToggle from "createToggle" /* 10669 */;
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import keys from "../../../../../_runtime/00644_keys.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const require = arg1;
 function _serializeIntlData() {

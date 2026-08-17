@@ -1,13 +1,13 @@
 // discord_app/modules/messages/GuildOfficialMessagesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { MessageFlags } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
 
 require = arg1;
 function updateGuildState(guildId, arg1) {

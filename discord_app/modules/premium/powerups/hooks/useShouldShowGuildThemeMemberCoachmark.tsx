@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx
-import set from "set" /* 2 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4281 */;
-import apexExperiment from "apexExperiment" /* 4303 */;
-import experiment from "experiment" /* 4304 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11682 */;
-import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 15420 */;
+import set from "../../../../../_runtime/00002_set.js";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import useGuildAppliedBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
+import apexExperiment from "../experiments/ServerThemeUserExperiment.tsx";
+import experiment from "../experiments/ServerThemeExperiment.tsx";
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.tsx";
+import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled.tsx";
 
 let closure_3 = BoostedGuildTiers.GUILD_THEME_POWERUP_BOOST_PRICE;
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");

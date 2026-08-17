@@ -1,17 +1,17 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 11480 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import { JoinGuildSources } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/GuildStore.tsx";
+import { JoinGuildSources } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c5 = importAllResult;

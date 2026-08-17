@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 11727 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 11728 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups.tsx";
+import useGameServerGetExpiringEntitlementsDefault from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 

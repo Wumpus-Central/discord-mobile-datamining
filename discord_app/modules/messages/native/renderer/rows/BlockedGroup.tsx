@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Changeset from "Changeset" /* 8158 */;
-import processColorOrThrow from "processColorOrThrow" /* 8161 */;
-import apply from "apply" /* 12 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import sum from "../../../../../../discord_common/js/shared/Constants.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
+import Changeset from "../RowGeneratorConstants.tsx";
+import processColorOrThrow from "../RowGeneratorStyleSheet.tsx";
+import apply from "../../../../../../_runtime/00012_apply.js";
 
 const SeparatorAction = Changeset.SeparatorAction;
 const UNSAFE_Colors = sum.UNSAFE_Colors;

@@ -1,16 +1,16 @@
 // discord_app/modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "AuditLogActions" /* 16757 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_11 from "../../../../stores/UserStore.tsx";
+import closure_12 from "../GuildSettingsAuditLogStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: closure_6, FlatList: error } = get_ActivityIndicator);

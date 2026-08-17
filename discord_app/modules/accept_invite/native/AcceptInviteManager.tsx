@@ -1,13 +1,13 @@
 // discord_app/modules/accept_invite/native/AcceptInviteManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "updateInvite" /* 4359 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 5417 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/InviteStore.tsx";
+import closure_8 from "../../../stores/PermissionStore.tsx";
+import { ACCEPT_INVITE_MODAL_KEY } from "AcceptInviteConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 let require = arg1;
 ({ InviteStates: c10, Permissions: unpackModuleId, Routes: closure_12 } = ME);

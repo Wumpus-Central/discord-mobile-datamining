@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupStyles.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../Constants.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../rebrand/native/TextStyles.tsx";
 
 let obj = { text: { textAlign: "center", marginLeft: 20, marginRight: 20 }, modalHeader: null, modalBody: null };
 obj = {};

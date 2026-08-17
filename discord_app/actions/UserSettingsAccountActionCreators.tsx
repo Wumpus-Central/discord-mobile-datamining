@@ -1,9 +1,9 @@
 // discord_app/actions/UserSettingsAccountActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import str2 from "str2" /* 5259 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../Constants.tsx";
+import str2 from "../modules/push_notifications/PushNotificationConstants.tsx";
 
 require = arg1;
 function saveProfileAndAccountRequest(arg0, arg1) {

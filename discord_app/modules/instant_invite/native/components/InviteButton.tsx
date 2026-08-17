@@ -1,11 +1,11 @@
 // discord_app/modules/instant_invite/native/components/InviteButton.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4745 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { InviteSendStates } from "InviteSendStates" /* 4371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { InviteSendStates } from "../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_5 = createCacheKey.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });

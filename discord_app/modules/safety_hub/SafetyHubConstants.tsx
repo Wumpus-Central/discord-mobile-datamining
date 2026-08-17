@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubConstants.tsx
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import ME from "../../Constants.tsx";
 
 const AnalyticsSections = ME.AnalyticsSections;
 let obj = { SETTINGS: "SETTINGS", ACCOUNT_STANDING: "ACCOUNT_STANDING", GUILD_SETTINGS: "GUILD_SETTINGS", ENCRYPTION: "ENCRYPTION", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_PRIVACY: "DATA_PRIVACY" };

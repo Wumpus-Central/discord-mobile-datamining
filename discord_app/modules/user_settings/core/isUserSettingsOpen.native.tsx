@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/core/isUserSettingsOpen.native.tsx
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function isUserSettingsOpen() {

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/usePremiumPrimaryGradientColors.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 

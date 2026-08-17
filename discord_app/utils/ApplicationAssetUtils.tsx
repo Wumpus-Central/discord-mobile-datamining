@@ -1,12 +1,12 @@
 // discord_app/utils/ApplicationAssetUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import sendRequest from "sendRequest" /* 530 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import handleImageLoad from "../modules/image_upload/ImageLoaderUtils.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../modules/applications/ApplicationAssetsStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function updateAssets(closure_0) {

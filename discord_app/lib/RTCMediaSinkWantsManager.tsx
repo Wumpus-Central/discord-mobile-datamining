@@ -1,15 +1,15 @@
 // discord_app/lib/RTCMediaSinkWantsManager.tsx
-import applyDefault from "apply" /* 12 */;
-import setDefault from "set" /* 687 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import onDefault from "on" /* 4572 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 12450 */;
-import getBrowserInvertedWantsConfig from "getBrowserInvertedWantsConfig" /* 13079 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import { VideoToggleState } from "ME" /* 676 */;
-import { SimulcastOverrideQuality } from "DesktopSources" /* 4529 */;
-import num2 from "num2" /* 4464 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import setDefault from "../utils/Durations.tsx";
+import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
+import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
+import isIncomingVideoEnabled from "WindowVisibilityVideoManager.tsx";
+import getBrowserInvertedWantsConfig from "../modules/media_engine/BrowserInvertedWantsExperiment.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../stores/AuthenticationStore.tsx";
+import { VideoToggleState } from "../Constants.tsx";
+import { SimulcastOverrideQuality } from "../../discord_common/js/packages/media-engine/Constants.tsx";
+import num2 from "../utils/BrowserUtils.tsx";
 
 require = arg1;
 function getDefaultWants(arg0) {

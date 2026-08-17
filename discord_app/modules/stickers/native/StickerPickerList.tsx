@@ -1,17 +1,17 @@
 // discord_app/modules/stickers/native/StickerPickerList.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 10245 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "loadSavedGuildStickers" /* 6769 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10220 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../_runtime/10245_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../StickersStore.tsx";
+import { useStickerPickerStore } from "StickerPickerStore.tsx";
+import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c4 = importAllResult;

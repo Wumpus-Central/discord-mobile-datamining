@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/native/ios/VoiceEngineModule.android.tsx
-import importDefaultResult from "enforcing" /* 4502 */;
+import importDefaultResult from "../../../rtn-codegen/js/NativeMediaEngineModule.tsx";
 
 const constants = importDefaultResult.getConstants();
 let closure_3 = ["getConstants", "setInputDevice", "setInputDeviceById", "setOutputDevice", "setOutputDeviceById", "setVideoInputDevice", "setVideoInputDeviceById", "addListener", "removeListeners"];

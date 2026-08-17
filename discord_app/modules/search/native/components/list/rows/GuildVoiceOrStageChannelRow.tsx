@@ -1,12 +1,12 @@
 // discord_app/modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx
-import useStageParticipants from "useStageParticipants" /* 6708 */;
-import _modDef15881 from "module_15881" /* 15881 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes" /* 8507 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useStageParticipants from "../../../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
+import _modDef15881 from "../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../stage_channels/StageInstanceStore.tsx";
+import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "../../../../SearchConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildVoiceChannelSubtitle(channel) {

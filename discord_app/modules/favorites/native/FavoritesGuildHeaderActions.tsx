@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/native/FavoritesGuildHeaderActions.tsx
-import noopAll from "noop" /* 19 */;
-import IconButton from "IconButton" /* 8035 */;
-import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 15412 */;
-import handleCreateCategory from "handleCreateCategory" /* 15413 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import useFavoritesGuildHeaderActionDefault from "../hooks/useFavoritesGuildHeaderAction.tsx";
+import handleCreateCategory from "FavoritesGuildAddActionSheet.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

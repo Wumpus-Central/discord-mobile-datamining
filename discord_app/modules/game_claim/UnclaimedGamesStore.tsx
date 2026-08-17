@@ -1,6 +1,6 @@
 // discord_app/modules/game_claim/UnclaimedGamesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 const Store = initializeDefault.Store;

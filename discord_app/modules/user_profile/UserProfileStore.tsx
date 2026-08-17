@@ -1,17 +1,17 @@
 // discord_app/modules/user_profile/UserProfileStore.tsx
-import applyDefault from "apply" /* 12 */;
-import clearAllDefault from "clearAll" /* 1220 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import WidgetType from "WidgetType" /* 5366 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 5382 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import closure_8 from "insertUnsortedGuilds" /* 5078 */;
-import { MAX_TIMEOUT_MS } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import parseUserProfileCollectiblesDefault from "utils/parseUserProfileCollectibles.tsx";
+import closure_3 from "../user_settings/LocaleStore.tsx";
+import closure_4 from "../../records/UserRecord.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/PresenceStore.tsx";
+import closure_8 from "../../stores/SortedGuildStore.tsx";
+import { MAX_TIMEOUT_MS } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function createUserWidgetFromServer(data) {

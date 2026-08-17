@@ -1,12 +1,12 @@
 // discord_app/modules/search/native/components/layout/SearchScreenLayout.tsx
-import jsxDefault from "jsx" /* 15778 */;
-import NoSearchResultsScreenDefault from "NoSearchResultsScreen" /* 15861 */;
-import _modDef15945 from "module_15945" /* 15945 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "prototype" /* 11510 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import jsxDefault from "../../../../panels/morphable/native/AppFreezer.tsx";
+import NoSearchResultsScreenDefault from "../tabs/SearchTabsLayout.tsx";
+import _modDef15945 from "autocomplete/AutocompleteScreen.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../stores/SearchQueryStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 function SearchFreezeContainer(visible) {

@@ -1,8 +1,8 @@
 // discord_app/modules/search/native/SearchResultLinkPreviewMarkup.tsx
-import parseLinkDefault from "parseLink" /* 6809 */;
-import importDefaultResult from "combineMarkupRules" /* 6808 */;
-import createSearchResultLinkPreviewReactRules from "createSearchResultLinkPreviewReactRules" /* 15900 */;
-import importAllResult from "reactParserFor" /* 6902 */;
+import parseLinkDefault from "../../markup/MarkupRules.tsx";
+import importDefaultResult from "../../markup/combineMarkupRules.tsx";
+import createSearchResultLinkPreviewReactRules from "../../markup/native/MarkupSearchResultLinkPreviewReactRules.tsx";
+import importAllResult from "../../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
 const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES, ];
 items[1] = require("createSearchResultLinkPreviewReactRules").createSearchResultLinkPreviewReactRules();

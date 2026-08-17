@@ -1,11 +1,11 @@
 // discord_app/modules/share/useShareSearchResults.tsx
-import trackClose from "trackClose" /* 9094 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "handleChannelSelect" /* 6772 */;
-import { ALLOWED_TYPES } from "ALLOWED_TYPES" /* 7606 */;
+import trackClose from "../quickswitcher/QuickSwitcherActionCreators.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/FrecencyStore.tsx";
+import { ALLOWED_TYPES } from "ShareConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/share/useShareSearchResults.tsx");

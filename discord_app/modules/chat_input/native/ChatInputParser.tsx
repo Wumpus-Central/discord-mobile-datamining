@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/ChatInputParser.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const processColor = get_ActivityIndicator.processColor;
 const result = set.fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");

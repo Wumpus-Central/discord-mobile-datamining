@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/GatewaySocketOpCodes.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import Opcode from "Opcode" /* 13193 */;
-import closure_3 from "initialize" /* 4565 */;
-import { EventEmitter } from "EventEmitter" /* 652 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import Opcode from "GatewaySocketOpcode.tsx";
+import closure_3 from "../../stores/RTCRegionStore.tsx";
+import { EventEmitter } from "../../../_runtime/00652_EventEmitter.js";
 import { Opcode } from "GatewaySocketOpcode.tsx";
 
 require = arg1;

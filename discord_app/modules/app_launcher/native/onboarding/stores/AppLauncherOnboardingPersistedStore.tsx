@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../../Dispatcher.tsx";
 
 let obj = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
 let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata: obj };

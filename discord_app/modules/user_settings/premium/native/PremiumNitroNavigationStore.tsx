@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx
-import set from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
+import set from "../../../../../_runtime/00002_set.js";
+import defaultStatesAreEqual from "../../../../lib/ZustandStore.tsx";
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ scrollToSectionId: "r" }));
 const result = set.fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx");

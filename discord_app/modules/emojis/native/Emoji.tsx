@@ -1,11 +1,11 @@
 // discord_app/modules/emojis/native/Emoji.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import preloadDefault from "preload" /* 5449 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../user_settings/ThemeStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/RpcNotificationSettingsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "fetchFingerprint" /* 1218 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/AuthenticationStore.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;

@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/MarkupParsers.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
-import LHeading from "LHeading" /* 8302 */;
-import getInitialParserState from "getInitialParserState" /* 8315 */;
-import importDefaultResult from "priv" /* 1405 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
+import get_defaultRulesDefault from "../../../markup/MarkupUtils.tsx";
+import LHeading from "../../../../components_native/ChangeLogStandardTemplate.tsx";
+import getInitialParserState from "../../renderMessageMarkup.tsx";
+import importDefaultResult from "../../../../../_runtime/01405_priv.js";
 
 const MessageTypes = ME.MessageTypes;
 let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };

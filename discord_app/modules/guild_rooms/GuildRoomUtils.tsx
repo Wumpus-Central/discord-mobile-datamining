@@ -1,7 +1,7 @@
 // discord_app/modules/guild_rooms/GuildRoomUtils.tsx
-import set2 from "set" /* 2 */;
-import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 9865 */;
-import items from "items" /* 9867 */;
+import set2 from "../../../_runtime/00002_set.js";
+import GuildRoomObjectTypes from "GuildRoomTypes.tsx";
+import items from "GuildRoomConstants.tsx";
 
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomObjectTypes.GuildRoomObjectTypes.PLANT) {

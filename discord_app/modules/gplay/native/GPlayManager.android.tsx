@@ -1,22 +1,22 @@
 // discord_app/modules/gplay/native/GPlayManager.android.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import noopAll from "noop" /* 19 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getPlanIdForProduct from "getPlanIdForProduct" /* 7662 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 7391 */;
-import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7392 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "reset" /* 4045 */;
-import closure_11 from "updateProduct" /* 5319 */;
-import { useGPlayAnalyticsStore } from "setGPlayAnalytics" /* 7618 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 5320 */;
-import ME from "ME" /* 676 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4357 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import noopAll from "../../../../_runtime/00019_noop.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import getPlanIdForProduct from "../../../actions/native/GPlayActionCreators.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../premium/gifting/GiftPromotionStore.tsx";
+import usePremiumPlanPurchasedStore from "../../premium/native/PremiumPlanPurchasedStore.tsx";
+import closure_9 from "../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../stores/billing/SubscriptionStore.tsx";
+import closure_11 from "../../../stores/native/IAPStore.android.tsx";
+import { useGPlayAnalyticsStore } from "GPlayAnalyticsStore.tsx";
+import GPlayConnectionState from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { OrderStatus } from "../../payments/PaymentConstants.tsx";
+import { SubscriptionPlanInfo } from "../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function handleConnectionStateUpdated(connectionState) {

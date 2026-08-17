@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../../stores/VoiceStateStore.tsx";
+import { isActivityParticipant } from "../../calls/CallConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

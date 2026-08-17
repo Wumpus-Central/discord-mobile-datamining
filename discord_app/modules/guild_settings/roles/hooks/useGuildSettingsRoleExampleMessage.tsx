@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createdAt" /* 1930 */;
-import { MessageStates } from "ME" /* 676 */;
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../records/UserRecord.tsx";
+import { MessageStates } from "../../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");

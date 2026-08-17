@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/helpers/getCurrentVoiceChannel.tsx
-import closure_0 from "fetchFingerprint" /* 1218 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "updateVoiceState" /* 4542 */;
+import closure_0 from "../../../stores/AuthenticationStore.tsx";
+import closure_1 from "../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../stores/VoiceStateStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");
 

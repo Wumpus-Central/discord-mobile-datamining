@@ -1,6 +1,6 @@
 // discord_app/modules/go_live/Constants.tsx
-import Notifications from "Notifications" /* 4533 */;
-import set from "set" /* 2 */;
+import Notifications from "../../../discord_common/js/shared/shared-constants/Notifications.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
 const result = set.fileFinishedImporting("modules/go_live/Constants.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/useGameConsoleAccounts.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "set" /* 5221 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../stores/ConnectedAccountsStore.tsx";
+import { PlatformTypes } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");

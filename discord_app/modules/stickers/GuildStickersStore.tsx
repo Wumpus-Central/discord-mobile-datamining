@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/GuildStickersStore.tsx
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { TypeTag } from "TypeTag" /* 1432 */;
-import { LibdiscoreStore } from "identity" /* 1911 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1914 */;
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { TypeTag } from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
+import { LibdiscoreStore } from "../libdiscore/stores/LibdiscoreStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import { LibdiscoreBatchStoreRefactorExperiment } from "../libdiscore/libdiscoreExperiments.tsx";
 
 const require = arg1;
 function parseServerGuildSticker(item10023) {

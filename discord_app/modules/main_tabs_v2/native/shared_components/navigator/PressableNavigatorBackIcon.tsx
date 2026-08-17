@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../stores/GuildReadStateStore.tsx";
+import closure_8 from "../../../../../stores/SelectedChannelStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

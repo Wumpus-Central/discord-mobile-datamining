@@ -1,5 +1,5 @@
 // discord_assets/assets/premium/tiered_tenure_badging/mobile_emerald_badge_large.png.js
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_emerald_badge_large.png.js");
 

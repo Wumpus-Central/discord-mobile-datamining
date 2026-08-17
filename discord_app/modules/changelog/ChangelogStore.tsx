@@ -1,12 +1,12 @@
 // discord_app/modules/changelog/ChangelogStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1978 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import closure_2 from "../user_settings/LocaleStore.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import CHANGELOG_MODAL_KEY from "ChangelogConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function handleUserSettingsProtoStoreChange() {

@@ -1,5 +1,5 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncBackToLanding.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 

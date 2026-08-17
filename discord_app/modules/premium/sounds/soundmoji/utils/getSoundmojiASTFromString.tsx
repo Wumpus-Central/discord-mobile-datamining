@@ -1,11 +1,11 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import getSoundmojiRenderingExperiment from "getSoundmojiRenderingExperiment" /* 6821 */;
-import isSoundValidDefault from "isSoundValid" /* 6822 */;
-import getSoundStringDefault from "getSoundString" /* 6825 */;
-import closure_3 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import { MessageStates } from "ME" /* 676 */;
+import getAvatarURL from "../../../../../utils/AvatarUtils.tsx";
+import getSoundmojiRenderingExperiment from "../SoundmojiRenderingExperiment.tsx";
+import isSoundValidDefault from "isSoundValid.tsx";
+import getSoundStringDefault from "getSoundString.tsx";
+import closure_3 from "../../../../soundboard/SoundboardStore.tsx";
+import closure_4 from "../../../../../stores/MessageStore.tsx";
+import { MessageStates } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");

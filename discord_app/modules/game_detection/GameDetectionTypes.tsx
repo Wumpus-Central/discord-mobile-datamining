@@ -1,6 +1,6 @@
 // discord_app/modules/game_detection/GameDetectionTypes.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import { createExecutable } from "createExecutable" /* 4479 */;
+import toJSDefault from "../../lib/Record.tsx";
+import { createExecutable } from "../../records/ApplicationRecord.tsx";
 
 toJSDefault;
 const result = require("set").fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");

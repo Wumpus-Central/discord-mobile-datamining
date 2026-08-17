@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/records/CollectiblesPurchaseRecord.tsx
-import closure_2 from "fromServer" /* 5304 */;
-import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import { CollectiblesVariantProductRecord as closure_4 } from "fromServer" /* 5303 */;
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "items" /* 678 */;
-import { PREMIUM_TYPE_NONE } from "ME" /* 676 */;
+import closure_2 from "CollectiblesBundledProductRecord.tsx";
+import { createCollectiblesItemsFromServerResponse as closure_3 } from "CollectiblesItemRecord.tsx";
+import { CollectiblesVariantProductRecord as closure_4 } from "CollectiblesProductRecord.tsx";
+import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "../CollectiblesShopConstants.tsx";
+import { PREMIUM_TYPE_NONE } from "../../../Constants.tsx";
 
 let prototype;
 prototype = function CollectiblesPurchaseRecord(arg0) {

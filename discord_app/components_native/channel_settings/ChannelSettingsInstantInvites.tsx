@@ -1,18 +1,18 @@
 // discord_app/components_native/channel_settings/ChannelSettingsInstantInvites.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef8636 from "module_8636" /* 8636 */;
-import registerAssetDefault from "registerAsset" /* 9973 */;
-import registerAssetDefault2 from "registerAsset" /* 9974 */;
-import _modDef16038 from "module_16038" /* 16038 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "normalizeChannelPropertyForCompare" /* 8133 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import _modDef8636 from "../../modules/fastest_list/FastestList.android.tsx";
+import registerAssetDefault from "../../../_runtime/09973_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/09974_registerAsset.js";
+import _modDef16038 from "../../modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../stores/ChannelSettingsStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import { ChannelSettingsSections } from "../../Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

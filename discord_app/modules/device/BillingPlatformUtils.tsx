@@ -1,7 +1,7 @@
 // discord_app/modules/device/BillingPlatformUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import isMetaQuest from "MetaQuestUtils.android.tsx";
 
 const result = set.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 

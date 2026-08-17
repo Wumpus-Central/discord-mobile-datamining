@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding_home/useIsNewMember.tsx
-import setDefault from "set" /* 687 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_3 from "initialize" /* 1982 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import setDefault from "../../utils/Durations.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

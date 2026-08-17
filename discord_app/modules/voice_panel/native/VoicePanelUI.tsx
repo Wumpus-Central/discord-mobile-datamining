@@ -1,21 +1,21 @@
 // discord_app/modules/voice_panel/native/VoicePanelUI.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getParticipants" /* 4773 */;
-import closure_8 from "module_9010" /* 9010 */;
-import closure_9 from "withEqualityFn" /* 8664 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
-import { POP_RESISTANCE } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../calls/ChannelRTCStore.tsx";
+import closure_8 from "../../panels/morphable/AppFreezeStore.tsx";
+import closure_9 from "../VoicePanelStore.tsx";
+import VoicePanelModes from "../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "controls/VoicePanelControlsConstants.tsx";
+import { isActivityParticipant } from "../../calls/CallConstants.tsx";
+import { POP_RESISTANCE } from "../../panels/morphable/native/MorphablePanelConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import importDefaultResult from "../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function NOOP() {

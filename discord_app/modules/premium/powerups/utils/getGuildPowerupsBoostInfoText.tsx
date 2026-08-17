@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 
 const BoostInfoType = BoostedGuildTiers.BoostInfoType;
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/calls/useHideSelfVideo.tsx
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import { VideoToggleState } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
+import { VideoToggleState } from "../../Constants.tsx";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const require = arg1;
 ({ MediaEngineContextTypes: closure_6, Features: error } = DesktopSources);

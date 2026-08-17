@@ -1,13 +1,13 @@
 // discord_app/modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 10588 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 10612 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getInappropriateConversationsSafetyTips as closure_4 } from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import SafetyTipsContainerDefault from "SafetyTipsSection.tsx";
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getInappropriateConversationsSafetyTips as closure_4 } from "../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

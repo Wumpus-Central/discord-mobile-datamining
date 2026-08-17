@@ -1,11 +1,11 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategoriesBackdrop.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef8986 from "module_8986" /* 8986 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef8986 from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);

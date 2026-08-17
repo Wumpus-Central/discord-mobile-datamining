@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding/useGuildOnboardingAvailable.tsx
-import closure_2 from "initialize" /* 1982 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../impersonate/ImpersonateStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import ModalScreen from "ModalScreen" /* 5440 */;
-import ModalContent from "ModalContent" /* 5445 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import Modal from "Modal" /* 11115 */;
-import StepModal from "StepModal" /* 13538 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
+import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
+import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import Modal from "../../../../design/components/Modal/native/Modal.native.tsx";
+import StepModal from "../../../../design/components/Modal/native/StepModal.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DemoModal() {

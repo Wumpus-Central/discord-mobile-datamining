@@ -1,6 +1,6 @@
 // discord_app/modules/status_bar/native/components/StatusBarManager.android.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const StatusBar = get_ActivityIndicator.StatusBar;
 class StatusBarManager {

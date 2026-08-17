@@ -1,10 +1,10 @@
 // discord_app/modules/emoji_picker/native/components/openEmojiActionSheet.tsx
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1892 */;
-import set2 from "set" /* 1925 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import dismissGlobalKeyboard from "../../../../utils/native/KeyboardManagerUtils.tsx";
+import set2 from "../../../emojis/EmojiConstants.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
 let result = set.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");

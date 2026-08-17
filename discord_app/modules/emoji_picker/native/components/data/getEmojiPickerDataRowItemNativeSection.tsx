@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx
-import set from "set" /* 2 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 9369 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import useEmojiPickerData from "useEmojiPickerData.tsx";
 
 const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
 

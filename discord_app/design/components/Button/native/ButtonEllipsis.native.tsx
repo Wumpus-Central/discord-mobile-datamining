@@ -1,12 +1,12 @@
 // discord_app/design/components/Button/native/ButtonEllipsis.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { Easing } from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../animation/reanimated/timing/timing.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import { Easing } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 function EllipsisCircle(offset) {

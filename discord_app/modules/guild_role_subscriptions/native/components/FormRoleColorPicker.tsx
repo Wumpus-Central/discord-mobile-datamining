@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx
-import closure_3 from "noop" /* 19 */;
-import { DEFAULT_ROLE_COLOR } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { DEFAULT_ROLE_COLOR } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ rowColorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 } });

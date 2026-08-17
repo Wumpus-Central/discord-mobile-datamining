@@ -1,17 +1,17 @@
 // discord_app/modules/threads/ThreadUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import getTimestampStringDefault from "getTimestampString" /* 5093 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7521 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "generateOldThreadCutoff" /* 4772 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_7 from "storeThread" /* 4023 */;
-import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import getTimestampStringDefault from "getTimestampString.tsx";
+import collectThreadMetadata from "../app_analytics/ThreadAnalyticsUtils.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../stores/ReadStateStore.tsx";
+import closure_6 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_7 from "JoinedThreadsStore.tsx";
+import { ThreadMemberFlags } from "ThreadConstants.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

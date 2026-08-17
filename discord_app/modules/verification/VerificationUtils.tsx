@@ -1,8 +1,8 @@
 // discord_app/modules/verification/VerificationUtils.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import ME from "../../Constants.tsx";
 
 const UserRequiredActions = ME.UserRequiredActions;
 const VerificationTypes = ME.VerificationTypes;

@@ -1,15 +1,15 @@
 // discord_app/modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 9152 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15367 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15396 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { JoinGuildSources } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import GuildBadgeV2Default from "../../../guild/native/GuildBadgeV2.tsx";
+import useIsGameCommunityServerPreviewDefault from "../../../lurker_mode/native/useIsGameCommunityServerPreview.tsx";
+import useStickyServerHeaderSubtitleDefault from "../hooks/useStickyServerHeaderSubtitle.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { JoinGuildSources } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ View: c4, Pressable } = get_ActivityIndicator);

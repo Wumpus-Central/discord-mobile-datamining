@@ -1,11 +1,11 @@
 // discord_app/modules/app_database/modules/messages/withFallbacks.tsx
-import totalLength from "totalLength" /* 5071 */;
-import isReadableChannel from "isReadableChannel" /* 5075 */;
-import LIMITED_GUILD_MEMBER_THRESHOLD from "LIMITED_GUILD_MEMBER_THRESHOLD" /* 5076 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "insertUnsortedGuilds" /* 5078 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import totalLength from "../../util/ExtendedMemoryLru.tsx";
+import isReadableChannel from "isReadableChannel.tsx";
+import LIMITED_GUILD_MEMBER_THRESHOLD from "isLimitedChannel.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../stores/SortedGuildStore.tsx";
+import { ChannelTypes } from "../../../../Constants.tsx";
 
 require = arg1;
 function isSaveableChannel(item10025) {

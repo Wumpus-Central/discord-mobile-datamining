@@ -1,11 +1,11 @@
 // discord_app/stores/billing/SubscriptionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "setPremiumTypeActual" /* 1923 */;
-import { isNoneSubscription } from "createFromServer" /* 4040 */;
-import { SubscriptionRecord } from "createSubscriptionItemFromServer" /* 4046 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../modules/premium/OverridePremiumTypeStore.tsx";
+import { isNoneSubscription } from "../../records/SubscriptionPlanRecord.tsx";
+import { SubscriptionRecord } from "../../records/SubscriptionRecord.tsx";
+import closure_3 from "../AuthenticationStore.tsx";
+import ME from "../../Constants.tsx";
 
 function reset() {
   c6 = null;

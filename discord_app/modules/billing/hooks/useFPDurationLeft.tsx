@@ -1,7 +1,7 @@
 // discord_app/modules/billing/hooks/useFPDurationLeft.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useCountdownDefault from "useCountdown" /* 7410 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useCountdownDefault from "../../../hooks/useCountdown.tsx";
 
 function roundFPCountdownUnits(arg0) {
   obj = {};

@@ -1,7 +1,7 @@
 // discord_app/modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx
-import { ChannelFlags } from "set" /* 1398 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import { ChannelFlags } from "../../../channel/ChannelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getAutoArchiveOptions } from "../../ThreadAutoArchive.tsx";

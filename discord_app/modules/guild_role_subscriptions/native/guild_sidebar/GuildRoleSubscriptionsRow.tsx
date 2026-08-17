@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11553 */;
-import registerAssetDefault from "registerAsset" /* 11954 */;
-import closure_3 from "noop" /* 19 */;
-import { Routes } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import BaseChannelSubtitleDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
+import registerAssetDefault from "../../../../../_runtime/11954_registerAsset.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { Routes } from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

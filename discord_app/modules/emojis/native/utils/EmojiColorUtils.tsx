@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
-import privDefault from "priv" /* 1405 */;
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import privDefault from "../../../../../_runtime/01405_priv.js";
+import closure_0 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 function _getEmojiCacheKey(name) {
   return "" + name.name + "-" + name.id;

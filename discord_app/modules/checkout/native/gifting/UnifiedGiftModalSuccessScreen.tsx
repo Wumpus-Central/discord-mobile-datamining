@@ -1,10 +1,10 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserSettingsSections } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

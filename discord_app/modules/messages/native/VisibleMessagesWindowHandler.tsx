@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/VisibleMessagesWindowHandler.tsx
-import set from "set" /* 2 */;
-import Changeset from "Changeset" /* 8158 */;
+import set from "../../../../_runtime/00002_set.js";
+import Changeset from "renderer/RowGeneratorConstants.tsx";
 
 const RowType = Changeset.RowType;
 const result = set.fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");

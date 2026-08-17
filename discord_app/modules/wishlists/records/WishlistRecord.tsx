@@ -1,11 +1,11 @@
 // discord_app/modules/wishlists/records/WishlistRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createExecutable" /* 4479 */;
-import closure_1 from "fromServer" /* 9188 */;
-import closure_2 from "createCollectiblesItemFromServerResponse" /* 9189 */;
-import closure_3 from "fromServer" /* 9190 */;
-import closure_4 from "fromServer" /* 9191 */;
-import { SKUProductLines } from "ME" /* 676 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import closure_0 from "../../../records/ApplicationRecord.tsx";
+import closure_1 from "BaseWishlistItemRecord.tsx";
+import closure_2 from "CollectiblesWishlistItemRecord.tsx";
+import closure_3 from "PremiumWishlistItemRecord.tsx";
+import closure_4 from "SKUWishlistItemRecord.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
 
 toJSDefault;
 let prototype;

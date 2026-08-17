@@ -1,19 +1,19 @@
 // discord_app/components_native/premium/PremiumSubscriptionPricingUpsell.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 12853 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "addSubscriptionPlan" /* 4044 */;
-import closure_9 from "reset" /* 4045 */;
-import closure_10 from "updateProduct" /* 5319 */;
-import { CurrencyCodes } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
+import getSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../modules/user_settings/LocaleStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import closure_8 from "../../stores/billing/SubscriptionPlanStore.tsx";
+import closure_9 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_10 from "../../stores/native/IAPStore.android.tsx";
+import { CurrencyCodes } from "../../Constants.tsx";
+import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PricingSubheadingCopy() {

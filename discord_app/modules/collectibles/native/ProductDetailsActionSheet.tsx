@@ -1,19 +1,19 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheet.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import context from "context" /* 9175 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "updateCategoriesAndProducts" /* 5301 */;
-import { ShopCtaEnum } from "items" /* 678 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import sum from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import ManaContext from "ManaContext" /* 4104 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import context from "../CollectiblesAnalyticsContext.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../CollectiblesCategoryStore.tsx";
+import { ShopCtaEnum } from "../CollectiblesShopConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import sum from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 
 require = arg1;
 function PreviewProfileTrigger(handlePreviewPress) {

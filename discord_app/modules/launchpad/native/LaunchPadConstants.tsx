@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadConstants.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
-import set from "set" /* 500 */;
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const Dimensions = get_ActivityIndicator.Dimensions;
 const size = Dimensions.get("screen");

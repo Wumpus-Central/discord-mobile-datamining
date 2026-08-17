@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/Constants.tsx
-import set from "set" /* 2 */;
-import SystemServiceNotAvailableError from "SystemServiceNotAvailableError" /* 4530 */;
+import set from "../../../../_runtime/00002_set.js";
+import SystemServiceNotAvailableError from "../discord-native-types/DiscordNative.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
 

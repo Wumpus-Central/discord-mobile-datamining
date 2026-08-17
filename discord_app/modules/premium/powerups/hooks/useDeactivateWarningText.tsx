@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useDeactivateWarningText.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/GuildMemberCountStore.tsx";
+import closure_5 from "../../../../stores/GuildRoleStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");

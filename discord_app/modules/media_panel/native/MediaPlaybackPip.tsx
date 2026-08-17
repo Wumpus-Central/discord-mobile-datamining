@@ -1,16 +1,16 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPip.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "reinjectEphemerals" /* 4994 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { SquarePIPReferenceDimensions } from "VoicePanelPIPModes" /* 16307 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../stores/MessageStore.tsx";
+import closure_10 from "../../../stores/RelationshipStore.tsx";
+import closure_11 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { SquarePIPReferenceDimensions } from "../../voice_panel/native/pip/VoicePanelPIPConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function MediaInfo(message) {

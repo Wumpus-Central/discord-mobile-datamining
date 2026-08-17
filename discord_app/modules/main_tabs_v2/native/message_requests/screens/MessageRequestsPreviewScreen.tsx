@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import { ME } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/ReadStateStore.tsx";
+import { ME } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx");

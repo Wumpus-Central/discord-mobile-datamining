@@ -1,14 +1,14 @@
 // discord_app/modules/video_calls/native/components/CallBarAction.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 8696 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { resetFocusTimer } from "VoiceChatDrawerState" /* 8669 */;
-import jsxProd from "jsxProd" /* 21 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import CircleWithCutoutDefault from "../../../voice_panel/native/shared/CircleWithCutoutUtils.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { resetFocusTimer } from "../ChannelCallStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class ActionButton {

@@ -1,13 +1,13 @@
 // discord_app/modules/connections/ConnectionsUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import _modDef38 from "module_38" /* 38 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import ChannelTypesDefault from "ChannelTypes" /* 5226 */;
-import closure_3 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import ChannelTypesDefault from "../channel/getConnectionsRoles.tsx";
+import closure_3 from "../../stores/GuildRoleStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import OperatorTypes from "Constants.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 

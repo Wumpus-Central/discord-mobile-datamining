@@ -1,21 +1,21 @@
 // discord_app/modules/app_launcher/utils/AppLauncherUtils.tsx
-import set from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import buildCommand from "buildCommand" /* 5245 */;
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
-import getPlatformDefault from "getPlatform" /* 8718 */;
-import canInstallApplication from "canInstallApplication" /* 8772 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "getIndexKey" /* 8448 */;
-import closure_7 from "createExecutable" /* 4479 */;
-import closure_8 from "handleDismissWithDismissed" /* 11264 */;
-import { ApplicationFlags } from "ME" /* 676 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import PermissionOverwriteType from "../../../flow/Server.tsx";
+import buildCommand from "../../application_commands/ApplicationCommandUtils.tsx";
+import getApplicationFlags from "../../applications/utils/ApplicationFlagUtils.tsx";
+import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
+import canInstallApplication from "../../applications/utils/ApplicationInstallUtils.tsx";
+import AppLauncherEntrypoint from "../AppLauncherTypes.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../application_commands/ApplicationCommandIndexStore.tsx";
+import closure_7 from "../../../records/ApplicationRecord.tsx";
+import closure_8 from "../AppLauncherStore.tsx";
+import { ApplicationFlags } from "../../../Constants.tsx";
+import { BuiltInSectionId } from "../../application_commands/ApplicationCommandConstants.tsx";
+import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
 
 require = arg1;
 function getShelfBadgeTypeIfActive(application) {

@@ -1,7 +1,7 @@
 // discord_app/modules/dismissible_content/VersionedDismissibleContentUtils.tsx
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "getMarketingBySurface" /* 5351 */;
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import closure_2 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../collectibles/CollectiblesMarketingsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/dismissible_content/VersionedDismissibleContentUtils.tsx");

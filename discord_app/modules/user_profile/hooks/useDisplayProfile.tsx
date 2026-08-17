@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/hooks/useDisplayProfile.tsx
-import premiumSinceDefault from "premiumSince" /* 8420 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import premiumSinceDefault from "../DisplayProfile.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../UserProfileStore.tsx";
+import areArraysShallowlyEqual from "../../../utils/FunctionUtils.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

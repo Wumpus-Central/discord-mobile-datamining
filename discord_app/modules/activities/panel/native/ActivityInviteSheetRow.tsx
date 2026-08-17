@@ -1,13 +1,13 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheetRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { InviteSendStates } from "InviteSendStates" /* 4371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import { InviteSendStates } from "../../../instant_invite/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { acronym: null };

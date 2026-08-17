@@ -1,14 +1,14 @@
 // discord_app/modules/nuf/native/components/notification/RedesignNotificationModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 11861 */;
-import registerAssetDefault from "registerAsset" /* 15266 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 11578 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
+import registerAssetDefault from "../../../../../../_runtime/15266_registerAsset.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PermissionStateType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
+import EventActionType from "NotificationPermissionConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class RedesignNotificationModal {

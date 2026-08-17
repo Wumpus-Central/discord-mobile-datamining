@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/useDraggablePip.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { useChannelCallStore } from "ChannelCallStore.tsx";
+import PIP_GESTURE_ACTIVE_OFFSET from "components/Constants.tsx";
 
 const require = arg1;
 ({ PIP_FOCUS_SCALE: c4, PIP_GESTURE_ACTIVE_OFFSET: c5 } = PIP_GESTURE_ACTIVE_OFFSET);

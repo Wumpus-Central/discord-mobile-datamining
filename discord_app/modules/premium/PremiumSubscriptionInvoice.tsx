@@ -1,10 +1,10 @@
 // discord_app/modules/premium/PremiumSubscriptionInvoice.tsx
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
-import closure_11 from "createFromServer" /* 4048 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/00019_noop.js";
+import closure_11 from "../../records/InvoiceRecord.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function createSubscriptionInvoicePreview() {

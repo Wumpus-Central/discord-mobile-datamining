@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/utils/getStreamIssueReportOptions.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import StreamIssueReportReasons2 from "StreamIssueReportReasons" /* 4532 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import StreamIssueReportReasons2 from "../Constants.tsx";
 
 const StreamIssueReportReasons = StreamIssueReportReasons2.StreamIssueReportReasons;
 const result = set.fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");

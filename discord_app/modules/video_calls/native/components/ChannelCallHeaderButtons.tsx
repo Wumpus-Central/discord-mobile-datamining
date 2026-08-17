@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/components/ChannelCallHeaderButtons.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 8674 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12522 */;
-import registerAssetDefault from "registerAsset" /* 12593 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
+import registerAssetDefault from "../../../../../_runtime/12593_registerAsset.js";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

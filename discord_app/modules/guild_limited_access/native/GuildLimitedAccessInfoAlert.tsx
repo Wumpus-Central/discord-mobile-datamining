@@ -1,15 +1,15 @@
 // discord_app/modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_HC_LINK" /* 13073 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "../GuildLimitedAccessConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
 
 require = arg1;
 noopAll;

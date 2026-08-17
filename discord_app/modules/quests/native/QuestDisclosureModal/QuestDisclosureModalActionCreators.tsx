@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import apexExperiment from "apexExperiment" /* 9502 */;
+import set from "../../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import getApplicationIdsByTaskTypes from "../../utils/QuestTaskUtils.tsx";
+import apexExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
 let result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx");

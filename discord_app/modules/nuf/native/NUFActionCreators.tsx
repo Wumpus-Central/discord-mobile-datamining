@@ -1,14 +1,14 @@
 // discord_app/modules/nuf/native/NUFActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import _modDef11922 from "module_11922" /* 11922 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ContactSyncModes from "ContactSyncModes" /* 11850 */;
-import closure_8 from "set" /* 5221 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { NUF_DISCOVERABILITY_MODAL_KEY as closure_10 } from "NewUserTypes" /* 11878 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { IN_APP_GUILD_TEMPLATES_MODAL_KEY as closure_12 } from "NUXGuildTemplatesAnalytics" /* 8617 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _modDef11922 from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ContactSyncModes from "../../contact_sync/native/ContactSyncModalStore.tsx";
+import closure_8 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import { NUF_DISCOVERABILITY_MODAL_KEY as closure_10 } from "../NUFConstants.tsx";
+import { PlatformTypes } from "../../../Constants.tsx";
+import { IN_APP_GUILD_TEMPLATES_MODAL_KEY as closure_12 } from "../../create_guild/native/CreateGuildConstants.tsx";
 
 const require = arg1;
 function _startContactSyncForDiscoverability() {

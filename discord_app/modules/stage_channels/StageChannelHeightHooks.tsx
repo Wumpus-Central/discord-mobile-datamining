@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelHeightHooks.tsx
-import set from "set" /* 2 */;
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8123 */;
+import set from "../../../_runtime/00002_set.js";
+import useStageBlockedUsersCount from "useStageBlockedUsersCount.tsx";
 
 const result = set.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
 

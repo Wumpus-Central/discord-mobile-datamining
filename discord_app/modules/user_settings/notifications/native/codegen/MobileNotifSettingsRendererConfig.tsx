@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx
-import set from "set" /* 2 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15056 */;
-import route from "route" /* 15057 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import MobileNotifSettings from "MobileNotifSettings.tsx";
+import route from "../../../../notifications/settings/native/MobileNotifSettingsRoutes.tsx";
 
 const obj = {};
 obj[MobileNotifSettings.MobileNotifSettings.VOICE_ACTIVITY_TITLE] = route.VoiceActivityTitleSetting;

@@ -1,14 +1,14 @@
 // discord_app/modules/rpc/helpers/validateOpenInviteDialog.tsx
-import prototypeDefault from "prototype" /* 8752 */;
-import canViewInviteModal from "canViewInviteModal" /* 8802 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 13838 */;
-import closure_3 from "map" /* 8708 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import { RPCErrors } from "ME" /* 676 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
+import prototypeDefault from "../RPCError.tsx";
+import canViewInviteModal from "../../instant_invite/canViewInviteModal.tsx";
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel.tsx";
+import closure_3 from "../../frames/FramesStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PermissionStore.tsx";
+import { TransportTypes } from "../Constants.tsx";
+import { RPCErrors } from "../../../Constants.tsx";
+import FrameLayoutModes from "../../frames/FramesConstants.tsx";
 
 require = arg1;
 ({ asLaunched: c9, EmbeddedSurfaceType: c10 } = FrameLayoutModes);

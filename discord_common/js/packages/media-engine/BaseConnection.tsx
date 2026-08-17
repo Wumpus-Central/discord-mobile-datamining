@@ -1,12 +1,12 @@
 // discord_common/js/packages/media-engine/BaseConnection.tsx
-import onDefault from "on" /* 4572 */;
-import WantsVideoQuality from "WantsVideoQuality" /* 4581 */;
-import logger2 from "logger" /* 4583 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4584 */;
-import cloneDeepDefault from "cloneDeep" /* 4585 */;
-import flatRestDefault from "flatRest" /* 4614 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import onDefault from "../../shared/utils/TypedEventEmitter.tsx";
+import WantsVideoQuality from "VideoQualityManager.tsx";
+import logger2 from "ConnectionEventFramerateReducer.tsx";
+import BaseConnectionEvent from "BaseConnectionEvent.tsx";
+import cloneDeepDefault from "../../../../_runtime/04585_cloneDeep.js";
+import flatRestDefault from "../../../../_runtime/04614_flatRest.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import DesktopSources from "Constants.tsx";
 
 require = arg1;
 ({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);

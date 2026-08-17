@@ -1,13 +1,13 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15482 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../guild_boosting/GuildBoostingProgressBarPersistedStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);

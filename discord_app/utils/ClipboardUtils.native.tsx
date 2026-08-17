@@ -1,6 +1,6 @@
 // discord_app/utils/ClipboardUtils.native.tsx
-import useClipboardDefault from "useClipboard" /* 7168 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import useClipboardDefault from "../../_runtime/07168_useClipboard.js";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 function _copy() {
   const self = this;

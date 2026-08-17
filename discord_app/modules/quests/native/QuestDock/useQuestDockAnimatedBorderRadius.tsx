@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_3 = { code: "function useQuestDockAnimatedBorderRadiusTsx1(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}" };

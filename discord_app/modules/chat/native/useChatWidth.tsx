@@ -1,11 +1,11 @@
 // discord_app/modules/chat/native/useChatWidth.tsx
-import useChatLayout from "useChatLayout" /* 4232 */;
-import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4234 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
-import sum from "sum" /* 10719 */;
-import contextDefault from "context" /* 10720 */;
-import closure_3 from "noop" /* 19 */;
+import useChatLayout from "useChatLayout.tsx";
+import useChatLayoutDefault from "useChatLayout.tsx";
+import useBaseAppContainerDimensions from "../../screen/native/useBaseAppContainerDimensions.tsx";
+import useBaseAppContainerDimensionsDefault from "../../screen/native/useBaseAppContainerDimensions.tsx";
+import sum from "../../screen/native/drawer/useDrawerWidth.tsx";
+import contextDefault from "ChatViewWidthContext.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/native/useChatWidth.tsx");

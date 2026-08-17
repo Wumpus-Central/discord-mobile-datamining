@@ -1,7 +1,7 @@
 // discord_app/design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function AccessibleNativeStackNavigator(arg0) {

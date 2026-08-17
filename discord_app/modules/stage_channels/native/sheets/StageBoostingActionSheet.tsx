@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../stores/PermissionStore.tsx";
+import { STAGE_BOOSTING_SHEET_KEY } from "../../StageChannelsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import GuildFeatures from "../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

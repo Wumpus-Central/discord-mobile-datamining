@@ -1,13 +1,13 @@
 // discord_app/modules/interaction_components/native/display/TextDisplayComponent.tsx
-import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15170 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8325 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import _modDef38 from "../../../../../_runtime/metro/00038__.js";
+import get_defaultRulesDefault from "../../../markup/MarkupUtils.tsx";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/TextDisplayComponentViewNativeComponent.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "../../InteractionComponentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

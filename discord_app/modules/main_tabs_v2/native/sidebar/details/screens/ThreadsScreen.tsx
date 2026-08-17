@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import ThreadListSectionDefault from "ThreadListSection" /* 15925 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { SearchTypes } from "ME" /* 676 */;
-import { OpenThreadAnalyticsLocations as closure_7 } from "AbortCodes" /* 1235 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import ThreadListSectionDefault from "../../../../../threads/native/components/redesign/ThreadList.tsx";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import { SearchTypes } from "../../../../../../Constants.tsx";
+import { OpenThreadAnalyticsLocations as closure_7 } from "../../../../../threads/ThreadConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function ThreadsScreen(channel) {

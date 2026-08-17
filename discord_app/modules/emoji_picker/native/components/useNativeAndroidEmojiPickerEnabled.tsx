@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx
-import set from "set" /* 500 */;
-import databaseNameDefault from "databaseName" /* 1971 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import databaseNameDefault from "../../../app_database/system/DatabaseManager.tsx";
+import closure_3 from "../../../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");

@@ -1,23 +1,23 @@
 // discord_app/modules/settings/native/renderer/SettingRenderer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import context2 from "context" /* 8101 */;
-import ClydeIcon from "ClydeIcon" /* 9551 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 15060 */;
-import _modDef15061 from "module_15061" /* 15061 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_9 from "_getSystemLocale" /* 1994 */;
-import closure_10 from "zustandStore" /* 13993 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import context2 from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import ClydeIcon from "../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
+import useHighlightSettingItem from "hooks/useHighlightSettingItem.tsx";
+import _modDef15061 from "SettingListItemHighlight.tsx";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../user_settings/LocaleStore.tsx";
+import closure_10 from "../../../user_settings/UserSettingSearchStore.tsx";
+import closure_11 from "../../../../stores/GuildStore.tsx";
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class GuildSelectDefaultIcon {

@@ -1,10 +1,10 @@
 // discord_app/modules/presence_subscriptions/PresenceSubscriptionsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef10673 from "module_10673" /* 10673 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import { INVITE_EXPIRATION_MS } from "items3" /* 4481 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef10673 from "../../actions/ActivitiesActionCreators.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/PresenceStore.tsx";
+import { INVITE_EXPIRATION_MS } from "../activities/Constants.tsx";
 
 function handleConnectionOpenOrResumed() {
   closure_5 = {};

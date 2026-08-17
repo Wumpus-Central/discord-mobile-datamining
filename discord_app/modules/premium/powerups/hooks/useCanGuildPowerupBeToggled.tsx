@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildPowerupsStore.tsx";
+import { PowerupActiveStatusType } from "../constants/GuildPowerupsConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

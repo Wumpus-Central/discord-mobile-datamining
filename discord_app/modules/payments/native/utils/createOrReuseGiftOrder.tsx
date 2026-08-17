@@ -1,10 +1,10 @@
 // discord_app/modules/payments/native/utils/createOrReuseGiftOrder.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4357 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
-import { PaymentGateways } from "sum" /* 505 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { ItemPurchaseType } from "../../PaymentConstants.tsx";
+import { SubscriptionPlanInfo } from "../../../premium/PremiumConstants.tsx";
+import { PaymentGateways } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { apexExperiment } from "../../../billing/experiments/AndroidShopOrdersExperiment.tsx";
 
 const require = arg1;

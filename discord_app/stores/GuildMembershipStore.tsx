@@ -1,7 +1,7 @@
 // discord_app/stores/GuildMembershipStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import importDefaultResult from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import importDefaultResult from "../Dispatcher.tsx";
+import set from "../../_runtime/00002_set.js";
 
 let closure_0 = arg1;
 const Store = initializeDefault.Store;

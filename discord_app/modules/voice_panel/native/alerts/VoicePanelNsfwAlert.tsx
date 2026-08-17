@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx
-import noopAll from "noop" /* 19 */;
-import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import { isGuildNSFW } from "../../../../records/GuildRecord.tsx";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

@@ -1,15 +1,15 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalLanding.tsx
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "sortCategoryList" /* 15404 */;
-import closure_10 from "handleFormInit" /* 8875 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import closure_9 from "../GuildSettingsModalChannelsStore.tsx";
+import closure_10 from "../GuildSettingsStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function SettingsSection(guild) {

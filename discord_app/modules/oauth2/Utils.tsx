@@ -1,8 +1,8 @@
 // discord_app/modules/oauth2/Utils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
-import useIsSocialLayerParentApplication from "useIsSocialLayerParentApplication" /* 9771 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import isAgeRestrictedContentClassification from "../content_classification/utils.tsx";
+import useIsSocialLayerParentApplication from "../applications/useIsSocialLayerParentApplication.tsx";
 
 const MarketingURLs = ME.MarketingURLs;
 let result = set.fileFinishedImporting("modules/oauth2/Utils.tsx");

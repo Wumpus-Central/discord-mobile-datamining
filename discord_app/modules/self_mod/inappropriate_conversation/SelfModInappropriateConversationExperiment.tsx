@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../../experiments/apex/ApexExperiment.tsx";
 
 const tmp2 = getUnitIdDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;

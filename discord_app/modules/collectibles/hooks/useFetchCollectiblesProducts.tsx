@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProducts.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useEffect } from "noop" /* 19 */;
-import closure_4 from "addSku" /* 4521 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
-import { SKUProductLines } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { useEffect } from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/game_store/SKUStore.tsx";
+import closure_5 from "../CollectiblesCategoryStore.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

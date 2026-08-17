@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/UseDataForQuestsSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
-import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 14998 */;
-import apexExperiment from "apexExperiment" /* 14999 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings2 from "../../core/native/SettingsConstants.tsx";
+import useAdPersonalizationTogglesDisabled from "../../../ads/hooks/useAdPersonalizationTogglesDisabled.tsx";
+import apexExperiment from "../../../ads/AdTopicOptOutClientExperiment.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function useIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();

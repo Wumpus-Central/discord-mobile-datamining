@@ -1,15 +1,15 @@
 // discord_app/modules/safety_hub/native/SafetyHubErrorActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import Background from "Background" /* 6950 */;
-import CircleXIcon from "CircleXIcon" /* 7341 */;
-import useIsSafetyHubLoadingDefault from "useIsSafetyHubLoading" /* 14107 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import CircleXIcon from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import useIsSafetyHubLoadingDefault from "../hooks/useSafetyHubLoading.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

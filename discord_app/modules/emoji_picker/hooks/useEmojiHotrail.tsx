@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/hooks/useEmojiHotrail.tsx
-import closure_0 from "noop" /* 19 */;
-import { EMOJI_ROW_SIZE } from "EmojiCategoryTypes" /* 6731 */;
+import closure_0 from "../../../../_runtime/00019_noop.js";
+import { EMOJI_ROW_SIZE } from "../EmojiPickerConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 

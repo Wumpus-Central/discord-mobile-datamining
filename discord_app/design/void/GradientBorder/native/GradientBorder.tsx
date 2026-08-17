@@ -1,11 +1,11 @@
 // discord_app/design/void/GradientBorder/native/GradientBorder.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import t from "t" /* 4486 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import t from "../../../../../_runtime/04486_t.js";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class GradientBorder {

@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
 
 require = arg1;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {

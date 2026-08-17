@@ -1,7 +1,7 @@
 // discord_app/modules/interaction_components/LocalInteractionComponentStateStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import LimitedMapDefault from "LimitedMap" /* 8328 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import LimitedMapDefault from "../../lib/LimitedMap.tsx";
 
 let closure_0 = new LimitedMapDefault(196606);
 let c1 = 0;

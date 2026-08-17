@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/useChatBottomManagerUIStore.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import keys from "../../../../_runtime/00644_keys.js";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 let chatInputContainerHeight = "chatInputContainerHeight";

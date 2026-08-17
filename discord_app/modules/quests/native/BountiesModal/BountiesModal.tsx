@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModal.tsx
-import importAllResult from "noop" /* 19 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,9 +1,9 @@
 // discord_app/modules/games/GameStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import closure_2 from "getOfficialApplicationId" /* 4506 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import closure_2 from "GameRecord.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function handleLoadMessages(messages) {
   messages = messages.messages;

@@ -1,21 +1,21 @@
 // discord_app/modules/stage_channels/StageChannelParticipantStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import sortKeyDefault from "sortKey" /* 6703 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
-import closure_12 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_13 from "buildStageChannelUserRoles" /* 4990 */;
-import closure_14 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import sortKeyDefault from "StageChannelParticipants.tsx";
+import closure_3 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/RelationshipStore.tsx";
+import closure_9 from "../../stores/SpeakingStore.tsx";
+import closure_10 from "../../stores/UserStore.tsx";
+import closure_11 from "../../stores/VoiceStateStore.tsx";
+import closure_12 from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_13 from "StageChannelRoleStore.tsx";
+import closure_14 from "StageInstanceStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 function getActiveStageChannelIds(guildId) {

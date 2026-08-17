@@ -1,6 +1,6 @@
 // discord_app/modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx
-import sampleWithUserId from "sampleWithUserId" /* 5062 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import sampleWithUserId from "../app_analytics/sampleWithUserId.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");

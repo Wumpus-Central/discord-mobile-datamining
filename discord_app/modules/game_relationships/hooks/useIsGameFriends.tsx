@@ -1,7 +1,7 @@
 // discord_app/modules/game_relationships/hooks/useIsGameFriends.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 5406 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../GameRelationshipStore.tsx";
+import { RelationshipTypes } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { isVersionEqual } from "../../../utils/SecondaryIndexMapUtils.tsx";
 

@@ -1,8 +1,8 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "map" /* 12285 */;
-import ME from "ME" /* 676 */;
-import initialize from "initialize" /* 589 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import importDefaultResult from "UserApplicationIdentityStore.tsx";
+import ME from "../../Constants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let c4 = importDefaultResult;

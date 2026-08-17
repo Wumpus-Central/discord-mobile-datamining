@@ -1,6 +1,6 @@
 // discord_app/modules/channel/native/ScreenIndexFrozen.tsx
-import closure_2 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set();

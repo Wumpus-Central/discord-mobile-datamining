@@ -1,11 +1,11 @@
 // discord_app/design/components/TableRow/native/RowButton.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import TableRowIcon from "TableRowIcon" /* 6296 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import TableRowInner from "TableRow.native.tsx";
+import TableRowIcon from "TableRowIcon.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 class RowButton {

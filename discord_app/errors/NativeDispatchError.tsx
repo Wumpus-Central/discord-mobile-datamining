@@ -1,6 +1,6 @@
 // discord_app/errors/NativeDispatchError.tsx
-import set from "set" /* 2 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import set from "../../_runtime/00002_set.js";
+import RPC_SCOPE_CONFIG from "../modules/rpc/Constants.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { formatSize } from "../utils/FileSizeUtils.tsx";
 

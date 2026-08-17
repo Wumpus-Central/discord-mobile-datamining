@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import now from "now" /* 1336 */;
-import defineProperty from "defineProperty" /* 1337 */;
-import defineProperty2 from "defineProperty" /* 4368 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import now from "../../../google/protobuf/timestamp.tsx";
+import defineProperty from "../../../google/protobuf/wrappers.tsx";
+import defineProperty2 from "rules.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 let obj = { EXCLUSIVE: 0, [0]: "EXCLUSIVE", SYNCED: 1, [1]: "SYNCED", PRE_ALLOCATED: 2, [2]: "PRE_ALLOCATED" };

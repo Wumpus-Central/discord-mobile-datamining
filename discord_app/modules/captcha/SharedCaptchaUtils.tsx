@@ -1,7 +1,7 @@
 // discord_app/modules/captcha/SharedCaptchaUtils.tsx
-import set from "set" /* 2 */;
-import CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10480 */;
-import useCaptchaStore from "useCaptchaStore" /* 10479 */;
+import set from "../../../_runtime/00002_set.js";
+import CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS from "CaptchaConstants.tsx";
+import useCaptchaStore from "CaptchaStore.tsx";
 
 ({ incrementCaptchaServeVolume: c0, flushCaptchaServeVolume: closure_1, isCaptchaStoreVolumeEmpty: obj1 } = useCaptchaStore);
 let closure_3 = CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS.CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS;

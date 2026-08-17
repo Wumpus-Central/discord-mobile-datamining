@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesListImplExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../../../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { list: "flash", recycleItems: false }, 3: { list: "legend", recycleItems: false } };
 obj[3] = { list: "legend", recycleItems: true };

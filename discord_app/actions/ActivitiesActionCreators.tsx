@@ -1,9 +1,9 @@
 // discord_app/actions/ActivitiesActionCreators.tsx
-import _modDef4770 from "module_4770" /* 4770 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import _modDef4770 from "ChannelActionCreators.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/ChannelStore.tsx";
+import ME from "../Constants.tsx";
+import { MessageSendLocation } from "../modules/messages/MessageConstants.tsx";
 
 const require = arg1;
 ({ Endpoints: c5, ActivityTypes: closure_6, AnalyticEvents: error, LoggingInviteTypes: closure_8 } = ME);

@@ -1,8 +1,8 @@
 // discord_app/modules/game_profile/hooks/usePendingGameProfileReturn.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleLoadMessages" /* 4505 */;
-import closure_5 from "getSimilarGames" /* 9098 */;
-import { AVATAR_SIZE } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../games/GameStore.tsx";
+import closure_5 from "../GameProfileStore.tsx";
+import { AVATAR_SIZE } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");

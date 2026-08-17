@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/mocks/GameServerMocks.tsx
-import set from "set" /* 2 */;
-import GameServerProviderType from "GameServerProviderType" /* 4264 */;
-import GameServerStatus from "GameServerStatus" /* 11654 */;
+import set from "../../../../_runtime/00002_set.js";
+import GameServerProviderType from "../../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
+import GameServerStatus from "../../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx";
 
 const items = [{ title: "2", description: "GB" }, { title: "1", description: "vCPU" }, { title: "25", description: "GB" }];
 const items1 = [{ id: "1", name: "GameServer #1", cost: 3, specifications: items }, , ];

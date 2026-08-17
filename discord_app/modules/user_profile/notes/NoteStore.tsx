@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/notes/NoteStore.tsx
-import set2 from "set" /* 2 */;
-import identity from "identity" /* 1911 */;
-import items from "items" /* 1914 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import identity from "../../libdiscore/stores/LibdiscoreStore.tsx";
+import items from "../../libdiscore/libdiscoreExperiments.tsx";
+import isValueEqual from "../../../lib/PlainRecord.tsx";
 
 ({ TypeTag, constructInPlace: c0 } = isValueEqual);
 const LibdiscoreStore = identity.LibdiscoreStore;

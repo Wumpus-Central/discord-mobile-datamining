@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import closure_3 from "noop" /* 19 */;
-import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes" /* 9782 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ image: { width: 231, height: 160 } });

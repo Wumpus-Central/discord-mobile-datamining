@@ -1,19 +1,19 @@
 // discord_app/modules/premium/native/gifting/GiftBadgePostPurchase.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import Text from "Text" /* 4734 */;
-import GiftingBadgeProgressBarDefault from "GiftingBadgeProgressBar" /* 10421 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 10422 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 8936 */;
-import getTierForProgress from "getTierForProgress" /* 10420 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import messagesProxyDefault from "../../gifting/GiftingBadge.messages.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import GiftingBadgeProgressBarDefault from "../../gifting/native/views/GiftingBadgeProgress.tsx";
+import GiftingBadgeLevelUpProgressDefault from "../../gifting/native/views/GiftingBadgeLevelUpProgress.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../badges/BadgeDirectoryStore.tsx";
+import getTierForProgress from "../../gifting/GiftingBadgeConstants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PostPurchaseFooter(onSendGift) {

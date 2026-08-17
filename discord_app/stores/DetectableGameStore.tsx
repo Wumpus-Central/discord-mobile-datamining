@@ -1,17 +1,17 @@
 // discord_app/stores/DetectableGameStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import createExecutable2 from "createExecutable" /* 4479 */;
-import ApplicationTypes2 from "ApplicationTypes" /* 4482 */;
-import keysDefault from "keys" /* 4510 */;
-import GameTheme from "GameTheme" /* 4511 */;
-import set from "set" /* 500 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import ME from "../Constants.tsx";
+import setDefault from "../utils/Durations.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import createExecutable2 from "../records/ApplicationRecord.tsx";
+import ApplicationTypes2 from "../modules/applications/ApplicationConstants.tsx";
+import keysDefault from "../lib/CachedEntriesMap.tsx";
+import GameTheme from "../modules/game_detection/GameDetectionTypes.tsx";
+import set from "../utils/PlatformUtils.tsx";
 import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 function gameFromServer(id) {

@@ -1,10 +1,10 @@
 // discord_app/modules/creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7220 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import useUnmountAbortSignalDefault from "../../hooks/useUnmountAbortSignal.tsx";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
+import { FetchState } from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: c9 } = ME);

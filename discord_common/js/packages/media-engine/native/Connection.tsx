@@ -1,12 +1,12 @@
 // discord_common/js/packages/media-engine/native/Connection.tsx
-import inject from "inject" /* 4499 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import destroyDefault from "destroy" /* 4580 */;
-import WantsVideoQuality from "WantsVideoQuality" /* 4581 */;
-import VADAggressiveness2 from "VADAggressiveness" /* 4633 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import AudioSubsystems from "AudioSubsystems" /* 4571 */;
+import inject from "inject.tsx";
+import BaseConnectionEvent from "../index.tsx";
+import destroyDefault from "../BaseConnection.tsx";
+import WantsVideoQuality from "../VideoQualityManager.tsx";
+import VADAggressiveness2 from "VoiceEngine.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import DesktopSources from "../Constants.tsx";
+import AudioSubsystems from "Constants.tsx";
 import { items } from "../utils/VideoCodecUtils.tsx";
 
 require = arg1;

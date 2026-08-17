@@ -1,5 +1,5 @@
 // discord_app/modules/soundboard/SoundboardConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };
 const items = [, ];

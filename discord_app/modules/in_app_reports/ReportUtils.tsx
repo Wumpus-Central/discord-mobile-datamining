@@ -1,15 +1,15 @@
 // discord_app/modules/in_app_reports/ReportUtils.tsx
-import _modDef38 from "module_38" /* 38 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import ReportNames from "ReportNames" /* 8137 */;
-import set from "set" /* 8139 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUserAgnosticState" /* 4737 */;
-import ME from "ME" /* 676 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import ReportNames from "MenuTypes.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../devtools/dev_settings/DevSettingsStore.tsx";
+import ME from "../../Constants.tsx";
+import { SafetyToastType } from "../safety_common/Constants.tsx";
 
 require = arg1;
 function getReportMenu(closure_0, closure_1) {

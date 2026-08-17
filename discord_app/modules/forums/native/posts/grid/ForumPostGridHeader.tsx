@@ -1,14 +1,14 @@
 // discord_app/modules/forums/native/posts/grid/ForumPostGridHeader.tsx
-import noopAll from "noop" /* 19 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11179 */;
-import ForumPostUsername from "ForumPostUsername" /* 11181 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11190 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11192 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
-import { ChannelFlags } from "set" /* 1398 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ForumPostPinIconDefault from "../ForumPostPinIcon.tsx";
+import ForumPostUsername from "../ForumPostUsername.tsx";
+import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
+import ForumPostTitleDefault from "../ForumPostTitle.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ForumTimestampFormats } from "../../../ForumConstants.tsx";
+import { ChannelFlags } from "../../../../channel/ChannelConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

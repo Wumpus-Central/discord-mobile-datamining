@@ -1,5 +1,5 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { DEFAULT: "DEFAULT", YAPPING: "YAPPING", VENTING: "VENTING", OVERSHARING: "OVERSHARING", BARKING: "BARKING", BABBLING: "BABBLING", DAYDREAMING: "DAYDREAMING" };
 obj = { emojis: [], typingSuggestion: obj.DEFAULT, animation: null };

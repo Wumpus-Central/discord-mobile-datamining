@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 10228 */;
-import _modDef13991 from "module_13991" /* 13991 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4045 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../_runtime/10228_registerAsset.js";
+import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../../stores/billing/SubscriptionStore.tsx";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import { UserSettingsSections } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

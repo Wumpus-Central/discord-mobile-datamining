@@ -1,8 +1,8 @@
 // discord_app/modules/auth/makeAuthenticated.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import { LoginStates } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import { LoginStates } from "../../Constants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

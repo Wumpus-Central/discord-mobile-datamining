@@ -1,9 +1,9 @@
 // discord_app/modules/contact_sync/native/ContactSyncPersistedStore.tsx
-import set from "set" /* 2 */;
-import Storage4 from "Storage" /* 595 */;
-import batchUpdates from "batchUpdates" /* 705 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 

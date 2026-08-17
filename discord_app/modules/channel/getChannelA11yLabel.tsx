@@ -1,13 +1,13 @@
 // discord_app/modules/channel/getChannelA11yLabel.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import nameFromUser from "nameFromUser" /* 4219 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import nameFromUser from "../../utils/UserUtils.tsx";
+import computeChannelName from "useChannelName.tsx";
+import isRoleRequiredDefault from "isRoleRequired.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
 ({ ChannelTypes: closure_6, StatusTypes: error } = ME);

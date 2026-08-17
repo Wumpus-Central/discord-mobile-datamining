@@ -1,12 +1,12 @@
 // discord_app/stores/VoiceChannelSettingsManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "bitrate" /* 4537 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "mode" /* 13103 */;
-import { VideoQualityMode } from "ME" /* 676 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import initializeDefault from "../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "BitRateStore.tsx";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "SelectedChannelStore.tsx";
+import closure_6 from "VideoQualityModeStore.tsx";
+import { VideoQualityMode } from "../Constants.tsx";
 
 function updateVoiceSettings() {
   let obj = store2;

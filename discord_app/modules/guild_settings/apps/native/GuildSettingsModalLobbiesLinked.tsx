@@ -1,9 +1,9 @@
 // discord_app/modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/RelationshipStore.tsx";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import { GuildSettingsSections } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { NavScrim } from "../../../../design/components/Navigator/native/NavScrim.android.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";

@@ -1,14 +1,14 @@
 // discord_app/modules/auth/native/components/RegisterUsernameInput.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import NameValidationState from "NameValidationState" /* 14116 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15230 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import NameValidationState from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
+import useFocusRefOnNavigationDefault from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import useRegistrationUIStore from "../RegistrationUIStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { FadeIn, FadeOut, LinearTransition, Easing } from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function UsernameStatusMessage(arg0) {

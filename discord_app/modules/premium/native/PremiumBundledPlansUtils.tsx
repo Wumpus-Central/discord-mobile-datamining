@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumBundledPlansUtils.tsx
-import SubscriptionPlans from "SubscriptionPlans" /* 5322 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import SubscriptionPlans from "ProductIds.android.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import GuildFeatures from "../PremiumConstants.tsx";
 import { SubscriptionPlans } from "ProductIds.android.tsx";
 
 require = arg1;

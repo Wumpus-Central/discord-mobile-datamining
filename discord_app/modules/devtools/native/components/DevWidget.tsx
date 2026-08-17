@@ -1,14 +1,14 @@
 // discord_app/modules/devtools/native/components/DevWidget.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 14882 */;
-import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15193 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "initialize" /* 7471 */;
-import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 710 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import StaffBadgeIcon from "../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx";
+import VisualEffectViewOverrideOverlay_Default from "../../../visual_effect_view/native/overrides/VEVOO.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../DevToolsSettingsStore.tsx";
+import { DEV_WIDGET_SIZE } from "../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DraggableContainer(children) {

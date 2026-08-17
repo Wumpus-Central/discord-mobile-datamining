@@ -1,13 +1,13 @@
 // discord_app/modules/application_account_linking/native/AccountLinkBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import apexExperiment from "apexExperiment" /* 15456 */;
-import apexExperimentDefault from "apexExperiment" /* 15456 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import apexExperiment from "../experiments/mobileAccountLinkingExperiment.tsx";
+import apexExperimentDefault from "../experiments/mobileAccountLinkingExperiment.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function AccountLinkLargeBanner(arg0) {

@@ -1,15 +1,15 @@
 // discord_app/modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx
-import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import setStoredContacts from "setStoredContacts" /* 11852 */;
-import _uploadContacts from "_uploadContacts" /* 11853 */;
-import getFriendStatusCountsDefault from "getFriendStatusCounts" /* 15970 */;
-import closure_4 from "initialize" /* 5410 */;
-import closure_5 from "recountRelationshipTypes" /* 5406 */;
-import closure_6 from "set" /* 5221 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
+import setStoredContacts from "../../../contact_sync/native/ContactSyncPersistedStore.tsx";
+import _uploadContacts from "../../../contact_sync/native/ContactSyncUtils.tsx";
+import getFriendStatusCountsDefault from "../../../friends/getFriendStatusCounts.tsx";
+import closure_4 from "../../../friend_suggestions/FriendSuggestionStore.tsx";
+import closure_5 from "../../../game_relationships/GameRelationshipStore.tsx";
+import closure_6 from "../../../../stores/ConnectedAccountsStore.tsx";
+import closure_7 from "../../../../stores/RelationshipStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 const useContactSyncStore = setStoredContacts.useContactSyncStore;
 ({ PlatformTypes: closure_8, FriendDiscoveryFlags: c9 } = ME);

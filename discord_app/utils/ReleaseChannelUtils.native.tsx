@@ -1,6 +1,6 @@
 // discord_app/utils/ReleaseChannelUtils.native.tsx
-import getConstantsAll from "getConstants" /* 1626 */;
-import set from "set" /* 500 */;
+import getConstantsAll from "native/ClientInfoUtils.tsx";
+import set from "PlatformUtils.tsx";
 
 const ReleaseChannel = getConstantsAll.getConstants().ReleaseChannel;
 set = set.isAndroid();

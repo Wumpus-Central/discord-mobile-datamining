@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/experiments/VoiceChannelGamesExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../../experiments/apex/ApexExperiment.tsx";
 
 const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;

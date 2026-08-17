@@ -1,15 +1,15 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx
-import playDefault from "play" /* 7130 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import registerAssetDefault from "registerAsset" /* 11625 */;
-import registerAssetDefault2 from "registerAsset" /* 11626 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { TextAreaCta } from "TextAreaCta" /* 11149 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
+import ChatInputGuardDefault from "ChatInputGuard.tsx";
+import registerAssetDefault from "../../../../../_runtime/11625_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/11626_registerAsset.js";
+import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import { TextAreaCta } from "../ChatInputConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });

@@ -1,10 +1,10 @@
 // discord_app/design/components/TextField/native/TextField.native.tsx
-import useTextFieldState from "useTextFieldState" /* 7339 */;
-import useInputClearButton from "useInputClearButton" /* 7340 */;
-import InputAttachmentContainer from "InputAttachmentContainer" /* 7344 */;
-import BaseTextField from "BaseTextField" /* 7347 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import useTextFieldState from "useTextField.native.tsx";
+import useInputClearButton from "../../Input/native/useInputClearButton.native.tsx";
+import InputAttachmentContainer from "../../Input/native/useInputAttachments.native.tsx";
+import BaseTextField from "BaseTextField.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {

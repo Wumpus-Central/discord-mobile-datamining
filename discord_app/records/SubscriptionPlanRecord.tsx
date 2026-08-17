@@ -1,6 +1,6 @@
 // discord_app/records/SubscriptionPlanRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import toJSDefault from "../lib/Record.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
 toJSDefault;
 ({ PremiumSubscriptionSKUs: c0, PremiumTypes: closure_1, SubscriptionPlans: obj1 } = GuildFeatures);

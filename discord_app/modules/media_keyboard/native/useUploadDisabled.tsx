@@ -1,9 +1,9 @@
 // discord_app/modules/media_keyboard/native/useUploadDisabled.tsx
-import set from "set" /* 2 */;
-import handleChanged from "handleChanged" /* 4825 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "map" /* 4824 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import handleChanged from "../../../stores/DraftStore.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../stores/UploadAttachmentStore.tsx";
+import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const DraftType = handleChanged.DraftType;

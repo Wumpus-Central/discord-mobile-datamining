@@ -1,16 +1,16 @@
 // discord_app/modules/activities/utils/useActivityShelfItem.tsx
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
-import canLaunchFrame from "canLaunchFrame" /* 8704 */;
-import getPlatformDefault from "getPlatform" /* 8718 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11233 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11234 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11235 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import { STAFF_RELEASE_PHASES } from "items3" /* 4481 */;
-import { ApplicationFlags } from "ME" /* 676 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 8709 */;
+import getApplicationFlags from "../../applications/utils/ApplicationFlagUtils.tsx";
+import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
+import getPlatformDefault from "getPlatform.tsx";
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground.tsx";
+import useEmbeddedAppsDefault from "../useEmbeddedAppsForChannel.tsx";
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../EmbeddedActivitiesStore.tsx";
+import { STAFF_RELEASE_PHASES } from "../Constants.tsx";
+import { ApplicationFlags } from "../../../Constants.tsx";
+import { MAIN_SURFACE } from "../../frames/FramesConstants.tsx";
 
 require = arg1;
 function useActivityAction(applicationId) {

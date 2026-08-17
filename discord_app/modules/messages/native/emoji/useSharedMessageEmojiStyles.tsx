@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/emoji/useSharedMessageEmojiStyles.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 let obj = { emojiContainer: { flexDirection: "row", alignItems: "center" }, emojiDescriptionWrapper: { flexDirection: "column", flex: 1 }, emojiWrapper: { marginLeft: -8, marginRight: 8 }, emojiIcon: null, divider: null, ctaButton: null };
 obj = { width: 40, height: 40, marginRight: 12, borderRadius: ThemesDefault.radii.sm, resizeMode: "contain" };

@@ -1,6 +1,6 @@
 // discord_app/modules/activities/records/CustomActivityLinkRecord.tsx
-import set from "set" /* 2 */;
-import CustomLinkType from "CustomLinkType" /* 12414 */;
+import set from "../../../../_runtime/00002_set.js";
+import CustomLinkType from "../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx";
 
 let result = set.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {

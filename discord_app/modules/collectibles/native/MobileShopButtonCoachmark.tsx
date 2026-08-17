@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/MobileShopButtonCoachmark.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { image: null };

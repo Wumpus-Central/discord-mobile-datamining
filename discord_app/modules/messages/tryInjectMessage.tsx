@@ -1,9 +1,9 @@
 // discord_app/modules/messages/tryInjectMessage.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import createMessageDefault from "createMessage" /* 7500 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import createMinimalMessageRecord from "MessageRecordUtils.tsx";
+import createMessageDefault from "createMessage.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ MessageFlags: c4, MessageStates: c5, MessageTypes: closure_6 } = ME);

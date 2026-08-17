@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/getMediaViewerStateForScreen.tsx
-import set from "set" /* 2 */;
-import isValidImageAttachment from "isValidImageAttachment" /* 8994 */;
+import set from "../../../../_runtime/00002_set.js";
+import isValidImageAttachment from "MediaSourceUtil.tsx";
 
 let result = set.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 

@@ -1,18 +1,18 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianBottomSheet.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import Background from "Background" /* 6950 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14237 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 14238 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
-import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "items" /* 5297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import useOnNewPendingRequestDefault from "../hooks/useOnNewPendingRequest.tsx";
+import ConnectGuardianCard from "ConnectGuardianCard.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../FamilyCenterStore.tsx";
+import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "../FamilyCenterConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

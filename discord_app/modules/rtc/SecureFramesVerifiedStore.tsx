@@ -1,14 +1,14 @@
 // discord_app/modules/rtc/SecureFramesVerifiedStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9708 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "initialize" /* 4558 */;
-import closure_5 from "map" /* 9691 */;
-import closure_6 from "initialize" /* 9692 */;
-import { RTCConnectionStates } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
+import getCurrentUserSigningKey from "SecureFramesUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../stores/StreamRTCConnectionStore.tsx";
+import closure_5 from "TransientKeyStore.tsx";
+import closure_6 from "VerifiedKeyStore.tsx";
+import { RTCConnectionStates } from "../../Constants.tsx";
 
 require = arg1;
 function computeCallVerification() {

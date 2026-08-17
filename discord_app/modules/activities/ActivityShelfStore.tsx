@@ -1,6 +1,6 @@
 // discord_app/modules/activities/ActivityShelfStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 let closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
 const PersistedStore = initializeDefault.PersistedStore;

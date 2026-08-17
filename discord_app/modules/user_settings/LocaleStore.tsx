@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/LocaleStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { setAppLocale } from "_setAppLocale" /* 1995 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { systemLocale } from "getSystemLocale" /* 1236 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { setAppLocale } from "../../intl/IntlLoaderStore.tsx";
+import closure_5 from "UserSettingsProtoStore.tsx";
+import { systemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 function _getSystemLocale() {

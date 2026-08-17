@@ -1,5 +1,5 @@
 // discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 
 let set = {
   resolve(enabledExperiments) {

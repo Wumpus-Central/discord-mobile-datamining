@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 705 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import batchUpdates from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import keys from "../../../../../../../_runtime/00644_keys.js";
 
 let closure_2 = { isSearchActive: false, searchActiveSource: "initial" };
 let obj = keys.create(() => {

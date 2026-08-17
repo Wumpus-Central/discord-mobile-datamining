@@ -1,8 +1,8 @@
 // discord_app/modules/settings/native/renderer/SettingTreeManager.tsx
-import set from "set" /* 2 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
-import map from "map" /* 13997 */;
-import frozen from "frozen" /* 13998 */;
+import set from "../../../../../_runtime/00002_set.js";
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
+import map from "SettingHookHarness.tsx";
+import frozen from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
 
 const NodeType = GUILD_SELECT_ALL_SERVERS_OPTION_ID.NodeType;
 class SettingTreeManagerCache {

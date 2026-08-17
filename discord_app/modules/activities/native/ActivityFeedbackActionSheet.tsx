@@ -1,11 +1,11 @@
 // discord_app/modules/activities/native/ActivityFeedbackActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
-import getActivityReportOptionsDefault from "getActivityReportOptions" /* 16570 */;
-import { ActivityFeedbackReasons } from "items3" /* 4481 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { FeedbackType } from "FeedbackRating" /* 10811 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import closeActionSheetDefault from "../../feedback/native/FeedbackActionSheet.tsx";
+import getActivityReportOptionsDefault from "../getActivityReportOptions.tsx";
+import { ActivityFeedbackReasons } from "../Constants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { FeedbackType } from "../../feedback/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

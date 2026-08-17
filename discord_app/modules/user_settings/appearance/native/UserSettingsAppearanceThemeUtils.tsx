@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ClientThemeType from "ClientThemeType" /* 1349 */;
-import setSystemTheme from "setSystemTheme" /* 4222 */;
-import enableSameAsDeviceTheme from "enableSameAsDeviceTheme" /* 14530 */;
-import closure_3 from "reset" /* 1346 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import { SystemThemeState } from "SystemThemeState" /* 1305 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_7 } from "ThemeTypes" /* 1348 */;
-import { AnalyticsPremiumFeatureNames as closure_8 } from "GuildFeatures" /* 1924 */;
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import ClientThemeType from "../../../client_themes/ClientThemesTypes.tsx";
+import setSystemTheme from "../../ThemeActionCreators.tsx";
+import enableSameAsDeviceTheme from "../SameAsDeviceThemeUtils.tsx";
+import closure_3 from "../../../client_themes/native/CustomThemeMobileStore.tsx";
+import closure_4 from "../../ThemeStore.tsx";
+import { SystemThemeState } from "../../ThemeConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_7 } from "../../../client_themes/ClientThemesConstants.tsx";
+import { AnalyticsPremiumFeatureNames as closure_8 } from "../../../premium/PremiumConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");

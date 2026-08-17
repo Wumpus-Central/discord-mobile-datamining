@@ -1,6 +1,6 @@
 // discord_app/modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../GameServerStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");

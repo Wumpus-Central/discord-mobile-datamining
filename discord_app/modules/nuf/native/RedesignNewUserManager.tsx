@@ -1,8 +1,8 @@
 // discord_app/modules/nuf/native/RedesignNewUserManager.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 5038 */;
-import ContactSyncModes from "ContactSyncModes" /* 11850 */;
-import closure_5 from "initialize" /* 4494 */;
+import set from "../../../../_runtime/00002_set.js";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import ContactSyncModes from "../../contact_sync/native/ContactSyncModalStore.tsx";
+import closure_5 from "../NewUserStore.tsx";
 
 ({ initialize: c3, ContactSyncModes: c4 } = ContactSyncModes);
 initializeDefault;

@@ -1,7 +1,7 @@
 // discord_common/js/packages/media-engine/native/ui/Camera.tsx
-import noopAll from "noop" /* 19 */;
-import VideoDefault from "Video" /* 4573 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import VideoDefault from "Video.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 class Camera {
   constructor(arg0) {

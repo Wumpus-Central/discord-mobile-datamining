@@ -1,11 +1,11 @@
 // discord_app/modules/custom_status/setCustomStatus.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import tDefault from "t" /* 3975 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import StatusTypes from "StatusTypes" /* 9292 */;
-import getClearAfterDurationDefault from "getClearAfterDuration" /* 9296 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import StatusTypes from "Constants.tsx";
+import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const AnalyticEvents = ME.AnalyticEvents;

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx
-import closure_2 from "reinjectEphemerals" /* 4994 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
+import closure_2 from "../../../../../stores/MessageStore.tsx";
+import { DEFAULT_SOUND_GUILD_ID } from "../../../../soundboard/SoundboardConstants.tsx";
 import { MessageReferenceTypes } from "../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx";
 import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
 

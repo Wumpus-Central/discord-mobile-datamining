@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/users/v1/user.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import now from "now" /* 1336 */;
-import defineProperty from "defineProperty" /* 1337 */;
-import create2 from "create" /* 1941 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14, MessageType as MessageType15, MessageType as MessageType16, MessageType as MessageType17, MessageType as MessageType18, MessageType as MessageType19, MessageType as MessageType20, MessageType as MessageType21, MessageType as MessageType22, MessageType as MessageType23, MessageType as MessageType24, MessageType as MessageType25, MessageType as MessageType26, MessageType as MessageType27, MessageType as MessageType28, MessageType as MessageType29, MessageType as MessageType30, MessageType as MessageType31, MessageType as MessageType32, MessageType as MessageType33 } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import now from "../../../google/protobuf/timestamp.tsx";
+import defineProperty from "../../../google/protobuf/wrappers.tsx";
+import create2 from "../../safety_common/v1/safety_state.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14, MessageType as MessageType15, MessageType as MessageType16, MessageType as MessageType17, MessageType as MessageType18, MessageType as MessageType19, MessageType as MessageType20, MessageType as MessageType21, MessageType as MessageType22, MessageType as MessageType23, MessageType as MessageType24, MessageType as MessageType25, MessageType as MessageType26, MessageType as MessageType27, MessageType as MessageType28, MessageType as MessageType29, MessageType as MessageType30, MessageType as MessageType31, MessageType as MessageType32, MessageType as MessageType33 } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 let obj = { DAY_OF_WEEK_UNSPECIFIED: 0, [0]: "DAY_OF_WEEK_UNSPECIFIED", MONDAY: 1, [1]: "MONDAY", TUESDAY: 2, [2]: "TUESDAY", WEDNESDAY: 3, [3]: "WEDNESDAY", THURSDAY: 4, [4]: "THURSDAY", FRIDAY: 5, [5]: "FRIDAY", SATURDAY: 6, [6]: "SATURDAY", SUNDAY: 7, [7]: "SUNDAY" };

@@ -1,8 +1,8 @@
 // discord_app/modules/games/autocomplete/queryGamesAutocomplete.tsx
-import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 6900 */;
-import fetchStore from "fetchStore" /* 7600 */;
-import closure_2 from "set" /* 6899 */;
-import importDefaultResult from "debounce" /* 636 */;
+import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GameAutocompleteUtils.tsx";
+import fetchStore from "useGameAutocomplete.tsx";
+import closure_2 from "GameAutocompleteStore.tsx";
+import importDefaultResult from "../../../../_runtime/00636_debounce.js";
 
 require = arg1;
 let closure_3 = importDefaultResult((arg0) => {

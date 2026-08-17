@@ -1,7 +1,7 @@
 // discord_app/modules/guild_badge/GuildBadgeConstants.tsx
-import set from "set" /* 2 */;
-import BadgeCategory from "BadgeCategory" /* 9154 */;
-import GuildVisibility from "GuildVisibility" /* 9155 */;
+import set from "../../../_runtime/00002_set.js";
+import BadgeCategory from "BadgeCategory.tsx";
+import GuildVisibility from "GuildTraits.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 

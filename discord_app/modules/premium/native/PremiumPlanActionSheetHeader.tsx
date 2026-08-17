@@ -1,14 +1,14 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
-import noopAll from "noop" /* 19 */;
-import keys from "keys" /* 691 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { getPremiumGradientColor } from "items" /* 7403 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import keys from "../../../ConstantsIOS.tsx";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import GuildFeatures from "../PremiumConstants.tsx";
+import { getPremiumGradientColor } from "../../colors/native/ColorConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

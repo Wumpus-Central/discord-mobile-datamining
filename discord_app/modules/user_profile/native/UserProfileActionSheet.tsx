@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileActionSheet.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "handleFormOpen" /* 8370 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import ME from "ME" /* 676 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import closure_10 from "../UserProfileSettingsStore.tsx";
+import { UserProfileThemeTypes } from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function UseAnimatedPosition(animatedPosition) {

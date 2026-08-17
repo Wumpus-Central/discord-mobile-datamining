@@ -1,9 +1,9 @@
 // discord_app/stores/billing/BraintreeStore.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 ({ Endpoints: c4, PaymentGateways: c5, PaymentSourceTypes: closure_6 } = ME);
 let c7 = null;

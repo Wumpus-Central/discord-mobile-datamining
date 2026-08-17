@@ -1,20 +1,20 @@
 // discord_app/modules/video_calls/native/useScreenshareUtils.tsx
-import inject from "inject" /* 4499 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import contextDefault from "context" /* 7139 */;
-import initializeDefault from "initialize" /* 7504 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import watchStream from "watchStream" /* 9860 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 10930 */;
-import useHasVideoPermissionDefault from "useHasVideoPermission" /* 10930 */;
-import apexExperimentDefault from "apexExperiment" /* 10938 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import { ApplicationStreamStates } from "ME" /* 676 */;
-import { Features } from "DesktopSources" /* 4529 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
+import isStreamKey from "../../go_live/utils/StreamKeyUtils.tsx";
+import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import initializeDefault from "../../foreground_service/mobile/ForegroundServiceManager.android.tsx";
+import _handleToggleVideo from "../../voice_calls/native/CallsUtils.tsx";
+import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
+import watchStream from "../../../actions/StreamActionCreators.tsx";
+import useHasVideoPermission from "../useHasVideoPermission.tsx";
+import useHasVideoPermissionDefault from "../useHasVideoPermission.tsx";
+import apexExperimentDefault from "../../go_live/native/MobileGoLiveUpsellExperiment.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../stores/MediaEngineStore.tsx";
+import { ApplicationStreamStates } from "../../../Constants.tsx";
+import { Features } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/PostConnectionCallbackStore.tsx
-import closure_0 from "initialize" /* 4494 */;
-import closure_1 from "_handleConnectionOpen" /* 4495 */;
-import importDefaultResult from "dispatcher" /* 709 */;
+import closure_0 from "../nuf/NewUserStore.tsx";
+import closure_1 from "GatewayConnectionStore.tsx";
+import importDefaultResult from "../../Dispatcher.tsx";
 
 function processCallbacks() {
   if (null == store.getType()) {

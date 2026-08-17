@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/NotificationSettingsConstants.tsx
-import set from "set" /* 2 */;
-import messagesProxyDefault from "messagesProxy" /* 2629 */;
-import NotifSettings from "NotifSettings" /* 13821 */;
-import NotifTypes from "NotifTypes" /* 13822 */;
+import set from "../../../_runtime/00002_set.js";
+import messagesProxyDefault from "NotificationSettings.messages.js";
+import NotifSettings from "../../../discord_common/js/shared/shared-constants/NotifSettings.tsx";
+import NotifTypes from "../../../discord_common/js/shared/shared-constants/NotifTypes.tsx";
 
 let obj = { badge: true, visibility: "popup", vibrate: true, sound: true };
 obj = { badge: true, visibility: "default", vibrate: true, sound: true };

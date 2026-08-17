@@ -1,11 +1,11 @@
 // discord_app/modules/guild_home/ActiveChannelsStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import { isGuildHomeChannel } from "set" /* 1398 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {

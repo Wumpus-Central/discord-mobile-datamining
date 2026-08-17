@@ -1,14 +1,14 @@
 // discord_app/modules/collectibles/native/FractionalNitroCollectedActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE" /* 9247 */;
-import registerAssetDefault from "registerAsset" /* 11991 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import FRACTIONAL_NITRO_COIN_SIZE from "FractionalNitroCoinIllustration.tsx";
+import registerAssetDefault from "../../../../_runtime/11991_registerAsset.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NitroAcquiredHeader(skuId) {

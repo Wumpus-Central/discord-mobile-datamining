@@ -1,17 +1,17 @@
 // discord_app/modules/quests/native/QuestProgressBottomSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import IconButton from "IconButton" /* 8035 */;
-import registerAssetDefault from "registerAsset" /* 9416 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "map" /* 8708 */;
-import closure_8 from "initializeState" /* 7453 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import registerAssetDefault from "../../../../_runtime/09416_registerAsset.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../frames/FramesStore.tsx";
+import closure_8 from "../QuestStore.tsx";
+import { QuestsExperimentLocations } from "../QuestConstants.tsx";
+import { ActivityPanelModes } from "../../activities/panel/ActivityPanelConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function contextMenuButton(arg0) {

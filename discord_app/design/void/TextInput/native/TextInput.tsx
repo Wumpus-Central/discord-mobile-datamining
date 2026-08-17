@@ -1,11 +1,11 @@
 // discord_app/design/void/TextInput/native/TextInput.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import { TextInput } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../shared.tsx";
+import { TextInput } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ KeyboardThemes: c4, Fonts } = ME);

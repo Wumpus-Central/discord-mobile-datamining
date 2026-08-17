@@ -1,7 +1,7 @@
 // discord_app/utils/ErrorCommonUtils.tsx
-import set from "set" /* 2 */;
-import add from "add" /* 594 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../_runtime/00002_set.js";
+import add from "../../discord_common/js/packages/flux/LastFewActions.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 

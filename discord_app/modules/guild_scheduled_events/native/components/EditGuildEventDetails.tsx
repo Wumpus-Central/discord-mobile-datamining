@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 4370 */;
-import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { isGuildScheduledEventActive as closure_6 } from "../../GuildScheduledEventStore.tsx";
+import { GuildScheduledEventEntityTypes as closure_7 } from "../../GuildScheduledEventsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);

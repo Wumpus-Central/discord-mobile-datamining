@@ -1,18 +1,18 @@
 // discord_app/design/void/InputView/native/InputView.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4734 */;
-import CircleXIcon from "CircleXIcon" /* 7341 */;
-import BottomSheetTextInputDefault from "BottomSheetTextInput" /* 11351 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../native.tsx";
+import AccessibilityAnnouncer from "../../../shared.tsx";
+import Text from "../../../components/Text/native/Text.tsx";
+import CircleXIcon from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import BottomSheetTextInputDefault from "../../../../modules/action_sheet/native/components/BottomSheetTextInput.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Fonts } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_3 = ["numberOfLines", "disableConstantNumberOfLines", "inputTextColor", "placeholder", "placeholderTextColor", "editable", "large", "accessibilityHint", "maxLength", "inActionSheet", "trailingButton", "clearButtonVisibility", "disabled", "style", "inputTextStyle", "onChangeText", "onFocus", "value"];

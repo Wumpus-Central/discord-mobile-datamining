@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/AppStoreOverlayTelemetryManager.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import ME from "ME" /* 676 */;
-import initializeDefault from "initialize" /* 5038 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import ME from "../../../Constants.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c3 = null;

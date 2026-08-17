@@ -1,5 +1,5 @@
 // discord_common/js/packages/leaky-bucket/LeakyBucket.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");
 class LeakyBucket {

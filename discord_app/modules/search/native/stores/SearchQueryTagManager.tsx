@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/stores/SearchQueryTagManager.tsx
-import set2 from "set" /* 2 */;
-import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import set2 from "../../../../../_runtime/00002_set.js";
+import SearchEntrypointAnalyticsLocations from "../tracking/TrackingConstants.tsx";
+import MessageEmbedTypes from "../../SearchConstants.tsx";
 
 function isComplete(type) {
   return type.type === SearchQueryTagTypes.COMPLETE;

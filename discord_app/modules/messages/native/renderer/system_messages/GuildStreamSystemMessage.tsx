@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4532 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import StreamIssueReportReasons from "../../../../go_live/Constants.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 
 const StreamTypes = StreamIssueReportReasons.StreamTypes;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");

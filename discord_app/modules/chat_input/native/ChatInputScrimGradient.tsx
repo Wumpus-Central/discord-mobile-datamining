@@ -1,11 +1,11 @@
 // discord_app/modules/chat_input/native/ChatInputScrimGradient.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4194 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import getGradientColorByPercentage from "../../client_themes/native/ClientThemesUtils.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

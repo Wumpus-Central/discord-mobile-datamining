@@ -1,7 +1,7 @@
 // discord_app/modules/connections/GuildRoleConnectionsConfigurationStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/GuildStore.tsx";
 
 const map = new Map();
 const Store = initializeDefault.Store;

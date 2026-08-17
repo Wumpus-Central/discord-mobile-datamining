@@ -1,6 +1,6 @@
 // discord_common/js/packages/kv-storage/js/raw/Host.tsx
-import set from "set" /* 1957 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import set from "../implementation/index.tsx";
+import closure_2 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { logger } from "Runtime.tsx";
 
 require = arg1;

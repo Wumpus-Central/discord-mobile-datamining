@@ -1,12 +1,12 @@
 // discord_app/modules/guild/native/GuildBadgeV2.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import badgeVariants from "badgeVariants" /* 9153 */;
-import BadgeCategory from "BadgeCategory" /* 9154 */;
-import GuildVisibility from "GuildVisibility" /* 9155 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Button from "../../../design/void/native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import badgeVariants from "../../guild_badge/native/GuildBadgeImageSource.tsx";
+import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
+import GuildVisibility from "../../guild_badge/GuildTraits.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

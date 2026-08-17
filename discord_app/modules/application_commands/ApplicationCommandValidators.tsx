@@ -1,12 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandValidators.tsx
-import _modDef38 from "module_38" /* 38 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import buildCommand from "buildCommand" /* 5245 */;
-import getStringAll from "getString" /* 10256 */;
-import toChoiceBooleanValue from "toChoiceBooleanValue" /* 10258 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "map" /* 4824 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import buildCommand from "ApplicationCommandUtils.tsx";
+import getStringAll from "ApplicationCommandOptionUtils.tsx";
+import toChoiceBooleanValue from "ApplicationCommandChoiceUtils.tsx";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "../../stores/UploadAttachmentStore.tsx";
 
 require = arg1;
 function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3Q_S) {

@@ -1,19 +1,19 @@
 // discord_app/modules/app_database/modules/GuildBasicChannels.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import fromStringAll from "fromString" /* 506 */;
-import itemsDefault from "items" /* 1955 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_handleConnectionOpen" /* 4495 */;
-import { createChannelRecordFromServer as closure_7 } from "createChannelRecord" /* 1395 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_14 from "hasChannel" /* 1392 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import itemsDefault from "../DatabaseDaos.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../gateway/GatewayConnectionStore.tsx";
+import { createChannelRecordFromServer as closure_7 } from "../../../records/ChannelRecord.tsx";
+import closure_8 from "../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../stores/ChannelStore.tsx";
+import { ChannelLoader } from "../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../stores/GuildRoleStore.tsx";
+import closure_12 from "../../../stores/GuildStore.tsx";
+import closure_13 from "../../../stores/PermissionStore.tsx";
+import closure_14 from "../stores/BasicChannelCacheStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = arg1;
 function hasBasicChannelChanged(basicChannel, nextResult) {

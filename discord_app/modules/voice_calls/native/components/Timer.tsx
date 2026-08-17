@@ -1,8 +1,8 @@
 // discord_app/modules/voice_calls/native/components/Timer.tsx
-import applyDefault from "apply" /* 12 */;
-import Button from "Button" /* 1297 */;
-import { jsxs } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import Button from "../../../../design/void/native.tsx";
+import { jsxs } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const PureComponent = importAllResult.PureComponent;

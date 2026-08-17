@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx
-import initialize from "initialize" /* 589 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8392 */;
-import closure_2 from "getUserAgnosticState" /* 4737 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared.tsx";
+import closure_2 from "../../devtools/dev_settings/DevSettingsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");

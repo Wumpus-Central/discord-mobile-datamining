@@ -1,7 +1,7 @@
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTracking.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 import { items } from "../../../../../discord_common/js/shared/hooks/useIntersectionObserver.tsx";
 import { trackingConfigWithDefaults } from "appMessageEmbedTrackingConfig.tsx";
 

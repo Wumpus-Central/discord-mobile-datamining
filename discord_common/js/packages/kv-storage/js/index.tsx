@@ -1,5 +1,5 @@
 // discord_common/js/packages/kv-storage/js/index.tsx
-import set from "set" /* 1957 */;
+import set from "implementation/index.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/index.tsx");
 for (const key10020 in require("prefix")) {

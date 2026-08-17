@@ -1,16 +1,16 @@
 // discord_app/modules/game_console/GameConsoleManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import start from "start" /* 4259 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleUpdate" /* 4541 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
-import closure_9 from "set" /* 4540 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import timestampDefault from "../debug/Logger.tsx";
+import start from "../../../discord_common/js/packages/timers/Timers.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/MediaEngineStore.tsx";
+import closure_6 from "../../stores/RTCConnectionStore.tsx";
+import closure_7 from "../../stores/SessionsStore.tsx";
+import closure_8 from "../../stores/VoiceStateStore.tsx";
+import closure_9 from "GameConsoleStore.tsx";
+import XBOX_URL_BASE from "GameConsoleConstants.tsx";
+import { MediaEngineContextTypes } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 function syncLocalState() {

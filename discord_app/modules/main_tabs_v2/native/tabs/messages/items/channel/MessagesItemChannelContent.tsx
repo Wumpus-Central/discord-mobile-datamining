@@ -1,22 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import registerAssetDefault from "registerAsset" /* 8606 */;
-import registerAssetDefault2 from "registerAsset" /* 8942 */;
-import registerAssetDefault3 from "registerAsset" /* 9994 */;
-import registerAssetDefault4 from "registerAsset" /* 10086 */;
-import useMessagePreviewDefault from "useMessagePreview" /* 14663 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 15302 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10055 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../../../design/void/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import useThemeDefault from "../../../../../../../hooks/useTheme.tsx";
+import computeChannelNameDefault from "../../../../../../channel/useChannelName.tsx";
+import registerAssetDefault from "../../../../../../../../_runtime/08606_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../../../_runtime/08942_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../../../_runtime/09994_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../../../_runtime/10086_registerAsset.js";
+import useMessagePreviewDefault from "../../../../../useMessagePreviews.tsx";
+import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
+import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../../../../stores/ReadStateStore.tsx";
+import { SUBTITLE_OPACITY_NORMAL } from "../../../../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import { UnreadSetting } from "../../../../../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function MessagesItemChannelContentIcon(selected) {

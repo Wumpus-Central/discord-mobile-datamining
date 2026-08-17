@@ -1,8 +1,8 @@
 // discord_app/modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx
-import set from "set" /* 2 */;
-import canLaunchFrame from "canLaunchFrame" /* 8704 */;
-import _getPrimaryAppCommand from "_getPrimaryAppCommand" /* 8769 */;
-import useIsAppDMDefault from "useIsAppDM" /* 11323 */;
+import set from "../../../_runtime/00002_set.js";
+import canLaunchFrame from "../frames/utils/canLaunchFrame.tsx";
+import _getPrimaryAppCommand from "../application_commands/getPrimaryAppCommand.tsx";
+import useIsAppDMDefault from "useIsAppDM.tsx";
 
 const result = set.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 

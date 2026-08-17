@@ -1,24 +1,24 @@
 // discord_app/modules/premium/native/GuildBoostSlotsInventory.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import useCountdownDefault from "useCountdown" /* 7410 */;
-import registerAssetDefault from "registerAsset" /* 12933 */;
-import getSubscriptionPlaceholderPatternSource from "getSubscriptionPlaceholderPatternSource" /* 12934 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "handleGuildBoostsUpdate" /* 4267 */;
-import closure_10 from "reset" /* 4045 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import useCountdownDefault from "../../../hooks/useCountdown.tsx";
+import registerAssetDefault from "../../../../_runtime/12933_registerAsset.js";
+import getSubscriptionPlaceholderPatternSource from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../user_settings/ThemeStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import closure_9 from "../../../stores/billing/GuildBoostSlotStore.tsx";
+import closure_10 from "../../../stores/billing/SubscriptionStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
 
 require = arg1;
 function GuildBoostSlotCooldown(cooldownEndsAt) {

@@ -1,13 +1,13 @@
 // discord_app/stores/CategoryCollapseStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4826 */;
-import closure_5 from "comparator" /* 1980 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import create from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
+import closure_2 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "GuildAvailabilityStore.tsx";
+import closure_5 from "GuildChannelStore.tsx";
+import { ChannelTypes } from "../Constants.tsx";
 
 require = arg1;
 function incrementVersion() {

@@ -1,19 +1,19 @@
 // discord_app/modules/relationships/native/IgnoreConfirmationActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 4332 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import registerAssetDefault2 from "registerAsset" /* 8933 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9737 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import registerAssetDefault from "../../../../_runtime/04332_registerAsset.js";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import registerAssetDefault2 from "../../../../_runtime/08933_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import { UserRemediationAction } from "../RelationshipConstants.tsx";
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "RestrictionConfirmationConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function IgnoredInformationTable() {

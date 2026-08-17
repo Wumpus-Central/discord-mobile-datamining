@@ -1,17 +1,17 @@
 // discord_app/modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "buildStageChannelUserRoles" /* 4990 */;
-import { STAGE_BLOCKED_USERS_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../StageChannelRoleStore.tsx";
+import { STAGE_BLOCKED_USERS_SHEET_KEY as closure_8 } from "../../StageChannelsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RestrictedUser(guildId) {

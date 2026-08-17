@@ -1,6 +1,6 @@
 // discord_app/modules/media_uploads/experiments/KestrelExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,8 +1,8 @@
 // discord_app/modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const useMemo = noop.useMemo;
 let closure_4 = createCacheKey.createStyles({ gradient: { height: 40 } });

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_tag/GuildTagUtils.tsx
-import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import items from "items" /* 8168 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import GuildMemberFlags from "../guild_automod/AutomodPermissionUtils.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import items from "GuildTagConstants.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

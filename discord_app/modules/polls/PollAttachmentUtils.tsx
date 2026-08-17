@@ -1,6 +1,6 @@
 // discord_app/modules/polls/PollAttachmentUtils.tsx
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { POLL_ATTACHMENT_FOLDER } from "PollsConstants.tsx";
 
 function _downloadPollGif() {
   const self = this;

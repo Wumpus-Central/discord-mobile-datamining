@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import closure_2 from "../../experiments/ExperimentStore.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);

@@ -1,13 +1,13 @@
 // discord_app/utils/native/CaptchaUtils.tsx
-import convertStringArrayToSkemaErrorItems from "convertStringArrayToSkemaErrorItems" /* 585 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import siteKeyDefault from "siteKey" /* 16503 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import convertStringArrayToSkemaErrorItems from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
+import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
+import siteKeyDefault from "../../../_runtime/16503_siteKey.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
+import closure_6 from "../../modules/user_settings/ThemeStore.tsx";
+import ME from "../../Constants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ Keyboard: c4, NativeModules, NativeEventEmitter } = get_ActivityIndicator);

@@ -1,5 +1,5 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 import closure_2 from "module_4294963475" /* 4294963475 */;
 
 const result = set.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx");

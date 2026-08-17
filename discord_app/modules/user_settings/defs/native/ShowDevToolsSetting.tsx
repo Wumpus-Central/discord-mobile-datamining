@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ShowDevToolsSetting.tsx
-import set from "set" /* 2 */;
-import navigateToDevTools from "navigateToDevTools" /* 13946 */;
-import DevToolsScreens from "DevToolsScreens" /* 13949 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 14882 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import navigateToDevTools from "../../../devtools/native/components/DevToolsNavigator.tsx";
+import DevToolsScreens from "../../../devtools/native/components/DevToolsScreens.tsx";
+import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import StaffBadgeIcon from "../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {

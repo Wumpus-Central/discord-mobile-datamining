@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/AppCrashedReasons.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null };
 let set = new Set(["socket_crashed", "unhandled_js_error", "unhandled_native_error"]);

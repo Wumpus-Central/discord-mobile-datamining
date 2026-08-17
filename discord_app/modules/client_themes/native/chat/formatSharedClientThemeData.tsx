@@ -1,9 +1,9 @@
 // discord_app/modules/client_themes/native/chat/formatSharedClientThemeData.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2533 */;
-import registerAssetDefault from "registerAsset" /* 7989 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../intl/ClientThemes.messages.js";
+import registerAssetDefault from "../../../../../_runtime/07989_registerAsset.js";
 
 const Image = get_ActivityIndicator.Image;
 const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");

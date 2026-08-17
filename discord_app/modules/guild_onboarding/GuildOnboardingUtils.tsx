@@ -1,18 +1,18 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingUtils.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import useCanChannelBeDefault from "useCanChannelBeDefault" /* 5288 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "set" /* 5221 */;
-import closure_6 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1980 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5286 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import useCanChannelBeDefault from "DefaultChannelUtils.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/ConnectedAccountsStore.tsx";
+import closure_6 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import closure_9 from "../../stores/PermissionStore.tsx";
+import { OnboardingConnectionType } from "GuildOnboardingPromptsConstants.tsx";
+import ME from "../../Constants.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

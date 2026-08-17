@@ -1,13 +1,13 @@
 // discord_app/utils/native/ChangeLogUtils.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import tDefault from "t" /* 4092 */;
-import Text from "Text" /* 4734 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult1 from "createRules" /* 4764 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import tDefault from "../../../_runtime/04092_t.js";
+import Text from "../../design/components/Text/native/Text.tsx";
+import apexExperiment from "../../modules/design/ManaTypeConsolidationExperiment.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importAllResult1 from "../../modules/markup/CustomMarkup.native.tsx";
 
 require = arg1;
 function ChangeLogLink(arg0) {

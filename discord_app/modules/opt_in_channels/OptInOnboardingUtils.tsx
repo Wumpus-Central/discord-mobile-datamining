@@ -1,13 +1,13 @@
 // discord_app/modules/opt_in_channels/OptInOnboardingUtils.tsx
-import create from "create" /* 1306 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 5282 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import comparator from "comparator" /* 1980 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import useOptInEnabledForGuild from "isOptInEnabled.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../stores/UserGuildSettingsStore.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 
 require = arg1;
 function optIntoAllChannelsForExistingMember(id, arg1) {

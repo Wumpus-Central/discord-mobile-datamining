@@ -1,7 +1,7 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "subscribeToKeyboardUIStore" /* 1496 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../keyboard/native/subscribeToKeyboardUIStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");

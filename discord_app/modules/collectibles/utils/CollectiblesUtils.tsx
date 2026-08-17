@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
-import set from "set" /* 2 */;
-import resetCache from "resetCache" /* 4063 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 5355 */;
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
+import set from "../../../../_runtime/00002_set.js";
+import resetCache from "../../../utils/DateUtils.tsx";
+import RESOLUTION_720 from "../../go_live/StreamSettingsConstants.tsx";
+import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import ShopVariantsReturnStyle from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
+import calculateFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 
 const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
 const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/GuildStore.tsx";
 
 const require = arg1;
 let c4 = "13.2";

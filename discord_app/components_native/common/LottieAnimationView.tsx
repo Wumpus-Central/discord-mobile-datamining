@@ -1,9 +1,9 @@
 // discord_app/components_native/common/LottieAnimationView.tsx
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 7131 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import _isNativeReflectConstructDefault from "../../../_runtime/07131__isNativeReflectConstruct.js";
+import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 let closure_2 = ["source", "style", "collapsable"];
 const PureComponent = importAllResult.PureComponent;

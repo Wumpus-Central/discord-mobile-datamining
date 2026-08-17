@@ -1,14 +1,14 @@
 // discord_app/modules/gateway/LocalVoiceStateManager.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isClipsEnabled from "isClipsEnabled" /* 4526 */;
-import shouldCommitDefault from "shouldCommit" /* 13228 */;
-import closure_2 from "initialize" /* 4504 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "initialize" /* 4565 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import isClipsEnabled from "../clips/isClipsEnabled.tsx";
+import shouldCommitDefault from "../../lib/StateManager.tsx";
+import closure_2 from "../game_detection/RunningGameStore.native.tsx";
+import closure_3 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/MediaEngineStore.tsx";
+import closure_6 from "../../stores/RTCRegionStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ ApplicationStreamStates: error, ChannelTypes: closure_8, VoiceFlags: c9 } = ME);

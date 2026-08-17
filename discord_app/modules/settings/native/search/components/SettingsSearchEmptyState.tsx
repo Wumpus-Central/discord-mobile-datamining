@@ -1,12 +1,12 @@
 // discord_app/modules/settings/native/search/components/SettingsSearchEmptyState.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import getNoResultsAltSource from "getNoResultsAltSource" /* 8867 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import getNoResultsAltSource from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

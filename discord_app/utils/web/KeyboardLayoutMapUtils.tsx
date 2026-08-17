@@ -1,12 +1,12 @@
 // discord_app/utils/web/KeyboardLayoutMapUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import Storage2 from "Storage" /* 595 */;
-import keyCodeDefault from "keyCode" /* 13173 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "refreshSourceMapCookie" /* 706 */;
-import items from "items" /* 5228 */;
-import set from "set" /* 500 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import keyCodeDefault from "../../../_runtime/13173_keyCode.js";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/DeveloperOptionsStore.tsx";
+import items from "../../../discord_common/js/shared/constants/KeyboardConstants.tsx";
+import set from "../PlatformUtils.tsx";
 
 require = arg1;
 function normalizeKey(toLocaleLowerCase) {

@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesFontOrder.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let items = [require("DisplayNameFont").DisplayNameFont.DEFAULT, require("DisplayNameFont").DisplayNameFont.ZILLA_SLAB, require("DisplayNameFont").DisplayNameFont.CHERRY_BOMB, require("DisplayNameFont").DisplayNameFont.CHICLE, require("DisplayNameFont").DisplayNameFont.MUSEO_MODERNO, require("DisplayNameFont").DisplayNameFont.NEO_CASTEL, require("DisplayNameFont").DisplayNameFont.PIXELIFY, require("DisplayNameFont").DisplayNameFont.SINISTRE];

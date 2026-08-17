@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/native/UserProfileAvatar.tsx
-import _modDef8409 from "module_8409" /* 8409 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _modDef8409 from "../../profile_customization/native/HeaderAvatar.tsx";
+import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { TrackUserProfileActions } from "../Constants.tsx";
+import { AVATAR_SIZE_VARIANT } from "Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

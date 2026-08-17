@@ -1,5 +1,5 @@
 // discord_common/js/packages/timers/Timers.tsx
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 class Timeout {
 }

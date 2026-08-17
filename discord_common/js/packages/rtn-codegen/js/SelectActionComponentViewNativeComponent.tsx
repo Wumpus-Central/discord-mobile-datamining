@@ -1,7 +1,7 @@
 // discord_common/js/packages/rtn-codegen/js/SelectActionComponentViewNativeComponent.tsx
-import set from "set" /* 2 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import set from "../../../../../_runtime/00002_set.js";
+import weakSet from "../../../../../_runtime/00106_weakSet.js";
+import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "SelectActionComponentView", directEventTypes: { topTap: { registrationName: "onTap" } }, validAttributes: null };
 obj = { model: true };

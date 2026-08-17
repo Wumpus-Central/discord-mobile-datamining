@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/hooks/useA11yRolesNative.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const Platform = get_ActivityIndicator.Platform;
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx");

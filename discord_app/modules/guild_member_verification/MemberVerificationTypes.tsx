@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/MemberVerificationTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const obj = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
 const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");

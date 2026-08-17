@@ -1,19 +1,19 @@
 // discord_app/modules/video_calls/native/components/StreamTile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import useVideoStreamErrorDefault from "useVideoStreamError" /* 12439 */;
-import registerAssetDefault from "registerAsset" /* 12458 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import { ApplicationStreamStates } from "ME" /* 676 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import useVideoStreamErrorDefault from "../../../errors/hooks/useVideoStreamError.tsx";
+import registerAssetDefault from "../../../../../_runtime/12458_registerAsset.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../../../stores/AuthenticationStore.tsx";
+import { ApplicationStreamStates } from "../../../../Constants.tsx";
+import { MediaEngineContextTypes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 class StreamTextOverlay {

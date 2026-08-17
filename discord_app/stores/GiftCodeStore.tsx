@@ -1,11 +1,11 @@
 // discord_app/stores/GiftCodeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
-import closure_3 from "frozen" /* 9626 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import _resolveGiftCode from "../utils/GiftCodeUtils.tsx";
+import closure_3 from "../records/GiftCodeRecord.tsx";
+import ME from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function updateGiftCode(giftCode) {

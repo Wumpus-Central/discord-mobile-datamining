@@ -1,8 +1,8 @@
 // discord_app/modules/storefront/SKUPricesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import closure_2 from "../user_settings/LocaleStore.tsx";
 
 require = arg1;
 function resetStoreState() {

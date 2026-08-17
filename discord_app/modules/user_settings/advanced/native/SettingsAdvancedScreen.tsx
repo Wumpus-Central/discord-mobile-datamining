@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx
-import _modDef13991 from "module_13991" /* 13991 */;
-import importAllResult from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { MarketingURLs } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import { MarketingURLs } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,6 +1,6 @@
 // discord_app/modules/media_uploads/experiments/IosJpegliExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2025-11-enhanced-jpeg-encoding-on-ios", kind: "user", defaultConfig: { useJpegliEncoder: false }, variations: { 0: { useJpegliEncoder: false }, 1: { useJpegliEncoder: true } } });
 const result = set.fileFinishedImporting("modules/media_uploads/experiments/IosJpegliExperiment.tsx");

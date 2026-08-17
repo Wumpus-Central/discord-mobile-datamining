@@ -1,7 +1,7 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { HelpdeskArticles } from "../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx");

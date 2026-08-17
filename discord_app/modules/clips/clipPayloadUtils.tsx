@@ -1,8 +1,8 @@
 // discord_app/modules/clips/clipPayloadUtils.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import result from "result" /* 4523 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { SpeakingFlags } from "DesktopSources" /* 4529 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import result from "ClipsConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { SpeakingFlags } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 import { apexExperiment } from "GameEventsOnPlayerExperiment.tsx";
 
 const require = arg1;

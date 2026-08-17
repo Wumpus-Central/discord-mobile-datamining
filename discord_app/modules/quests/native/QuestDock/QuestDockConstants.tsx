@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockConstants.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let obj = { mass: 0.5, damping: 80, stiffness: 320 };
 obj = {};

@@ -1,7 +1,7 @@
 // discord_app/modules/core/CodeSplittingUtils.tsx
-import set from "set" /* 2 */;
-import awaitOnlineDefault from "awaitOnline" /* 1474 */;
-import loaderMaker from "loaderMaker" /* 4058 */;
+import set from "../../../_runtime/00002_set.js";
+import awaitOnlineDefault from "../../utils/NetworkUtils.tsx";
+import loaderMaker from "../../../discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx";
 
 loaderMaker.setAwaitOnline(awaitOnlineDefault.awaitOnline);
 const result = set.fileFinishedImporting("modules/core/CodeSplittingUtils.tsx");

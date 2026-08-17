@@ -1,17 +1,17 @@
 // discord_app/components_native/ChangeLogModal.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import LHeadingDefault from "LHeading" /* 8302 */;
-import VideoComponentDefault from "VideoComponent" /* 9018 */;
-import _modDef14851 from "module_14851" /* 14851 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY" /* 1978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import _modDef5260 from "../actions/ModalActionCreators.tsx";
+import NavigationStack from "../design/components/Navigator/native/Navigator.native.tsx";
+import LHeadingDefault from "ChangeLogStandardTemplate.tsx";
+import VideoComponentDefault from "common/Video.tsx";
+import _modDef14851 from "../../_runtime/metro/14851__.js";
+import importAllResult from "../../_runtime/00019_noop.js";
+import { View } from "../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../Constants.tsx";
+import { CHANGELOG_MODAL_KEY } from "../modules/changelog/ChangelogConstants.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class ChangeLogScreen {

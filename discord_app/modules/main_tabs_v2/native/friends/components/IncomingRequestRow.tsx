@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "addApplication" /* 4478 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import nameFromUserDefault from "../../../../../utils/UserUtils.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../../applications/ApplicationStore.tsx";
+import { UserRowModes } from "../../shared_components/user_list/UserRowConstants.tsx";
+import { RelationshipTypes } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function IncomingRequestRow(user) {

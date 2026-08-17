@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/LiveStageNotificationsUtils.tsx
-import closure_2 from "handleInviteData" /* 4295 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_2 from "../../stores/GuildMemberCountStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

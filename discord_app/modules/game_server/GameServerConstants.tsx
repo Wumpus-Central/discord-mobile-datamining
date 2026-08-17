@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/GameServerConstants.tsx
-import set from "set" /* 2 */;
-import Environments from "Environments" /* 1929 */;
-import GameServerProviderType from "GameServerProviderType" /* 4264 */;
+import set from "../../../_runtime/00002_set.js";
+import Environments from "../user/UserStoreConstants.tsx";
+import GameServerProviderType from "../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
 
 let obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };
 obj = { type: "go-to-step", step: obj.SERVER_SETTINGS };

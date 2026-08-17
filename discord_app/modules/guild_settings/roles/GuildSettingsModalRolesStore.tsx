@@ -1,13 +1,13 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 1363 */;
-import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 11588 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import { FormStates } from "ME" /* 676 */;
+import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer3 from "../../../design/shared.tsx";
+import calculatePositionDeltasDefault from "../../../utils/DragAndDropUtils.tsx";
+import closure_4 from "../../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import { FormStates } from "../../../Constants.tsx";
 
 require = arg1;
 function handleGuildRoleCreateOrUpdate(arg0) {

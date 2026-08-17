@@ -1,8 +1,8 @@
 // discord_app/utils/SpellcheckUtils.tsx
-import set2 from "set" /* 500 */;
-import setDefault from "set" /* 4004 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 500 */;
+import set2 from "PlatformUtils.tsx";
+import setDefault from "../lib/DiscordNative.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import set from "PlatformUtils.tsx";
 
 require = arg1;
 function _setEnabled() {

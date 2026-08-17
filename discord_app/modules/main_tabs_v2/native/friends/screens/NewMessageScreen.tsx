@@ -1,19 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PrivateChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "makeSortedChannel" /* 5388 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PrivateChannelRecord } from "../../../../../records/ChannelRecord.tsx";
+import closure_8 from "../../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../../../stores/views/PrivateChannelSortStore.tsx";
+import { UserRowModes } from "../../shared_components/user_list/UserRowConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../../utils/PlatformUtils.tsx";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 

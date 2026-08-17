@@ -1,12 +1,12 @@
 // discord_app/modules/premium_marketing/native/BuyNitroMarketingFooter.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 8021 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import LegacyBaseButton from "../../../../_runtime/06377_LegacyBaseButton.js";
+import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import BuyNitroPurchaseButtonDefault from "components/purchase_button/BuyNitroPurchaseButton.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 ({ Platform, View: c3 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;

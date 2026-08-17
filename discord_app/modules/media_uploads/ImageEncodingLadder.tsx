@@ -1,6 +1,6 @@
 // discord_app/modules/media_uploads/ImageEncodingLadder.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 
 function getAdaptiveImageCompressionQuality(width, ADAPTIVE_COMPRESSION_CONFIG) {
   if (ADAPTIVE_COMPRESSION_CONFIG.useAdaptiveCompression) {

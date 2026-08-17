@@ -1,6 +1,6 @@
 // discord_app/lib/SystemResponsiveness.tsx
-import set from "set" /* 2 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import set from "../../_runtime/00002_set.js";
+import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
 
 const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {

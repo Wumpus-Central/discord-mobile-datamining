@@ -1,10 +1,10 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputImageCarousel.tsx
-import closure_3 from "handleInit" /* 7527 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_5 from "map" /* 4824 */;
-import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import closure_3 from "../../../application_commands/ApplicationCommandStore.tsx";
+import { DraftType } from "../../../../stores/DraftStore.tsx";
+import closure_5 from "../../../../stores/UploadAttachmentStore.tsx";
+import { useChatShowingAutoComplete as closure_6 } from "../useChatBottomManagerUIStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUpload) {

@@ -1,10 +1,10 @@
 // discord_app/modules/messages/useReactionPermissions.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initialize" /* 4022 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "recomputeGuild" /* 4977 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../lurker_mode/LurkingStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildVerificationStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");

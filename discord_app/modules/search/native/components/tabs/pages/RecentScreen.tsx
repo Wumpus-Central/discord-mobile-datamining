@@ -1,18 +1,18 @@
 // discord_app/modules/search/native/components/tabs/pages/RecentScreen.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import closure_6 from "handleReaction" /* 4971 */;
-import closure_7 from "search" /* 11536 */;
-import closure_8 from "deserialize" /* 15865 */;
-import closure_9 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11524 */;
-import { SearchTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import Text from "../../../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../../../design/void/Pressables/native/Pressables.tsx";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../../SearchMessageStore.tsx";
+import closure_7 from "../../../stores/SearchGuildChannelTabStore.tsx";
+import closure_8 from "../../../stores/SearchHistoryStore.tsx";
+import closure_9 from "../../../stores/SearchQueryStore.tsx";
+import MessageEmbedTypes from "../../../../SearchConstants.tsx";
+import { EMPTY_MEDIA_RESULTS } from "../../../SearchPlatformConstants.tsx";
+import { SearchTypes } from "../../../../../../Constants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ClearAllHistory(searchContext) {

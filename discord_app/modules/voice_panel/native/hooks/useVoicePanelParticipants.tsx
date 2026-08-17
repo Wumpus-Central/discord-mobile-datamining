@@ -1,14 +1,14 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { RTCConnectionStates } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_9 from "../../../../stores/VoiceStateStore.tsx";
+import closure_10 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { RTCConnectionStates } from "../../../../Constants.tsx";
 
 const require = arg1;
 function getMemoizedParticipant(type, get) {

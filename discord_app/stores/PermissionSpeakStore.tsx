@@ -1,9 +1,9 @@
 // discord_app/stores/PermissionSpeakStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "GuildStore.tsx";
 
 require = arg1;
 const hideSuppressWarning = "hideSuppressWarning";

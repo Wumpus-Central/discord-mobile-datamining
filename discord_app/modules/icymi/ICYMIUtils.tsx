@@ -1,21 +1,21 @@
 // discord_app/modules/icymi/ICYMIUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8344 */;
-import isMediaAttachment from "isMediaAttachment" /* 8515 */;
-import apexExperiment from "apexExperiment" /* 9058 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 9062 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "scheduledEventSort" /* 4370 */;
-import { ThreadChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import closure_9 from "generateOldThreadCutoff" /* 4772 */;
-import closure_10 from "filterStaffGuild" /* 9044 */;
-import closure_11 from "initialize" /* 9055 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import MessageEmbedTypes from "ICYMITypes.tsx";
+import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import isMediaAttachment from "../forums/ForumPostMediaUtils.tsx";
+import apexExperiment from "ICYMIExperiment.tsx";
+import ContentInventoryAuthorType from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import { ThreadChannelRecord } from "../../records/ChannelRecord.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import closure_8 from "../../stores/MessageStore.tsx";
+import closure_9 from "../../stores/ReadStateStore.tsx";
+import closure_10 from "ICYMIStore.tsx";
+import closure_11 from "ICYMIUnreadStateStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

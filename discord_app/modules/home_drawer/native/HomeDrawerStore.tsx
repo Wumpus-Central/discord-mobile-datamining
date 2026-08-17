@@ -1,8 +1,8 @@
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import isIterable from "isIterable" /* 4006 */;
-import identity from "identity" /* 700 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import isIterable from "../../../../_runtime/04006_isIterable.js";
+import identity from "../../../../_runtime/00700_identity.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const DM_WIDTH = ME.DM_WIDTH;

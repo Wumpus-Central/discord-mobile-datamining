@@ -1,7 +1,7 @@
 // discord_common/js/packages/i18n/index.tsx
-import set from "set" /* 2 */;
-import getMessages from "getMessages" /* 16444 */;
-import format from "format" /* 16487 */;
+import set from "../../../../_runtime/00002_set.js";
+import getMessages from "i18n.tsx";
+import format from "parse.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/index.tsx");
 

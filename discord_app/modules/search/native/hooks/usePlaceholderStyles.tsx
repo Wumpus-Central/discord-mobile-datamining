@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/hooks/usePlaceholderStyles.tsx
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes" /* 8507 */;
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "../../SearchConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
 import { Button } from "../../../../design/void/native.tsx";

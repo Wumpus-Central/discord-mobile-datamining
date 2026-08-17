@@ -1,15 +1,15 @@
 // discord_app/modules/auth/native/components/PrivacyHint.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import Text from "Text" /* 4734 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15251 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 5257 */;
-import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15212 */;
-import { MarketingURLs } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { usePromoEmailConsentStore } from "../../PromoEmailConsentStore.tsx";
+import { useRegistrationUIStore } from "../RegistrationUIStore.tsx";
+import { MarketingURLs } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PrivacyPolicyDescription(style) {

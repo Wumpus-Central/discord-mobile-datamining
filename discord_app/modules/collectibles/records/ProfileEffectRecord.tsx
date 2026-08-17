@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/ProfileEffectRecord.tsx
-import fromServerDefault from "fromServer" /* 1948 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import fromServerDefault from "BaseCollectiblesItemRecord.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 require = arg1;
 fromServerDefault;

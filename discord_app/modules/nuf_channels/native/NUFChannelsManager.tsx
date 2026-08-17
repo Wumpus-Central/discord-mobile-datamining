@@ -1,13 +1,13 @@
 // discord_app/modules/nuf_channels/native/NUFChannelsManager.tsx
-import Storage3 from "Storage" /* 595 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
 
 require = arg1;
 let c9 = "2020_02_nuf_channels";

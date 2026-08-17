@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/native/usePrivateProfileCoachmarkProps.tsx
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 6070 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import PrivateProfileAbstractUI from "../../../design/components/mana-assets/native/generated/PrivateProfileAbstractUI.native.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PrivateProfileCoachmarkImage() {

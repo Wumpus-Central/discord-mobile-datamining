@@ -1,7 +1,7 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudio.tsx
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "resolveCreatingNotes" /* 9864 */;
-import items from "items" /* 9867 */;
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "GuildRoomStore.tsx";
+import items from "GuildRoomConstants.tsx";
 
 const require = arg1;
 function computeLivingRoomWorldPoints(channelId) {

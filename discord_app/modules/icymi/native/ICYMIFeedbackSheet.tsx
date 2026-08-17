@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/native/ICYMIFeedbackSheet.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import DEFAULT_UX_VARIATION from "DEFAULT_UX_VARIATION" /* 9065 */;
-import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import DEFAULT_UX_VARIATION from "../ICYMIAnalytics.tsx";
+import closeActionSheetDefault from "../../feedback/native/FeedbackActionSheet.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,12 +1,12 @@
 // discord_app/actions/SelectedChannelActionCreatorsAdditional.native.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "recomputeGuild" /* 4977 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import closure_3 from "../stores/ChannelStore.tsx";
+import closure_4 from "../stores/GuildStore.tsx";
+import closure_5 from "../stores/GuildVerificationStore.tsx";
+import closure_6 from "../stores/PermissionStore.tsx";
+import closure_7 from "../stores/SelectedChannelStore.tsx";
+import closure_8 from "../stores/UserStore.tsx";
+import closure_9 from "../stores/VoiceStateStore.tsx";
+import { STAGE_BOOSTING_SHEET_KEY } from "../modules/stage_channels/StageChannelsConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");

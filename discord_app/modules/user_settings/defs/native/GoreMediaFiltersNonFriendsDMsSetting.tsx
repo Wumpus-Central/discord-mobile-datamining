@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/GoreMediaFiltersNonFriendsDMsSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14177 */;
-import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14178 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14180 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import redactionSettingToRenderedString from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import resolveGoreSettingWithDefaults from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import useExplicitContentSettingOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
+import handleSensitiveMediaFilterPress from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
+import useSensitiveMediaSettingDisabled from "../../../explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function useGoreContentNonFriendsDmSettingValue() {
   const obj = useExplicitContentSettingOrDefault;

@@ -1,10 +1,10 @@
 // discord_app/design/void/Form/native/FormHint.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import context from "context" /* 6939 */;
-import closure_2 from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import context from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { Platform } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { formHintText: null, redesignHorizontalPadding: null, horizonatalPadding: null };

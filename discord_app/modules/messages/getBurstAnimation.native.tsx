@@ -1,5 +1,5 @@
 // discord_app/modules/messages/getBurstAnimation.native.tsx
-import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_0 = arg1;
 let obj = {

@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/emoji/ExpressionGuildDetails.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5449 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import getGuildBadgeSourceDefault from "getGuildBadgeSource" /* 8548 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData" /* 7189 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import getGuildBadgeSourceDefault from "../../../guild/native/GuildBadge.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ExpressionSourceGuildRecord as closure_4 } from "../../../emojis/records/ExpressionSourceRecord.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

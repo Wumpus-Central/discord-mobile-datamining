@@ -1,11 +1,11 @@
 // discord_app/modules/image/native/ImagePicker.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import launchCamera from "launchCamera" /* 4853 */;
-import openPickerDefault from "openPicker" /* 4855 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import { ThemeTypes } from "sum" /* 505 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import launchCamera from "../../../../_runtime/04853_launchCamera.js";
+import openPickerDefault from "../../../../_runtime/04855_openPicker.js";
+import closure_3 from "../../user_settings/ThemeStore.tsx";
+import { ThemeTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/image/native/ImagePicker.tsx");

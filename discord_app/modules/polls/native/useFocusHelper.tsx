@@ -1,6 +1,6 @@
 // discord_app/modules/polls/native/useFocusHelper.tsx
-import _modDef38 from "module_38" /* 38 */;
-import closure_2 from "noop" /* 19 */;
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
 let closure_3 = function FocusHelperState() {
   const obj = Object.create(new.target.prototype);

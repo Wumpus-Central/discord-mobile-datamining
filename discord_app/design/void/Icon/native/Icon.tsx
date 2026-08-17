@@ -1,9 +1,9 @@
 // discord_app/design/void/Icon/native/Icon.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 let obj = { EXTRA_SMALL_10: "extraSmall10", EXTRA_SMALL: "extraSmall", SMALL: "small", SMALL_20: "small20", MEDIUM: "medium", LARGE: "large", CUSTOM: "custom", REFRESH_SMALL_16: "refreshSmall16", SMALL_14: "small14" };
 let closure_5 = createCacheKey.createStyles(() => {

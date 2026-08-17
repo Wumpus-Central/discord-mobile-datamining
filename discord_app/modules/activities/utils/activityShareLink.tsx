@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/activityShareLink.tsx
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
+import set from "../../../../_runtime/00002_set.js";
+import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
+import trimTrailingPunctuation from "../../coded_links/findCodedLinks.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const items = [trimTrailingPunctuation.parseQuestsEmbedCode];

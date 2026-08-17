@@ -1,14 +1,14 @@
 // discord_app/modules/quests/native/QuestProgressIndicator.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import noop from "noop" /* 19 */;
-import importDefaultResult from "noop" /* 19 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult1 from "module_4115" /* 4115 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import inlineStyles from "../../../../_runtime/06571_inlineStyles.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../../../_runtime/00019_noop.js";
+import closure_8 from "../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult1 from "../../reanimated/ReanimatedRexport.tsx";
 
 ({ useMemo: c3, useEffect: c4, useRef: c5 } = noop);
 const View = get_ActivityIndicator.View;

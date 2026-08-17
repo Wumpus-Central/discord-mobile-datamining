@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureContext.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "QuestDockMode" /* 14445 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "QuestDockStore.tsx";
+import { QuestDockMode } from "../../QuestConstants.tsx";
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

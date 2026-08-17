@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesModalTiming.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 
 const require = arg1;
 let obj = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP" };

@@ -1,21 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/manage_subscriptions/ManageSubscriptionCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import registerAssetDefault from "registerAsset" /* 8822 */;
-import FormSeparatorDefault from "FormSeparator" /* 14563 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 14569 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import registerAssetDefault from "../../../../../_runtime/08822_registerAsset.js";
+import FormSeparatorDefault from "../components/FormSeparator.tsx";
+import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function HeaderStatus(arg0) {

@@ -1,21 +1,21 @@
 // discord_app/utils/ChannelUtils.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 506 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import hasStream from "hasStream" /* 4980 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4985 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "comparator" /* 1980 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
+import PermissionOverwriteType from "../flow/Server.tsx";
+import applyOverwritesAll from "PermissionUtils.tsx";
+import hasStream from "../modules/guild_sidebar/ChannelListUtils.tsx";
+import useAudienceRequestToSpeakState from "../modules/stage_channels/useAudienceRequestToSpeakState.tsx";
+import sanitizeGuildTextChannelNameDefault from "../modules/channel/sanitizeGuildTextChannelName.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import closure_7 from "../stores/ChannelStore.tsx";
+import closure_8 from "../stores/GuildChannelStore.tsx";
+import closure_9 from "../stores/PermissionStore.tsx";
+import closure_10 from "../stores/SelectedChannelStore.tsx";
+import closure_11 from "../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../Constants.tsx";
 import { PermissionOverwriteType } from "../flow/Server.tsx";
 
 function allowChannelAccess(id, channelType, MEMBER) {

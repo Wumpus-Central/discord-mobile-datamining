@@ -1,19 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfileMutualsActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9450 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9893 */;
-import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 11771 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
+import ActivityStatusDefault from "../../activity_status/native/ActivityStatus.tsx";
+import useUserProfileMutualsDefault from "../hooks/useUserProfileMutuals.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/PresenceStore.tsx";
+import { UserProfileSections } from "../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MutualFriendRow(mutualFriend) {

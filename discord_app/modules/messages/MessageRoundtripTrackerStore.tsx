@@ -1,14 +1,14 @@
 // discord_app/modules/messages/MessageRoundtripTrackerStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5052 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "handleConnectionInfoChange" /* 4564 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import receiveNetworkInfoformation from "../network/NetStats.android.tsx";
+import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildMemberCountStore.tsx";
+import closure_5 from "../../stores/NetworkStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 function trackRoundtrip(channelId) {

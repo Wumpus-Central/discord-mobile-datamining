@@ -1,18 +1,18 @@
 // discord_app/modules/oauth2/native/ApplicationDetails.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockIcon from "ClockIcon" /* 4338 */;
-import items2 from "items" /* 4374 */;
-import set from "set" /* 4375 */;
-import Text from "Text" /* 4734 */;
-import LockIcon from "LockIcon" /* 6890 */;
-import getApplicationDetailsText from "getApplicationDetailsText" /* 9770 */;
-import ShieldIcon from "ShieldIcon" /* 9834 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import items2 from "../scopes.tsx";
+import set from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import getApplicationDetailsText from "../Utils.tsx";
+import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ApplicationDetailsEntry(children) {

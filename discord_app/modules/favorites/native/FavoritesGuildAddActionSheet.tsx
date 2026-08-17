@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/native/FavoritesGuildAddActionSheet.tsx
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 15414 */;
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ACTION_SHEET_HEIGHT_HALF from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function handleCreateCategory() {

@@ -1,21 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Form from "Form" /* 8083 */;
-import FormHeaderDefault from "FormHeader" /* 8913 */;
-import stylesDefault from "styles" /* 13358 */;
-import FormSeparatorDefault from "FormSeparator" /* 14563 */;
-import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 16945 */;
-import pickImage from "pickImage" /* 16951 */;
-import HeaderDefault from "Header" /* 16954 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "usePriceTiers" /* 16950 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import { UPLOAD_BANNER_SIZE } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
+import stylesDefault from "FormStyles.tsx";
+import FormSeparatorDefault from "FormSeparator.tsx";
+import useRoleSubscriptionSettingsDisabled from "../../RoleSubscriptionSettingsDisabledContext.tsx";
+import pickImage from "FormImagePicker.tsx";
+import HeaderDefault from "GuildRoleSubscriptionTierEditStep.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../RoleTierEditStore.tsx";
+import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
+import { UPLOAD_BANNER_SIZE } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class Content {

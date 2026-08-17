@@ -1,8 +1,8 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import usePremiumSince from "usePremiumSince" /* 9496 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
+import usePremiumSince from "useTenureBadging.tsx";
 
 const TieredTenureBadge = GuildFeatures.TieredTenureBadge;
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx");

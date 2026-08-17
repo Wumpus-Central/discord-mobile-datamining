@@ -1,7 +1,7 @@
 // discord_app/modules/frames/utils/canLaunchFrame.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8447 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import getShelfBadgeTypeIfActive from "../../app_launcher/utils/AppLauncherUtils.tsx";
 
 const ApplicationFlags = ME.ApplicationFlags;
 const result = set.fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");

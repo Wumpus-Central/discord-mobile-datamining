@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 9288 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15296 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15296 */;
-import _modDef15305 from "module_15305" /* 15305 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15306 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { jsx } from "jsxProd" /* 21 */;
+import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "channel/MessagesItemChannelBase.tsx";
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "channel/MessagesItemChannelBase.tsx";
+import _modDef15305 from "MessagesItemPlaceholder.tsx";
+import toNativeHorizontalOffset from "../../../../../../../_runtime/15306_toNativeHorizontalOffset.js";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 
 require = arg1;

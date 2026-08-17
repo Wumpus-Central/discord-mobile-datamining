@@ -1,10 +1,10 @@
 // discord_app/modules/guild_profile/GuildProfileBuilders.tsx
-import set from "set" /* 2 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
-import MAX_TRAITS from "MAX_TRAITS" /* 6908 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 6909 */;
+import set from "../../../_runtime/00002_set.js";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import getEmojiToGroupId from "../emojis/EmojiStore.tsx";
+import MAX_TRAITS from "../../../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx";
+import GuildProfileVisibility from "GuildProfileTypes.tsx";
 
 function getEmoji(guildId) {
   ({ emojiId, emojiName } = guildId);

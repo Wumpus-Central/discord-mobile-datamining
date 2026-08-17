@@ -1,9 +1,9 @@
 // discord_app/modules/links/native/handleURL.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "setContent" /* 4086 */;
-import { WebBrowserType } from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../action_sheet/native/ActionSheetStore.tsx";
+import { WebBrowserType } from "../../../Constants.tsx";
 
 const require = arg1;
 function sanitizeURLPart(str) {

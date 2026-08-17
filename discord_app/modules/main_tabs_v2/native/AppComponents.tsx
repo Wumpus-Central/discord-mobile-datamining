@@ -1,20 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/AppComponents.tsx
-import updateAccessibilityAnnouncerLiveRegionMessage from "updateAccessibilityAnnouncerLiveRegionMessage" /* 1352 */;
-import PortalKeyboardState from "PortalKeyboardState" /* 4243 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import NotificationsDefault from "Notifications" /* 10012 */;
-import getItemKey from "getItemKey" /* 13531 */;
-import transitionGroupGetItemKey from "transitionGroupGetItemKey" /* 15975 */;
-import BurstReactionAnimationContainer from "BurstReactionAnimationContainer" /* 16124 */;
-import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16141 */;
-import FreezeAfterLayoutPipViewDefault from "FreezeAfterLayoutPipView" /* 16219 */;
-import _modDef16225 from "module_16225" /* 16225 */;
-import _modDef16258 from "module_16258" /* 16258 */;
-import VoicePanelDefault from "VoicePanel" /* 16270 */;
-import _modDef16434 from "module_16434" /* 16434 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import importDefaultResult from "jsx" /* 15778 */;
+import updateAccessibilityAnnouncerLiveRegionMessage from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncerLiveRegion.native.tsx";
+import PortalKeyboardState from "../../keyboard/native/PortalKeyboard.tsx";
+import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import NotificationsDefault from "../../../components_native/common/Notifications.tsx";
+import getItemKey from "../../../design/components/ContextMenu/native/ContextMenuContainer.native.tsx";
+import transitionGroupGetItemKey from "../../keyboard/native/PortalKeyboardRenderer.tsx";
+import BurstReactionAnimationContainer from "../../../components_native/MainShared.tsx";
+import trackActionSheetImpressionDefault from "../../upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
+import FreezeAfterLayoutPipViewDefault from "../../external_pip/ExternalPipView.android.tsx";
+import _modDef16225 from "../../activities/panel/native/ActivityPanelContainer.tsx";
+import _modDef16258 from "../../frames/panel/native/FramePanelContainer.tsx";
+import VoicePanelDefault from "../../voice_panel/native/VoicePanelContainer.tsx";
+import _modDef16434 from "../../media_panel/native/MediaPlaybackPanelContainer.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import importDefaultResult from "../../panels/morphable/native/AppFreezer.tsx";
 
 ({ jsx, jsxs } = jsxProd);
 let closure_2 = jsx(transitionGroupGetItemKey.PortalKeyboardRenderer, {});

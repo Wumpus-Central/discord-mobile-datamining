@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdiscore/mobile/js/timers.tsx
-import set from "set" /* 2 */;
-import typedGlobal from "typedGlobal" /* 1919 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import typedGlobal from "global_types.tsx";
 
 function setTimeout(arg0, arg1) {
   let num = arg1;

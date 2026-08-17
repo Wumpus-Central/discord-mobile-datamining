@@ -1,6 +1,6 @@
 // discord_app/modules/monitoring/MonitoringAgentUtils.tsx
-import set from "set" /* 2 */;
-import DesignIds from "DesignIds" /* 673 */;
+import set from "../../../_runtime/00002_set.js";
+import DesignIds from "../../../discord_common/js/shared/shared-constants/DesignIds.tsx";
 
 const obj = { design_id: DesignIds.DesignIds.DESIGN_TABS_IA };
 const result = set.fileFinishedImporting("modules/monitoring/MonitoringAgentUtils.tsx");

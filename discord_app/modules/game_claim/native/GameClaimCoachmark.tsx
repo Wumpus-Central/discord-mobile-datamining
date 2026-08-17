@@ -1,19 +1,19 @@
 // discord_app/modules/game_claim/native/GameClaimCoachmark.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import map from "map" /* 9288 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12183 */;
-import importDefaultResult1 from "importDefaultResult1" /* 15452 */;
-import importDefaultResult1Default from "importDefaultResult1" /* 15452 */;
-import fetchUnclaimedGames from "fetchUnclaimedGames" /* 15453 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import MINIMUM_HIT_AREA from "../../../design/components/Button/native/ButtonConstants.native.tsx";
+import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
+import importDefaultResult1 from "GameClaimCardStack.tsx";
+import importDefaultResult1Default from "GameClaimCardStack.tsx";
+import fetchUnclaimedGames from "../UnclaimedGamesActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ GuildFeatures: c5, RelativeMarketingURLs: closure_6 } = ME);

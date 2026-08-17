@@ -1,6 +1,6 @@
 // discord_app/modules/guild_member_verification/MemberVerificationConstants.tsx
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import set from "set" /* 2 */;
+import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];
 const items1 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS];

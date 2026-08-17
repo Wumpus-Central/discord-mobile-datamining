@@ -1,8 +1,8 @@
 // discord_app/modules/media_engine/trackVideoToggle.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import calculateFps from "calculateFps" /* 13096 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import calculateFps from "../../lib/VideoHealthManager.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");

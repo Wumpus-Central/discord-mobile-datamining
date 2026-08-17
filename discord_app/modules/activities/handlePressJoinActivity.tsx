@@ -1,14 +1,14 @@
 // discord_app/modules/activities/handlePressJoinActivity.tsx
-import setDefault from "set" /* 4827 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 8729 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createExecutable" /* 4479 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import closure_10 from "participantFromServer" /* 1390 */;
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import getEmbeddedActivityJoinability from "utils/getEmbeddedActivityJoinability.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../records/ApplicationRecord.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "../../stores/VoiceStateStore.tsx";
+import closure_10 from "EmbeddedActivitiesStore.tsx";
 
 require = arg1;
 function handlePressJoinActivity(arg0) {

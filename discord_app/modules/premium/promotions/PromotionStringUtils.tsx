@@ -1,11 +1,11 @@
 // discord_app/modules/premium/promotions/PromotionStringUtils.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import closure_3 from "addSubscriptionPlan" /* 4044 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
+import closure_3 from "../../../stores/billing/SubscriptionPlanStore.tsx";
+import GuildFeatures from "../PremiumConstants.tsx";
 
 require = arg1;
 ({ PremiumSubscriptionSKUs: c4, SubscriptionPlans: c5 } = GuildFeatures);

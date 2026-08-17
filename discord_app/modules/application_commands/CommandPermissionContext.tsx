@@ -1,18 +1,18 @@
 // discord_app/modules/application_commands/CommandPermissionContext.tsx
-import fromStringAll from "fromString" /* 506 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 1982 */;
-import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
-import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import resolveNsfwTogglesWithDefaults from "../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../impersonate/ImpersonateStore.tsx";
+import { ChannelRecordBase } from "../../records/ChannelRecord.tsx";
+import { isGuildNSFW } from "../../records/GuildRecord.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "../../stores/GuildMemberStore.tsx";
+import closure_10 from "../../stores/GuildStore.tsx";
+import closure_11 from "../../stores/PermissionStore.tsx";
+import closure_12 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function computePermissions(isPrivate) {

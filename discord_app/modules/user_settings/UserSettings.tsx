@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/UserSettings.tsx
-import apply from "apply" /* 12 */;
-import initialize from "initialize" /* 589 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import create from "create" /* 1306 */;
-import defineProperty from "defineProperty" /* 1337 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
-import closure_2 from "updateExistingSettings" /* 4067 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import items from "items" /* 4068 */;
-import ME from "ME" /* 676 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import set from "defineProtoSetting" /* 4070 */;
-import defineProtoSetting from "defineProtoSetting" /* 4070 */;
-import set from "set" /* 2 */;
+import apply from "../../../_runtime/00012_apply.js";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import defineProperty from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import ChannelListLayoutTypes from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import isFeatureAgeGated from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import SettingsDefaultFeature from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import closure_2 from "UserSettingsOverridesStore.tsx";
+import MAX_FAVORITES from "UserSettingsConstants.tsx";
+import items from "privacy_and_safety/DMSafetyConstants.tsx";
+import ME from "../../Constants.tsx";
+import { StickerAnimationSettings } from "../stickers/StickersConstants.tsx";
+import set from "UserSettingDefinitions.tsx";
+import defineProtoSetting from "UserSettingDefinitions.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function explicitContentFromProto(arg0) {

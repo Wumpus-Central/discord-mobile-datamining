@@ -1,10 +1,10 @@
 // discord_app/design/migrations/native/LegacyTokens.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../shared.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import createCacheKey from "../../components/Styles/native/createStyles.tsx";
 
 const Platform = get_ActivityIndicator.Platform;
 const result = createCacheKey.experimental_createToken((theme) => {

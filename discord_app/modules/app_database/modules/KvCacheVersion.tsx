@@ -1,8 +1,8 @@
 // discord_app/modules/app_database/modules/KvCacheVersion.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import HELLO_KEY from "HELLO_KEY" /* 499 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import HELLO_KEY from "KvCacheVersionConstants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = importDefault;
 ({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: c4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: c5, VERSION_TO_SKIP_READING_THE_DATABASE: closure_6, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: error } = HELLO_KEY);

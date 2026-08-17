@@ -1,11 +1,11 @@
 // discord_app/modules/dismissible_content/DismissibleContentShownStateStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import batchUpdates from "batchUpdates" /* 705 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isActionRequiredDefault from "isActionRequired" /* 1387 */;
-import closure_3 from "handleUpdateUser" /* 1384 */;
-import closure_4 from "handleRequiredAction" /* 1385 */;
-import identity from "identity" /* 700 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isActionRequiredDefault from "../core/isActionRequired.tsx";
+import closure_3 from "../auth/LoginRequiredActionStore.tsx";
+import closure_4 from "../../stores/UserRequiredActionStore.tsx";
+import identity from "../../../_runtime/00700_identity.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { set } from "DismissibleContentFatigueConfig.tsx";
 

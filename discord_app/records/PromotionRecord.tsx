@@ -1,7 +1,7 @@
 // discord_app/records/PromotionRecord.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import toJSDefault from "toJS" /* 1931 */;
-import closure_2 from "createFromServer" /* 7630 */;
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import toJSDefault from "../lib/Record.tsx";
+import closure_2 from "../modules/premium/promotions/MarketingComponentRecord.tsx";
 import { CountryListMode } from "../modules/premium/promotions/constants.tsx";
 
 require = arg1;

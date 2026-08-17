@@ -1,19 +1,19 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListRow.tsx
-import set2 from "set" /* 500 */;
-import nDefault from "n" /* 689 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5449 */;
-import LockIcon from "LockIcon" /* 6890 */;
-import ViewDefault from "View" /* 9377 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import IMAGE_SIZE from "IMAGE_SIZE" /* 9301 */;
-import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import nDefault from "../../../../../_runtime/00689_n.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import ViewDefault from "EmojiPickerListRowView.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../user_settings/ThemeStore.tsx";
+import IMAGE_SIZE from "EmojiPickerListConstants.tsx";
+import { PADDING_VERTICAL } from "../../../expression_picker/ExpressionPickerConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function EmojiItemLockedOverlay() {

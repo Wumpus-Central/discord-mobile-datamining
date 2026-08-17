@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/guildEventDetailsParser.native.tsx
-import importDefaultResult from "get defaultRules" /* 6807 */;
+import importDefaultResult from "../markup/MarkupUtils.tsx";
 
 const reactParserForResult = importDefaultResult.reactParserFor(importDefaultResult.guildEventLocationRules);
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");

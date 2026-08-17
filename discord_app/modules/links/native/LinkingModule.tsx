@@ -1,7 +1,7 @@
 // discord_app/modules/links/native/LinkingModule.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 4088 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let result = set.fileFinishedImporting("modules/links/native/LinkingModule.tsx");

@@ -1,5 +1,5 @@
 // discord_app/records/CompanyRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "../lib/Record.tsx";
 
 toJSDefault;
 let prototype;

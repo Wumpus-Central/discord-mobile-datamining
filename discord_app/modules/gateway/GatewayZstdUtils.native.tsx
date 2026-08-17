@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/GatewayZstdUtils.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 13206 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");

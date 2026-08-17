@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10511 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import getSystemLocale from "../../../../../../../../intl/index.native.tsx";
+import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
+import closure_3 from "../../../../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../../../../../stores/UserStore.tsx";
+import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");

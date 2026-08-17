@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 12557 */;
-import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import handleAutomaticGainControlChange from "../../voice/native/UserSettingsVoiceUtils.tsx";
+import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
+import closure_2 from "../../../../stores/MediaEngineStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

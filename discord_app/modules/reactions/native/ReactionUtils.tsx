@@ -1,18 +1,18 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import setDefault from "set" /* 4827 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import registerAssetDefault from "registerAsset" /* 10470 */;
-import registerAssetDefault2 from "registerAsset" /* 10471 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import setDefault from "../../../actions/AlertActionCreators.tsx";
+import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/10470_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10471_registerAsset.js";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/MessageStore.tsx";
+import closure_5 from "../../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

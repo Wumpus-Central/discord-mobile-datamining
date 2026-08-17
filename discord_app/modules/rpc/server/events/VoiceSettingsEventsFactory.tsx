@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/events/VoiceSettingsEventsFactory.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 ({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: c4 } = RPC_SCOPE_CONFIG);

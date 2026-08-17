@@ -1,8 +1,8 @@
 // discord_app/modules/age_assurance/AgeVerificationStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
 require = arg1;
 let c3 = 86400000;

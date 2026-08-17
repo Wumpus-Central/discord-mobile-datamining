@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/native/getConsoleColor.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 const obj = { [XBOX]: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX, [PLAYSTATION]: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION, [PLAYSTATION_STAGING]: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION };
 ({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = ME.PlatformTypes);

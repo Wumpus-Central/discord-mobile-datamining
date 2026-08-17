@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/defs/native/CacheActionsSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
-import FileUpIcon from "FileUpIcon" /* 13987 */;
-import FileWarningIcon from "FileWarningIcon" /* 14879 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ActionSheetRowIcon from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
+import FileWarningIcon from "../../../../design/components/Icon/native/redesign/generated/FileWarningIcon.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../gateway/GatewayConnectionStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function handleCacheActionPress(key) {

@@ -1,9 +1,9 @@
 // discord_app/modules/quests/utils/QuestCopyUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _copy from "_copy" /* 7167 */;
-import apexExperiment from "apexExperiment" /* 9502 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import _copy from "../../../utils/ClipboardUtils.native.tsx";
+import apexExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
 
 ({ QuestHomeSortMethods: obj1, RewardFilterTypes: c3, TaskFilterTypes: c4 } = QuestsExperimentLocations);
 let result = set.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");

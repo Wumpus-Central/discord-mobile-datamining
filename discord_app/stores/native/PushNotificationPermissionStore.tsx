@@ -1,8 +1,8 @@
 // discord_app/stores/native/PushNotificationPermissionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import NativeModulesDefault from "../../lib/pushnotification/PushNotification.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { INIT: 0, [0]: "INIT", REQUESTED: 1, [1]: "REQUESTED", PROMPT_SEEN: 2, [2]: "PROMPT_SEEN", PROMPT_SKIPPED: 3, [3]: "PROMPT_SKIPPED" };
 obj = { MESSAGE_SENT: 0, [0]: "MESSAGE_SENT", INVITE_ACCEPTED: 1, [1]: "INVITE_ACCEPTED", FRIEND_REQUEST_SENT: 2, [2]: "FRIEND_REQUEST_SENT", DM_SPACE: 3, [3]: "DM_SPACE", CHANNEL_BANNER: 5, [5]: "CHANNEL_BANNER", POST_REACTION_BANNER: 6, [6]: "POST_REACTION_BANNER", GUILD_OPEN_BOTTOM_SHEET: 7, [7]: "GUILD_OPEN_BOTTOM_SHEET", CALL_DISCONNECT_BOTTOM_SHEET: 8, [8]: "CALL_DISCONNECT_BOTTOM_SHEET" };

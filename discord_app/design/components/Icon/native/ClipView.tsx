@@ -1,10 +1,10 @@
 // discord_app/design/components/Icon/native/ClipView.tsx
-import noopAll from "noop" /* 19 */;
-import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8403 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8405 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useCutoutBackgroundColor from "CutoutBackgroundContext.tsx";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function SolidCutout(arg0) {

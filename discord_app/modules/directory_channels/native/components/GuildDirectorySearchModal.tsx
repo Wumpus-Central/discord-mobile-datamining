@@ -1,7 +1,7 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearchModal.tsx
-import noopAll from "noop" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;

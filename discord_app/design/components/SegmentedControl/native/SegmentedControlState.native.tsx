@@ -1,5 +1,5 @@
 // discord_app/design/components/SegmentedControl/native/SegmentedControlState.native.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_4 = { code: "function SegmentedControlStateNativeTsx1(index,dimensions){const{itemDimensions,itemCount}=this.__closure;itemDimensions.get()[index]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));}" };

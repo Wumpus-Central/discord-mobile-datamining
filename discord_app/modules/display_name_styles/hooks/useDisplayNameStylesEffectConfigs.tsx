@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9458 */;
-import closure_3 from "noop" /* 19 */;
+import messagesProxyDefault from "../intl/DisplayNameStyles.messages.js";
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = {};

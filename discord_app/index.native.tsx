@@ -1,14 +1,14 @@
 // discord_app/index.native.tsx
-import set from "set" /* 2 */;
-import serialize from "serialize" /* 9 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isTTITest from "isTTITest" /* 13766 */;
-import installSystrace from "installSystrace" /* 13767 */;
-import logAppStart from "modules/debug/logAppStart.tsx" /* 1 */;
-import createFastConnectSocket from "createFastConnectSocket" /* 15 */;
-import toLocaleLowerCase from "toLocaleLowerCase" /* 13572 */;
-import checkEnv from "utils/checkEnv.tsx" /* 16 */;
-import SentryUtils.native from "utils/SentryUtils.native.tsx" /* 1208 */;
+import set from "../_runtime/00002_set.js";
+import serialize from "modules/tti_analytics/TTITracker.tsx";
+import get_ActivityIndicator from "../_runtime/00017_get_ActivityIndicator.js";
+import isTTITest from "modules/tti_analytics/isTTITest.tsx";
+import installSystrace from "modules/systrace/native/installSystrace.tsx";
+import logAppStart from "modules/debug/logAppStart.tsx";
+import createFastConnectSocket from "modules/gateway/native/fast_connect.tsx";
+import toLocaleLowerCase from "polyfills.android.tsx";
+import checkEnv from "utils/checkEnv.tsx";
+import SentryUtils.native from "utils/SentryUtils.native.tsx";
 
 let GenerateInvite = require;
 let f17202 = dependencyMap;

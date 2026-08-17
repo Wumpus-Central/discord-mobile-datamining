@@ -1,14 +1,14 @@
 // discord_app/modules/guild_themes/GuildThemeResolver.tsx
-import initialize from "initialize" /* 589 */;
-import set from "set" /* 4226 */;
-import apexExperiment from "apexExperiment" /* 4303 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "handleEnd" /* 4257 */;
-import closure_7 from "snapshotSelectedGuildId" /* 4260 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import set from "GuildThemePresets.tsx";
+import apexExperiment from "../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "GuildThemePreviewStore.tsx";
+import closure_7 from "GuildThemeRuntimeStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 require = arg1;
 function resolveSavedActiveGuildTheme(enabled) {

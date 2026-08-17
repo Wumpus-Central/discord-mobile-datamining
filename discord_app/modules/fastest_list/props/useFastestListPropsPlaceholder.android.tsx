@@ -1,7 +1,7 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx
-import FastestListPropsPlaceholderType from "FastestListPropsPlaceholderType" /* 8643 */;
-import closure_2 from "noop" /* 19 */;
-import { processColor } from "get ActivityIndicator" /* 17 */;
+import FastestListPropsPlaceholderType from "FastestListPropsPlaceholder.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { processColor } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 require = arg1;
 function createNativePlaceholderConfig(type) {

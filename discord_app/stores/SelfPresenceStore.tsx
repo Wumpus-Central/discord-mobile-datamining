@@ -1,21 +1,21 @@
 // discord_app/stores/SelfPresenceStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7261 */;
-import closure_3 from "upsertAccount" /* 7241 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "gameFromServer" /* 4509 */;
-import closure_6 from "checkIdleAFK" /* 4974 */;
-import closure_7 from "setLibraryApplications" /* 4512 */;
-import closure_8 from "updateActivities" /* 7251 */;
-import closure_9 from "sortActivity" /* 4559 */;
-import { sortActivity } from "sortActivity" /* 4559 */;
-import closure_11 from "handleUpdate" /* 4541 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import isListeningOnSpotifyDefault from "../modules/activities/utils/isListeningOnSpotify.tsx";
+import closure_3 from "../modules/spotify/SpotifyStore.tsx";
+import closure_4 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "DetectableGameStore.tsx";
+import closure_6 from "IdleStore.tsx";
+import closure_7 from "LibraryApplicationStore.tsx";
+import closure_8 from "LocalActivityStore.tsx";
+import closure_9 from "PresenceStore.tsx";
+import { sortActivity } from "PresenceStore.tsx";
+import closure_11 from "SessionsStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function filterPlayingActivities(arg0) {

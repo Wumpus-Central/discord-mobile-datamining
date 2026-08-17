@@ -1,7 +1,7 @@
 // discord_app/modules/errors/hooks/useVideoStreamError.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "isAVErrorContextOfType" /* 12440 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../av_errors/AVErrorStore.tsx";
+import { MediaEngineContextTypes } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import closure_3 from "noop" /* 19 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import getFavoritesAwareGuildName from "../../FavoritesUtils.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { ChannelTypes } from "../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");

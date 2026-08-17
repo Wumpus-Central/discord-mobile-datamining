@@ -1,9 +1,9 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import keys from "keys" /* 644 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import closure_6 from "../a11y/AccessibilityStore.tsx";
+import keys from "../../../_runtime/00644_keys.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

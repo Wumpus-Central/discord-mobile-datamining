@@ -1,12 +1,12 @@
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
-import initialize from "initialize" /* 589 */;
-import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16226 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16235 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import BaseActivityPanelControllerDefault from "ActivityPanelController.tsx";
+import renderActivityOrPIPDefault from "ActivityPanelUI.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../EmbeddedActivitiesStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function ActivityPanelContainer() {

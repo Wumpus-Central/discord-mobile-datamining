@@ -1,8 +1,8 @@
 // discord_app/modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx
-import set from "set" /* 2 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
+import set from "../../../../_runtime/00002_set.js";
+import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 

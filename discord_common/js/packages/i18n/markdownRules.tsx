@@ -1,6 +1,6 @@
 // discord_common/js/packages/i18n/markdownRules.tsx
-import set from "set" /* 2 */;
-import t from "t" /* 4092 */;
+import set from "../../../../_runtime/00002_set.js";
+import t from "../../../../_runtime/04092_t.js";
 
 const link = t.defaultRules.link;
 const text = t.defaultRules.text;

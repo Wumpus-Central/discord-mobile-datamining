@@ -1,10 +1,10 @@
 // discord_app/modules/fastest_list/FastestList.android.tsx
-import _readOnlyErrorDefault from "_readOnlyError" /* 377 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8637 */;
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult1 from "module_4115" /* 4115 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
+import _readOnlyErrorDefault from "../../../_runtime/metro/00377__readOnlyError.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult1 from "../reanimated/ReanimatedRexport.tsx";
+import BottomSheetModal from "../../../_runtime/06952_BottomSheetModal.js";
 
 const require = arg1;
 _readOnlyErrorDefault;

@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8951 */;
-import ProfileFrameLayerDefault from "ProfileFrameLayer" /* 8964 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8967 */;
-import metadataDefault from "metadata" /* 9226 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../../design/tokens/native/useToken.tsx";
+import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
+import ProfileFrameLayerDefault from "../ProfileFrame.tsx";
+import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
+import metadataDefault from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserProfileThemeTypes } from "../../../../user_profile/native/Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function filterLayer(responsive) {

@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx
-import registerAssetDefault from "registerAsset" /* 11948 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 9922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 15867 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import registerAssetDefault from "../../../../../../_runtime/11948_registerAsset.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { SearchNavigatorScreens } from "../../../../search/native/components/navigator/SearchNavigatorConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../../_runtime/09931_createNativeStackNavigator.js";
 
 const require = arg1;
 function ConnectedCreateThreadHeaderButton(channelId) {

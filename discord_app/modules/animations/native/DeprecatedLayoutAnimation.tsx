@@ -1,9 +1,9 @@
 // discord_app/modules/animations/native/DeprecatedLayoutAnimation.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import obj from "module_150" /* 150 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import obj from "../../../../_runtime/00150__isNativeReflectConstruct.js";
 
 ({ Keyboard: obj1, LayoutAnimation } = get_ActivityIndicator);
 const result = set.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");

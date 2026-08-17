@@ -1,5 +1,5 @@
 // discord_app/design/components/Card/native/CardTokens.native.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 import { createCacheKey } from "../../Styles/native/createStyles.tsx";
 
 const result = set.fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");

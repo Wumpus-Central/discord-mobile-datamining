@@ -1,18 +1,18 @@
 // discord_app/modules/chat_input/native/ApplicationCommandOptionValueParser.tsx
-import applyDefault from "apply" /* 12 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import rebuild from "rebuild" /* 7436 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "rebuild" /* 5251 */;
-import { isGuildSelectableChannelType as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import regExp from "regExp" /* 6810 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import PermissionOverwriteType from "../../../flow/Server.tsx";
+import rebuild from "../../messages/MessageParser.tsx";
+import rebuildDefault from "../../messages/MessageParser.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../threads/ActiveJoinedThreadsStore.tsx";
+import { isGuildSelectableChannelType as closure_5 } from "../../../records/ChannelRecord.tsx";
+import closure_6 from "../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../stores/GuildRoleStore.tsx";
+import closure_9 from "../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
 
 require = arg1;

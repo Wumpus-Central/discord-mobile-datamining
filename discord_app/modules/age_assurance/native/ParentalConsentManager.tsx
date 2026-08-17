@@ -1,8 +1,8 @@
 // discord_app/modules/age_assurance/native/ParentalConsentManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 let require = arg1;
 let c6 = 26;

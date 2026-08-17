@@ -1,9 +1,9 @@
 // discord_app/modules/frames/panel/native/FramePanelPIPView.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "map" /* 8708 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_8 } from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16237 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../FramesStore.tsx";
+import FrameLayoutModes from "../../FramesConstants.tsx";
+import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_8 } from "../../../activities/panel/native/ActivityPanelNativeConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

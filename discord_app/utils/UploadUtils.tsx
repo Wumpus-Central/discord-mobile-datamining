@@ -1,7 +1,7 @@
 // discord_app/utils/UploadUtils.tsx
-import set from "set" /* 2 */;
-import cancel from "cancel" /* 4829 */;
-import getClipCreatedAt from "getClipCreatedAt" /* 4831 */;
+import set from "../../_runtime/00002_set.js";
+import cancel from "../lib/uploader/Upload.tsx";
+import getClipCreatedAt from "../modules/clips/clipPayloadUtils.tsx";
 
 const items = [
   {

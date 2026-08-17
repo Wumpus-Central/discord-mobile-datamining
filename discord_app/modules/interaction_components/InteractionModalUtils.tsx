@@ -1,19 +1,19 @@
 // discord_app/modules/interaction_components/InteractionModalUtils.tsx
-import _modDef38 from "module_38" /* 38 */;
-import isInteractionComponent from "isInteractionComponent" /* 8326 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "map" /* 4824 */;
-import closure_12 from "getModalState" /* 13773 */;
-import { InteractionModalState } from "getModalState" /* 13773 */;
-import closure_14 from "getInteractionComponentStates" /* 8327 */;
-import { Endpoints } from "ME" /* 676 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import isInteractionComponent from "ComponentStateContext.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import { DraftType } from "../../stores/DraftStore.tsx";
+import closure_9 from "../../stores/GuildMemberStore.tsx";
+import closure_10 from "../../stores/SelectedGuildStore.tsx";
+import closure_11 from "../../stores/UploadAttachmentStore.tsx";
+import closure_12 from "InteractionModalStore.tsx";
+import { InteractionModalState } from "InteractionModalStore.tsx";
+import closure_14 from "LocalInteractionComponentStateStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function getData(arg0, arr) {

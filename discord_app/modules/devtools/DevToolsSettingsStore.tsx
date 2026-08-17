@@ -1,7 +1,7 @@
 // discord_app/modules/devtools/DevToolsSettingsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "init" /* 7472 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../stores/DeveloperExperimentStore.tsx";
 
 let closure_3 = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

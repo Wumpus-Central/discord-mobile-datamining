@@ -1,19 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarName.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import _activityFromSetting from "_activityFromSetting" /* 7256 */;
-import useGameMentionsAsPlainText from "useGameMentionsAsPlainText" /* 9287 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 9464 */;
-import memoResult1Default from "memoResult1" /* 9509 */;
-import ActivityEmojiDefault from "ActivityEmoji" /* 9541 */;
-import apexExperiment from "apexExperiment" /* 15628 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import _activityFromSetting from "../../../custom_status/utils/userSettingToActivity.tsx";
+import useGameMentionsAsPlainText from "../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx";
+import AVERAGE_FONT_WIDTH_RATIODefault from "../../../display_name_styles/native/UsernameWithEffects.tsx";
+import ChevronSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
+import memoResult1Default from "../../../guild_tag/native/GuildTag.tsx";
+import ActivityEmojiDefault from "../../../activity_status/native/ActivityEmoji.tsx";
+import apexExperiment from "YouBarGuildTagExperiment.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/SelfPresenceStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function Username(userId) {

@@ -1,21 +1,21 @@
 // discord_app/modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx
-import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "initialize" /* 4504 */;
-import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_7 from "reset" /* 4652 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_12 from "createRTCConnection" /* 4539 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "updateVoiceState" /* 4542 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
+import fromStringAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import closure_4 from "../../../applications/ApplicationStore.tsx";
+import closure_5 from "../../../game_detection/RunningGameStore.native.tsx";
+import { getGuildIconURL } from "../../../../records/GuildRecord.tsx";
+import closure_7 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_8 from "../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../stores/GuildMemberStore.tsx";
+import closure_10 from "../../../../stores/GuildStore.tsx";
+import closure_11 from "../../../../stores/MediaEngineStore.tsx";
+import closure_12 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_13 from "../../../../stores/UserStore.tsx";
+import closure_14 from "../../../../stores/VoiceStateStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 function messageEventsValidation(string) {

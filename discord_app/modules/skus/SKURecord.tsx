@@ -1,11 +1,11 @@
 // discord_app/modules/skus/SKURecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3975 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 4517 */;
-import transformProfileEffectKeyFrameFromServerDefault from "transformProfileEffectKeyFrameFromServer" /* 4518 */;
-import closure_3 from "createExecutable" /* 4479 */;
-import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "set" /* 4516 */;
-import ME from "ME" /* 676 */;
+import toJSDefault from "../../lib/Record.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
+import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
+import closure_3 from "../../records/ApplicationRecord.tsx";
+import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "SKUConstants.tsx";
+import ME from "../../Constants.tsx";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;

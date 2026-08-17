@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/InputModeSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import { InputModes } from "DesktopSources" /* 4529 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import closure_2 from "../../../../stores/MediaEngineStore.tsx";
+import { InputModes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

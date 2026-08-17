@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import { InputModes } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../../../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../../stores/RTCConnectionStore.tsx";
+import { InputModes } from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };

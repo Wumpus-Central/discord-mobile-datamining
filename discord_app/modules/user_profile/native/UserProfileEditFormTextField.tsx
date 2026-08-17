@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormTextField.tsx
-import noopAll from "noop" /* 19 */;
-import TextInput from "TextInput" /* 8071 */;
-import TextArea from "TextArea" /* 8092 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import TextInput from "../../../design/components/TextInput/native/TextInput.native.tsx";
+import TextArea from "../../../design/components/TextInput/native/TextArea.native.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

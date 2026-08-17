@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/tabs/pages/ChannelsScreen.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_5 from "search" /* 11536 */;
-import closure_6 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { SearchResultContentEntityTypes as closure_10 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_5 from "../../../stores/SearchGuildChannelTabStore.tsx";
+import closure_6 from "../../../stores/SearchQueryStore.tsx";
+import MessageEmbedTypes from "../../../../SearchConstants.tsx";
+import { SearchResultContentEntityTypes as closure_10 } from "../../../tracking/TrackingConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

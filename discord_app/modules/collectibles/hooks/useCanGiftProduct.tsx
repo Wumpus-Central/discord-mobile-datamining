@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/hooks/useCanGiftProduct.tsx
-import set from "set" /* 2 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
+import set from "../../../../_runtime/00002_set.js";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
+import useCurrentUser from "useCurrentUser.tsx";
 
 let result = set.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 

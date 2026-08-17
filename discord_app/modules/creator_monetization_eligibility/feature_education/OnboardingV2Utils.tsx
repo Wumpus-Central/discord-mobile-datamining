@@ -1,9 +1,9 @@
 // discord_app/modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 let items = [, , , , ];

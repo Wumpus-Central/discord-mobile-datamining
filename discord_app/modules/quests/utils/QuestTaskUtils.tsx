@@ -1,6 +1,6 @@
 // discord_app/modules/quests/utils/QuestTaskUtils.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "initializeState" /* 7453 */;
+import setDefault from "../../../utils/Durations.tsx";
+import closure_3 from "../QuestStore.tsx";
 
 let items5 = arg1;
 function getApplicationIdsByTaskTypes(nextResult, items) {

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_settings/native/ServerTagPreviewActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 13373 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { GuildProfileFetchStatus } from "../../guild_profile/GuildProfileStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

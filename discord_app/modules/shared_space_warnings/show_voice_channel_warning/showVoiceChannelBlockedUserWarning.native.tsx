@@ -1,9 +1,9 @@
 // discord_app/modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx
-import keys from "keys" /* 691 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "getState" /* 7383 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
-import { VoiceChannelWarningSurfaces as closure_6 } from "GdmWarningMedium" /* 13286 */;
+import keys from "../../../ConstantsIOS.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../../../stores/native/AppStateStore.tsx";
+import useSharedSpacesWarningStore from "../SharedSpacesWarningStore.tsx";
+import { VoiceChannelWarningSurfaces as closure_6 } from "../SharedSpaceWarningConstants.tsx";
 
 require = arg1;
 ({ queueBlockWarning: c4, dequeueBlockWarning: c5 } = useSharedSpacesWarningStore);

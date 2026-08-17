@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx
-import closure_3 from "noop" /* 19 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import GuildFeatures from "../../PremiumConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ PremiumTypes: c4, SubscriptionPlanInfo: c5 } = GuildFeatures);

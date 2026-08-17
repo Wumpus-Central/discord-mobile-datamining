@@ -1,7 +1,7 @@
 // discord_app/modules/channel_following/native/showChannelFollowingActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 
 const require = arg1;

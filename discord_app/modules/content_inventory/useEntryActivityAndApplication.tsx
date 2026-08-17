@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "entryToKey" /* 12098 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "ContentInventoryActivityStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

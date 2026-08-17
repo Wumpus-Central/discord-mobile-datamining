@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
-import initialize from "initialize" /* 589 */;
-import tDefault from "t" /* 3975 */;
-import _checkForNewerBuildAll from "_checkForNewerBuild" /* 13366 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import closure_4 from "checkForNewerBuild" /* 13770 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import tDefault from "../../../../../_runtime/03975_t.js";
+import _checkForNewerBuildAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
+import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import closure_4 from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

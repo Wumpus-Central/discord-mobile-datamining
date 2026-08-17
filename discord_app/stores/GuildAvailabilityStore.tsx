@@ -1,9 +1,9 @@
 // discord_app/stores/GuildAvailabilityStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_0 from "GuildStore.tsx";
+import set from "../../_runtime/00002_set.js";
 
 function handleConnectionOpen(unavailableGuilds) {
   set = new Set(unavailableGuilds.unavailableGuilds);

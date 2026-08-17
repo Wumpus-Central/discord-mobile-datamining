@@ -1,10 +1,10 @@
 // discord_app/lib/uploader/UploadTargets.tsx
-import items from "items" /* 4830 */;
-import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 4834 */;
-import getCreateAttachmentURLDefault from "getCreateAttachmentURL" /* 4872 */;
-import getCreateAttachmentURLDefault2 from "getCreateAttachmentURL" /* 4874 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import items from "../../utils/UploadUtils.tsx";
+import getUploadFileSizeSumAll from "../../utils/FileUtils.tsx";
+import getCreateAttachmentURLDefault from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
+import getCreateAttachmentURLDefault2 from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ Endpoints: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);

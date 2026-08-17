@@ -1,5 +1,5 @@
 // discord_app/modules/panels/morphable/native/MorphablePanelConstants.tsx
-import set from "set" /* 500 */;
+import set from "../../../../utils/PlatformUtils.tsx";
 
 set = set.isIOS();
 const result = set.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");

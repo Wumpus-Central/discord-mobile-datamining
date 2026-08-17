@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/apex/index.tsx
-import set from "set" /* 2 */;
-import getUnitId from "getUnitId" /* 1368 */;
-import getUnitIdDefault from "getUnitId" /* 1368 */;
-import INSTALLATION_UNIT_ID from "INSTALLATION_UNIT_ID" /* 1473 */;
+import set from "../../../../_runtime/00002_set.js";
+import getUnitId from "ApexExperiment.tsx";
+import getUnitIdDefault from "ApexExperiment.tsx";
+import INSTALLATION_UNIT_ID from "ApexTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/experiments/apex/index.tsx");
 

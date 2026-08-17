@@ -1,6 +1,6 @@
 // discord_app/modules/holidays/HolidayEventsUtils.tsx
-import set from "set" /* 2 */;
-import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16593 */;
+import set from "../../../_runtime/00002_set.js";
+import HolidayEmojiAnimationTypeDefault from "HolidayEventsConfig.tsx";
 
 const result = set.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 

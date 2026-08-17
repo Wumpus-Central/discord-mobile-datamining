@@ -1,8 +1,8 @@
 // discord_app/modules/threads/ThreadManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import withErrorHandlingDefault from "withErrorHandling" /* 8516 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import withErrorHandlingDefault from "../forums/ForumActionCreators.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
 
 initializeDefault;
 class ThreadManager extends tmp2 {

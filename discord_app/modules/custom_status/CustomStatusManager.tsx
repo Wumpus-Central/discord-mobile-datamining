@@ -1,7 +1,7 @@
 // discord_app/modules/custom_status/CustomStatusManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "filterPlayingActivities" /* 7250 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../stores/SelfPresenceStore.tsx";
+import ME from "../../Constants.tsx";
 
 let require = arg1;
 ({ AnalyticsObjects: c4, StatusTypes: c5 } = ME);

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_onboarding/useBatchUpdateSelectOption.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_5 from "handleUpdate" /* 6788 */;
-import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_5 from "GuildOnboardingPromptsStore.tsx";
+import { ChannelNotificationSettingsFlags as closure_6 } from "../user_settings/UserSettingsConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

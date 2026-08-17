@@ -1,13 +1,13 @@
 // discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModal.tsx
-import Stack from "Stack" /* 4733 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10376 */;
-import useOrbCheckoutModalContextProvider from "useOrbCheckoutModalContextProvider" /* 11986 */;
-import OrbCheckoutErrorCard from "OrbCheckoutErrorCard" /* 11987 */;
-import closure_3 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import { InternalPaymentGateways } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import useFetchCollectiblesProduct from "../../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
+import useOrbCheckoutModalContextProvider from "../OrbCheckoutModalContext.tsx";
+import OrbCheckoutErrorCard from "OrbCheckoutModalComponents.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import ME from "../../../../Constants.tsx";
+import { InternalPaymentGateways } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function OrbCheckoutModalContent(orbBalance) {

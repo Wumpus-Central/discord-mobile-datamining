@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/HeaderShared.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import Background from "Background" /* 6319 */;
-import JoinCallButtonDefault from "JoinCallButton" /* 8504 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 8493 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import Background from "../../../../../_runtime/06319_Background.js";
+import JoinCallButtonDefault from "../channel/ChannelActions.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MIN_HEADER_HEIGHT } from "MainTabsV2Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 
 require = arg1;

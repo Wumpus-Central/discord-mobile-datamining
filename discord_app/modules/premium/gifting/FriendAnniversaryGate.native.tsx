@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/FriendAnniversaryGate.native.tsx
-import set from "set" /* 2 */;
-import apexExperimentDefault from "apexExperiment" /* 8293 */;
+import set from "../../../../_runtime/00002_set.js";
+import apexExperimentDefault from "native/MobileFriendAnniversaryExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.native.tsx");
 

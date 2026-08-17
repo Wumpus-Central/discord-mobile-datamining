@@ -1,7 +1,7 @@
 // discord_app/modules/links/safeTransitionTo.native.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import { Routes } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/GuildStore.tsx";
+import { Routes } from "../../Constants.tsx";
 
 const require = arg1;
 function _safeTransitionTo() {

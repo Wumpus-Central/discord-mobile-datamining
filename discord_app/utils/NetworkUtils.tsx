@@ -1,6 +1,6 @@
 // discord_app/utils/NetworkUtils.tsx
-import set from "set" /* 2 */;
-import notifyListeners from "notifyListeners" /* 1475 */;
+import set from "../../_runtime/00002_set.js";
+import notifyListeners from "native/NetworkUtils.tsx";
 
 let closure_2 = [];
 let c3 = false;

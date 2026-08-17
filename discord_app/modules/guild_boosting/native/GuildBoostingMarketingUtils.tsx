@@ -1,6 +1,6 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx
-import set from "set" /* 2 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4266 */;
+import set from "../../../../_runtime/00002_set.js";
+import getGuildTierFromGuild from "../../../utils/GuildBoostingUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 

@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/EncryptionSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds" /* 14991 */;
-import closure_2 from "items" /* 9709 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useSecureFramesVerifiedUserIds from "../../../rtc/hooks/useSecureFramesVerifiedUsers.tsx";
+import closure_2 from "../../../rtc/SecureFramesPersistedStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { UserListItem } from "../../privacy_and_safety/native/SettingsSecureFramesScreen.tsx";
 
 require = arg1;

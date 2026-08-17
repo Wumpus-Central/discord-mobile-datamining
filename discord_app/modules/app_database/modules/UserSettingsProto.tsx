@@ -1,9 +1,9 @@
 // discord_app/modules/app_database/modules/UserSettingsProto.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult from "apply" /* 12 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import importDefaultResult from "../../../../_runtime/00012_apply.js";
 
 let obj = importDefault;
 let closure_5 = new timestampDefault("UserSettingsProto");

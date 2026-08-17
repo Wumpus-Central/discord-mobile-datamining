@@ -1,17 +1,17 @@
 // discord_app/modules/messages/native/renderer/RowGeneratorUtils.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1493 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 7232 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import { SwipeActionsType } from "Changeset" /* 8158 */;
-import ME from "ME" /* 676 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 2 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSrcWithWidthAndHeightDefault from "../../../../utils/native/ImageUtils.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
+import createMinimalMessageRecord from "../../MessageRecordUtils.tsx";
+import useCanManageGuildOfficialMessages from "../../GuildOfficialMessageUtils.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import MESSAGE_GROUP_SPACING from "../../MessageConstants.tsx";
+import { SwipeActionsType } from "RowGeneratorConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: error } = MESSAGE_GROUP_SPACING);

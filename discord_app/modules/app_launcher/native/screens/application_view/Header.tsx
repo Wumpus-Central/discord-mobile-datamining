@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/screens/application_view/Header.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8345 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 11309 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleDismissWithDismissed" /* 11264 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import hasFetchedColorsDefault from "../../../../avatar/useAvatarColor.tsx";
+import AppLauncherBackButtonDefault from "../../base_components/AppLauncherBackButton.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../../stores/UserStore.tsx";
+import closure_5 from "../../../AppLauncherStore.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

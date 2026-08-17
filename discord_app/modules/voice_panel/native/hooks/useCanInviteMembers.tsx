@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/hooks/useCanInviteMembers.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_2 from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

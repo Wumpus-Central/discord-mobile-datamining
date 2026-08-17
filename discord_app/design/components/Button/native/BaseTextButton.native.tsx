@@ -1,14 +1,14 @@
 // discord_app/design/components/Button/native/BaseTextButton.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import styleProperties from "styleProperties" /* 4750 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4749 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
+import styleProperties from "ButtonHooks.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "ButtonConstants.native.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function CollapsingText(children) {

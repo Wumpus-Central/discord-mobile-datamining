@@ -1,10 +1,10 @@
 // discord_app/modules/notification_center/getNotificationCenterItemBody.tsx
-import closure_3 from "scheduledEventSort" /* 4370 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import { isGuildEventEnded } from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/RelationshipStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: c9 } = ME);

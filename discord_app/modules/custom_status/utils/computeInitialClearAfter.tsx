@@ -1,6 +1,6 @@
 // discord_app/modules/custom_status/utils/computeInitialClearAfter.tsx
-import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 9292 */;
+import set from "../../../../_runtime/00002_set.js";
+import StatusTypes from "../Constants.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;

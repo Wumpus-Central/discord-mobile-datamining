@@ -1,10 +1,10 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx" /* 4115 */;
-import mutable from "module_0" /* 0 */;
-import importAllResult from "noop" /* 19 */;
+import KeyboardChatScrollView from "../../../../_runtime/01643_KeyboardChatScrollView.js";
+import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import mutable from "../../../index.native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);

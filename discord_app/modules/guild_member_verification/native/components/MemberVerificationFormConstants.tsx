@@ -1,6 +1,6 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx
-import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import set from "../../../../../_runtime/00002_set.js";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 
 let c2 = 0.5625;
 const result = set.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");

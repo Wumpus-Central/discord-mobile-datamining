@@ -1,16 +1,16 @@
 // discord_app/modules/payments/native/hooks/NativePaymentHooks.ios.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import useTimeoutDefault from "useTimeout" /* 7699 */;
-import useCreateSubscriptionParamsDefault from "useCreateSubscriptionParams" /* 7700 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "isGenericIapConnected" /* 5321 */;
-import closure_7 from "addSubscriptionPlan" /* 4044 */;
-import closure_8 from "reset" /* 4045 */;
-import closure_9 from "updateProduct" /* 5319 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import useTimeoutDefault from "../../../../hooks/useTimeout.tsx";
+import useCreateSubscriptionParamsDefault from "../../../billing/native/subscription/useCreateSubscriptionParams.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../billing/native/GenericIAPStore.tsx";
+import closure_7 from "../../../../stores/billing/SubscriptionPlanStore.tsx";
+import closure_8 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_9 from "../../../../stores/native/IAPStore.android.tsx";
+import ME from "../../../../Constants.tsx";
 
 const require = arg1;
 function useNativeIAPPayments() {

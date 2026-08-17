@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/native/ICYMILoading.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 11810 */;
-import Separator from "Separator" /* 15747 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import useChatPlaceholderAnimatedStylesDefault from "../../chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx";
+import Separator from "ICYMIShared.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
 
 require = arg1;
 function ICYMILoadingItem() {

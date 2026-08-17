@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildResetAction.tsx
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import { Routes } from "ME" /* 676 */;
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import useFavoritesAccess from "../FavoritesHooks.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/SelectedGuildStore.tsx";
+import { Routes } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");

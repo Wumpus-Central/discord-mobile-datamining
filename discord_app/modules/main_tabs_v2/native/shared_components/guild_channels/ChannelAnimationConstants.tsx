@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelAnimationConstants.tsx
-import set from "set" /* 2 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import CONFIG_NEVER_ANIMATE from "../../../../../design/animation/reanimated/spring/spring.tsx";
 
 let obj = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 const fn = function n() {

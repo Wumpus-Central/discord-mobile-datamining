@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../../stores/GuildStore.tsx";
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "UserSettingsSafetySelectedGuildStore.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
 
 const require = arg1;
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: c4 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);

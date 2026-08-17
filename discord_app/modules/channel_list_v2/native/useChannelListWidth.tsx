@@ -1,10 +1,10 @@
 // discord_app/modules/channel_list_v2/native/useChannelListWidth.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 691 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import sum from "sum" /* 10719 */;
+import set from "../../../../_runtime/00002_set.js";
+import keys from "../../../ConstantsIOS.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
+import sum from "../../screen/native/drawer/useDrawerWidth.tsx";
 
 const result = set.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 

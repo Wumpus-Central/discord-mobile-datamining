@@ -1,16 +1,16 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import Text from "Text" /* 4734 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../../../../utils/GuildRecordUtils.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

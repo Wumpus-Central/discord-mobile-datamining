@@ -1,5 +1,5 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
-import closure_2 from "createUserWidgetFromServer" /* 5365 */;
+import closure_2 from "../../../user_profile/UserProfileStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

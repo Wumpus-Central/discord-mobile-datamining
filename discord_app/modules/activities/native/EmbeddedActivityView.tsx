@@ -1,13 +1,13 @@
 // discord_app/modules/activities/native/EmbeddedActivityView.tsx
-import WakeLockDefault from "WakeLock" /* 11818 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "participantFromServer" /* 1390 */;
-import items3 from "items3" /* 4481 */;
-import { OBEY_SILENT_HARDWARE_SWITCH_APP_IDS as closure_10 } from "ApplicationTypes" /* 4482 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import WakeLockDefault from "../../device/native/WakeLock.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../EmbeddedActivitiesStore.tsx";
+import items3 from "../Constants.tsx";
+import { OBEY_SILENT_HARDWARE_SWITCH_APP_IDS as closure_10 } from "../../applications/ApplicationConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function useBaseActivityView(orientationLockState) {

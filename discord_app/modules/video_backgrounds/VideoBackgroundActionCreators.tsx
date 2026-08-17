@@ -1,9 +1,9 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _fetchVideoFilterAssets() {

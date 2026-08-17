@@ -1,14 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import SectionTitle from "SectionTitle" /* 14583 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15380 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import SectionTitle from "../../components/listing_elements/GuildRoleSubscriptionCard.tsx";
+import SubscriptionGatedChannelIconDefault from "../../premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import { BottomSheetModal } from "../../../../../../_runtime/06952_BottomSheetModal.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";

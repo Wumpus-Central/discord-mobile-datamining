@@ -1,9 +1,9 @@
 // discord_app/stores/NetworkStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import awaitOnlineDefault from "awaitOnline" /* 1474 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import awaitOnlineDefault from "../utils/NetworkUtils.tsx";
+import ME from "../Constants.tsx";
 
 function handleConnectionInfoChange(type) {
   if (null != type.type) {

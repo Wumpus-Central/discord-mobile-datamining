@@ -1,9 +1,9 @@
 // discord_app/modules/safe_area/SafeAreaProvider.native.tsx
-import EMPTY_SAFE_AREA_INSETS from "EMPTY_SAFE_AREA_INSETS" /* 1631 */;
-import _mod1632 from "module_1632" /* 1632 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import EMPTY_SAFE_AREA_INSETS from "SafeAreaConstants.native.tsx";
+import _mod1632 from "../../../_runtime/metro/01632__.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let closure_6 = { position: "absolute", width: 0, height: 0 };

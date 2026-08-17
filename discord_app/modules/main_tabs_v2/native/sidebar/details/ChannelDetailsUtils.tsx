@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 692 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import set2 from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import ChannelDetailsNavigatorScreens from "ChannelDetailsConstants.tsx";
 
 const ChannelDetailsButtonTypes = ChannelDetailsNavigatorScreens.ChannelDetailsButtonTypes;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");

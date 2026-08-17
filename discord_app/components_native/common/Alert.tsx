@@ -1,19 +1,19 @@
 // discord_app/components_native/common/Alert.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import start from "start" /* 4259 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import createRulesAll from "createRules" /* 4764 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import getIsScreenLandscape from "getIsScreenLandscape" /* 8944 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Button from "../../design/void/native.tsx";
+import useWindowDimensionsDefault from "../../modules/screen/useWindowDimensions.native.tsx";
+import start from "../../../discord_common/js/packages/timers/Timers.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
+import Button2 from "../../design/components/Button/native/Button.native.tsx";
+import createRulesAll from "../../modules/markup/CustomMarkup.native.tsx";
+import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
+import getIsScreenLandscape from "../../modules/screen/useIsScreenLandscape.native.tsx";
+import getMixedGradientColorDefault from "../../modules/client_themes/native/ThemedGradient.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c4 = importAllResult;

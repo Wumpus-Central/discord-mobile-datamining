@@ -1,16 +1,16 @@
 // discord_app/utils/native/PremiumUpsellUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 8472 */;
-import registerAssetDefault2 from "registerAsset" /* 8473 */;
-import registerAssetDefault3 from "registerAsset" /* 8474 */;
-import registerAssetDefault4 from "registerAsset" /* 8475 */;
-import registerAssetDefault5 from "registerAsset" /* 8476 */;
-import registerAssetDefault6 from "registerAsset" /* 8477 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import registerAssetDefault from "../../../_runtime/08472_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/08473_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/08474_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/08475_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/08476_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/08477_registerAsset.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 
 require = arg1;

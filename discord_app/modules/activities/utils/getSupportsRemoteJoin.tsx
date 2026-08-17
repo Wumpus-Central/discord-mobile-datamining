@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getSupportsRemoteJoin.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlagDefault from "hasFlag" /* 7260 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import hasFlagDefault from "hasFlag.tsx";
 
 const ActivityFlags = ME.ActivityFlags;
 const result = set.fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");

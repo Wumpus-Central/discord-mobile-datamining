@@ -1,7 +1,7 @@
 // discord_app/modules/urgent_system_dm/navigateToSystemDM.tsx
-import _modDef4975 from "module_4975" /* 4975 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import { SYSTEM_USER } from "SYSTEM_USER" /* 16715 */;
+import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import { SYSTEM_USER } from "Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 

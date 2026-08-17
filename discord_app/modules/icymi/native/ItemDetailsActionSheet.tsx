@@ -1,17 +1,17 @@
 // discord_app/modules/icymi/native/ItemDetailsActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5295 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "filterStaffGuild" /* 9044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import computeChannelNameDefault from "../../channel/useChannelName.tsx";
+import useDesignToggleDefault from "../../devtools/design_toggles/useDesignToggle.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../ICYMIStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

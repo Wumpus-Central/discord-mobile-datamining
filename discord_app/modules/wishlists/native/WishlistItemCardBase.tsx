@@ -1,13 +1,13 @@
 // discord_app/modules/wishlists/native/WishlistItemCardBase.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import useUserProfileColors from "useUserProfileColors" /* 8979 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import useUserProfileColors from "../../user_profile/hooks/native/useUserProfileColors.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function SourceIcon(toastText) {

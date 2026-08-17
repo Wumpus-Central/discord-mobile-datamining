@@ -1,9 +1,9 @@
 // discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 1925 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import toggleGuildExpandedState from "toggleGuildExpandedState" /* 9299 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../emojis/EmojiConstants.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import toggleGuildExpandedState from "../../emojis/EmojiActionCreators.tsx";
 
 const EmojiInteractionPoint = set2.EmojiInteractionPoint;
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";

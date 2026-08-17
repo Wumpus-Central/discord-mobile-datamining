@@ -1,10 +1,10 @@
 // discord_app/modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getHash" /* 4288 */;
-import closure_6 from "initialize" /* 1212 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../ExperimentStore.tsx";
+import closure_6 from "../apex/ApexExperimentStore.tsx";
 
 require = arg1;
 let closure_7 = {};

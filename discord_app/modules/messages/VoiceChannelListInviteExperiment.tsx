@@ -1,6 +1,6 @@
 // discord_app/modules/messages/VoiceChannelListInviteExperiment.tsx
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../_runtime/00002_set.js";
+import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enable channel-list-style voice invite embed", config: { enabled: true } }];
 let closure_0 = createExperiment.createExperiment({ kind: "guild", id: "2026-05_voice_channel_list_invite_embed", label: "Voice Channel List Invite Embed", defaultConfig: { enabled: false }, treatments: items });

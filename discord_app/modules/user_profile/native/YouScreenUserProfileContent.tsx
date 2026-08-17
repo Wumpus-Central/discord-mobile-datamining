@@ -1,19 +1,19 @@
 // discord_app/modules/user_profile/native/YouScreenUserProfileContent.tsx
-import set from "set" /* 500 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8990 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12173 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 12174 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useIsContentShown } from "withContent" /* 1383 */;
-import closure_8 from "filterPlayingActivities" /* 7250 */;
-import closure_9 from "createUserWidgetFromServer" /* 5365 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import OpenableUserProfileAvatarDefault from "UserProfileAvatar.tsx";
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
+import WidgetRendererDefault from "UserProfileWidgetsBoard.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useIsContentShown } from "../../dismissible_content/DismissibleContentShownStateStore.tsx";
+import closure_8 from "../../../stores/SelfPresenceStore.tsx";
+import closure_9 from "../UserProfileStore.tsx";
+import { UserProfileSections } from "../Constants.tsx";
+import { UserProfileThemeTypes } from "Constants.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function YouAvatar(arg0) {

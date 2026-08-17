@@ -1,9 +1,9 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuContainer.native.tsx
-import ContextMenuDivider from "ContextMenuDivider" /* 13532 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ContextMenuDivider from "ContextMenuPopout.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 function getItemKey(key) {

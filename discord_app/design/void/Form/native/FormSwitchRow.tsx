@@ -1,11 +1,11 @@
 // discord_app/design/void/Form/native/FormSwitchRow.tsx
-import context from "context" /* 6939 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import context from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import TableSwitchRow from "../../../components/TableRow/native/TableSwitchRow.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FormSwitchRow(onValueChange) {

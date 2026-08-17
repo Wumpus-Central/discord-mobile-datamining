@@ -1,5 +1,5 @@
 // discord_app/modules/billing/errors/InvalidGooglePlayPurchase.tsx
-import setDefault from "set" /* 4061 */;
+import setDefault from "../../../errors/BillingError.tsx";
 
 setDefault;
 const prototype = function InvalidGooglePlayPurchase() {

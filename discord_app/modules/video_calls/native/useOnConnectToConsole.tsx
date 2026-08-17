@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/useOnConnectToConsole.tsx
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import _modDef9750 from "module_9750" /* 9750 */;
-import _modDef9780 from "module_9780" /* 9780 */;
-import _beginConsoleTransfer from "_beginConsoleTransfer" /* 9844 */;
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import _modDef9750 from "../../user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx";
+import _modDef9780 from "../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx";
+import _beginConsoleTransfer from "../../game_console/native/beginConsoleTransfer.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticsLocations: c4, PlatformTypes: c5 } = ME);

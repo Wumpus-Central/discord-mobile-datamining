@@ -1,10 +1,10 @@
 // discord_app/modules/search/native/stores/SearchPeopleTabStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _toPropertyKey from "_toPropertyKey" /* 9636 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleChannelSelect" /* 6772 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import _toPropertyKey from "../../../main_tabs_v2/native/shared_components/user_list/useUserListData.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../stores/FrecencyStore.tsx";
 
 require = arg1;
 let closure_5 = [];

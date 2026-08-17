@@ -1,7 +1,7 @@
 // discord_app/stores/billing/PaymentSourceStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createFromServer" /* 4043 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../records/PaymentSourceRecord.tsx";
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;

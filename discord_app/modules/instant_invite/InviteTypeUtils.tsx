@@ -1,9 +1,9 @@
 // discord_app/modules/instant_invite/InviteTypeUtils.tsx
-import set from "set" /* 2 */;
-import scheduledEventSort from "scheduledEventSort" /* 4370 */;
-import getEstablishedDate from "getEstablishedDate" /* 4372 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
+import set from "../../../_runtime/00002_set.js";
+import scheduledEventSort from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import getEstablishedDate from "../guild_profile/GuildProfileUtils.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import InviteSendStates from "Constants.tsx";
 
 const isEventUpcoming = scheduledEventSort.isEventUpcoming;
 ({ isGuildVocalChannelType: c3, isMultiUserDM: c4 } = createChannelRecord);

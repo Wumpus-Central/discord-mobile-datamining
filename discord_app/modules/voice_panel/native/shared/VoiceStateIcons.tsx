@@ -1,15 +1,15 @@
 // discord_app/modules/voice_panel/native/shared/VoiceStateIcons.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
-import isStableVoiceStateEqual from "isStableVoiceStateEqual" /* 9678 */;
-import registerAssetDefault from "registerAsset" /* 9687 */;
-import registerAssetDefault2 from "registerAsset" /* 9688 */;
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
+import isStableVoiceStateEqual from "../utils/VoiceStateIconUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/09687_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09688_registerAsset.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VideoDisabledSvgIcon(size) {

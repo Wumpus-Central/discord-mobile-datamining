@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
-import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
-import isIterable from "isIterable" /* 4006 */;
-import identity from "identity" /* 700 */;
+import set from "../../../../_runtime/00002_set.js";
+import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import isIterable from "../../../../_runtime/04006_isIterable.js";
+import identity from "../../../../_runtime/00700_identity.js";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
 let closure_3 = identity.createWithEqualityFn(() => {

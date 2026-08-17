@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/subscriptionUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
 
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
 

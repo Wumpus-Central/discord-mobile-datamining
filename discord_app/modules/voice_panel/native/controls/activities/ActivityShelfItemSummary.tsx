@@ -1,18 +1,18 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import Text from "Text" /* 4734 */;
-import PillWrapper from "PillWrapper" /* 4754 */;
-import EllipsisCircle from "EllipsisCircle" /* 4760 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10765 */;
-import useActivityUsersDefault from "useActivityUsers" /* 16365 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import PillWrapper from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
+import EllipsisCircle from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
+import UserSummaryItemDefault from "../../../../../components_native/common/UserSummaryItem.tsx";
+import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 function ParticipantsSummary(arg0) {

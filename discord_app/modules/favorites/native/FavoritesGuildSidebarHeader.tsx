@@ -1,17 +1,17 @@
 // discord_app/modules/favorites/native/FavoritesGuildSidebarHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import ChatIcon from "ChatIcon" /* 6867 */;
-import TextIcon from "TextIcon" /* 6876 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 15464 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import TextIcon from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
+import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useHasFavoritesGuildSuggestions as closure_5 } from "../FavoritesGuildSuggestionsStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function EmptyBody() {

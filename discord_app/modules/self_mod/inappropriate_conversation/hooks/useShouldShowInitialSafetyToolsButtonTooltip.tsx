@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx
-import closure_2 from "handleConnectionOpen" /* 9921 */;
+import closure_2 from "../../ChannelSafetyWarningsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
 

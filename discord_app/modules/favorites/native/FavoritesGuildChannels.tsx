@@ -1,15 +1,15 @@
 // discord_app/modules/favorites/native/FavoritesGuildChannels.tsx
-import noopAll from "noop" /* 19 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 8633 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 15397 */;
-import PX_8Default from "PX_8" /* 15463 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 15502 */;
-import getMissingFavoriteThreadIds from "getMissingFavoriteThreadIds" /* 15535 */;
-import FavoritesGuildSuggestionsLoaderInnerDefault from "FavoritesGuildSuggestionsLoaderInner" /* 15536 */;
-import EmptyBodyDefault from "EmptyBody" /* 15541 */;
-import { useFavoritesGuildSuggestionCount as closure_3 } from "items" /* 15464 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getFontScale from "../../screen/native/useFontScale.tsx";
+import useScaledRowHeightDefault from "../../main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx";
+import ChannelListStickyHeaderDefault from "../../channel_list_v2/native/components/ChannelListStickyHeader.tsx";
+import PX_8Default from "FavoritesGuildSuggestedChannels.tsx";
+import ChannelListPanelBackdropDefault from "../../channel_list_v2/native/components/ChannelListPanelBackdrop.tsx";
+import getMissingFavoriteThreadIds from "../FavoritesGuildChannelList.tsx";
+import FavoritesGuildSuggestionsLoaderInnerDefault from "../FavoritesGuildSuggestionsLoader.tsx";
+import EmptyBodyDefault from "FavoritesGuildSidebarHeader.tsx";
+import { useFavoritesGuildSuggestionCount as closure_3 } from "../FavoritesGuildSuggestionsStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

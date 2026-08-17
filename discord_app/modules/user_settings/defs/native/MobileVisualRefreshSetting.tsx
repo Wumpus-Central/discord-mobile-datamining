@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx
-import initialize from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_3 from "initialize" /* 1212 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import closure_3 from "../../../experiments/apex/ApexExperimentStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;

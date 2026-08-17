@@ -1,16 +1,16 @@
 // discord_app/modules/voice_chat/native/components/VoiceChatHeaderIcon.tsx
-import applyDefault from "apply" /* 12 */;
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12522 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/ReadStateStore.tsx";
+import { ThemeTypes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

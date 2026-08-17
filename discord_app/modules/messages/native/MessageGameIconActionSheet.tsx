@@ -1,13 +1,13 @@
 // discord_app/modules/messages/native/MessageGameIconActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import combinedDefault from "combined" /* 1993 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "addApplication" /* 4478 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../applications/ApplicationStore.tsx";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 noopAll;

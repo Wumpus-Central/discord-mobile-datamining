@@ -1,5 +1,5 @@
 // discord_assets/assets/orbs/static_idle_orb.png.js
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/static_idle_orb.png.js");
 

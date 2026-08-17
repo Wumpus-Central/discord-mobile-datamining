@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx
-import useGuildEvents from "useGuildEvents" /* 8891 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 15447 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import useGuildEvents from "useGuildScheduledEvents.tsx";
+import useLiveStageChannelsDefault from "../stage_channels/useLiveStageChannels.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");

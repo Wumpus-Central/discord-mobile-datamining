@@ -1,7 +1,7 @@
 // discord_app/modules/keyboard/native/openCustomKeyboard.android.tsx
-import set from "set" /* 2 */;
-import computeEntryState from "computeEntryState" /* 1498 */;
-import runAfterInteractions from "runAfterInteractions" /* 6548 */;
+import set from "../../../../_runtime/00002_set.js";
+import computeEntryState from "KeyboardUIStore.native.tsx";
+import runAfterInteractions from "../../../utils/native/RunAfterInteractionsUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
 

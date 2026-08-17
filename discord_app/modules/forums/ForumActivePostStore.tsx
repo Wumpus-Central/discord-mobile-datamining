@@ -1,18 +1,18 @@
 // discord_app/modules/forums/ForumActivePostStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set3 from "set" /* 1400 */;
-import set4 from "set" /* 1402 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
-import getCreationDefaultFormatter from "getCreationDefaultFormatter" /* 7272 */;
-import closure_4 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_5 from "updateState" /* 7271 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import importDefaultResult from "apply" /* 12 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import set3 from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import set4 from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import areSetsEqual from "../../../discord_common/js/shared/utils/SetUtils.tsx";
+import getCreationDefaultFormatter from "ForumUtils.tsx";
+import closure_4 from "../threads/ActiveThreadsStore.tsx";
+import closure_5 from "../threads/ThreadMessageStore.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/ReadStateStore.tsx";
+import closure_9 from "../../stores/SelectedChannelStore.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
+import set from "../../../_runtime/00002_set.js";
 import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 
 require = arg1;

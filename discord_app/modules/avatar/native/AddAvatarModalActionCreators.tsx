@@ -1,13 +1,13 @@
 // discord_app/modules/avatar/native/AddAvatarModalActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import setDefault from "set" /* 4827 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 8620 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 11877 */;
-import ADD_AVATAR_MODAL_KEY2 from "ADD_AVATAR_MODAL_KEY" /* 16646 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import setDefault from "../../../actions/AlertActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import saveProfileAndAccountRequest from "../../../actions/UserSettingsAccountActionCreators.tsx";
+import _startContactSyncForDiscoverability from "../../nuf/native/NUFActionCreators.tsx";
+import ADD_AVATAR_MODAL_KEY2 from "components/AddAvatarModalConstants.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const ADD_AVATAR_MODAL_KEY = ADD_AVATAR_MODAL_KEY2.ADD_AVATAR_MODAL_KEY;

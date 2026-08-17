@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15814 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useResourceChannelsDefault from "../useResourceChannels.tsx";
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "OnboardingHomeConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

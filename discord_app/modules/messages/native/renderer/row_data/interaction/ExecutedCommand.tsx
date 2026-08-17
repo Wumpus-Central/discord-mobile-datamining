@@ -1,18 +1,18 @@
 // discord_app/modules/messages/native/renderer/row_data/interaction/ExecutedCommand.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
-import buildCommand from "buildCommand" /* 5245 */;
-import processColorStrings from "processColorStrings" /* 8186 */;
-import canViewInteractionInfo from "canViewInteractionInfo" /* 8445 */;
-import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../../Constants.tsx";
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../../../utils/AvatarUtils.tsx";
+import ensureAvatarSource from "../../../../../../utils/native/AvatarUtils.tsx";
+import PermissionOverwriteType from "../../../../../../flow/Server.tsx";
+import useNullableMessageAuthor from "../../../../useMessageAuthor.tsx";
+import buildCommand from "../../../../../application_commands/ApplicationCommandUtils.tsx";
+import processColorStrings from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
+import canViewInteractionInfo from "../../../../../applications/ApplicationInteractionInfoUtils.tsx";
+import closure_4 from "../../../../../../records/UserRecord.tsx";
+import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../../stores/UserStore.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
 const MessageTypes = ME.MessageTypes;

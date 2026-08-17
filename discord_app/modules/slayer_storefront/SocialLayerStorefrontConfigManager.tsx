@@ -1,6 +1,6 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import _fetchSocialLayerStorefront from "SocialLayerStorefrontActionCreators.tsx";
 
 require = arg1;
 initializeDefault;

@@ -1,13 +1,13 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerThumbnails.tsx
-import set from "set" /* 500 */;
-import map from "map" /* 4097 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12058 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 9012 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import THUMBNAIL_MARGIN from "../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ObscuredView(source) {

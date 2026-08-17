@@ -1,13 +1,13 @@
 // discord_app/modules/game_server/GameServerActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleGameServerUpsert" /* 11652 */;
-import { GAME_SERVER_COLLECTION_ID } from "str11" /* 4263 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _httpGetWithCountryCodeQuery from "../../utils/StoreUtils.tsx";
+import closure_3 from "../user_settings/LocaleStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "OwnedGameServersStore.tsx";
+import { GAME_SERVER_COLLECTION_ID } from "GameServerConstants.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { GameServerStatus } from "../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";

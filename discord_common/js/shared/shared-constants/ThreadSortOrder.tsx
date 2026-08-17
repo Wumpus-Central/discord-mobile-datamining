@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ThreadSortOrder.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null };
 let set = new Set([0, 1]);

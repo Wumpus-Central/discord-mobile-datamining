@@ -1,7 +1,7 @@
 // discord_app/utils/AuthenticationUtils.tsx
-import set from "set" /* 2 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import registerAsset from "registerAsset" /* 1372 */;
+import set from "../../_runtime/00002_set.js";
+import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
+import registerAsset from "../../_runtime/01372_registerAsset.js";
 
 const result = set.fileFinishedImporting("utils/AuthenticationUtils.tsx");
 

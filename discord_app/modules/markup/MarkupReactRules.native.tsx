@@ -1,22 +1,22 @@
 // discord_app/modules/markup/MarkupReactRules.native.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import smartOutput from "smartOutput" /* 8308 */;
-import handleTapCommandMentionDefault from "handleTapCommandMention" /* 9560 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1398 */;
-import { Fonts } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../components_native/common/FastImage.tsx";
+import smartOutput from "MarkupRulesUtils.tsx";
+import handleTapCommandMentionDefault from "native/MarkupReactCommandRule.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../stores/ChannelStore.tsx";
+import closure_10 from "../../stores/GuildRoleStore.tsx";
+import closure_11 from "../../stores/GuildStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../channel/ChannelConstants.tsx";
+import { Fonts } from "../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class MarkupText {

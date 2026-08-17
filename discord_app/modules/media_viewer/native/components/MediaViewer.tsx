@@ -1,10 +1,10 @@
 // discord_app/modules/media_viewer/native/components/MediaViewer.tsx
-import MediaViewerDimensionsProvider from "MediaViewerDimensionsProvider" /* 9013 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import MediaViewerDimensionsProvider from "../MediaViewerDimensionsContext.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../utils/PlatformUtils.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
 import { handleOrientationChange } from "../../../device/native/DeviceOrientation.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";

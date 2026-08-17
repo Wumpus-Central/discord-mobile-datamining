@@ -1,15 +1,15 @@
 // discord_app/modules/favorites/native/FavoritesGuildSuggestedChannels.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 8633 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 15464 */;
-import { NOOP } from "ME" /* 676 */;
-import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10055 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import useScaledRowHeightDefault from "../../main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import items from "../FavoritesGuildSuggestionsStore.tsx";
+import { NOOP } from "../../../Constants.tsx";
+import { getScaledCategoryRowHeight as closure_8 } from "../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ useFavoritesGuildSuggestions: c5, useFavoritesGuildSuggestionsDismissal: closure_6 } = items);

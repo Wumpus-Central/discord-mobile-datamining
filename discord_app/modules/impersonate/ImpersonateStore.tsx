@@ -1,13 +1,13 @@
 // discord_app/modules/impersonate/ImpersonateStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ImpersonateType from "ImpersonateType" /* 1988 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ImpersonateType from "ImpersonateTypes.tsx";
+import areArraysShallowlyEqual from "../../utils/FunctionUtils.tsx";
+import closure_4 from "../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import { GuildSettingsSections } from "../../Constants.tsx";
+import { ChannelNotificationSettingsFlags as closure_7 } from "../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 let closure_8 = {};

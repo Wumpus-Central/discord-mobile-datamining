@@ -1,8 +1,8 @@
 // discord_app/modules/global_discovery_apps/applicationDirectoryAnalytics.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "handleConnectionOpen" /* 1979 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_2 from "../../stores/SelectedChannelStore.tsx";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");
 

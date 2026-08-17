@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14001 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14066 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import closure_7 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_10 from "zustandStore" /* 9537 */;
-import closure_11 from "handleFormOpen" /* 8370 */;
-import { ProfileCustomizationSubsection } from "MAX_FAVORITES" /* 685 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile.tsx";
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile.tsx";
+import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_7 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_10 from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import closure_11 from "../../../user_profile/UserProfileSettingsStore.tsx";
+import { ProfileCustomizationSubsection } from "../../UserSettingsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let closure_3 = ["handleSubmit"];

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 let result = set.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");

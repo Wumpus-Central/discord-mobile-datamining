@@ -1,11 +1,11 @@
 // discord_app/modules/rewards/ProgramRewardsUtils.tsx
-import isPastDefault from "isPast" /* 3816 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import apexExperiment from "apexExperiment" /* 5315 */;
-import RewardProgram from "RewardProgram" /* 13275 */;
-import PremiumRewardsOrbsTreatment from "PremiumRewardsOrbsTreatment" /* 13278 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import isPastDefault from "../../../_runtime/03816_isPast.js";
+import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
+import apexExperiment from "../croissant/crepe/CrepeExperiment.tsx";
+import RewardProgram from "ProgramRewardsTypes.tsx";
+import PremiumRewardsOrbsTreatment from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 
 require = arg1;
 function canFetchNitroProgramReward(canUseMonthlyOrbs) {

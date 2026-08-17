@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
-import closure_2 from "isSubscriptionGated" /* 1981 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../channel/GatedChannelStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

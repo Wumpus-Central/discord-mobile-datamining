@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 5038 */;
-import createSoundForPack from "createSoundForPack" /* 10040 */;
+import set from "../../../../_runtime/00002_set.js";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import createSoundForPack from "../../sound_playback/SoundUtils.tsx";
 
 function fadeIn() {
   if (null != interval) {

@@ -1,9 +1,9 @@
 // discord_app/stores/InviteStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import readSnowflake from "readSnowflake" /* 4360 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import readSnowflake from "../modules/instant_invite/InviteCodeUtils.tsx";
 
 function updateInvite(code, arg1) {
   let str = code;

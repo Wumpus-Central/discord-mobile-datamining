@@ -1,18 +1,18 @@
 // discord_app/modules/search/native/components/list/SearchListCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import ForumIcon from "ForumIcon" /* 6883 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import nameFromUserDefault from "../../../../../utils/UserUtils.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import computeChannelNameDefault from "../../../../channel/useChannelName.tsx";
+import PressableCard from "../../../../../design/components/Card/native/Card.native.tsx";
+import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
+import ForumIcon from "../../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
+import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class SearchListContentAuthor {

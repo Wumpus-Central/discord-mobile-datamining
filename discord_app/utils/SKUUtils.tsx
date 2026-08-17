@@ -1,11 +1,11 @@
 // discord_app/utils/SKUUtils.tsx
-import set from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import matchPath from "matchPath" /* 4202 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import ME from "ME" /* 676 */;
+import set from "PlatformUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import matchPath from "../modules/routing/matchPathCompat.tsx";
+import _httpGetWithCountryCodeQuery from "StoreUtils.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import ME from "../Constants.tsx";
 
 require = arg1;
 const GameGenres = ME.GameGenres;

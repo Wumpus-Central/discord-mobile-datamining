@@ -1,14 +1,14 @@
 // discord_app/modules/ads/analytics/captureAdUserAction.tsx
-import set from "set" /* 500 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
-import getQuestLogger from "getQuestLogger" /* 7459 */;
-import AdCreativeType from "AdCreativeType" /* 7469 */;
-import getQuestContentName from "getQuestContentName" /* 7480 */;
-import getBrandSafetyContext from "getBrandSafetyContext" /* 9504 */;
-import AdUserActionType from "AdUserActionType" /* 9507 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initializeState" /* 7453 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import getDeviceMetadataDefault from "../../device/getDeviceMetadata.native.tsx";
+import getQuestLogger from "../../quests/lib/getQuestLogger.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import getQuestContentName from "../../quests/lib/analytics/AnalyticsTypes.tsx";
+import getBrandSafetyContext from "../../quests/lib/analytics/BrandSafetyContext.tsx";
+import AdUserActionType from "captureAdUserActionTypes.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../quests/QuestStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 function emitClickEventWithCreative() {

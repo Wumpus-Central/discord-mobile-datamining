@@ -1,6 +1,6 @@
 // discord_app/design/components/Text/native/PlainTextEligibility.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../../../../_runtime/00002_set.js";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let set = new Set(["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLabelledBy", "accessibilityLanguage", "accessibilityLargeContentTitle", "accessibilityLiveRegion", "accessibilityRespondsToUserInteraction", "accessibilityRole", "accessibilityShowsLargeContentViewer", "accessibilityState", "accessibilityValue", "accessibilityViewIsModal", "accessible", "allowFontScaling", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-modal", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "importantForAccessibility", "maxFontSizeMultiplier", "nativeID", "onAccessibilityAction", "onAccessibilityEscape", "onAccessibilityTap", "onMagicTap", "role", "screenReaderFocusable", "testID"]);

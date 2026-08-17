@@ -1,12 +1,12 @@
 // discord_app/modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "zustandStore" /* 13993 */;
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../user_settings/UserSettingSearchStore.tsx";
+import { NodeType } from "SettingRendererConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import { SegmentedControlPage } from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";

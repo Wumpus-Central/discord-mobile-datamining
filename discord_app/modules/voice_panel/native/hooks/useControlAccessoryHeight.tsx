@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_4 = { code: "function useControlAccessoryHeightTsx1(){const{consoleStatusHeight,floatingCTAHeight}=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();}" };

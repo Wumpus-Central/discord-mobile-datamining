@@ -1,25 +1,25 @@
 // discord_app/modules/calls/ChannelRTCParticipants.tsx
-import apply from "apply" /* 12 */;
-import version from "version" /* 4017 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 4778 */;
-import useIsSpeaking from "useIsSpeaking" /* 4779 */;
-import apexExperiment from "apexExperiment" /* 4784 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 4797 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "callConnect" /* 4496 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "makeTimeoutKey" /* 4776 */;
-import closure_12 from "updateVoiceState" /* 4542 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import ME from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import apply from "../../../_runtime/00012_apply.js";
+import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
+import getParticipantUserKeyDefault from "getParticipantUserKey.tsx";
+import useIsSpeaking from "../../hooks/useIsSpeaking.tsx";
+import apexExperiment from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
+import getNicknameDefault from "../../utils/NicknameUtils.tsx";
+import useAvatarDecoration from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/CallStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/MediaEngineStore.tsx";
+import closure_9 from "../../stores/SpeakingStore.tsx";
+import closure_10 from "../../stores/UserStore.tsx";
+import closure_11 from "../../stores/VideoStreamStore.tsx";
+import closure_12 from "../../stores/VoiceStateStore.tsx";
+import ParticipantTypes from "CallConstants.tsx";
+import ME from "../../Constants.tsx";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 function sortKey(type) {

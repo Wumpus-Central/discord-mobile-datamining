@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionEmojis.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../emojis/EmojiStore.tsx";
 
 const require = arg1;
 let items = [];

@@ -1,6 +1,6 @@
 // discord_app/modules/errors/hooks/useVideoReadyTimeout.tsx
-import setDefault from "set" /* 687 */;
-import closure_2 from "noop" /* 19 */;
+import setDefault from "../../../utils/Durations.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_3 = 20 * setDefault.Millis.SECOND;

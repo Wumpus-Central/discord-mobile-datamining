@@ -1,15 +1,15 @@
 // discord_app/components_native/premium/PremiumSubscriptionUpsell.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { Gradients } from "items" /* 7403 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import { Gradients } from "../../modules/colors/native/ColorConstants.tsx";
+import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

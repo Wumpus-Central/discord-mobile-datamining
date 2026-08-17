@@ -1,10 +1,10 @@
 // discord_app/utils/MentionGuardUtils.tsx
-import _modDef38 from "module_38" /* 38 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getMemberListId" /* 7249 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import rebuildDefault from "../modules/messages/MessageParser.tsx";
+import closure_2 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../stores/ChannelMemberStore.tsx";
+import closure_4 from "../stores/PermissionStore.tsx";
+import ME from "../Constants.tsx";
 
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {

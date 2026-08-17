@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../../stores/VoiceStateStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/modules/themes/resolveTheme.native.tsx
-import getToken from "getToken" /* 1371 */;
-import closure_2 from "reset" /* 1346 */;
-import closure_3 from "initialize" /* 1303 */;
-import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import getToken from "../../utils/AuthenticationUtils.tsx";
+import closure_2 from "../client_themes/native/CustomThemeMobileStore.tsx";
+import closure_3 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import closure_4 from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_5 from "../user_settings/UserSettingsProtoStore.tsx";
+import SystemThemeState from "../user_settings/ThemeConstants.tsx";
 
 require = arg1;
 ({ PROTO_THEME_MAP_MOBILE: closure_6, PROTO_THEME_MAP_MOBILE_REFRESH: error, SystemTheme: closure_8, SystemThemeState: c9 } = SystemThemeState);

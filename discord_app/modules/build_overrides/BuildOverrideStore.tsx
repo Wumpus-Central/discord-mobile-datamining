@@ -1,7 +1,7 @@
 // discord_app/modules/build_overrides/BuildOverrideStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import Version from "Version" /* 4290 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import Version from "BuildOverrideUtils.tsx";
 import { Version } from "BuildOverrideUtils.tsx";
 
 require = arg1;

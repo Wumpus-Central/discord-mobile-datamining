@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 12547 */;
-import dispatcherDefault from "dispatcher" /* 12555 */;
-import closure_3 from "getUserAgnosticState" /* 12548 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import UserSettingsVoice from "UserSettingsVoice.tsx";
+import dispatcherDefault from "../../../voice_overlay/native/MobileVoiceOverlayActionCreators.tsx";
+import closure_3 from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

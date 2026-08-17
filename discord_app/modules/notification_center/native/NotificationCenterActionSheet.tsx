@@ -1,8 +1,8 @@
 // discord_app/modules/notification_center/native/NotificationCenterActionSheet.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "findOrCreateMessageRecord" /* 5384 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../inbox/RecentMentionsStore.tsx";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

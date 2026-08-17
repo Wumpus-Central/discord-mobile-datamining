@@ -1,5 +1,5 @@
 // discord_app/modules/generated_test_users/GeneratedTestUsersModels.tsx
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "../../lib/Record.tsx";
 
 toJSDefault;
 let GeneratedTestPoolRecord;

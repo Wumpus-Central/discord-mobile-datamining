@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1940 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import set from "../../../_runtime/00002_set.js";
 
 function setsEqual(set, set2) {
   if (set.size !== set2.size) {

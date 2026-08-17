@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/PermissionsConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import Permissions2 from "Permissions" /* 1399 */;
-import importAllResult from "fromString" /* 506 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import Permissions2 from "../stage_channels/StageChannelPermissions.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const Permissions = ME.Permissions;
 const VIEW_CHANNEL = Permissions.VIEW_CHANNEL;

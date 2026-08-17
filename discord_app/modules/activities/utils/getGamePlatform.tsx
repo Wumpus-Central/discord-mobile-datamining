@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getGamePlatform.tsx
-import set from "set" /* 2 */;
-import isOnXboxDefault from "isOnXbox" /* 12099 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import isOnXboxDefault from "isOnXbox.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityTypes: obj1, ActivityGamePlatforms: c3 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");

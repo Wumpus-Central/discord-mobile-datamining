@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "getHash" /* 4288 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import closure_2 from "../../experiments/ExperimentStore.tsx";
+import { isGuildOwner } from "../../../records/GuildRecord.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");

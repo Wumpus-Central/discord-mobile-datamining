@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null };
 let set = new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]);

@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/items/index.tsx
-import set from "set" /* 2 */;
-import renderCategoryItem from "renderCategoryItem" /* 15369 */;
-import ThreadChannelDefault from "ThreadChannel" /* 15375 */;
-import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 15393 */;
+import set from "../../../../../_runtime/00002_set.js";
+import renderCategoryItem from "RedesignCategory.tsx";
+import ThreadChannelDefault from "ThreadChannel.tsx";
+import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary.tsx";
 
 const result = set.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 

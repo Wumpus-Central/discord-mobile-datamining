@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 14788 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import _initializeAndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function useAndroidMessageNotificationsSettingValue() {
   let flag = callback();

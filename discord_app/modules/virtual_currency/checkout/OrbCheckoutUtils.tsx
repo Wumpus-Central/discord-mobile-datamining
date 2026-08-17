@@ -1,10 +1,10 @@
 // discord_app/modules/virtual_currency/checkout/OrbCheckoutUtils.tsx
-import set from "set" /* 2 */;
-import items2 from "items" /* 678 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ConstraintReasonCode2 from "ConstraintReasonCode" /* 7209 */;
-import _signOrder from "_signOrder" /* 7210 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import items2 from "../../collectibles/CollectiblesShopConstants.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ConstraintReasonCode2 from "../../payments/OrderConstants.tsx";
+import _signOrder from "../../payments/OrderActionCreators.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ CurrencyCodes: obj1, MarketingURLs: c3, PriceSetAssignmentPurchaseTypes: c4 } = ME);
 const EXTERNAL_PRODUCT_SKU_IDS = items2.EXTERNAL_PRODUCT_SKU_IDS;

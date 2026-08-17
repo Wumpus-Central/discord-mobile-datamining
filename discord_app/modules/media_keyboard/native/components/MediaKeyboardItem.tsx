@@ -1,21 +1,21 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardItem.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4734 */;
-import ImageIcon from "ImageIcon" /* 6882 */;
-import AttachmentIcon from "AttachmentIcon" /* 10051 */;
-import registerAssetDefault from "registerAsset" /* 10227 */;
-import CameraIcon from "CameraIcon" /* 10287 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 4824 */;
-import frozen from "frozen" /* 10283 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import registerAssetDefault from "../../../../../_runtime/10227_registerAsset.js";
+import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/UploadAttachmentStore.tsx";
+import frozen from "../../../device/native/DeviceConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 function NewCaption(arg0) {

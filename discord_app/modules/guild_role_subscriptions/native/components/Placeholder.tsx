@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/Placeholder.tsx
-import noopAll from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 noopAll;
 let closure_2 = createCacheKey.createStyles({ spinner: { marginTop: 12 } });

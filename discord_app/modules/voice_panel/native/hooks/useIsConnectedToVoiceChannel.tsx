@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
-import { RTCConnectionStates } from "ME" /* 676 */;
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../../../stores/VoiceStateStore.tsx";
+import { RTCConnectionStates } from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

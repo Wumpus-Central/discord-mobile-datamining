@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/maybeFetchUserProfile.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "UserProfileStore.tsx";
 import { _fetchProfile } from "../../actions/UserActionCreators.tsx";
 import { hasFetchedColors } from "../avatar/useAvatarColor.tsx";
 import { openCollectiblesShop } from "../collectibles/CollectiblesActionCreators.tsx";

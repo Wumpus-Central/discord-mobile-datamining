@@ -1,8 +1,8 @@
 // discord_app/modules/clips/isClientClipsCapable.tsx
-import set from "set" /* 2 */;
-import setAll from "set" /* 500 */;
-import apexExperiment from "apexExperiment" /* 4527 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../../_runtime/00002_set.js";
+import setAll from "../../utils/PlatformUtils.tsx";
+import apexExperiment from "ClipsExperiment.tsx";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const Features = DesktopSources.Features;
 const result = set.fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");

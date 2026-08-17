@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/hooks/useParentalControlSettings.tsx
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
-import useSelectedTeen from "useSelectedTeen" /* 7623 */;
-import result2 from "result" /* 14182 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getSettings" /* 5299 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import useUserIdsForLinkStatus from "useUserLinks.tsx";
+import useSelectedTeen from "useSelectedTeen.tsx";
+import result2 from "../../user_settings/family_center/ParentalControlledUserSettings.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../FamilyCenterControlledSettingsStore.tsx";
+import { SafetyToastType } from "../../safety_common/Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useSelectedTeen } from "useSelectedTeen.tsx";
 

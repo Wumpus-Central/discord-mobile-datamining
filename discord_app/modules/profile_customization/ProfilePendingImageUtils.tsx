@@ -1,6 +1,6 @@
 // discord_app/modules/profile_customization/ProfilePendingImageUtils.tsx
-import set from "set" /* 2 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
+import set from "../../../_runtime/00002_set.js";
+import AssetOriginTypes from "ProfilePendingImageTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 

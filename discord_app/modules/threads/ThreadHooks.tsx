@@ -1,15 +1,15 @@
 // discord_app/modules/threads/ThreadHooks.tsx
-import fromStringAll from "fromString" /* 506 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import useIsRemoteDefault from "useIsRemote" /* 7235 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "rebuild" /* 5251 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "createExperiment" /* 4287 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
+import useIsRemoteDefault from "../game_console/hooks/useIsRemote.tsx";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { THREADED_CHANNEL_TYPES } from "../../records/ChannelRecord.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "ActiveJoinedThreadsStore.tsx";
+import ME from "../../Constants.tsx";
+import importDefaultResult from "../experiments/createExperiment.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

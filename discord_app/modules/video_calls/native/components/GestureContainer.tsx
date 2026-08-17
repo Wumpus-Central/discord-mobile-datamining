@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/components/GestureContainer.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useChannelCallStore } from "../ChannelCallStore.tsx";
+import PIP_GESTURE_ACTIVE_OFFSET from "Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

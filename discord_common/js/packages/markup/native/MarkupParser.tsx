@@ -1,7 +1,7 @@
 // discord_common/js/packages/markup/native/MarkupParser.tsx
-import set from "set" /* 2 */;
-import tDefault from "t" /* 4092 */;
-import collectAst from "collectAst" /* 6904 */;
+import set from "../../../../../_runtime/00002_set.js";
+import tDefault from "../../../../../_runtime/04092_t.js";
+import collectAst from "../MarkupASTUtils.tsx";
 
 function saferParse(arg0, arg1, inline) {
   let text = arg1;

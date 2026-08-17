@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx
-import set from "set" /* 2 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import getApplicationSubscriptionSystemMessageASTContent from "getApplicationSubscriptionSystemMessageASTContent" /* 8214 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import getApplicationSubscriptionSystemMessageASTContent from "../../../../premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx");
 

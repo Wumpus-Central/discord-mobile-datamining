@@ -1,8 +1,8 @@
 // discord_app/modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import closure_2 from "handleConnectionOpen" /* 1979 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import { ME } from "ME" /* 676 */;
+import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import closure_2 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
+import { ME } from "../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");

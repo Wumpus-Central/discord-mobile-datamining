@@ -1,10 +1,10 @@
 // discord_app/modules/sentry/SentryExperimentFeatureFlagManager.tsx
-import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "initialize" /* 1212 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import set from "set" /* 2 */;
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../experiments/ExperimentStore.tsx";
+import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
+import closure_4 from "../../stores/SelectedGuildStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function isLikelyControl(defaultConfig, variantId2) {
   if (null == defaultConfig) {

@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/native/Constants.tsx
-import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../../../../_runtime/00002_set.js";
+import DesktopSources from "../Constants.tsx";
 
 const InputModes = DesktopSources.InputModes;
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");

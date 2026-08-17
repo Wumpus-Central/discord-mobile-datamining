@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/premium/native/PremiumSettingScreen.tsx
-import noopAll from "noop" /* 19 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7382 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
-import dispatcherDefault from "dispatcher" /* 7877 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import UserSettingsPremiumDefault from "UserSettingsPremium.tsx";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
+import dispatcherDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

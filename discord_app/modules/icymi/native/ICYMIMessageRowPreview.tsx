@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/native/ICYMIMessageRowPreview.tsx
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import { MessageEmbedTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { MessageEmbedTypes } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ICYMIMessageRowPreview(pointerEvents) {

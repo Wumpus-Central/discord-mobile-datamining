@@ -1,13 +1,13 @@
 // discord_app/modules/oauth2/native/Header.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text from "Text" /* 4734 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UserFlags } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserFlags } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx
-import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 4071 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import explicitContentFromProto from "../../../../../user_settings/UserSettings.tsx";
+import ChannelListLayoutTypes2 from "../../../../ChannelListLayoutTypes.tsx";
 
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;

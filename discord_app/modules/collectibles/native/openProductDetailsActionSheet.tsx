@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import openCollectiblesShop from "openCollectiblesShop" /* 5300 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
+import set from "../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import openCollectiblesShop from "../CollectiblesActionCreators.tsx";
+import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
 
 let c3 = "Shop Product Preview";
 const result = set.fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/voice_calls/useIsVoiceChannelFull.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import closure_4 from "../../stores/VoiceStateStore.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

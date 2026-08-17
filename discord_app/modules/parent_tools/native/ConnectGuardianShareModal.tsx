@@ -1,15 +1,15 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianShareModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import Modal from "Modal" /* 11115 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14237 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
+import useOnNewPendingRequestDefault from "../hooks/useOnNewPendingRequest.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../FamilyCenterStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ConnectGuardianShareScreen() {

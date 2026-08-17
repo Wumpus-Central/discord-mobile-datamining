@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx
-import isValidFormResponse from "isValidFormResponse" /* 6859 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import isValidFormResponse from "../MemberVerificationUtils.tsx";
+import closure_2 from "../../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

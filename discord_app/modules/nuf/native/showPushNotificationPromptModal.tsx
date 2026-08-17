@@ -1,8 +1,8 @@
 // discord_app/modules/nuf/native/showPushNotificationPromptModal.tsx
-import set from "set" /* 2 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import set2 from "set" /* 11578 */;
-import NewUserTypes from "NewUserTypes" /* 11878 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import set2 from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import NewUserTypes from "../NUFConstants.tsx";
 
 const PermissionStateType = set2.PermissionStateType;
 let closure_4 = NewUserTypes.NUF_NOTIFICATION_MODAL_KEY;

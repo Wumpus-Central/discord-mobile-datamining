@@ -1,5 +1,5 @@
 // discord_app/modules/premium/native/IAPManager.android.tsx
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
 initializeDefault;
 let prototype = function IAPManager() {

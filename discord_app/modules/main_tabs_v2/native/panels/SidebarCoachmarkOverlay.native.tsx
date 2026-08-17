@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NOOP } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function SidebarCoachmarkOverlayLayer(manager) {

@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/hooks/useVoiceChannelGames.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "filterPlayingActivities" /* 7250 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../../stores/SelfPresenceStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useGetGameForAppId } from "../../../games/hooks/useGetGameForAppId.tsx";
 

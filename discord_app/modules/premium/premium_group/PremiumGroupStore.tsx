@@ -1,9 +1,9 @@
 // discord_app/modules/premium/premium_group/PremiumGroupStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "reset" /* 4045 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
-import { NOOP_NULL } from "ME" /* 676 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_3 from "../../../stores/billing/SubscriptionStore.tsx";
+import SubscriptionStatusTypes from "PremiumGroupConstants.tsx";
+import { NOOP_NULL } from "../../../Constants.tsx";
 
 const require = arg1;
 function handleMutationStart() {

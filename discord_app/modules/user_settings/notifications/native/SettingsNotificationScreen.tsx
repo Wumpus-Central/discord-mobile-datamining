@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import _requestPushNotificationPermission from "_requestPushNotificationPermission" /* 11583 */;
-import _modDef13991 from "module_13991" /* 13991 */;
-import apexExperimentDefault from "apexExperiment" /* 14789 */;
-import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 14790 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore" /* 14788 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import _requestPushNotificationPermission from "../../../nuf/native/NotificationPermissionUtil.tsx";
+import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import apexExperimentDefault from "../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
+import hasAndroidNotificationChannels from "SettingsNotificationUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { initializeAndroidNotificationSettingsStore as closure_5 } from "stores/AndroidNotificationSettingsStore.tsx";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function SystemNotificationsSubLabel() {

@@ -1,8 +1,8 @@
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import hasFlag from "hasFlag" /* 4031 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8431 */;
+import set from "../../../_runtime/00002_set.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import hasFlag from "../../records/MessageRecord.tsx";
+import formatExpirationLabel from "../polls/chat/useFormattedExpirationLabel.tsx";
 
 const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;

@@ -1,9 +1,9 @@
 // discord_app/modules/payments/records/OrderRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import { BaseInvoiceRecord } from "createFromServer" /* 4048 */;
-import closure_1 from "createFromServer" /* 7397 */;
-import closure_2 from "createFromServer" /* 7398 */;
-import { PaymentGateways } from "sum" /* 505 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import { BaseInvoiceRecord } from "../../../records/InvoiceRecord.tsx";
+import closure_1 from "CheckoutContextRecord.tsx";
+import closure_2 from "SubscriptionFacetRecord.tsx";
+import { PaymentGateways } from "../../../../discord_common/js/shared/Constants.tsx";
 
 toJSDefault;
 let BillingFacetRecord;

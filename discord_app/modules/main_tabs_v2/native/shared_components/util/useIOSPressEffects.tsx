@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };

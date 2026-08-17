@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord2 from "createChannelRecord" /* 1395 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
+import set from "../../../../_runtime/00002_set.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import createChannelRecord2 from "../../../records/ChannelRecord.tsx";
+import closure_1 from "../../../stores/ChannelStore.tsx";
 
 const createChannelRecord = createChannelRecord2.createChannelRecord;
 let closure_2 = {};

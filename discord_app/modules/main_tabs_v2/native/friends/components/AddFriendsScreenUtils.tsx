@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
-import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9736 */;
-import _modDef9887 from "module_9887" /* 9887 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { AnalyticsSections } from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import handleRelationshipAddErrorDefault from "../../../../../actions/RelationshipActionCreators.tsx";
+import _modDef9887 from "../../../../people/PeopleUtils.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import { AnalyticsSections } from "../../../../../Constants.tsx";
+import { MessageSendLocation } from "../../../../messages/MessageConstants.tsx";
 
 const require = arg1;
 function _sendWave() {

@@ -1,10 +1,10 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx
-import setDefault from "set" /* 687 */;
-import mapped from "mapped" /* 9668 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4557 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import setDefault from "../../../../utils/Durations.tsx";
+import mapped from "../AVError.tsx";
+import getVoiceChannelErrorContext from "../AVErrorContext.tsx";
+import closure_2 from "../../../media_engine/MediaEngineStatsStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
 
 require = arg1;
 let closure_5 = 10 * setDefault.Millis.SECOND;

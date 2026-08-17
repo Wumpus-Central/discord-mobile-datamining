@@ -1,10 +1,10 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
-import set from "set" /* 2 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10573 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10577 */;
+import set from "../../../../../_runtime/00002_set.js";
+import handleConnectionOpen from "../../ChannelSafetyWarningsStore.tsx";
+import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
+import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault.tsx";
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");

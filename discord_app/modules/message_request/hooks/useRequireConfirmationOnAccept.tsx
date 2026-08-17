@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useRequireConfirmationOnAccept.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 11613 */;
+import set from "../../../../_runtime/00002_set.js";
+import setDefault from "useIsStricterMessageRequests.tsx";
 
 const result = set.fileFinishedImporting("modules/message_request/hooks/useRequireConfirmationOnAccept.tsx");
 

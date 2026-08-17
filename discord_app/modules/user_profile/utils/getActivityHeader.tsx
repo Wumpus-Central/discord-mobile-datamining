@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/utils/getActivityHeader.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12112 */;
-import PlatformTypesDefault from "PlatformTypes" /* 12113 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import unpackStageChannelParty from "../../stage_channels/StageChannelRichPresenceUtils.tsx";
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId.tsx";
+import PlatformTypesDefault from "getActivityPlatform.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityTypes: c3, PlatformTypes: c4 } = ME);
 const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");

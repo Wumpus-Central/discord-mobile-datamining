@@ -1,8 +1,8 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx
-import useThemeDefault from "useTheme" /* 4310 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ThemeTypes } from "sum" /* 505 */;
+import useThemeDefault from "../../../../../hooks/useTheme.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { ThemeTypes } from "../../../../../../discord_common/js/shared/Constants.tsx";
 import { registerAsset } from "../../../../../../_runtime/08143_registerAsset.js";
 import { getChannelSetupSource } from "../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx";
 

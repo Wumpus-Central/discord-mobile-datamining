@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/native/components/ChannelVoiceChatModal.tsx
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import _modDef9930 from "module_9930" /* 9930 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import _modDef9930 from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");

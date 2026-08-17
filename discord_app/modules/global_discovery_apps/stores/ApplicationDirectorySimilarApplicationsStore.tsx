@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import privDefault from "../../../../_runtime/01405_priv.js";
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_1 = new privDefault({ max: 20 });

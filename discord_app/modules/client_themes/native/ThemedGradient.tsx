@@ -1,18 +1,18 @@
 // discord_app/modules/client_themes/native/ThemedGradient.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import hslToRgbDefault from "hslToRgb" /* 4224 */;
-import set from "set" /* 4226 */;
-import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4228 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "isSyncedModeThemesEnabled" /* 4195 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import hslToRgbDefault from "../../../utils/Color.tsx";
+import set from "../../guild_themes/GuildThemePresets.tsx";
+import getGuildIdFromNavigationStateDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../ClientThemesBackgroundStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function getMixedGradientColor(mixColorOverride) {

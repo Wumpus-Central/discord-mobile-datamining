@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 ({ Image: c4, PixelRatio: c5 } = get_ActivityIndicator);

@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormDropdown.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import renderDefault from "render" /* 8910 */;
-import registerAssetDefault from "registerAsset" /* 11640 */;
-import registerAssetDefault2 from "registerAsset" /* 13357 */;
-import stylesDefault from "styles" /* 13358 */;
-import { Fonts } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import renderDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import registerAssetDefault from "../../../../../_runtime/11640_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13357_registerAsset.js";
+import stylesDefault from "FormStyles.tsx";
+import { Fonts } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
 require = arg1;
 function LockedIcon() {

@@ -1,8 +1,8 @@
 // discord_app/modules/media_viewer/native/components/openMediaModal.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "setContent" /* 4086 */;
-import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
 
 const require = arg1;
 function _openMediaModal() {

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouConstants.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
 

@@ -1,10 +1,10 @@
 // discord_app/modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
-import { DismissibleContentGroupName as closure_7 } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
+import { DismissibleContentGroupName as closure_7 } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx");

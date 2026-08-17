@@ -1,10 +1,10 @@
 // discord_app/stores/ApplicationStreamPreviewStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4532 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import StreamIssueReportReasons from "../modules/go_live/Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 function reset() {
   closure_4 = {};

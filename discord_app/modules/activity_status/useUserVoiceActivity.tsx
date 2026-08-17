@@ -1,8 +1,8 @@
 // discord_app/modules/activity_status/useUserVoiceActivity.tsx
-import importDefaultResult from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult1 from "getUncachedChannelPermissions" /* 4021 */;
-import importDefaultResult2 from "updateVoiceState" /* 4542 */;
-import { Permissions } from "sum" /* 505 */;
+import importDefaultResult from "../../stores/ChannelStore.tsx";
+import importDefaultResult1 from "../../stores/PermissionStore.tsx";
+import importDefaultResult2 from "../../stores/VoiceStateStore.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 function getVisibleUserVoiceActivity(arg0) {

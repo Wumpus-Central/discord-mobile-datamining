@@ -1,9 +1,9 @@
 // discord_common/js/packages/application-widget-renderer/src/schemas.tsx
-import set from "set" /* 2 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12194 */;
-import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 12195 */;
-import _mod12197 from "module_12197" /* 12197 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 12273 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ApplicationWidgetFieldPresentationType from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
+import ApplicationWidgetFieldValueType from "../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx";
+import _mod12197 from "../../../../../_runtime/metro/12197__.js";
+import ApplicationWidgetConfigSurface from "../../../shared/shared-constants/ApplicationWidgetConfigSurface.tsx";
 
 const z = _mod12197.z;
 let obj = { value_type: null, presentation_type: null, value: null };

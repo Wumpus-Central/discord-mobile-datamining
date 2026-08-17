@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx
-import noopAll from "noop" /* 19 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
-import WhatYouLoseDefault from "WhatYouLose" /* 14572 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
+import WhatYouLoseDefault from "../../../guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptionsCancel.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

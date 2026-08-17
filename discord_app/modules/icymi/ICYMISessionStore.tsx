@@ -1,13 +1,13 @@
 // discord_app/modules/icymi/ICYMISessionStore.tsx
-import v1 from "v1" /* 514 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_UX_VARIATION2 from "DEFAULT_UX_VARIATION" /* 9065 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "initialize" /* 1212 */;
-import closure_4 from "getUserAgnosticState" /* 9059 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "filterStaffGuild" /* 9044 */;
+import v1 from "../../../_runtime/00514_v1.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DEFAULT_UX_VARIATION2 from "ICYMIAnalytics.tsx";
+import closure_2 from "../experiments/ExperimentStore.tsx";
+import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
+import closure_4 from "../labs/LabFeatureStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "ICYMIStore.tsx";
 import { DEFAULT_UX_VARIATION } from "ICYMIAnalytics.tsx";
 
 require = arg1;

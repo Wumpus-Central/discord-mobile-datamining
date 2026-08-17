@@ -1,12 +1,12 @@
 // discord_app/modules/messages/useShowConvoStarterInDM.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import set2 from "set" /* 1398 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import set2 from "../channel/ChannelConstants.tsx";
+import closure_3 from "../message_request/MessageRequestStore.tsx";
+import closure_4 from "../../stores/MessageStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 

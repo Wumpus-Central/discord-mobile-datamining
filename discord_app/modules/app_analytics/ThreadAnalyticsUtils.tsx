@@ -1,11 +1,11 @@
 // discord_app/modules/app_analytics/ThreadAnalyticsUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import closure_3 from "updateFromGuild" /* 7517 */;
-import closure_4 from "updateState" /* 7271 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import transitionTo from "../routing/router_utils.tsx";
+import closure_3 from "../threads/ThreadMembersStore.tsx";
+import closure_4 from "../threads/ThreadMessageStore.tsx";
+import { THREAD_CHANNEL_TYPES } from "../../records/ChannelRecord.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");

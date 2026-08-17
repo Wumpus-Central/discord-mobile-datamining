@@ -1,12 +1,12 @@
 // discord_app/modules/wishlists/hooks/useWishlistRecommendations.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 10347 */;
-import importDefaultResult from "fromServer" /* 7201 */;
-import { WishlistRecommendationReason as closure_8 } from "fromServer" /* 7201 */;
+import setDefault from "../../../utils/Durations.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../user_profile/UserProfileStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../WishlistRecommendationsStore.tsx";
+import importDefaultResult from "../records/WishlistRecommendationRecord.tsx";
+import { WishlistRecommendationReason as closure_8 } from "../records/WishlistRecommendationRecord.tsx";
 
 const require = arg1;
 function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {

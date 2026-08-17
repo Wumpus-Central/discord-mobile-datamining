@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx
-import getPlatformDefault from "getPlatform" /* 8718 */;
-import closure_3 from "createExecutable" /* 4479 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "sum" /* 505 */;
+import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
+import closure_3 from "../../../records/ApplicationRecord.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");

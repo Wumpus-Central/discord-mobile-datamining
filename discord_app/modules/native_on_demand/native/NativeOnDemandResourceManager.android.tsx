@@ -1,8 +1,8 @@
 // discord_app/modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../../stores/native/AppStateStore.tsx";
+import { AppStates } from "../../../Constants.tsx";
 
 initializeDefault;
 let prototype = function NativeOnDemandResourceManager() {

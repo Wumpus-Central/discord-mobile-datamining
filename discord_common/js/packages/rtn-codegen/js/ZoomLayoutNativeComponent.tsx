@@ -1,8 +1,8 @@
 // discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx
-import set from "set" /* 2 */;
-import renderElement from "renderElement" /* 114 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import set from "../../../../../_runtime/00002_set.js";
+import renderElement from "../../../../../_runtime/00114_renderElement.js";
+import weakSet from "../../../../../_runtime/00106_weakSet.js";
+import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "DCDZoomLayoutAndroid", directEventTypes: { topZoomChanged: { registrationName: "onZoomChanged" } }, validAttributes: null };
 obj = { gestureEnabled: true, minimumZoomScale: true, maximumZoomScale: true };

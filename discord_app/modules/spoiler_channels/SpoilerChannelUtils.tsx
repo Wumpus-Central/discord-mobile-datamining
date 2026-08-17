@@ -1,6 +1,6 @@
 // discord_app/modules/spoiler_channels/SpoilerChannelUtils.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "initialize" /* 5268 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "ChannelSpoilerAgreeStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

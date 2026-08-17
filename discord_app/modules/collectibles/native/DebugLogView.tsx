@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/DebugLogView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getUserAgnosticState" /* 4737 */;
-import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 5323 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../devtools/dev_settings/DevSettingsStore.tsx";
+import useCollectiblesDebugStore from "../CollectiblesDebugStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c3, ScrollView: c4, TouchableOpacity: c5 } = get_ActivityIndicator);

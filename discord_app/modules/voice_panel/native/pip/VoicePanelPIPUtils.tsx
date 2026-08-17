@@ -1,14 +1,14 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import canRenderParticipantVideo from "canRenderParticipantVideo" /* 11444 */;
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import VoicePanelPIPModes from "VoicePanelPIPModes" /* 16307 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import set from "set" /* 2 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import canRenderParticipantVideo from "../../../video_calls/participantHasVideo.tsx";
+import closure_2 from "../../../calls/ChannelRTCStore.tsx";
+import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import VoicePanelPIPModes from "VoicePanelPIPConstants.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import MIN_PAN_GESTURE_MOVE from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 ({ SECONDARY_PIP_TOP_MARGIN: c5, VoicePanelModes: closure_6 } = VoicePanelModes);

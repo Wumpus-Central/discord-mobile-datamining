@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx
-import closure_3 from "noop" /* 19 */;
-import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set" /* 10030 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "InAppNotificationConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");

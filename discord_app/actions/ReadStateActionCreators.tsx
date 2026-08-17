@@ -1,11 +1,11 @@
 // discord_app/actions/ReadStateActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "rebuild" /* 5251 */;
-import { isReadableType } from "createChannelRecord" /* 1395 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "setIndex" /* 5278 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { CURRENT_APP_CONTEXT } from "ME" /* 676 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "../modules/threads/ActiveJoinedThreadsStore.tsx";
+import { isReadableType } from "../records/ChannelRecord.tsx";
+import closure_4 from "../stores/ChannelStore.tsx";
+import closure_5 from "../stores/GuildCategoryStore.tsx";
+import closure_6 from "../stores/UserStore.tsx";
+import { CURRENT_APP_CONTEXT } from "../Constants.tsx";
 
 function ack(channelId, location, arg2, arg3, messageId) {
   let flag = arg2;

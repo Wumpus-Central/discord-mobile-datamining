@@ -1,8 +1,8 @@
 // discord_app/modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx
-import noopAll from "noop" /* 19 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import TableRowGroupTitle from "../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

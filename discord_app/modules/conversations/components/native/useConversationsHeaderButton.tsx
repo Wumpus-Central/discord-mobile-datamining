@@ -1,8 +1,8 @@
 // discord_app/modules/conversations/components/native/useConversationsHeaderButton.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "removePendingListFetch" /* 5014 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 5016 */;
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../ConversationsStore.tsx";
+import CONVERSATION_COLORS from "../../ConversationConstants.tsx";
 
 const require = arg1;
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: c5, MOBILE_FETCH_LIMIT: closure_6, MOBILE_PREVIEW_MESSAGE_COUNT: error } = CONVERSATION_COLORS);

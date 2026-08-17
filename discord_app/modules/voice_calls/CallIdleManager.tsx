@@ -1,13 +1,13 @@
 // discord_app/modules/voice_calls/CallIdleManager.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import start from "start" /* 4259 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import initializeDefault from "initialize" /* 5038 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import closure_6 from "getVoiceStatesForGuild" /* 4545 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import start from "../../../discord_common/js/packages/timers/Timers.tsx";
+import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/VoiceStateStore.tsx";
+import closure_6 from "../../stores/views/SortedVoiceStateStore.tsx";
 
 require = arg1;
 function disconnect() {

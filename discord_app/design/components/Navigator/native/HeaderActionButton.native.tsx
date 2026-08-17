@@ -1,13 +1,13 @@
 // discord_app/design/components/Navigator/native/HeaderActionButton.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../Text/native/Text.tsx";
+import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
+import MINIMUM_HIT_AREA from "../../Button/native/ButtonConstants.native.tsx";
+import PressableBase from "../../../void/Pressables/native/Pressables.tsx";
+import { ANDROID_FOREGROUND_RIPPLE } from "../../../void/Form/native/FormConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

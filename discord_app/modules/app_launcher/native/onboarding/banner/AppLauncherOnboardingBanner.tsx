@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx
-import noopAll from "noop" /* 19 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 11222 */;
-import AppsBanerDefault from "AppsBaner" /* 11239 */;
-import BotsBannerDefault from "BotsBanner" /* 11241 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import ActivitiesBannerDefault from "ActivitiesBanner.tsx";
+import AppsBanerDefault from "AppsBanner.tsx";
+import BotsBannerDefault from "BotsBanner.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

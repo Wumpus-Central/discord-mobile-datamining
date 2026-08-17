@@ -1,8 +1,8 @@
 // discord_app/modules/channel/native/ChannelActionSheetUtils.tsx
-import set from "set" /* 2 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import allowChannelAccess from "allowChannelAccess" /* 4979 */;
-import _copy from "_copy" /* 7167 */;
+import set from "../../../../_runtime/00002_set.js";
+import presentAddedFriendToast from "../../toast/native/ToastUtils.tsx";
+import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
+import _copy from "../../../utils/ClipboardUtils.native.tsx";
 
 const result = set.fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
 

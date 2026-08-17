@@ -1,8 +1,8 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx
-import closure_3 from "noop" /* 19 */;
-import { MediaPickerActionSheetEngagedActions as closure_4 } from "DRAG_HANDLE" /* 1624 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { MediaPickerActionSheetEngagedActions as closure_4 } from "../MediaKeyboardConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");

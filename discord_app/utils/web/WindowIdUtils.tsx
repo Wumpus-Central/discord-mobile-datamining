@@ -1,6 +1,6 @@
 // discord_app/utils/web/WindowIdUtils.tsx
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
+import set from "../../../_runtime/00002_set.js";
+import apply from "../../../_runtime/00012_apply.js";
 
 const result = set.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 

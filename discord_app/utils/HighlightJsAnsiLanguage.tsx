@@ -1,5 +1,5 @@
 // discord_app/utils/HighlightJsAnsiLanguage.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 let closure_0 = { 1: "bold", 4: "underline" };
 let closure_1 = { 30: "black", 31: "red", 32: "green", 33: "yellow", 34: "blue", 35: "magenta", 36: "cyan", 37: "white" };

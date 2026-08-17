@@ -1,11 +1,11 @@
 // discord_app/actions/ChangeLogActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 4771 */;
-import { Endpoints } from "ME" /* 676 */;
-import { ChangelogPlatforms } from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/changelog/ChangelogStore.tsx";
+import { Endpoints } from "../Constants.tsx";
+import { ChangelogPlatforms } from "../modules/changelog/ChangelogConstants.tsx";
 
 require = arg1;
 function cacheBustParam() {

@@ -1,6 +1,6 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.null.tsx
-import set from "set" /* 2 */;
-import requestAuthorization from "requestAuthorization" /* 4844 */;
+import set from "../../../_runtime/00002_set.js";
+import requestAuthorization from "NativePermissionBaseUtils.tsx";
 
 const NativePermissionBaseUtils = requestAuthorization.NativePermissionBaseUtils;
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {

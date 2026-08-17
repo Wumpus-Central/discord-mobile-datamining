@@ -1,13 +1,13 @@
 // discord_app/design/components/Pile/native/PileOverflow.native.tsx
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import ThemesDefault from "Themes" /* 712 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
-import Text from "Text" /* 4734 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import shortenAndLocalizeNumber from "../../../../utils/NumberUtils.tsx";
+import Text from "../../Text/native/Text.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_3 from "../../../../modules/user_settings/LocaleStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

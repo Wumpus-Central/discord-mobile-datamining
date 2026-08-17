@@ -1,10 +1,10 @@
 // discord_app/modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import Button from "Button" /* 1297 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import closure_2 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../../stores/UserStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

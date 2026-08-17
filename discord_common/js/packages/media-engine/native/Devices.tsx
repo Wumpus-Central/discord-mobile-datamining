@@ -1,7 +1,7 @@
 // discord_common/js/packages/media-engine/native/Devices.tsx
-import set from "set" /* 2 */;
-import formatDefault from "format" /* 669 */;
-import AudioSubsystems from "AudioSubsystems" /* 4571 */;
+import set from "../../../../../_runtime/00002_set.js";
+import formatDefault from "../../../../../_runtime/00669_format.js";
+import AudioSubsystems from "Constants.tsx";
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: c4 } = AudioSubsystems);
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");

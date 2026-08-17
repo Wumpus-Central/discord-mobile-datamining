@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx
-import initialize from "initialize" /* 589 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 15870 */;
-import closure_2 from "handleReaction" /* 4971 */;
-import closure_3 from "prototype" /* 11510 */;
-import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes" /* 8507 */;
+import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import useFullscreenPlaceholderCount from "../../../hooks/usePlaceholderStyles.tsx";
+import closure_2 from "../../../../SearchMessageStore.tsx";
+import closure_3 from "../../../stores/SearchQueryStore.tsx";
+import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "../../../../SearchConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");

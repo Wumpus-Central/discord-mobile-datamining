@@ -1,20 +1,20 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPrompt.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text2 from "Text" /* 4734 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "getEmojiToGroupId" /* 6727 */;
-import closure_10 from "get" /* 6801 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "handleUpdate" /* 6788 */;
-import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import Text2 from "../../../design/components/Text/native/Text.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../emojis/EmojiStore.tsx";
+import closure_10 from "../../guild_member_verification/MemberVerificationFormStore.tsx";
+import closure_11 from "../../../stores/GuildStore.tsx";
+import closure_12 from "../GuildOnboardingPromptsStore.tsx";
+import { GuildOnboardingModalStates as closure_13 } from "GuildOnboardingConstants.tsx";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PromptHeader(currentPrompt) {

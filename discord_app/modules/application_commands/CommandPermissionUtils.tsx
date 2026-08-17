@@ -1,16 +1,16 @@
 // discord_app/modules/application_commands/CommandPermissionUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import fromStringAll from "fromString" /* 506 */;
-import ME from "ME" /* 676 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import buildCommand from "buildCommand" /* 5245 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import commandPermissions from "commandPermissions" /* 5247 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import computePermissions from "computePermissions" /* 8453 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import ME from "../../Constants.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import buildCommand from "ApplicationCommandUtils.tsx";
+import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
+import commandPermissions from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
+import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
+import computePermissions from "CommandPermissionContext.tsx";
+import ApplicationIntegrationType from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
 
 function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImpersonating) {
   if (null == permissions) {

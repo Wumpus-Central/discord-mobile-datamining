@@ -1,8 +1,8 @@
 // discord_app/modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleLoadMessages" /* 4505 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import regExp from "regExp" /* 6810 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../games/GameStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 
 const require = arg1;
 ({ extractGameMentionIds: c5, GAME_MENTION_RAW_RE_GLOBAL: closure_6 } = regExp);

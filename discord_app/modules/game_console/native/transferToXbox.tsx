@@ -1,9 +1,9 @@
 // discord_app/modules/game_console/native/transferToXbox.tsx
-import noopAll from "noop" /* 19 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PlatformTypes } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function _transferToXbox() {

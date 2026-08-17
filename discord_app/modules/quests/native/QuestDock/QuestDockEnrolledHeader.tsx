@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx
-import Text from "Text" /* 4734 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import useQuests from "useQuests" /* 10684 */;
-import _getQuestsInstructionsToWinReward from "_getQuestsInstructionsToWinReward" /* 10954 */;
-import getDeliveredQuest from "getDeliveredQuest" /* 14469 */;
-import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "QUEST_PROGRESS_DIAMETER_BY_SIZE" /* 14483 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
+import useQuests from "../../hooks/QuestHooks.tsx";
+import _getQuestsInstructionsToWinReward from "../../hooks/QuestCopyHooks.tsx";
+import getDeliveredQuest from "QuestDockCreativeContext.tsx";
+import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "../QuestProgressIndicator.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

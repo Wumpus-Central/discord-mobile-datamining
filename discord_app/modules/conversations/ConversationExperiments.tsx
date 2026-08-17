@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationExperiments.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const require = arg1;
 ApexExperiment = { 1: null, 2: { enabled: false } };

@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 
 const require = arg1;

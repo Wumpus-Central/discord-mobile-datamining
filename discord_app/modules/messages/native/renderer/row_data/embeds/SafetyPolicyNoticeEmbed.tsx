@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import registerAssetDefault from "registerAsset" /* 8079 */;
-import frozen from "frozen" /* 8171 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../../Constants.tsx";
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import tDefault from "../../../../../../../_runtime/03975_t.js";
+import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/08079_registerAsset.js";
+import frozen from "../../EmbedUtils.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

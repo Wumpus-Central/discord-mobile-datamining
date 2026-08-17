@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/account/native/handleDisableAccount.tsx
-import setDefault from "set" /* 4827 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14153 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import closure_4 from "../../../../stores/UserStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");

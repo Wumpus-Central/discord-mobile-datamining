@@ -1,16 +1,16 @@
 // discord_app/modules/icymi/native/content_inventory/Badges.tsx
-import initialize from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8348 */;
-import GameControllerIcon from "GameControllerIcon" /* 9430 */;
-import TimerIcon from "TimerIcon" /* 10793 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import calculateTimestampDurations from "../../../content_inventory/utils.tsx";
+import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import TimerIcon from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../user_settings/LocaleStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class ActiveTimestamp {

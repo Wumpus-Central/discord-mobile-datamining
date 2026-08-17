@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
-import noopAll from "noop" /* 19 */;
-import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 16955 */;
-import getMaxRoleSubscriptionEmojiSlotsDefault from "getMaxRoleSubscriptionEmojiSlots" /* 17001 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importDefaultResult from "apply" /* 12 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ApplicationRejectedNoticeDefault from "../GuildSettingsRoleSubscriptionContainer.tsx";
+import getMaxRoleSubscriptionEmojiSlotsDefault from "../../../getMaxRoleSubscriptionEmojiSlots.tsx";
+import closure_3 from "../../../../../stores/GuildStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../../../../_runtime/00012_apply.js";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { computeEmojiItem } from "../../../../guild_settings/native/GuildSettingsModalEmoji.tsx";
 

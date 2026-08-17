@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ContentAndSocialSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import FriendsIcon from "FriendsIcon" /* 4095 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import FriendsIcon from "../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { ContentAndSocialSettings } from "../../content_and_social/native/ContentAndSocialScreen.tsx";
 
 obj = {

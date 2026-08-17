@@ -1,8 +1,8 @@
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import create2 from "create" /* 1335 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14 } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import create2 from "user_settings_shared.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14 } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 let obj = { NONE: 0, [0]: "NONE", IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO" };

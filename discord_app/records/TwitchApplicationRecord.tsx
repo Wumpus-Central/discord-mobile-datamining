@@ -1,7 +1,7 @@
 // discord_app/records/TwitchApplicationRecord.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createExecutableDefault from "createExecutable" /* 4479 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import getSystemLocale from "../intl/index.native.tsx";
+import createExecutableDefault from "ApplicationRecord.tsx";
+import getPlatformUserUrlDefault from "../lib/Platforms.tsx";
 
 require = arg1;
 createExecutableDefault;

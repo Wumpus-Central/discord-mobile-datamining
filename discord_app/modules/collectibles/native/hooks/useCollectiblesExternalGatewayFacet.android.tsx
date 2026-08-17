@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../../_runtime/00002_set.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");

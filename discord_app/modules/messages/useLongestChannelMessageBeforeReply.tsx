@@ -1,5 +1,5 @@
 // discord_app/modules/messages/useLongestChannelMessageBeforeReply.tsx
-import closure_2 from "reinjectEphemerals" /* 4994 */;
+import closure_2 from "../../stores/MessageStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

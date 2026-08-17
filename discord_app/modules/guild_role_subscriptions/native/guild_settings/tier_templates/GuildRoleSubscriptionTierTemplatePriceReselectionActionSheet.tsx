@@ -1,17 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import renderDefault from "render" /* 8910 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
-import { CurrencyCodes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import useCheckboxA11yNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
+import renderDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { SubscriptionIntervalTypes } from "../../../../premium/PremiumConstants.tsx";
+import { CurrencyCodes } from "../../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PriceOptionRow(selected) {

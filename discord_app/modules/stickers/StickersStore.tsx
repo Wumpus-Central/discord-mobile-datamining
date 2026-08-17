@@ -1,11 +1,11 @@
 // discord_app/modules/stickers/StickersStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "allGuildIds" /* 1393 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "parseServerGuildSticker" /* 6770 */;
-import closure_7 from "parseServerPackSticker" /* 6771 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/GuildMembershipStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "GuildStickersStore.tsx";
+import closure_7 from "StickersPackStore.tsx";
 
 const require = arg1;
 function loadSavedGuildStickers() {

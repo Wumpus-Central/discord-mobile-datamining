@@ -1,6 +1,6 @@
 // discord_app/modules/app_analytics/ImpressionStore.tsx
-import set from "set" /* 2 */;
-import identity from "identity" /* 700 */;
+import set from "../../../_runtime/00002_set.js";
+import identity from "../../../_runtime/00700_identity.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });

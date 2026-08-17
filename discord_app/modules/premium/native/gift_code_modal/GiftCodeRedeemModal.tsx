@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx
-import noopAll from "noop" /* 19 */;
-import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage" /* 10647 */;
-import closure_3 from "updateGiftCode" /* 10641 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
-import HeaderBackImage from "HeaderBackImage" /* 6314 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage.tsx";
+import closure_3 from "../../../../stores/GiftCodeStore.tsx";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import HeaderBackImage from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 
 const require = arg1;
 noopAll;

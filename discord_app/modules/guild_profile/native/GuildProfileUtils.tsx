@@ -1,9 +1,9 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import hasFetchedColors from "hasFetchedColors" /* 8345 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8345 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import hasFetchedColors from "../../avatar/useAvatarColor.tsx";
+import hasFetchedColorsDefault from "../../avatar/useAvatarColor.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/UnlockWithNitroButton.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import CollapsingText from "CollapsingText" /* 4746 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9581 */;
-import closure_3 from "updateProduct" /* 5319 */;
-import closure_4 from "map" /* 5324 */;
-import { ShopCtaEnum } from "items" /* 678 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import CollapsingText from "../../../design/components/Button/native/BaseTextButton.native.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet.tsx";
+import closure_3 from "../../../stores/native/IAPStore.android.tsx";
+import closure_4 from "../CollectiblesPurchaseStore.tsx";
+import { ShopCtaEnum } from "../CollectiblesShopConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

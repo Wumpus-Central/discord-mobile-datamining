@@ -1,21 +1,21 @@
 // discord_app/modules/collectibles/CollectiblesActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import pushLayer from "pushLayer" /* 5353 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
-import { addDebugLog } from "useCollectiblesDebugStore" /* 5323 */;
-import closure_8 from "map" /* 5324 */;
-import closure_9 from "items" /* 5325 */;
-import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 5326 */;
-import closure_12 from "fromServer" /* 5303 */;
-import closure_13 from "fromServer" /* 5336 */;
-import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 678 */;
-import ME from "ME" /* 676 */;
-import getMarketingBySurface from "getMarketingBySurface" /* 5351 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import getItemRecordsFromPurchases from "CollectiblesUtils.tsx";
+import pushLayer from "../../actions/LayerActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_5 from "../user_settings/LocaleStore.tsx";
+import closure_6 from "CollectiblesCategoryStore.tsx";
+import { addDebugLog } from "CollectiblesDebugStore.tsx";
+import closure_8 from "CollectiblesPurchaseStore.tsx";
+import closure_9 from "CollectiblesShopStore.tsx";
+import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "records/CollectiblesCategoriesRecord.tsx";
+import closure_12 from "records/CollectiblesProductRecord.tsx";
+import closure_13 from "records/CollectiblesPurchaseRecord.tsx";
+import { CollectiblesMobileShopScreen as closure_15 } from "CollectiblesShopConstants.tsx";
+import ME from "../../Constants.tsx";
+import getMarketingBySurface from "CollectiblesMarketingsStore.tsx";
 import "map";
 
 require = arg1;

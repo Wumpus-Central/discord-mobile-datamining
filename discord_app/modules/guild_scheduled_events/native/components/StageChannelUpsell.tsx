@@ -1,21 +1,21 @@
 // discord_app/modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 8143 */;
-import registerAssetDefault2 from "registerAsset" /* 8844 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { createChannelRecord } from "createChannelRecord" /* 1395 */;
-import { useStageChannelUpsellCardStore as closure_7 } from "useStageChannelUpsellCardStore" /* 8843 */;
-import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../../_runtime/08143_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08844_registerAsset.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { createChannelRecord } from "../../../../records/ChannelRecord.tsx";
+import { useStageChannelUpsellCardStore as closure_7 } from "../../StageChannelUpsellCardStore.tsx";
+import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "../GuildEventModalConstants.tsx";
+import { ChannelTypes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

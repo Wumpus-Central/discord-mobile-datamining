@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "createdAt" /* 1930 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../records/UserRecord.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class JoinRequestActionSheet {

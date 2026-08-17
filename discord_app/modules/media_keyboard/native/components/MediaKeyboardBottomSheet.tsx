@@ -1,15 +1,15 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import DRAG_HANDLE from "DRAG_HANDLE" /* 1624 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import DRAG_HANDLE from "../MediaKeyboardConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MediaKeyboardBackground(arg0) {

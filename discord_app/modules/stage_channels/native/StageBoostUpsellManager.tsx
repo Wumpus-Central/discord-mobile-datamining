@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/native/StageBoostUpsellManager.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import useStageHasMedia from "useStageHasMedia" /* 4988 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "setContent" /* 4086 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import useStageHasMedia from "../StageMediaHooks.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../action_sheet/native/ActionSheetStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import { STAGE_BOOSTING_SHEET_KEY } from "../StageChannelsConstants.tsx";
 
 require = arg1;
 let c8 = false;

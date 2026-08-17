@@ -1,9 +1,9 @@
 // discord_app/lib/WindowVisibilityVideoManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import onDefault from "on" /* 4572 */;
-import NativeEventEmitterDefault from "NativeEventEmitter" /* 10027 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
+import NativeEventEmitterDefault from "../modules/external_pip/ExternalPip.android.tsx";
 
 const require = arg1;
 let obj = { WindowVisibilityChanged: "window-visibility-changed", IncomingVideoEnabledChanged: "incoming-video-enabled-changed" };

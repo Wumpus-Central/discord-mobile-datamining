@@ -1,10 +1,10 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/UserVerification.tsx
-import noopAll from "noop" /* 19 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import Text from "Text" /* 4734 */;
-import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 8560 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import MAX_RESULTS_PER_PAGE from "../../../MemberVerificationTypes.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import BaseIdentityVerificationFieldDefault from "IdentityVerificationField.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

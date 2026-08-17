@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/FamilyCenterModels.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import create from "create" /* 1940 */;
+import toJSDefault from "../../lib/Record.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 
 require = arg1;
 toJSDefault;

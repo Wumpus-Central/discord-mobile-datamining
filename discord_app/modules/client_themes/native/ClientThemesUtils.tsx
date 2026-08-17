@@ -1,18 +1,18 @@
 // discord_app/modules/client_themes/native/ClientThemesUtils.tsx
-import nDefault from "n" /* 689 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ClientThemeType from "ClientThemeType" /* 1349 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import hslToRgbDefault from "hslToRgb" /* 4224 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
-import getCustomThemesName from "getCustomThemesName" /* 4307 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import closure_6 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_7 from "reset" /* 1346 */;
+import nDefault from "../../../../_runtime/00689_n.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ClientThemeType from "../ClientThemesTypes.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import hslToRgbDefault from "../../../utils/Color.tsx";
+import getGuildThemeNameDefault from "useColorThemeBackground.tsx";
+import getCustomThemesName from "MobileThemesUtils.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../user_settings/ThemeStore.tsx";
+import closure_6 from "../ClientThemesBackgroundStore.tsx";
+import closure_7 from "CustomThemeMobileStore.tsx";
 
 require = arg1;
 function getGradientColorByPercentage(type, END) {

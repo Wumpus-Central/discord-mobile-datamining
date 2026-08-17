@@ -1,8 +1,8 @@
 // discord_app/actions/UserActivityActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "sortActivity" /* 4559 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/PresenceStore.tsx";
+import { Endpoints } from "../Constants.tsx";
 import { asString } from "../modules/spotify/SpotifyUtils.tsx";
 
 const require = arg1;

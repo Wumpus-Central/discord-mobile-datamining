@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/networking.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import sendRequest from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import ME from "../../../../Constants.tsx";
 
 const RPC_LOCAL_SCOPE = RPC_SCOPE_CONFIG.RPC_LOCAL_SCOPE;
 ({ Endpoints: c3, AnalyticEvents: c4, RPCCommands } = ME);

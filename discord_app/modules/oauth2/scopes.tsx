@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/scopes.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import set2 from "set" /* 4375 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 let items = [
   () => {

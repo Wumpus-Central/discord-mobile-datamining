@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/records/CollectiblesProductRecord.tsx
-import getPricesFromServerDefault from "getPricesFromServer" /* 4517 */;
-import fromServerDefault from "fromServer" /* 5310 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fromServer" /* 5304 */;
-import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 678 */;
-import ME from "ME" /* 676 */;
+import getPricesFromServerDefault from "../../skus/utils/getPricesFromServer.tsx";
+import fromServerDefault from "CollectiblesStoreListingRecord.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "CollectiblesBundledProductRecord.tsx";
+import createCollectiblesItemsFromServerResponse from "CollectiblesItemRecord.tsx";
+import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "../CollectiblesShopConstants.tsx";
+import ME from "../../../Constants.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const require = arg1;

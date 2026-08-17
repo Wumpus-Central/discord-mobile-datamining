@@ -1,13 +1,13 @@
 // discord_app/lib/VideoSpinnerTimer.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import sleep from "sleep" /* 4548 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionInfoChange" /* 4564 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import closure_3 from "../stores/AuthenticationStore.tsx";
+import closure_4 from "../stores/ChannelStore.tsx";
+import closure_5 from "../stores/NetworkStore.tsx";
+import closure_6 from "../stores/RTCConnectionStore.tsx";
+import closure_7 from "../stores/VoiceStateStore.tsx";
+import { AnalyticEvents } from "../Constants.tsx";
 
 require = arg1;
 const map = new Map();

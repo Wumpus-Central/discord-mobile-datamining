@@ -1,5 +1,5 @@
 // discord_app/modules/keyboard/native/subscribeToKeyboardUIStore.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 import { context } from "../../window/native/AppEntryKeyContext.tsx";
 
 const result = set.fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");

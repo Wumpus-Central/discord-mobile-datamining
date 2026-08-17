@@ -1,8 +1,8 @@
 // discord_app/utils/ChatRestrictions.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10172 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import parsedItemUsesEveryoneRoleDefault from "MentionGuardUtils.tsx";
 
 const TOKEN_REGEX = ME.TOKEN_REGEX;
 const items = [

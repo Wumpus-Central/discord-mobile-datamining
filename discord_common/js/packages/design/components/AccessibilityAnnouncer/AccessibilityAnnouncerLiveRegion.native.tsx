@@ -1,8 +1,8 @@
 // discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncerLiveRegion.native.tsx
-import { Text } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import keys from "keys" /* 1353 */;
-import importAllResult from "noop" /* 19 */;
+import { Text } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import keys from "../../../../../../_runtime/01353_keys.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 let closure_2 = keys.create(() => ({ message: "disabled", version: false }));
 const memoResult = importAllResult.memo(() => {

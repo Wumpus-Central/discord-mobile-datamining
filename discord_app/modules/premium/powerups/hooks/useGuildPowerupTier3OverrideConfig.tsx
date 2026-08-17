@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 

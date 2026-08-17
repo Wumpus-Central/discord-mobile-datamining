@@ -1,14 +1,14 @@
 // discord_app/design/void/Button/native/Button.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef8115 from "module_8115" /* 8115 */;
-import getClass from "getClass" /* 11833 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef8115 from "../../LegacyText/native/LegacyText.tsx";
+import getClass from "../../../../utils/StylesheetUtils.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getThemedRippleConfig } from "../../Form/native/FormConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 function getTextStyles(disabled, text) {

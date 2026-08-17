@@ -1,8 +1,8 @@
 // discord_app/modules/haptics/HapticUtils.native.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4344 */;
-import useHaptics from "useHaptics" /* 4345 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import IMPACT_LIGHTDefault from "HapticFeedbackTypes.tsx";
+import useHaptics from "../../../_runtime/04345_useHaptics.js";
 
 const result = set.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
 

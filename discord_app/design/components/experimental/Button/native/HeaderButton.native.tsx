@@ -1,8 +1,8 @@
 // discord_app/design/components/experimental/Button/native/HeaderButton.native.tsx
-import noopAll from "noop" /* 19 */;
-import CollapsingText from "CollapsingText" /* 4746 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import CollapsingText from "../../../Button/native/BaseTextButton.native.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../Styles/native/createStyles.tsx";
 
 require = arg1;
 class HeaderButton {

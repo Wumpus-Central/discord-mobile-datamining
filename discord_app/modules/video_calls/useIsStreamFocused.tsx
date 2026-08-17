@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/useIsStreamFocused.tsx
-import closure_2 from "getParticipants" /* 4773 */;
-import { isStreamParticipant } from "ParticipantTypes" /* 4544 */;
+import closure_2 from "../calls/ChannelRTCStore.tsx";
+import { isStreamParticipant } from "../calls/CallConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

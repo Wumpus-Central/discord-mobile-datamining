@@ -1,8 +1,8 @@
 // discord_app/modules/guild_themes/native/useGuildThemeNuxTrigger.tsx
-import initialize from "initialize" /* 589 */;
-import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 15427 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4086 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import useGuildThemeNuxTriggerDefault from "../useGuildThemeNuxTrigger.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../action_sheet/native/ActionSheetStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");

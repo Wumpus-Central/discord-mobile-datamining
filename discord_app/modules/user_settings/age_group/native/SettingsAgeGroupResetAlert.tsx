@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";

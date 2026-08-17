@@ -1,9 +1,9 @@
 // discord_app/modules/screen/useWindowDimensionsSharedValue.native.tsx
-import set from "set" /* 2 */;
-import uDefault from "u" /* 10561 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11156 */;
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx" /* 4115 */;
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
+import set from "../../../_runtime/00002_set.js";
+import uDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions.native.tsx";
+import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
+import useWindowDimensions from "useWindowDimensions.native.tsx";
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());

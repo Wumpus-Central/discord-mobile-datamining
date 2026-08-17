@@ -1,17 +1,17 @@
 // discord_app/components_native/common/VoiceSensitivity.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_9 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../stores/SpeakingStore.tsx";
+import closure_9 from "../../stores/native/AppStateStore.tsx";
+import { AppStates } from "../../Constants.tsx";
+import { NativePermissionTypes } from "../../modules/native_permissions/NativePermissionConstants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../utils/ColorUtils.tsx";
 
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);

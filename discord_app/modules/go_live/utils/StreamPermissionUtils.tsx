@@ -1,15 +1,15 @@
 // discord_app/modules/go_live/utils/StreamPermissionUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import allowChannelAccess from "allowChannelAccess" /* 4979 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 4987 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import closure_3 from "set" /* 4540 */;
-import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
-import { Permissions } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
+import canJoinVoiceChannelDefault from "../../channel/canJoinVoiceChannel.tsx";
+import shouldShowAgeGateForVoiceChannel from "../../age_gate/AgeGateUtils.tsx";
+import closure_3 from "../../game_console/GameConsoleStore.tsx";
+import { ChannelRecordBase } from "../../../records/ChannelRecord.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../stores/VoiceStateStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/FrecencyUserSettingsHooks.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "UserSettingsProtoStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");

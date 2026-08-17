@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member_verification/GuildJoinRequestStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4199 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import isActionedApplicationStatus from "GuildJoinRequestUtils.tsx";
+import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import { joinRequestFromServer } from "UserGuildJoinRequestStore.tsx";
 
 require = arg1;
 function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatus) {

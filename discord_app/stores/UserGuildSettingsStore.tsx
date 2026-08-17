@@ -1,21 +1,21 @@
 // discord_app/stores/UserGuildSettingsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import reset from "reset" /* 4024 */;
-import resetDefault from "reset" /* 4024 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "storeThread" /* 4023 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4033 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import hasFlagAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import reset from "../lib/MuteTimers.tsx";
+import resetDefault from "../lib/MuteTimers.tsx";
+import closure_4 from "../modules/impersonate/ImpersonateStore.tsx";
+import closure_5 from "../modules/threads/JoinedThreadsStore.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import closure_8 from "ChannelStore.tsx";
+import closure_9 from "GuildStore.tsx";
+import closure_10 from "UserStore.tsx";
+import ME from "../Constants.tsx";
+import { AccountNotificationFlags } from "../modules/notifications/NotificationConstants.tsx";
+import { UnreadSetting } from "../modules/read_states/ReadStateConstants.tsx";
+import MAX_FAVORITES from "../modules/user_settings/UserSettingsConstants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function updateUserGuildSettingsInternal(id, channel_overrides) {

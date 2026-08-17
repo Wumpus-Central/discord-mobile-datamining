@@ -1,12 +1,12 @@
 // discord_app/modules/share/native/ShareScreenModal.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13311 */;
-import { jsx } from "jsxProd" /* 21 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import { SHARE_SCREEN_MODAL_KEY } from "ShareScreenConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let require = arg1;
 function onClose() {

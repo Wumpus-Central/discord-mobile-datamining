@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useHasExpiredShopBlocks.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { MAX_TIMEOUT_MS } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import { MAX_TIMEOUT_MS } from "../../../Constants.tsx";
 
 const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);

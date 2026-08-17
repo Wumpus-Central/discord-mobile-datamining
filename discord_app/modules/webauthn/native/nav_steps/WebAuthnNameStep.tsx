@@ -1,16 +1,16 @@
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import Button2 from "Button" /* 4745 */;
-import Form from "Form" /* 8083 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { WebAuthnScreens } from "../../WebAuthnConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

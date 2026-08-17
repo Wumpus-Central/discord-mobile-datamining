@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 5264 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFetchedCredentials" /* 14077 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import _fetchWebAuthnConditionalChallenge from "../../../webauthn/WebAuthnActionCreators.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../webauthn/WebAuthnStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { UserSettingsWebAuthn } from "../../../webauthn/native/UserSettingsWebAuthn.tsx";
 
 require = arg1;

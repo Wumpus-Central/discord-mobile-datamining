@@ -1,15 +1,15 @@
 // discord_app/modules/user_profile/native/LegacyUserProfileConnections.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
-import closure_7 from "createdAt" /* 1930 */;
-import closure_8 from "initialize" /* 4220 */;
-import closure_9 from "createUserWidgetFromServer" /* 5365 */;
-import ME from "ME" /* 676 */;
-import { MetadataFields } from "OperatorTypes" /* 5225 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../user_settings/LocaleStore.tsx";
+import closure_7 from "../../../records/UserRecord.tsx";
+import closure_8 from "../../../stores/StreamerModeStore.tsx";
+import closure_9 from "../UserProfileStore.tsx";
+import ME from "../../../Constants.tsx";
+import { MetadataFields } from "../../connections/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 

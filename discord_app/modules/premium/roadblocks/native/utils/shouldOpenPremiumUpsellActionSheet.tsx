@@ -1,7 +1,7 @@
 // discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 691 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8479 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import keys from "../../../../../ConstantsIOS.tsx";
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
 

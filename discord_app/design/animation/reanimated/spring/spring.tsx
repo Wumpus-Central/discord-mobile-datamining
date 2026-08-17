@@ -1,8 +1,8 @@
 // discord_app/design/animation/reanimated/spring/spring.tsx
-import set from "set" /* 2 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import CONFIG_NEVER_ANIMATE2 from "CONFIG_NEVER_ANIMATE" /* 4665 */;
-import mutable from "mutable" /* 4666 */;
+import set from "../../../../../_runtime/00002_set.js";
+import _mod4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import CONFIG_NEVER_ANIMATE2 from "../ReanimatedConstants.tsx";
+import mutable from "../AccessibilityPreferencesSharedValue.native.tsx";
 
 const CONFIG_NEVER_ANIMATE = CONFIG_NEVER_ANIMATE2.CONFIG_NEVER_ANIMATE;
 function withSpring(value, SUBTLE_SPRING, fn, fn2) {

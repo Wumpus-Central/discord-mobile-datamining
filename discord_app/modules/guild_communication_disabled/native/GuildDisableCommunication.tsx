@@ -1,21 +1,21 @@
 // discord_app/modules/guild_communication_disabled/native/GuildDisableCommunication.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import TextArea from "TextArea" /* 8092 */;
-import context from "context" /* 8101 */;
-import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9444 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getFriendlyDurationString from "getFriendlyDurationString" /* 1992 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import TextArea from "../../../design/components/TextInput/native/TextArea.native.tsx";
+import context from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import _calculateScrollOffsetDefault from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import getFriendlyDurationString from "../GuildDisableCommunicationConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c5 = importAllResult;

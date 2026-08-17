@@ -1,5 +1,5 @@
 // discord_app/modules/activities/useIsActivitiesAvailableInShelf.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
 import { useIsActivitiesEnabledForCurrentPlatform } from "useIsActivitiesEnabledForCurrentPlatform.tsx";
 
 const require = arg1;

@@ -1,9 +1,9 @@
 // discord_app/modules/tti_analytics/TTITracker.tsx
-import setAll from "set" /* 2 */;
-import isTracingDefault from "isTracing" /* 10 */;
-import DISCORD_EPOCH from "DISCORD_EPOCH" /* 11 */;
-import apply from "apply" /* 12 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
+import setAll from "../../../_runtime/00002_set.js";
+import isTracingDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import DISCORD_EPOCH from "../../utils/SnowflakeUtils.tsx";
+import apply from "../../../_runtime/00012_apply.js";
+import closure_5 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 function serialize(arg0, arg1) {

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/utils/usePremiumFeatures.tsx
-import closure_3 from "noop" /* 19 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { TOTAL_PREMIUM_GROUP_USERS } from "SubscriptionStatusTypes" /* 4053 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import GuildFeatures from "../../../../premium/PremiumConstants.tsx";
+import { TOTAL_PREMIUM_GROUP_USERS } from "../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
 const require = arg1;
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: c4, PremiumTypes: c5 } = GuildFeatures);

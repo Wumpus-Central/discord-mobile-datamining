@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountUtils.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");

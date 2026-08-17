@@ -1,13 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionCard.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import EmojiGalleryDefault from "EmojiGallery" /* 14585 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import getRoleEmojisAll from "../../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import EmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery.tsx";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class SectionTitle {

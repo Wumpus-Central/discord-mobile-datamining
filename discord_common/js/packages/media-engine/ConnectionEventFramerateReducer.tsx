@@ -1,7 +1,7 @@
 // discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../../../_runtime/00002_set.js";
+import log from "../logger/Logger.tsx";
+import DesktopSources from "Constants.tsx";
 
 ({ SpeakingFlags: obj1, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = DesktopSources);
 const logger = new log.Logger("ConnectionEventFramerateReducer");

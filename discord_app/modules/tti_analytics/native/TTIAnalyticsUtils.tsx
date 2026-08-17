@@ -1,26 +1,26 @@
 // discord_app/modules/tti_analytics/native/TTIAnalyticsUtils.tsx
-import isTracingDefault from "isTracing" /* 10 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getConstantsAll from "getConstants" /* 1626 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5418 */;
-import AppStartInfo2 from "AppStartInfo" /* 5419 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleClearCaches" /* 5067 */;
-import closure_5 from "getHash" /* 4288 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "refreshSourceMapCookie" /* 706 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 5417 */;
-import { StaticChannelRoutes } from "set" /* 1398 */;
-import { jsx } from "jsxProd" /* 21 */;
-import v1 from "v1" /* 514 */;
-import set from "set" /* 2 */;
+import isTracingDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
+import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
+import getMediaPerformanceClassDefault from "../../device/getMediaPerformanceClass.android.tsx";
+import AppStartInfo2 from "AppStartInfo.android.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../cache/CacheStore.tsx";
+import closure_5 from "../../experiments/ExperimentStore.tsx";
+import closure_6 from "../../user_settings/ThemeStore.tsx";
+import closure_7 from "../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../stores/DeveloperOptionsStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { ACCEPT_INVITE_MODAL_KEY } from "../../accept_invite/native/AcceptInviteConstants.tsx";
+import { StaticChannelRoutes } from "../../channel/ChannelConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import v1 from "../../../../_runtime/00514_v1.js";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function getDeviceMetadata() {

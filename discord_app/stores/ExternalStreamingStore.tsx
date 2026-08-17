@@ -1,15 +1,15 @@
 // discord_app/stores/ExternalStreamingStore.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import callbackDefault from "callback" /* 5223 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5221 */;
-import closure_5 from "initialize" /* 4220 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import callbackDefault from "../actions/ConnectedAccountsActionCreators.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "ConnectedAccountsStore.tsx";
+import closure_5 from "StreamerModeStore.tsx";
+import { PlatformTypes } from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function makeTwitchRequest(arg0, query) {

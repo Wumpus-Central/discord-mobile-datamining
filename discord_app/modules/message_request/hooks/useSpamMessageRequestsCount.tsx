@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useSpamMessageRequestsCount.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "processChannel" /* 4800 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../SpamMessageRequestStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useSpamMessageRequestsCount.tsx");

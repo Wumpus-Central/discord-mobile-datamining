@@ -1,11 +1,11 @@
 // discord_app/modules/forwarding/ForwardActionCreators.tsx
-import allSettledDefault from "allSettled" /* 4385 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import { MessageFlags } from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import allSettledDefault from "../../../_runtime/04385_allSettled.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
+import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
 const require = arg1;
 let obj = {

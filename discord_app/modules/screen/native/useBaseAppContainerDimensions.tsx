@@ -1,7 +1,7 @@
 // discord_app/modules/screen/native/useBaseAppContainerDimensions.tsx
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "noop" /* 19 */;
+import useWindowDimensions from "../useWindowDimensions.native.tsx";
+import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");

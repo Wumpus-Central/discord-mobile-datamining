@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/HomeIndicator.tsx
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 644 */;
-import importAllResult from "noop" /* 19 */;
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import keys from "../../../../_runtime/00644_keys.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 keys = keys.create(() => ({ autoHideHomeIndicator: false }));

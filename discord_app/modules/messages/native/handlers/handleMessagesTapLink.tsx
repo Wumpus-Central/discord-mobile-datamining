@@ -1,25 +1,25 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapLink.tsx
-import set from "set" /* 2 */;
-import AbortCodes from "AbortCodes" /* 1235 */;
-import set2 from "set" /* 1398 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import parseQueryDefault from "parseQuery" /* 4355 */;
-import str2 from "str2" /* 5259 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
-import isLinkTrusted from "isLinkTrusted" /* 8775 */;
-import _mod9096 from "module_9096" /* 9096 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 9101 */;
-import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 10736 */;
-import isLinkTrusted2 from "isLinkTrusted" /* 10800 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 8163 */;
-import closure_6 from "handleQuickSwitcherUpdate" /* 10551 */;
-import closure_7 from "createdAt" /* 1930 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "updateInvite" /* 4359 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import AbortCodes from "../../../threads/ThreadConstants.tsx";
+import set2 from "../../../channel/ChannelConstants.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import parseQueryDefault from "../../../../utils/native/parseURL.tsx";
+import str2 from "../../../push_notifications/PushNotificationConstants.tsx";
+import getIndexKey from "../../../application_commands/ApplicationCommandIndexStore.tsx";
+import isLinkTrusted from "../../../../utils/MaskedLinkUtils.tsx";
+import _mod9096 from "../../../game_profile/GameProfileActionCreators.native.tsx";
+import GameProfileEmbedAction from "../../../game_profile/GameProfileAnalyticUtils.tsx";
+import isAlertOrActionSheetOpen from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
+import isLinkTrusted2 from "../../../markup/MarkupReactLinkUtils.tsx";
+import closure_4 from "../../../applications/ApplicationStore.tsx";
+import closure_5 from "../../../guild_automod/GuildAutomodMessageStore.tsx";
+import closure_6 from "../../../summaries/SummaryStore.tsx";
+import closure_7 from "../../../../records/UserRecord.tsx";
+import closure_8 from "../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../stores/InviteStore.tsx";
+import closure_10 from "../../../../stores/MessageStore.tsx";
+import closure_11 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 function handleMessagesTapURLLink(data, channelId) {
   let flag = null != data.url;

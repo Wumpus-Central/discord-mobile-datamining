@@ -1,12 +1,12 @@
 // discord_app/modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import GameIcon from "GameIcon" /* 7149 */;
-import GameIconDefault from "GameIcon" /* 7149 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import GameIcon from "../../game_detection/native/GameIcon.tsx";
+import GameIconDefault from "../../game_detection/native/GameIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

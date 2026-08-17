@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import setSystemTheme from "setSystemTheme" /* 4222 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9365 */;
-import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import getThemeForColor from "../../client_themes/ClientThemesUtils.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import setSystemTheme from "../ThemeActionCreators.tsx";
+import saveGuildFoldersDefault from "../../../actions/UserSettingsActionCreators.tsx";
+import closure_3 from "../../client_themes/ClientThemesBackgroundStore.tsx";
+import closure_4 from "../ThemeStore.tsx";
+import SystemThemeState from "../ThemeConstants.tsx";
 
 require = arg1;
 ({ SystemTheme: c5, SystemThemeState: closure_6 } = SystemThemeState);

@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initializeFromUserSettings" /* 1394 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { getComparator } from "getVoiceStatesForGuild" /* 4545 */;
-import closure_7 from "getActiveStageChannelIds" /* 4989 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../favorites/FavoriteStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import { getComparator } from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_7 from "StageChannelParticipantStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 

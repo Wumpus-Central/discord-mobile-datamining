@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx
-import LAUNCH_PAD_SPRING_CONFIG2 from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
-import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import LAUNCH_PAD_SPRING_CONFIG2 from "LaunchPadConstants.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const LAUNCH_PAD_SPRING_CONFIG = LAUNCH_PAD_SPRING_CONFIG2.LAUNCH_PAD_SPRING_CONFIG;
 let closure_4 = set.isAndroid();

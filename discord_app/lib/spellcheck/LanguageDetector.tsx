@@ -1,5 +1,5 @@
 // discord_app/lib/spellcheck/LanguageDetector.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");
 class LanguageDetector {

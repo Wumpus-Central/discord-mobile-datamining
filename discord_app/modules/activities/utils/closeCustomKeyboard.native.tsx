@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/closeCustomKeyboard.native.tsx
-import set from "set" /* 2 */;
-import getBestActiveInput from "getBestActiveInput" /* 4237 */;
+import set from "../../../../_runtime/00002_set.js";
+import getBestActiveInput from "../../../utils/native/ChatInputUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/activities/utils/closeCustomKeyboard.native.tsx");
 

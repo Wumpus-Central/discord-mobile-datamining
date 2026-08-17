@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkPill.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import map from "map" /* 4097 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import useTheme from "useTheme" /* 4310 */;
-import items5 from "items" /* 10494 */;
-import useQuests from "useQuests" /* 10684 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isThemeLight from "../../../design/utils/shared/themes.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import useTheme from "../../../hooks/useTheme.tsx";
+import items5 from "../utils/QuestOrbMultiplierUtils.tsx";
+import useQuests from "../hooks/QuestHooks.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);

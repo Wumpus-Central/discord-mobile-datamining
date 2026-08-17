@@ -1,16 +1,16 @@
 // discord_app/modules/parent_tools/native/FamilyCenterPendingLinks.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11107 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UserLinkStatus } from "items" /* 5297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import useUserIdsForLinkStatus from "../hooks/useUserLinks.tsx";
+import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
+import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserLinkStatus } from "../FamilyCenterConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FamilyCenterPendingLinkRow(otherUser) {

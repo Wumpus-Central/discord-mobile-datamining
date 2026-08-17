@@ -1,25 +1,25 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12591 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import closure_7 from "getHash" /* 4288 */;
-import closure_8 from "initialize" /* 12506 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11443 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useMyCurrentStageChannelRoleDefault from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../calls/ChannelRTCStore.tsx";
+import closure_7 from "../../../experiments/ExperimentStore.tsx";
+import closure_8 from "../../../stage_channels/StageMusicStore.tsx";
+import closure_9 from "../../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../stores/MediaEngineStore.tsx";
+import closure_12 from "../../../../stores/RelationshipStore.tsx";
+import closure_13 from "../../../../stores/SpeakingStore.tsx";
+import closure_14 from "../../../../stores/UserStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { EDGE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function MusicMuteButton(channelId) {

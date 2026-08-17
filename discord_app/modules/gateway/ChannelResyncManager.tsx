@@ -1,17 +1,17 @@
 // discord_app/modules/gateway/ChannelResyncManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 4826 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "_handleConnectionOpen" /* 4495 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../debug/Logger.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildAvailabilityStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import closure_8 from "GatewayConnectionStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { v1 } from "../../../_runtime/00514_v1.js";
 import { getCachedPrivateChannelObfuscation } from "PrivateChannelHidingExperiment.tsx";
 

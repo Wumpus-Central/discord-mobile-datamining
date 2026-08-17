@@ -1,8 +1,8 @@
 // discord_app/modules/premium/native/UserOfferManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "emitChanges" /* 7421 */;
-import { PaymentGateways } from "sum" /* 505 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/billing/UserOfferStore.tsx";
+import { PaymentGateways } from "../../../../discord_common/js/shared/Constants.tsx";
 
 let require = arg1;
 initializeDefault;

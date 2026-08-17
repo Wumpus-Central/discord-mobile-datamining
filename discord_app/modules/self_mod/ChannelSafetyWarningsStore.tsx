@@ -1,9 +1,9 @@
 // discord_app/modules/self_mod/ChannelSafetyWarningsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/ChannelStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function handleConnectionOpen() {
   closure_4 = {};

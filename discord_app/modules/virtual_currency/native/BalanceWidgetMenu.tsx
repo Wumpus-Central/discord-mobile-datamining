@@ -1,21 +1,21 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetMenu.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import _mod9252 from "module_9252" /* 9252 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10261 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 10410 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1388 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import _mod9252 from "../hooks/index.tsx";
+import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { CollectiblesMobileShopScreen as closure_6 } from "../../collectibles/CollectiblesShopConstants.tsx";
+import ContentDismissActionType from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { RewardFilterTypes } from "../../quests/QuestConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BalanceWidget(arg0) {

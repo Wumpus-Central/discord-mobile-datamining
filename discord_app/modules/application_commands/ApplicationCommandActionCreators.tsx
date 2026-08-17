@@ -1,13 +1,13 @@
 // discord_app/modules/application_commands/ApplicationCommandActionCreators.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import _modDef38 from "module_38" /* 38 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "handleInit" /* 7526 */;
-import { Endpoints } from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "ApplicationCommandAutocompleteStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");

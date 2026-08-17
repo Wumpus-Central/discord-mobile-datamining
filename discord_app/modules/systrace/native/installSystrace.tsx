@@ -1,6 +1,6 @@
 // discord_app/modules/systrace/native/installSystrace.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const Systrace = get_ActivityIndicator.Systrace;
 const result = set.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");

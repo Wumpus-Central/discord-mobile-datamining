@@ -1,9 +1,9 @@
 // discord_app/modules/frames/panel/native/FramePanelFocusedView.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "map" /* 8708 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../FramesStore.tsx";
+import FrameLayoutModes from "../../FramesConstants.tsx";
+import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,5 +1,5 @@
 // discord_app/modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 
 initializeDefault;
 let prototype = function SettingTreeManagerLifecycleManager() {

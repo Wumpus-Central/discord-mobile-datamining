@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import { getSortedVoiceSessionParticipants } from "../../../VoiceSessionUtils.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 

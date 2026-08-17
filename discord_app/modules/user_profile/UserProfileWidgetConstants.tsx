@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileWidgetConstants.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "addApplication" /* 4478 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import closure_2 from "../applications/ApplicationStore.tsx";
 
 require = arg1;
 const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").WidgetType.CLIPS_GALLERY, require("WidgetType").WidgetType.APPLICATION, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES, require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES];

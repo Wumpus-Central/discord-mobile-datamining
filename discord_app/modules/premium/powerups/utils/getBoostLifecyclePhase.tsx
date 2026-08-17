@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/utils/getBoostLifecyclePhase.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import set from "../../../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
 
 let c2 = 259200000;
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");

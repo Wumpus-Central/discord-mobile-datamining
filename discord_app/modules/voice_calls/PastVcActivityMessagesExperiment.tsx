@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/PastVcActivityMessagesExperiment.tsx
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../_runtime/00002_set.js";
+import ExperimentBuckets from "../experiments/ExperimentConstants.tsx";
+import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items });

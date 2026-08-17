@@ -1,16 +1,16 @@
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import isEqualDefault from "isEqual" /* 4632 */;
-import apexExperiment from "apexExperiment" /* 4833 */;
-import parseEncoder from "parseEncoder" /* 7489 */;
-import closure_3 from "ApplicationStreamPresets" /* 4562 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "initialize" /* 4558 */;
-import closure_7 from "_migrateDefaultStorage" /* 4503 */;
-import { ClipSignalTypes } from "result" /* 4523 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
+import isEqualDefault from "../../../_runtime/04632_isEqual.js";
+import apexExperiment from "ClipsV3RuntimeExperiment.tsx";
+import parseEncoder from "../../lib/VideoQualityStats.tsx";
+import closure_3 from "../../stores/ApplicationStreamingSettingsStore.tsx";
+import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../../stores/StreamRTCConnectionStore.tsx";
+import closure_7 from "ClipsStore.tsx";
+import { ClipSignalTypes } from "ClipsConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 function getClipSignalTypes(remoteClipId) {

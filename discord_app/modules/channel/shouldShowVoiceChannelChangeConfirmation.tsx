@@ -1,9 +1,9 @@
 // discord_app/modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx
-import closure_0 from "set" /* 4540 */;
-import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import closure_0 from "../game_console/GameConsoleStore.tsx";
+import closure_1 from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/VoiceStateStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 

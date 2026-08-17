@@ -1,8 +1,8 @@
 // discord_app/modules/application_account_linking/AccountLinkStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "recomputeFromAppTokens" /* 5289 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../oauth2/AuthorizedAppsStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const map = new Map();
 let set = new Set();

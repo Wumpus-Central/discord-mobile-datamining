@@ -1,6 +1,6 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelStateContext.tsx
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
-import importAllResult from "noop" /* 19 */;
+import createFakeSharedValue from "../../reanimated/ReanimatedHelperTypes.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const obj = { mode: null, setMode: null, morphablePanelMode: null, wrapperDimensions: null, useReducedMotion: null, pipState: null, pipAvoidanceSpecs: null, dismissToPipGestureRef: null, dismissPanel: null, scrollPosition: null, canShowPIP: null, lockScrolling: null, wrapperOffset: null };
 obj[0] = createFakeSharedValue.createFakeSharedValue(require("MediaPlaybackPanelModes").MediaPlaybackPanelModes.PIP);

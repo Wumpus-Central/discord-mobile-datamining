@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/utils/getFavoritesAddButtonLabel.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
 
 const result = set.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 

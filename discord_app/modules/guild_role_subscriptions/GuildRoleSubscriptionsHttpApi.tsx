@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
-import { PriceTierTypes } from "sum" /* 505 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
+import { PriceTierTypes } from "../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 function _updateGuildRoleSubscriptionGroupListing() {

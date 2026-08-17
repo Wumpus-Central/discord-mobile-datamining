@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionSettingsUtils.tsx
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
-import closure_2 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import _httpGetWithCountryCodeQuery from "../../../../../utils/StoreUtils.tsx";
+import closure_2 from "../../../GuildRoleSubscriptionsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionSettingsUtils.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "initialize" /* 4558 */;
-import { RTCConnectionQuality } from "ME" /* 676 */;
+import isDiscordFrontendDevelopment from "../../../../utils/GlobalUtils.tsx";
+import closure_2 from "../../../../stores/StreamRTCConnectionStore.tsx";
+import { RTCConnectionQuality } from "../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");

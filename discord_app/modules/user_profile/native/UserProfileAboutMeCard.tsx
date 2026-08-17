@@ -1,24 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileAboutMeCard.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
-import DividerDefault from "Divider" /* 7185 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import LinkButtonDefault from "LinkButton" /* 9549 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 9553 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { Routes } from "ME" /* 676 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import DividerDefault from "UserProfileCard.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import LinkButtonDefault from "../../profile_customization/native/BioText.tsx";
+import useFriendsSinceDate from "../hooks/useFriendsSinceDate.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../user_settings/LocaleStore.tsx";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import { Routes } from "../../../Constants.tsx";
+import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function Heading(children) {

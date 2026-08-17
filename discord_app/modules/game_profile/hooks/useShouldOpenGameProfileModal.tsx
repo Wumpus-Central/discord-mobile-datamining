@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx
-import hasFlagAll from "hasFlag" /* 1403 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
-import GameFlags from "GameFlags" /* 9521 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleLoadMessages" /* 4505 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import hasFlagAll from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isAgeRestrictedContentClassification from "../../content_classification/utils.tsx";
+import GameFlags from "../../../../discord_common/js/shared/shared-constants/GameFlags.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../games/GameStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 let closure_7 = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled" };

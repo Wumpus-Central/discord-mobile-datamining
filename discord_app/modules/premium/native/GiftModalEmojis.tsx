@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/GiftModalEmojis.tsx
-import noopAll from "noop" /* 19 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 noopAll;
 let items = [[100, 0, -40], [120, 40, -10], [100, 80, 10], [180, 20, 20], [140, 95, 15], [250, 0, 0], [250, 80, -20], [400, 90, 10], [400, 20, -20], [410, 0, 40]];

@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
-import initialize from "initialize" /* 589 */;
-import setDeveloperOptionSettings2 from "setDeveloperOptionSettings" /* 708 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import showNotificationDefault from "showNotification" /* 10155 */;
-import closure_3 from "refreshSourceMapCookie" /* 706 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import setDeveloperOptionSettings2 from "../../../../actions/DeveloperOptionsActionCreators.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import showNotificationDefault from "../../../bug_reporter/native/BugReportManager.tsx";
+import closure_3 from "../../../../stores/DeveloperOptionsStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

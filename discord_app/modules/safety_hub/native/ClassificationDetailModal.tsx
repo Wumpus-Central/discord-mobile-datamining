@@ -1,10 +1,10 @@
 // discord_app/modules/safety_hub/native/ClassificationDetailModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "noop" /* 19 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import { AccountSettingsTabs } from "../../user_settings/account/native/SettingsAccountConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_8 = { CLASSIFICATION_DETAIL: "CLASSIFICATION_DETAIL" };

@@ -1,11 +1,11 @@
 // discord_app/modules/frames/native/FrameView.tsx
-import initialize from "initialize" /* 589 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "map" /* 8708 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import { ActivityPlatform } from "items3" /* 4481 */;
-import { jsx } from "jsxProd" /* 21 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../FramesStore.tsx";
+import FrameLayoutModes from "../FramesConstants.tsx";
+import { ActivityPlatform } from "../../activities/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function FrameViewInner(frame) {

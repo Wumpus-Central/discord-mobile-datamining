@@ -1,16 +1,16 @@
 // discord_app/design/components/experimental/native.tsx
-import set from "set" /* 2 */;
-import AnimatedPressableHighlight from "AnimatedPressableHighlight" /* 6294 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8087 */;
-import BlurTheme from "BlurTheme" /* 8088 */;
-import PX_4 from "PX_4" /* 8812 */;
-import TwinButtons from "TwinButtons" /* 8813 */;
-import HeaderButton from "HeaderButton" /* 8814 */;
-import InputButton from "InputButton" /* 8815 */;
-import PressableScale from "PressableScale" /* 8816 */;
-import CollapsableButton from "CollapsableButton" /* 8817 */;
-import useCollapsibleFloatingActionButtonState from "useCollapsibleFloatingActionButtonState" /* 8819 */;
-import ActionSheetDragHandle from "ActionSheetDragHandle" /* 8820 */;
+import set from "../../../../_runtime/00002_set.js";
+import AnimatedPressableHighlight from "Pressables/native/AnimatedPressableHighlight.native.tsx";
+import BackgroundBlurView from "BackgroundBlurView/native/BackgroundBlurView.native.tsx";
+import BlurTheme from "BackgroundBlurView/native/BackgroundBlurFill.native.tsx";
+import PX_4 from "ActionSheetDragHandle/native/ActionSheetDragHandleConstants.tsx";
+import TwinButtons from "Button/native/TwinButtons.native.tsx";
+import HeaderButton from "Button/native/HeaderButton.native.tsx";
+import InputButton from "Button/native/InputButton.native.tsx";
+import PressableScale from "Button/native/PressableScale.native.tsx";
+import CollapsableButton from "Button/native/CollapsibleFloatingActionButton.native.tsx";
+import useCollapsibleFloatingActionButtonState from "Button/native/CollapsibleFloatingActionButtonState.native.tsx";
+import ActionSheetDragHandle from "ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx";
 
 const result = set.fileFinishedImporting("design/components/experimental/native.tsx");
 

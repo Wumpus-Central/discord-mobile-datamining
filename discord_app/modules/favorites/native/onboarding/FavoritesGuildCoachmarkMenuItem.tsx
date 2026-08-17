@@ -1,11 +1,11 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
-import Layer from "Layer" /* 7126 */;
-import items12 from "items1" /* 9990 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initializeFromUserSettings" /* 1394 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 2 */;
+import Layer from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import items12 from "../../FavoritesDismissibleContent.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../FavoriteStore.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 function FavoritesGuildCoachmarkMenuItemContent(arg0) {

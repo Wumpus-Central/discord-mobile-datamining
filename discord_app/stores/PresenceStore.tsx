@@ -1,13 +1,13 @@
 // discord_app/stores/PresenceStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasRichActivityDefault from "hasRichActivity" /* 4560 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import hasRichActivityDefault from "../modules/activities/utils/hasRichActivity.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "UserStore.tsx";
+import ME from "../Constants.tsx";
 
 function sortActivity(type, type2) {
   type = type2.type;

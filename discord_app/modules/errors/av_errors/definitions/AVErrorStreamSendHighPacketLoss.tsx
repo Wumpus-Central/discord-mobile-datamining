@@ -1,7 +1,7 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx
-import isStreamKey from "isStreamKey" /* 4531 */;
-import closure_2 from "reset" /* 4652 */;
-import closure_3 from "initialize" /* 4558 */;
+import isStreamKey from "../../../go_live/utils/StreamKeyUtils.tsx";
+import closure_2 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_3 from "../../../../stores/StreamRTCConnectionStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");

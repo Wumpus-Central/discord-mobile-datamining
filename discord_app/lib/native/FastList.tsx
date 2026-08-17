@@ -1,16 +1,16 @@
 // discord_app/lib/native/FastList.tsx
-import set2 from "set" /* 500 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
-import setDefault from "set" /* 7190 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 8127 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import set2 from "../../utils/PlatformUtils.tsx";
+import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import _mod4115 from "../../modules/reanimated/ReanimatedRexport.tsx";
+import BottomSheetModal from "../../../_runtime/06952_BottomSheetModal.js";
+import setDefault from "../../modules/core/native/NativeView.tsx";
+import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function renderDefaultEmpty() {

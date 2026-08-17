@@ -1,10 +1,10 @@
 // discord_app/modules/gateway/native/fast_connect.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import serializeDefault from "serialize" /* 9 */;
-import HELLO_KEY from "HELLO_KEY" /* 499 */;
-import checkEnv from "../../../utils/checkEnv.tsx" /* 16 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import timestampDefault from "../../debug/Logger.tsx";
+import serializeDefault from "../../tti_analytics/TTITracker.tsx";
+import HELLO_KEY from "../../app_database/modules/KvCacheVersionConstants.tsx";
+import checkEnv from "../../../utils/checkEnv.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { set } from "../../../utils/PlatformUtils.tsx";
 
 function createFastConnectSocket() {

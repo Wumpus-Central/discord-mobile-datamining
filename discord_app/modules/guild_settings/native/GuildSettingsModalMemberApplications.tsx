@@ -1,13 +1,13 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../guild_member_verification/GuildJoinRequestStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

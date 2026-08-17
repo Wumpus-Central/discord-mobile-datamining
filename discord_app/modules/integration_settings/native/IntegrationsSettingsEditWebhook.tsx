@@ -1,16 +1,16 @@
 // discord_app/modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import NavScrim from "NavScrim" /* 6550 */;
-import renderLabelDefault from "renderLabel" /* 16067 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1980 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import NavScrim from "../../../design/components/Navigator/native/NavScrim.android.tsx";
+import renderLabelDefault from "../../../components_native/common/IconLabelBlock.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ Endpoints: error, NON_USER_BOT_DISCRIMINATOR: closure_8, Permissions: c9, WebhookTypes: c10 } = ME);

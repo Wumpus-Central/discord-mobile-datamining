@@ -1,14 +1,14 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import registerAssetDefault from "registerAsset" /* 8764 */;
-import TaskType from "TaskType" /* 17084 */;
-import SAFETY_FLOWS_MODAL_KEY from "SAFETY_FLOWS_MODAL_KEY" /* 17085 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../SafetyFlows.messages.js";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/08764_registerAsset.js";
+import TaskType from "../types.tsx";
+import SAFETY_FLOWS_MODAL_KEY from "../constants.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/UserStore.tsx";
 
 require = arg1;
 function fetchAndUpdateTask() {

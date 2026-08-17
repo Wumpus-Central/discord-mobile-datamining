@@ -1,12 +1,12 @@
 // discord_app/modules/status_bar/native/components/ThemedStatusBar.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import componentDidMountDefault from "componentDidMount" /* 8032 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 12495 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import coerceMainRoute from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import componentDidMountDefault from "StatusBar.android.tsx";
+import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
+import closure_3 from "../../../user_settings/ThemeStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

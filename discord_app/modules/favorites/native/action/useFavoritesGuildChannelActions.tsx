@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildChannelActions.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "initializeFromUserSettings" /* 1394 */;
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../FavoriteStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
 import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";

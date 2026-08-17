@@ -1,7 +1,7 @@
 // discord_app/modules/game_update/native/GameUpdatePlatformIcon.tsx
-import noopAll from "noop" /* 19 */;
-import PlatformType from "PlatformType" /* 9049 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import PlatformType from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

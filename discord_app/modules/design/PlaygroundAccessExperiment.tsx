@@ -1,7 +1,7 @@
 // discord_app/modules/design/PlaygroundAccessExperiment.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 require = arg1;
 ApexExperiment = { 1: null };

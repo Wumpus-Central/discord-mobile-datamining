@@ -1,18 +1,18 @@
 // discord_app/modules/premium/gifting/PremiumGiftingIntentStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8291 */;
-import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8292 */;
-import closure_3 from "getHash" /* 4288 */;
-import closure_4 from "initialize" /* 1212 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_7 from "hasConsented" /* 5258 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import { Consents } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "shared/FriendAnniversaryUtils.tsx";
+import getFriendAnniversaryGateConfig from "FriendAnniversaryGate.native.tsx";
+import closure_3 from "../../experiments/ExperimentStore.tsx";
+import closure_4 from "../../experiments/apex/ApexExperimentStore.tsx";
+import closure_5 from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_6 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_7 from "../../../stores/ConsentStore.tsx";
+import closure_8 from "../../../stores/RelationshipStore.tsx";
+import { Consents } from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function getCurrentTime() {

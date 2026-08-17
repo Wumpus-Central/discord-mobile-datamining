@@ -1,7 +1,7 @@
 // discord_app/modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx
-import tDefault from "t" /* 3975 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11170 */;
+import tDefault from "../../../../_runtime/03975_t.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "../../../../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
 

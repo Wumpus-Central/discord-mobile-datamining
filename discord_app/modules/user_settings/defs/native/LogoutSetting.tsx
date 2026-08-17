@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/defs/native/LogoutSetting.tsx
-import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
-import keys from "keys" /* 691 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import handleLogoutDefault from "handleLogout" /* 5256 */;
-import dispatcherDefault from "dispatcher" /* 7877 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
-import DoorExitIcon from "DoorExitIcon" /* 12514 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
+import keys from "../../../../ConstantsIOS.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import _modDef4975 from "../../../../actions/SelectedChannelActionCreators.tsx";
+import handleLogoutDefault from "../../../../actions/AuthenticationActionCreators.tsx";
+import dispatcherDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
+import NativeModulesDefault from "../../../../lib/pushnotification/PushNotification.tsx";
+import DoorExitIcon from "../../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function handleLogout() {
   const Storage = Storage2.Storage;

@@ -1,6 +1,6 @@
 // discord_app/modules/links/native/handleContentLinking.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Routes } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { Routes } from "../../../Constants.tsx";
 
 const require = arg1;
 function _handleContentLinking() {

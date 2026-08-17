@@ -1,8 +1,8 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx
-import closure_3 from "noop" /* 19 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { isGuildOwner } from "../../../records/GuildRecord.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
 import { getCreatorMonetizationAcceptTermsCheckboxText } from "CreatorMonetizationAcceptTermCheckboxText.tsx";

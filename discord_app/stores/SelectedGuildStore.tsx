@@ -1,14 +1,14 @@
 // discord_app/stores/SelectedGuildStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import matchPath from "matchPath" /* 4202 */;
-import RouteParam2 from "RouteParam" /* 4215 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "initialize" /* 4201 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import transitionTo from "../modules/routing/router_utils.tsx";
+import matchPath from "../modules/routing/matchPathCompat.tsx";
+import RouteParam2 from "../modules/routing/RouteUtils.tsx";
+import closure_2 from "../modules/guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_3 from "AuthenticationStore.tsx";
+import closure_4 from "DefaultRouteStore.tsx";
+import closure_5 from "GuildStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function handleConnectionOpen() {

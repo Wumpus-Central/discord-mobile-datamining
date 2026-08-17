@@ -1,13 +1,13 @@
 // discord_app/modules/activity_status/native/ActivityStatus.tsx
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { DOT_UNICODE } from "TOOLTIP_DELAY_MS" /* 9894 */;
-import { ActivityTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import { DOT_UNICODE } from "../ActivityStatusConstants.tsx";
+import { ActivityTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);

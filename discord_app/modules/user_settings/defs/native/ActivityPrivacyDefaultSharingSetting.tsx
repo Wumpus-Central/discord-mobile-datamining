@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import useIsInActivityPrivacyCopyExperiment from "useIsInActivityPrivacyCopyExperiment" /* 15049 */;
-import closure_3 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import useIsInActivityPrivacyCopyExperiment from "../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

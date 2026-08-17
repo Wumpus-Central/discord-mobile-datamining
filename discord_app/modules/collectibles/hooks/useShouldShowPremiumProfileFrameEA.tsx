@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx
-import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 8956 */;
-import apexExperiment2 from "apexExperiment" /* 9234 */;
-import apexExperimentDefault from "apexExperiment" /* 9234 */;
+import set from "../../../../_runtime/00002_set.js";
+import apexExperiment from "../experiments/CollectiblesProfileFramesExperiment.tsx";
+import apexExperiment2 from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
+import apexExperimentDefault from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
 

@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 let c0 = importAllResult;
 ({ Fragment: closure_1, jsx: obj1 } = jsxProd);

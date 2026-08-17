@@ -1,9 +1,9 @@
 // discord_app/components_native/common/ImageWithPlaceholder.tsx
-import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9166 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 500 */;
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import preloadDefault from "FastImage.tsx";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../utils/PlatformUtils.tsx";
 
 ({ View: obj1, requireNativeComponent } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;

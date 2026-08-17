@@ -1,9 +1,9 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx
-import set2 from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8876 */;
+import set2 from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import V6OrEarlierAPIError from "../../errors/index.tsx";
+import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
 
 ({ SEARCH_RESULTS_QUERY_PREFIX: obj1, SEARCH_RESULTS_CATEGORY_PREFIX: c3, SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: c4 } = DEFAULT_DISCOVERY_CATEGORY_ID);
 const map = new Map();

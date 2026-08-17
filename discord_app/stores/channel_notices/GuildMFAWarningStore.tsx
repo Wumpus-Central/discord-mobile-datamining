@@ -1,9 +1,9 @@
 // discord_app/stores/channel_notices/GuildMFAWarningStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "comparator" /* 1980 */;
-import closure_1 from "mergeGuildAvatar" /* 1922 */;
-import { MFALevels } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../GuildChannelStore.tsx";
+import closure_1 from "../UserStore.tsx";
+import { MFALevels } from "../../Constants.tsx";
 
 function handleUserStoreUpdates() {
   currentUser = currentUser.getCurrentUser();

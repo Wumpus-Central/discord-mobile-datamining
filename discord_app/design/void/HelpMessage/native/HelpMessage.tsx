@@ -1,15 +1,15 @@
 // discord_app/design/void/HelpMessage/native/HelpMessage.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
-import Text from "Text" /* 4734 */;
-import CircleXIcon from "CircleXIcon" /* 7341 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CircleInformationIcon from "../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import CircleCheckIcon from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import Text from "../../../components/Text/native/Text.tsx";
+import CircleXIcon from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import CircleErrorIcon from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import int2hslRaw from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 require = arg1;
 noopAll;

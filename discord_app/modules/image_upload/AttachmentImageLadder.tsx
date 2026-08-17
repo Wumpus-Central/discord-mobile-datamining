@@ -1,5 +1,5 @@
 // discord_app/modules/image_upload/AttachmentImageLadder.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
 let result = set.fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");

@@ -1,12 +1,12 @@
 // discord_app/modules/application_commands/getPrimaryAppCommand.tsx
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import ScoreMethod from "ScoreMethod" /* 8456 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
-import closure_7 from "getIndexKey" /* 8448 */;
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import ScoreMethod from "ApplicationCommandQueryTypes.tsx";
+import ApplicationIntegrationType from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import getIndexKey from "ApplicationCommandIndexStore.tsx";
+import closure_7 from "ApplicationCommandIndexStore.tsx";
 
 require = arg1;
 function _getPrimaryAppCommand() {

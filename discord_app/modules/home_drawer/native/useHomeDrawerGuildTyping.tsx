@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/useHomeDrawerGuildTyping.tsx
-import shallowEqual from "shallowEqual" /* 643 */;
-import closure_3 from "storeThread" /* 4023 */;
-import { isThread } from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleTypingStart" /* 11152 */;
+import shallowEqual from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import closure_3 from "../../threads/JoinedThreadsStore.tsx";
+import { isThread } from "../../../records/ChannelRecord.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/TypingStore.tsx";
 
 require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {

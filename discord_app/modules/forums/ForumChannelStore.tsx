@@ -1,7 +1,7 @@
 // discord_app/modules/forums/ForumChannelStore.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import keys from "keys" /* 644 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../stores/ChannelStore.tsx";
+import keys from "../../../_runtime/00644_keys.js";
+import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set();

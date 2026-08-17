@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useCollectiblesData.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_4 from "map" /* 5324 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../CollectiblesCategoryStore.tsx";
+import closure_4 from "../CollectiblesPurchaseStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

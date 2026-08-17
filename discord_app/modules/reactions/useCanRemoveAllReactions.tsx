@@ -1,6 +1,6 @@
 // discord_app/modules/reactions/useCanRemoveAllReactions.tsx
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");

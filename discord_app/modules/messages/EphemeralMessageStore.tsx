@@ -1,10 +1,10 @@
 // discord_app/modules/messages/EphemeralMessageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import { MessageFlags } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import createMinimalMessageRecord from "MessageRecordUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
 
 require = arg1;
 function dropChannelIfEmpty(channelId, value) {

@@ -1,5 +1,5 @@
 // discord_app/utils/checkEnv.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 if (null == window.GLOBAL_ENV) {
   const _window = window;

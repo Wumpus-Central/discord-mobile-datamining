@@ -1,17 +1,17 @@
 // discord_app/modules/oauth2/native/useOAuth2AuthorizeForm.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "defaultImageSrcGenerator" /* 4035 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_10 from "createExecutable" /* 4479 */;
-import closure_11 from "set" /* 5221 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import OAuth2Steps from "OAuth2Steps" /* 9766 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
+import closure_9 from "../../a11y/AccessibilityStore.tsx";
+import closure_10 from "../../../records/ApplicationRecord.tsx";
+import closure_11 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_12 from "../../../stores/UserStore.tsx";
+import OAuth2Steps from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ EMOJI_POINTING_DOWN_CODE_POINT: map1, OAuth2Steps: closure_14 } = OAuth2Steps);

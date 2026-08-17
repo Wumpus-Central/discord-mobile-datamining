@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { OFF: "off", ADULT: "adult", TEEN: "teen", UNDER_13: "under_13", SUPERVISED_PENDING: "supervised_pending", SUPERVISED_DENIED: "supervised_denied", UNKNOWN: "unknown", DECLARED: "declared", EMPTY: "empty", ERROR: "error" };
 obj = { enabled: false, scenario: obj.OFF };

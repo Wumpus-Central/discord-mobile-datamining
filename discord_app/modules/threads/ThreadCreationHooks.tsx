@@ -1,19 +1,19 @@
 // discord_app/modules/threads/ThreadCreationHooks.tsx
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "maybeRebuildState" /* 7270 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_11 from "reinjectEphemerals" /* 4994 */;
-import { SlowmodeType } from "setCooldown" /* 7440 */;
-import AbortCodes from "AbortCodes" /* 1235 */;
-import ME from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import useCanUnarchiveThread from "ThreadHooks.tsx";
+import rebuildDefault from "../messages/MessageParser.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import closure_6 from "../forums/ForumActivePostStore.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "../../stores/DraftStore.tsx";
+import { DraftType } from "../../stores/DraftStore.tsx";
+import closure_11 from "../../stores/MessageStore.tsx";
+import { SlowmodeType } from "../../stores/SlowmodeStore.tsx";
+import AbortCodes from "ThreadConstants.tsx";
+import ME from "../../Constants.tsx";
+import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
 require = arg1;
 function getIsPrivate(threadSettingsDraft, privateThreadMode) {

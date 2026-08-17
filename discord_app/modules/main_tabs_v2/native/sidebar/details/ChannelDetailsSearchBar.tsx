@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "prototype" /* 11510 */;
-import { setIsChannelDetailsSearchActive as closure_5 } from "useChannelDetailsStore" /* 8505 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../search/native/stores/SearchQueryStore.tsx";
+import { setIsChannelDetailsSearchActive as closure_5 } from "stores/ChannelDetailsStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

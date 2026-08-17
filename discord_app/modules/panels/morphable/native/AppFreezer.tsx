@@ -1,8 +1,8 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
-import noopAll from "noop" /* 19 */;
-import setDefault from "set" /* 7190 */;
-import closure_2 from "module_9010" /* 9010 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import setDefault from "../../../core/native/NativeView.tsx";
+import closure_2 from "../AppFreezeStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

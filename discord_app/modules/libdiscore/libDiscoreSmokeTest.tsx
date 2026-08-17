@@ -1,8 +1,8 @@
 // discord_app/modules/libdiscore/libDiscoreSmokeTest.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const require = arg1;
 function libDiscoreSmokeTest() {

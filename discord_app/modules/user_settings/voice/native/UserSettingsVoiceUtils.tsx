@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx
-import initialize from "initialize" /* 589 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import ME from "ME" /* 676 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticsPages: c4, AnalyticsSections: c5 } = ME);

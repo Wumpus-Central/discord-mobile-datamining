@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/coercePlatformTypeToConsoleType.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import XBOX_URL_BASE from "GameConsoleConstants.tsx";
 
 const GameConsoleTypes = XBOX_URL_BASE.GameConsoleTypes;
 const PlatformTypes = ME.PlatformTypes;

@@ -1,14 +1,14 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 8193 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import CircleErrorIcon from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NITRO_UPSELL_ALERT_KEY } from "../DoubleTapToRaectConstants.tsx";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);

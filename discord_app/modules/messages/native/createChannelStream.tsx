@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/createChannelStream.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "initialize" /* 10640 */;
-import closure_4 from "initialize" /* 7435 */;
-import closure_5 from "initialize" /* 7582 */;
-import Changeset from "Changeset" /* 8158 */;
-import { MessageFlags } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import closure_3 from "../../push_feedback/PushFeedbackStore.tsx";
+import closure_4 from "../../../stores/EditMessageStore.tsx";
+import closure_5 from "../../../stores/UploadStore.tsx";
+import Changeset from "renderer/RowGeneratorConstants.tsx";
+import { MessageFlags } from "../../../Constants.tsx";
 
 require = arg1;
 ({ Changeset: closure_6, LoadingType: error, RowType: closure_8, SeparatorType: c9 } = Changeset);

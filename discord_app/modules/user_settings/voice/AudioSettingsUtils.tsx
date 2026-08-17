@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
-import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import set from "../../../../_runtime/00002_set.js";
+import MAX_FAVORITES from "../UserSettingsConstants.tsx";
+import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
 
 let closure_2 = MAX_FAVORITES.ProtoAudioSettingsContextTypes;
 let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");

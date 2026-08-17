@@ -1,21 +1,21 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx
-import applyDefault from "apply" /* 12 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getAllDefault from "getAll" /* 5405 */;
-import cleanString from "cleanString" /* 5409 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 6777 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7597 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 5410 */;
-import closure_7 from "recountRelationshipTypes" /* 5406 */;
-import closure_8 from "recomputeAffinities" /* 5407 */;
-import closure_9 from "createdAt" /* 1930 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
+import dispatcherDefault from "../../../../../Dispatcher.tsx";
+import getAllDefault from "../../../../app_database/modules/UserSearchItems.tsx";
+import cleanString from "../../../UserSearchUtils.tsx";
+import getGuildNameSuggestionDefault from "../../../../../utils/GuildUtils.tsx";
+import getTransformedUserDefault from "../../../../autocompleter/UserSearchManager.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
+import closure_7 from "../../../../game_relationships/GameRelationshipStore.tsx";
+import closure_8 from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_9 from "../../../../../records/UserRecord.tsx";
+import closure_10 from "../../../../../stores/RelationshipStore.tsx";
+import closure_11 from "../../../../../stores/UserStore.tsx";
+import { RelationshipTypes } from "../../../../../Constants.tsx";
+import set from "../../../../../../_runtime/00002_set.js";
 import { cleanString } from "../../../UserSearchUtils.tsx";
 
 require = arg1;

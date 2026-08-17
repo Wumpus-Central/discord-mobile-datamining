@@ -1,14 +1,14 @@
 // discord_app/modules/forums/native/posts/grid/ForumPostGridFooter.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import MaxForumPostReactions from "MaxForumPostReactions" /* 10627 */;
-import useTypingUserIds from "useTypingUserIds" /* 11151 */;
-import num2Default from "num2" /* 11194 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11195 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticsObjects } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import MaxForumPostReactions from "../reactions/ForumPostReactions.tsx";
+import useTypingUserIds from "../../../../chat/useTypingUsersIds.tsx";
+import num2Default from "../ForumPostMessageCount.tsx";
+import ForumPostTypingUsersDefault from "../ForumPostTypingUsers.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticsObjects } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

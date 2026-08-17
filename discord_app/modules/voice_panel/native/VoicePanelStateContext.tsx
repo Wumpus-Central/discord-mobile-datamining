@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/VoicePanelStateContext.tsx
-import getTargetCardSizeDefault from "getTargetCardSize" /* 11442 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
-import importAllResult from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import getTargetCardSizeDefault from "card/VoicePanelCardLayoutManager.tsx";
+import { VoicePanelModes } from "../VoicePanelConstants.tsx";
+import VoicePanelControlsModes from "controls/VoicePanelControlsConstants.tsx";
+import createFakeSharedValue from "../../reanimated/ReanimatedHelperTypes.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsModes);
 let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "M14 14H12V15H14V14Z", showControls: null, showFloatingCTA: "", streamOutputSinkStack: "", windowDimensions: null, wrapperDimensions: "default", useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };

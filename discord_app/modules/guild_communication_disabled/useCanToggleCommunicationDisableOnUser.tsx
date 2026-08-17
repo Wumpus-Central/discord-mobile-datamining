@@ -1,11 +1,11 @@
 // discord_app/modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 function canToggleCommunicationDisableOnUser(id, id2, items) {

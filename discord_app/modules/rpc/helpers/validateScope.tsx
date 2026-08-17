@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/helpers/validateScope.tsx
-import set from "set" /* 2 */;
-import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4277 */;
+import set from "../../../../_runtime/00002_set.js";
+import RPC_SCOPE_CONFIG2 from "../Constants.tsx";
 
 let RPC_SCOPE_CONFIG = RPC_SCOPE_CONFIG2.RPC_SCOPE_CONFIG;
 const result = set.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");

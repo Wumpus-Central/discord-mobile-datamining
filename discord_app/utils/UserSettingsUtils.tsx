@@ -1,12 +1,12 @@
 // discord_app/utils/UserSettingsUtils.tsx
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import getSearchSessionIdDefault from "getSearchSessionId" /* 7358 */;
-import closure_3 from "handleConnectionOpen" /* 4826 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import ComponentDispatcher from "ComponentDispatchUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import getSearchSessionIdDefault from "../modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
+import closure_3 from "../stores/GuildAvailabilityStore.tsx";
+import closure_4 from "../stores/GuildStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, FriendSourceFlags: closure_6, AllFriendSourceFlags: error, ComponentActions: closure_8 } = ME);

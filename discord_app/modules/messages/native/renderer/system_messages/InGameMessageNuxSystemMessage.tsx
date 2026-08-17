@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import resultDefault from "result" /* 8178 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import closure_3 from "addApplication" /* 4478 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import resultDefault from "../resolveMessageContentColors.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import closure_3 from "../../../../applications/ApplicationStore.tsx";
+import { HelpdeskArticles } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");

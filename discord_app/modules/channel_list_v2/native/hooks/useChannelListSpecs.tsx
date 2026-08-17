@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx
-import closure_3 from "noop" /* 19 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import hairlineWidth from "../RedesignChannelListConstants.tsx";
 
 const require = arg1;
 ({ STICKY_BANNER_ASPECT_RATIO: c4, BANNER_MAX_HEIGHT_PERCENTAGE: c5 } = hairlineWidth);

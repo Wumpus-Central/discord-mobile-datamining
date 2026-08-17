@@ -1,7 +1,7 @@
 // discord_app/modules/games/getGameMediaRefURL.tsx
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import isImageProxyURL from "isImageProxyURL" /* 4508 */;
+import set from "../../../_runtime/00002_set.js";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import isImageProxyURL from "../image_proxy/ImageProxyUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 

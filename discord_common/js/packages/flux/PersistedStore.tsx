@@ -1,10 +1,10 @@
 // discord_common/js/packages/flux/PersistedStore.tsx
-import isTracingDefault from "isTracing" /* 10 */;
-import Storage3 from "Storage" /* 595 */;
-import throttleDefault from "throttle" /* 635 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { Store } from "initialize" /* 591 */;
-import set from "set" /* 2 */;
+import isTracingDefault from "../app-start-performance/AppStartPerformance.tsx";
+import Storage3 from "../storage/Storage.tsx";
+import throttleDefault from "../../../../_runtime/00635_throttle.js";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { Store } from "Store.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_3 = ["_state", "_version"];

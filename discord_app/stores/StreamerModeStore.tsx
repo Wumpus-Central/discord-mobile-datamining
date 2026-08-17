@@ -1,10 +1,10 @@
 // discord_app/stores/StreamerModeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import apexExperiment from "apexExperiment" /* 4221 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import apexExperiment from "../modules/overlay/OverlayV3Experiment.tsx";
+import closure_3 from "AuthenticationStore.tsx";
+import { AnalyticEvents } from "../Constants.tsx";
 
 require = arg1;
 let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };

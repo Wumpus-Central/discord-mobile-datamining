@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/ProfileUpdateRequestUtils.tsx
-import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 10398 */;
+import set from "../../../_runtime/00002_set.js";
+import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import AssetOriginTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
+import getCurrentUserProfileDefault from "utils/getCurrentUserProfile.tsx";
 
 const result = set.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 

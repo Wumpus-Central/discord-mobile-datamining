@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/GoLiveVideoPresetResolutionExperiment.tsx
-import set from "set" /* 2 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
-import importDefaultResult from "getUnitId" /* 1368 */;
+import set from "../../../_runtime/00002_set.js";
+import RESOLUTION_720 from "StreamSettingsConstants.tsx";
+import importDefaultResult from "../experiments/apex/ApexExperiment.tsx";
 
 const ApplicationStreamResolutions = RESOLUTION_720.ApplicationStreamResolutions;
 let obj = { videoPresetResolutionMax: ApplicationStreamResolutions.RESOLUTION_1440 };

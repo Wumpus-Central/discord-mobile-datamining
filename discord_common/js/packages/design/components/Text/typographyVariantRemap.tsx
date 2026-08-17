@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx
-import map from "map" /* 4741 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import map from "../../../tokens/typography/generated/TypographyVariantRemap.tsx";
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");

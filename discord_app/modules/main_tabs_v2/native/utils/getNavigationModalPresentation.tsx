@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7925 */;
-import handleOrientationChange from "handleOrientationChange" /* 8671 */;
-import set from "set" /* 500 */;
+import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
+import useIsWindowLarge from "../../../screen/native/useIsWindowLarge.tsx";
+import handleOrientationChange from "../../../device/native/DeviceOrientation.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 if (set.isAndroid()) {
   const _module1 = useIsWindowLarge;

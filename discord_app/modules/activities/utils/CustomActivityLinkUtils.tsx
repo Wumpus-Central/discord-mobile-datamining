@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/CustomActivityLinkUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getOne" /* 12412 */;
-import { Endpoints } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/CustomActivityLinksStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 function fetchCustomActivityLink() {

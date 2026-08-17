@@ -1,12 +1,12 @@
 // discord_app/utils/GuildRecordUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import ME from "ME" /* 676 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
-import fromServerGuildIncidentsData from "fromServerGuildIncidentsData" /* 1908 */;
-import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import set from "../../_runtime/00002_set.js";
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import ME from "../Constants.tsx";
+import areSetsEqual from "../../discord_common/js/shared/utils/SetUtils.tsx";
+import fromServerGuildIncidentsData from "../modules/guild_antiraid/guildIncidentsSerialization.tsx";
+import cloneGuildThemeSettings from "../modules/guild_themes/guildThemeSerialization.tsx";
+import isValueEqual from "../lib/PlainRecord.tsx";
+import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
 
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {
   let obj = { id: properties.id, joinedAt: joinedAt.joinedAt, premiumSubscriberCount: joinedAt.premiumSubscriberCount, name: properties.name, description: null, icon: null, splash: null, banner: null, homeHeader: null, features: null, preferredLocale: null, ownerId: null, application_id: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, explicitContentFilter: null, defaultMessageNotifications: null, mfaLevel: null, vanityURLCode: null, premiumTier: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, verificationRoleId: null, gameApplicationIds: null, officialMessageColor: null, incidentsData: null };

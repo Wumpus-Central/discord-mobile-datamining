@@ -1,6 +1,6 @@
 // discord_app/modules/a11y/native/setAccessibilityFocus.android.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 ({ AccessibilityInfo: c0, findNodeHandle: closure_1 } = get_ActivityIndicator);
 let result = set.fileFinishedImporting("modules/a11y/native/setAccessibilityFocus.android.tsx");

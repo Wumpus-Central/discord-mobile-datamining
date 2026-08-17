@@ -1,7 +1,7 @@
 // discord_app/modules/themes/getSystemTheme.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import SystemThemeState from "../user_settings/ThemeConstants.tsx";
 
 const Appearance = get_ActivityIndicator.Appearance;
 const SystemTheme = SystemThemeState.SystemTheme;

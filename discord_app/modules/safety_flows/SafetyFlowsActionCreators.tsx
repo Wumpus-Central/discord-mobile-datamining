@@ -1,6 +1,6 @@
 // discord_app/modules/safety_flows/SafetyFlowsActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _getCurrentTask() {

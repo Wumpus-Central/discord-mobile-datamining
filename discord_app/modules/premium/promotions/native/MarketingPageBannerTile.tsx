@@ -1,11 +1,11 @@
 // discord_app/modules/premium/promotions/native/MarketingPageBannerTile.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import contextDefault from "context" /* 7139 */;
-import trackImpressionDefault from "trackImpression" /* 9177 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import trackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

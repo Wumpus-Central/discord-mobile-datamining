@@ -1,16 +1,16 @@
 // discord_app/modules/video_calls/native/components/FocusedControls.tsx
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import useRevealProviderValue from "useRevealProviderValue" /* 8678 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 12495 */;
-import nativeEventEmitter from "nativeEventEmitter" /* 12498 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import _mod4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import useRevealProviderValue from "RevealProvider.tsx";
+import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
+import nativeEventEmitter from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FocusedControlsHeader(reveal) {

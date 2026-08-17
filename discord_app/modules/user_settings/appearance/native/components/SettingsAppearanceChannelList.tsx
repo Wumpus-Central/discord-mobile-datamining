@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsellComponent" /* 14647 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsell.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);

@@ -1,17 +1,17 @@
 // discord_app/modules/media_viewer/native/components/message_preview/MediaMessagePreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 8157 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 7239 */;
-import closure_8 from "handleReaction" /* 4971 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
-import closure_11 from "messages" /* 9066 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import setOptionsDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../../forums/ForumPostMessagesStore.tsx";
+import closure_8 from "../../../../search/SearchMessageStore.tsx";
+import closure_9 from "../../../../../stores/ChannelStore.tsx";
+import closure_10 from "../../../../../stores/MessageStore.tsx";
+import closure_11 from "../../../../../stores/native/MessagePreviewStore.tsx";
+import { ThemeTypes } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function MeasureMessage(message) {

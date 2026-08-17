@@ -1,7 +1,7 @@
 // discord_app/stores/DimensionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import shallowEqualDefault from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 let closure_2 = {};
 let closure_3 = {};

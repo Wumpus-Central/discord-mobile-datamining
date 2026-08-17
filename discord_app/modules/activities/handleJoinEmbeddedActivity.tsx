@@ -1,11 +1,11 @@
 // discord_app/modules/activities/handleJoinEmbeddedActivity.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "participantFromServer" /* 1390 */;
-import { SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES as closure_9 } from "items3" /* 4481 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../applications/ApplicationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import closure_8 from "EmbeddedActivitiesStore.tsx";
+import { SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES as closure_9 } from "Constants.tsx";
 import { shouldOpenActivityInPopoutWindow } from "ActivityPopoutUtils.native.tsx";
 
 const require = arg1;

@@ -1,25 +1,25 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalConfirmation.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import registerAssetDefault from "registerAsset" /* 8555 */;
-import registerAssetDefault2 from "registerAsset" /* 13040 */;
-import PremiumGuildTierPillDefault from "PremiumGuildTierPill" /* 13041 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleModifyingAppliedBoostStart" /* 11731 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "handleGuildBoostsUpdate" /* 4267 */;
-import closure_12 from "reset" /* 4045 */;
-import ME from "ME" /* 676 */;
-import { Gradients } from "items" /* 7403 */;
-import { BoostPurchaseIntent } from "BoostedGuildTiers" /* 4262 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import registerAssetDefault from "../../../../_runtime/08555_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/13040_registerAsset.js";
+import PremiumGuildTierPillDefault from "PremiumGuildPreview.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../stores/AppliedGuildBoostStore.tsx";
+import closure_10 from "../../../stores/GuildStore.tsx";
+import closure_11 from "../../../stores/billing/GuildBoostSlotStore.tsx";
+import closure_12 from "../../../stores/billing/SubscriptionStore.tsx";
+import ME from "../../../Constants.tsx";
+import { Gradients } from "../../../modules/colors/native/ColorConstants.tsx";
+import { BoostPurchaseIntent } from "../../../modules/premium/powerups/constants/GuildPowerupsConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
 
 require = arg1;
 function PendingCancellationWarning(slots) {

@@ -1,14 +1,14 @@
 // discord_app/modules/guild_automod/AutomodQuarantineUtils.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 9537 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES" /* 685 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/SelectedGuildStore.tsx";
+import ME from "../../Constants.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
+import { ProfileCustomizationSubsection as closure_12 } from "../user_settings/UserSettingsConstants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

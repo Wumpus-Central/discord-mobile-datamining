@@ -1,7 +1,7 @@
 // discord_common/js/shared/Constants.tsx
-import importAllResult from "fromString" /* 506 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
-import set from "set" /* 2 */;
+import importAllResult from "utils/BigFlagUtils.tsx";
+import getAuthenticationPath from "utils/PathUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const sum = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT;
 let c0 = sum;

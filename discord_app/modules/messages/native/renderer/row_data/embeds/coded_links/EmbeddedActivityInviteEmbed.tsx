@@ -1,19 +1,19 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
-import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
-import closure_8 from "addApplication" /* 4478 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "updateInvite" /* 4359 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
+import dispatcherDefault from "../../../../../../../Dispatcher.tsx";
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import closure_3 from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { Image } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_6 from "../../../../../../applications/ApplicationAssetsStore.tsx";
+import { FetchState } from "../../../../../../applications/ApplicationAssetsStore.tsx";
+import closure_8 from "../../../../../../applications/ApplicationStore.tsx";
+import closure_9 from "../../../../../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../../../../stores/InviteStore.tsx";
+import closure_12 from "../../../../../../../stores/RelationshipStore.tsx";
+import closure_13 from "../../../../../../../stores/UserStore.tsx";
+import { CodedLinkExtendedType } from "CodedLinksConstants.tsx";
+import { InviteTargetTypes } from "../../../../../../instant_invite/Constants.tsx";
 
 const require = arg1;
 let closure_16 = ["embedded_cover"];

@@ -1,6 +1,6 @@
 // discord_app/modules/ads/BountyTypes.tsx
-import set from "set" /* 2 */;
-import resolveAsset from "resolveAsset" /* 10486 */;
+import set from "../../../_runtime/00002_set.js";
+import resolveAsset from "../quests/lib/AssetUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 

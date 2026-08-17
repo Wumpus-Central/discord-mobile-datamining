@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/message_requests/screens/MessageRequestsSpamScreen.tsx
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsSpamScreen.tsx");
 

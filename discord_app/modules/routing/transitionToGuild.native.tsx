@@ -1,9 +1,9 @@
 // discord_app/modules/routing/transitionToGuild.native.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import LayoutAnimation from "LayoutAnimation" /* 5443 */;
-import getChannelIdForGuildTransition from "getChannelIdForGuildTransition" /* 7197 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import transitionTo from "router_utils.tsx";
+import LayoutAnimation from "../animations/native/DeprecatedLayoutAnimation.tsx";
+import getChannelIdForGuildTransition from "getChannelIdForGuildTransition.tsx";
 
 const Routes = ME.Routes;
 let result = set.fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");

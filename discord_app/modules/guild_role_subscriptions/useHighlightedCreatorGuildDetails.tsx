@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx
-import closure_2 from "noop" /* 19 */;
-import { MarketingURLs } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { MarketingURLs } from "../../Constants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 

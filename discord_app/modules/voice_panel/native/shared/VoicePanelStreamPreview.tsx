@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

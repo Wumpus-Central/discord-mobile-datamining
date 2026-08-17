@@ -1,9 +1,9 @@
 // discord_app/lib/InviteQueue.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import enqueueDefault from "enqueue" /* 5041 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import setDefault from "../utils/Durations.tsx";
+import enqueueDefault from "../utils/Queue.tsx";
+import trackInviteDefault from "../actions/MessageActionCreators.tsx";
+import closure_2 from "../stores/ChannelStore.tsx";
 
 const sum = setDefault.Millis.SECOND + 10;
 let c3 = sum;

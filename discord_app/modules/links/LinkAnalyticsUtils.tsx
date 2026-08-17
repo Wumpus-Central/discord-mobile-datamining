@@ -1,9 +1,9 @@
 // discord_app/modules/links/LinkAnalyticsUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import ME2 from "ME" /* 4488 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import ME2 from "LinkUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };

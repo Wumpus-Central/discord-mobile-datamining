@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11341 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 2 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../../../_runtime/00002_set.js";
 
 const require = arg1;
 noopAll;

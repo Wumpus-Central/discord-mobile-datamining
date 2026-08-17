@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/server/commands/soundboard.tsx
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import sum from "sum" /* 505 */;
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../soundboard/SoundboardStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 ({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);

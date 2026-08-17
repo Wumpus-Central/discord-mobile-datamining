@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx
-import closure_2 from "noop" /* 19 */;
-import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "TextAreaCta" /* 11149 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "../ChatInputConstants.tsx";
 
 const require = arg1;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };

@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/stores/VirtualCurrencyStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 let object = importDefault;
 const Store = initializeDefault.Store;

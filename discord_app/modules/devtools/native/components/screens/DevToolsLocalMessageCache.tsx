@@ -1,15 +1,15 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import recordChannelFetchStartDefault from "recordChannelFetchStart" /* 5082 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import recordChannelFetchStartDefault from "../../../../local_message_caching/MessageCacheStats.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 function CacheLogEntry(entry) {
   entry = entry.entry;

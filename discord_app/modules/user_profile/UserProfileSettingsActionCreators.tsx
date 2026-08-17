@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isEqualDefault from "isEqual" /* 4632 */;
-import guildHasTag from "guildHasTag" /* 8375 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isEqualDefault from "../../../_runtime/04632_isEqual.js";
+import guildHasTag from "../guild_tag/GuildTagUtils.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "UserProfileStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/client_themes/native/useColorThemeBackground.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import closure_5 from "isSyncedModeThemesEnabled" /* 4195 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_settings/ThemeStore.tsx";
+import closure_5 from "../ClientThemesBackgroundStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { getCustomThemesName } from "MobileThemesUtils.tsx";
 

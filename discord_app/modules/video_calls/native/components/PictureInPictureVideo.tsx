@@ -1,25 +1,25 @@
 // discord_app/modules/video_calls/native/components/PictureInPictureVideo.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 8686 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 8689 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 8690 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "getParticipants" /* 4773 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_12 from "initialize" /* 8683 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import Button from "Button" /* 1297 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import useShouldForcePipOrientation from "useShouldForcePipOrientation.tsx";
+import usePipDimensionsDefault from "usePipDimensions.tsx";
+import useIsViewingActivity from "../../../activities/native/useIsViewingActivity.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../../calls/ChannelRTCStore.tsx";
+import closure_8 from "../../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../../stores/MediaEngineStore.tsx";
+import closure_10 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_11 from "../../../../stores/SpeakingStore.tsx";
+import closure_12 from "../ChannelCallLifecycleStore.tsx";
+import VoiceChatDrawerState from "../ChannelCallStore.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Button from "../../../../design/void/native.tsx";
 
 require = arg1;
 function areParticipantsEqual(arg0, arg1) {

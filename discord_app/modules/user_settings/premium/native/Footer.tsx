@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/premium/native/Footer.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import preloadDefault from "preload" /* 5449 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 12925 */;
-import registerAssetDefault from "registerAsset" /* 12926 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
+import registerAssetDefault from "../../../../../_runtime/12926_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

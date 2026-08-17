@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelConsoleStatus.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11443 */;
-import { CONTROLS_HEIGHT } from "VoicePanelControlsModes" /* 11438 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { EDGE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
+import { CONTROLS_HEIGHT } from "VoicePanelControlsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class VoicePanelConsoleStatus {

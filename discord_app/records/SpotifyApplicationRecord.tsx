@@ -1,6 +1,6 @@
 // discord_app/records/SpotifyApplicationRecord.tsx
-import createExecutableDefault from "createExecutable" /* 4479 */;
-import importDefaultResult1 from "getPlatformUserUrl" /* 5097 */;
+import createExecutableDefault from "ApplicationRecord.tsx";
+import importDefaultResult1 from "../lib/Platforms.tsx";
 
 createExecutableDefault;
 const spotify = "spotify";

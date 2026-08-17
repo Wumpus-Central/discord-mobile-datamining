@@ -1,10 +1,10 @@
 // discord_app/modules/message_previews/MessagePreviewStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
+import timestampDefault from "../debug/Logger.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/MessageStore.tsx";
 
 let object = arg1;
 let c6 = -Infinity;

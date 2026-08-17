@@ -1,6 +1,6 @@
 // discord_app/modules/markup/ChannelUtils.tsx
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
+import set from "../../../_runtime/00002_set.js";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
 
 ({ isGuildSelectableChannelType: c0, isGuildVocalChannelType: closure_1 } = createChannelRecord);
 const result = set.fileFinishedImporting("modules/markup/ChannelUtils.tsx");

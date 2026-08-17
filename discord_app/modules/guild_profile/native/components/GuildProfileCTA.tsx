@@ -1,8 +1,8 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileCTA.tsx
-import closure_3 from "noop" /* 19 */;
-import { AnalyticsObjects } from "ME" /* 676 */;
-import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES" /* 685 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { AnalyticsObjects } from "../../../../Constants.tsx";
+import { ProfileCustomizationScrollPositions as closure_5 } from "../../../user_settings/UserSettingsConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");

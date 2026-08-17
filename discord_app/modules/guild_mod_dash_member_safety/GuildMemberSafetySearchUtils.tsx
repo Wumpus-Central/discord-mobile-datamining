@@ -1,5 +1,5 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
 

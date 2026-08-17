@@ -1,16 +1,16 @@
 // discord_app/modules/messages/native/renderer/transformMessageComponents.tsx
-import setDefault from "set" /* 687 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4810 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8320 */;
-import nativeStylePropertiesDefault from "nativeStyleProperties" /* 8321 */;
-import MediaGalleryItemType from "MediaGalleryItemType" /* 8340 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { processColor } from "get ActivityIndicator" /* 17 */;
-import { CheckpointVersions } from "CheckpointPersonas" /* 4806 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8325 */;
-import importDefaultResult from "priv" /* 1405 */;
+import setDefault from "../../../../utils/Durations.tsx";
+import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import messageAttachmentToUnfurledMediaItem from "../../../media/MediaTypes.tsx";
+import urlMatchesFileExtension from "../../MediaFormatTesters.tsx";
+import sanitizeMediaDimension from "sanitizeMediaDimension.tsx";
+import nativeStylePropertiesDefault from "RowGeneratorUtils.tsx";
+import MediaGalleryItemType from "RowGeneratorTypes.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { processColor } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CheckpointVersions } from "../../../checkpoint/CheckpointConstants.tsx";
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "../../../interaction_components/InteractionComponentConstants.tsx";
+import importDefaultResult from "../../../../../_runtime/01405_priv.js";
 
 require = arg1;
 function transformToRowGeneratedComponent(message, accessory) {

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/SelectedGuildStore.tsx";
+import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
 let closure_6 = [];

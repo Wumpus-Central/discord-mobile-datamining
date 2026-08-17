@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

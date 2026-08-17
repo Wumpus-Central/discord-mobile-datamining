@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/redactRestrictedContent.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 function nodeToText(content) {
   let str = "";

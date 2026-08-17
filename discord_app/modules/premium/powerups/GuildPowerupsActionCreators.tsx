@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import set from "../../../../_runtime/00002_set.js";
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../../Constants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import BoostedGuildTiers from "constants/GuildPowerupsConstants.tsx";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
 import { items } from "mocks/GuildPowerupMocks.tsx";

@@ -1,6 +1,6 @@
 // discord_app/modules/reanimated/utils/updateSharedValueIfChanged.native.tsx
-import set from "set" /* 2 */;
-import _mod4115 from "module_4115" /* 4115 */;
+import set from "../../../../_runtime/00002_set.js";
+import _mod4115 from "../ReanimatedRexport.tsx";
 
 let fn2 = require;
 const fn = function u(get) {

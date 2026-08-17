@@ -1,9 +1,9 @@
 // discord_app/stores/ApplicationStreamingSettingsStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
+import RESOLUTION_720 from "../modules/go_live/StreamSettingsConstants.tsx";
 
 const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
 ({ ApplicationStreamResolutions, ApplicationStreamFPS } = RESOLUTION_720);

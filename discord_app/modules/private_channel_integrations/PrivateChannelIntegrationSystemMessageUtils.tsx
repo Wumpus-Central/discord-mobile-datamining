@@ -1,8 +1,8 @@
 // discord_app/modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import combinedDefault from "../../utils/HelpdeskUtils.tsx";
+import ME from "../../Constants.tsx";
 
 ({ HelpdeskArticles: c3, NOOP: c4 } = ME);
 const result = set.fileFinishedImporting("modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx");

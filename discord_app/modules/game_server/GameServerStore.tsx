@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/GameServerStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4284 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import gameServerResponseToInstanceDefault from "utils/gameServerResponseToInstance.tsx";
 
 function handleGameServerInstanceCreated(arg0) {
   ({ guildId, gameServer } = arg0);

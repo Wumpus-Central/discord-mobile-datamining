@@ -1,6 +1,6 @@
 // discord_app/utils/BasicPermissionUtils.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
+import set from "../../_runtime/00002_set.js";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const result = set.fileFinishedImporting("utils/BasicPermissionUtils.tsx");
 const prototype = function BasicPermissionUtils() {

@@ -1,7 +1,7 @@
 // discord_app/modules/tti_analytics/native/AppStartInfo.android.tsx
-import enforcingDefault from "enforcing" /* 5420 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_4 = {};
 const result = require("set").fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");

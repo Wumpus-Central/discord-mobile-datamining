@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/users.tsx
-import transformUserDefault from "transformUser" /* 8758 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import { RPCCommands } from "ME" /* 676 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import transformUserDefault from "../../helpers/transformUser.tsx";
+import closure_2 from "../../../../stores/UserStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import { RPCCommands } from "../../../../Constants.tsx";
+import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
 let obj = {};

@@ -1,18 +1,18 @@
 // discord_app/components_native/ErrorBoundary.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import getAppCrashSource from "getAppCrashSource" /* 12362 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getCurrentBuildOverride" /* 10638 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import _modDef1208 from "../utils/SentryUtils.native.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import Button from "../design/void/native.tsx";
+import Text from "../design/components/Text/native/Text.tsx";
+import Button2 from "../design/components/Button/native/Button.native.tsx";
+import getAppCrashSource from "../design/components/Illustration/native/redesign/generated/AppCrash.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../modules/build_overrides/BuildOverrideStore.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

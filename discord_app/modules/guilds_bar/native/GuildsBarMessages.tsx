@@ -1,18 +1,18 @@
 // discord_app/modules/guilds_bar/native/GuildsBarMessages.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ChatIcon from "ChatIcon" /* 6867 */;
-import UnreadIndicator from "UnreadIndicator" /* 15558 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 15558 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15560 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15572 */;
-import HomeDrawerDMsRowDefault from "HomeDrawerDMsRow" /* 15573 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import { ME } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import UnreadIndicator from "GuildsBarAnimatedItemWrapper.tsx";
+import UnreadIndicatorDefault from "GuildsBarAnimatedItemWrapper.tsx";
+import useGuildsBarBottomRightBadgeDefault from "hooks/useGuildsBarBottomRightBadge.tsx";
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
+import HomeDrawerDMsRowDefault from "../../home_drawer/native/HomeDrawerDirectMessagesRow.tsx";
+import closure_3 from "../../../stores/SelectedGuildStore.tsx";
+import { ME } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_6 = {

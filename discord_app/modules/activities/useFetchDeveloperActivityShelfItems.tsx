@@ -1,7 +1,7 @@
 // discord_app/modules/activities/useFetchDeveloperActivityShelfItems.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 7872 */;
-import { DevShelfFetchState } from "initialize" /* 7872 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "DeveloperActivityShelfStore.tsx";
+import { DevShelfFetchState } from "DeveloperActivityShelfStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");

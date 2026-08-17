@@ -1,6 +1,6 @@
 // discord_app/modules/client_themes/native/useIsUsingClientTheme.tsx
-import set from "set" /* 2 */;
-import useActiveThemeType from "useActiveThemeType" /* 8503 */;
+import set from "../../../../_runtime/00002_set.js";
+import useActiveThemeType from "useActiveTheme.tsx";
 
 const result = set.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
 

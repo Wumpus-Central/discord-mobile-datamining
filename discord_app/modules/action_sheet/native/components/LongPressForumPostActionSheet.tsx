@@ -1,13 +1,13 @@
 // discord_app/modules/action_sheet/native/components/LongPressForumPostActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "initialize" /* 4022 */;
-import closure_4 from "storeThread" /* 4023 */;
-import closure_5 from "updateState" /* 7271 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../lurker_mode/LurkingStore.tsx";
+import closure_4 from "../../../threads/JoinedThreadsStore.tsx";
+import closure_5 from "../../../threads/ThreadMessageStore.tsx";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { ChannelFlags } from "../../../channel/ChannelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

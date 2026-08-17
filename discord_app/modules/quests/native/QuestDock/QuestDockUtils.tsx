@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockUtils.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setDefault from "set" /* 687 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import setDefault from "../../../../utils/Durations.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED;

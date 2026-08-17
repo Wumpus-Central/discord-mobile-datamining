@@ -1,5 +1,5 @@
 // discord_app/lib/intlFormatDate.tsx
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_2 from "../modules/user_settings/LocaleStore.tsx";
 
 const require = arg1;
 function makeIntlFormatter(locale, arg1) {

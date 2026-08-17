@@ -1,8 +1,8 @@
 // discord_app/modules/threads/ThreadMemberListHooks.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "handleUserUpdate" /* 7595 */;
-import { StatusTypes } from "sum" /* 505 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/GuildRoleStore.tsx";
+import closure_5 from "ThreadMemberListStore.tsx";
+import { StatusTypes } from "../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 let closure_7 = [];

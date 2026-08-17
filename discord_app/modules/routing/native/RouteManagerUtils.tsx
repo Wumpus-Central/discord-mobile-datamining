@@ -1,25 +1,25 @@
 // discord_app/modules/routing/native/RouteManagerUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
-import _modDef8666 from "module_8666" /* 8666 */;
-import MemoryRouter from "MemoryRouter" /* 12634 */;
-import saveLastRoute from "saveLastRoute" /* 12639 */;
-import initializeDefault from "initialize" /* 12640 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { setVoiceChatDrawerState } from "VoiceChatDrawerState" /* 8669 */;
-import { isGuildSelectableChannelType as closure_6 } from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "initialize" /* 4201 */;
-import closure_9 from "comparator" /* 1980 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
-import { RouteParam, RouteParam as RouteParam2, RouteParam as RouteParam3, RouteParam as RouteParam4 } from "RouteParam" /* 4215 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import transitionTo from "../router_utils.tsx";
+import GuildThemeSourcePreference from "../../../flow/Client.tsx";
+import _modDef4975 from "../../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import showTooManyUserGuildsAlertDefault from "../../../actions/GuildActionCreators.tsx";
+import _modDef8666 from "../../../actions/ChannelRTCActionCreators.tsx";
+import MemoryRouter from "../../../../_runtime/12634_MemoryRouter.js";
+import saveLastRoute from "../../../actions/DefaultRouteActionCreators.tsx";
+import initializeDefault from "../RouteManager.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { setVoiceChatDrawerState } from "../../video_calls/native/ChannelCallStore.tsx";
+import { isGuildSelectableChannelType as closure_6 } from "../../../records/ChannelRecord.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/DefaultRouteStore.tsx";
+import closure_9 from "../../../stores/GuildChannelStore.tsx";
+import closure_10 from "../../../stores/SelectedChannelStore.tsx";
+import ME from "../../../Constants.tsx";
+import { VoiceChatDrawerState } from "../../video_calls/native/ChannelCallConstants.tsx";
+import { RouteParam, RouteParam as RouteParam2, RouteParam as RouteParam3, RouteParam as RouteParam4 } from "../RouteUtils.tsx";
 
 require = arg1;
 function voiceRouteRewriter(pathname) {

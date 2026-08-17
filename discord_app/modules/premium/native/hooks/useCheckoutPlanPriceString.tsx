@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/hooks/useCheckoutPlanPriceString.tsx
-import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7395 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { useNativeCheckoutStore } from "../../../checkout/native/NativeCheckoutStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");

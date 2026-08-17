@@ -1,8 +1,8 @@
 // discord_app/modules/safety_common/SafetyToastsActionCreators.native.tsx
-import set from "set" /* 2 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import SafetyToastType2 from "SafetyToastType" /* 5430 */;
-import getSafetyToastTypeContent from "getSafetyToastTypeContent" /* 6554 */;
+import set from "../../../_runtime/00002_set.js";
+import presentAddedFriendToast from "../toast/native/ToastUtils.tsx";
+import SafetyToastType2 from "Constants.tsx";
+import getSafetyToastTypeContent from "SafetyToastsUtils.tsx";
 
 const SafetyToastType = SafetyToastType2.SafetyToastType;
 const result = set.fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");

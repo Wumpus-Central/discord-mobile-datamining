@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import setDefault from "set" /* 687 */;
-import useCountdownDefault from "useCountdown" /* 7410 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
-import closure_3 from "clearDismissUntil" /* 13270 */;
-import { NoticeTypes } from "ME" /* 676 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
+import defaultAreStatesEqual from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import setDefault from "../../../../../../utils/Durations.tsx";
+import useCountdownDefault from "../../../../../../hooks/useCountdown.tsx";
+import usePremiumTrialOffer from "../../../../../premium/hooks/usePremiumTrialOffer.android.tsx";
+import closure_3 from "../../../../../premium/native/NoticeStore.tsx";
+import { NoticeTypes } from "../../../../../../Constants.tsx";
+import { PremiumSubscriptionSKUs } from "../../../../../premium/PremiumConstants.tsx";
 
 require = arg1;
 let closure_6 = 10 * setDefault.Millis.SECOND;

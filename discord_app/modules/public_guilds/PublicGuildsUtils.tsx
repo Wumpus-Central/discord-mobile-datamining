@@ -1,10 +1,10 @@
 // discord_app/modules/public_guilds/PublicGuildsUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import isCrosspostDefault from "isCrosspost" /* 8255 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8254 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import isCrosspostDefault from "../messages/isCrosspost.tsx";
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PublicGuildsConstants.tsx";
 import { registerAsset } from "../../../_runtime/08256_registerAsset.js";
 
 ({ PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3, PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: c4, ENABLE_COMMUNITY_FLOW_MODAL_KEY: c5 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);

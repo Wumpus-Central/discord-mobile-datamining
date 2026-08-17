@@ -1,18 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelDetailsNavigationBar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 7352 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "storeThread" /* 4023 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
-import { ChannelSettingsSections } from "ME" /* 676 */;
-import { SearchEntrypointAnalyticsLocations as closure_14 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/07352_registerAsset.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../../../../../threads/JoinedThreadsStore.tsx";
+import closure_7 from "../../../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../../../stores/UserGuildSettingsStore.tsx";
+import useChannelDetailsStore from "../stores/ChannelDetailsStore.tsx";
+import ChannelDetailsNavigatorScreens from "../ChannelDetailsConstants.tsx";
+import { ChannelSettingsSections } from "../../../../../../Constants.tsx";
+import { SearchEntrypointAnalyticsLocations as closure_14 } from "../../../../../search/native/tracking/TrackingConstants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function MuteButton(channelId) {

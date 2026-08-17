@@ -1,8 +1,8 @@
 // discord_app/modules/devtools/native/components/screens/performance/MountMeasure.tsx
-import noopAll from "noop" /* 19 */;
-import useMountLayoutEffect from "useMountLayoutEffect" /* 4761 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import useMountLayoutEffect from "../../../../../../hooks/useMountEffect.tsx";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,7 +1,7 @@
 // discord_app/utils/AttachmentFile.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import openImagePickerUnhandled from "native/UploadUtils.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 function _getAttachmentFile() {

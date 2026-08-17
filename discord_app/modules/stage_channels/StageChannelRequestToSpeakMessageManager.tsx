@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { MessageFlags } from "ME" /* 676 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/MessageStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/SelectedChannelStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
 
 const require = arg1;
 initializeDefault;

@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/createCommonMessage.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import resetCache from "resetCache" /* 4063 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import frozen from "frozen" /* 8171 */;
-import registerAssetDefault from "registerAsset" /* 8189 */;
-import registerAssetDefault2 from "registerAsset" /* 8190 */;
-import MessageAccessibilityAction from "MessageAccessibilityAction" /* 8191 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
+import resetCache from "../../../../../utils/DateUtils.tsx";
+import hexToRgba from "../../../../../utils/ColorUtils.tsx";
+import frozen from "../EmbedUtils.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08189_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/08190_registerAsset.js";
+import MessageAccessibilityAction from "../../MessageAccessibilityActions.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {

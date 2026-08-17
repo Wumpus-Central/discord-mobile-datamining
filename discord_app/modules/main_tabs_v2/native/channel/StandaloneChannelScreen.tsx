@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/channel/StandaloneChannelScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 6817 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT" /* 8493 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import getChannelRoleSubscriptionStatusDefault from "../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import MIN_HEADER_HEIGHT from "../shared_components/MainTabsV2Constants.tsx";
+import ME from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function Header(channelId) {

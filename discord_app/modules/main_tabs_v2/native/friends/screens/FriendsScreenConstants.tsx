@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx");
 

@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "calculateAppliedBoosts" /* 4261 */;
-import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "BoostedGuildTiers" /* 4262 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../GuildPowerupsStore.tsx";
+import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "../constants/GuildPowerupsConstants.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
 
 const require = arg1;
 let obj = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };

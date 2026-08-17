@@ -1,9 +1,9 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3271 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 7202 */;
-import { MarketingURLs } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
+import closure_3 from "../../user_settings/LocaleStore.tsx";
+import closure_4 from "../SocialLayerStorefrontStore.tsx";
+import { MarketingURLs } from "../../../Constants.tsx";
 
 require = arg1;
 let closure_6 = { [arg1(10360).StorefrontPlatform.DESKTOP]: "PC", [arg1(10360).StorefrontPlatform.XBOX]: "Xbox", [arg1(10360).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10360).StorefrontPlatform.SWITCH]: "Switch", [arg1(10360).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10360).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10360).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };

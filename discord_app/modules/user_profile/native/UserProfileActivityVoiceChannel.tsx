@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannel.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import sum from "sum" /* 505 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import sum from "../../../../discord_common/js/shared/Constants.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const View = get_ActivityIndicator.View;
 const Permissions = sum.Permissions;

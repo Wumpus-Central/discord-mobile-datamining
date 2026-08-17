@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/getEmbeddedActivityJoinability.tsx
-import allowChannelAccess from "allowChannelAccess" /* 4979 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 8727 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { Permissions } from "ME" /* 676 */;
+import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import closure_7 from "../../../stores/VoiceStateStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
 
 require = arg1;
 function getEmbeddedActivityJoinability(arg0) {

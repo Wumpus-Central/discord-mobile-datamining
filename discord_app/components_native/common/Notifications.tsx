@@ -1,9 +1,9 @@
 // discord_app/components_native/common/Notifications.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import NotificationWrapperDefault from "NotificationWrapper" /* 10045 */;
-import closure_3 from "handleAlertMessage" /* 10013 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import NotificationWrapperDefault from "../../modules/in_app_notifications/native/InAppNotificationContainer.tsx";
+import closure_3 from "../../stores/native/InAppNotificationStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

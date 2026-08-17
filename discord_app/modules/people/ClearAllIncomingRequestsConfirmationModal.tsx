@@ -1,6 +1,6 @@
 // discord_app/modules/people/ClearAllIncomingRequestsConfirmationModal.tsx
-import set from "set" /* 2 */;
-import openClearAllIncomingRequestsConfirmationModal from "openClearAllIncomingRequestsConfirmationModal" /* 9742 */;
+import set from "../../../_runtime/00002_set.js";
+import openClearAllIncomingRequestsConfirmationModal from "native/ClearAllIncomingRequestsConfirmationModal.tsx";
 
 const result = set.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
 

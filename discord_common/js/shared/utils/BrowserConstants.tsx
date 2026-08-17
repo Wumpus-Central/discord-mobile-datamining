@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/BrowserConstants.tsx
-import formatDefault from "format" /* 669 */;
+import formatDefault from "../../../../_runtime/00669_format.js";
 
 let str = formatDefault.version;
 if (str == null) {

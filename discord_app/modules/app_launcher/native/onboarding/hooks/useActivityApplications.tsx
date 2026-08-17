@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx");

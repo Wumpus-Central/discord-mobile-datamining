@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import { Routes } from "ME" /* 676 */;
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/SelectedGuildStore.tsx";
+import { Routes } from "../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");

@@ -1,7 +1,7 @@
 // discord_app/utils/FileManagerUtils.android.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import enforcingDefault from "enforcing" /* 1271 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import enforcingDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 function _readFile() {
   const self = this;

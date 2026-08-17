@@ -1,12 +1,12 @@
 // discord_app/design/void/RoleDot/native/RoleDot.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6814 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getFontScale from "../../../../modules/screen/native/useFontScale.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

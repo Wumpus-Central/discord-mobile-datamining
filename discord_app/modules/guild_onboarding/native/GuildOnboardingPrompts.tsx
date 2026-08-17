@@ -1,24 +1,24 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPrompts.tsx
-import keys from "keys" /* 691 */;
-import ThemesDefault from "Themes" /* 712 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import preloadDefault from "preload" /* 5449 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "get" /* 6801 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "handleConnectionOpen" /* 1979 */;
-import closure_13 from "handleUpdate" /* 6788 */;
-import { OnboardingPromptType } from "serverPromptToClientPrompt" /* 5286 */;
-import { GuildOnboardingModalStates as closure_15 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import keys from "../../../ConstantsIOS.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../guild_member_verification/MemberVerificationFormStore.tsx";
+import closure_10 from "../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../stores/GuildStore.tsx";
+import closure_12 from "../../../stores/SelectedChannelStore.tsx";
+import closure_13 from "../GuildOnboardingPromptsStore.tsx";
+import { OnboardingPromptType } from "../GuildOnboardingPromptsConstants.tsx";
+import { GuildOnboardingModalStates as closure_15 } from "GuildOnboardingConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function _getBackgroundGradientColor() {

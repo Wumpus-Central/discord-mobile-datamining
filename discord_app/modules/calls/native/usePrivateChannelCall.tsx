@@ -1,7 +1,7 @@
 // discord_app/modules/calls/native/usePrivateChannelCall.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/records/EntitlementRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import set from "set" /* 4519 */;
-import closure_3 from "createFromServer" /* 4515 */;
-import closure_4 from "createdAt" /* 1930 */;
-import { EntitlementTypes } from "ME" /* 676 */;
+import toJSDefault from "../lib/Record.tsx";
+import getPremiumPlanItemDefault from "../utils/PremiumUtils.tsx";
+import set from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
+import closure_3 from "../modules/skus/SKURecord.tsx";
+import closure_4 from "UserRecord.tsx";
+import { EntitlementTypes } from "../Constants.tsx";
 
 require = arg1;
 toJSDefault;

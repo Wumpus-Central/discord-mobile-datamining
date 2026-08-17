@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
-import usePrevValueDefault from "usePrevValue" /* 8902 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "scheduledEventSort" /* 4370 */;
+import usePrevValueDefault from "../../../discord_common/js/shared/hooks/usePrevValue.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "GuildScheduledEventStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

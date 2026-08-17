@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/bountiesSwipeUpNuxDevTools.tsx
-import set from "set" /* 2 */;
-import useLocalStorageState from "useLocalStorageState" /* 12529 */;
+import set from "../../../../../_runtime/00002_set.js";
+import useLocalStorageState from "../../../../hooks/useLocalStorageState.tsx";
 
 let c2 = "devtools-force-bounties-swipe-up-nux";
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSwipeUpNuxDevTools.tsx");

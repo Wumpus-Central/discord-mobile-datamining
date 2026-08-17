@@ -1,7 +1,7 @@
 // discord_app/modules/applications/utils/isApplicationAgeRestricted.tsx
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
-import getUnitIdDefault from "getUnitId" /* 9558 */;
-import closure_3 from "addApplication" /* 4478 */;
+import isAgeRestrictedContentClassification from "../../content_classification/utils.tsx";
+import getUnitIdDefault from "../../application_commands/AgeRestrictedApplicationCommandsExperiment.tsx";
+import closure_3 from "../ApplicationStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");

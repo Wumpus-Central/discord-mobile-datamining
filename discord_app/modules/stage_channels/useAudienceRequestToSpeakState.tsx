@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/useAudienceRequestToSpeakState.tsx
-import closure_2 from "updateVoiceState" /* 4542 */;
+import closure_2 from "../../stores/VoiceStateStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/ExplicitMediaUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 5022 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import getEligibleHarmTypesConfigsForContext from "../../../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import ContentHarmTypeChannel from "../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");

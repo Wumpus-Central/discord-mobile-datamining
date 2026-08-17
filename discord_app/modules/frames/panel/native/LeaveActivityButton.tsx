@@ -1,8 +1,8 @@
 // discord_app/modules/frames/panel/native/LeaveActivityButton.tsx
-import BaseLeaveActivityButton from "BaseLeaveActivityButton" /* 16255 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import BaseLeaveActivityButton from "../../../activities/panel/native/LeaveActivityButton.tsx";
+import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function LeaveActivityButton(arg0) {

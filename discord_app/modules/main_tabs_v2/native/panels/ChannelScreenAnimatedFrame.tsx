@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT" /* 8493 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import MIN_HEADER_HEIGHT from "../shared_components/MainTabsV2Constants.tsx";
+import { ThemeTypes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

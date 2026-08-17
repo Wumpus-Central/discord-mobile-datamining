@@ -1,17 +1,17 @@
 // discord_app/modules/chat_input/native/GiftIconTrinketsAnimation.tsx
-import set from "set" /* 500 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import preloadDefault from "preload" /* 5449 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9217 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import MINIMUM_HIT_AREA from "../../../design/components/Button/native/ButtonConstants.native.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import useAPNGPlayerControls from "../../image/native/APNGPlayer.android.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {

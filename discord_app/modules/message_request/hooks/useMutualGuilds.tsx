@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/hooks/useMutualGuilds.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");

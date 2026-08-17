@@ -1,13 +1,13 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventsNoContent.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
-import sum from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/PermissionStore.tsx";
+import { GuildSettingsSections } from "../../../../Constants.tsx";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
 const require = arg1;
 noopAll;

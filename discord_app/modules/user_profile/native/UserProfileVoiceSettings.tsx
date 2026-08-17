@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/native/UserProfileVoiceSettings.tsx
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import { VideoToggleState } from "ME" /* 676 */;
-import { Permissions } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../soundboard/SoundboardStore.tsx";
+import closure_5 from "../../../stores/MediaEngineStore.tsx";
+import closure_6 from "../../../stores/PermissionStore.tsx";
+import { VideoToggleState } from "../../../Constants.tsx";
+import { Permissions } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function UserVoiceSettings(user) {

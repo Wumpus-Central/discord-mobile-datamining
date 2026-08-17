@@ -1,7 +1,7 @@
 // discord_app/modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx
-import initialize from "initialize" /* 589 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8275 */;
-import closure_2 from "emitChanges" /* 7423 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining.tsx";
+import closure_2 from "../../ReferralTrialStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/family_center/ParentalControlledUserSettings.tsx
-import set from "set" /* 2 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import ME from "ME" /* 676 */;
-import create from "create" /* 1306 */;
-import defineProperty from "defineProperty" /* 1337 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import items from "items" /* 4068 */;
-import spendingLimitEqual from "spendingLimitEqual" /* 14184 */;
-import defineParentalControlledSetting from "defineParentalControlledSetting" /* 14183 */;
+import set from "../../../../_runtime/00002_set.js";
+import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import ME from "../../../Constants.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import defineProperty from "../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import explicitContentFromProto from "../UserSettings.tsx";
+import items from "../privacy_and_safety/DMSafetyConstants.tsx";
+import spendingLimitEqual from "../../parent_tools/SpendingLimitUtils.tsx";
+import defineParentalControlledSetting from "ParentalControlledUserSettingsDefinitions.tsx";
 
 let closure_2 = items.ExplicitContentFilterTypes;
 const AllFriendSourceFlags = ME.AllFriendSourceFlags;

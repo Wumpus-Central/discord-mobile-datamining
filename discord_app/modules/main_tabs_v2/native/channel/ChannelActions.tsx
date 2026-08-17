@@ -1,20 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelActions.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 8508 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8510 */;
-import _modDef12703 from "module_12703" /* 12703 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThreadCreateOrUpdate" /* 4969 */;
-import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 8505 */;
-import ME from "ME" /* 676 */;
-import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { createElement } from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
+import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
+import _modDef12703 from "header/PrivateChannelButtons.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../threads/ActiveThreadsStore.tsx";
+import { THREADED_CHANNEL_TYPES } from "../../../../records/ChannelRecord.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/VoiceStateStore.tsx";
+import { setIsChannelDetailsSearchActive as closure_8 } from "../sidebar/details/stores/ChannelDetailsStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { SearchEntrypointAnalyticsLocations as closure_12 } from "../../../search/native/tracking/TrackingConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import { createElement } from "../../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function JoinCallButton() {

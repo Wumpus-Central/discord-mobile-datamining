@@ -1,21 +1,21 @@
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import _uploadContacts from "_uploadContacts" /* 11853 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 11859 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "getState" /* 7383 */;
-import ContactSyncModes from "ContactSyncModes" /* 11850 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 11851 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import _uploadContacts from "../ContactSyncUtils.tsx";
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../../../stores/native/AppStateStore.tsx";
+import ContactSyncModes from "../ContactSyncModalStore.tsx";
+import ContactSyncLandingPage from "../ContactSyncConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 require = arg1;

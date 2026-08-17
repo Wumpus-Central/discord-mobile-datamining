@@ -1,12 +1,12 @@
 // discord_app/modules/build_overrides/BuildOverrideUtils.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import UrlAll from "Url" /* 1489 */;
-import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4291 */;
-import parseDefault from "parse" /* 4292 */;
-import getConstants from "getConstants" /* 1626 */;
-import set from "set" /* 500 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../Constants.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import UrlAll from "../../../_runtime/01489_Url.js";
+import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
+import parseDefault from "../../../_runtime/04292_parse.js";
+import getConstants from "../../utils/native/ClientInfoUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 let closure_4 = BUILD_OVERRIDE_TARGET_NAMES.BUILD_OVERRIDE_COOKIE_NAME;
 const PRIMARY_DOMAIN = ME.PRIMARY_DOMAIN;

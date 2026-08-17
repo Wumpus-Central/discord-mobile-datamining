@@ -1,8 +1,8 @@
 // discord_app/utils/ChannelSortingUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5279 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import getFlattenedChannelListDefault from "../modules/channel/getFlattedChannelList.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
 
 function getFirstChannelOfType(arg0, arg1, arg2, arr) {
   closure_0 = arg1;

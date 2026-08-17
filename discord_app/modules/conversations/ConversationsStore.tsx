@@ -1,15 +1,15 @@
 // discord_app/modules/conversations/ConversationsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "initialize" /* 5015 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 5016 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import privDefault from "../../../_runtime/01405_priv.js";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import closure_8 from "ConversationVisibilityStore.tsx";
+import CONVERSATION_COLORS from "ConversationConstants.tsx";
 
 require = arg1;
 function removePendingListFetch(channelId, requestKey) {

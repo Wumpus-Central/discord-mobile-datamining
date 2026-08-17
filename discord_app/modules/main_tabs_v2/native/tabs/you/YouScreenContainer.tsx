@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import trackTabPressed from "trackTabPressed" /* 15280 */;
-import handleBackButtonPressDefault from "handleBackButtonPress" /* 16003 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9588 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import useChatLayoutDefault from "../../../../chat/native/useChatLayout.tsx";
+import trackTabPressed from "../TabsPerformanceTracker.tsx";
+import handleBackButtonPressDefault from "YouScreen.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { RootNavigatorScreen } from "../../MainTabsConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { container: null, androidContainer: null, wrapper: null };

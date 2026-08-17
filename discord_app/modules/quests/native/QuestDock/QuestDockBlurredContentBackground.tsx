@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const memoResult = importAllResult.memo(function QuestDockBlurredContentBackground(blurTheme) {
   blurTheme = blurTheme.blurTheme;

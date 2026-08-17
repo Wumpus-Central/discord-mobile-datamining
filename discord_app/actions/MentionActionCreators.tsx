@@ -1,8 +1,8 @@
 // discord_app/actions/MentionActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 
 ({ Endpoints: c3, MAX_MENTIONS_PER_FETCH: c4 } = ME);
 const result = set.fileFinishedImporting("actions/MentionActionCreators.tsx");

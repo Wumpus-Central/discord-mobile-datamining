@@ -1,5 +1,5 @@
 // discord_app/modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };

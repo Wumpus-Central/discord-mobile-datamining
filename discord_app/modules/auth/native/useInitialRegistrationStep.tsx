@@ -1,8 +1,8 @@
 // discord_app/modules/auth/native/useInitialRegistrationStep.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "hasConsented" /* 5258 */;
-import { resetRegistration } from "useRegistrationUIStore" /* 15212 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/ConsentStore.tsx";
+import { resetRegistration } from "RegistrationUIStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

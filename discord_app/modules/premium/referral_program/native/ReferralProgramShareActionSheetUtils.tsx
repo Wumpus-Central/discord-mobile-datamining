@@ -1,6 +1,6 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
+import closure_0 from "../../../../stores/RelationshipStore.tsx";
+import { UserRowModes } from "../../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
 

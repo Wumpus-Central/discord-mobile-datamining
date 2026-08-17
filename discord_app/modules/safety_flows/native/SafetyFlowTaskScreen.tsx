@@ -1,12 +1,12 @@
 // discord_app/modules/safety_flows/native/SafetyFlowTaskScreen.tsx
-import noopAll from "noop" /* 19 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import ModalScreen from "ModalScreen" /* 5440 */;
-import ModalContent from "ModalContent" /* 5445 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17091 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
+import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
+import LogOutDisclaimerDefault from "LogOutDisclaimer.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

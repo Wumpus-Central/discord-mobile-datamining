@@ -1,11 +1,11 @@
 // discord_app/modules/launchpad/native/LaunchPadPullTab.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11149 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Pressable } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
+import { CHAT_INPUT_HEIGHT } from "../../chat_input/native/ChatInputConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ LAUNCH_PAD_MARGIN: c4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LAUNCH_PAD_SPRING_CONFIG);

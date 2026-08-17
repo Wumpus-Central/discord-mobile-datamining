@@ -1,9 +1,9 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgameUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import ROBLOX_PROTOCOL_URL from "ROBLOX_PROTOCOL_URL" /* 4644 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { isDetectionEnabled } from "initialize" /* 4504 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import ROBLOX_PROTOCOL_URL from "RobloxSubgameTypes.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { isDetectionEnabled } from "../game_detection/RunningGameStore.native.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function _openRobloxURLWithRootPlaceId() {

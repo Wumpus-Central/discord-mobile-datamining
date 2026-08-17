@@ -1,19 +1,19 @@
 // discord_app/modules/channel_list_v2/native/RedesignChannelList.tsx
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11075 */;
-import itemsDefault from "items" /* 15527 */;
-import handleJoinGuildDefault from "handleJoinGuild" /* 15532 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 15542 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "handleReset" /* 5250 */;
-import closure_8 from "withEqualityFn" /* 15289 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import itemsDefault from "../../game_community_upsell/native/GuildUpsellChannelList.tsx";
+import handleJoinGuildDefault from "../../main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx";
+import NsfwGateGuildSidebarDefault from "../../age_gate/native/components/NsfwGateGuildSidebar.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../guild_sidebar/ChannelListStore.tsx";
+import closure_8 from "../../home_drawer/native/HomeDrawerStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/SelectedChannelStore.tsx";
+import closure_11 from "../../../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function GuildChannels(guild) {

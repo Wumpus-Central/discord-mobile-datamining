@@ -1,6 +1,6 @@
 // discord_app/modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../GameRelationshipStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx");

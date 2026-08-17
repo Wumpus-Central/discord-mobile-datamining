@@ -1,14 +1,14 @@
 // discord_app/actions/EmojiActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import fromBlobDefault from "fromBlob" /* 8382 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "handleConnectionOpen" /* 4826 */;
-import { Endpoints } from "ME" /* 676 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import parseRawEmojiObjectDefault from "../modules/emojis/UnicodeEmojis.tsx";
+import fromBlobDefault from "../lib/uploader_inline/InlineUploader.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/emojis/EmojiStore.tsx";
+import closure_5 from "../modules/gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../stores/GuildAvailabilityStore.tsx";
+import { Endpoints } from "../Constants.tsx";
+import MAX_FAVORITES from "../modules/user_settings/UserSettingsConstants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 

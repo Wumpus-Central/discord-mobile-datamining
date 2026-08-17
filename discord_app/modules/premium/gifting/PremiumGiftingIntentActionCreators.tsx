@@ -1,12 +1,12 @@
 // discord_app/modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "recomputeAffinities" /* 5407 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import { GiftIntentType } from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_3 from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/MessageStore.tsx";
+import { GiftIntentType } from "../PremiumConstants.tsx";
+import ME from "../../../Constants.tsx";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

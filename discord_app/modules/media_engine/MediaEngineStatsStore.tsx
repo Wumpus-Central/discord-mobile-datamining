@@ -1,9 +1,9 @@
 // discord_app/modules/media_engine/MediaEngineStatsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "initialize" /* 4558 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/StreamRTCConnectionStore.tsx";
 
 require = arg1;
 function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {

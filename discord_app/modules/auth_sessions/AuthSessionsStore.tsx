@@ -1,6 +1,6 @@
 // discord_app/modules/auth_sessions/AuthSessionsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 function handleInit() {
   closure_0 = [];

@@ -1,10 +1,10 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx
-import set from "set" /* 2 */;
-import context from "context" /* 1497 */;
-import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1642 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 10560 */;
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx" /* 4115 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
+import set from "../../../_runtime/00002_set.js";
+import context from "../window/native/AppEntryKeyContext.tsx";
+import APP_ENTRY_KEYS from "../window/native/AppEntryKey.tsx";
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets.native.tsx";
+import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
+import useSafeAreaInsets from "useSafeAreaInsets.native.tsx";
 
 let obj = { main: null, share: null };
 obj = {};

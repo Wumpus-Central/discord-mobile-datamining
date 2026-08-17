@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getConstantsAll from "getConstants" /* 1626 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import processColorOrThrow from "processColorOrThrow" /* 8161 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import getCurrentBuildOverride from "getCurrentBuildOverride" /* 10638 */;
-import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 10968 */;
-import closure_5 from "getCurrentBuildOverride" /* 10638 */;
+import set from "../../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import getConstantsAll from "../../../../../../../utils/native/ClientInfoUtils.tsx";
+import InviteSendStates from "../../../../../../instant_invite/Constants.tsx";
+import processColorOrThrow from "../../../RowGeneratorStyleSheet.tsx";
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import getCurrentBuildOverride from "../../../../../../build_overrides/BuildOverrideStore.tsx";
+import setBuildOverrideForBranch from "../../../../../../build_overrides/native/BuildOverrideUtils.tsx";
+import closure_5 from "../../../../../../build_overrides/BuildOverrideStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const State = getCurrentBuildOverride.State;

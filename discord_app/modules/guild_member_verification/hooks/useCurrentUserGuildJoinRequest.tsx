@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_2 from "../UserGuildJoinRequestStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

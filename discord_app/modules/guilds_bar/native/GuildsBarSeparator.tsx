@@ -1,10 +1,10 @@
 // discord_app/modules/guilds_bar/native/GuildsBarSeparator.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import setDefault from "set" /* 7190 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import setDefault from "../../core/native/NativeView.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {

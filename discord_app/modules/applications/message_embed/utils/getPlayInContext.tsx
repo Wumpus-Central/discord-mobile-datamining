@@ -1,6 +1,6 @@
 // discord_app/modules/applications/message_embed/utils/getPlayInContext.tsx
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../../stores/SelectedChannelStore.tsx";
 import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 
 const require = arg1;

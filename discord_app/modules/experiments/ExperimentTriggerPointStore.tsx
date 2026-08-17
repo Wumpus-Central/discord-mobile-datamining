@@ -1,11 +1,11 @@
 // discord_app/modules/experiments/ExperimentTriggerPointStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcher from "dispatcher" /* 709 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 13241 */;
-import closure_3 from "getHash" /* 4288 */;
-import closure_4 from "initialize" /* 1212 */;
-import apexExperiment from "apexExperiment" /* 13240 */;
-import importDefaultResult from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcher from "../../Dispatcher.tsx";
+import commonTriggerPointConfiguration from "trigger_points/ConnectionOpenTriggerPoint.tsx";
+import closure_3 from "ExperimentStore.tsx";
+import closure_4 from "apex/ApexExperimentStore.tsx";
+import apexExperiment from "apex/DebugExperiment.tsx";
+import importDefaultResult from "../../Dispatcher.tsx";
 
 require = arg1;
 function handleConnectionOpen() {

@@ -1,5 +1,5 @@
 // discord_app/modules/premium/PremiumSubscriptionInvoiceItem.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../../_runtime/00002_set.js";
 
 const result = set2.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 

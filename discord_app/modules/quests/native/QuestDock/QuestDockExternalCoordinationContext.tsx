@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx
-import setDefault from "set" /* 687 */;
-import importAllResult from "noop" /* 19 */;
-import closure_3 from "QuestDockMode" /* 14445 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
-import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
-import set from "set" /* 500 */;
+import setDefault from "../../../../utils/Durations.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "QuestDockStore.tsx";
+import { QuestDockMode } from "../../QuestConstants.tsx";
+import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QuestDockConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 const SECOND = setDefault.Millis.SECOND;

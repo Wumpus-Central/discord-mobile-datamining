@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../../../../../../../_runtime/00002_set.js";
 
 function merge() {
   let items = [...arguments];

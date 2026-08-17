@@ -1,20 +1,20 @@
 // discord_app/modules/quickswitcher/QuickSwitcherActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import sortByMatchScore from "sortByMatchScore" /* 7593 */;
-import setDefault from "set" /* 8781 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { InAppNavigationType } from "fromType" /* 6715 */;
-import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "setLibraryApplications" /* 4512 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "handleConnectionOpen" /* 7592 */;
-import ME from "ME" /* 676 */;
-import { isStaticChannelRoute } from "set" /* 1398 */;
-import { CollectibleShopTab } from "items" /* 678 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import sortByMatchScore from "../autocompleter/index.tsx";
+import setDefault from "../../utils/ValidationUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { InAppNavigationType } from "../autocompleter/record/InAppNavigationRecord.tsx";
+import { ChannelRecordBase } from "../../records/ChannelRecord.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/LibraryApplicationStore.tsx";
+import closure_9 from "../../stores/SelectedChannelStore.tsx";
+import closure_10 from "../../stores/SelectedGuildStore.tsx";
+import closure_11 from "QuickSwitcherStore.tsx";
+import ME from "../../Constants.tsx";
+import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
+import { CollectibleShopTab } from "../collectibles/CollectiblesShopConstants.tsx";
 
 require = arg1;
 function trackClose(QUICKSWITCHER_CLOSED, type) {

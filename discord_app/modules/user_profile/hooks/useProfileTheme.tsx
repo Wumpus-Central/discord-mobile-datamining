@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/useProfileTheme.tsx
-import initialize from "initialize" /* 589 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore" /* 8971 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore.tsx";
+import { ThemeTypes } from "../../../Constants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");

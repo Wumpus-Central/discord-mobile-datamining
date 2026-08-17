@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/FamilyCenterModalRequestRouting.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 function getConnectionPrereqTarget(teen_identity) {
   if ("ready" in teen_identity) {

@@ -1,7 +1,7 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx
-import closure_2 from "reset" /* 4652 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "initialize" /* 4558 */;
+import closure_2 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_3 from "../../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../../stores/StreamRTCConnectionStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");

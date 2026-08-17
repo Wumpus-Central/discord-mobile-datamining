@@ -1,5 +1,5 @@
 // discord_app/modules/go_live/useStreamError.tsx
-import closure_2 from "isAVErrorContextOfType" /* 12440 */;
+import closure_2 from "../errors/av_errors/AVErrorStore.tsx";
 
 const require = arg1;
 let closure_3 = { [arg1(9668).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [arg1(9668).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [arg1(9668).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [arg1(9668).AVError.STREAM_SEND_LOW_FPS]: 2, [arg1(9668).AVError.STREAM_VIEW_LOW_FPS]: 2, [arg1(9668).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };

@@ -1,18 +1,18 @@
 // discord_app/modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
-import FolderIcon from "FolderIcon" /* 6870 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9817 */;
-import UserIcon from "UserIcon" /* 11004 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15143 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
+import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
+import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
+import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import PremiumPerksListDefault from "../../../../components_native/premium/PremiumPerksList.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

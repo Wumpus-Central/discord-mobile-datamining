@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/utils/getStreamSettingsForPreset.tsx
-import set from "set" /* 2 */;
-import _modDef10934 from "module_10934" /* 10934 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10935 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef10934 from "../GoLiveVideoPresetResolutionExperiment.tsx";
+import canStreamWithSettingsDefault from "canStreamWithSettings.tsx";
+import RESOLUTION_720 from "../StreamSettingsConstants.tsx";
 
 function getApplicationStreamPresetValues() {
   let obj = _modDef10934;

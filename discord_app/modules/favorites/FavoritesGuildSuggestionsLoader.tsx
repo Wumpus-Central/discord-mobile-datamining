@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/FavoritesGuildSuggestionsLoader.tsx
-import getAffineChannelIdDefault from "getAffineChannelId" /* 15537 */;
-import importAllResult from "noop" /* 19 */;
-import items from "items" /* 15464 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getAffineChannelIdDefault from "hooks/useFavoritesGuildSuggestionCandidates.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import items from "FavoritesGuildSuggestionsStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 function FavoritesGuildSuggestionsLoaderInner() {
   const tmp = getAffineChannelIdDefault(4);

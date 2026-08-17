@@ -1,12 +1,12 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import ContentIdType from "ContentIdType" /* 5439 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import ME from "ME" /* 676 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
+import ContentIdType from "SafetyHubModels.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import SafetyHubView from "SafetyHubConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function parseMessageEmbedForProps(fields) {

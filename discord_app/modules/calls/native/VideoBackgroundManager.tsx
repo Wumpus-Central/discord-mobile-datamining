@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/VideoBackgroundManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_0 from "handleConnectionOpen" /* 1979 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_0 from "../../../stores/SelectedChannelStore.tsx";
 
 initializeDefault;
 let prototype = function VideoBackgroundManager() {

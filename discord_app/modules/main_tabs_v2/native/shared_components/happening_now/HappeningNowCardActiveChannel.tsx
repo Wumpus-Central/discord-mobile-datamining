@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "truncateOldMessageData" /* 13255 */;
-import { MAX_STORED_MESSAGES } from "truncateOldMessageData" /* 13255 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleTypingStart" /* 11152 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../guild_home/ActiveChannelsStore.tsx";
+import { MAX_STORED_MESSAGES } from "../../../../guild_home/ActiveChannelsStore.tsx";
+import closure_7 from "../../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../../stores/TypingStore.tsx";
+import closure_9 from "../../../../../stores/UserStore.tsx";
+import { HappeningNowCardTrackingType as closure_10 } from "HappeningNowConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

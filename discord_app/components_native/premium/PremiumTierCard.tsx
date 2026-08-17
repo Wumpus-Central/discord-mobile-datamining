@@ -1,16 +1,16 @@
 // discord_app/components_native/premium/PremiumTierCard.tsx
-import noopAll from "noop" /* 19 */;
-import keys from "keys" /* 691 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getPremiumGradientColor } from "items" /* 7403 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import keys from "../../ConstantsIOS.tsx";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
+import LinearGradientDefault from "../../../_runtime/04756_LinearGradient.js";
+import PressableCard from "../../design/components/Card/native/Card.native.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { getPremiumGradientColor } from "../../modules/colors/native/ColorConstants.tsx";
+import { PremiumTypes } from "../../modules/premium/PremiumConstants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

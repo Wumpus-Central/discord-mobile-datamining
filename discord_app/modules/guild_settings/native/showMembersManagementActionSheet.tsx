@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/native/showMembersManagementActionSheet.tsx
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "../../../stores/UserStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_settings/native/showMembersManagementActionSheet.tsx");

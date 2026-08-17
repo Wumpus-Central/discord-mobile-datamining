@@ -1,9 +1,9 @@
 // discord_app/stores/DefaultRouteStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import ME2 from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
+import ME2 from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 const Routes = ME2.Routes;
 let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };

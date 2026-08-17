@@ -1,8 +1,8 @@
 // discord_app/modules/share/native/showSearchableDestinationListModal.tsx
-import set from "set" /* 2 */;
-import getBestActiveInput from "getBestActiveInput" /* 4237 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7925 */;
+import set from "../../../../_runtime/00002_set.js";
+import getBestActiveInput from "../../../utils/native/ChatInputUtils.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 
 const result = set.fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
 

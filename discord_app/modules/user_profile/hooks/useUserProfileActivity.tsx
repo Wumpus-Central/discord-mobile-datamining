@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/useUserProfileActivity.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import closure_4 from "map" /* 9199 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "sortActivity" /* 4559 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import DesktopSources from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import closure_4 from "../../content_inventory/ContentInventoryOutboxStore.tsx";
+import closure_5 from "../../../stores/MediaEngineStore.tsx";
+import closure_6 from "../../../stores/PresenceStore.tsx";
 
 const useMemo = noop.useMemo;
 const Features = DesktopSources.Features;

@@ -1,6 +1,6 @@
 // discord_app/modules/libdiscore/stores/BridgedStore.tsx
-import set from "set" /* 2 */;
-import fluxApi from "fluxApi" /* 1916 */;
+import set from "../../../../_runtime/00002_set.js";
+import fluxApi from "../FluxApi.tsx";
 
 const result = set.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 

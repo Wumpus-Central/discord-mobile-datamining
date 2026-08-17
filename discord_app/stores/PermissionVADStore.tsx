@@ -1,13 +1,13 @@
 // discord_app/stores/PermissionVADStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "MediaEngineStore.tsx";
+import closure_5 from "PermissionStore.tsx";
+import closure_6 from "RTCConnectionStore.tsx";
+import closure_7 from "VoiceStateStore.tsx";
+import ME from "../Constants.tsx";
 
 function handleUpdateVADPermission() {
   channelId = channelId.getChannelId();

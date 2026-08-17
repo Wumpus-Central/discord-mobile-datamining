@@ -1,16 +1,16 @@
 // discord_app/modules/guild_sidebar/native/VoiceUsers.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import map from "map" /* 9288 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 11697 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
+import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import getLayoutStyles from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import HeadphonesIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function AudienceItem(arg0) {

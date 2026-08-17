@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/MessagesHooks.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_toTimestampMs" /* 10509 */;
-import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 8682 */;
-import closure_8 from "handleConnectionOpen" /* 4826 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "sortActivity" /* 4559 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { findNodeHandle } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../channel/VoiceChannelStartTimeStore.tsx";
+import { updateShouldShowJumpToPresentButton as closure_7 } from "../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import closure_8 from "../../../stores/GuildAvailabilityStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/PresenceStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

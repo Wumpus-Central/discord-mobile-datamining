@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx
-import closure_3 from "noop" /* 19 */;
-import { FlatList } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { FlatList } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 require("ME").AutoCompleteResultTypes;

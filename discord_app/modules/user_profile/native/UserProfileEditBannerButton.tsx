@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8972 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
-import PencilIcon from "PencilIcon" /* 9925 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
+import UserProfileBannerDefault from "UserProfileBanner.tsx";
+import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ProfilePreviewButton(userId) {

@@ -1,11 +1,11 @@
 // discord_app/modules/connectivity/native/useGlobalStatusIndicatorState.tsx
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9748 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 12494 */;
-import useMyCurrentStageChannelDefault from "useMyCurrentStageChannel" /* 12497 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT" /* 12496 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import useVoiceStateForRemoteSessionDefault from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
+import useIsInvitedToSpeakDefault from "../../stage_channels/useIsInvitedToSpeak.tsx";
+import useMyCurrentStageChannelDefault from "../../stage_channels/useMyCurrentStageChannel.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/RTCConnectionStore.tsx";
+import { RTC_PANEL_HEIGHT } from "ConnectivityConstants.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");

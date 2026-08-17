@@ -1,11 +1,11 @@
 // discord_app/modules/game_invite_channels/GameInvitesChannelUtils.tsx
-import _modDef38 from "module_38" /* 38 */;
-import hasFlagDefault from "hasFlag" /* 7260 */;
-import loadForumPostData from "loadForumPostData" /* 7269 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { useMemo } from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import hasFlagDefault from "../activities/utils/hasFlag.tsx";
+import loadForumPostData from "../forums/ForumPostDataLoader.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { useMemo } from "../../../_runtime/00019_noop.js";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { subscribeGuildMembers } from "../../lib/guild/subscribeGuildMembers.tsx";
 import { useAvailableTags } from "../forums/ForumTagHooks.tsx";

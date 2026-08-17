@@ -1,6 +1,6 @@
 // discord_app/modules/media_channel/useIsFirstMessageInMediaPost.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

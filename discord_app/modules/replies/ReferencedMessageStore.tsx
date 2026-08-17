@@ -1,15 +1,15 @@
 // discord_app/modules/replies/ReferencedMessageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "removePendingListFetch" /* 5014 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import privDefault from "../../../_runtime/01405_priv.js";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import redactionSettingToRenderedString from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../conversations/ConversationsStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MessageStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function processMessage(message) {

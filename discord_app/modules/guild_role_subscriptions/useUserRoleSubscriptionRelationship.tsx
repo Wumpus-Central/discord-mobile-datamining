@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "computeRolesForGuild" /* 6728 */;
-import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "SubscriptionRoleStore.tsx";
+import { UserGuildRoleSubscriptionRelationship as closure_3 } from "GuildRoleSubscriptionsConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");

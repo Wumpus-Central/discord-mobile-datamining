@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AccessibilitySetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useSelectedDismissibleContent from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsAccessibilityScreen } from "../../accessibility/native/SettingsAccessibilityScreen.tsx";
 
 require = arg1;

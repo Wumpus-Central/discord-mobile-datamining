@@ -1,8 +1,8 @@
 // discord_app/modules/reanimated/ReanimatedRexport.tsx
-import set from "set" /* 2 */;
-import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4116 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import set from "../../../_runtime/00002_set.js";
+import cancelAnimationDefault from "../../../_runtime/01654_cancelAnimation.js";
+import REAWorkaroundViewDefault from "native/REAWorkaroundView.tsx";
+import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 if (PlatformTypes.isAndroid()) {
   const _Object = Object;

@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/messages/isLimitedChannel.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "handleInviteData" /* 4295 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import closure_0 from "../../../../stores/ChannelStore.tsx";
+import closure_1 from "../../../../stores/GuildMemberCountStore.tsx";
+import { ChannelTypes } from "../../../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 

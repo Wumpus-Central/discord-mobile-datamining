@@ -1,6 +1,6 @@
 // discord_app/modules/media_engine/useMuteAwareLocalVolume.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

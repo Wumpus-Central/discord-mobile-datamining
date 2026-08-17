@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/MessageImpressionAnalyticsHelpers.tsx
-import InviteTypes2 from "InviteTypes" /* 4369 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateInvite" /* 4359 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import { LinkType } from "LinkType" /* 7442 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import InviteTypes2 from "../../instant_invite/InviteTypeUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/InviteStore.tsx";
+import closure_5 from "../../../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../../../Constants.tsx";
+import { LinkType } from "../../applications/message_embed/MessageEmbedConstants.tsx";
+import { InviteTypes } from "../../instant_invite/Constants.tsx";
 
 require = arg1;
 function getVoiceInviteEmbedRenderInfo(state) {

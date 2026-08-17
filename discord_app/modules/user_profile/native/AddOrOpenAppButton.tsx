@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/AddOrOpenAppButton.tsx
-import useIsAppDMDefault from "useIsAppDM" /* 11323 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { getSection } from "getIndexKey" /* 8448 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useIsAppDMDefault from "../../app_dms/useIsAppDM.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { getSection } from "../../application_commands/ApplicationCommandIndexStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function AddAppButton(application) {

@@ -1,10 +1,10 @@
 // discord_app/modules/sound_playback/SoundUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import getSoundPackDefault from "getSoundPack" /* 10043 */;
-import _createSound from "_createSound" /* 10044 */;
-import closure_3 from "Soundpacks" /* 10041 */;
-import closure_4 from "initialize" /* 4220 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
+import timestampDefault from "../debug/Logger.tsx";
+import getSoundPackDefault from "../soundpacks/getSoundsForPack.tsx";
+import _createSound from "native/SoundUtils.tsx";
+import closure_3 from "../soundpacks/SoundpackStore.tsx";
+import closure_4 from "../../stores/StreamerModeStore.tsx";
+import { SoundOutputChannel } from "Constants.tsx";
 import { _createSound } from "native/SoundUtils.tsx";
 
 require = arg1;

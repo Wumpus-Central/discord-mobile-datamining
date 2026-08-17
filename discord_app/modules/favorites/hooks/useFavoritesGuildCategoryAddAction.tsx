@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import closure_3 from "noop" /* 19 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { ChannelTypes } from "../../../Constants.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getFavoritesAwareGuildName } from "../FavoritesUtils.tsx";
 

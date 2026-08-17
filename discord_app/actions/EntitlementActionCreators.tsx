@@ -1,7 +1,7 @@
 // discord_app/actions/EntitlementActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../Constants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;

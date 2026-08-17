@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/ChannelCallModalManager.tsx
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import initializeDefault from "../../../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../stores/VoiceStateStore.tsx";
 
 let require = arg1;
 initializeDefault;

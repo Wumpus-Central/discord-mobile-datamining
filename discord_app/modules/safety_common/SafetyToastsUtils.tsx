@@ -1,9 +1,9 @@
 // discord_app/modules/safety_common/SafetyToastsUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import getNicknameDefault from "../../utils/NicknameUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import { SafetyToastType } from "Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");

@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/useUserProfileMutuals.tsx
-import usePrevValueDefault from "usePrevValue" /* 8902 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import closure_6 from "insertUnsortedGuilds" /* 5078 */;
-import closure_7 from "createUserWidgetFromServer" /* 5365 */;
+import usePrevValueDefault from "../../../../discord_common/js/shared/hooks/usePrevValue.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { useMemo } from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_6 from "../../../stores/SortedGuildStore.tsx";
+import closure_7 from "../UserProfileStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

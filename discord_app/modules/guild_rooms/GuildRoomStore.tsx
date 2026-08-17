@@ -1,11 +1,11 @@
 // discord_app/modules/guild_rooms/GuildRoomStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 9865 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import GuildRoomObjectTypes from "GuildRoomTypes.tsx";
+import closure_5 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/RTCConnectionStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
 
 require = arg1;
 function resolveCreatingNotes(roomId, objects) {

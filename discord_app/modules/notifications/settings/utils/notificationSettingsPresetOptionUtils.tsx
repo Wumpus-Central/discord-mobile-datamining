@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ReadStateTypes from "ReadStateTypes" /* 5044 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import ReadStateTypes from "../../../read_states/ReadStateConstants.tsx";
 
 const UserNotificationSettings = ME.UserNotificationSettings;
 const UnreadSetting = ReadStateTypes.UnreadSetting;

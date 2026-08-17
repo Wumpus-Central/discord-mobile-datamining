@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import registerAssetDefault from "registerAsset" /* 8287 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08287_registerAsset.js";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");

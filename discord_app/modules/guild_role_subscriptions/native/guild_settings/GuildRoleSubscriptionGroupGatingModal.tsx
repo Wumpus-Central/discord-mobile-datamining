@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 16944 */;
-import HeaderDefault from "Header" /* 16954 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "usePriceTiers" /* 16950 */;
-import { GuildRoleSubscriptionsTierScenes as closure_5 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import FormGuildGatingModeSelectorDefault from "../components/FormGuildGatingModeSelector.tsx";
+import HeaderDefault from "../components/GuildRoleSubscriptionTierEditStep.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../RoleTierEditStore.tsx";
+import { GuildRoleSubscriptionsTierScenes as closure_5 } from "../../GuildRoleSubscriptionsConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,14 +1,14 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import closure_3 from "../FamilyCenterStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildRow(guildActivity) {

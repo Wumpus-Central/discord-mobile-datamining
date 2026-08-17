@@ -1,12 +1,12 @@
 // discord_app/design/components/TableRow/native/TableRowIcon.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import IconSizes from "IconSizes" /* 4747 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import IconSizes from "../../../void/Icon/native/Icon.tsx";
+import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 let closure_3 = ["color"];

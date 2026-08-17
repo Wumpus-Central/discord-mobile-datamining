@@ -1,6 +1,6 @@
 // discord_app/modules/guild_member_verification/MemberVerificationModalActionCreators.tsx
-import set from "set" /* 2 */;
-import _mod8523 from "module_8523" /* 8523 */;
+import set from "../../../_runtime/00002_set.js";
+import _mod8523 from "native/MemberVerificationModalActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationModalActionCreators.tsx");
 

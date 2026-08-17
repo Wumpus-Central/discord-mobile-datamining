@@ -1,8 +1,8 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import isEqualDefault from "isEqual" /* 4632 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import isEqualDefault from "../../../_runtime/04632_isEqual.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import set from "../../../_runtime/00002_set.js";
 import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
 import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 

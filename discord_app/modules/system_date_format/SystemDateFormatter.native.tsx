@@ -1,7 +1,7 @@
 // discord_app/modules/system_date_format/SystemDateFormatter.native.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import enforcingDefault from "enforcing" /* 4081 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDateFormatUtilsModule.tsx";
 
 if (null != global.__DiscordCreateDateFormatter) {
   let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;

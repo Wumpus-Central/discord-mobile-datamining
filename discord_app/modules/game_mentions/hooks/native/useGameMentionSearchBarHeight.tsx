@@ -1,7 +1,7 @@
 // discord_app/modules/game_mentions/hooks/native/useGameMentionSearchBarHeight.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import map from "map" /* 9288 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import map from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let c3 = "text-sm/semibold";

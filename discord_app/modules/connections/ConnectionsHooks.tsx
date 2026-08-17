@@ -1,11 +1,11 @@
 // discord_app/modules/connections/ConnectionsHooks.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 5221 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { KeyboardKeysUpdated } from "items" /* 5228 */;
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/ConnectedAccountsStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import { KeyboardKeysUpdated } from "../../../discord_common/js/shared/constants/KeyboardConstants.tsx";
 
 const require = arg1;
 ({ ACTIVITY_PLATFORM_TYPES: error, PlatformTypes } = ME);

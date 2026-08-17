@@ -1,14 +1,14 @@
 // discord_app/modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import transitionToGuild from "transitionToGuild" /* 7302 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import { EMPTY_NUX_SERVER } from "ME" /* 676 */;
-import { MODE_CHANGE_PHYSICS } from "MODE_CHANGE_PHYSICS" /* 9588 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/SelectedGuildStore.tsx";
+import GUILD_ITEM_SIZE from "GuildsBarConstants.tsx";
+import { EMPTY_NUX_SERVER } from "../../../Constants.tsx";
+import { MODE_CHANGE_PHYSICS } from "../../main_tabs_v2/native/MainTabsConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handlePress() {

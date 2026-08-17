@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
-import updateAssets from "updateAssets" /* 7247 */;
-import setCoverImageURLAll from "setCoverImageURL" /* 12790 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getCoverImageURL" /* 12789 */;
+import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
+import updateAssets from "../../../utils/ApplicationAssetUtils.tsx";
+import setCoverImageURLAll from "../MessageActivityInviteCoverImageActionCreators.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../MessageActivityInviteCoverImageStore.tsx";
 
 require = arg1;
 function _getPresenceActivityInviteCoverImageURL(messageId) {

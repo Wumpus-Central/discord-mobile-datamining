@@ -1,16 +1,16 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputRightActions.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 11408 */;
-import FadeTransitionItem from "FadeTransitionItem" /* 11409 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11410 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11149 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import wrapChildrenDefault from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import renderChatInputActionButtonGiftAndThreadDefault from "ChatInputActionButtonGiftOrThread.tsx";
+import FadeTransitionItem from "ChatInputActionButtonTransitionItem.tsx";
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "../ChatInputConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function LeftSlot(state) {

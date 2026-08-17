@@ -1,6 +1,6 @@
 // discord_app/modules/safe_area/SafeAreaConstants.native.tsx
-import set from "set" /* 2 */;
-import _mod1632 from "module_1632" /* 1632 */;
+import set from "../../../_runtime/00002_set.js";
+import _mod1632 from "../../../_runtime/metro/01632__.js";
 
 const initialWindowMetrics = _mod1632.initialWindowMetrics;
 let insets;

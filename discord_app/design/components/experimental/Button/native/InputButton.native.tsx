@@ -1,13 +1,13 @@
 // discord_app/design/components/experimental/Button/native/InputButton.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CollapsingText from "CollapsingText" /* 4746 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import useInputStyles from "useInputStyles" /* 7345 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { Text } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import CollapsingText from "../../../Button/native/BaseTextButton.native.tsx";
+import MINIMUM_HIT_AREA from "../../../Button/native/ButtonConstants.native.tsx";
+import useInputStyles from "../../../Input/native/InputFieldContainer.native.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { Text } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];

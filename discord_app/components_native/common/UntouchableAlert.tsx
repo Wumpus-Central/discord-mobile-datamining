@@ -1,9 +1,9 @@
 // discord_app/components_native/common/UntouchableAlert.tsx
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ActivityIndicator from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_4 = createCacheKey.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });

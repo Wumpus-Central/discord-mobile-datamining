@@ -1,7 +1,7 @@
 // discord_app/modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { placeholder: null, placeholderAvatar: null, placeholderUsername: null, placeholderDivider: null };

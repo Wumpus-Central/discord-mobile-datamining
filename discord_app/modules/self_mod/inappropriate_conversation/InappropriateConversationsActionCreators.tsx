@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../../_runtime/00002_set.js";
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../../Constants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");

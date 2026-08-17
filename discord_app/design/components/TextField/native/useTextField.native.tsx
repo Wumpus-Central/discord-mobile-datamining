@@ -1,6 +1,6 @@
 // discord_app/design/components/TextField/native/useTextField.native.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");

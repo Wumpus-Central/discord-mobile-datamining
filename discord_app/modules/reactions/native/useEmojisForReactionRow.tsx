@@ -1,6 +1,6 @@
 // discord_app/modules/reactions/native/useEmojisForReactionRow.tsx
-import closure_3 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");

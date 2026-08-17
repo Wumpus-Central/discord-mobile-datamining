@@ -1,6 +1,6 @@
 // discord_app/design/components/RedesignCompat/native/RedesignCompat.native.tsx
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const context = importAllResult.createContext(false);
 const result = require("set").fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");

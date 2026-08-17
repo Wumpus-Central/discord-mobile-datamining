@@ -1,5 +1,5 @@
 // discord_app/modules/debug/LogAggregator.tsx
-import DequeDefault from "Deque" /* 8 */;
+import DequeDefault from "../../../_runtime/00008_Deque.js";
 
 let closure_0 = new DequeDefault(5000);
 let tmp2 = new DequeDefault(5000);

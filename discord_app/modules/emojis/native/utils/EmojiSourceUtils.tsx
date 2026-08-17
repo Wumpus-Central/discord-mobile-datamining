@@ -1,6 +1,6 @@
 // discord_app/modules/emojis/native/utils/EmojiSourceUtils.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 function _getEmojiSource() {

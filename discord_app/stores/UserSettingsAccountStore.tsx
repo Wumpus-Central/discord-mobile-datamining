@@ -1,8 +1,8 @@
 // discord_app/stores/UserSettingsAccountStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "mergeGuildAvatar" /* 1922 */;
-import { FormStates } from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_0 from "UserStore.tsx";
+import { FormStates } from "../Constants.tsx";
 
 function handleFormClose() {
   CLOSED = FormStates.CLOSED;

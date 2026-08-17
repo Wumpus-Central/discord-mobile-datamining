@@ -1,9 +1,9 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "isRateLimited" /* 14119 */;
-import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../unique_usernames/UniqueUsernamesStore.tsx";
+import { useRegistrationUIStore } from "../../RegistrationUIStore.tsx";
+import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
 
 const require = arg1;
 ({ authStateToRegisterTransitionStep: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);

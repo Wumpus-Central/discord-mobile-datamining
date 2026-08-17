@@ -1,6 +1,6 @@
 // discord_common/js/packages/apex/ApexTypes.tsx
-import set from "set" /* 2 */;
-import LOGGED_OUT_USER_ID_SENTINEL from "LOGGED_OUT_USER_ID_SENTINEL" /* 1216 */;
+import set from "../../../../_runtime/00002_set.js";
+import LOGGED_OUT_USER_ID_SENTINEL from "../../shared/shared-constants/ExperimentsConstants.tsx";
 
 const obj = { User: 1, [1]: "User", Installation: 2, [2]: "Installation", Guild: 3, [3]: "Guild" };
 const result = set.fileFinishedImporting("../discord_common/js/packages/apex/ApexTypes.tsx");

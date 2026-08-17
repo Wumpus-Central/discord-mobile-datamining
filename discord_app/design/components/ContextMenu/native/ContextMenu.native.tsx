@@ -1,7 +1,7 @@
 // discord_app/design/components/ContextMenu/native/ContextMenu.native.tsx
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 ({ Fragment: c4, jsx: c5 } = jsxProd);

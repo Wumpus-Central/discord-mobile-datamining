@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/quests/native/QuestBarPreview.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import QuestDockMode from "QuestDockMode" /* 14451 */;
-import getDeliveredQuest from "getDeliveredQuest" /* 14469 */;
-import contextDefault from "context" /* 14533 */;
-import QuestDockWithGestureAnimation from "QuestDockWithGestureAnimation" /* 14534 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import QuestDockMode from "../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
+import getDeliveredQuest from "../../../quests/native/QuestDock/QuestDockCreativeContext.tsx";
+import contextDefault from "../../../quests/native/QuestDock/QuestDockVisibilityContext.tsx";
+import QuestDockWithGestureAnimation from "../../../quests/native/QuestDock/QuestDock.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

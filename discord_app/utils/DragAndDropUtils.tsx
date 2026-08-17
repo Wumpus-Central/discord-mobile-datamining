@@ -1,6 +1,6 @@
 // discord_app/utils/DragAndDropUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import applyDefault from "apply" /* 12 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import applyDefault from "../../_runtime/00012_apply.js";
 
 function calculatePositionDeltas(arg0) {
   ({ oldOrdering, newOrdering, idGetter, existingPositionGetter, ascending } = arg0);

@@ -1,15 +1,15 @@
 // discord_app/modules/search/native/stores/SearchQueryStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import isCompleteDefault from "isComplete" /* 11523 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import ME from "ME" /* 676 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import SearchTokenTypes from "../../SearchUtils.tsx";
+import isCompleteDefault from "SearchQueryTagManager.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import MessageEmbedTypes from "../../SearchConstants.tsx";
+import { SearchFilterAddLocations } from "../tracking/TrackingConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import areArraysShallowlyEqual from "../../../../utils/FunctionUtils.tsx";
 
 require = arg1;
 ({ EMPTY_SEARCH_QUERY_STRING: closure_6, SearchQueryTagTypes: error } = MessageEmbedTypes);

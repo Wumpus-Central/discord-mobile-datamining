@@ -1,8 +1,8 @@
 // discord_common/js/packages/media-engine/MediaEngineDummy.tsx
-import set from "set" /* 2 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import onDefault from "on" /* 4572 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../../../_runtime/00002_set.js";
+import BaseConnectionEvent from "index.tsx";
+import onDefault from "../../shared/utils/TypedEventEmitter.tsx";
+import DesktopSources from "Constants.tsx";
 
 function Video() {
   return null;

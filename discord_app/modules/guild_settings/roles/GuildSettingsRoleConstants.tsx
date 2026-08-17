@@ -1,12 +1,12 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRoleConstants.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import handleSetSection from "handleSetSection" /* 16831 */;
-import ME from "ME" /* 676 */;
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
-import importAllResult from "fromString" /* 506 */;
-import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
+import handleSetSection from "GuildSettingsRolesStore.tsx";
+import ME from "../../../Constants.tsx";
+import HOLOGRAPHIC_ROLE_COLORS from "../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
+import importAllResult from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import unsafe_getRawColor from "../../../../discord_common/js/packages/tokens/shims.native.tsx";
 
 const RoleColorsStyle = handleSetSection.RoleColorsStyle;
 ({ Permissions, DEFAULT_ROLE_COLOR } = ME);

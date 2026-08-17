@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/VoicePanelConstants.tsx
-import set from "set" /* 500 */;
+import set from "../../utils/PlatformUtils.tsx";
 
 let obj = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
 obj = { mass: 0.5, damping: 80, stiffness: 200 };

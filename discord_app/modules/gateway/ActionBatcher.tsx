@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/ActionBatcher.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let ActionBatcher;
 class ActionBatcher {

@@ -1,10 +1,10 @@
 // discord_app/modules/auth/RedirectUnauthenticated.tsx
-import noopAll from "noop" /* 19 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
-import _extends from "_extends" /* 4208 */;
-import { Routes } from "ME" /* 676 */;
-import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED" /* 683 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import _extends from "../../../_runtime/metro/04208__extends.js";
+import { Routes } from "../../Constants.tsx";
+import { CONFERENCE_MODE_ENABLED } from "../conference_mode/ConferenceModeConstants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

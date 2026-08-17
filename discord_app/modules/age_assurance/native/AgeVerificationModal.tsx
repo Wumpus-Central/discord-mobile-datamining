@@ -1,9 +1,9 @@
 // discord_app/modules/age_assurance/native/AgeVerificationModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set" /* 5427 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "../AgeVerificationConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function AgeVerifyScreen(uri) {

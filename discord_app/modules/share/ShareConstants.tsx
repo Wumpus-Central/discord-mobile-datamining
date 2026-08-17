@@ -1,6 +1,6 @@
 // discord_app/modules/share/ShareConstants.tsx
-import set from "set" /* 2 */;
-import sortByMatchScore from "sortByMatchScore" /* 7593 */;
+import set from "../../../_runtime/00002_set.js";
+import sortByMatchScore from "../autocompleter/index.tsx";
 
 const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GROUP_DM];
 const arr = Array.from(items);

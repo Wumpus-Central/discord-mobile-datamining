@@ -1,9 +1,9 @@
 // discord_app/utils/RelationshipUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import _modDef14825 from "module_14825" /* 14825 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import getAvatarURLDefault from "AvatarUtils.tsx";
+import _modDef14825 from "../actions/NotificationActionCreators.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
 
 const FriendsSections = ME.FriendsSections;

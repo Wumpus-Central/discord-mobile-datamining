@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "getParticipants" /* 4773 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import closure_2 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../calls/ChannelRTCStore.tsx";
+import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../../stores/MediaEngineStore.tsx";
+import ParticipantTypes from "../../../calls/CallConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

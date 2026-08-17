@@ -1,7 +1,7 @@
 // discord_app/modules/mfa/native/components/BackButton.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import MFAButtonDefault from "MFAButton" /* 15127 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import MFAButtonDefault from "button.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");

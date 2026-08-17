@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useBadges.tsx
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "initialize" /* 4220 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import closure_2 from "../../../stores/StreamerModeStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 
 require = arg1;
 const legacy_username = "legacy_username";

@@ -1,14 +1,14 @@
 // discord_app/components_native/common/IconLabelBlock.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4734 */;
-import IconUploaderDefault from "IconUploader" /* 9944 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../design/void/native.tsx";
+import AccessibilityAnnouncer from "../../design/shared.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
+import IconUploaderDefault from "IconUploader.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_3 = ["error"];

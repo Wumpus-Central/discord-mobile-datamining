@@ -1,11 +1,11 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
-import _mod6786 from "module_6786" /* 6786 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "shouldShowOnboarding" /* 6784 */;
-import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
-import ME from "ME" /* 676 */;
+import _mod6786 from "../../../_runtime/metro/06786__.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "GuildOnboardingStore.tsx";
+import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "native/GuildOnboardingConstants.tsx";
+import ME from "../../Constants.tsx";
 import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 require = arg1;

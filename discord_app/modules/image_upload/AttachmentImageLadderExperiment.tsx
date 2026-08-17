@@ -1,7 +1,7 @@
 // discord_app/modules/image_upload/AttachmentImageLadderExperiment.tsx
-import set from "set" /* 2 */;
-import items from "items" /* 1471 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import items from "AttachmentImageLadder.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { enabled: false, maxUpscale: items.ATTACHMENT_LADDER_MAX_UPSCALE, minSnapDownDpr: 2 };
 obj = { name: "2026-07-attachment-image-ladder", kind: "user", defaultConfig: obj, variations: null };

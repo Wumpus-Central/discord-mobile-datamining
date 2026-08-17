@@ -1,5 +1,5 @@
 // discord_app/ConstantsIOS.tsx
-import set from "set" /* 2 */;
+import set from "../_runtime/00002_set.js";
 
 let set = new Set(["token", "fingerprint"]);
 const frozen = Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } });

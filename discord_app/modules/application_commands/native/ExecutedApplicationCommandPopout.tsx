@@ -1,21 +1,21 @@
 // discord_app/modules/application_commands/native/ExecutedApplicationCommandPopout.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
-import closure_11 from "markAllUserIdListsStale" /* 4030 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "getIndexKey" /* 8448 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5246 */;
-import ME from "ME" /* 676 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import regExp from "regExp" /* 6810 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildRoleStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/MessageStore.tsx";
+import closure_11 from "../../../stores/RelationshipStore.tsx";
+import closure_12 from "../../../stores/UserStore.tsx";
+import closure_13 from "../ApplicationCommandIndexStore.tsx";
+import { SUB_COMMAND_KEY_SEPARATOR } from "../ApplicationCommandConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 
 const require = arg1;

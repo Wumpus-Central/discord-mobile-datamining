@@ -1,8 +1,8 @@
 // discord_app/design/void/Form/native/FormCheckmark.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6933 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CheckmarkSmallIcon from "../../../components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

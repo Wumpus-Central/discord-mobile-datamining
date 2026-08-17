@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandUserAppUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import EphemeralMessageReason from "EphemeralMessageReason" /* 8299 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import EphemeralMessageReason from "../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx";
 
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 

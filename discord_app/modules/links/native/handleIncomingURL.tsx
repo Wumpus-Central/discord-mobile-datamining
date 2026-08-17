@@ -1,10 +1,10 @@
 // discord_app/modules/links/native/handleIncomingURL.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "getState" /* 7383 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../../../stores/native/AppStateStore.tsx";
+import ME from "../../../Constants.tsx";
 
 const require = arg1;
 function _handleIncomingURL() {

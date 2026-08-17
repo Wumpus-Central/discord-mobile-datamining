@@ -1,9 +1,9 @@
 // discord_app/modules/guild_settings/GuildSettingsServerTagUtils.tsx
-import guildHasTag from "guildHasTag" /* 8375 */;
-import apexExperimentDefault from "apexExperiment" /* 8878 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import guildHasTag from "../guild_tag/GuildTagUtils.tsx";
+import apexExperimentDefault from "MobileServerTagExperiment.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 require = arg1;
 const GuildSettingsServerTag = "GuildSettingsServerTag";

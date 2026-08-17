@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import apply from "../../../../_runtime/00012_apply.js";
+import ME from "../../../Constants.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");

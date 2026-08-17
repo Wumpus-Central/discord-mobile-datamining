@@ -1,6 +1,6 @@
 // discord_app/design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx
-import context2 from "context" /* 1356 */;
-import closure_2 from "noop" /* 19 */;
+import context2 from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");

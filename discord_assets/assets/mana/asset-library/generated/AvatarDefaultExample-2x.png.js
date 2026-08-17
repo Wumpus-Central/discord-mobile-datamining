@@ -1,5 +1,5 @@
 // discord_assets/assets/mana/asset-library/generated/AvatarDefaultExample-2x.png.js
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarDefaultExample-2x.png.js");
 

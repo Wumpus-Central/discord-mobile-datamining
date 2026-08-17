@@ -1,6 +1,6 @@
 // discord_app/modules/app_startup/awaitExperiments.tsx
-import set from "set" /* 2 */;
-import Future from "Future" /* 8451 */;
+import set from "../../../_runtime/00002_set.js";
+import Future from "../../../discord_common/js/shared/utils/Future.tsx";
 
 const future = new Future.Future();
 let c1 = null;

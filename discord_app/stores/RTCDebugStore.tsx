@@ -1,11 +1,11 @@
 // discord_app/stores/RTCDebugStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import openAll from "open" /* 12597 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import openAll from "../actions/RTCDebugActionCreators.tsx";
+import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "MediaEngineStore.tsx";
+import closure_6 from "UserStore.tsx";
+import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const require = arg1;
 function updateStats(arr, arg1, timestamp) {

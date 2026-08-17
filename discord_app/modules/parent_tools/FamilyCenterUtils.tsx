@@ -1,10 +1,10 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import tDefault from "t" /* 3975 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
-import items from "items" /* 5297 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import tDefault from "../../../_runtime/03975_t.js";
+import maybeFetchCollectiblesForInvoicesDefault from "FamilyCenterActionCreators.tsx";
+import closure_3 from "FamilyCenterStore.tsx";
+import items from "FamilyCenterConstants.tsx";
 
 require = arg1;
 ({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: closure_8, UserLinkType: c9 } = items);

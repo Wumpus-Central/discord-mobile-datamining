@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
 
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
 const items = [{ interval: SubscriptionIntervalTypes.DAY, interval_count: 1 }, { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 }];

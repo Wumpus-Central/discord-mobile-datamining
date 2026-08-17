@@ -1,19 +1,19 @@
 // discord_app/modules/impersonate/ImpersonateActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import ImpersonateType from "ImpersonateType" /* 1988 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "comparator" /* 1980 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_10 from "initialize" /* 1982 */;
-import ME from "ME" /* 676 */;
-import { isStaticChannelRoute } from "set" /* 1398 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import transitionTo from "../routing/router_utils.tsx";
+import ImpersonateType from "ImpersonateTypes.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "ImpersonateStore.tsx";
+import ME from "../../Constants.tsx";
+import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
 function updateImpersonating(closure_0, type) {

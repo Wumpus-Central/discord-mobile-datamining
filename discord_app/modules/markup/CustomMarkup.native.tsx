@@ -1,12 +1,12 @@
 // discord_app/modules/markup/CustomMarkup.native.tsx
-import set from "set" /* 2 */;
-import tDefault from "t" /* 4092 */;
-import AST_KEY from "AST_KEY" /* 4765 */;
-import MarkupText from "MarkupText" /* 4766 */;
-import MarkupTextDefault from "MarkupText" /* 4766 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6808 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
+import set from "../../../_runtime/00002_set.js";
+import tDefault from "../../../_runtime/04092_t.js";
+import AST_KEY from "MarkupTypes.tsx";
+import MarkupText from "MarkupReactRules.native.tsx";
+import MarkupTextDefault from "MarkupReactRules.native.tsx";
+import get_defaultRulesDefault from "MarkupUtils.tsx";
+import combineMarkupRulesDefault from "combineMarkupRules.tsx";
+import parseLinkDefault from "MarkupRules.tsx";
 
 function createRules(arg0) {
   let obj = arg1;

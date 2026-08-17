@@ -1,20 +1,20 @@
 // discord_app/modules/in_app_notifications/native/ReminderNotification.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import ClockIcon from "ClockIcon" /* 4338 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
-import NativeMessagePreviewContentDefault from "NativeMessagePreviewContent" /* 10048 */;
-import LocationTextDefault from "LocationText" /* 10115 */;
-import VideoBadge from "VideoBadge" /* 10117 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 10030 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
+import NativeMessagePreviewContentDefault from "MessagePreviewText.tsx";
+import LocationTextDefault from "MessageNotificationHeader.tsx";
+import VideoBadge from "MediaPreviewRightAccessory.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import set from "InAppNotificationConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NotificationAvatar(arg0) {

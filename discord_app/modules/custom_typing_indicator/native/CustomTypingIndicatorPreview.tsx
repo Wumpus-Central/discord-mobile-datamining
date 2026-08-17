@@ -1,12 +1,12 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorPreview.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import getRandomCustomTypingIndicatorEmojis from "getRandomCustomTypingIndicatorEmojis" /* 14709 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 14711 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getRandomCustomTypingIndicatorEmojis from "../CustomTypingIndicatorUtils.tsx";
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

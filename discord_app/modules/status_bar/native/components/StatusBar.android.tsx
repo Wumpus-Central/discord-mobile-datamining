@@ -1,7 +1,7 @@
 // discord_app/modules/status_bar/native/components/StatusBar.android.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import pushStackEntryDefault from "pushStackEntry" /* 8033 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import pushStackEntryDefault from "StatusBarManager.android.tsx";
 
 const StatusBar = get_ActivityIndicator.StatusBar;
 class StatusBarAndroid extends StatusBar {

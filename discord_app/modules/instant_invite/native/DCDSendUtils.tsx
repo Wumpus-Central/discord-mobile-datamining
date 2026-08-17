@@ -1,7 +1,7 @@
 // discord_app/modules/instant_invite/native/DCDSendUtils.tsx
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4647 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 ({ Linking: c3, NativeModules: c4 } = get_ActivityIndicator);
 const result = set.fileFinishedImporting("modules/instant_invite/native/DCDSendUtils.tsx");

@@ -1,15 +1,15 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_7 from "set" /* 5049 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../GuildOnboardingHomeSettingsStore.tsx";
+import closure_7 from "../GuildOnboardingMemberActionStore.tsx";
+import { StaticChannelRoute } from "../../channel/ChannelConstants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function ProgressBar(percent) {

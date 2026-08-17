@@ -1,5 +1,5 @@
 // discord_app/modules/video-qoe/utils/SessionManager.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
 const prototype = function SessionManager() {

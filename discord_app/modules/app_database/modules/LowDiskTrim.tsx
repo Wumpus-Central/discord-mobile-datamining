@@ -1,5 +1,5 @@
 // discord_app/modules/app_database/modules/LowDiskTrim.tsx
-import importDefaultResult from "result" /* 5070 */;
+import importDefaultResult from "../stores/FileSystemStore.tsx";
 
 let obj = importDefault;
 class LowDiskTrim {

@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallList.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 12603 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { MAX_AUDIENCE_ROW_LIMIT } from "../../StageChannelsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import useActiveSpeakerPillScrollHandler from "../StageChannelListStore.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "hasFlag" /* 4031 */;
-import { MessageSnapshotRecord } from "hasFlag" /* 4031 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../records/MessageRecord.tsx";
+import { MessageSnapshotRecord } from "../../../../records/MessageRecord.tsx";
 
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 

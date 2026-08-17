@@ -1,8 +1,8 @@
 // discord_app/modules/app_database/modules/messages/KvMessage.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "trackCommunicationDisabled" /* 1990 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import closure_0 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../stores/GuildMemberStore.tsx";
+import closure_2 from "../../../../stores/UserStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../../Constants.tsx";
 
 let prototype;
 prototype = function KvMessage() {

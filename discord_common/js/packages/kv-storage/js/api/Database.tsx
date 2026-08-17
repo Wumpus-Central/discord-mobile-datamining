@@ -1,8 +1,8 @@
 // discord_common/js/packages/kv-storage/js/api/Database.tsx
-import TableId from "TableId" /* 1962 */;
-import open from "open" /* 1964 */;
-import logger from "logger" /* 1965 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import TableId from "../types/index.tsx";
+import open from "../raw/Host.tsx";
+import logger from "../raw/Runtime.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 let Database;

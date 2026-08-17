@@ -1,5 +1,5 @@
 // discord_app/intl/number-parts.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("intl/number-parts.tsx");
 const obj = Object.create(null);

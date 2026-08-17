@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/getRestrictedHiddenMediaCount.tsx
-import set from "set" /* 2 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import getForwardInfo from "getForwardInfo" /* 8179 */;
+import set from "../../../_runtime/00002_set.js";
+import getStickerExtensionFromFormatType from "../stickers/StickersUtils.tsx";
+import getForwardInfo from "../forwarding/formatMessageForwards.tsx";
 
 let result = set.fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
 

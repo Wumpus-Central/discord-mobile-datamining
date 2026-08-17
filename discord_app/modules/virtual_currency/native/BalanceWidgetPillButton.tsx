@@ -1,8 +1,8 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPillButton.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 4745 */;
-import registerAssetDefault from "registerAsset" /* 9239 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import registerAssetDefault from "../../../../_runtime/09239_registerAsset.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class BalanceWidgetPillButton {

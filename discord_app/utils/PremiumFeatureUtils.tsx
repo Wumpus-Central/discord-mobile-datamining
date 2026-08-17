@@ -1,8 +1,8 @@
 // discord_app/utils/PremiumFeatureUtils.tsx
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import closure_2 from "setPremiumTypeActual" /* 1923 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import isPremiumAtLeast from "PremiumTypeUtils.tsx";
+import closure_2 from "../modules/premium/OverridePremiumTypeStore.tsx";
+import ME from "../Constants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
 require = arg1;
 function getUserMaxFileSize(currentUser) {

@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTab.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
-import items from "items" /* 5297 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import closure_3 from "../FamilyCenterStore.tsx";
+import items from "../FamilyCenterConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 ({ FamilyCenterAction: c4, FamilyCenterSubPages } = items);

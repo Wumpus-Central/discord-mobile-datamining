@@ -1,17 +1,17 @@
 // discord_app/stores/views/PrivateChannelSortStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 5389 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "processChannel" /* 4800 */;
-import { isPrivate } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
+import closure_3 from "../../modules/message_request/MessageRequestStore.tsx";
+import closure_4 from "../../modules/message_request/SpamMessageRequestStore.tsx";
+import { isPrivate } from "../../records/ChannelRecord.tsx";
+import closure_6 from "../ChannelStore.tsx";
+import closure_7 from "../GuildStore.tsx";
+import closure_8 from "../ReadStateStore.tsx";
+import closure_9 from "../UserGuildSettingsStore.tsx";
+import closure_10 from "../UserStore.tsx";
 
 require = arg1;
 function makeSortedChannel(channel, id) {

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_templates/GuildTemplateStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 7288 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate.tsx";
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GuildTemplatesConstants.tsx";
 
 function handleGuildTemplateResolveSuccess(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;

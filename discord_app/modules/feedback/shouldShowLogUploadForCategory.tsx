@@ -1,6 +1,6 @@
 // discord_app/modules/feedback/shouldShowLogUploadForCategory.tsx
-import set from "set" /* 2 */;
-import FeedbackRating2 from "FeedbackRating" /* 10811 */;
+import set from "../../../_runtime/00002_set.js";
+import FeedbackRating2 from "Constants.tsx";
 
 const FeedbackRating = FeedbackRating2.FeedbackRating;
 let closure_1 = {};

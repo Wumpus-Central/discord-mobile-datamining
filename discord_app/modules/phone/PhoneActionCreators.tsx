@@ -1,10 +1,10 @@
 // discord_app/modules/phone/PhoneActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
-import { Endpoints } from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PhoneConstants.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");

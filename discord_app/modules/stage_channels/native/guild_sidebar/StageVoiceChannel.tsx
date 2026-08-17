@@ -1,19 +1,19 @@
 // discord_app/modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import transformParticipantToSortedVoiceStateDefault from "transformParticipantToSortedVoiceState" /* 15498 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 5271 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
-import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4545 */;
-import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import transformParticipantToSortedVoiceStateDefault from "../../useStageChannelSpeakerVoiceStates.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/CollapsedVoiceChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import { NO_VOICE_STATES } from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_12 from "../../StageInstanceStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

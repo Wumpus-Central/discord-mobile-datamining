@@ -1,10 +1,10 @@
 // discord_app/modules/storefront/StorefrontCollectionActionCreators.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "getFetchState" /* 11999 */;
-import closure_6 from "fromServer" /* 5327 */;
-import { Endpoints } from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "StorefrontCollectionStore.tsx";
+import closure_6 from "records/StorefrontCollectionRecord.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _maybeFetchCollectionsWithProducts() {

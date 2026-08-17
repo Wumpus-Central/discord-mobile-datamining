@@ -1,8 +1,8 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyHooks.tsx
-import closure_2 from "noop" /* 19 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8450 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 8450 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import handleUserSettingsProtoStoreChange from "ApplicationCommandFrecencyStore.tsx";
+import closure_5 from "ApplicationCommandFrecencyStore.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 const require = arg1;
 ({ getFilteredTopCommands: c3, getTopRealCommands: c4 } = handleUserSettingsProtoStoreChange);

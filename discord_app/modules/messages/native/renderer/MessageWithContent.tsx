@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/MessageWithContent.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createThreadEmbedDefault from "createThreadEmbed" /* 8164 */;
-import closure_3 from "handleMessageSendFailedAutomod" /* 8163 */;
-import { RowType } from "Changeset" /* 8158 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import createThreadEmbedDefault from "createMessageContent.tsx";
+import closure_3 from "../../../guild_automod/GuildAutomodMessageStore.tsx";
+import { RowType } from "RowGeneratorConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");

@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/account/native/UserSettingsConfirmPassword.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
-import _modDef8575 from "module_8575" /* 8575 */;
-import handleOpenEmailVerificationDefault from "handleOpenEmailVerification" /* 8624 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
+import _modDef8575 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import { UserSettingsSections } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c5 = importAllResult;

@@ -1,7 +1,7 @@
 // discord_app/modules/video-qoe/MobileMuxWrapper.tsx
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import logger2 from "logger" /* 14495 */;
+import set from "../../../_runtime/00002_set.js";
+import log from "../../../discord_common/js/packages/logger/Logger.tsx";
+import logger2 from "integrations/MobileCustomMuxIntegration.tsx";
 
 const logger = new log.Logger("MobileMuxWrapper");
 let result = set.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");

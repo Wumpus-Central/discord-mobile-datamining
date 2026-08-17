@@ -1,9 +1,9 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import computeChannelName from "../channel/useChannelName.tsx";
+import closure_3 from "../../stores/RelationshipStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");

@@ -1,5 +1,5 @@
 // discord_app/modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
 

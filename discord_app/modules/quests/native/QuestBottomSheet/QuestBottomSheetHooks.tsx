@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { QuestDockMode } from "../../QuestConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");

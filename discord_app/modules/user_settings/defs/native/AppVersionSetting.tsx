@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/AppVersionSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getClientInfo from "getClientInfo" /* 14865 */;
-import createToggle from "createToggle" /* 10669 */;
-import importAllResult from "getConstants" /* 1626 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getClientInfo from "CopyClientInfoSetting.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import importAllResult from "../../../../utils/native/ClientInfoUtils.tsx";
 
 require = arg1;
 const constants = importAllResult.getConstants();

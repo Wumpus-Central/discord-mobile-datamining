@@ -1,7 +1,7 @@
 // discord_app/modules/hub/HubUtils.native.tsx
-import _modDef11922 from "module_11922" /* 11922 */;
-import closure_2 from "updateInvite" /* 4359 */;
-import importDefaultResult from "apply" /* 12 */;
+import _modDef11922 from "native/components/HubEmailConnectionModalActionCreators.tsx";
+import closure_2 from "../../stores/InviteStore.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 let closure_3 = importDefaultResult.throttle((code) => {
   invite = invite.getInvite(code.code);

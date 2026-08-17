@@ -1,15 +1,15 @@
 // discord_app/modules/calls/ChannelCallManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import importDefaultResult from "Soundpacks" /* 10041 */;
-import closure_3 from "callConnect" /* 4496 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "DesktopNotificationTypes" /* 10015 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "initialize" /* 4220 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_10 from "getParticipants" /* 4773 */;
-import createSoundForPack from "createSoundForPack" /* 10040 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import importDefaultResult from "../soundpacks/SoundpackStore.tsx";
+import closure_3 from "../../stores/CallStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/NotificationSettingsStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../stores/StreamerModeStore.tsx";
+import closure_8 from "../../stores/VoiceStateStore.tsx";
+import closure_9 from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_10 from "ChannelRTCStore.tsx";
+import createSoundForPack from "../sound_playback/SoundUtils.tsx";
 
 let require = arg1;
 let closure_11 = createSoundForPack.createSoundForPack("call_calling", importDefaultResult.getSoundpack());

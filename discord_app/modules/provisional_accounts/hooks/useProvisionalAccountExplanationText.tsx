@@ -1,7 +1,7 @@
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 11801 */;
-import closure_3 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { HelpdeskArticles } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");

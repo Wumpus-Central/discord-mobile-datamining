@@ -1,8 +1,8 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../Constants.tsx";
+import useSharedSpacesWarningStore from "SharedSpacesWarningStore.tsx";
 
 let closure_2 = useSharedSpacesWarningStore.setDismissalTimeForChannel;
 const Endpoints = ME.Endpoints;

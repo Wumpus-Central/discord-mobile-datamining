@@ -1,6 +1,6 @@
 // discord_app/modules/messages/getAdaptiveMessageLimit.native.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 
 const MAX_MESSAGES_PER_CHANNEL = ME.MAX_MESSAGES_PER_CHANNEL;
 const result = set.fileFinishedImporting("modules/messages/getAdaptiveMessageLimit.native.tsx");

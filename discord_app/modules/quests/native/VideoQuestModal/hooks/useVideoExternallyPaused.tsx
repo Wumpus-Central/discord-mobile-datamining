@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx
-import set from "set" /* 500 */;
-import initialize from "initialize" /* 589 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import updateContextMenuState from "updateContextMenuState" /* 9959 */;
-import getVideoQuestWatchCtaText from "getVideoQuestWatchCtaText" /* 10704 */;
-import closure_2 from "setContent" /* 4086 */;
+import set from "../../../../../utils/PlatformUtils.tsx";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import coerceMainRoute from "../../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import updateContextMenuState from "../../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
+import getVideoQuestWatchCtaText from "../../../utils/VideoQuestUtils.tsx";
+import closure_2 from "../../../../action_sheet/native/ActionSheetStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");

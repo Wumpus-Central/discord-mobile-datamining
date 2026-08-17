@@ -1,19 +1,19 @@
 // discord_app/components_native/channel_settings/ChannelSettingsChangeCategory.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_toArray" /* 853 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "setIndex" /* 5278 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00853__toArray.js";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildCategoryStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import closure_9 from "../../stores/PermissionStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
+import { Permissions } from "../../Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
 import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
 
 require = arg1;

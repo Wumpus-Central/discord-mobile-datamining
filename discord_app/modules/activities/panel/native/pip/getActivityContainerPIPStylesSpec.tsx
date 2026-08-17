@@ -1,8 +1,8 @@
 // discord_app/modules/activities/panel/native/pip/getActivityContainerPIPStylesSpec.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
-import tDefault from "t" /* 11259 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import items3 from "../../../Constants.tsx";
+import ActivityPanelModes from "../../ActivityPanelConstants.tsx";
+import tDefault from "../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
 
 const OrientationLockState = items3.OrientationLockState;
 const LANDSCAPE_ACTIVITY_ASPECT_RATIO = ActivityPanelModes.LANDSCAPE_ACTIVITY_ASPECT_RATIO;

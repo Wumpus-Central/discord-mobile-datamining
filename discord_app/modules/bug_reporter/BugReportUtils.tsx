@@ -1,8 +1,8 @@
 // discord_app/modules/bug_reporter/BugReportUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/ThemeStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function _fetchBugReportConfig() {

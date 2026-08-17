@@ -1,8 +1,8 @@
 // discord_app/modules/people/hooks/useFriendRequestCounts.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 5406 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../game_relationships/GameRelationshipStore.tsx";
+import closure_4 from "../../../stores/RelationshipStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");

@@ -1,16 +1,16 @@
 // discord_app/design/void/Form/native/FormRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import FormLabelDefault from "FormLabel" /* 6940 */;
-import FormSubLabelDefault from "FormSubLabel" /* 6941 */;
-import FormArrowDefault from "FormArrow" /* 6942 */;
-import FormRadioDefault from "FormRadio" /* 6943 */;
-import FormCheckboxDefault from "FormCheckbox" /* 6946 */;
-import RowCheckmarkDefault from "RowCheckmark" /* 6947 */;
-import FormIconDefault from "FormIcon" /* 6948 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FormLabelDefault from "FormLabel.tsx";
+import FormSubLabelDefault from "FormSubLabel.tsx";
+import FormArrowDefault from "FormArrow.tsx";
+import FormRadioDefault from "FormRadio.tsx";
+import FormCheckboxDefault from "FormCheckbox.tsx";
+import RowCheckmarkDefault from "FormCheckmark.tsx";
+import FormIconDefault from "FormIcon.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

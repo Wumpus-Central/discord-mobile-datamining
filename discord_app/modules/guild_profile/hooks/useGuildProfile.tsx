@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/hooks/useGuildProfile.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 8854 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildProfileStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

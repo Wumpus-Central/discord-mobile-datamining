@@ -1,14 +1,14 @@
 // discord_app/modules/errors/native/SentryInitUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { PRIMARY_DOMAIN } from "sum" /* 505 */;
-import addBreadcrumb from "addBreadcrumb" /* 810 */;
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 13568 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import transitionTo from "../../routing/router_utils.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import { PRIMARY_DOMAIN } from "../../../../discord_common/js/shared/Constants.tsx";
+import addBreadcrumb from "../../../../_runtime/00810_addBreadcrumb.js";
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "../CommonSentryInitUtils.tsx";
 
 require = arg1;
 function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {

@@ -1,10 +1,10 @@
 // discord_app/modules/activities/native/WebViewContext.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import context from "module_0" /* 0 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import context from "../../../index.native.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 } });

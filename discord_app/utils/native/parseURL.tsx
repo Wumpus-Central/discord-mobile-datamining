@@ -1,17 +1,17 @@
 // discord_app/utils/native/parseURL.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import parseDefault from "parse" /* 1484 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import UrlDefault from "Url" /* 1489 */;
-import tDefault from "t" /* 4092 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 4491 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import ME from "ME" /* 676 */;
-import items from "items" /* 678 */;
-import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4356 */;
-import CustomCheckoutFlow from "CustomCheckoutFlow" /* 4357 */;
+import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
+import parseDefault from "../../../_runtime/01484_parse.js";
+import isDiscordProxiedAssetUrlDefault from "../URLUtils.tsx";
+import UrlDefault from "../../../_runtime/01489_Url.js";
+import tDefault from "../../../_runtime/04092_t.js";
+import trimTrailingPunctuation from "../../modules/coded_links/findCodedLinks.tsx";
+import _resolveGiftCode from "../GiftCodeUtils.tsx";
+import urlPartToSettingsEnumDefault from "../../modules/guild_settings/urlPartToSettingsEnum.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import ME from "../../Constants.tsx";
+import items from "../../modules/collectibles/CollectiblesShopConstants.tsx";
+import { UPDATE_CONFIG } from "../../modules/mobile_native_updater/MobileNativeUpdateConstants.tsx";
+import CustomCheckoutFlow from "../../modules/payments/PaymentConstants.tsx";
 
 require = arg1;
 function parseQuery(arg0) {

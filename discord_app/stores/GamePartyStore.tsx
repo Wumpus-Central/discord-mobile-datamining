@@ -1,11 +1,11 @@
 // discord_app/stores/GamePartyStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "RelationshipStore.tsx";
+import closure_4 from "SelfPresenceStore.tsx";
+import ME from "../Constants.tsx";
 
 function updateParty(closure_6, id, activities, status) {
   const found = activities.find((party) => {

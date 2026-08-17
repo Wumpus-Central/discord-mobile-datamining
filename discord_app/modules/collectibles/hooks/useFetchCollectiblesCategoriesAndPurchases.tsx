@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx
-import setDefault from "set" /* 8390 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import closure_6 from "getHash" /* 4288 */;
-import closure_7 from "map" /* 5324 */;
+import setDefault from "useMaybeFetchCollectiblesCategories.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../experiments/ExperimentStore.tsx";
+import closure_7 from "../CollectiblesPurchaseStore.tsx";
 
 const require = arg1;
 function useFetchPurchases(flag) {

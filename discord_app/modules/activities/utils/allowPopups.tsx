@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/allowPopups.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
+import set from "../../../../_runtime/00002_set.js";
+import items3 from "../Constants.tsx";
 
 let closure_0 = items3.APPLICATIONS_WITH_ALLOWED_POPUPS;
 const result = set.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");

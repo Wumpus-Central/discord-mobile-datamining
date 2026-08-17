@@ -1,6 +1,6 @@
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx
-import closure_0 from "fetchFingerprint" /* 1218 */;
-import { LinkType } from "LinkType" /* 7442 */;
+import closure_0 from "../../../../stores/AuthenticationStore.tsx";
+import { LinkType } from "../MessageEmbedConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 

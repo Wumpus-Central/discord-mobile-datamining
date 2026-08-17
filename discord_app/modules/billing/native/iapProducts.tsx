@@ -1,5 +1,5 @@
 // discord_app/modules/billing/native/iapProducts.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/billing/native/iapProducts.tsx");
 const items = [{ identifier: "premium_tier_2_premium_guild_5_yearly", price: 274.99, currencySymbol: "$", currencyCode: "usd", priceString: "$274.99", countryCode: "US", downloadable: false, description: "Chat perks and 7 Boosts (Yearly Sub)", title: "Nitro + 5 Boosts (Yearly)", discounts: [] }, { identifier: "premium_tier_1_premium_guild_1_yearly", price: 84.99, currencySymbol: "$", currencyCode: "usd", priceString: "$84.99", countryCode: "US", downloadable: false, description: "Chat perks and 1 Boost (Yearly Sub)", title: "Nitro Classic + 1 Boost", discounts: [] }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];

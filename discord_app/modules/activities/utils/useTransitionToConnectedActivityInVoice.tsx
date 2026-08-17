@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import { ComponentActions } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import { ComponentActions } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx");

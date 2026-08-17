@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildPowerupsStore.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

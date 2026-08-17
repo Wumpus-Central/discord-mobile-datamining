@@ -1,18 +1,18 @@
 // discord_app/modules/forwarding/native/ForwardModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "removePendingListFetch" /* 5014 */;
-import closure_8 from "filterStaffGuild" /* 9044 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
-import closure_11 from "messages" /* 9066 */;
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 9080 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../conversations/ConversationsStore.tsx";
+import closure_8 from "../../icymi/ICYMIStore.tsx";
+import closure_9 from "../../../stores/ChannelStore.tsx";
+import closure_10 from "../../../stores/MessageStore.tsx";
+import closure_11 from "../../../stores/native/MessagePreviewStore.tsx";
+import { MAX_DESTINATION_COUNT } from "../ForwardConstants.tsx";
+import { UserRowModes } from "../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

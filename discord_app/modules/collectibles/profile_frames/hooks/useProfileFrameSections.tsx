@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useProfileFrameSections.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_5 from "map" /* 5324 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { useMemo } from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../CollectiblesCategoryStore.tsx";
+import closure_5 from "../../CollectiblesPurchaseStore.tsx";
 
 const require = arg1;
 let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };

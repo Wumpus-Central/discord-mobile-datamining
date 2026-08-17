@@ -1,5 +1,5 @@
 // discord_app/modules/instant_invite/native/InstantInviteConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let obj = { TWITTER: "twitter", WHATSAPP: "whatsapp", GMAIL: "googlegmail", LINE: "line", MESSENGER: "fb-messenger", TELEGRAM: "tg" };
 obj = { [obj.TWITTER]: (arg0) => "twitter://post?message=" + arg0, [obj.WHATSAPP]: (arg0) => "whatsapp://send?text=" + arg0, [obj.GMAIL]: (arg0, arg1) => "googlegmail://co?subject=" + arg0 + "&body=" + arg1, [obj.LINE]: (arg0) => "https://line.me/R/msg/text/?" + arg0, [obj.MESSENGER]: (arg0) => "fb-messenger://share/?link=" + arg0, [obj.TELEGRAM]: (arg0, arg1) => "https://telegram.me/share/url?url=" + arg1 + "&text=" + arg0 };

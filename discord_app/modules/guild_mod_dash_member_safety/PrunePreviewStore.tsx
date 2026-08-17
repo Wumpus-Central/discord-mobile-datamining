@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import keys from "keys" /* 644 */;
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import keys from "../../../_runtime/00644_keys.js";
 
 let c1 = 3600000;
 keys = keys.create((arg0) => {

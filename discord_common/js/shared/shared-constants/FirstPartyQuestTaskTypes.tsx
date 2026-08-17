@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { ALL: null, DESKTOP: null, CONSOLE: null, IN_GAME: null, VIDEO: null };
 let set = new Set(["PLAY_ACTIVITY", "PLAY_ON_DESKTOP", "PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX", "STREAM_ON_DESKTOP", "WATCH_VIDEO", "WATCH_VIDEO_ON_MOBILE"]);

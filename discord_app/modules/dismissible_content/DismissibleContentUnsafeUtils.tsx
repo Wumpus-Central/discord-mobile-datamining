@@ -1,11 +1,11 @@
 // discord_app/modules/dismissible_content/DismissibleContentUnsafeUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 687 */;
-import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1378 */;
-import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4218 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import isSingleUseDismissibleContent from "DismissibleContentTypes.tsx";
+import useNewUserDismissibleContent from "NewUserDismissibleContentRegistry.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

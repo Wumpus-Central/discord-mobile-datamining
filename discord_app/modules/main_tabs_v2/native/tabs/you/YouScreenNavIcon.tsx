@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import TwinButtons from "TwinButtons" /* 8811 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import SolidCutoutDefault from "../../../../../design/components/Icon/native/ClipView.tsx";
+import TwinButtons from "../../../../../design/components/experimental/native.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

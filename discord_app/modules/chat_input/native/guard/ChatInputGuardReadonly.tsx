@@ -1,17 +1,17 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReadonly.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import { isTextChannel } from "createChannelRecord" /* 1395 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 1980 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { TextAreaCta } from "TextAreaCta" /* 11149 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import { isTextChannel } from "../../../../records/ChannelRecord.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "../../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../../stores/UserStore.tsx";
+import { TextAreaCta } from "../ChatInputConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 function sortChannelsByLastMessageId(id, id2) {

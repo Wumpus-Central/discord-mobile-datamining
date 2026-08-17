@@ -1,13 +1,13 @@
 // discord_app/design/components/Styles/native/createStyles.tsx
-import set2 from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSemanticColorContextFromThemeContext from "getSemanticColorContextFromThemeContext" /* 4098 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { processColor } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "isSyncedModeThemesEnabled" /* 4195 */;
-import set from "set" /* 2 */;
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSemanticColorContextFromThemeContext from "../../../tokens/native/SemanticColorContext.native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { processColor } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../modules/a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../modules/client_themes/ClientThemesBackgroundStore.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 function createCacheKey(context) {

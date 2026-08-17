@@ -1,10 +1,10 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "combined" /* 1993 */;
+import set from "../../../../_runtime/00002_set.js";
+import setDefault from "../../../utils/Durations.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "PremiumGroup.messages.js";
+import ME from "../../../Constants.tsx";
+import importDefaultResult from "../../../utils/HelpdeskUtils.tsx";
 
 ({ SubscriptionStatusTypes, HelpdeskArticles } = ME);
 const items = [, , , , ];

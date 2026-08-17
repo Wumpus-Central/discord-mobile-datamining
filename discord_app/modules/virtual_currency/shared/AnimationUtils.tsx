@@ -1,5 +1,5 @@
 // discord_app/modules/virtual_currency/shared/AnimationUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let obj = { EARN: 0.25, SPEND: 0.3 };
 let result = set.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");

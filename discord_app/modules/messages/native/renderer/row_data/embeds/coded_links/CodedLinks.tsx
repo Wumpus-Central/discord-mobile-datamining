@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "initialize" /* 4022 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../lurker_mode/LurkingStore.tsx";
+import closure_4 from "../../../../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../../../../stores/UserStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");

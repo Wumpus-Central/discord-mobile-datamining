@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesMarketingManager.native.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "getUserAgnosticState" /* 4737 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
 
 const require = arg1;
 initializeDefault;

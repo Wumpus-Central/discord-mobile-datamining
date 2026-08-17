@@ -1,20 +1,20 @@
 // discord_app/modules/search/native/components/list/rows/MessageRow.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4814 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import PollBadgeDefault from "PollBadge" /* 15895 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "initializeFromUserSettings" /* 1394 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { MessageFlags } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../../design/void/native.tsx";
+import useNullableMessageAuthorDefault from "../../../../../messages/useMessageAuthor.tsx";
+import computeChannelNameDefault from "../../../../../channel/useChannelName.tsx";
+import PollBadgeDefault from "../../../../../polls/native/PollBadge.tsx";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../../favorites/FavoriteStore.tsx";
+import closure_7 from "../../../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../../../stores/GuildStore.tsx";
+import closure_9 from "../../../../../../stores/UserGuildSettingsStore.tsx";
+import { MessageFlags } from "../../../../../../Constants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildChannelMessageRowHeader(channel) {

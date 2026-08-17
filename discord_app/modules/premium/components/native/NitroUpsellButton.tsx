@@ -1,11 +1,11 @@
 // discord_app/modules/premium/components/native/NitroUpsellButton.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 4745 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {

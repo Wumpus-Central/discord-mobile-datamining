@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import getMemberListId from "getMemberListId" /* 7249 */;
-import closure_9 from "getMemberListId" /* 7249 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "trackCommunicationDisabled" /* 1990 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "handleConnectionOpen" /* 1979 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import getMemberListId from "../../../../../stores/ChannelMemberStore.tsx";
+import closure_9 from "../../../../../stores/ChannelMemberStore.tsx";
+import closure_10 from "../../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_12 from "../../../../../stores/GuildStore.tsx";
+import closure_13 from "../../../../../stores/SelectedChannelStore.tsx";
+import closure_14 from "../../../../../stores/UserStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c5 = importAllResult;

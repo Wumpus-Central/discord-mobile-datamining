@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { useAppLauncherNavigation } from "../AppLauncherNativeConstants.tsx";
 import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 
 const require = arg1;

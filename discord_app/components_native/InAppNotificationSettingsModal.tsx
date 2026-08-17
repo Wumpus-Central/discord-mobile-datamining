@@ -1,16 +1,16 @@
 // discord_app/components_native/InAppNotificationSettingsModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import Form from "Form" /* 8083 */;
-import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10082 */;
-import importAllResult from "noop" /* 19 */;
-import { isMultiUserDM } from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "../intl/index.native.tsx";
+import computeChannelName from "../modules/channel/useChannelName.tsx";
+import Form from "../design/void/Form/native/index.tsx";
+import ChannelSettingsNotificationsGuardDefault from "channel_settings/ChannelSettingsNotifications.tsx";
+import importAllResult from "../../_runtime/00019_noop.js";
+import { isMultiUserDM } from "../records/ChannelRecord.tsx";
+import closure_5 from "../stores/ChannelStore.tsx";
+import closure_6 from "../stores/RelationshipStore.tsx";
+import closure_7 from "../stores/UserGuildSettingsStore.tsx";
+import closure_8 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ConnectedInAppNotificationSettingsScreen(channel) {

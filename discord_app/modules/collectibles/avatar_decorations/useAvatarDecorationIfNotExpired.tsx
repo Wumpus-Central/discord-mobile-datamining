@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { MAX_TIMEOUT_MS } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { MAX_TIMEOUT_MS } from "../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");

@@ -1,17 +1,17 @@
 // discord_app/components_native/QRScannerModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import registerAssetDefault from "registerAsset" /* 8176 */;
-import renderDefault from "render" /* 8910 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13329 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items" /* 5297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../modules/safe_area/useSafeAreaInsets.native.tsx";
+import _modDef5260 from "../actions/ModalActionCreators.tsx";
+import registerAssetDefault from "../../_runtime/08176_registerAsset.js";
+import renderDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import __INTERNAL_VIEW_CONFIGDefault from "../../discord_common/js/packages/rtn-codegen/js/QRScannerNativeComponent.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import { UserSettingsSections } from "../Constants.tsx";
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "../modules/parent_tools/FamilyCenterConstants.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import set from "../utils/PlatformUtils.tsx";
 
 const require = arg1;
 function DCDQRScanner(arg0) {

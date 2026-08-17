@@ -1,6 +1,6 @@
 // discord_app/modules/telemetry_ring/native/TelemetryRingNative.android.tsx
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13563 */;
+import set from "../../../../_runtime/00002_set.js";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx";
 
 const result = set.fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");
 

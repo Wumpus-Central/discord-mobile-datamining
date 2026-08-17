@@ -1,8 +1,8 @@
 // discord_app/modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx
-import noopAll from "noop" /* 19 */;
-import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 12657 */;
-import registerAssetDefault from "registerAsset" /* 12658 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import NUFActionSheetTemplateDefault from "NUFTemplate.tsx";
+import registerAssetDefault from "../../../../../_runtime/12658_registerAsset.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

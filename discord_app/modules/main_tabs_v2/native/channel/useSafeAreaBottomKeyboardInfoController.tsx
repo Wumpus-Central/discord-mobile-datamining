@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/channel/useSafeAreaBottomKeyboardInfoController.tsx
-import closure_3 from "noop" /* 19 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
 
 const require = arg1;
 isMetaQuest = isMetaQuest.isMetaQuest();

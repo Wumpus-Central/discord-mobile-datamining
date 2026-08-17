@@ -1,11 +1,11 @@
 // discord_app/stores/InstantInviteStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import headDefault from "head" /* 8045 */;
-import reverseDefault from "reverse" /* 8047 */;
-import _modDef8048 from "module_8048" /* 8048 */;
-import closure_3 from "createFromServer" /* 8044 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import headDefault from "../../_runtime/08045_head.js";
+import reverseDefault from "../../_runtime/08047_reverse.js";
+import _modDef8048 from "../../_runtime/metro/08048__.js";
+import closure_3 from "../records/InviteRecord.tsx";
+import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
 
 let closure_5 = {};
 let closure_6 = {};

@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import set from "set" /* 2 */;
+import setDefault from "../../utils/Durations.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let obj = { FEATURED: "featured", GAMING: "gaming", MUSIC: "music", ENTERTAINMENT: "entertainment", TECH: "tech", EDUCATION: "education", HUBS: "hubs" };

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(undefined);

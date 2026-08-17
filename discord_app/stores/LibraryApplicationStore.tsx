@@ -1,13 +1,13 @@
 // discord_app/stores/LibraryApplicationStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage6 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import getComboId from "getComboId" /* 4520 */;
-import closure_4 from "createFromServer" /* 4513 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import { LibraryApplicationFlags } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage6 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import hasFlagAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import getComboId from "../utils/LibraryApplicationUtils.tsx";
+import closure_4 from "../records/LibraryApplicationRecord.tsx";
+import closure_5 from "AuthenticationStore.tsx";
+import { LibraryApplicationFlags } from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 import { apply } from "../../_runtime/00012_apply.js";
 
 require = arg1;

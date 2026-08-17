@@ -1,13 +1,13 @@
 // discord_app/modules/parent_tools/native/FamilyCenterSettingsControls.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { FamilyCenterSubPages } from "items" /* 5297 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import useUserIdsForLinkStatus from "../hooks/useUserLinks.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { FamilyCenterSubPages } from "../FamilyCenterConstants.tsx";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function SpendingLimitRow(teenId) {

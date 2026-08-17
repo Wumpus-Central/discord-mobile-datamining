@@ -1,12 +1,12 @@
 // discord_app/modules/auth/native/AuthManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 11578 */;
-import { ME } from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_8 } from "NativePermissionStatus" /* 4839 */;
-import { NewUserTypes } from "NewUserTypes" /* 11878 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PermissionStateType } from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import { ME } from "../../../Constants.tsx";
+import { NotificationAuthorizationStatus as closure_8 } from "../../native_permissions/NativePermissionConstants.tsx";
+import { NewUserTypes } from "../../nuf/NUFConstants.tsx";
 
 const require = arg1;
 ({ NativeModules: c4, Keyboard: c5 } = get_ActivityIndicator);

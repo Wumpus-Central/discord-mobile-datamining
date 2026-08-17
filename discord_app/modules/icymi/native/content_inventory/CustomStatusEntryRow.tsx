@@ -1,8 +1,8 @@
 // discord_app/modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx
-import noopAll from "noop" /* 19 */;
-import useReplyActions from "useReplyActions" /* 15762 */;
-import UploadPlaceholderDefault from "UploadPlaceholder" /* 15767 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useReplyActions from "useReplyActions.tsx";
+import UploadPlaceholderDefault from "ICYMICustomStatusRow.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

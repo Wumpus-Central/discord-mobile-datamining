@@ -1,16 +1,16 @@
 // discord_app/modules/routing/getChannelIdForGuildTransition.tsx
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 5283 */;
-import getPrice from "getPrice" /* 7200 */;
-import closure_2 from "initializeFromUserSettings" /* 1394 */;
-import closure_3 from "shouldShowOnboarding" /* 6784 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import closure_8 from "makeSortedChannel" /* 5388 */;
-import { ME } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
+import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
+import useCanSeeOnboardingHome from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
+import getPrice from "../slayer_storefront/SlayerStorefrontUtils.tsx";
+import closure_2 from "../favorites/FavoriteStore.tsx";
+import closure_3 from "../guild_onboarding/GuildOnboardingStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/SelectedChannelStore.tsx";
+import closure_8 from "../../stores/views/PrivateChannelSortStore.tsx";
+import { ME } from "../../Constants.tsx";
+import { StaticChannelRoute } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");

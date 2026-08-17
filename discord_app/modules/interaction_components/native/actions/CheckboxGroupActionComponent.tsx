@@ -1,6 +1,6 @@
 // discord_app/modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const memoResult = importAllResult.memo((type) => {

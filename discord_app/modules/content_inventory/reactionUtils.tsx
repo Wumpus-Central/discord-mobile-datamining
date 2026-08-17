@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/reactionUtils.tsx
-import set from "set" /* 2 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import rebuildDefault from "rebuild" /* 7436 */;
+import set from "../../../_runtime/00002_set.js";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import rebuildDefault from "../messages/MessageParser.tsx";
 
 const result = set.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 

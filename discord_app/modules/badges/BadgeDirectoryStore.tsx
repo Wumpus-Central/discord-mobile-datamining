@@ -1,11 +1,11 @@
 // discord_app/modules/badges/BadgeDirectoryStore.tsx
-import failsDefault from "fails" /* 584 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
-import urlUserId from "urlUserId" /* 8939 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import privDefault from "../../../_runtime/01405_priv.js";
+import urlUserId from "BadgeDirectoryActionCreators.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const HOUR = setDefault.Millis.HOUR;

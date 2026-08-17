@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx
-import set from "set" /* 2 */;
-import VoicePanelControlsModes2 from "VoicePanelControlsModes" /* 11438 */;
-import VoicePanelModes2 from "VoicePanelModes" /* 11440 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
+import set from "../../../../../_runtime/00002_set.js";
+import VoicePanelControlsModes2 from "../controls/VoicePanelControlsConstants.tsx";
+import VoicePanelModes2 from "../../VoicePanelConstants.tsx";
+import MIN_PAN_GESTURE_MOVE from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
 
 const VoicePanelModes = VoicePanelModes2.VoicePanelModes;
 const VoicePanelControlsModes = VoicePanelControlsModes2.VoicePanelControlsModes;

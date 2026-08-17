@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
-import { ComponentActions } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import VoicePanelControlsModes from "VoicePanelControlsConstants.tsx";
+import { ComponentActions } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

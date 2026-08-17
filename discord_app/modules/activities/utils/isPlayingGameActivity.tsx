@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/isPlayingGameActivity.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import items3 from "../Constants.tsx";
+import isEmbeddedActivityDefault from "isEmbeddedActivity.tsx";
 
 let closure_2 = items3.XBOX_ACTIVITY_APPLICATION_ID;
 const ActivityTypes = ME.ActivityTypes;

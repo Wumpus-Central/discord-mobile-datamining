@@ -1,9 +1,9 @@
 // discord_app/modules/analytics_sessions/SessionAdGenerator.tsx
-import v1 from "v1" /* 514 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import result2 from "result" /* 5063 */;
+import v1 from "../../../_runtime/00514_v1.js";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import result2 from "SessionUtils.tsx";
 
 require = arg1;
 let closure_3 = 12 * setDefault.Millis.HOUR;

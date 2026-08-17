@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import closure_2 from "noop" /* 19 */;
+import useInitialValueDefault from "../../../../../../../hooks/useInitialValue.tsx";
+import closure_2 from "../../../../../../../../_runtime/00019_noop.js";
 
 let closure_3 = function SearchFetchPendingManager() {
   const obj = Object.create(new.target.prototype);

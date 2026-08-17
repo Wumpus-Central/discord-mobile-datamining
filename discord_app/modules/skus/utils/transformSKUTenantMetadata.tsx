@@ -1,6 +1,6 @@
 // discord_app/modules/skus/utils/transformSKUTenantMetadata.tsx
-import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import set from "../../../../_runtime/00002_set.js";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 function transformProfileEffectKeyFrameFromServer(src) {
   const obj = { src: src.src, loop: src.loop, height: src.height, width: src.width, duration: null, start: null, loopDelay: null, position: null, zIndex: null, randomizedSources: null };

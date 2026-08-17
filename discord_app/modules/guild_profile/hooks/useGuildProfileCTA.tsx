@@ -1,12 +1,12 @@
 // discord_app/modules/guild_profile/hooks/useGuildProfileCTA.tsx
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9535 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "updateInvite" /* 4359 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import usePendingFolderGuildIdsDefault from "../../guilds_bar/usePendingFolderGuildIds.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/InviteStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

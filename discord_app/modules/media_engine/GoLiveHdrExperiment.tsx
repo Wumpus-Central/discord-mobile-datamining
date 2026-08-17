@@ -1,6 +1,6 @@
 // discord_app/modules/media_engine/GoLiveHdrExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };
 obj = { hdrCaptureMode: obj.Never };

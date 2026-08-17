@@ -1,10 +1,10 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesUtils.tsx
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import nDefault from "n" /* 689 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
-import DisplayNameFont from "DisplayNameFont" /* 1936 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import items3 from "items3" /* 1934 */;
+import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import nDefault from "../../../_runtime/00689_n.js";
+import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import items3 from "DisplayNameStylesConstants.tsx";
 import { int2hslRaw } from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 require = arg1;

@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/hooks/useNote.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getNote" /* 12160 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../notes/NoteStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

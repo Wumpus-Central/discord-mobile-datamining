@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import ME from "../../../../Constants.tsx";
 
 let useMemo = noop.useMemo;
 ({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } = BoostedGuildTiers);

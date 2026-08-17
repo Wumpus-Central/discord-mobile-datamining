@@ -1,19 +1,19 @@
 // discord_app/modules/video_calls/native/components/PictureInPictureGlobal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import PictureInPicturePositionsDefault from "PictureInPicturePositions" /* 8685 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "participantFromServer" /* 1390 */;
-import closure_9 from "getParticipants" /* 4773 */;
-import { useBestActiveChatInputContainerHeight as closure_10 } from "updateChatInputContainerHeight" /* 8682 */;
-import closure_11 from "fetchFingerprint" /* 1218 */;
-import closure_12 from "_detectH265HardwareDecode" /* 4497 */;
-import { PictureInPicturePositions } from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PictureInPicturePositionsDefault from "PictureInPicture.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_9 from "../../../calls/ChannelRTCStore.tsx";
+import { useBestActiveChatInputContainerHeight as closure_10 } from "../../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import closure_11 from "../../../../stores/AuthenticationStore.tsx";
+import closure_12 from "../../../../stores/MediaEngineStore.tsx";
+import { PictureInPicturePositions } from "../../../../Constants.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Button from "../../../../design/void/native.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

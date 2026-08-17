@@ -1,9 +1,9 @@
 // discord_app/modules/forwarding/ForwardGuildBreadcrumbManager.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import initializeDefault from "initialize" /* 5038 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
-import _fetchBasicGuild from "_fetchBasicGuild" /* 17046 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
+import _fetchBasicGuild from "../guild/BasicGuildActionCreators.tsx";
 
 function fetchForwardReferencedGuilds(message_reference) {
   message_reference = message_reference.message_reference;

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/PremiumGiftingSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4052 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 12899 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import isPremiumGiftingSupported from "../../../device/BillingPlatformUtils.tsx";
+import useEligibleActiveOutboundPromotions from "../../../premium/promotions/PromotionsHooks.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { GiftingSectionTitle } from "../../premium/native/UserSettingsPremiumGifting.tsx";
 
 require = arg1;

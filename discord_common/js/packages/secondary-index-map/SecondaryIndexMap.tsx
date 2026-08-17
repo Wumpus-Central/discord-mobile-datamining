@@ -1,6 +1,6 @@
 // discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx
-import sortedIndexByDefault from "sortedIndexBy" /* 4018 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import sortedIndexByDefault from "../../../../_runtime/04018_sortedIndexBy.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 let closure_3 = [];
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/UserSettingsOverridesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "UserSettingsProtoStore.tsx";
 
 require = arg1;
 function updateExistingSettings() {

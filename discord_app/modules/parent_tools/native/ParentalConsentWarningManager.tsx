@@ -1,13 +1,13 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import initializeDefault from "initialize" /* 5038 */;
-import frozen from "frozen" /* 14225 */;
-import closure_4 from "setContent" /* 4086 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
-import closure_6 from "initialize" /* 14224 */;
-import items from "items" /* 5297 */;
-import { AppStates } from "ME" /* 676 */;
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import frozen from "../ParentalConsentWarningTypes.tsx";
+import closure_4 from "../../action_sheet/native/ActionSheetStore.tsx";
+import closure_5 from "../FamilyCenterStore.tsx";
+import closure_6 from "../ParentalConsentWarningStore.tsx";
+import items from "../FamilyCenterConstants.tsx";
+import { AppStates } from "../../../Constants.tsx";
 
 require = arg1;
 function maybePresentModal(daysRemaining) {

@@ -1,10 +1,10 @@
 // discord_app/design/components/Navigator/native/SceneLoadingIndicator.native.tsx
-import noopAll from "noop" /* 19 */;
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import NavScrim from "NavScrim" /* 6550 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ActivityIndicator from "../../ActivityIndicator/native/ActivityIndicator.native.tsx";
+import NavScrim from "NavScrim.android.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

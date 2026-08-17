@@ -1,9 +1,9 @@
 // discord_app/modules/captcha/CaptchaStore.tsx
-import batchUpdates from "batchUpdates" /* 705 */;
-import setDefault from "set" /* 5006 */;
-import set from "set" /* 5011 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import keys from "keys" /* 644 */;
+import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import setDefault from "../monitoring/MonitoringAgent.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import keys from "../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/emojis/utils/dedupeEmojisByNameOrId.tsx
-import set from "set" /* 2 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import set from "../../../../_runtime/00002_set.js";
+import parseRawEmojiObjectDefault from "../UnicodeEmojis.tsx";
 
 let result = set.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 

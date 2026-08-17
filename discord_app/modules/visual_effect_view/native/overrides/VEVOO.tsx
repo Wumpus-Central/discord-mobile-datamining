@@ -1,12 +1,12 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOO.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
-import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 710 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../devtools/dev_settings/DevSettingsStore.tsx";
+import { DEV_WIDGET_SIZE } from "../../../devtools/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function VisualEffectViewOverrideOverlay_(arg0) {

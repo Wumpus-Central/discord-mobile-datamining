@@ -1,14 +1,14 @@
 // discord_app/modules/calls/VideoSpeakerStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_8 from "getParticipants" /* 4773 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import importDefaultResult from "apply" /* 12 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
+import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../stores/SpeakingStore.tsx";
+import closure_8 from "ChannelRTCStore.tsx";
+import { ParticipantTypes } from "CallConstants.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 require = arg1;
 function updateSpeaker(arg0) {

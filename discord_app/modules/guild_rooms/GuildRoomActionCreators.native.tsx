@@ -1,5 +1,5 @@
 // discord_app/modules/guild_rooms/GuildRoomActionCreators.native.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _guildRoomConnect() {
   const self = this;

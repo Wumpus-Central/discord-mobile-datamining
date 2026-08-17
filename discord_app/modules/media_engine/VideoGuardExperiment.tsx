@@ -1,6 +1,6 @@
 // discord_app/modules/media_engine/VideoGuardExperiment.tsx
-import ApexExperiment from "ApexExperiment" /* 1472 */;
-import importDefaultResult from "combined" /* 1993 */;
+import ApexExperiment from "../experiments/apex/index.tsx";
+import importDefaultResult from "../../utils/HelpdeskUtils.tsx";
 
 const articleURL = importDefaultResult.getArticleURL("42704051358359");
 const obj = { 1: null, 2: { videoEnabled: false } };

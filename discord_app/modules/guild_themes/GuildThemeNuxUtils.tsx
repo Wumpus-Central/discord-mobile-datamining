@@ -1,7 +1,7 @@
 // discord_app/modules/guild_themes/GuildThemeNuxUtils.tsx
-import GuildThemeSourcePreference2 from "GuildThemeSourcePreference" /* 4306 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import GuildThemeSourcePreference2 from "../../flow/Client.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
 
 require = arg1;
 function _saveGuildThemeNuxPreference() {

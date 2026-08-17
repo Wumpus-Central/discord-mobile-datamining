@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/MobileTrialUtils.tsx
-import set from "set" /* 2 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
+import set from "../../../../_runtime/00002_set.js";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import GuildFeatures from "../PremiumConstants.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 
 let closure_2 = GuildFeatures.PremiumSubscriptionSKUToPremiumType;
 let result = set.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");

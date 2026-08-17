@@ -1,9 +1,9 @@
 // discord_app/modules/poggermode/PoggermodeActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7580 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "initialize" /* 7432 */;
-import closure_4 from "updateCombo" /* 7578 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getScreenshakeLocationNameDefault from "trackPoggermodeSettingsUpdated.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "PoggermodeSettingsStore.tsx";
+import closure_4 from "PoggermodeStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 

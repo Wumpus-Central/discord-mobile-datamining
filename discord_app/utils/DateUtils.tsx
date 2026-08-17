@@ -1,12 +1,12 @@
 // discord_app/utils/DateUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import tDefault from "t" /* 3975 */;
-import onTimezoneChangeDefault from "onTimezoneChange" /* 4064 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import importDefaultResult from "_getSystemLocale" /* 1994 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import create from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import onTimezoneChangeDefault from "../modules/date/onTimezoneChange.android.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import importDefaultResult from "../modules/user_settings/LocaleStore.tsx";
+import importDefaultResult1 from "../Dispatcher.tsx";
 
 require = arg1;
 function resetCache() {

@@ -1,14 +1,14 @@
 // discord_app/modules/app_launcher/utils/AppLauncherSearchUtils.tsx
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8447 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "handleUserSettingsProtoStoreChange" /* 8450 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
-import closure_11 from "handleUserSettingsProtoStoreChange" /* 8449 */;
-import closure_12 from "getSearchResults" /* 11244 */;
-import { FetchState } from "getSearchResults" /* 11244 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
-import { COMMAND_SENTINEL } from "regExp" /* 6810 */;
+import getShelfBadgeTypeIfActive from "AppLauncherUtils.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../application_commands/ApplicationCommandFrecencyStore.tsx";
+import getIndexKey from "../../application_commands/ApplicationCommandIndexStore.tsx";
+import closure_11 from "../../applications/ApplicationFrecencyStore.tsx";
+import closure_12 from "../../global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx";
+import { FetchState } from "../../global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx";
+import { BuiltInSectionId } from "../../application_commands/ApplicationCommandConstants.tsx";
+import { COMMAND_SENTINEL } from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 import { computePermissions } from "../../application_commands/CommandPermissionContext.tsx";
 

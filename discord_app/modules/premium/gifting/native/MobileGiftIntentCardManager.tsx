@@ -1,13 +1,13 @@
 // discord_app/modules/premium/gifting/native/MobileGiftIntentCardManager.tsx
-import set2 from "set" /* 692 */;
-import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9637 */;
-import onPostConnectionOpenDefault from "onPostConnectionOpen" /* 16686 */;
-import closure_3 from "recomputeAffinities" /* 5407 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "getCurrentTime" /* 8290 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set2 from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import fetchUserAffinitiesV2 from "../../../user_affinities/UserAffinitiesActionCreators.tsx";
+import onPostConnectionOpenDefault from "../shared/GiftIntentReconcilingManager.tsx";
+import closure_3 from "../../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/MessageStore.tsx";
+import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../PremiumGiftingIntentStore.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
 
 require = arg1;
 ({ GiftIntentSecondaryAction: closure_8, GiftIntentType: c9 } = GuildFeatures);

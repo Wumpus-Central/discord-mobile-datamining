@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormStyles.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
 const Fonts = ME.Fonts;
 let obj = { padding: 16, flexGrow: 0, borderRadius: 8, marginHorizontal: 16 };

@@ -1,18 +1,18 @@
 // discord_app/modules/messages/native/MessagesRenderer.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import getVisibleMessages from "getVisibleMessages" /* 10454 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 10727 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { updateShouldShowJumpToPresentButton as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
-import { getUserCommunicationDisabledVersion as closure_7 } from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "generateOldThreadCutoff" /* 4772 */;
-import closure_10 from "addSku" /* 4521 */;
-import { Changeset } from "Changeset" /* 8158 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import getVisibleMessages from "MessagesUtils.tsx";
+import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { updateShouldShowJumpToPresentButton as closure_6 } from "../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import { getUserCommunicationDisabledVersion as closure_7 } from "../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../stores/PermissionStore.tsx";
+import closure_9 from "../../../stores/ReadStateStore.tsx";
+import closure_10 from "../../../stores/game_store/SKUStore.tsx";
+import { Changeset } from "renderer/RowGeneratorConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import { ChatTTITracker } from "../../chat/native/ChatTTITracker.tsx";
 import { useMessageAuthorActivities } from "MessagesHooks.tsx";
 

@@ -1,9 +1,9 @@
 // discord_app/modules/contact_sync/native/ContactSyncModalStore.tsx
-import closure_2 from "set" /* 5221 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import keys from "keys" /* 644 */;
+import closure_2 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { ContactPermissions } from "ContactSyncConstants.tsx";
+import { PlatformTypes } from "../../../Constants.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;

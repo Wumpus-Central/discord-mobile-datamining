@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/useFlattenedChannels.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "../../stores/ChannelStore.tsx";
 
 const require = arg1;
 function getFlattenedChannels(guildId, set, found, arg3) {

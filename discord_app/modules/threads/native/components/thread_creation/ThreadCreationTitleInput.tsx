@@ -1,8 +1,8 @@
 // discord_app/modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { MAX_CHANNEL_NAME_LENGTH } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import { MAX_CHANNEL_NAME_LENGTH } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

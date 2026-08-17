@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/DevToolsGuildPowerupsConstants.tsx
-import set from "set" /* 2 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
+import set from "../../../_runtime/00002_set.js";
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 
 const items = [DismissibleContent.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUP_NOTIFICATION, DismissibleContent.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE];
 const items1 = [DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK];

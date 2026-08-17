@@ -1,11 +1,11 @@
 // discord_app/lib/spellcheck/Spellchecker.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import set from "set" /* 1906 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import importDefaultResult from "set" /* 4004 */;
-import importDefaultResult1 from "apply" /* 12 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import set from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
+import importDefaultResult from "../DiscordNative.tsx";
+import importDefaultResult1 from "../../../_runtime/00012_apply.js";
 
 require = arg1;
 function _install() {

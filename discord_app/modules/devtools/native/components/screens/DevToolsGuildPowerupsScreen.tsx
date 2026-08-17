@@ -1,18 +1,18 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15070 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_8 from "handleModifyingAppliedBoostStart" /* 11731 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import items from "items" /* 15156 */;
-import { Endpoints } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../../user_settings/UserSettingsProtoStore.tsx";
+import closure_8 from "../../../../../stores/AppliedGuildBoostStore.tsx";
+import closure_9 from "../../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../../stores/SelectedGuildStore.tsx";
+import items from "../../../DevToolsGuildPowerupsConstants.tsx";
+import { Endpoints } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function setWarningBoosts() {

@@ -1,8 +1,8 @@
 // discord_app/modules/staff/StaffMemberPreloader.tsx
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PRELOAD_SERVER_ID } from "PRELOAD_SERVER_ID" /* 16708 */;
+import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import { PRELOAD_SERVER_ID } from "StaffMemberConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
 

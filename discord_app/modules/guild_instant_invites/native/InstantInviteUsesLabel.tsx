@@ -1,7 +1,7 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4734 */;
-import { jsxs } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import { jsxs } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

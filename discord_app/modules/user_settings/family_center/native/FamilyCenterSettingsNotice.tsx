@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
-import noopAll from "noop" /* 19 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14104 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 5430 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
+import { SafetySettingsNoticeType } from "../../../safety_common/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

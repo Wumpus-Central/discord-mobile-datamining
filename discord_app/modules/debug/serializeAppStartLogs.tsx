@@ -1,5 +1,5 @@
 // discord_app/modules/debug/serializeAppStartLogs.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../../_runtime/00002_set.js";
 
 function getDisplayName(tag) {
   if (null == tag.tag) {

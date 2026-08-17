@@ -1,6 +1,6 @@
 // discord_app/modules/gateway/useRequestGatewaySocket.tsx
-import _modDef10501 from "module_10501" /* 10501 */;
-import closure_3 from "noop" /* 19 */;
+import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 

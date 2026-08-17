@@ -1,7 +1,7 @@
 // discord_app/modules/interaction_components/content_inventory_entry/utils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import hasFlag from "hasFlag" /* 1403 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const MessageEmbedFlags = ME.MessageEmbedFlags;
 const result = set.fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");

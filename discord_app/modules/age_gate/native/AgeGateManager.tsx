@@ -1,13 +1,13 @@
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "handleConnectionOpen" /* 4197 */;
-import result from "result" /* 1221 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import shouldShowAgeGateForVoiceChannel from "../AgeGateUtils.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../../stores/SelectedGuildStore.tsx";
+import result from "../AgeGateConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: error, AgeGateSource: closure_8 } = result);

@@ -1,12 +1,12 @@
 // discord_app/modules/voice_calls/AudioRouteStore.native.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import RouteTypes2 from "RouteTypes" /* 9649 */;
-import enforcingDefault from "enforcing" /* 9650 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import RouteTypes2 from "VoiceCallTypes.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
 
 function handleAudioRouteChanged(arr) {
   let tmp = arg1;

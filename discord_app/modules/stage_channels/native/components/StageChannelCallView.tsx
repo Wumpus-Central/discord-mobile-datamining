@@ -1,14 +1,14 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallView.tsx
-import noopAll from "noop" /* 19 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import componentDidMountDefault from "componentDidMount" /* 8032 */;
-import FocusedControlsHeader from "FocusedControlsHeader" /* 12493 */;
-import useStageActionBarAnimation from "useStageActionBarAnimation" /* 12600 */;
-import StageChannelBackgroundDefault from "StageChannelBackground" /* 12601 */;
-import StageChannelCallListDefault from "StageChannelCallList" /* 12602 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import FocusedControlsHeader from "../../../video_calls/native/components/FocusedControls.tsx";
+import useStageActionBarAnimation from "StageChannelAnimationUtils.tsx";
+import StageChannelBackgroundDefault from "StageChannelBackground.tsx";
+import StageChannelCallListDefault from "StageChannelCallList.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function StageChannelCallBackground(arg0) {

@@ -1,12 +1,12 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewActions.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import ME from "ME" /* 676 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import ME from "../../../Constants.tsx";
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "../../relationships/native/RestrictionConfirmationConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ AnalyticsPages: closure_6, RelationshipTypes: error } = ME);

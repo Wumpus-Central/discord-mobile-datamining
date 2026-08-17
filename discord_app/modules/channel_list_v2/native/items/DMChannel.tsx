@@ -1,14 +1,14 @@
 // discord_app/modules/channel_list_v2/native/items/DMChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8886 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 15297 */;
-import getChannelModeDefault from "getChannelMode" /* 15378 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getChannelA11yLabelDefault from "../../../channel/getChannelA11yLabel.tsx";
+import useCallA11yStateDefault from "../../../calls/useCallA11yState.tsx";
+import getChannelModeDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ReadStateStore.tsx";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

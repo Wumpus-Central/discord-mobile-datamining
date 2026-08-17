@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/native/ApplicationCommandBuiltIns.tsx
-import setDefault from "set" /* 4827 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import setDefault from "../../../actions/AlertActionCreators.tsx";
+import closure_3 from "../../../stores/RelationshipStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;

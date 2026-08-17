@@ -1,8 +1,8 @@
 // discord_app/utils/ReadyPayloadUtils.tsx
-import set2 from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import itemsDefault from "items" /* 1955 */;
-import isCacheEnabled from "isCacheEnabled" /* 5395 */;
+import set2 from "../../_runtime/00002_set.js";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import itemsDefault from "../modules/app_database/DatabaseDaos.tsx";
+import isCacheEnabled from "../modules/cache/isCacheEnabled.native.tsx";
 
 function hydrateGuild(guild) {
   closure_0 = guild;

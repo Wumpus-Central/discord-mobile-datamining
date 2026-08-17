@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx
-import setDefault from "set" /* 687 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import setDefault from "../../../utils/Durations.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../UserProfileStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const require = arg1;
 let closure_6 = 90 * setDefault.Millis.DAY;

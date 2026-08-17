@@ -1,7 +1,7 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.shared.tsx
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import closure_2 from "addSubscriptionPlan" /* 4044 */;
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
+import closure_2 from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");

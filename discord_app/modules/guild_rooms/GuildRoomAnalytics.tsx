@@ -1,13 +1,13 @@
 // discord_app/modules/guild_rooms/GuildRoomAnalytics.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 9868 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import closure_7 from "resolveCreatingNotes" /* 9864 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import GuildRoomBackgrounds from "../../../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../../stores/VoiceStateStore.tsx";
+import closure_7 from "GuildRoomStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 function getBaseProperties(merged) {

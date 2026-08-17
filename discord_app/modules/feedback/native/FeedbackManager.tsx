@@ -1,10 +1,10 @@
 // discord_app/modules/feedback/native/FeedbackManager.tsx
-import optOutEligibilityCheckDefault from "optOutEligibilityCheck" /* 16562 */;
-import closure_3 from "addApplication" /* 4478 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "initialize" /* 4558 */;
-import { FeedbackType } from "FeedbackRating" /* 10811 */;
+import optOutEligibilityCheckDefault from "../FeedbackManager.tsx";
+import closure_3 from "../../applications/ApplicationStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../../../stores/StreamRTCConnectionStore.tsx";
+import { FeedbackType } from "../Constants.tsx";
 
 let require = arg1;
 optOutEligibilityCheckDefault;

@@ -1,9 +1,9 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isFeatureTeenByDefault from "isFeatureTeenByDefault" /* 4078 */;
-import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isFeatureTeenByDefault from "RegionalFeatureConfigModels.tsx";
+import DEFAULT_COUNTRY_CODE_NAME from "../i18n/CountryCodeUtils.tsx";
 
 ({ getDefaultCountryCode: obj1, getCountryCodeByAlpha2: c3 } = DEFAULT_COUNTRY_CODE_NAME);
 let c4 = null;

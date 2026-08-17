@@ -1,15 +1,15 @@
 // discord_app/modules/voice_calls/RTCConnectionDesyncHooks.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "isVoiceMuted" /* 4543 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "retryFailedUsers" /* 13304 */;
-import closure_10 from "createRTCConnection" /* 4539 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "updateVoiceState" /* 4542 */;
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../records/VoiceStateRecord.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../stores/RTCConnectionDesyncStore.tsx";
+import closure_10 from "../../stores/RTCConnectionStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
+import closure_12 from "../../stores/VoiceStateStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 7989 */;
-import frozen from "frozen" /* 8171 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 8266 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../../_runtime/07989_registerAsset.js";
+import frozen from "../EmbedUtils.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import createPremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
+import closure_3 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };

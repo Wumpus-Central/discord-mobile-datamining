@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/confirmActivityLaunchChecks.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import { ApplicationFlags } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../EmbeddedActivitiesStore.tsx";
+import { ApplicationFlags } from "../../../Constants.tsx";
 
 const require = arg1;
 function getOrFetchApplicationForLaunch() {

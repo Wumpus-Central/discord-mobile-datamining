@@ -1,10 +1,10 @@
 // discord_app/modules/app_database/system/DatabaseManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import getUserIdAll from "getUserId" /* 1972 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult from "dispatcher" /* 709 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import getUserIdAll from "StartupData.native.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import importDefaultResult from "../../../Dispatcher.tsx";
 
 let closure_0 = arg1;
 function databaseName(arg0) {

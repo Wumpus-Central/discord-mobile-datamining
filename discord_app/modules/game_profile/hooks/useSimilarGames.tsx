@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/hooks/useSimilarGames.tsx
-import closure_2 from "handleLoadMessages" /* 4505 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set" /* 9169 */;
+import closure_2 from "../../games/GameStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "../../../../discord_common/js/shared/shared-constants/SimilarGamesConstants.tsx";
 
 const require = arg1;
 let closure_5 = [];

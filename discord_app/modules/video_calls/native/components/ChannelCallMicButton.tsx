@@ -1,9 +1,9 @@
 // discord_app/modules/video_calls/native/components/ChannelCallMicButton.tsx
-import getMuteStatesDefault from "getMuteStates" /* 7305 */;
-import ActionButtonAll from "ActionButton" /* 8694 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 4540 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getMuteStatesDefault from "../../useMuteStates.tsx";
+import ActionButtonAll from "CallBarAction.tsx";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../game_console/GameConsoleStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");

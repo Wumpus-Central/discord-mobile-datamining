@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/OrbsBadgeCoachmark.tsx
-import useCoachmark from "useCoachmark" /* 9314 */;
-import metadataDefault from "metadata" /* 9500 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
+import metadataDefault from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function OrbsBadgeCoachmarkImg() {

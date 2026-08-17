@@ -1,12 +1,12 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModal.tsx
-import _modDef8874 from "module_8874" /* 8874 */;
-import dispatcherDefault from "dispatcher" /* 15405 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleFormInit" /* 8875 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef8874 from "../GuildSettingsActionCreators.tsx";
+import dispatcherDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../GuildSettingsStore.tsx";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function close() {

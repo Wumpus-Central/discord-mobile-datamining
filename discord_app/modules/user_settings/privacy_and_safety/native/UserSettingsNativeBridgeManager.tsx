@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../UserSettingsProtoStore.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 initializeDefault;

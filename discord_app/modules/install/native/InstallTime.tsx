@@ -1,8 +1,8 @@
 // discord_app/modules/install/native/InstallTime.tsx
-import Storage4 from "Storage" /* 595 */;
-import sleep from "sleep" /* 4548 */;
-import enforcingDefault from "enforcing" /* 13250 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import sleep from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeInstallTimeModule.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 function getFirstInstallTimeMillis(arg0) {

@@ -1,11 +1,11 @@
 // discord_app/modules/media_engine/DeviceFrecencyStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
+import closure_2 from "../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const DeviceTypes = DesktopSources.DeviceTypes;
 ({ MediaEngineContextTypes: c5, SpeakingFlags: closure_6 } = DesktopSources);

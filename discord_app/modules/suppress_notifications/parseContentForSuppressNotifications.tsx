@@ -1,5 +1,5 @@
 // discord_app/modules/suppress_notifications/parseContentForSuppressNotifications.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");
 const result = set.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");

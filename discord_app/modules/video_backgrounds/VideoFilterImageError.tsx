@@ -1,7 +1,7 @@
 // discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
 
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
 let closure_3 = { ASSET: "asset" };

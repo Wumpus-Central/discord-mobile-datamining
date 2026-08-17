@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/utils/useLaunchingActivityButtonState.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "map" /* 8708 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../frames/FramesStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/utils/useLaunchingActivityButtonState.tsx");

@@ -1,5 +1,5 @@
 // discord_app/design/components/Layers/native/LayerContext.native.tsx
-import importAllResult from "noop" /* 19 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 class LayerContextManager {
   constructor() {

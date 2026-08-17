@@ -1,8 +1,8 @@
 // discord_app/modules/game_relationships/GameRelationshipStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/RelationshipStore.tsx";
+import { RelationshipTypes } from "../../Constants.tsx";
 
 function recountRelationshipTypes() {
   c0 = 0;

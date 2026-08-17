@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/VisibilitySensor.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 const View = get_ActivityIndicator.View;

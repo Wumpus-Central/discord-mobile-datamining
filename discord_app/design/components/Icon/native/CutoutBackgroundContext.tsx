@@ -1,9 +1,9 @@
 // discord_app/design/components/Icon/native/CutoutBackgroundContext.tsx
-import nDefault from "n" /* 689 */;
-import ThemesDefault from "Themes" /* 712 */;
-import flattenColorOverOpaqueBackground from "flattenColorOverOpaqueBackground" /* 8404 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import nDefault from "../../../../../_runtime/00689_n.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import flattenColorOverOpaqueBackground from "../../../utils/shared/colors.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let c3 = importAllResult;

@@ -1,10 +1,10 @@
 // discord_app/design/void/Form/native/FormConstants.tsx
-import set2 from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import closure_2 from "handleThemeChange" /* 1302 */;
-import set from "set" /* 500 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../shared.tsx";
+import closure_2 from "../../../../modules/user_settings/ThemeStore.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
 
 require = arg1;
 let num = 24;

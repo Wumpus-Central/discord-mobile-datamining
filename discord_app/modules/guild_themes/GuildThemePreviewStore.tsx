@@ -1,10 +1,10 @@
 // discord_app/modules/guild_themes/GuildThemePreviewStore.tsx
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import GuildThemePreviewOrigin from "GuildThemePreviewOrigin" /* 4258 */;
+import apply from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import cloneGuildThemeSettings from "guildThemeSerialization.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import GuildThemePreviewOrigin from "GuildThemePreviewConstants.tsx";
 
 require = arg1;
 function handleEnd() {

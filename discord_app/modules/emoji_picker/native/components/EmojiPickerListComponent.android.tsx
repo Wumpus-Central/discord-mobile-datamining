@@ -1,15 +1,15 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9390 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 6731 */;
-import { IMAGE_SIZE } from "IMAGE_SIZE" /* 9301 */;
-import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../emojis/EmojiStore.tsx";
+import { EmojiCategoryTypes } from "../../EmojiPickerConstants.tsx";
+import { IMAGE_SIZE } from "EmojiPickerListConstants.tsx";
+import { PADDING_VERTICAL } from "../../../expression_picker/ExpressionPickerConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import BottomSheetModal from "../../../../../_runtime/06952_BottomSheetModal.js";
+import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

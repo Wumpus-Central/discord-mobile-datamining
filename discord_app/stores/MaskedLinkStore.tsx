@@ -1,11 +1,11 @@
 // discord_app/stores/MaskedLinkStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
-import getHostname from "getHostname" /* 8778 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
+import SPOTIFY_APP_PROTOCOL from "../modules/spotify/SpotifyConstants.tsx";
+import getHostname from "MaskedLinkStoreMethodsAdditional.native.tsx";
+import set from "../../_runtime/00002_set.js";
 
 const SPOTIFY_HOSTNAMES = SPOTIFY_APP_PROTOCOL.SPOTIFY_HOSTNAMES;
 const MaskedLinkStore = "MaskedLinkStore";

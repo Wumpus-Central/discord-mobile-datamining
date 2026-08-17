@@ -1,12 +1,12 @@
 // discord_app/modules/markup/MarkupLinkRule.tsx
-import privDefault from "priv" /* 1405 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import tDefault from "t" /* 4092 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
-import AST_KEY from "AST_KEY" /* 4765 */;
-import safelyPartiallyDecodeURIComponent from "safelyPartiallyDecodeURIComponent" /* 6812 */;
-import errorDefault from "error" /* 6813 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import privDefault from "../../../_runtime/01405_priv.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import tDefault from "../../../_runtime/04092_t.js";
+import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
+import AST_KEY from "MarkupTypes.tsx";
+import safelyPartiallyDecodeURIComponent from "UnicodeSanitizationUtils.tsx";
+import errorDefault from "../../../_runtime/06813_error.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function validateContentTypes(content, items, items2) {

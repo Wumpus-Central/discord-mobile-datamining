@@ -1,11 +1,11 @@
 // discord_app/modules/emojis/useTrackOpenPopout.tsx
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import { EmojiInteractionPoint } from "set" /* 1925 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import useMountLayoutEffectDefault from "../../hooks/useMountEffect.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import { EmojiInteractionPoint } from "EmojiConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");

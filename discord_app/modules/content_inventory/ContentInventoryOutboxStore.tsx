@@ -1,8 +1,8 @@
 // discord_app/modules/content_inventory/ContentInventoryOutboxStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isMatchingListeningActivity from "isMatchingListeningActivity" /* 9046 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isMatchingListeningActivity from "matchUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let map = new Map();

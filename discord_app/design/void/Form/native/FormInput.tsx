@@ -1,9 +1,9 @@
 // discord_app/design/void/Form/native/FormInput.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { KeyboardThemes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { KeyboardThemes } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: null, inputText: null };

@@ -1,12 +1,12 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9661 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
+import isAnimatedBackgroundOption from "VideoBackgroundUtils.tsx";
+import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 
 require = arg1;
 function handleSyncedStoresUpdate() {

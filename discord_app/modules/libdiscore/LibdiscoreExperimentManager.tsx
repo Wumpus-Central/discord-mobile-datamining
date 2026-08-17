@@ -1,9 +1,9 @@
 // discord_app/modules/libdiscore/LibdiscoreExperimentManager.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import items2 from "items" /* 1914 */;
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "initialize" /* 1212 */;
+import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import items2 from "libdiscoreExperiments.tsx";
+import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
 
 require = arg1;
 function experimentStoreUpdateHandler() {

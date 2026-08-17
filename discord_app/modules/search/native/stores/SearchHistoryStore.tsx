@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/stores/SearchHistoryStore.tsx
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import set from "../../../../../_runtime/00002_set.js";
+import apply from "../../../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import MessageEmbedTypes from "../../SearchConstants.tsx";
 
 const SearchHistoryItemTypes = MessageEmbedTypes.SearchHistoryItemTypes;
 class SearchHistory {

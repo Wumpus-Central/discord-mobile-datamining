@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx
-import goBack from "goBack" /* 15657 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 9588 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import goBack from "../tabs/notifications/Notifications.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../../../stores/SelectedGuildStore.tsx";
+import { YouBarNavigatorScreens } from "../MainTabsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
 import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
 import { Guilds } from "../tabs/guilds/Guilds.tsx";
 

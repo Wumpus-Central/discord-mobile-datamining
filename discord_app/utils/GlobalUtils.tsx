@@ -1,5 +1,5 @@
 // discord_app/utils/GlobalUtils.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../_runtime/00002_set.js";
 
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;
 const result = set2.fileFinishedImporting("utils/GlobalUtils.tsx");

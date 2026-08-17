@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/ThemeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
-import resolveThemeDefault from "resolveTheme" /* 1345 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 1373 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import closure_3 from "initialize" /* 1303 */;
-import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
-import { UserSettingsDelay } from "MAX_FAVORITES" /* 685 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getSystemThemeDefault from "../themes/getSystemTheme.native.tsx";
+import resolveThemeDefault from "../themes/resolveTheme.native.tsx";
+import updateBackgroundColorDefault from "../themes/updateBackgroundColor.native.tsx";
+import updateUserGuildSettings from "UserSettingsProtoActionCreators.tsx";
+import closure_3 from "SelectivelySyncedUserSettingsStore.tsx";
+import closure_4 from "UnsyncedUserSettingsStore.tsx";
+import closure_5 from "UserSettingsProtoStore.tsx";
+import SystemThemeState from "ThemeConstants.tsx";
+import { UserSettingsDelay } from "UserSettingsConstants.tsx";
+import { ThemeTypes } from "../../Constants.tsx";
 
 require = arg1;
 function handleThemeChange() {

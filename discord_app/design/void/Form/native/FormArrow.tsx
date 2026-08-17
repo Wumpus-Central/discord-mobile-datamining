@@ -1,12 +1,12 @@
 // discord_app/design/void/Form/native/FormArrow.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 6299 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../native.tsx";
+import Text from "../../../components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../../_runtime/06299_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

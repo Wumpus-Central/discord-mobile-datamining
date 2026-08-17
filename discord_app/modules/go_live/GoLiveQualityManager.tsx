@@ -1,6 +1,6 @@
 // discord_app/modules/go_live/GoLiveQualityManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import onDefault from "on" /* 4572 */;
+import timestampDefault from "../debug/Logger.tsx";
+import onDefault from "../../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
 
 const require = arg1;
 let obj = { RequestedSSRCsUpdate: "requested-ssrcs-update", RequestedStreamsUpdate: "requested-streams-update" };

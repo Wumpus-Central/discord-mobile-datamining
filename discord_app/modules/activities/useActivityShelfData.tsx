@@ -1,8 +1,8 @@
 // discord_app/modules/activities/useActivityShelfData.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 7874 */;
-import closure_6 from "participantFromServer" /* 1390 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "../../stores/game_store/TestModeStore.tsx";
+import closure_6 from "EmbeddedActivitiesStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");

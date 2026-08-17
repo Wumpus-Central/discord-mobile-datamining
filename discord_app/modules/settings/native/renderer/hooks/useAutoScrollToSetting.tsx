@@ -1,7 +1,7 @@
 // discord_app/modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 13993 */;
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../user_settings/UserSettingSearchStore.tsx";
+import { NodeType } from "../SettingRendererConstants.tsx";
 import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 const require = arg1;

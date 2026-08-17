@@ -1,5 +1,5 @@
 // discord_app/modules/chat/native/ChatChangesetUpdateTracker.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const weakMap = new WeakMap();
 let result = set.fileFinishedImporting("modules/chat/native/ChatChangesetUpdateTracker.tsx");

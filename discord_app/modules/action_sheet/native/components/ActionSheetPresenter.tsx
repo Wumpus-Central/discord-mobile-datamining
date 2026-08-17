@@ -1,6 +1,6 @@
 // discord_app/modules/action_sheet/native/components/ActionSheetPresenter.tsx
-import set from "set" /* 2 */;
-import ActionSheetPresenter from "ActionSheetPresenter" /* 13498 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ActionSheetPresenter from "../../../../design/components/Sheet/native/ActionSheetPresenter.native.tsx";
 
 const result = set.fileFinishedImporting("modules/action_sheet/native/components/ActionSheetPresenter.tsx");
 

@@ -1,8 +1,8 @@
 // discord_app/modules/saved_messages/hasForLaterPremiumType.tsx
-import initialize from "initialize" /* 589 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");

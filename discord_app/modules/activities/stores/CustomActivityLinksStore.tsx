@@ -1,7 +1,7 @@
 // discord_app/modules/activities/stores/CustomActivityLinksStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "getAssetURL" /* 12413 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_0 from "../records/CustomActivityLinkRecord.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;

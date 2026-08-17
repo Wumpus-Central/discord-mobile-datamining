@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import getRRule from "getRRule" /* 8785 */;
-import registerAssetDefault from "registerAsset" /* 8896 */;
-import scheduledEventSort from "scheduledEventSort" /* 4370 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
+import getRRule from "../utils/ScheduleUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/08896_registerAsset.js";
+import scheduledEventSort from "../GuildScheduledEventStore.tsx";
 
 ({ isGuildEventEnded: c3, isGuildScheduledEventActive: c4 } = scheduledEventSort);
 let closure_5 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventEntityTypes;

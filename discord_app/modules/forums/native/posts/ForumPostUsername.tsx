@@ -1,13 +1,13 @@
 // discord_app/modules/forums/native/posts/ForumPostUsername.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 1401 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
-import useChatWidthDefault from "useChatWidth" /* 10718 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { useForumChannelStore } from "set" /* 11177 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import set from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import useLoadForumUnreadCounts from "../../ForumHooks.tsx";
+import useChatWidthDefault from "../../../chat/native/useChatWidth.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import { useForumChannelStore } from "../../ForumChannelStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ForumPostUsername(arg0) {

@@ -1,5 +1,5 @@
 // discord_app/modules/user_affinities/UserAffinitiesConstants.tsx
-import setDefault from "set" /* 687 */;
+import setDefault from "../../utils/Durations.tsx";
 
 const result = 8 * setDefault.Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesConstants.tsx");

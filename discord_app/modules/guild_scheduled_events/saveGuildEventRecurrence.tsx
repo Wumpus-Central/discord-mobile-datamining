@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import _modDef8783 from "module_8783" /* 8783 */;
-import getRRule from "getRRule" /* 8785 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import _modDef8783 from "GuildScheduledEventsActionCreators.tsx";
+import getRRule from "utils/ScheduleUtils.tsx";
 
 let result = set.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 

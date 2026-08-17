@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 678 */;
-import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_6 } from "DRAG_HANDLE" /* 1624 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import { CollectiblesMobileShopScreen as closure_5 } from "../../collectibles/CollectiblesShopConstants.tsx";
+import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_6 } from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,11 +1,11 @@
 // discord_app/modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx
-import set from "set" /* 2 */;
-import ME2 from "ME" /* 676 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import getIdFromHistoryItem from "getIdFromHistoryItem" /* 7291 */;
-import closure_5 from "getIdFromHistoryItem" /* 7291 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1980 */;
+import set from "../../../_runtime/00002_set.js";
+import ME2 from "../../Constants.tsx";
+import shouldShowAgeGateForVoiceChannel from "AgeGateUtils.tsx";
+import getIdFromHistoryItem from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import closure_5 from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildChannelStore.tsx";
 
 ({ CHANNEL_PREFIX: obj1, GUILD_PREFIX: c3, getIdFromHistoryItem: c4 } = getIdFromHistoryItem);
 const ME = ME2.ME;

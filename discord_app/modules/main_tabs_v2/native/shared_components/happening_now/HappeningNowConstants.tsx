@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx
-import set from "set" /* 2 */;
-import Button from "Button" /* 1297 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import Button from "../../../../../design/void/native.tsx";
 
 const obj = { padding: Button.STATUS_PADDING - 1 };
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");

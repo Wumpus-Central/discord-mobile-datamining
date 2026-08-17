@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 8455 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import shouldShowAgeGateForVoiceChannel from "../../../age_gate/AgeGateUtils.tsx";
+import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import resolveNsfwTogglesWithDefaults from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
+import useNSFWAllowed from "../../content_and_social/useNSFWAllowed.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

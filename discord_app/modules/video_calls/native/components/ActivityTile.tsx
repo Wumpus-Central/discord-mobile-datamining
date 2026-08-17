@@ -1,16 +1,16 @@
 // discord_app/modules/video_calls/native/components/ActivityTile.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ActivityLayoutMode } from "items3" /* 4481 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { ActivityLayoutMode } from "../../../activities/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ActivityTileInner(participant) {

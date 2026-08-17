@@ -1,7 +1,7 @@
 // discord_app/modules/portals/PortalToNativeView.native.tsx
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 noopAll;
 let closure_1 = require("get ActivityIndicator").requireNativeComponent("PortalToNativeView");

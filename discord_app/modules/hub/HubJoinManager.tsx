@@ -1,8 +1,8 @@
 // discord_app/modules/hub/HubJoinManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 let require = arg1;
 initializeDefault;

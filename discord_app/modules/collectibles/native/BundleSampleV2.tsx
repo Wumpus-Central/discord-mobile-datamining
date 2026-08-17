@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/BundleSampleV2.tsx
-import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import preloadDefault from "preload" /* 5449 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9208 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9218 */;
-import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 9220 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO" /* 9207 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getNameplateData from "../nameplates/utils.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import ProfileEffectSampleDefault from "ProfileEffectSampleV2.tsx";
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "../nameplates/native/NameplateDummyUserPreview.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { BUNDLE_PREVIEW_CONFIG } from "CollectiblesPreviewConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BundleStaticPreviewContent(mutedBackground) {

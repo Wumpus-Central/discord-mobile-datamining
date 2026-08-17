@@ -1,11 +1,11 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11221 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useBestActiveChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight" /* 8682 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useBestActiveChatInputContainerHeight as closure_3 } from "../../../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 let obj = { container: null };
 obj = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx
-import closure_0 from "computeRolesForGuild" /* 6728 */;
+import closure_0 from "SubscriptionRoleStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");
 

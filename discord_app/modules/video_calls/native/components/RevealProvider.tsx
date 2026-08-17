@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/components/RevealProvider.tsx
-import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 8673 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 8679 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4086 */;
-import closure_5 from "set" /* 4540 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
-import jsxProd from "jsxProd" /* 21 */;
+import areParticipantStatesEqualDefault from "../useIsPrivateAudioOnlyCall.tsx";
+import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_5 from "../../../game_console/GameConsoleStore.tsx";
+import VoiceChatDrawerState from "../ChannelCallStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function useRevealProviderValue(arg0, channel) {

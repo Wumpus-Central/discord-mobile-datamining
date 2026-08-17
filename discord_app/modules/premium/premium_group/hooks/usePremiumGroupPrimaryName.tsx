@@ -1,8 +1,8 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx
-import set from "set" /* 2 */;
-import nameFromUser from "nameFromUser" /* 4219 */;
-import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 12919 */;
-import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 12923 */;
+import set from "../../../../../_runtime/00002_set.js";
+import nameFromUser from "../../../../utils/UserUtils.tsx";
+import usePremiumGroupMembershipDefault from "usePremiumGroupMembership.tsx";
+import usePremiumGroupMembersDefault from "usePremiumGroupMembers.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 

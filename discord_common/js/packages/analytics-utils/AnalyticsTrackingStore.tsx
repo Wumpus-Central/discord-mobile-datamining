@@ -1,8 +1,8 @@
 // discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import generate from "generate" /* 510 */;
-import sum from "sum" /* 505 */;
+import set from "../../../../_runtime/00002_set.js";
+import log from "../logger/Logger.tsx";
+import generate from "../id-generator/IdGenerator.tsx";
+import sum from "../../shared/Constants.tsx";
 
 ({ TelemetryEndpoints: c3, TelemetryEvents: c4 } = sum);
 let c5 = "x-science-test";

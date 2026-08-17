@@ -1,9 +1,9 @@
 // discord_app/modules/experiments/createExperiment.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "getHash" /* 4288 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "ExperimentStore.tsx";
+import ExperimentBuckets from "ExperimentConstants.tsx";
 
 const require = arg1;
 ({ useState: c4, useEffect: c5 } = noop);

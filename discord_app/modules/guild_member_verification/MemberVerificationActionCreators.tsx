@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member_verification/MemberVerificationActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "updateInvite" /* 4359 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../impersonate/ImpersonateStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/InviteStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function _fetchVerificationForm() {

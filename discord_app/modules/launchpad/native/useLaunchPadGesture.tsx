@@ -1,6 +1,6 @@
 // discord_app/modules/launchpad/native/useLaunchPadGesture.tsx
-import closure_3 from "noop" /* 19 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
 
 const require = arg1;
 ({ LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: c4, LAUNCH_PAD_END_TRANSLATION_THRESHOLD: c5, LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6, LAUNCH_PAD_PULL_TAB_HEIGHT: error, LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: c9, LAUNCH_PAD_PULL_TAB_WIDTH: c10, LaunchPadTypes: unpackModuleId } = LAUNCH_PAD_SPRING_CONFIG);

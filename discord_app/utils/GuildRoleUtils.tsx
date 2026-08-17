@@ -1,9 +1,9 @@
 // discord_app/utils/GuildRoleUtils.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import fromServerArrayAll from "fromServerArray" /* 1985 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1986 */;
+import set from "../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
+import int2hslRaw from "../../discord_common/js/shared/utils/ColorUtils.tsx";
+import fromServerArrayAll from "GuildRoleRecordUtils.tsx";
+import extractColorStringsFromServerColors from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;

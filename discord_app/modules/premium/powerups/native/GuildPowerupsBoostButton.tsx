@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostButton.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
-import { AnalyticsSections } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../../stores/billing/GuildBoostSlotStore.tsx";
+import { AnalyticsSections } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostButton.tsx");

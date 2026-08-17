@@ -1,12 +1,12 @@
 // discord_app/modules/app_database/modules/Messages.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1955 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleSelectedChannelStoreChanged" /* 5069 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import itemsDefault from "../DatabaseDaos.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "messages/SaveableChannelsStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = arg1;
 let closure_8 = new timestampDefault("Messages");

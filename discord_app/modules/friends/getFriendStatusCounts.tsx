@@ -1,7 +1,7 @@
 // discord_app/modules/friends/getFriendStatusCounts.tsx
-import closure_0 from "sortActivity" /* 4559 */;
-import closure_1 from "markAllUserIdListsStale" /* 4030 */;
-import { StatusTypes } from "ME" /* 676 */;
+import closure_0 from "../../stores/PresenceStore.tsx";
+import closure_1 from "../../stores/RelationshipStore.tsx";
+import { StatusTypes } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 

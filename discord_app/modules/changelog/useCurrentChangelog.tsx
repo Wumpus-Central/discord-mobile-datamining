@@ -1,9 +1,9 @@
 // discord_app/modules/changelog/useCurrentChangelog.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 4771 */;
-import { ChangelogLoadState } from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "ChangelogStore.tsx";
+import { ChangelogLoadState } from "ChangelogConstants.tsx";
 
 require = arg1;
 function useChangelog(changelogId, stateFromStores) {

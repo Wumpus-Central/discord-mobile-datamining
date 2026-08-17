@@ -1,9 +1,9 @@
 // discord_app/stores/game_store/SKUStore.tsx
-import initializeAll from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_1 from "createFromServer" /* 4515 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
-import set from "set" /* 2 */;
+import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_1 from "../../modules/skus/SKURecord.tsx";
+import closure_2 from "../../modules/user_settings/LocaleStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function addSku(sku) {
   closure_0 = sku;

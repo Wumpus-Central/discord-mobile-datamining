@@ -1,11 +1,11 @@
 // discord_app/modules/threads/ActiveThreadsStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function handleThreadCreateOrUpdate(channel) {
   channel = channel.channel;

@@ -1,11 +1,11 @@
 // discord_app/modules/chat/native/TypingIndicator.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 8682 */;
-import { SlowmodeType } from "setCooldown" /* 7440 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useChatShowingAutoComplete as closure_5 } from "../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import { SlowmodeType } from "../../../stores/SlowmodeStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function TypingIndicatorInner(cleanUp) {

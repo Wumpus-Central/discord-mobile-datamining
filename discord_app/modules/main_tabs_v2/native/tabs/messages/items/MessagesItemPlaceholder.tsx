@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx
-import _modDef8928 from "module_8928" /* 8928 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import _modDef8928 from "../../../shared_components/user_list/UserPlaceholderRow.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 
 const memoResult = importAllResult.memo(function MessagesItemPlaceholder(arg0) {
   ({ row, height } = arg0);

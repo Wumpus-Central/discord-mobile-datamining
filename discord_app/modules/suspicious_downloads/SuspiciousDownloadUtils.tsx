@@ -1,7 +1,7 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import _modDef8342 from "module_8342" /* 8342 */;
-import set from "set" /* 2 */;
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import _modDef8342 from "../../../_runtime/metro/08342__.js";
+import set from "../../../_runtime/00002_set.js";
 
 let set = new Set(_modDef8342);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };

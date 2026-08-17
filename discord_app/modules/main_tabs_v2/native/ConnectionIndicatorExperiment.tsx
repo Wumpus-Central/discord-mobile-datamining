@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/ConnectionIndicatorExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { timeoutMs: 10000, hidden: false }, 3: { timeoutMs: 15000, hidden: false }, 4: { timeoutMs: 20000, hidden: false } };
 obj[4] = { timeoutMs: 10000, hidden: true };

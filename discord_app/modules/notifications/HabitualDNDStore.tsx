@@ -1,10 +1,10 @@
 // discord_app/modules/notifications/HabitualDNDStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_3 from "filterPlayingActivities" /* 7250 */;
-import { StatusTypes } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import closure_3 from "../../stores/SelfPresenceStore.tsx";
+import { StatusTypes } from "../../Constants.tsx";
 
 require = arg1;
 let closure_5 = [];

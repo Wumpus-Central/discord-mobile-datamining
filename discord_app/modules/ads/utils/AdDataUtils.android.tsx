@@ -1,9 +1,9 @@
 // discord_app/modules/ads/utils/AdDataUtils.android.tsx
-import _fetchAdUser from "_fetchAdUser" /* 7484 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "adUser" /* 7482 */;
-import { DEFAULT_TIMEOUT_MS } from "DEFAULT_TIMEOUT_MS" /* 7483 */;
+import _fetchAdUser from "../native/AdUserActionCreators.android.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../native/AdUserStore.tsx";
+import { DEFAULT_TIMEOUT_MS } from "AdDataUtilsConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");

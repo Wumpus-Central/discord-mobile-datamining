@@ -1,19 +1,19 @@
 // discord_app/modules/auth/native/components/Auth.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
-import createStackNavigator from "createStackNavigator" /* 6371 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
-import BackgroundImageDefault from "BackgroundImage" /* 8612 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15261 */;
-import registerAsset from "registerAsset" /* 15262 */;
-import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 15267 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { AuthStates } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import headerTitle from "headerTitle" /* 15211 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import KeyboardChatScrollView from "../../../../../_runtime/01643_KeyboardChatScrollView.js";
+import createStackNavigator from "../../../../../_runtime/06371_createStackNavigator.js";
+import useWideAuthViewDefault from "../useWideAuthView.tsx";
+import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
+import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
+import registerAsset from "../../../../../_runtime/15262_registerAsset.js";
+import usePortraitOrientationOnlyDefault from "../useOrientationLock.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AuthStates } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import headerTitle from "../RegistrationStepsUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NavigatorWithCaptchaHook() {

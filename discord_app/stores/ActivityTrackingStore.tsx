@@ -1,19 +1,19 @@
 // discord_app/stores/ActivityTrackingStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import removeExecutablePathPrefix from "removeExecutablePathPrefix" /* 4642 */;
-import _modDef10673 from "module_10673" /* 10673 */;
-import closure_3 from "initialize" /* 4504 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "gameFromServer" /* 4509 */;
-import closure_7 from "setLibraryApplications" /* 4512 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import { Distributors } from "ME" /* 676 */;
-import { Storage } from "Storage" /* 595 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import removeExecutablePathPrefix from "../modules/game_detection/GameAnalyticsUtils.tsx";
+import _modDef10673 from "../actions/ActivitiesActionCreators.tsx";
+import closure_3 from "../modules/game_detection/RunningGameStore.native.tsx";
+import closure_4 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "AuthenticationStore.tsx";
+import closure_6 from "DetectableGameStore.tsx";
+import closure_7 from "LibraryApplicationStore.tsx";
+import closure_8 from "RTCConnectionStore.tsx";
+import closure_9 from "SelectedChannelStore.tsx";
+import { Distributors } from "../Constants.tsx";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 
 require = arg1;

@@ -1,18 +1,18 @@
 // discord_app/modules/safety_hub/native/ClassificationDetail.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import renderDefault from "render" /* 8910 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "_getSystemLocale" /* 1994 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import renderDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../user_settings/LocaleStore.tsx";
+import closure_8 from "../SafetyHubStore.tsx";
+import SafetyHubView from "../SafetyHubConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

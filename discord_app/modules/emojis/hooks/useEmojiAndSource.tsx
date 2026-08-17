@@ -1,11 +1,11 @@
 // discord_app/modules/emojis/hooks/useEmojiAndSource.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getEmojiToGroupId" /* 6727 */;
-import getEmojiSourceData from "getEmojiSourceData" /* 7189 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../EmojiStore.tsx";
+import getEmojiSourceData from "../records/ExpressionSourceRecord.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
 
 const require = arg1;
 ({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: closure_8, getEmojiSourceData: c9 } = getEmojiSourceData);

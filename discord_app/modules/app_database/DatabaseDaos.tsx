@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/DatabaseDaos.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
 
 const require = arg1;
 const items = [require("module_1956").TableId.KvCache, "guild_basic_channels"];

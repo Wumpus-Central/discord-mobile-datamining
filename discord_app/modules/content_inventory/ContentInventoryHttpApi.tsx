@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/ContentInventoryHttpApi.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 9064 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { ContentInventoryFeedKey } from "ContentInventoryConstants.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _getMyContentInventory() {

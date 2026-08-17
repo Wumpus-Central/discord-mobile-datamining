@@ -1,6 +1,6 @@
 // discord_app/modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx
-import closure_2 from "reinjectEphemerals" /* 4994 */;
-import { UserFlags } from "ME" /* 676 */;
+import closure_2 from "../../stores/MessageStore.tsx";
+import { UserFlags } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { MAX_MESSAGES_ALLOWED_FOR_GREETING } from "../messages/useShowConvoStarterInDM.tsx";
 

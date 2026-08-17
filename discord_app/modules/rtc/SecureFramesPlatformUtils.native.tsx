@@ -1,14 +1,14 @@
 // discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 7211 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef4656 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import _safeTransitionToDefault from "../links/safeTransitionTo.native.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SecureFramesConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: c5, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: error } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);

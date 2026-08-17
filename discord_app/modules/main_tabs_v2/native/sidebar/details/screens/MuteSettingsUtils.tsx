@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import UserNotificationSettings from "UserNotificationSettings" /* 6795 */;
-import _modDef6798 from "module_6798" /* 6798 */;
-import getMuteSettingsAll from "getMuteSettings" /* 10085 */;
-import closure_4 from "storeThread" /* 4023 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { MuteUntilSeconds } from "MAX_FAVORITES" /* 685 */;
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import computeChannelName from "../../../../../channel/useChannelName.tsx";
+import UserNotificationSettings from "../../../../../../utils/NotificationSettingsUtils.tsx";
+import _modDef6798 from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import getMuteSettingsAll from "../../../../../channel/ChannelMuteUtils.tsx";
+import closure_4 from "../../../../../threads/JoinedThreadsStore.tsx";
+import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../../../../stores/UserStore.tsx";
+import ME from "../../../../../../Constants.tsx";
+import { MuteUntilSeconds } from "../../../../../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 ({ ChannelTypes: c10, UserNotificationSettings: unpackModuleId } = ME);

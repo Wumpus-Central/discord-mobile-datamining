@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ChatGestureSettings.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import ME from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 function useSwipeToReplySettingValue() {
   const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;

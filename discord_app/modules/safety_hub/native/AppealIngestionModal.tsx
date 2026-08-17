@@ -1,15 +1,15 @@
 // discord_app/modules/safety_hub/native/AppealIngestionModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../SafetyHubStore.tsx";
+import SafetyHubView from "../SafetyHubConstants.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: c9, AppealIngestionSections: c10 } = SafetyHubView);

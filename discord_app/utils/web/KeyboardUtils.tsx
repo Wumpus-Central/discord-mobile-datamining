@@ -1,12 +1,12 @@
 // discord_app/utils/web/KeyboardUtils.tsx
-import set2 from "set" /* 500 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import keyCodeDefault from "keyCode" /* 13173 */;
-import normalizeKey from "normalizeKey" /* 13174 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import items from "items" /* 5228 */;
-import set from "set" /* 500 */;
-import importDefaultResult from "apply" /* 12 */;
+import set2 from "../PlatformUtils.tsx";
+import isDiscordFrontendDevelopment from "../GlobalUtils.tsx";
+import keyCodeDefault from "../../../_runtime/13173_keyCode.js";
+import normalizeKey from "KeyboardLayoutMapUtils.tsx";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import items from "../../../discord_common/js/shared/constants/KeyboardConstants.tsx";
+import set from "../PlatformUtils.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 require = arg1;
 function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {

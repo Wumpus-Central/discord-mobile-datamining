@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
 import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
 
 ({ AnalyticEvents: c3, ComponentActions: c4 } = ME);

@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import closure_2 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import ME from "../../../../Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: c4 } = ME);

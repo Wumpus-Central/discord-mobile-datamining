@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimation.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import _generateAnimationSource from "BurstReactionEffectUtils.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

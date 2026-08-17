@@ -1,11 +1,11 @@
 // discord_app/modules/experiments/apex/ApexExperimentStore.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _toPropertyKeyDefault from "_toPropertyKey" /* 1213 */;
-import Version from "Version" /* 4290 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import _toPropertyKeyDefault from "../../../../discord_common/js/packages/apex/BaseApexExperimentStore.tsx";
+import Version from "../../build_overrides/BuildOverrideUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 _toPropertyKeyDefault;

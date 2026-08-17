@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7217 */;
-import computeHasRoleSubscriptionsInGuild from "computeHasRoleSubscriptionsInGuild" /* 7218 */;
-import computeHasRoleSubscriptionsInGuildDefault from "computeHasRoleSubscriptionsInGuild" /* 7218 */;
-import closure_3 from "initialize" /* 1982 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import useIsCreatorMonetizationEnabledGuild from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
+import computeHasRoleSubscriptionsInGuild from "useHasRoleSubscriptionInGuild.tsx";
+import computeHasRoleSubscriptionsInGuildDefault from "useHasRoleSubscriptionInGuild.tsx";
+import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 

@@ -1,8 +1,8 @@
 // discord_app/modules/activities/native/getDefaultOrientationLockState.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import set from "../../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 
 let closure_2 = DCDDeviceManager.isIpadOS();
 let closure_3 = isMetaQuest.isMetaQuest();

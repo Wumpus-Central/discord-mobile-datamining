@@ -1,6 +1,6 @@
 // discord_app/modules/application_assets_v2/ApplicationAssetsV2Store.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx
-import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "getTimeSafe" /* 10850 */;
+import setDefault from "../../../utils/Durations.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../SavedMessagesStore.tsx";
 
 let require = arg1;
 function scheduleNextNotification() {

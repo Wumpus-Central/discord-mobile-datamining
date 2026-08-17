@@ -1,9 +1,9 @@
 // discord_app/stores/channel_notices/HubLinkNoticeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "set" /* 7194 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../modules/hotspot/HotspotStore.tsx";
+import closure_1 from "../GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 function checkGuildIsHub(id) {
   const guild = store.getGuild(id);

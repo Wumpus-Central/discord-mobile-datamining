@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/useChannelVideoLimit.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getVoiceStatesForGuild" /* 4545 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/views/SortedVoiceStateStore.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

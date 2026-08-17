@@ -1,13 +1,13 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Form from "Form" /* 8083 */;
-import FormRoleColorPickerDefault from "FormRoleColorPicker" /* 15554 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15553 */;
-import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Form from "../../../design/void/Form/native/index.tsx";
+import FormRoleColorPickerDefault from "../../../components_native/common/color_picker/FormRoleColorPicker.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/SortedGuildStore.tsx";
+import { DEFAULT_FOLDER_COLOR } from "../GuildsBarConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function GuildFolderSettingsScene(arg0) {

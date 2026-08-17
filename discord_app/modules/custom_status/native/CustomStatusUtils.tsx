@@ -1,7 +1,7 @@
 // discord_app/modules/custom_status/native/CustomStatusUtils.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+import set from "../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/custom_status/native/CustomStatusUtils.tsx");
 

@@ -1,12 +1,12 @@
 // discord_app/actions/CallActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9730 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import _modDef4975 from "SelectedChannelActionCreators.tsx";
+import useCanRingToGuildVoiceChannel from "../modules/calls/useCanRing.tsx";
+import closure_3 from "../stores/ChannelStore.tsx";
+import closure_4 from "../stores/RelationshipStore.tsx";
+import closure_5 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

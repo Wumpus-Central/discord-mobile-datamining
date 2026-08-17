@@ -1,10 +1,10 @@
 // discord_app/modules/premium/GuildCapUpsellHooks.tsx
-import initialize from "initialize" /* 589 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import HotspotStore2 from "HotspotStore" /* 7193 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { MAX_USER_GUILDS } from "ME" /* 676 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import HotspotStore2 from "../hotspot/index.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import { MAX_USER_GUILDS } from "../../Constants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");

@@ -1,18 +1,18 @@
 // discord_app/modules/quests/lib/AssetUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
-import set2 from "set" /* 6723 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
-import metadataDefault from "metadata" /* 10487 */;
-import metadataDefault2 from "metadata" /* 10488 */;
-import metadataDefault3 from "metadata" /* 10489 */;
-import metadataDefault4 from "metadata" /* 10490 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 10491 */;
-import metadataDefault5 from "metadata" /* 10498 */;
-import metadataDefault6 from "metadata" /* 10499 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
+import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
+import set2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
+import metadataDefault from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
+import metadataDefault2 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
+import metadataDefault3 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
+import metadataDefault4 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
+import _getDefaultRewardName from "../utils/QuestRewardUtils.tsx";
+import metadataDefault5 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import metadataDefault6 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
 
 function resolveAsset(id, questBarHeroVideo) {
   if (questBarHeroVideo.startsWith("blob:")) {

@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/FavoritesUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import date from "date" /* 1429 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import date from "FavoritesConstants.tsx";
 
 const FAVORITES_RAW_GUILD_ID = date.FAVORITES_RAW_GUILD_ID;
 const FAVORITES = ME.FAVORITES;

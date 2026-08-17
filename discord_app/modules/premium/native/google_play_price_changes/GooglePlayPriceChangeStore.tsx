@@ -1,8 +1,8 @@
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "reset" /* 4045 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import closure_2 from "../../../../stores/billing/SubscriptionStore.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 const require = arg1;
 function onInitializeSync() {

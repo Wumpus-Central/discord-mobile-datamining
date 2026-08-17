@@ -1,10 +1,10 @@
 // discord_app/modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import trackNUFStep from "trackNUFStep" /* 11856 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { getIsOnboarding } from "ContactSyncModes" /* 11850 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import trackNUFStep from "../../nuf/native/NewUserAnalyticsUtils.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { getIsOnboarding } from "ContactSyncModalStore.tsx";
+import { ContactPermissions } from "ContactSyncConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 import { _uploadContacts } from "ContactSyncUtils.tsx";
 
 require = arg1;

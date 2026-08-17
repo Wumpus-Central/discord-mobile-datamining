@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 

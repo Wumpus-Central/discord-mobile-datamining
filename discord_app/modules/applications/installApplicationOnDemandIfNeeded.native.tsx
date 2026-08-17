@@ -1,8 +1,8 @@
 // discord_app/modules/applications/installApplicationOnDemandIfNeeded.native.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "createExecutable" /* 4479 */;
-import closure_4 from "addApplication" /* 4478 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../records/ApplicationRecord.tsx";
+import closure_4 from "ApplicationStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const require = arg1;
 function _installApplicationOnDemandIfNeeded() {

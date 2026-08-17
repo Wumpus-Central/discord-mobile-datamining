@@ -1,15 +1,15 @@
 // discord_app/modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 7609 */;
-import closure_3 from "dropChannelIfEmpty" /* 4995 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "getCurrentTime" /* 8290 */;
-import { MessageTypes } from "ME" /* 676 */;
+import failsDefault from "../../../../../discord_common/js/packages/backoff/Backoff.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import trackInviteDefault from "../../../../actions/MessageActionCreators.tsx";
+import fetchAndReconcileGiftIntentDismissals from "../PremiumGiftingIntentActionCreators.tsx";
+import closure_3 from "../../../messages/EphemeralMessageStore.tsx";
+import closure_4 from "../../../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../PremiumGiftingIntentStore.tsx";
+import { MessageTypes } from "../../../../Constants.tsx";
 
 require = arg1;
 let closure_8 = 10 * setDefault.Millis.SECOND;

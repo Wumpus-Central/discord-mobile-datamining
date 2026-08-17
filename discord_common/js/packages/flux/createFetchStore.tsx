@@ -1,10 +1,10 @@
 // discord_common/js/packages/flux/createFetchStore.tsx
-import failsDefault from "fails" /* 584 */;
-import shallowEqual from "shallowEqual" /* 643 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import keys from "keys" /* 644 */;
+import failsDefault from "../backoff/Backoff.tsx";
+import shallowEqual from "../shallow-equal/shallowEqual.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import keys from "../../../../_runtime/00644_keys.js";
 
 require = arg1;
 function areStatesEqual(items, current) {

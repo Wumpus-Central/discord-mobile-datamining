@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/CheckpointColors.native.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CheckpointPersonas2 from "CheckpointPersonas" /* 4806 */;
+import set from "../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import CheckpointPersonas2 from "CheckpointConstants.tsx";
 
 const CheckpointPersonas = CheckpointPersonas2.CheckpointPersonas;
 let obj = {};

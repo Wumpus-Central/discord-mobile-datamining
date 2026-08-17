@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding_home/MemberActionUtils.tsx
-import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_5 from "set" /* 5049 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import useIsNewMemberDefault from "useIsNewMember.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "GuildOnboardingHomeSettingsStore.tsx";
+import closure_5 from "GuildOnboardingMemberActionStore.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 

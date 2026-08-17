@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/useIsInvitedToSpeak.tsx
-import initialize from "initialize" /* 589 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");

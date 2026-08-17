@@ -1,16 +1,16 @@
 // discord_app/modules/application_commands/ApplicationCommandBuiltIns.tsx
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import _modDef8461 from "module_8461" /* 8461 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
-import ME from "ME" /* 676 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8459 */;
-import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString" /* 1992 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import _modDef8461 from "../../actions/ChangeNicknameActionCreators.tsx";
+import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import { BuiltInSectionId } from "ApplicationCommandConstants.tsx";
+import ME from "../../Constants.tsx";
+import ROLL_DURATION_MS from "../dice_roll/DiceRollConstants.tsx";
+import { getDisableCommunicationDurationOptions as closure_11 } from "../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
+import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { set } from "../../utils/Durations.tsx";
 import { useMessageMaxLength } from "../messages/useMessageMaxLength.tsx";

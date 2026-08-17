@@ -1,10 +1,10 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import styles2 from "styles" /* 8818 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import styles2 from "../../../Button/native/FloatingActionButton.native.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import MINIMUM_HIT_AREA from "../../../Button/native/ButtonConstants.native.tsx";
+import createCacheKey from "../../../Styles/native/createStyles.tsx";
 
 require = arg1;
 function CollapsableButton(arg0) {

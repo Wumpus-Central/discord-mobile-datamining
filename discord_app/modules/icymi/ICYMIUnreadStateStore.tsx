@@ -1,8 +1,8 @@
 // discord_app/modules/icymi/ICYMIUnreadStateStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import MessageEmbedTypes from "ICYMITypes.tsx";
 
 require = arg1;
 let closure_2 = 7 * setDefault.Millis.DAY;

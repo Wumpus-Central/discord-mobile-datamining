@@ -1,11 +1,11 @@
 // discord_app/modules/generated_test_users/GeneratedTestUserActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleLogoutDefault from "handleLogout" /* 5256 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "handleAddUser" /* 13962 */;
-import { Endpoints } from "ME" /* 676 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import handleLogoutDefault from "../../actions/AuthenticationActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../records/UserRecord.tsx";
+import closure_5 from "GeneratedTestUsersStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import { SafetyToastType } from "../safety_common/Constants.tsx";
 
 const require = arg1;
 function _getGeneratedPoolById() {

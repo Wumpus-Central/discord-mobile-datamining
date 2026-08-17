@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useFriendsSinceDate.tsx
-import closure_2 from "_getSystemLocale" /* 1994 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_2 from "../../user_settings/LocaleStore.tsx";
+import closure_3 from "../../../stores/RelationshipStore.tsx";
+import { RelationshipTypes } from "../../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { officialApplicationIds } from "../../connections/ConnectionsUtils.tsx";
 

@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/useIsFiveButtonLayout.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 

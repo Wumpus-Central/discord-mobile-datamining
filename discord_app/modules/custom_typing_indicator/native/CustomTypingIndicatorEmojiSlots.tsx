@@ -1,15 +1,15 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import Stack from "Stack" /* 4733 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import CustomTypingIndicatorAnimation from "CustomTypingIndicatorAnimation" /* 14707 */;
-import getRandomCustomTypingIndicatorEmojis from "getRandomCustomTypingIndicatorEmojis" /* 14709 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import CustomTypingIndicatorAnimation from "../CustomTypingIndicatorTypes.tsx";
+import getRandomCustomTypingIndicatorEmojis from "../CustomTypingIndicatorUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function EmojiGlyph(emoji) {

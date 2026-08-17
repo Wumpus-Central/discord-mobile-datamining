@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsInteractionStore.tsx
-import set from "set" /* 2 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import identity from "identity" /* 700 */;
+import set from "../../../_runtime/00002_set.js";
+import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import identity from "../../../_runtime/00700_identity.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_3 = {};

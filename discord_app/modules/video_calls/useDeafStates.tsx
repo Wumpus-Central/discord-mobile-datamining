@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/useDeafStates.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/VoiceStateStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

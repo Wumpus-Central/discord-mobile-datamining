@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/utils/PremiumManagementUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import jsxProd from "jsxProd" /* 21 */;
-import sum from "sum" /* 505 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4656 from "module_4656" /* 4656 */;
+import set from "../../../../../_runtime/00002_set.js";
+import timestampDefault from "../../../debug/Logger.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 
 function defaultMobileWebNitroManagementSuccessCallback() {

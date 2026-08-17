@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/utils/CollectiblesAssetUtils.tsx
-import set from "set" /* 2 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
+import set from "../../../../_runtime/00002_set.js";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import parseSkuIdFromServerData from "mappers.tsx";
 
 let c2 = "media/v1/collectibles-shop";
 let result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");

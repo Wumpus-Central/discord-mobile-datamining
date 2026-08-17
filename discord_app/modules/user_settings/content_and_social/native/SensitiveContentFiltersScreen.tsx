@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx
-import _modDef13991 from "module_13991" /* 13991 */;
-import items3 from "items" /* 14172 */;
-import itemsDefault from "items" /* 14172 */;
-import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import items3 from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
+import itemsDefault from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);

@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ClipsSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClipsIcon from "ClipsIcon" /* 14329 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import ClipsIcon from "../../../../design/components/Icon/native/redesign/generated/ClipsIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { ClipsSettingsScreen } from "../../clips/native/SettingsClipsScreen.tsx";
 
 obj = {

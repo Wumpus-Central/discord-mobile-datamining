@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/preloadUserBannerImage.tsx
-import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import set from "../../../_runtime/00002_set.js";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 
 const result = set.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 

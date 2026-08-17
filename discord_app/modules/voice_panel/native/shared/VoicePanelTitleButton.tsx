@@ -1,26 +1,26 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelTitleButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CollapsingText from "CollapsingText" /* 4746 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import registerAssetDefault from "registerAsset" /* 6299 */;
-import registerAssetDefault2 from "registerAsset" /* 6840 */;
-import registerAssetDefault3 from "registerAsset" /* 7975 */;
-import TwinButtons from "TwinButtons" /* 8811 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 9745 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import QuestActivityButtonInnerDefault from "QuestActivityButtonInner" /* 16250 */;
-import useVoicePanelHeaderUserStateIcons from "useVoicePanelHeaderUserStateIcons" /* 16323 */;
-import registerAssetDefault4 from "registerAsset" /* 16326 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import CollapsingText from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
+import getNicknameDefault from "../../../../utils/NicknameUtils.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import registerAssetDefault from "../../../../../_runtime/06299_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/06840_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/07975_registerAsset.js";
+import TwinButtons from "../../../../design/components/experimental/native.tsx";
+import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import QuestActivityButtonInnerDefault from "../../../frames/panel/native/QuestActivityButton.tsx";
+import useVoicePanelHeaderUserStateIcons from "../header/VoicePanelHeaderUserState.tsx";
+import registerAssetDefault4 from "../../../../../_runtime/16326_registerAsset.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../applications/ApplicationStore.tsx";
+import closure_6 from "../../../stage_channels/StageInstanceStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ChannelButtonIcons() {

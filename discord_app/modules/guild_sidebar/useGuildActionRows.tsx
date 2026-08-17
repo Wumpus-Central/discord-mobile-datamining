@@ -1,12 +1,12 @@
 // discord_app/modules/guild_sidebar/useGuildActionRows.tsx
-import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 11546 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11682 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 15483 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "handleSettingsLoadSuccess" /* 5048 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 5281 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import useIsNewMemberDefault from "../guild_onboarding_home/useIsNewMember.tsx";
+import useCanSeeEventsInChannelListDefault from "../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
+import useHasAllocateBoostPermissionDefault from "../premium/powerups/hooks/useHasAllocateBoostPermission.tsx";
+import useTotalPossibleBoostCountDefault from "../premium/powerups/hooks/useTotalPossibleBoostCount.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx";
+import { ChannelListGuildActionRow } from "GuildSidebarConstants.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useGuildShopVisibleInGuild } from "../creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx";
 import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx
-import set from "set" /* 2 */;
-import usePremiumSince from "usePremiumSince" /* 9496 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../../../_runtime/00002_set.js";
+import usePremiumSince from "useTenureBadging.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
 
 ({ TIERED_TENURE_BADGE_ORDER: obj1, TENURE_BADGES: c3 } = GuildFeatures);
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");

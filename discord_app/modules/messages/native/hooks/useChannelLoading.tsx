@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/hooks/useChannelLoading.tsx
-import useMountEffectDefault from "useMountEffect" /* 4762 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import useMountEffectDefault from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/utils/fileUpload.tsx
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import closure_3 from "calculateAppliedBoosts" /* 4261 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
+import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
+import closure_3 from "../GuildPowerupsStore.tsx";
+import { PowerupActiveStatusType } from "../constants/GuildPowerupsConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { experiment } from "../experiments/FileUpload250MbPowerupExperiment.tsx";
 

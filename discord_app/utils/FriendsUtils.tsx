@@ -1,9 +1,9 @@
 // discord_app/utils/FriendsUtils.tsx
-import _modDef38 from "module_38" /* 38 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import ME from "ME" /* 676 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function validateDiscordTag(arr) {

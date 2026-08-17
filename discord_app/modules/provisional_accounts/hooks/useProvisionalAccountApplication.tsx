@@ -1,5 +1,5 @@
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
+import closure_2 from "../../game_relationships/GameRelationshipStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 

@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx
-import closure_2 from "reinjectEphemerals" /* 4994 */;
+import closure_2 from "../../../../stores/MessageStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

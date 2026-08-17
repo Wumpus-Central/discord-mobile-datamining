@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
-import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
+import maybeFetchCollectiblesForInvoicesDefault from "FamilyCenterActionCreators.tsx";
+import closure_2 from "FamilyCenterStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
 

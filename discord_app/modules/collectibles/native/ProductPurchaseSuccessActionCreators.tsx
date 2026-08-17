@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 const ShopProductPurchaseSuccessModal = "ShopProductPurchaseSuccessModal";

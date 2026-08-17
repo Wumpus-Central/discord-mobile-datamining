@@ -1,11 +1,11 @@
 // discord_app/modules/threads/native/components/redesign/ThreadList.tsx
-import Text from "Text" /* 4734 */;
-import ThreadListTableRowDefault from "ThreadListTableRow" /* 15926 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 2 */;
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import ThreadListTableRowDefault from "ThreadListTableRow.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../../../_runtime/00002_set.js";
 
 require = arg1;
 function ThreadListSection(title) {

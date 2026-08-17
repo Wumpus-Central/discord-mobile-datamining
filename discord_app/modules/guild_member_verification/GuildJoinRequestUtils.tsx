@@ -1,6 +1,6 @@
 // discord_app/modules/guild_member_verification/GuildJoinRequestUtils.tsx
-import set from "set" /* 2 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import set from "../../../_runtime/00002_set.js";
+import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
 

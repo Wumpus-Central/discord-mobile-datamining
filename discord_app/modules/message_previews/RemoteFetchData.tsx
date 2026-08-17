@@ -1,5 +1,5 @@
 // discord_app/modules/message_previews/RemoteFetchData.tsx
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let obj = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
 const result = require("set").fileFinishedImporting("modules/message_previews/RemoteFetchData.tsx");

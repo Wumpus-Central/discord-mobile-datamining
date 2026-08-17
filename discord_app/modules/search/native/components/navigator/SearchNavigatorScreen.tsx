@@ -1,14 +1,14 @@
 // discord_app/modules/search/native/components/navigator/SearchNavigatorScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import _modDef15849 from "module_15849" /* 15849 */;
-import SearchFreezeContainerDefault from "SearchFreezeContainer" /* 15860 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16082 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
+import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
+import _modDef15849 from "../layout/SearchScreenSearchBar.tsx";
+import SearchFreezeContainerDefault from "../layout/SearchScreenLayout.tsx";
+import useSearchLayoutInsetTopDefault from "../../hooks/useSearchLayoutInsetTop.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);

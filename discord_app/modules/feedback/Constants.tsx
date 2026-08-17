@@ -1,6 +1,6 @@
 // discord_app/modules/feedback/Constants.tsx
-import set from "set" /* 2 */;
-import create from "create" /* 1306 */;
+import set from "../../../_runtime/00002_set.js";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 let obj = { BAD: "bad", NEUTRAL: "neutral", GOOD: "good" };
 const items = [create.InAppFeedbackType.VIDEO_BACKGROUND, create.InAppFeedbackType.STREAM, create.InAppFeedbackType.ACTIVITY, create.InAppFeedbackType.VOICE, create.InAppFeedbackType.IN_APP_REPORTS, create.InAppFeedbackType.SEARCH_RESULTS, create.InAppFeedbackType.VIBEGRATIONS];

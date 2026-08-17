@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/channels/ChannelReader.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1955 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import itemsDefault from "../../DatabaseDaos.tsx";
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_3 = new timestampDefault("ChannelReader");
 const tmp2 = new timestampDefault("ChannelReader");

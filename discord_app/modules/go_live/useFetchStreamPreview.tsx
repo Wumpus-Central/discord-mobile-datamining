@@ -1,10 +1,10 @@
 // discord_app/modules/go_live/useFetchStreamPreview.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 9861 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import { BasicPermissions } from "sum" /* 505 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../stores/ApplicationStreamPreviewStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import { BasicPermissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

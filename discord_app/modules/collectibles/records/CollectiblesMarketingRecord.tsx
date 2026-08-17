@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingRecord.tsx
-import set from "set" /* 2 */;
-import fromServer from "fromServer" /* 5331 */;
-import fromServer2 from "fromServer" /* 5333 */;
-import fromServer3 from "fromServer" /* 5334 */;
-import closure_5 from "fromServer" /* 5335 */;
+import set from "../../../../_runtime/00002_set.js";
+import fromServer from "CollectiblesMarketingBadgeRecord.tsx";
+import fromServer2 from "CollectiblesMarketingBannerRecord.tsx";
+import fromServer3 from "CollectiblesMarketingCoachmarkRecord.tsx";
+import closure_5 from "CollectiblesMarketingTabTooltipRecord.tsx";
 
 let closure_2 = fromServer.CollectiblesMarketingBadgeRecord;
 let closure_3 = fromServer2.CollectiblesMarketingBannerRecord;

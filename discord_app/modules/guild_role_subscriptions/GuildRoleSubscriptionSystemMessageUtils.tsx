@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7217 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import getJoinButtonLabels from "getJoinButtonLabels" /* 8212 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import useIsCreatorMonetizationEnabledGuild from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import getJoinButtonLabels from "GuildRoleSubscriptionSystemMessageConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function identityHook(arg0) {

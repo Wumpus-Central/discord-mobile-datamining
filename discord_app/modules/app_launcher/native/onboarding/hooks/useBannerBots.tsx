@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "initialize" /* 11218 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../stores/GuildStore.tsx";
+import closure_4 from "../stores/AppLauncherOnboardingStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import wrapChildrenDefault from "../../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function getItemKey(items) {

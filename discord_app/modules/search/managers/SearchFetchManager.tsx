@@ -1,7 +1,7 @@
 // discord_app/modules/search/managers/SearchFetchManager.tsx
-import set from "set" /* 2 */;
-import cleanUp from "cleanUp" /* 11520 */;
-import fetch from "fetch" /* 11521 */;
+import set from "../../../../_runtime/00002_set.js";
+import cleanUp from "AbstractSearchFetchManager.tsx";
+import fetch from "../SearchFetcher.tsx";
 
 const AbstractSearchFetchManager = cleanUp.AbstractSearchFetchManager;
 class SearchFetchManager extends AbstractSearchFetchManager {

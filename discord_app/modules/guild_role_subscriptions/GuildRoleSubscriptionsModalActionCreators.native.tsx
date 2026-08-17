@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsModalActionCreators.native.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "resetImperatively" /* 16973 */;
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import closure_3 from "native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx";
 
 require = arg1;
 const GuildRoleSubscriptionBenefitEditorModal = "GuildRoleSubscriptionBenefitEditorModal";

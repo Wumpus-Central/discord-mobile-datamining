@@ -1,11 +1,11 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadging.tsx
-import initialize from "initialize" /* 589 */;
-import tDefault from "t" /* 3975 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9497 */;
-import closure_3 from "createUserWidgetFromServer" /* 5365 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4045 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import tDefault from "../../../../../_runtime/03975_t.js";
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser.tsx";
+import closure_3 from "../../../user_profile/UserProfileStore.tsx";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/billing/SubscriptionStore.tsx";
+import GuildFeatures from "../../PremiumConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

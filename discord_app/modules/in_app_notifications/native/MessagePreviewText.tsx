@@ -1,18 +1,18 @@
 // discord_app/modules/in_app_notifications/native/MessagePreviewText.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
-import preloadDefault from "preload" /* 5449 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10049 */;
-import PreviewIcon from "PreviewIcon" /* 10050 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 10030 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
+import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
+import PreviewIcon from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import set from "InAppNotificationConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 require = arg1;
 function NativeMessagePreviewContent(arg0) {

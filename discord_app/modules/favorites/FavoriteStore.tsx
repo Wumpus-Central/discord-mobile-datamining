@@ -1,12 +1,12 @@
 // discord_app/modules/favorites/FavoriteStore.tsx
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { createChannelRecord } from "createChannelRecord" /* 1395 */;
-import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date" /* 1429 */;
-import ME from "ME" /* 676 */;
+import apply from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import { createChannelRecord } from "../../records/ChannelRecord.tsx";
+import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "FavoritesConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function initializeFromUserSettings() {

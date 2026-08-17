@@ -1,7 +1,7 @@
 // discord_app/modules/quests/types/v2/Reward.tsx
-import set from "set" /* 2 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
+import set from "../../../../../_runtime/00002_set.js";
+import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
+import QuestRewardTypes from "../../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {
   const obj = {};

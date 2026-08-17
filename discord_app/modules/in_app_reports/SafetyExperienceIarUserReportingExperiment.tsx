@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../_runtime/00002_set.js";
+import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: items });

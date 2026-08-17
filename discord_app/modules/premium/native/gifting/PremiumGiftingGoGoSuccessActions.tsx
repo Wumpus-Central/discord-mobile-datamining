@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
-import { AnalyticsSections } from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../promotions/PromotionsStore.tsx";
+import { AnalyticsSections } from "../../../../Constants.tsx";
+import { CollectiblesMobileShopScreen as closure_6 } from "../../../collectibles/CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);

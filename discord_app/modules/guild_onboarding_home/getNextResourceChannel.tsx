@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding_home/getNextResourceChannel.tsx
-import closure_2 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_2 from "GuildOnboardingHomeSettingsStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

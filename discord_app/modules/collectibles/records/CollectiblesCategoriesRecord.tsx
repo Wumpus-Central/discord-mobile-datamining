@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesCategoriesRecord.tsx
-import closure_0 from "fromServer" /* 5327 */;
-import closure_1 from "fromServer" /* 5302 */;
+import closure_0 from "../../storefront/records/StorefrontCollectionRecord.tsx";
+import closure_1 from "CollectiblesCategoryRecord.tsx";
 
 let prototype;
 prototype = function CollectiblesCategoriesRecord(categories) {

@@ -1,8 +1,8 @@
 // discord_app/modules/game_relationships/GameRelationshipManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import closure_2 from "GameRelationshipStore.tsx";
+import { RelationshipTypes } from "../../Constants.tsx";
 
 initializeDefault;
 class GameRelationshipManager extends tmp2 {

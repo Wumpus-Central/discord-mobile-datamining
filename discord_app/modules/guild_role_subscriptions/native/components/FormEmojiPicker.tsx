@@ -1,11 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormEmojiPicker.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { Fonts } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Fonts } from "../../../../Constants.tsx";
+import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
 const require = arg1;
 noopAll;

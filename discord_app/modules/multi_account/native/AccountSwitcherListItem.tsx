@@ -1,15 +1,15 @@
 // discord_app/modules/multi_account/native/AccountSwitcherListItem.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createdAt" /* 1930 */;
-import closure_6 from "initialize" /* 4220 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../records/UserRecord.tsx";
+import closure_6 from "../../../stores/StreamerModeStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import { MultiAccountTokenStatus } from "../MultiAccountStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class AccountStatusIcon {

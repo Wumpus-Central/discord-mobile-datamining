@@ -1,10 +1,10 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8105 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _getRequireWildcardCacheDefault from "../../../../../_runtime/08105__getRequireWildcardCache.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let num = 0;

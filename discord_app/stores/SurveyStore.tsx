@@ -1,17 +1,17 @@
 // discord_app/stores/SurveyStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import overrideSurvey from "overrideSurvey" /* 9875 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import overrideSurvey from "../actions/SurveyActionCreators.tsx";
+import closure_4 from "GuildMemberCountStore.tsx";
+import closure_5 from "GuildStore.tsx";
+import closure_6 from "PermissionStore.tsx";
+import closure_7 from "SelectedGuildStore.tsx";
+import closure_8 from "UserStore.tsx";
+import ME from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function fetchSurveyIfNeeded() {

@@ -1,6 +1,6 @@
 // discord_app/modules/applications/message_embed/utils/activityBookmarkUtils.tsx
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import set from "../../../../../_runtime/00002_set.js";
+import isDiscordProxiedAssetUrlDefault from "../../../../utils/URLUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 

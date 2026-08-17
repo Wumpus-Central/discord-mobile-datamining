@@ -1,5 +1,5 @@
 // discord_app/records/VoiceStateRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "../lib/Record.tsx";
 
 toJSDefault;
 const result = require("set").fileFinishedImporting("records/VoiceStateRecord.tsx");

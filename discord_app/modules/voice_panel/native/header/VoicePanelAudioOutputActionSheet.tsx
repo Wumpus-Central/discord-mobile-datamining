@@ -1,16 +1,16 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import setDefault from "set" /* 7190 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 4540 */;
-import closure_6 from "nativeEventEmitter" /* 9651 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleUpdate" /* 4541 */;
-import { VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY as closure_9 } from "VOICE_PANEL_SETTINGS_KEY" /* 9673 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import setDefault from "../../../core/native/NativeView.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../game_console/GameConsoleStore.tsx";
+import closure_6 from "../../../voice_calls/native/AudioManagerStore.android.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/SessionsStore.tsx";
+import { VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY as closure_9 } from "VoicePanelHeaderConstants.tsx";
+import { PlatformTypes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VoicePanelAudioPhoneOutputSection() {

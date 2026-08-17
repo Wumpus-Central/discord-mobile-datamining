@@ -1,9 +1,9 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
-import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 6900 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import privDefault from "../../../../_runtime/01405_priv.js";
+import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GameAutocompleteUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_2 = new privDefault({ max: 100 });

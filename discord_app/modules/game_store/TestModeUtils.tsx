@@ -1,6 +1,6 @@
 // discord_app/modules/game_store/TestModeUtils.tsx
-import closure_2 from "initialize" /* 7872 */;
-import closure_3 from "reset" /* 7874 */;
+import closure_2 from "../activities/DeveloperActivityShelfStore.tsx";
+import closure_3 from "../../stores/game_store/TestModeStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

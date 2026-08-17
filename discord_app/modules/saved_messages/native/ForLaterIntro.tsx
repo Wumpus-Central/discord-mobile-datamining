@@ -1,18 +1,18 @@
 // discord_app/modules/saved_messages/native/ForLaterIntro.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockIcon from "ClockIcon" /* 4338 */;
-import Text from "Text" /* 4734 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6685 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
-import BookmarkIcon from "BookmarkIcon" /* 10876 */;
-import registerAssetDefault from "registerAsset" /* 12732 */;
-import setDefault from "set" /* 12733 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
+import ACTION_SHEET_START_HEIGHT_RATIO from "../../action_sheet/native/ActionSheetConstants.tsx";
+import SavedMessageSortTypes from "../SavedMessagesTypes.tsx";
+import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
+import registerAssetDefault from "../../../../_runtime/12732_registerAsset.js";
+import setDefault from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 function IntroDemo(isReminder) {
   isReminder = isReminder.isReminder;

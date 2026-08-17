@@ -1,7 +1,7 @@
 // discord_app/modules/storefront/records/StorefrontCollectionRecord.tsx
-import closure_0 from "fromServer" /* 5328 */;
-import { AssetDisplayConfigRecord } from "fromServer" /* 5314 */;
-import closure_2 from "fromServer" /* 5329 */;
+import closure_0 from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
+import { AssetDisplayConfigRecord } from "../../collectibles/records/ShopAssetConfigRecord.tsx";
+import closure_2 from "StorefrontProductRecord.tsx";
 
 let prototype;
 prototype = function StorefrontCollectionRecord(arg0) {

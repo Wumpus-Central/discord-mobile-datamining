@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import { GAME_SERVER_POWERUP_SKU_ID as closure_3 } from "str11" /* 4263 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { GAME_SERVER_POWERUP_SKU_ID as closure_3 } from "../../../game_server/GameServerConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");

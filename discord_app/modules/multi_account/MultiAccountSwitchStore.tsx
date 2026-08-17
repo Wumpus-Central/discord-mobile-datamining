@@ -1,12 +1,12 @@
 // discord_app/modules/multi_account/MultiAccountSwitchStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import createFastConnectSocket from "createFastConnectSocket" /* 15 */;
-import initializeDefault from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "initialize" /* 11585 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import createFastConnectSocket from "../gateway/native/fast_connect.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_4 from "MultiAccountStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 let closure_6 = new timestampDefault("MultiAccountSwitchStore");

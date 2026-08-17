@@ -1,10 +1,10 @@
 // discord_app/modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleChannelSelectDefault from "handleChannelSelect" /* 13282 */;
-import closure_2 from "markAllUserIdListsStale" /* 4030 */;
-import closure_3 from "updateVoiceState" /* 4542 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import handleChannelSelectDefault from "SharedSpacesWarningManager.tsx";
+import closure_2 from "../../stores/RelationshipStore.tsx";
+import closure_3 from "../../stores/VoiceStateStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function init() {
   closure_4 = {};

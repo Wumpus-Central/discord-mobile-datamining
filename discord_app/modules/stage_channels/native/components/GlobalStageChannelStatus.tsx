@@ -1,17 +1,17 @@
 // discord_app/modules/stage_channels/native/components/GlobalStageChannelStatus.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 12494 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "setContent" /* 4086 */;
-import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { Fonts } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_9 from "../../StageInstanceStore.tsx";
+import { Fonts } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class StageChannelRaiseHandAck {

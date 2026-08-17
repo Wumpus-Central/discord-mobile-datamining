@@ -1,15 +1,15 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
-import AccountCreditTierDefault from "AccountCreditTier" /* 7922 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "reset" /* 4045 */;
-import closure_5 from "addEntitlement" /* 5357 */;
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_6 } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import areSetsEqual from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import AccountCreditTierDefault from "../../../premium/native/PremiumAccountCredit.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_5 from "../../../../stores/game_store/EntitlementStore.tsx";
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_6 } from "../../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { creditList: null };

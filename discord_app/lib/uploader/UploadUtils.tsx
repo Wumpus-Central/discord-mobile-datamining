@@ -1,8 +1,8 @@
 // discord_app/lib/uploader/UploadUtils.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
-import cancel from "cancel" /* 4829 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import cancel from "Upload.tsx";
 
 const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {

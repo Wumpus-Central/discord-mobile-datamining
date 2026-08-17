@@ -1,11 +1,11 @@
 // discord_app/modules/forums/ForumPostUnreadCountStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import set from "set" /* 2 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../threads/ActiveThreadsStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let closure_5 = {};
 let set = new Set();

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/makeUserListPillData.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import Button from "../../../../../design/void/native.tsx";
+import nameFromUserDefault from "../../../../../utils/UserUtils.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

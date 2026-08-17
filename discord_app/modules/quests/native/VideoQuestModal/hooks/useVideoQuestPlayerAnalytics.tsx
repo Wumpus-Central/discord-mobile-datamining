@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx
-import closure_3 from "noop" /* 19 */;
-import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionInfoChange" /* 4564 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { AppState } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../stores/NetworkStore.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx");

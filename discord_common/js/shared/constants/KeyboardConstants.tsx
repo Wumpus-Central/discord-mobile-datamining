@@ -1,6 +1,6 @@
 // discord_common/js/shared/constants/KeyboardConstants.tsx
-import _mod5229 from "module_5229" /* 5229 */;
-import set from "set" /* 2 */;
+import _mod5229 from "../../../../_runtime/metro/05229__.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const items = [_mod5229.Key.F6, "f6"];
 const items1 = [items, , , , , , , ];

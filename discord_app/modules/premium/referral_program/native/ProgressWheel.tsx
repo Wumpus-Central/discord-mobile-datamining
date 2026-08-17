@@ -1,14 +1,14 @@
 // discord_app/modules/premium/referral_program/native/ProgressWheel.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import preloadDefault from "preload" /* 5449 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 12880 */;
-import metadataDefault from "metadata" /* 12890 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import MAX_REFERRALS_SENT from "../hooks/useReferralProgramBannerDetails.tsx";
+import metadataDefault from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

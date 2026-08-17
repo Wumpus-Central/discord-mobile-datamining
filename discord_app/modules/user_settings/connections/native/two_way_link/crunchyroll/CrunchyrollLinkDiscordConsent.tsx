@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx
-import closure_2 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkModalScenes" /* 9799 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import CRUNCHYROLL_LINK_DEST_ORIGIN from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 9047 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../../../_runtime/00019_noop.js";
+import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkConstants.tsx";
+import { PlatformTypes } from "../../../../../../Constants.tsx";
+import CRUNCHYROLL_LINK_DEST_ORIGIN from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ CRUNCHYROLL_CLIENT_ID: c5, CRUNCHYROLL_CLIENT_SCOPES: closure_6 } = CRUNCHYROLL_LINK_DEST_ORIGIN);

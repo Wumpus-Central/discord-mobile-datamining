@@ -1,9 +1,9 @@
 // discord_app/modules/quarantine/openQuarantineModeInfoModal.native.tsx
-import noopAll from "noop" /* 19 */;
-import getBestActiveInput from "getBestActiveInput" /* 4237 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import getBestActiveInput from "../../utils/native/ChatInputUtils.tsx";
+import _modDef4656 from "../../actions/native/AlertActionCreators.tsx";
+import { Keyboard } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

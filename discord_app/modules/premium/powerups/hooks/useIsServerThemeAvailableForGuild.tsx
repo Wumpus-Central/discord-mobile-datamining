@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx
-import set from "set" /* 2 */;
-import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4256 */;
-import experiment from "experiment" /* 4304 */;
+import set from "../../../../../_runtime/00002_set.js";
+import resolveSavedActiveGuildTheme from "../../../guild_themes/GuildThemeResolver.tsx";
+import experiment from "../experiments/ServerThemeExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/hooks/getPendingRelationshipIds.tsx
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_0 from "../../../../../stores/RelationshipStore.tsx";
+import { RelationshipTypes } from "../../../../../Constants.tsx";
 
 function filterFromPending(arg0) {
   return closure_0.isSpam(arg0) || closure_0.isIgnored(arg0);

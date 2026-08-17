@@ -1,13 +1,13 @@
 // discord_app/modules/storefront/StorefrontUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 7207 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "resetStoreState" /* 7206 */;
-import ME from "ME" /* 676 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
+import StorefrontPromotionRewardType from "StorefrontTypes.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "SKUPricesStore.tsx";
+import ME from "../../Constants.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,8 +1,8 @@
 // discord_app/modules/message_request/native/MessageRequestEmpty.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
-import getPendingSource from "getPendingSource" /* 16103 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Button from "../../../design/void/native.tsx";
+import getPendingSource from "../../../design/components/Illustration/native/redesign/generated/Pending.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import SafetyToastType from "SafetyToastType" /* 5430 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import SafetyToastType from "../../../safety_common/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ SafetySettingsNoticeAction: c5, SafetySettingsNoticeType: closure_6 } = SafetyToastType);

@@ -1,15 +1,15 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherList.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import SearchField from "SearchField" /* 7337 */;
-import useAppLauncherFlashListProps from "useAppLauncherFlashListProps" /* 11279 */;
-import useAppLauncherFlashListPropsDefault from "useAppLauncherFlashListProps" /* 11279 */;
-import registerAssetDefault from "registerAsset" /* 11346 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import useAppLauncherFlashListProps from "AppLauncherFlashList.tsx";
+import useAppLauncherFlashListPropsDefault from "AppLauncherFlashList.tsx";
+import registerAssetDefault from "../../../../../_runtime/11346_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_5 = createCacheKey.createStyles({ searchBarContainer: { marginBottom: 16 }, emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" }, emptyStateImage: { flex: 0 } });

@@ -1,25 +1,25 @@
 // discord_app/modules/activities/native/EmbeddedActivitiesNativeManager.tsx
-import v1 from "v1" /* 514 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import dispatcherDefault2 from "dispatcher" /* 4094 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 8701 */;
-import enforcingDefault from "enforcing" /* 8714 */;
-import getShelfItemTrackingPropertiesDefault from "getShelfItemTrackingProperties" /* 8716 */;
-import NativeModulesDefault from "NativeModules" /* 8720 */;
-import registerAssetDefault from "registerAsset" /* 8764 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 4481 */;
-import ME from "ME" /* 676 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import WebView from "WebView" /* 6304 */;
-import set from "set" /* 500 */;
+import v1 from "../../../../_runtime/00514_v1.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import dispatcherDefault2 from "../../toast/native/ToastActionCreators.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import _runPrimaryAppCommandOrJoinEmbeddedActivity from "../EmbeddedActivitiesActionCreators.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
+import getShelfItemTrackingPropertiesDefault from "../EmbeddedActivitiesManager.tsx";
+import NativeModulesDefault from "../../device/ThermalUtils.native.tsx";
+import registerAssetDefault from "../../../../_runtime/08764_registerAsset.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../EmbeddedActivitiesStore.tsx";
+import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { TransportTypes } from "../../rpc/Constants.tsx";
+import WebView from "../../../../_runtime/06304_WebView.js";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function postMessageToWebView() {

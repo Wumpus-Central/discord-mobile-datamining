@@ -1,6 +1,6 @@
 // discord_app/modules/image_cropping/web/ImageCroppingConstants.tsx
-import set from "set" /* 2 */;
-import VideoFilterType from "VideoFilterType" /* 8381 */;
+import set from "../../../../_runtime/00002_set.js";
+import VideoFilterType from "../../video_backgrounds/VideoBackgroundConstants.tsx";
 
 const BACKGROUND_REPLACEMENT_SIZE = VideoFilterType.BACKGROUND_REPLACEMENT_SIZE;
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;

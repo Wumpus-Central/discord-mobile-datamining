@@ -1,11 +1,11 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11033 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 11630 */;
-import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 1992 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import ClockWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ClockWarningIcon.tsx";
+import ChatInputGuardDefault from "ChatInputGuard.tsx";
+import useCommunicationDisabledCountdownCleanup from "../../../guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx";
+import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "../../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForGuild(guildMember) {

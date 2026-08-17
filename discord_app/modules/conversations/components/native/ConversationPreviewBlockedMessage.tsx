@@ -1,9 +1,9 @@
 // discord_app/modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,8 +1,8 @@
 // discord_app/modules/action_sheet/native/PanGestureAnimations.tsx
-import set from "set" /* 2 */;
-import Button from "Button" /* 1297 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
+import set from "../../../../_runtime/00002_set.js";
+import Button from "../../../design/void/native.tsx";
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../design/animation/reanimated/timing/timing.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
 
 let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 obj = { duration: 500, easing: Button.STANDARD_EASING };

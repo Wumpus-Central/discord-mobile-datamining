@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx
-import initialize from "initialize" /* 589 */;
-import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items" /* 4068 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import explicitContentFromProto from "../UserSettings.tsx";
+import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
+import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "../privacy_and_safety/DMSafetyConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");

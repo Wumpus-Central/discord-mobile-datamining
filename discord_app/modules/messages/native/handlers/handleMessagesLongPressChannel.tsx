@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/handlers/handleMessagesLongPressChannel.tsx
-import set from "set" /* 2 */;
-import allowChannelAccess from "allowChannelAccess" /* 4979 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
+import set from "../../../../../_runtime/00002_set.js";
+import allowChannelAccess from "../../../../utils/ChannelUtils.tsx";
+import showLongPressURLActionSheetDefault from "../../../links/native/showLongPressURLActionSheet.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 

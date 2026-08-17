@@ -1,19 +1,19 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsShopScreen.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import Stack from "Stack" /* 4733 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import FormSwitch from "FormSwitch" /* 7179 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15070 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import FormSwitch from "../../../../../design/components/Forms/native/FormSwitch.native.tsx";
+import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
+import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../dev_settings/DevSettingsStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

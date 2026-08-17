@@ -1,16 +1,16 @@
 // discord_app/modules/favorites/native/FavoritesEmptyState.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
+import useFavoritesAccess from "../FavoritesHooks.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

@@ -1,5 +1,5 @@
 // discord_app/modules/creator_monetization_review/CreatorMonetizationReviewConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const obj = { NEW_PURCHASES_DISABLED: "NEW_PURCHASES_DISABLED", REAPPLICATION_DISABLED: "REAPPLICATION_DISABLED", SETTINGS_READ_ONLY: "SETTINGS_READ_ONLY", SUBSCRIPTIONS_ENDED_FULL_REFUND: "SUBSCRIPTIONS_ENDED_FULL_REFUND", SUBSCRIPTIONS_ENDED_PRORATED_REFUND: "SUBSCRIPTIONS_ENDED_PRORATED_REFUND" };
 const items = [, , ];

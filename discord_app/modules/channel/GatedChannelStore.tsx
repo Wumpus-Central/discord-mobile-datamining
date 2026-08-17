@@ -1,18 +1,18 @@
 // discord_app/modules/channel/GatedChannelStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isSubscriptionRole from "isSubscriptionRole" /* 4012 */;
-import hasViewChannelPermission from "hasViewChannelPermission" /* 4013 */;
-import closure_2 from "initialize" /* 1982 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isSubscriptionRole from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
+import hasViewChannelPermission from "../guild_role_subscriptions/RolePermissionUtils.tsx";
+import closure_2 from "../impersonate/ImpersonateStore.tsx";
+import { THREAD_CHANNEL_TYPES } from "../../records/ChannelRecord.tsx";
+import { hasPermission } from "../../records/GuildRoleRecord.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../stores/GuildRoleStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import closure_9 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function isSubscriptionGated(role) {

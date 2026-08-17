@@ -1,6 +1,6 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigUtils.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "getRegionalFeatureConfig" /* 4073 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "RegionalFeatureConfigStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

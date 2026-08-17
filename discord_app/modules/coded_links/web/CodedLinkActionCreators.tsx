@@ -1,7 +1,7 @@
 // discord_app/modules/coded_links/web/CodedLinkActionCreators.tsx
-import set from "set" /* 2 */;
-import CONFERENCE_MODE_ENABLED2 from "CONFERENCE_MODE_ENABLED" /* 683 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../../_runtime/00002_set.js";
+import CONFERENCE_MODE_ENABLED2 from "../../conference_mode/ConferenceModeConstants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
 const result = set.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");

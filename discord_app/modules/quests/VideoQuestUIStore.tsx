@@ -1,7 +1,7 @@
 // discord_app/modules/quests/VideoQuestUIStore.tsx
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import identity from "identity" /* 700 */;
-import createJSONStorage from "createJSONStorage" /* 4242 */;
+import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import identity from "../../../_runtime/00700_identity.js";
+import createJSONStorage from "../../../_runtime/04242_createJSONStorage.js";
 import { DEFAULT_VIDEO_VOLUME } from "../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
 import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 

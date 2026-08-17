@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/useStoreConnectionErrorAlert.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateProduct" /* 5319 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/native/IAPStore.android.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");

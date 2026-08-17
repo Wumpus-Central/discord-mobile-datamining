@@ -1,20 +1,20 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarGesture.tsx
-import _modDef1208 from "module_1208" /* 1208 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 1363 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4343 */;
-import renderDefaultEmpty from "renderDefaultEmpty" /* 8124 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { Dimensions } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "insertUnsortedGuilds" /* 5078 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import importDefaultResult from "withEqualityFn" /* 15547 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx" /* 4115 */;
-import apply from "apply" /* 12 */;
-import importDefaultResult1 from "debounce" /* 636 */;
+import _modDef1208 from "../../../../utils/SentryUtils.native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import AccessibilityAnnouncer3 from "../../../../design/shared.tsx";
+import HapticFeedbackTypes from "../../../haptics/HapticUtils.native.tsx";
+import renderDefaultEmpty from "../../../../lib/native/FastList.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { Dimensions } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/SortedGuildStore.tsx";
+import { GuildsNodeType } from "../../../../stores/SortedGuildStore.tsx";
+import importDefaultResult from "../GuildsBarDnDStore.tsx";
+import GUILD_ITEM_SIZE from "../GuildsBarConstants.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import apply from "../../../../../_runtime/00012_apply.js";
+import importDefaultResult1 from "../../../../../_runtime/00636_debounce.js";
 
 require = arg1;
 function getDropIndex(dragNode, dragNode2, overState) {

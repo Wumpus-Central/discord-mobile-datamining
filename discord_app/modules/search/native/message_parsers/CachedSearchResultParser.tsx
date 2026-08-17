@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/message_parsers/CachedSearchResultParser.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 let result = set.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
 

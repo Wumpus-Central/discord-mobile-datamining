@@ -1,18 +1,18 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11130 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import apexExperimentDefault from "apexExperiment" /* 12136 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 12673 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16256 */;
-import apexExperimentDefault2 from "apexExperiment" /* 16418 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 11438 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
+import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import useSelectedActiveStreamDefault from "../../../video_calls/native/useSelectedActiveStream.tsx";
+import useIsConnectedToVoiceChannelDefault from "../hooks/useIsConnectedToVoiceChannel.tsx";
+import apexExperimentDefault2 from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function NOOP() {

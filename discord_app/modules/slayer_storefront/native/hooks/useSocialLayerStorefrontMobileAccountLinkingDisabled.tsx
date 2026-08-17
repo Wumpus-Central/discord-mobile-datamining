@@ -1,5 +1,5 @@
 // discord_app/modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx
-import closure_2 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import closure_2 from "../../SocialLayerStorefrontStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

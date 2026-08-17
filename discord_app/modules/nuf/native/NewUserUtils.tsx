@@ -1,16 +1,16 @@
 // discord_app/modules/nuf/native/NewUserUtils.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import trackNUFStep from "trackNUFStep" /* 11856 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16660 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15224 */;
-import closure_6 from "set" /* 5221 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
-import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4839 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import trackNUFStep from "NewUserAnalyticsUtils.tsx";
+import NEW_USER_MODAL_KEY from "components/NewUserModalTypes.tsx";
+import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../parent_tools/ParentalConsentStore.tsx";
+import closure_6 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { ContactPermissions } from "../../contact_sync/native/ContactSyncConstants.tsx";
+import { NotificationAuthorizationStatus as closure_11 } from "../../native_permissions/NativePermissionConstants.tsx";
 
 require = arg1;
 function _shouldSkipContactSyncStep() {

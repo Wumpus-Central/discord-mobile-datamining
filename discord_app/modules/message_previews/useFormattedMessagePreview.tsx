@@ -1,14 +1,14 @@
 // discord_app/modules/message_previews/useFormattedMessagePreview.tsx
-import set from "set" /* 686 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4814 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8204 */;
-import getSystemMessageUserJoinMobileDefault from "getSystemMessageUserJoinMobile" /* 8209 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { MessageFlags } from "ME" /* 676 */;
+import set from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import useNullableMessageAuthorDefault from "../messages/useMessageAuthor.tsx";
+import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
+import useIsCallActiveDefault from "../calls/mobile/useIsCallActive.tsx";
+import getSystemMessageUserJoinMobileDefault from "../../utils/SystemMessageUtils.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 

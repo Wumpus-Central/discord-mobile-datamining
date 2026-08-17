@@ -1,15 +1,15 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 11456 */;
-import registerAssetDefault2 from "registerAsset" /* 15563 */;
-import registerAssetDefault3 from "registerAsset" /* 15564 */;
-import registerAssetDefault4 from "registerAsset" /* 15565 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import MAX_RESULTS_PER_PAGE from "../../guild_member_verification/MemberVerificationTypes.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../_runtime/11456_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/15563_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/15564_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/15565_registerAsset.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

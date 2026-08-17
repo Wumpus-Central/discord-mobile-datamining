@@ -1,23 +1,23 @@
 // discord_app/modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import Stack from "Stack" /* 4733 */;
-import NavScrim from "NavScrim" /* 6550 */;
-import Form from "Form" /* 8083 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_8 from "comparator" /* 1980 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "handleWebhookCreateUpdate" /* 16058 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import NavScrim from "../../../design/components/Navigator/native/NavScrim.android.tsx";
+import Form from "../../../design/void/Form/native/index.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import comparator from "../../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../stores/UserStore.tsx";
+import closure_12 from "../../../stores/WebhooksStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function WebhookItem(avatar) {

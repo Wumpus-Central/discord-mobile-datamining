@@ -1,7 +1,7 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx
-import set from "set" /* 2 */;
-import Text from "Text" /* 4734 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../../_runtime/00002_set.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
 const Nitro = "Nitro";

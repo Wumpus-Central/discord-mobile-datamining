@@ -1,8 +1,8 @@
 // discord_app/modules/messages/MosaicMediaType.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import set2 from "set" /* 12043 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import urlMatchesFileExtension from "MediaFormatTesters.tsx";
+import set2 from "PlaintextFilePreviewHelpers.tsx";
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;

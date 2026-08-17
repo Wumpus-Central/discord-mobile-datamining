@@ -1,6 +1,6 @@
 // discord_app/modules/headless_tasks/HeadlessTaskUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 const TOKEN_KEY = ME.TOKEN_KEY;

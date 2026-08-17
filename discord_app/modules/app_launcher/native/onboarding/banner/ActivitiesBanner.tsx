@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx
-import noopAll from "noop" /* 19 */;
-import useActivityApplications from "useActivityApplications" /* 11211 */;
-import BannerBaseDefault from "BannerBase" /* 11237 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import useActivityApplications from "../hooks/useActivityApplications.tsx";
+import BannerBaseDefault from "BannerBase.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

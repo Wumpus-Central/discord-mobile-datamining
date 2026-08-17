@@ -1,15 +1,15 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_6 from "handleSetSection" /* 16831 */;
-import { RoleColorsStyle } from "handleSetSection" /* 16831 */;
-import { STYLE_CONFIGS } from "title" /* 16830 */;
-import ME from "ME" /* 676 */;
-import { DEFAULT_GRADIENT_ROLE_COLORS as closure_11 } from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isEveryoneRole } from "../../../../records/GuildRoleRecord.tsx";
+import closure_6 from "../GuildSettingsRolesStore.tsx";
+import { RoleColorsStyle } from "../GuildSettingsRolesStore.tsx";
+import { STYLE_CONFIGS } from "../GuildSettingsRoleConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { DEFAULT_GRADIENT_ROLE_COLORS as closure_11 } from "../../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ DEFAULT_ROLE_COLOR: c9, MAX_ROLE_LENGTH: c10 } = ME);

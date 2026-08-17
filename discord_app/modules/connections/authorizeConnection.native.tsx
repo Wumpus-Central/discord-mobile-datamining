@@ -1,8 +1,8 @@
 // discord_app/modules/connections/authorizeConnection.native.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import OperatorTypes from "Constants.tsx";
 
 let closure_3 = OperatorTypes.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE;
 const PlatformTypes = ME.PlatformTypes;

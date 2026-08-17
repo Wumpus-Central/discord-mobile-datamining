@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import Button from "Button" /* 4745 */;
-import PromoSheet from "PromoSheet" /* 8017 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");

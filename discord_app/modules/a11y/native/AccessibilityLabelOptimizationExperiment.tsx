@@ -1,7 +1,7 @@
 // discord_app/modules/a11y/native/AccessibilityLabelOptimizationExperiment.tsx
-import set from "set" /* 2 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import SCREEN_READER_ENABLED_GETTER from "useIsScreenReaderEnabled.native.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };

@@ -1,8 +1,8 @@
 // discord_app/actions/RTCDebugActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault from "set" /* 4004 */;
-import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9658 */;
-import closure_2 from "updateStats" /* 12596 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import setDefault from "../lib/DiscordNative.tsx";
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
+import closure_2 from "../stores/RTCDebugStore.tsx";
 
 const result = require("set").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 

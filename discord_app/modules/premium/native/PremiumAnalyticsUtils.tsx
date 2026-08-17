@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
-import set from "set" /* 2 */;
-import v1 from "v1" /* 514 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import v1 from "../../../../_runtime/00514_v1.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ SubscriptionTypes: c3, PurchaseTypeToAnalyticsPaymentType: c4, PurchaseTypes: c5, AnalyticEvents: closure_6 } = ME);
 let obj = { WHAT_YOU_LOSE: 1, [1]: "WHAT_YOU_LOSE", CONFIRM: 2, [2]: "CONFIRM", PREVIEW: 3, [3]: "PREVIEW", DOWNGRADE_TO_TIER_0: 4, [4]: "DOWNGRADE_TO_TIER_0", MOBILE_SUBSCRIPTION_MANAGE: 5, [5]: "MOBILE_SUBSCRIPTION_MANAGE" };

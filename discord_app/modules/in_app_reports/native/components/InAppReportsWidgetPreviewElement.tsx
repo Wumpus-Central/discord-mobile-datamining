@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import isFieldEmpty from "isFieldEmpty" /* 5375 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import PersonalWidgetTextDefault from "PersonalWidgetText" /* 12291 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import isFieldEmpty from "../../../user_profile/UserProfilePersonalWidget.tsx";
+import useSharedStylesDefault from "../../../user_profile/native/UserProfileSharedStyles.tsx";
+import PersonalWidgetTextDefault from "../../../user_profile/native/UserProfilePersonalWidgetCard.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

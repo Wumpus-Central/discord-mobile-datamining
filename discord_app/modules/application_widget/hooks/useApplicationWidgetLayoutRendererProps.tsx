@@ -1,10 +1,10 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleFeaturedOrDeveloperFetchSuccess" /* 12284 */;
-import closure_6 from "map" /* 12285 */;
-import { FetchState } from "map" /* 12285 */;
-import closure_8 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../application_assets_v2/ApplicationAssetsV2Store.tsx";
+import closure_6 from "../../user_application_identity/UserApplicationIdentityStore.tsx";
+import { FetchState } from "../../user_application_identity/UserApplicationIdentityStore.tsx";
+import closure_8 from "../../user_settings/LocaleStore.tsx";
 
 const require = arg1;
 let closure_9 = [];

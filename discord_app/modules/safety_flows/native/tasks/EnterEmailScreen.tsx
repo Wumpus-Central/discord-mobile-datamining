@@ -1,9 +1,9 @@
 // discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 17093 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import messagesProxyDefault from "../../SafetyFlows.messages.js";
+import SafetyFlowTaskScreenDefault from "../SafetyFlowTaskScreen.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { TextInput } from "../../../../design/components/TextInput/native/TextInput.native.tsx";

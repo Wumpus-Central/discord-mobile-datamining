@@ -1,16 +1,16 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidHooks.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 8234 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "computeAlertSettings" /* 10014 */;
-import { IncidentAlertModeratorPermissions as closure_10 } from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import DATE_CONFIG from "GuildAntiRaidUtils.tsx";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "GuildIncidentsStore.tsx";
+import { IncidentAlertModeratorPermissions as closure_10 } from "GuildAntiRaidConstants.tsx";
+import ME from "../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
 

@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import { jsx } from "jsxProd" /* 21 */;
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_5 from "../../../../stores/VoiceStateStore.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useEnsureSyncedChannelVoiceStates } from "../../../voice_calls/RTCConnectionDesyncHooks.tsx";
 import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";

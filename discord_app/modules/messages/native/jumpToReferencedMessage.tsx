@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/jumpToReferencedMessage.tsx
-import set from "set" /* 2 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
+import set from "../../../../_runtime/00002_set.js";
+import trackInviteDefault from "../../../actions/MessageActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 

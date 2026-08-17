@@ -1,17 +1,17 @@
 // discord_app/modules/upsell_tooltip/native/useMainViewTooltipActionSheetEligibilityMap.tsx
-import apexExperimentDefault from "apexExperiment" /* 16167 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 16169 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "initialize" /* 8936 */;
-import closure_6 from "onInitializeSync" /* 16149 */;
-import closure_7 from "createEmptyPromotionsByType" /* 7628 */;
-import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_9 from "handleRequiredAction" /* 1385 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
-import set from "set" /* 2 */;
+import apexExperimentDefault from "../experiments/MainViewTooltipActionSheetsDisabledExperiment.tsx";
+import useGiftingPromotionAssetsReadyDefault from "../../premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../badges/BadgeDirectoryStore.tsx";
+import closure_6 from "../../premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx";
+import closure_7 from "../../premium/promotions/PromotionsStore.tsx";
+import closure_8 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_9 from "../../../stores/UserRequiredActionStore.tsx";
+import { PlatformTypes } from "../../../Constants.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
+import { UserSettingsTypes } from "../../user_settings/UserSettingsConstants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 ({ PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID } = GuildFeatures);

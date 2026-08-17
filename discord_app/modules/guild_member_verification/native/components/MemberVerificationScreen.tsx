@@ -1,18 +1,18 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import _modDef6551 from "module_6551" /* 6551 */;
-import MemberVerificationModalDefault from "MemberVerificationModal" /* 8524 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import makeAuthenticated from "makeAuthenticated" /* 15963 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import _modDef6551 from "../../../keyboard/native/KeyboardAwareView.tsx";
+import MemberVerificationModalDefault from "MemberVerificationModal.tsx";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import closure_8 from "../../UserGuildJoinRequestStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import makeAuthenticated from "../../../auth/makeAuthenticated.tsx";
 
 require = arg1;
 function Loading() {

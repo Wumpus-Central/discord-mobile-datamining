@@ -1,13 +1,13 @@
 // discord_app/stores/PrivateChannelReadStateStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "makeSortedChannel" /* 5388 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import areArraysShallowlyEqual from "../utils/FunctionUtils.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "ReadStateStore.tsx";
+import closure_5 from "SelectedChannelStore.tsx";
+import closure_6 from "views/PrivateChannelSortStore.tsx";
+import set from "../../_runtime/00002_set.js";
 
 function rebuildUnreads() {
   const privateChannelIds = store2.getPrivateChannelIds();

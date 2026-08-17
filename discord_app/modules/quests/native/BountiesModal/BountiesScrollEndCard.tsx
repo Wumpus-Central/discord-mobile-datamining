@@ -1,17 +1,17 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollEndCard.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import timingNone from "timingNone" /* 4667 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9275 */;
-import apexExperiment from "apexExperiment" /* 14363 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 14364 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timingNone from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import AnimatedRenderItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import apexExperiment from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
+import useVisibilityTransition from "useVisibilityTransition.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../a11y/AccessibilityStore.tsx";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {

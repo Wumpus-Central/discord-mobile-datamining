@@ -1,6 +1,6 @@
 // discord_app/modules/hub/HubUnreadUtils.tsx
-import closure_3 from "isFetching" /* 11479 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import closure_3 from "../directory_channels/GuildDirectoryStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

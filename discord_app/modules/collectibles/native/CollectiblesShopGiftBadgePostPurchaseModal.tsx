@@ -1,16 +1,16 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import Text from "Text" /* 4734 */;
-import ModalScreen from "ModalScreen" /* 5440 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import PostPurchaseFooterDefault from "PostPurchaseFooter" /* 10419 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import messagesProxyDefault from "../../premium/gifting/GiftingBadge.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
+import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import PostPurchaseFooterDefault from "../../premium/native/gifting/GiftBadgePostPurchase.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);

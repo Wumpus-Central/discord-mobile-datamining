@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importDefaultResult from "merge" /* 10058 */;
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import importDefaultResult from "../utils/deepmerge.tsx";
 
 let obj = { container: null, channelName: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
 obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };

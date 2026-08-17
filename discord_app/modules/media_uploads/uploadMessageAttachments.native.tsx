@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/uploadMessageAttachments.native.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7582 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UploadStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 function _uploadMessageAttachments() {

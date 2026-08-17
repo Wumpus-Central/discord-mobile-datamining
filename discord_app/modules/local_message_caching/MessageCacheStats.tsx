@@ -1,5 +1,5 @@
 // discord_app/modules/local_message_caching/MessageCacheStats.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 class MessageCacheStats {
   constructor() {

@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
-import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 5339 */;
+import set from "../../../../_runtime/00002_set.js";
+import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 
 let prototype;
 prototype = function HeroBlockRecord(unpublished_at) {

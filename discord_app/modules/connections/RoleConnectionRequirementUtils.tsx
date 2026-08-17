@@ -1,6 +1,6 @@
 // discord_app/modules/connections/RoleConnectionRequirementUtils.tsx
-import set from "set" /* 2 */;
-import OperatorTypes2 from "OperatorTypes" /* 5225 */;
+import set from "../../../_runtime/00002_set.js";
+import OperatorTypes2 from "Constants.tsx";
 
 const OperatorTypes = OperatorTypes2.OperatorTypes;
 const result = set.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");

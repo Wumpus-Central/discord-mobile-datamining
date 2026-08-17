@@ -1,10 +1,10 @@
 // discord_app/modules/game_claim/UnclaimedGamesActionCreators.tsx
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "getMap" /* 15454 */;
-import { Endpoints } from "ME" /* 676 */;
-import initialize from "initialize" /* 589 */;
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import importDefaultResult from "UnclaimedGamesStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function fetchUnclaimedGames() {

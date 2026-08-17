@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import frozen from "frozen" /* 8171 */;
-import registerAssetDefault from "registerAsset" /* 8267 */;
-import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 8268 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import frozen from "../../EmbedUtils.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/08267_registerAsset.js";
+import getPremiumGroupInviteEmbedText from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
+import SubscriptionStatusTypes from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: c4 } = SubscriptionStatusTypes);
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreatorExtras.native.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import closure_4 from "usePriceTiers" /* 16950 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import getRoleEmojisAll from "edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import closure_4 from "native/RoleTierEditStore.tsx";
+import MAX_SUBSCRIPTION_TIERS from "GuildRoleSubscriptionsConstants.tsx";
 
 require = arg1;
 ({ GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c5, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_6 } = MAX_SUBSCRIPTION_TIERS);

@@ -1,9 +1,9 @@
 // discord_app/modules/chat/native/placeholder/ChatPlaceholder.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { useChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight" /* 8682 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { useChatInputContainerHeight as closure_3 } from "../../../chat_input/native/useChatBottomManagerUIStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 let obj = { placeholder: null };
 obj = {};

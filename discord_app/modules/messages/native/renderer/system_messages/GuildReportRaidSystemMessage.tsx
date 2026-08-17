@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import resultDefault from "result" /* 8178 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import nativeStyleProperties from "nativeStyleProperties" /* 8251 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8252 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
+import resultDefault from "../resolveMessageContentColors.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import nativeStyleProperties from "GuildAlertModeSystemMessage.tsx";
+import getTagPropertiesDefault from "../getTagProperties.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../stores/GuildStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx");

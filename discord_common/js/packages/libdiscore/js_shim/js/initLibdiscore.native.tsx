@@ -1,7 +1,7 @@
 // discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import importAllResult from "setTimeout" /* 1921 */;
+import closure_0 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import importAllResult from "../../mobile/js/timers.tsx";
 
 function _initLibdiscore() {
   const self = this;

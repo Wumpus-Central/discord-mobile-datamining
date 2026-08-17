@@ -1,9 +1,9 @@
 // discord_app/modules/custom_typing_indicator/native/UserProfileTypingIndicatorEditButton.tsx
-import messagesProxyDefault from "messagesProxy" /* 3403 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import messagesProxyDefault from "../intl/CustomTypingIndicator.messages.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 require("noop").useCallback;

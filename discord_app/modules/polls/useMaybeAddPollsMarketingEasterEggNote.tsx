@@ -1,6 +1,6 @@
 // discord_app/modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../user_settings/LocaleStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");

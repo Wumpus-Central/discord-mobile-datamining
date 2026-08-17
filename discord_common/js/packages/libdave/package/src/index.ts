@@ -1,9 +1,9 @@
 // discord_common/js/packages/libdave/package/src/index.ts
-import set from "set" /* 2 */;
-import generateDisplayableCode from "generateDisplayableCode" /* 9695 */;
-import _generateKeyFingerprint from "_generateKeyFingerprint" /* 9696 */;
-import compareArrays from "compareArrays" /* 9697 */;
-import serializeKey from "serializeKey" /* 9706 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import generateDisplayableCode from "DisplayableCode.ts";
+import _generateKeyFingerprint from "KeyFingerprint.ts";
+import compareArrays from "PairwiseFingerprint.ts";
+import serializeKey from "KeySerialization.ts";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");
 

@@ -1,11 +1,11 @@
 // discord_app/modules/launchpad/native/shared/renderChannelBadge.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
-import Text from "Text" /* 4734 */;
-import NewBadgeDefault from "NewBadge" /* 11463 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import shortenAndLocalizeNumber from "../../../../utils/NumberUtils.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import NewBadgeDefault from "../../../channel_list_v2/native/components/NewBadge.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

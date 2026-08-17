@@ -1,13 +1,13 @@
 // discord_app/modules/stickers/StickersUtils.tsx
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import StickerFormat from "StickerFormat" /* 4964 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "map" /* 4824 */;
-import closure_5 from "getStickerPreview" /* 4963 */;
-import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import { Endpoints } from "ME" /* 676 */;
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
+import StickerFormat from "StickersTypes.tsx";
+import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/UploadAttachmentStore.tsx";
+import closure_5 from "StickerMessagePreviewStore.tsx";
+import STICKER_PICKER_TAB_PANEL_ID from "StickersConstants.tsx";
+import { Endpoints } from "../../Constants.tsx";
 import { StickerFormat } from "StickersTypes.tsx";
 
 require = arg1;

@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/BasicWorkScheduler.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import WorkSchedulerTelemetryEvent from "WorkSchedulerTelemetryEvent" /* 13200 */;
-import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13197 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import WorkSchedulerTelemetryEvent from "WorkSchedulerTelemetry.tsx";
+import DISPATCHER_STANDARD_TIMEOUT_MS from "DispatcherWorkConstants.tsx";
 
 ({ MAX_DISPATCHER_FLUSH_DEADLINE_TRIES: c3, DISPATCHER_STANDARD_TIMEOUT_MS: c4, DISPATCHER_IDEAL_TIME_LIMIT_MS: c5, DISPATCHER_LONG_TIMEOUT_MS: closure_6 } = DISPATCHER_STANDARD_TIMEOUT_MS);
 let closure_7 = new timestampDefault("DispatcherWorkScheduler");

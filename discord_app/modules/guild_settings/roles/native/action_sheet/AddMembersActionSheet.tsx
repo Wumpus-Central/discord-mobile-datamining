@@ -1,15 +1,15 @@
 // discord_app/modules/guild_settings/roles/native/action_sheet/AddMembersActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import FormCheckbox from "FormCheckbox" /* 8085 */;
-import memoResult1Default from "memoResult1" /* 9965 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 16830 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useCheckboxA11yNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import FormCheckbox from "../../../../../design/components/Forms/native/FormCheckbox.native.tsx";
+import memoResult1Default from "../../../native/DetailedGuildIdentityUserRow.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MAX_BULK_ROLE_MEMBERS_ADD } from "../../GuildSettingsRoleConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function _toPropertyKey(obj) {

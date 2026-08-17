@@ -1,10 +1,10 @@
 // discord_common/js/packages/flash-list/index.js
-import _mod7036 from "module_7036" /* 7036 */;
-import importAllResult from "noop" /* 19 */;
-import { RefreshControl } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import _mod7036 from "../../../../_runtime/metro/07036__.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { RefreshControl } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../discord_app/utils/PlatformUtils.tsx";
+import importDefaultResult from "../../../../discord_app/modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 let c3 = importAllResult;

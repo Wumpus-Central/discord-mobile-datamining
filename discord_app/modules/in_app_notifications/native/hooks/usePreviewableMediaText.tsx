@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_notifications/native/hooks/usePreviewableMediaText.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMediaText.tsx");

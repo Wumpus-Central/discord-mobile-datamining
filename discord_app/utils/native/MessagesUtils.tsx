@@ -1,7 +1,7 @@
 // discord_app/utils/native/MessagesUtils.tsx
-import set from "set" /* 2 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "../../modules/guild_templates/GuildTemplatesConstants.tsx";
+import ME from "../../Constants.tsx";
 
 ({ InviteStates: obj1, MessageEmbedTypes: c3 } = ME);
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;

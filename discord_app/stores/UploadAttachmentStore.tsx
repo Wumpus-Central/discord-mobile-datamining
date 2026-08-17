@@ -1,10 +1,10 @@
 // discord_app/stores/UploadAttachmentStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleChanged from "handleChanged" /* 4825 */;
-import set2 from "set" /* 4828 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import handleChanged from "DraftStore.tsx";
+import set2 from "../lib/uploader/CloudUpload.tsx";
 
 const DraftType = handleChanged.DraftType;
 const MAX_UPLOAD_COUNT = ME.MAX_UPLOAD_COUNT;

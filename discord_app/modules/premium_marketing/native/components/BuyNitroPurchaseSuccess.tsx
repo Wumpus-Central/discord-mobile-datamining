@@ -1,11 +1,11 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import { reset } from "usePremiumPlanPurchasedStore" /* 7392 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { reset } from "../../../premium/native/PremiumPlanPurchasedStore.tsx";
+import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

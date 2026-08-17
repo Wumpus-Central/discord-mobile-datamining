@@ -1,8 +1,8 @@
 // discord_app/modules/action_sheet/native/ActionSheetActionCreators.tsx
-import noopAll from "noop" /* 19 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["impressionName", "impressionProperties", "backdropKind", "disableHapticOnOpen", "appEntryKey"];

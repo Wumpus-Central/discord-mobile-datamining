@@ -1,12 +1,12 @@
 // discord_app/modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set" /* 5427 */;
-import { jsx } from "jsxProd" /* 21 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import SafetyHubView from "SafetyHubConstants.tsx";
+import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "../age_assurance/AgeVerificationConstants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ AGE_APPEAL_ACTION_SHEET_NAME: c4, AGE_CHECK_POLL_DELAY_MS: c5 } = SafetyHubView);

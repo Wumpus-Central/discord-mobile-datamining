@@ -1,9 +1,9 @@
 // discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
-import set from "set" /* 2 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 13825 */;
-import items2 from "items2" /* 13820 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import NativeNotifSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
+import items2 from "../NotificationSettingsConstants.tsx";
 
 function inferImportanceFromBehavior(visibility) {
   if (!("ringtone" in visibility)) {

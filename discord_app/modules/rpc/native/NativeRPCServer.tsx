@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/native/NativeRPCServer.tsx
-import root from "root" /* 8754 */;
-import registerTransportDefault from "registerTransport" /* 13892 */;
+import root from "../../../../_runtime/08754_root.js";
+import registerTransportDefault from "../RPCServer.tsx";
 
 require = arg1;
 const tmp2 = new registerTransportDefault(() => Promise.resolve(root));

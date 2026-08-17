@@ -1,6 +1,6 @@
 // discord_app/modules/activate_device/useDeviceCodeAuthorizeCallback.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 function _createTwoWayLink() {

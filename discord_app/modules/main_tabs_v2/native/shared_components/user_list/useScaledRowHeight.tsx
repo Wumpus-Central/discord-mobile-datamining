@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import getFontScale from "getFontScale" /* 4751 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../../design/tokens/native/useToken.tsx";
+import getFontScale from "../../../../screen/native/useFontScale.tsx";
 
 let result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx");
 

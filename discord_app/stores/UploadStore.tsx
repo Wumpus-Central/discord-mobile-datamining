@@ -1,7 +1,7 @@
 // discord_app/stores/UploadStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "reinjectEphemerals" /* 4994 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_0 from "MessageStore.tsx";
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

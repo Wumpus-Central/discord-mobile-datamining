@@ -1,6 +1,6 @@
 // discord_app/modules/activities/panel/native/ActivityPanelStateContext.tsx
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
-import importAllResult from "noop" /* 19 */;
+import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const obj = {
   mode: require("ActivityPanelModes").ActivityPanelModes.PANEL,

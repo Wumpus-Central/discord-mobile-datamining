@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useEventException from "useEventException" /* 8790 */;
-import useEventSchedule from "useEventSchedule" /* 8791 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useEventException from "../useEventException.tsx";
+import useEventSchedule from "../useEventSchedule.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../GuildScheduledEventStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
 
 require = arg1;
 ({ GuildScheduledEventUserResponses: c4, GuildScheduledEventStatusDone: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);

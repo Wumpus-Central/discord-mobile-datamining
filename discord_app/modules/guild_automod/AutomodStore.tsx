@@ -1,10 +1,10 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { AutomodTriggerType } from "AutomodEventType" /* 11042 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
-import identity from "identity" /* 700 */;
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { AutomodTriggerType } from "Constants.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
+import identity from "../../../_runtime/00700_identity.js";
 import { isIterable } from "../../../_runtime/04006_isIterable.js";
 
 const require = arg1;

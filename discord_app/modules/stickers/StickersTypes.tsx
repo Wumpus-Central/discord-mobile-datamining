@@ -1,7 +1,7 @@
 // discord_app/modules/stickers/StickersTypes.tsx
-import set from "set" /* 2 */;
-import TypeTag2 from "TypeTag" /* 1432 */;
-import MetaStickerType from "MetaStickerType" /* 4965 */;
+import set from "../../../_runtime/00002_set.js";
+import TypeTag2 from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
+import MetaStickerType from "../../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
 
 const TypeTag = TypeTag2.TypeTag;
 const result = set.fileFinishedImporting("modules/stickers/StickersTypes.tsx");

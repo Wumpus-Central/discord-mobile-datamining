@@ -1,11 +1,11 @@
 // discord_app/modules/media_viewer/native/components/MediaModal.tsx
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "module_9010" /* 9010 */;
-import closure_10 from "getState" /* 7383 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { createElement } from "noop" /* 19 */;
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../panels/morphable/AppFreezeStore.tsx";
+import closure_10 from "../../../../stores/native/AppStateStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import { createElement } from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ Image: c5, Modal: closure_6, StyleSheet: error, View: closure_8 } = get_ActivityIndicator);

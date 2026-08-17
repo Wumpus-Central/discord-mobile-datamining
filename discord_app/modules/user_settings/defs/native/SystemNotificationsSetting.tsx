@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/SystemNotificationsSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus" /* 4839 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { NotificationAuthorizationStatus as closure_6 } from "../../../native_permissions/NativePermissionConstants.tsx";
+import EventActionType from "../../../nuf/native/components/notification/NotificationPermissionConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function _handleEnableSystemNotification() {

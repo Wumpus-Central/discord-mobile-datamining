@@ -1,5 +1,5 @@
 // discord_common/js/packages/markup/MarkupASTUtils.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../../../_runtime/00002_set.js";
 
 function collectAst(arr) {
   let items = arg1;

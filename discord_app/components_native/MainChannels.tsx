@@ -1,16 +1,16 @@
 // discord_app/components_native/MainChannels.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4235 */;
-import setLevels from "setLevels" /* 10725 */;
-import setLevelsDefault from "setLevels" /* 10725 */;
-import context from "context" /* 15288 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 15624 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import MobileHomeDrawerExperiment2 from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
+import setLevels from "../modules/app_startup/StartupProfiler.tsx";
+import setLevelsDefault from "../modules/app_startup/StartupProfiler.tsx";
+import context from "../modules/home_drawer/native/useHomeDrawerGesture.tsx";
+import NonCollapsableGestureDetector from "../modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../Constants.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function LeftPanelContent(panelStyles) {

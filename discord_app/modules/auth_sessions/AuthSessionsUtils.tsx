@@ -1,9 +1,9 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handleInit" /* 14093 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "AuthSessionsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");

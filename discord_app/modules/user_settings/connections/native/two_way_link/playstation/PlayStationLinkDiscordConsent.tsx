@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx
-import closure_2 from "noop" /* 19 */;
-import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkModalScenes" /* 9782 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import { PLAYSTATION_CLIENT_SCOPES } from "XBOX_URL_BASE" /* 9763 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../../../_runtime/00019_noop.js";
+import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkConstants.tsx";
+import { PlatformTypes } from "../../../../../../Constants.tsx";
+import { PLAYSTATION_CLIENT_SCOPES } from "../../../../../game_console/GameConsoleConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");

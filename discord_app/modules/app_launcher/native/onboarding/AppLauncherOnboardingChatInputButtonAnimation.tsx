@@ -1,20 +1,20 @@
 // discord_app/modules/app_launcher/native/onboarding/AppLauncherOnboardingChatInputButtonAnimation.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import timingNone from "timingNone" /* 4667 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import playDefault from "play" /* 7130 */;
-import useGradientBottom from "useGradientBottom" /* 8501 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 11210 */;
-import _mod11238 from "module_11238" /* 11238 */;
-import _mod11406 from "module_11406" /* 11406 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timingNone from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import MINIMUM_HIT_AREA from "../../../../design/components/Button/native/ButtonConstants.native.tsx";
+import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
+import useGradientBottom from "../../../client_themes/native/ClientThemesOverrides.tsx";
+import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
+import _mod11238 from "../../../../../_runtime/metro/11238__.js";
+import _mod11406 from "../../../../../_runtime/metro/11406__.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

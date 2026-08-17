@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { MessageTypes } from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import closure_3 from "../../../../guild_member_verification/GuildJoinRequestStore.tsx";
+import closure_4 from "../../../../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_5 from "../../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
+import { MessageTypes } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");

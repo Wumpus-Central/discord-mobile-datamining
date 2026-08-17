@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/native/FamilyCenterNativeUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
-import closure_3 from "initialize" /* 4993 */;
-import items from "items" /* 5297 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import maybeFetchCollectiblesForInvoicesDefault from "../FamilyCenterActionCreators.tsx";
+import closure_3 from "../FamilyCenterPendingConnectionStore.tsx";
+import items from "../FamilyCenterConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 ({ FAMILY_CENTER_LINK_REQUEST_REGEX: c4, FamilyCenterAction: c5 } = items);

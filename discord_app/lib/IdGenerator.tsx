@@ -1,6 +1,6 @@
 // discord_app/lib/IdGenerator.tsx
-import set from "set" /* 2 */;
-import generate from "generate" /* 510 */;
+import set from "../../_runtime/00002_set.js";
+import generate from "../../discord_common/js/packages/id-generator/IdGenerator.tsx";
 
 const result = set.fileFinishedImporting("lib/IdGenerator.tsx");
 

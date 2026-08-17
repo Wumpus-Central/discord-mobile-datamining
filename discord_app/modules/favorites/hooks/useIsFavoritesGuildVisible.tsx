@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/hooks/useIsFavoritesGuildVisible.tsx
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 9988 */;
-import closure_2 from "handleConnectionOpen" /* 4197 */;
-import closure_3 from "initializeFromUserSettings" /* 1394 */;
+import getFavoritesAwareGuildName from "../FavoritesUtils.tsx";
+import useFavoritesAccess from "../FavoritesHooks.tsx";
+import hasOfferedFavoritesGuildOnboarding from "../onboarding/FavoritesGuildIntroPopover.tsx";
+import closure_2 from "../../../stores/SelectedGuildStore.tsx";
+import closure_3 from "../FavoriteStore.tsx";
 
 require = arg1;
 function computeIsFavoritesGuildVisible(closure_3, closure_2, isExperimentEnabled) {

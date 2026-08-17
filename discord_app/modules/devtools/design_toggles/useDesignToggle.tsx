@@ -1,5 +1,5 @@
 // discord_app/modules/devtools/design_toggles/useDesignToggle.tsx
-import closure_2 from "getUserAgnosticState" /* 5294 */;
+import closure_2 from "DesignTogglesStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

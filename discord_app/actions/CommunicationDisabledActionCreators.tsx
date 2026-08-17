@@ -1,5 +1,5 @@
 // discord_app/actions/CommunicationDisabledActionCreators.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 const result = require("set").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
 

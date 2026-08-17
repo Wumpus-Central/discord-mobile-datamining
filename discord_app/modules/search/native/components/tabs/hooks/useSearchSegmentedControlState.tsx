@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_3 = { code: "function useSearchSegmentedControlStateTsx1(){const{visibleTabsStateful}=this.__closure;return visibleTabsStateful;}" };

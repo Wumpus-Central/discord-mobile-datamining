@@ -1,5 +1,5 @@
 // discord_app/modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx
-import closure_0 from "fetchFingerprint" /* 1218 */;
+import closure_0 from "../../stores/AuthenticationStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
 

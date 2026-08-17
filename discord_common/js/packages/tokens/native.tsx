@@ -1,16 +1,16 @@
 // discord_common/js/packages/tokens/native.tsx
-import set from "set" /* 2 */;
-import nDefault from "n" /* 689 */;
-import items from "items" /* 713 */;
-import _private from "_private" /* 714 */;
-import _private2 from "_private" /* 715 */;
-import _private3 from "_private" /* 716 */;
-import _private4 from "_private" /* 717 */;
-import _private5 from "_private" /* 718 */;
-import mapValuesDefault from "mapValues" /* 719 */;
-import Radius from "Radius" /* 806 */;
-import Layout from "Layout" /* 807 */;
-import interpolate from "interpolate" /* 808 */;
+import set from "../../../../_runtime/00002_set.js";
+import nDefault from "../../../../_runtime/00689_n.js";
+import items from "themes/generated/generated-definitions.tsx";
+import _private from "colors/generated/native/generated-definitions.tsx";
+import _private2 from "colors/generated/native/experiment-definitions.tsx";
+import _private3 from "colors/generated/raw-color-definitions.tsx";
+import _private4 from "modules/generated/generated-definitions.tsx";
+import _private5 from "shadows/generated/shared/generated-definitions.tsx";
+import mapValuesDefault from "../../../../_runtime/00719_mapValues.js";
+import Radius from "radii/generated/generated-definitions.tsx";
+import Layout from "layout/generated/generated-definitions.tsx";
+import interpolate from "transforms.tsx";
 
 const Themes = items._private.Themes;
 const SemanticColors = _private._private.SemanticColors;

@@ -1,14 +1,14 @@
 // discord_app/modules/forums/ForumPostMediaUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateState" /* 7271 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../threads/ThreadMessageStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MessageStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 

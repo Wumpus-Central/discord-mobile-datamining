@@ -1,8 +1,8 @@
 // discord_app/modules/device/native/DeviceMedia.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10279 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = keys.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));

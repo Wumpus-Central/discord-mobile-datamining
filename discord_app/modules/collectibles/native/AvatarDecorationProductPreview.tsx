@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/AvatarDecorationProductPreview.tsx
-import noopAll from "noop" /* 19 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
-import firstAvatarDecoration2 from "firstAvatarDecoration" /* 9205 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import firstAvatarDecoration2 from "../hooks/useShopProductItems.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

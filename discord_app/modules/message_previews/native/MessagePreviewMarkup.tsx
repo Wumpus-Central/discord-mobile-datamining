@@ -1,11 +1,11 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
-import privDefault from "priv" /* 1405 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
-import tDefault from "t" /* 4092 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6808 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
-import defaultReactFnDefault from "defaultReactFn" /* 10054 */;
+import privDefault from "../../../../_runtime/01405_priv.js";
+import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import tDefault from "../../../../_runtime/04092_t.js";
+import get_defaultRulesDefault from "../../markup/MarkupUtils.tsx";
+import combineMarkupRulesDefault from "../../markup/combineMarkupRules.tsx";
+import parseLinkDefault from "../../markup/MarkupRules.tsx";
+import defaultReactFnDefault from "../../markup/native/MarkupMessagePreviewReactRules.tsx";
 
 require = arg1;
 function getOrParseMessagePreviewMarkupAST(arg0) {

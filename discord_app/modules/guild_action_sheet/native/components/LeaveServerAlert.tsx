@@ -1,7 +1,7 @@
 // discord_app/modules/guild_action_sheet/native/components/LeaveServerAlert.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const GuildFeatures = ME.GuildFeatures;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

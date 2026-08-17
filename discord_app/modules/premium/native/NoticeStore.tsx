@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/NoticeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage4 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import closure_3 from "emitChanges" /* 7421 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
-import { NoticeTypes } from "ME" /* 676 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import tDefault from "../../../../_runtime/03975_t.js";
+import closure_3 from "../../../stores/billing/UserOfferStore.tsx";
+import { PremiumSubscriptionSKUs } from "../PremiumConstants.tsx";
+import { NoticeTypes } from "../../../Constants.tsx";
 
 require = arg1;
 function clearDismissUntil(arg0) {

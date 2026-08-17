@@ -1,16 +1,16 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
-import _modDef11531 from "module_11531" /* 11531 */;
-import _modDef15862 from "module_15862" /* 15862 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleReaction" /* 4971 */;
-import closure_6 from "prototype" /* 11510 */;
-import closure_7 from "handleSearchQuery" /* 11535 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { ComponentActions } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import apply from "apply" /* 12 */;
+import _modDef11531 from "../../tracking/Tracking.tsx";
+import _modDef15862 from "pages/ErrorScreen.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../SearchMessageStore.tsx";
+import closure_6 from "../../stores/SearchQueryStore.tsx";
+import closure_7 from "../../stores/SearchTabsLayoutStore.tsx";
+import MessageEmbedTypes from "../../../SearchConstants.tsx";
+import { ComponentActions } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import apply from "../../../../../../_runtime/00012_apply.js";
 
 const require = arg1;
 function NoSearchResultsScreen(searchContext) {

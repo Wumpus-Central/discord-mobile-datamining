@@ -1,10 +1,10 @@
 // discord_app/modules/errors/av_errors/AVErrorContext.tsx
-import isStreamKey from "isStreamKey" /* 4531 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "initialize" /* 4558 */;
+import isStreamKey from "../../go_live/utils/StreamKeyUtils.tsx";
+import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import closure_2 from "../../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../../stores/StreamRTCConnectionStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");

@@ -1,10 +1,10 @@
 // discord_app/modules/routing/native/BackPressManager.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import useKeyboardType from "useKeyboardType" /* 4239 */;
-import initializeDefault from "initialize" /* 4720 */;
-import updateContextMenuState from "updateContextMenuState" /* 9959 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import updateContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 
 function handleBackPress() {
   let obj = updateContextMenuState;

@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx
-import closure_2 from "handleInviteData" /* 4295 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../../../stores/GuildMemberCountStore.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,18 +1,18 @@
 // discord_app/modules/interaction_components/native/actions/FileUploadActionComponent.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import formatSize from "formatSize" /* 4269 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
-import flattenComponents from "flattenComponents" /* 4805 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import FileUpIcon from "FileUpIcon" /* 13987 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import { NOOP } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import formatSize from "../../../../utils/FileSizeUtils.tsx";
+import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import flattenComponents from "../../InteractionComponentUtils.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import { DraftType } from "../../../../stores/DraftStore.tsx";
+import { NOOP } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MainAreaCanUpload(arg0) {

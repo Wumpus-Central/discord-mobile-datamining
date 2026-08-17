@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/useIsNsfwGated.tsx
-import closure_2 from "initialize" /* 5253 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "../../stores/GuildNSFWAgreeStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

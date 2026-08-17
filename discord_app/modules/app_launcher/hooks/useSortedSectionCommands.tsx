@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/hooks/useSortedSectionCommands.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { CommandListSortOrder } from "CommandListSortOrder" /* 11313 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { CommandListSortOrder } from "../AppLauncherConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 

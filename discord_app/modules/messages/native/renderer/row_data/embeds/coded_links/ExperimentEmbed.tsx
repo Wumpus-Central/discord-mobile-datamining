@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import { ExperimentEmbedType } from "ExperimentBuckets" /* 4289 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
+import { Image } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../../../stores/AuthenticationStore.tsx";
+import { ExperimentEmbedType } from "../../../../../../experiments/ExperimentConstants.tsx";
+import { InviteTypes } from "../../../../../../instant_invite/Constants.tsx";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function ExperimentOverrideActionSheet(override) {

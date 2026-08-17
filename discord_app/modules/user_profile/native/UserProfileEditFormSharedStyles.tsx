@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormSharedStyles.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 ({ ARBITRARY_LARGE_OFFSET, FLOATING_UPSELL_HEIGHT } = ARBITRARY_LARGE_OFFSET);
 let obj = { container: { flex: 1 }, bounceOffset: null, avatarContainer: null, formContainer: null, errorContainer: null, floatingUpsell: null };

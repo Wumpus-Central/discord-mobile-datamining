@@ -1,10 +1,10 @@
 // discord_common/js/packages/media-engine/index.tsx
-import set from "set" /* 2 */;
-import destroy from "destroy" /* 4570 */;
-import destroy2 from "destroy" /* 4580 */;
-import Video from "Video" /* 4640 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 4641 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../../../_runtime/00002_set.js";
+import destroy from "native/index.tsx";
+import destroy2 from "BaseConnection.tsx";
+import Video from "MediaEngineDummy.tsx";
+import MediaEngineEvent from "MediaEngineEvent.tsx";
+import DesktopSources from "Constants.tsx";
 
 let closure_2 = DesktopSources.MediaEngineImplementations;
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");

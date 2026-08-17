@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4733 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "freshTeenActivityWithMap" /* 5296 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { AgeGateSource } from "result" /* 1221 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import items from "items" /* 5297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../parent_tools/FamilyCenterStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { AgeGateSource } from "../../../age_gate/AgeGateConstants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import items from "../../../parent_tools/FamilyCenterConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FamilyCenterLoading() {

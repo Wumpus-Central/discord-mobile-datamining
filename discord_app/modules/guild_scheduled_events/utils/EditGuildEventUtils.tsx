@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx
-import getRRule from "getRRule" /* 8785 */;
-import getChannelFromEvent from "getChannelFromEvent" /* 8788 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import getRRule from "ScheduleUtils.tsx";
+import getChannelFromEvent from "EntityUtils.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
 
 require = arg1;
 ({ GuildScheduledEventEntityTypes: c3, GuildScheduledEventStatus: c4, GuildScheduledEventPrivacyLevel: c5, FAKE_EVENT_ID: closure_6 } = GUILD_EVENT_MAX_NAME_LENGTH);

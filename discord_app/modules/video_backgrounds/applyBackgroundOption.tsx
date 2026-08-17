@@ -1,12 +1,12 @@
 // discord_app/modules/video_backgrounds/applyBackgroundOption.tsx
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9662 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9664 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9666 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9660 */;
-import VideoFilterType from "VideoFilterType" /* 8381 */;
-import { NOOP } from "ME" /* 676 */;
+import _fetchVideoFilterAssets from "VideoBackgroundActionCreators.tsx";
+import getLastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption.tsx";
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "VideoBackgroundStore.tsx";
+import VideoFilterType from "VideoBackgroundConstants.tsx";
+import { NOOP } from "../../Constants.tsx";
 
 require = arg1;
 function _getFilterBlob() {

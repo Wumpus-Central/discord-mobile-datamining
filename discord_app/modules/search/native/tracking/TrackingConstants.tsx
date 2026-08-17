@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/tracking/TrackingConstants.tsx
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import set from "../../../../../_runtime/00002_set.js";
+import MessageEmbedTypes from "../../SearchConstants.tsx";
 
 ({ SearchHistoryItemTypes, SearchTabs } = MessageEmbedTypes);
 let obj = { RECENT: "recent", CHANNELS: "channels", MEDIA: "media", PINS: "pins", LINKS: "links", FILES: "files", MESSAGES: "messages", PEOPLE: "people", MEMBERS: "members", THREADS: "threads" };

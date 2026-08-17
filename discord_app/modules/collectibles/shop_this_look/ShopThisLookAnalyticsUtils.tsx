@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/shop_this_look/ShopThisLookAnalyticsUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let obj = { PROFILE_FRAME: "profile_frame", PROFILE_EFFECT: "profile_effect", AVATAR_DECORATION: "avatar_decoration", NAMEPLATE: "nameplate" };

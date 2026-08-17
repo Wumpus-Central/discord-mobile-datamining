@@ -1,13 +1,13 @@
 // discord_app/modules/guild_automod/GuildAutomodActionCreators.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import _transformMetadataToCamelCase from "_transformMetadataToCamelCase" /* 11048 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import _transformMetadataToCamelCase from "DataUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 import { _transformMetadataToCamelCase } from "DataUtils.tsx";
 import { getPromiseableActionHandlers } from "GuildAutomodActionActionCreators.native.tsx";

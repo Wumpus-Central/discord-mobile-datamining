@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortCategoryList" /* 15404 */;
-import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import { FAVORITES } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../guild_settings/GuildSettingsModalChannelsStore.tsx";
+import { ALL_CHANNEL_TYPES } from "../../../../records/ChannelRecord.tsx";
+import { FAVORITES } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/guild/native/GuildBadge.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import registerAssetDefault from "registerAsset" /* 8549 */;
-import registerAssetDefault2 from "registerAsset" /* 8550 */;
-import registerAssetDefault3 from "registerAsset" /* 8551 */;
-import registerAssetDefault4 from "registerAsset" /* 8552 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Button from "../../../design/void/native.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../../../utils/GuildRecordUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/08549_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/08550_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/08551_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/08552_registerAsset.js";
+import { GuildFeatures } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function getGuildBadgeSource(guild, flag) {

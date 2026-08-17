@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 12555 */;
-import closure_2 from "getUserAgnosticState" /* 12548 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import dispatcherDefault from "../../../voice_overlay/native/MobileVoiceOverlayActionCreators.tsx";
+import closure_2 from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

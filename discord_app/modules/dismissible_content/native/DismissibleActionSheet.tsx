@@ -1,6 +1,6 @@
 // discord_app/modules/dismissible_content/native/DismissibleActionSheet.tsx
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import closure_2 from "noop" /* 19 */;
+import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");
 

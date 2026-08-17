@@ -1,8 +1,8 @@
 // discord_app/modules/errors/av_errors/AVErrorStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import areSetsEqual from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function isAVErrorContextOfType(type, CAMERA_SEND_LOW_FPS) {

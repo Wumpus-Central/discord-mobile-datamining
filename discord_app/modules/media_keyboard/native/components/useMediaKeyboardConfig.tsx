@@ -1,8 +1,8 @@
 // discord_app/modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx
-import useUploadDisabledDefault from "useUploadDisabled" /* 11397 */;
-import closure_3 from "noop" /* 19 */;
-import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1624 */;
-import ME from "ME" /* 676 */;
+import useUploadDisabledDefault from "../useUploadDisabled.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { MediaKeyboardTarget } from "../MediaKeyboardConstants.tsx";
+import ME from "../../../../Constants.tsx";
 
 const require = arg1;
 ({ ChannelTypesSets: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);

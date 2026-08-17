@@ -1,20 +1,20 @@
 // discord_app/modules/threads/ThreadActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import dispatcherDefault2 from "dispatcher" /* 7524 */;
-import setActiveCommand from "setActiveCommand" /* 7525 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "listKey" /* 7513 */;
-import { PAGE_SIZE } from "listKey" /* 7513 */;
-import closure_10 from "storeThread" /* 4023 */;
-import closure_11 from "handleSummarizeThreadFinish" /* 7523 */;
-import ME from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import dispatcherDefault2 from "../../actions/DraftActionCreators.tsx";
+import setActiveCommand from "../application_commands/ApplicationCommandActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { createChannelRecordFromServer as closure_4 } from "../../records/ChannelRecord.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "ArchivedThreadsStore.tsx";
+import { PAGE_SIZE } from "ArchivedThreadsStore.tsx";
+import closure_10 from "JoinedThreadsStore.tsx";
+import closure_11 from "ThreadSummaryStore.tsx";
+import ME from "../../Constants.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 

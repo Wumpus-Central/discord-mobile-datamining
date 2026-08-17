@@ -1,12 +1,12 @@
 // discord_app/modules/soundboard/trackSoundPlayed.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "initialize" /* 4504 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_2 from "../game_detection/RunningGameStore.native.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import { DEFAULT_SOUND_GUILD_ID } from "SoundboardConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
 
 ({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: c9 } = GuildFeatures);
 const result = require("set").fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");

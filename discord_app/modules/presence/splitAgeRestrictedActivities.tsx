@@ -1,7 +1,7 @@
 // discord_app/modules/presence/splitAgeRestrictedActivities.tsx
-import set from "set" /* 2 */;
-import isAgeRestrictedClassificationReference from "isAgeRestrictedClassificationReference" /* 4785 */;
-import apexExperiment from "apexExperiment" /* 13310 */;
+import set from "../../../_runtime/00002_set.js";
+import isAgeRestrictedClassificationReference from "../content_classification/ContentClassificationReference.tsx";
+import apexExperiment from "ContentClassificationPresenceFilterExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 

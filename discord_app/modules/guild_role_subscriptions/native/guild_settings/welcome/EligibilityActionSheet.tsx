@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 16908 */;
-import EligibilityChecklistRowDefault from "EligibilityChecklistRow" /* 16912 */;
-import closure_3 from "noop" /* 19 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useCreatorMonetizationEligibilityItemsDefault from "../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx";
+import EligibilityChecklistRowDefault from "../../components/EligibilityChecklist.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { UserSettingsSections } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

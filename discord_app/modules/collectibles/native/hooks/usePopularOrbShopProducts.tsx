@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/hooks/usePopularOrbShopProducts.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "getFetchState" /* 8963 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_9 from "fromServer" /* 5303 */;
-import { CollectiblesMobileShopScreen as closure_10 } from "items" /* 678 */;
+import setDefault from "../../../../utils/Durations.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../storefront/StorefrontProductStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../CollectiblesCategoryStore.tsx";
+import closure_9 from "../../records/CollectiblesProductRecord.tsx";
+import { CollectiblesMobileShopScreen as closure_10 } from "../../CollectiblesShopConstants.tsx";
 
 const require = arg1;
 let closure_11 = 10 * setDefault.Millis.SECOND;

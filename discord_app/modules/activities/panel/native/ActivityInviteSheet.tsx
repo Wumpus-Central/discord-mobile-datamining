@@ -1,16 +1,16 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef8928 from "module_8928" /* 8928 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import setSendState from "setSendState" /* 11887 */;
-import closure_8 from "_computeRows" /* 11502 */;
-import { ActivityActionTypes } from "ME" /* 676 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import { NOOP_NULL } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef8928 from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import setSendState from "../../../instant_invite/InstantInviteSendStateStore.tsx";
+import closure_8 from "../../../../stores/InviteSuggestionsStore.tsx";
+import { ActivityActionTypes } from "../../../../Constants.tsx";
+import InviteSendStates from "../../../instant_invite/Constants.tsx";
+import { NOOP_NULL } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function Loading() {

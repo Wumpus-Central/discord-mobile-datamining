@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/AppLauncherStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import AppLauncherEntrypoint from "AppLauncherTypes.tsx";
 
 require = arg1;
 function handleDismissWithDismissed() {

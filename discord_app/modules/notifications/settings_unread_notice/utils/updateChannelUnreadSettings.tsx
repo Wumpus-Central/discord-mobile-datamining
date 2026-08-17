@@ -1,11 +1,11 @@
 // discord_app/modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx
-import UserNotificationSettings from "UserNotificationSettings" /* 6795 */;
-import _modDef6798 from "module_6798" /* 6798 */;
-import resetGuildUnreadFlags from "resetGuildUnreadFlags" /* 10091 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { AnalyticsObjects } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
+import UserNotificationSettings from "../../../../utils/NotificationSettingsUtils.tsx";
+import _modDef6798 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import resetGuildUnreadFlags from "../../settings/utils/notificationSettingsFlagUtils.tsx";
+import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { AnalyticsObjects } from "../../../../Constants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { ChannelNotificationSettingsFlags as closure_6 } from "../../../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx");

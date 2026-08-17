@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/voice/AudioSettingsManager.tsx
-import Storage2 from "Storage" /* 595 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import initializeDefault from "initialize" /* 5038 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9657 */;
-import getPendingAudioSettings from "getPendingAudioSettings" /* 13178 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "set" /* 4540 */;
-import closure_5 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import importDefaultResult from "apply" /* 12 */;
+import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import updateUserGuildSettings from "../UserSettingsProtoActionCreators.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import AudioSettingsDefaultVolumes from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
+import getPendingAudioSettings from "AudioSettingsPending.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../game_console/GameConsoleStore.tsx";
+import closure_5 from "../../soundboard/SoundboardStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import { MediaEngineContextTypes } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import importDefaultResult from "../../../../_runtime/00012_apply.js";
 
 require = arg1;
 function handleConnectionOpen() {

@@ -1,16 +1,16 @@
 // discord_app/modules/guilds_bar/native/GuildsBarUnreadBars.tsx
-import renderDefaultEmpty from "renderDefaultEmpty" /* 8124 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "insertUnsortedGuilds" /* 5078 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import renderDefaultEmpty from "../../../lib/native/FastList.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/GuildReadStateStore.tsx";
+import closure_7 from "../../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../../stores/SortedGuildStore.tsx";
+import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
+import GUILD_ITEM_SIZE from "GuildsBarConstants.tsx";
+import CONNECTION_BANNER_HEIGHT from "../../main_tabs_v2/native/you_bar/YouBarConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function checkNodeAndIterate(arg0) {

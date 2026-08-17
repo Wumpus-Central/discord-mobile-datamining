@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/base_components/RecommendationAppRow.tsx
-import noopAll from "noop" /* 19 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import AppRowLabel from "AppRowLabel" /* 11258 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import AppRowLabel from "../screens/home/AppLauncherHomeScreen.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

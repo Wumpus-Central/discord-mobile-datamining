@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/transitionToActivity.native.tsx
-import set from "set" /* 2 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
-import ChannelCallCameraPreviewDefault from "ChannelCallCameraPreview" /* 8668 */;
-import VoiceChatDrawerState2 from "VoiceChatDrawerState" /* 8669 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 8703 */;
-import closure_4 from "participantFromServer" /* 1390 */;
+import set from "../../../../_runtime/00002_set.js";
+import getEmbeddedActivityLocationChannelId from "embeddedActivityLocationUtils.tsx";
+import ChannelCallCameraPreviewDefault from "../../video_calls/native/components/ChannelCallModal.tsx";
+import VoiceChatDrawerState2 from "../../video_calls/native/ChannelCallStore.tsx";
+import BOX_MODE_ACTIONSHEET_WIDTH from "../../video_calls/native/ChannelCallConstants.tsx";
+import ActivityPanelModes2 from "../panel/ActivityPanelConstants.tsx";
+import closure_4 from "../EmbeddedActivitiesStore.tsx";
 
 const setVoiceChatDrawerState = VoiceChatDrawerState2.setVoiceChatDrawerState;
 const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;

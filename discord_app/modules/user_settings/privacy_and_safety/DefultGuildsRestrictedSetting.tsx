@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx
-import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import set from "../../../../_runtime/00002_set.js";
+import explicitContentFromProto from "../UserSettings.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 

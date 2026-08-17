@@ -1,12 +1,12 @@
 // discord_app/modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import CircleErrorIcon from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

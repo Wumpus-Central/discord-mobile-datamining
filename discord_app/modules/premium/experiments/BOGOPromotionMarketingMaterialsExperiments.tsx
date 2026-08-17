@@ -1,6 +1,6 @@
 // discord_app/modules/premium/experiments/BOGOPromotionMarketingMaterialsExperiments.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-marketing-materials-v2", kind: "user", defaultConfig: false, variations: { 1: true } });
 const result = set.fileFinishedImporting("modules/premium/experiments/BOGOPromotionMarketingMaterialsExperiments.tsx");

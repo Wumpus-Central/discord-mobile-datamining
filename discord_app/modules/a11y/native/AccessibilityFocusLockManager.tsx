@@ -1,9 +1,9 @@
 // discord_app/modules/a11y/native/AccessibilityFocusLockManager.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initializeDefault from "initialize" /* 4720 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
+import set from "../../../../_runtime/00002_set.js";
+import timestampDefault from "../../debug/Logger.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import SCREEN_READER_ENABLED_GETTER from "useIsScreenReaderEnabled.native.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = new timestampDefault("AccessibilityFocusLockManager");

@@ -1,17 +1,17 @@
 // discord_app/modules/stickers/native/StickerPackHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import registerAssetDefault from "registerAsset" /* 10227 */;
-import registerAssetDefault2 from "registerAsset" /* 10228 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10229 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getStickerExtensionFromFormatType from "../StickersUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/10227_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10228_registerAsset.js";
+import StickerPackBannerDefault from "StickerPackBanner.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = PADDING_HORIZONTAL);

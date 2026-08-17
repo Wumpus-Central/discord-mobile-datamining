@@ -1,10 +1,10 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateStore.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _checkForNewerBuild from "_checkForNewerBuild" /* 13366 */;
-import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL" /* 4356 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _checkForNewerBuild from "MobileNativeUpdateUtils.tsx";
+import UPDATE_CHECK_INTERVAL from "MobileNativeUpdateConstants.tsx";
 
 ({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: c4 } = UPDATE_CHECK_INTERVAL);
 let closure_5 = new timestampDefault("MobileNativeUpdateStore");

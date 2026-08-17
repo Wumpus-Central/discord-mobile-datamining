@@ -1,16 +1,16 @@
 // discord_app/modules/gateway/GatewaySocketSingleton.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setRequestedByAll from "setRequestedBy" /* 675 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault from "set" /* 4004 */;
-import _modDef10501 from "module_10501" /* 10501 */;
-import noopDefault from "noop" /* 13188 */;
-import getInitialStateDefault from "getInitialState" /* 13227 */;
-import guildIdDefault from "guildId" /* 13230 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 500 */;
-import importDefaultResult from "awaitOnline" /* 1474 */;
+import timestampDefault from "../debug/Logger.tsx";
+import setRequestedByAll from "RequestGatewaySocket.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../lib/DiscordNative.tsx";
+import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
+import noopDefault from "GatewaySocket.tsx";
+import getInitialStateDefault from "LocalPresenceStateManager.tsx";
+import guildIdDefault from "LocalVoiceStateManager.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import set from "../../utils/PlatformUtils.tsx";
+import importDefaultResult from "../../utils/NetworkUtils.tsx";
 
 let closure_4 = new timestampDefault("ConnectionStore");
 let obj = new noopDefault();

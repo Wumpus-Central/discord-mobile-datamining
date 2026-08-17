@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 15602 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "insertUnsortedGuilds" /* 5078 */;
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import closure_4 from "../../../../stores/SortedGuildStore.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/coded_links/ApplicationCodedLink.tsx
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import CodedLinkType from "CodedLinkType" /* 4363 */;
-import set from "set" /* 2 */;
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import CodedLinkType from "CodedLink.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
 let set = new Set(items);

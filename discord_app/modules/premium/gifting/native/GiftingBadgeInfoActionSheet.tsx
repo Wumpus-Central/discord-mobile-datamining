@@ -1,15 +1,15 @@
 // discord_app/modules/premium/gifting/native/GiftingBadgeInfoActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "initialize" /* 8936 */;
-import { getSingleRequirementThreshold as closure_7 } from "initialize" /* 8936 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import messagesProxyDefault from "../GiftingBadge.messages.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../badges/BadgeDirectoryStore.tsx";
+import { getSingleRequirementThreshold as closure_7 } from "../../../badges/BadgeDirectoryStore.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

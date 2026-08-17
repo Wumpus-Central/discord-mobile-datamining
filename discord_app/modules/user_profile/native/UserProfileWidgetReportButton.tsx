@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetReportButton.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import FlagIcon from "FlagIcon" /* 9435 */;
-import ContextMenu from "ContextMenu" /* 9958 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
+import { Pressable } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

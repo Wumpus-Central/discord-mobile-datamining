@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/native/VoiceActionSheetManager.tsx
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../stores/VoiceStateStore.tsx";
 
 let require = arg1;
 initializeDefault;

@@ -1,8 +1,8 @@
 // discord_app/modules/soundpacks/SoundpackStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import Soundpacks2 from "Soundpacks" /* 10042 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import Soundpacks2 from "Constants.tsx";
 
 const Soundpacks = Soundpacks2.Soundpacks;
 let closure_1 = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };

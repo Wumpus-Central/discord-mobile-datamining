@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import _isStreamingDefault from "_isStreaming" /* 8411 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8886 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14641 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { ActivityTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import computeChannelNameDefault from "../../../../channel/useChannelName.tsx";
+import _isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
+import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
+import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HappeningNowCard.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import { ActivityTypes } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

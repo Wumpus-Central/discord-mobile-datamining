@@ -1,12 +1,12 @@
 // discord_app/modules/interaction_components/InteractionComponentUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import v1 from "v1" /* 514 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import CheckpointPersonas from "CheckpointPersonas" /* 4806 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import v1 from "../../../_runtime/00514_v1.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import CheckpointPersonas from "../checkpoint/CheckpointConstants.tsx";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 
 function flattenComponents(components) {

@@ -1,10 +1,10 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx
-import setDefault from "set" /* 687 */;
-import parseDefault from "parse" /* 1484 */;
-import closure_3 from "set" /* 15074 */;
-import { Endpoints } from "ME" /* 676 */;
-import importDefaultResult from "fails" /* 584 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import setDefault from "../../../utils/Durations.tsx";
+import parseDefault from "../../../../_runtime/01484_parse.js";
+import closure_3 from "MobileGameCommunitiesStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
+import importDefaultResult from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
+import importDefaultResult1 from "../../../Dispatcher.tsx";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;

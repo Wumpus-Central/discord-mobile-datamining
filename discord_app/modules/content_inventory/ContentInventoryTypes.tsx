@@ -1,6 +1,6 @@
 // discord_app/modules/content_inventory/ContentInventoryTypes.tsx
-import set from "set" /* 2 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8344 */;
+import set from "../../../_runtime/00002_set.js";
+import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 
 const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
 

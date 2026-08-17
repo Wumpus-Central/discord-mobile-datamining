@@ -1,23 +1,23 @@
 // discord_app/stores/AuthenticationStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import extractId from "extractId" /* 513 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage6 from "Storage" /* 595 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import getToken from "getToken" /* 1371 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import prototypeDefault from "prototype" /* 4274 */;
-import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 8585 */;
-import isStaffDefault from "isStaff" /* 11587 */;
-import fetchExperiments from "fetchExperiments" /* 13554 */;
-import closure_6 from "initialize" /* 1219 */;
-import closure_7 from "clearAll" /* 1220 */;
-import ME from "ME" /* 676 */;
-import result from "result" /* 1221 */;
-import importDefaultResult from "dispatcher" /* 709 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import extractId from "../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage6 from "../../discord_common/js/packages/storage/Storage.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
+import _modDef1208 from "../utils/SentryUtils.native.tsx";
+import transitionTo from "../modules/routing/router_utils.tsx";
+import getToken from "../utils/AuthenticationUtils.tsx";
+import PermissionOverwriteType from "../flow/Server.tsx";
+import prototypeDefault from "../errors/APIError.tsx";
+import getAuthenticationErrorsFromAPIError from "../modules/auth/getAuthenticationErrorsFromAPIError.tsx";
+import isStaffDefault from "../modules/user/isStaffFromRawUser.tsx";
+import fetchExperiments from "../modules/experiments/fetchExperiments.tsx";
+import closure_6 from "BrowserHandoffStore.native.tsx";
+import closure_7 from "MobileCacheSnapshotStore.tsx";
+import ME from "../Constants.tsx";
+import result from "../modules/age_gate/AgeGateConstants.tsx";
+import importDefaultResult from "../Dispatcher.tsx";
 
 require = arg1;
 function fetchFingerprint(arg0) {

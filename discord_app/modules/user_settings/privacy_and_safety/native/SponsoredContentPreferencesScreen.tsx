@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx
-import combinedDefault from "combined" /* 1993 */;
-import _modDef13991 from "module_13991" /* 13991 */;
-import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import { HelpdeskArticles } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx");

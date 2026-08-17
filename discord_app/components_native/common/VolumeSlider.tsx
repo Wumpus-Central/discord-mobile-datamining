@@ -1,16 +1,16 @@
 // discord_app/components_native/common/VolumeSlider.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import map from "map" /* 4097 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
-import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8105 */;
-import VoiceXIcon from "VoiceXIcon" /* 12140 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources" /* 4529 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import map from "../../design/tokens/native/useToken.tsx";
+import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import _getRequireWildcardCacheDefault from "../../../_runtime/08105__getRequireWildcardCache.js";
+import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import set from "../../utils/PlatformUtils.tsx";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

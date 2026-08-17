@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import apexExperiment from "apexExperiment" /* 14820 */;
-import onUpcomingServerEventNotificationSettingsChanged from "onUpcomingServerEventNotificationSettingsChanged" /* 14821 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import apexExperiment from "../../../notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx";
+import onUpcomingServerEventNotificationSettingsChanged from "../../../notifications/upcoming_server_event/UpcomingServerEventNotificationUtils.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

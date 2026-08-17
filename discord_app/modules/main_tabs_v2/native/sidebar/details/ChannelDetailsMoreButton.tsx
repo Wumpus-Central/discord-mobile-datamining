@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8495 */;
-import registerAssetDefault from "registerAsset" /* 8904 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08904_registerAsset.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");

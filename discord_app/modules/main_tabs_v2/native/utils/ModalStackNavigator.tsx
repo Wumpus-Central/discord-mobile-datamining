@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx
-import NavigationStack from "NavigationStack" /* 6312 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import importAllResult from "noop" /* 19 */;
+import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();

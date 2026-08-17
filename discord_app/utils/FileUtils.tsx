@@ -1,10 +1,10 @@
 // discord_app/utils/FileUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import noConflictDefault from "noConflict" /* 4835 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import noConflictDefault from "../../_runtime/04835_noConflict.js";
+import closure_3 from "../stores/GuildStore.tsx";
+import closure_4 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
 const require = arg1;
 function getUploadFileSizeSum(arg0) {

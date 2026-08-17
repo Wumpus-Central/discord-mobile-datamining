@@ -1,9 +1,9 @@
 // discord_app/modules/debug/native/ShareLogsButton.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import ShareIcon from "ShareIcon" /* 12047 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import ShareIcon from "../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function ShareLogsButton() {

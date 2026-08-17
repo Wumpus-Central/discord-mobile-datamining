@@ -1,7 +1,7 @@
 // discord_app/modules/permissions/PermissionUtils.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 

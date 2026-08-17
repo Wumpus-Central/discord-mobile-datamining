@@ -1,10 +1,10 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/SelectedGuildStore.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
 
 let require = arg1;
 let c8 = null;

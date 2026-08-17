@@ -1,11 +1,11 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesUtils.tsx
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES" /* 16826 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import fuzzysearchDefault from "../../../../_runtime/06775_fuzzysearch.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import { GuildSettingsRoleEditSections as closure_6 } from "../GuildSettingsConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

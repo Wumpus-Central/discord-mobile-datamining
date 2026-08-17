@@ -1,20 +1,20 @@
 // discord_app/modules/channel_permissions/ChannelPermissionsUtils.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import fromStringAll from "fromString" /* 506 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import compareGuildRoles from "compareGuildRoles" /* 1987 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import RowType2 from "RowType" /* 8064 */;
-import _updatePermission from "_updatePermission" /* 8851 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import compareGuildRoles from "../../utils/GuildRoleUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import RowType2 from "ChannelPermissionsConstants.tsx";
+import _updatePermission from "../../actions/ChannelSettingsPermissionsActionCreators.tsx";
+import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
+import closure_8 from "../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 

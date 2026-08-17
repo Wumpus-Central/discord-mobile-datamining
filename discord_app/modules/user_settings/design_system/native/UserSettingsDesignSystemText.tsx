@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import Stack from "Stack" /* 4733 */;
-import TEXT_VARIANT2 from "TEXT_VARIANT" /* 4735 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import TEXT_VARIANT2 from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

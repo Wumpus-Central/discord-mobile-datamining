@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage4 from "Storage" /* 595 */;
-import ME from "ME" /* 676 */;
-import create from "create" /* 1341 */;
-import b64ToProto from "b64ToProto" /* 1342 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import ME from "../../Constants.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import b64ToProto from "UserSettingsUtils.tsx";
+import MAX_FAVORITES from "UserSettingsConstants.tsx";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 
 function readFavoriteGIFs(arg0) {

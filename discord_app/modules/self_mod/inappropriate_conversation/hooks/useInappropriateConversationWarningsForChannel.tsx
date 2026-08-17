@@ -1,6 +1,6 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx
-import closure_2 from "handleConnectionOpen" /* 9921 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
+import closure_2 from "../../ChannelSafetyWarningsStore.tsx";
+import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

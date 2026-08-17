@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

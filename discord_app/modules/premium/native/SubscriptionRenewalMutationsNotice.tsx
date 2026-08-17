@@ -1,14 +1,14 @@
 // discord_app/modules/premium/native/SubscriptionRenewalMutationsNotice.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isNoneSubscription } from "createFromServer" /* 4040 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isNoneSubscription } from "../../../records/SubscriptionPlanRecord.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

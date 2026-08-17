@@ -1,16 +1,16 @@
 // discord_app/modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import request from "request" /* 10755 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import useThemeDefault from "../../../../../hooks/useTheme.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import SafeAreaPaddingView from "../../../../../components_native/common/SafeAreaView.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import BottomSheetModal from "../../../../../../_runtime/06952_BottomSheetModal.js";
+import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import request from "../../../../applications/useGetOrFetchApplicationBatched.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function IdentityApplicationRow(arg0) {

@@ -1,12 +1,12 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
-import ME from "ME" /* 676 */;
-import { PremiumGuildSubscribeModalScenes as closure_11 } from "PremiumGuildSubscribeModalScenes" /* 6712 */;
-import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/billing/GuildBoostSlotStore.tsx";
+import ME from "../../../Constants.tsx";
+import { PremiumGuildSubscribeModalScenes as closure_11 } from "../../../components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx";
+import { FractionalPremiumStates } from "../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function _handleBoostPress() {

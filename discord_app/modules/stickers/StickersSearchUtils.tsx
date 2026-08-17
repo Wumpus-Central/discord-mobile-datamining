@@ -1,6 +1,6 @@
 // discord_app/modules/stickers/StickersSearchUtils.tsx
-import set from "set" /* 2 */;
-import NOOPDefault from "NOOP" /* 6714 */;
+import set from "../../../_runtime/00002_set.js";
+import NOOPDefault from "../../utils/AutocompleteUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/stickers/StickersSearchUtils.tsx");
 

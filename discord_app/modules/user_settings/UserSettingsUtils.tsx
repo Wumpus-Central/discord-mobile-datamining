@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/UserSettingsUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import create from "create" /* 1306 */;
-import _mod1307 from "module_1307" /* 1307 */;
-import create2 from "create" /* 1335 */;
-import create3 from "create" /* 1341 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { ZERO_STRING_GUILD_ID } from "ME" /* 676 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import _mod1307 from "../../../_runtime/metro/01307__.js";
+import create2 from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx";
+import create3 from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { ZERO_STRING_GUILD_ID } from "../../Constants.tsx";
 
 require = arg1;
 function b64ToProto(ProtoClass, settings) {

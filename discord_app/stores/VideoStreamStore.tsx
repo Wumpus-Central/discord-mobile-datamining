@@ -1,9 +1,9 @@
 // discord_app/stores/VideoStreamStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 function makeTimeoutKey(arg0, arg1) {
   return "" + arg0 + ":" + arg1;

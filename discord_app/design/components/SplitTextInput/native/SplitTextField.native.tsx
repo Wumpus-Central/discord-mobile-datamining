@@ -1,11 +1,11 @@
 // discord_app/design/components/SplitTextInput/native/SplitTextField.native.tsx
-import useTextFieldState from "useTextFieldState" /* 7339 */;
-import useInputClearButton from "useInputClearButton" /* 7340 */;
-import useInputStyles from "useInputStyles" /* 7345 */;
-import BaseTextField from "BaseTextField" /* 7347 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import useTextFieldState from "../../TextField/native/useTextField.native.tsx";
+import useInputClearButton from "../../Input/native/useInputClearButton.native.tsx";
+import useInputStyles from "../../Input/native/InputFieldContainer.native.tsx";
+import BaseTextField from "../../TextField/native/BaseTextField.native.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ Pressable: obj1, View: c3 } = get_ActivityIndicator);

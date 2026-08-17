@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 10102 */;
-import registerAssetDefault2 from "registerAsset" /* 13419 */;
-import registerAssetDefault3 from "registerAsset" /* 14624 */;
-import registerAssetDefault4 from "registerAsset" /* 14625 */;
-import registerAssetDefault5 from "registerAsset" /* 14626 */;
-import registerAssetDefault6 from "registerAsset" /* 14627 */;
-import registerAssetDefault7 from "registerAsset" /* 14628 */;
-import registerAssetDefault8 from "registerAsset" /* 14629 */;
-import registerAssetDefault9 from "registerAsset" /* 14630 */;
-import registerAssetDefault10 from "registerAsset" /* 14631 */;
-import registerAssetDefault11 from "registerAsset" /* 14632 */;
-import registerAssetDefault12 from "registerAsset" /* 14633 */;
-import registerAssetDefault13 from "registerAsset" /* 14634 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import registerAssetDefault from "../../../../../_runtime/10102_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13419_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/14624_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/14625_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/14626_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/14627_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/14628_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/14629_registerAsset.js";
+import registerAssetDefault9 from "../../../../../_runtime/14630_registerAsset.js";
+import registerAssetDefault10 from "../../../../../_runtime/14631_registerAsset.js";
+import registerAssetDefault11 from "../../../../../_runtime/14632_registerAsset.js";
+import registerAssetDefault12 from "../../../../../_runtime/14633_registerAsset.js";
+import registerAssetDefault13 from "../../../../../_runtime/14634_registerAsset.js";
 
 const StatusTypes = ME.StatusTypes;
 const result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");

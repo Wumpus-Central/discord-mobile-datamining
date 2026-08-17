@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/client_override_hooks/useExperimentAssignments.tsx
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getHash" /* 4288 */;
-import closure_4 from "initialize" /* 1212 */;
+import trackExposureToExperiment from "../ExperimentManager.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../ExperimentStore.tsx";
+import closure_4 from "../apex/ApexExperimentStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

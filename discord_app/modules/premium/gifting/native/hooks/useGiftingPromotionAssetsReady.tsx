@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx
-import set from "set" /* 2 */;
-import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10304 */;
-import usePreloadedAssetDefault from "usePreloadedAsset" /* 16170 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import useThemeAndReducedMotionAwareAssetUrl from "../../../promotions/MarketingComponentHooks.tsx";
+import usePreloadedAssetDefault from "../../../../image/usePreloadedAsset.native.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 

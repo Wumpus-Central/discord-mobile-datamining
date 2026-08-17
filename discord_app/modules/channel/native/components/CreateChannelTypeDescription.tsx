@@ -1,9 +1,9 @@
 // discord_app/modules/channel/native/components/CreateChannelTypeDescription.tsx
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { GuildProfileFetchStatus } from "../../../guild_profile/GuildProfileStore.tsx";
+import { ChannelTypes } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileSharedStyles.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 ({ AVATAR_CONTAINER_SIZE: obj1, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: c4, CARD_PADDING: c5, PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_SIDE_PADDING: error, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = ARBITRARY_LARGE_OFFSET);
 let closure_9 = createCacheKey.createStyles((arg0) => {

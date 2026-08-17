@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4734 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 15486 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import getLayoutStyles from "layouts/ChannelListLayout.tsx";
+import getChannelSubtitleData from "../../../../channel/native/getChannelSubtitleData.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ChannelSubtitle(arg0) {

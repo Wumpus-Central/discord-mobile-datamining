@@ -1,5 +1,5 @@
 // discord_app/modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx
-import closure_2 from "getFpMessageInfo" /* 5002 */;
+import closure_2 from "../ExplicitMediaStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

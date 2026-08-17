@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/RPCServer.tsx
-import applyDefault from "apply" /* 12 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import transformUserDefault from "transformUser" /* 8758 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import transformUserDefault from "helpers/transformUser.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { TransportTypes } from "Constants.tsx";
+import ME from "../../Constants.tsx";
 
 ({ AnalyticEvents: c4, RPCCloseCodes: c5, RPCCommands: closure_6, RPCErrors: error, RPCEvents: closure_8 } = ME);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";

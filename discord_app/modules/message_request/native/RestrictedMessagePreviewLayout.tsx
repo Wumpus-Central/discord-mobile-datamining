@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewLayout.tsx
-import set from "set" /* 2 */;
-import Button from "Button" /* 1297 */;
+import set from "../../../../_runtime/00002_set.js";
+import Button from "../../../design/void/native.tsx";
 
 const tmp2 = Button.AVATAR_SIZE_MAP[Button.AvatarSizes.NORMAL];
 const sum = tmp2 + 18;

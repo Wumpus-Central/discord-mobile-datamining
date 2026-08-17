@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/utils/ThemeUtils.tsx
-import set from "set" /* 2 */;
-import items from "items" /* 713 */;
+import set from "../../../../../_runtime/00002_set.js";
+import items from "../../tokens/themes/generated/generated-definitions.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/utils/ThemeUtils.tsx");
 

@@ -1,8 +1,8 @@
 // discord_app/modules/interaction_components/closeIFrameModal.native.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import INTERACTION_IFRAME_MODAL_KEY from "INTERACTION_IFRAME_MODAL_KEY" /* 16613 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import INTERACTION_IFRAME_MODAL_KEY from "native/InteractionIframeConstants.tsx";
 
 let closure_2 = INTERACTION_IFRAME_MODAL_KEY.INTERACTION_IFRAME_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/interaction_components/closeIFrameModal.native.tsx");

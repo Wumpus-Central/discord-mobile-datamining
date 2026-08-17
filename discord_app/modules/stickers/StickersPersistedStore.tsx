@@ -1,12 +1,12 @@
 // discord_app/modules/stickers/StickersPersistedStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "loadSavedGuildStickers" /* 6769 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
+import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "StickersStore.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 function handleStickersStoreUpdate() {
   if (stickerById.isLoaded) {

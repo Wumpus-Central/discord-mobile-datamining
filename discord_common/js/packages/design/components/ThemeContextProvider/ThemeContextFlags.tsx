@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx
-import set from "set" /* 2 */;
-import json from "json" /* 1359 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import json from "ThemeContext.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx");
 

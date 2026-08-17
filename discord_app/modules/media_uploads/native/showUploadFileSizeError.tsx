@@ -1,9 +1,9 @@
 // discord_app/modules/media_uploads/native/showUploadFileSizeError.tsx
-import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_3 from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { FileUploadErrorTypes } from "../../messages/MessageConstants.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
 const require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);

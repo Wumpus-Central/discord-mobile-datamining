@@ -1,10 +1,10 @@
 // discord_app/modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import RELATIONSHIP_COUNT_ANIMATION_THRESHOLD from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD" /* 9891 */;
+import set from "../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import RELATIONSHIP_COUNT_ANIMATION_THRESHOLD from "../Constants.tsx";
 
 let closure_3 = RELATIONSHIP_COUNT_ANIMATION_THRESHOLD.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
 const AnalyticEvents = ME.AnalyticEvents;

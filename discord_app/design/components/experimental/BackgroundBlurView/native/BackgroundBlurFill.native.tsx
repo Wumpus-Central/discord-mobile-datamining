@@ -1,11 +1,11 @@
 // discord_app/design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import animatedComponentDefault from "animatedComponent" /* 4724 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
-import closure_3 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import animatedComponentDefault from "../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx";
+import isBlurDisabledDefault from "../../../../../modules/visual_effect_view/native/VisualEffectView.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import hexToRgba from "../../../../../utils/ColorUtils.tsx";
 
 const require = arg1;
 const BLACK = ThemesDefault.unsafe_rawColors.BLACK;

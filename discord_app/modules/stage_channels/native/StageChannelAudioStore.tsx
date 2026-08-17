@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/native/StageChannelAudioStore.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import RouteTypes from "RouteTypes" /* 9649 */;
-import apexExperimentDefault from "apexExperiment" /* 16339 */;
-import closure_4 from "handleAudioRouteChanged" /* 9648 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import RouteTypes from "../../voice_calls/VoiceCallTypes.tsx";
+import apexExperimentDefault from "../../voice_calls/DefaultAudioRouteExperiment.tsx";
+import closure_4 from "../../voice_calls/AudioRouteStore.native.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/RTCConnectionStore.tsx";
 
 function handleAudioRouteChanged() {
   if (c8) {

@@ -1,7 +1,7 @@
 // discord_app/components_native/add_friend/AddFriendModalActionCreators.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("components_native/add_friend/AddFriendModalActionCreators.tsx");

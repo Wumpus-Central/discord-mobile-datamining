@@ -1,7 +1,7 @@
 // discord_app/modules/messages/MessageUtils.tsx
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/MessageUtils.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/utils/getProductName.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import getProductOrbPrice from "CollectiblesProductUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
 

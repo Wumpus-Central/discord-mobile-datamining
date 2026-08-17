@@ -1,6 +1,6 @@
 // discord_app/modules/unique_usernames/useUsernameLiveCheck.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "isRateLimited" /* 14119 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "UniqueUsernamesStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");

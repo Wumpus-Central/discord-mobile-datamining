@@ -1,9 +1,9 @@
 // discord_app/modules/quests/lib/FractionalPremiumUtils.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import resetCache from "resetCache" /* 4063 */;
+import set from "../../../../_runtime/00002_set.js";
+import setDefault from "../../../utils/Durations.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import resetCache from "../../../utils/DateUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 

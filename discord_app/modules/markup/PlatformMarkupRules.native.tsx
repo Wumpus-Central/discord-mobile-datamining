@@ -1,14 +1,14 @@
 // discord_app/modules/markup/PlatformMarkupRules.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import tDefault from "t" /* 4092 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4507 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import getChannelDefault from "getChannel" /* 6816 */;
-import _modDef6819 from "module_6819" /* 6819 */;
-import getGameMentionData from "getGameMentionData" /* 6898 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import tDefault from "../../../_runtime/04092_t.js";
+import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
+import textRegexpDefault from "MarkupTextRule.tsx";
+import getChannelDefault from "MarkupChannelMentionRule.tsx";
+import _modDef6819 from "MarkupAttachmentLinkRule.tsx";
+import getGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;

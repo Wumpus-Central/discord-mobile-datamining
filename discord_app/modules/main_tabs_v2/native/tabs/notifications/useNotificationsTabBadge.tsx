@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "_validate" /* 4801 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../notification_center/NotificationCenterItemsStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");

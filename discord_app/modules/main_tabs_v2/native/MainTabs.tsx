@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/MainTabs.tsx
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
-import useActiveThemeType from "useActiveThemeType" /* 8503 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import _modDef15269 from "module_15269" /* 15269 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import getGuildThemeNameDefault from "../../client_themes/native/useColorThemeBackground.tsx";
+import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
+import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
+import _modDef15269 from "panels/MainTabsNavigatorPanel.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

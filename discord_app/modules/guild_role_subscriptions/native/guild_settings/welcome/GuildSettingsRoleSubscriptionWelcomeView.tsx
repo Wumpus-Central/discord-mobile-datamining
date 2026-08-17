@@ -1,19 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11384 */;
-import WarningNoticeDefault from "WarningNotice" /* 16904 */;
-import HowItWorksCardDefault from "HowItWorksCard" /* 16915 */;
-import EarningPreviewDefault from "EarningPreview" /* 16919 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CREATOR_REVENUE_PORTAL_URL as closure_8 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
-import { CreatorMonetizationOnboardingMarketingSection as closure_10 } from "CreatorMonetizationApplicationState" /* 16903 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import ErrorBlockDefault from "../../components/ErrorBlock.tsx";
+import WarningNoticeDefault from "../../components/WarningNotice.tsx";
+import HowItWorksCardDefault from "HowItWorksSection.tsx";
+import EarningPreviewDefault from "CreatorBenefitsSection.tsx";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CREATOR_REVENUE_PORTAL_URL as closure_8 } from "../../../GuildRoleSubscriptionsConstants.tsx";
+import { GuildSettingsSections } from "../../../../../Constants.tsx";
+import { CreatorMonetizationOnboardingMarketingSection as closure_10 } from "../../../../creator_monetization_eligibility/CreatorMonetizationEligibilityConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ApplicationStatusNotice(arg0) {

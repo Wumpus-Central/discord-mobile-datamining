@@ -1,15 +1,15 @@
 // discord_app/modules/search/native/components/list/rows/GuildChannelRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import SearchListRow from "SearchListRow" /* 15876 */;
-import ChannelContentComponent from "ChannelContentComponent" /* 15884 */;
-import LaunchpadChannelIcon from "LaunchpadChannelIcon" /* 15886 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "MessageEmbedTypes" /* 8507 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import computeChannelNameDefault from "../../../../../channel/useChannelName.tsx";
+import getChannelIcon from "../../../../../../utils/native/ChannelUtils.tsx";
+import SearchListRow from "../SearchListRow.tsx";
+import ChannelContentComponent from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx";
+import LaunchpadChannelIcon from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "../../../../SearchConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function GuildChannelLabel(channel) {

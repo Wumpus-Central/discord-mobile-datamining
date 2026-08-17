@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/utils/CollectiblesProductUtils.tsx
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { isProfileEffectRecord } from "fromServer" /* 5307 */;
-import ME from "ME" /* 676 */;
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { isProfileEffectRecord } from "../records/ProfileEffectRecord.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);

@@ -1,9 +1,9 @@
 // discord_app/stores/NotificationSettingsStore.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import set2 from "../utils/PlatformUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import ME from "../Constants.tsx";
 
 const DesktopNotificationTypes = ME.DesktopNotificationTypes;
 ({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);

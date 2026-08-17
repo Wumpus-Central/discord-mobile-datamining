@@ -1,14 +1,14 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventsActionCreators.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import sendRequest from "sendRequest" /* 530 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import _modDef4975 from "module_4975" /* 4975 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 8784 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "scheduledEventSort" /* 4370 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import transitionTo from "../routing/router_utils.tsx";
+import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
+import EditGuildEventScreens from "utils/EditGuildEventUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "GuildScheduledEventStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: closure_6, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: error, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);

@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesEffectOrder.tsx
-import closure_2 from "noop" /* 19 */;
-import items3 from "items3" /* 1934 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import items3 from "DisplayNameStylesConstants.tsx";
 
 const require = arg1;
 const EFFECT_ORDER = items3.EFFECT_ORDER;

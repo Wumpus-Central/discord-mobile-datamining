@@ -1,6 +1,6 @@
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModal.tsx
-import set from "set" /* 2 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 
 const result = set.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");

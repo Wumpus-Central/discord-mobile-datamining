@@ -1,8 +1,8 @@
 // discord_app/modules/safety_flows/native/tasks/VerifyEmailScreen.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

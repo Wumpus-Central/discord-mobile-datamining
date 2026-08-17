@@ -1,15 +1,15 @@
 // discord_app/modules/guild_automod/AutomodMessageUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 5234 */;
-import AutomodQuarantineUserMessageEmbedKeys from "AutomodQuarantineUserMessageEmbedKeys" /* 5239 */;
-import Feedback from "Feedback" /* 5242 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import AutomodQuarantineUserActionMessageEmbedKeys from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserActionMessageEmbedKeys.tsx";
+import AutomodQuarantineUserMessageEmbedKeys from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx";
+import Feedback from "AutomodFeedback.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/RelationshipStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { AutomodNotificationEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { computeChannelName } from "../channel/useChannelName.tsx";

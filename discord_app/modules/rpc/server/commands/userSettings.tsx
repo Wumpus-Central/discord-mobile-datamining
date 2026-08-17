@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/server/commands/userSettings.tsx
-import closure_0 from "_getSystemLocale" /* 1994 */;
+import closure_0 from "../../../user_settings/LocaleStore.tsx";
 
 let obj = {};
 obj = {

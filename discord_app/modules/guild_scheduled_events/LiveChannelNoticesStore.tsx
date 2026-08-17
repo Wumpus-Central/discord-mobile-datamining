@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/LiveChannelNoticesStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 
 const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
 let closure_1 = { hiddenEventsAndStages: [] };

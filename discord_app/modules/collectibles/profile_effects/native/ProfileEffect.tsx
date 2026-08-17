@@ -1,14 +1,14 @@
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffect.tsx
-import initialize from "initialize" /* 589 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8969 */;
-import sortEffectLayers from "sortEffectLayers" /* 9211 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "getState" /* 7383 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useProfileEffectDefault from "../useProfileEffect.tsx";
+import sortEffectLayers from "../utils.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../a11y/AccessibilityStore.tsx";
+import closure_8 from "../../../../stores/native/AppStateStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function StaticEffect(useThumbnail) {

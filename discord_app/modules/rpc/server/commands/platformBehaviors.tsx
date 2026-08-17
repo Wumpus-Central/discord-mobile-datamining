@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/commands/platformBehaviors.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
+import set from "../../../../../_runtime/00002_set.js";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 
 const result = set.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 

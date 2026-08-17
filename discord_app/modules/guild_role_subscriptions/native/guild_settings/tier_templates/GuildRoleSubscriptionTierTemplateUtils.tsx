@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 692 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import set2 from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx");
 

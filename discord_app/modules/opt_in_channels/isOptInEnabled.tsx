@@ -1,9 +1,9 @@
 // discord_app/modules/opt_in_channels/isOptInEnabled.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import closure_4 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

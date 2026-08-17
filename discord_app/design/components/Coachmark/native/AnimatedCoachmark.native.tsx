@@ -1,11 +1,11 @@
 // discord_app/design/components/Coachmark/native/AnimatedCoachmark.native.tsx
-import _modDef4115 from "module_4115" /* 4115 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9275 */;
-import Coachmark from "Coachmark" /* 9316 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import AnimatedRenderItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import Coachmark from "Coachmark.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function renderTooltipItem(arg0, enterExitAnimatedStyles) {

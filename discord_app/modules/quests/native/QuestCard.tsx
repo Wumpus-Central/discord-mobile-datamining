@@ -1,17 +1,17 @@
 // discord_app/modules/quests/native/QuestCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _mod1350 from "module_1350" /* 1350 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "initializeState" /* 7453 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import { NOOP } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod1350 from "../../../../discord_common/js/packages/design/shared.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../stores/UserStore.tsx";
+import closure_9 from "../QuestStore.tsx";
+import { QuestsExperimentLocations } from "../QuestConstants.tsx";
+import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c5 = importAllResult;

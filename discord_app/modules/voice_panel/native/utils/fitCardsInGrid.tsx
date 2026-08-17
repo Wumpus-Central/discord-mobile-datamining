@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/utils/fitCardsInGrid.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   if (0 !== unusedSpace2.unusedSpace) {

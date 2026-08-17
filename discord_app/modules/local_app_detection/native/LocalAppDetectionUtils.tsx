@@ -1,9 +1,9 @@
 // discord_app/modules/local_app_detection/native/LocalAppDetectionUtils.tsx
-import DetectableAppNames from "DetectableAppNames" /* 13259 */;
-import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13261 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "hasConsented" /* 5258 */;
-import ME from "ME" /* 676 */;
+import DetectableAppNames from "../LocalAppDetectionTypes.tsx";
+import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "../../game_community_upsell/native/GameCommunityUpsellExperiment.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ConsentStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 function isGameCommunityAddServerEntryEnabled() {

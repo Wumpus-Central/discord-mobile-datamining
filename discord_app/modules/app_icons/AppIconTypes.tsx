@@ -1,5 +1,5 @@
 // discord_app/modules/app_icons/AppIconTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { DEFAULT: "AppIcon" };
 obj = { BRAND_DARK: "BrandDarkIcon", BRAND_INVERTED: "BrandInvertedIcon", MATTE_LIGHT: "MatteLightIcon", MATTE_DARK: "MatteDarkIcon", PASTEL: "PastelIcon", PIRATE: "PirateIcon", CAMO: "CamoIcon", SUNSET: "SunsetIcon", GALAXY: "GalaxyIcon", Y2K: "Y2KIcon", CHERRY_BLOSSOM: "CherryBlossomIcon", BEANIE: "BeanieIcon", GAMING: "GamingIcon", CIRCUIT: "CircuitIcon", HOLO_WAVES: "HoloWavesIcon", BLUSH: "BlushIcon", ANGRY: "AngryIcon", MANGA: "MangaIcon", CONTROLLER: "ControllerIcon", MUSHROOM: "MushroomIcon", BLURPLE_TWILIGHT: "BlurpleTwilightIcon", IN_RAINBOWS: "InRainbowsIcon", COLOR_WAVE: "ColorWaveIcon", MIDNIGHT_PRISM: "MidnightPrismIcon" };

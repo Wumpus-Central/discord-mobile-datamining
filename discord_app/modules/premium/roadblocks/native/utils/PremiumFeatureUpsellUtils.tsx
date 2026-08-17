@@ -1,8 +1,8 @@
 // discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import SoundButtonOverlay from "SoundButtonOverlay" /* 6824 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8482 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
+import SoundButtonOverlay from "../../../../soundboard/SoundboardTypes.tsx";
+import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 

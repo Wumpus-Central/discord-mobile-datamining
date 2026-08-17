@@ -1,10 +1,10 @@
 // discord_app/modules/gateway/GatewaySocketDispatcher.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import prettyPrintTrace_ from "prettyPrintTrace_" /* 13201 */;
-import CLOSEDDefault from "CLOSED" /* 13202 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13197 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../debug/Logger.tsx";
+import prettyPrintTrace_ from "GatewaySocketAnalytics.tsx";
+import CLOSEDDefault from "ConnectionState.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DispatcherWorkConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 
 require = arg1;

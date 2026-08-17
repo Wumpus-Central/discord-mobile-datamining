@@ -1,16 +1,16 @@
 // discord_app/modules/activities/panel/native/ActivityPanelFocusedView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import { ActivityLayoutMode } from "items3" /* 4481 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
-import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16237 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import { IS_IOS } from "VoicePanelModes" /* 11440 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../EmbeddedActivitiesStore.tsx";
+import { ActivityLayoutMode } from "../../Constants.tsx";
+import ActivityPanelModes from "../ActivityPanelConstants.tsx";
+import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "ActivityPanelNativeConstants.tsx";
+import { ThemeTypes } from "../../../../Constants.tsx";
+import { IS_IOS } from "../../../voice_panel/VoicePanelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class BaseActivityPanelFocusedView {

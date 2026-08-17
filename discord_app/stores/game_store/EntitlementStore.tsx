@@ -1,14 +1,14 @@
 // discord_app/stores/game_store/EntitlementStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeAll from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboId from "getComboId" /* 4520 */;
-import closure_3 from "createFromServer" /* 4514 */;
-import closure_4 from "setLibraryApplications" /* 4512 */;
-import closure_5 from "addSku" /* 4521 */;
-import ME from "ME" /* 676 */;
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1924 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getComboId from "../../utils/LibraryApplicationUtils.tsx";
+import closure_3 from "../../records/EntitlementRecord.tsx";
+import closure_4 from "../LibraryApplicationStore.tsx";
+import closure_5 from "SKUStore.tsx";
+import ME from "../../Constants.tsx";
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "../../modules/premium/PremiumConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function addEntitlement(entitlement) {

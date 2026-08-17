@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx
-import context from "context" /* 15288 */;
-import _modDef15545 from "module_15545" /* 15545 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "withEqualityFn" /* 15289 */;
-import { DM_WIDTH } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import context from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
+import _modDef15545 from "../../../../guilds_bar/native/GuildsBar.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../home_drawer/native/HomeDrawerStore.tsx";
+import { DM_WIDTH } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function HomeDrawerPanelContent() {

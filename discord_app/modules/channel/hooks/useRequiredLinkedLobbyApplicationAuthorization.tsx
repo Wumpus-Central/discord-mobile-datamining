@@ -1,9 +1,9 @@
 // discord_app/modules/channel/hooks/useRequiredLinkedLobbyApplicationAuthorization.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import recomputeFromAppTokens from "recomputeFromAppTokens" /* 5289 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "recomputeFromAppTokens" /* 5289 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import recomputeFromAppTokens from "../../oauth2/AuthorizedAppsStore.tsx";
+import closure_4 from "../../applications/ApplicationStore.tsx";
+import closure_5 from "../../oauth2/AuthorizedAppsStore.tsx";
 
 const useEffect = noop.useEffect;
 const FetchState = recomputeFromAppTokens.FetchState;

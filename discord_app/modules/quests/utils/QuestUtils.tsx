@@ -1,16 +1,16 @@
 // discord_app/modules/quests/utils/QuestUtils.tsx
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7477 */;
-import canStreamInChannel from "canStreamInChannel" /* 7478 */;
-import QuestType2 from "QuestType" /* 7479 */;
-import getQuestContentName from "getQuestContentName" /* 7480 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "set" /* 4540 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import closure_7 from "keys" /* 7475 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import getApplicationIdsByTaskTypes from "QuestTaskUtils.tsx";
+import QuestSharePolicy from "../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx";
+import canStreamInChannel from "../../go_live/utils/StreamPermissionUtils.tsx";
+import QuestType2 from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
+import getQuestContentName from "../lib/analytics/AnalyticsTypes.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../game_console/GameConsoleStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../../../stores/VoiceStateStore.tsx";
+import closure_7 from "../QuestUtmStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
 
 require = arg1;
 function isSponsoredPlayQuest(quest) {

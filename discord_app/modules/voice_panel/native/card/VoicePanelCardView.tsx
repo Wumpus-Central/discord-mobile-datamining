@@ -1,15 +1,15 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardView.tsx
-import SelfStreamCardDefault from "SelfStreamCard" /* 16348 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getParticipants" /* 4773 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16307 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11443 */;
-import { isUserParticipant } from "ParticipantTypes" /* 4544 */;
-import { jsx } from "jsxProd" /* 21 */;
+import SelfStreamCardDefault from "VoicePanelCard.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../calls/ChannelRTCStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { VoicePanelPIPModes } from "../pip/VoicePanelPIPConstants.tsx";
+import { EDGE_GUTTER } from "VoicePanelCardConstants.tsx";
+import { isUserParticipant } from "../../../calls/CallConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function getCardKey(type) {

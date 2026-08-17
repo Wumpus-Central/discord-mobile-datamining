@@ -1,7 +1,7 @@
 // discord_app/modules/spatial_audio/useIsSpatialAudioAvailable.tsx
-import apexExperimentDefault from "apexExperiment" /* 13101 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import { Features } from "DesktopSources" /* 4529 */;
+import apexExperimentDefault from "../voice_panel/SpatialAudioForVoiceExperiment.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");

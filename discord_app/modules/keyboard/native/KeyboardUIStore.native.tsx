@@ -1,16 +1,16 @@
 // discord_app/modules/keyboard/native/KeyboardUIStore.native.tsx
-import Storage5 from "Storage" /* 595 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import ExpressionPickerViewType2 from "ExpressionPickerViewType" /* 1338 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import DRAG_HANDLE from "DRAG_HANDLE" /* 1624 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import _modDef1630 from "module_1630" /* 1630 */;
-import enforcingDefault from "enforcing" /* 1641 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
-import _modDef1891 from "module_1891" /* 1891 */;
-import set from "set" /* 500 */;
-import keys from "keys" /* 644 */;
+import Storage5 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import ExpressionPickerViewType2 from "../../expression_picker/ExpressionPickerConstants.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import DRAG_HANDLE from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
+import KeyboardTypes from "KeyboardTypes.tsx";
+import _modDef1630 from "../../safe_area/SafeAreaStore.native.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
+import KeyboardChatScrollView from "../../../../_runtime/01643_KeyboardChatScrollView.js";
+import _modDef1891 from "../KeyboardStateDebugging.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { dismissGlobalKeyboard } from "../../../utils/native/KeyboardManagerUtils.tsx";
 import { context } from "../../window/native/AppEntryKeyContext.tsx";

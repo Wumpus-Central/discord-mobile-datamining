@@ -1,20 +1,20 @@
 // discord_app/modules/home_drawer/native/HomeDrawerGuildRow.tsx
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4023 */;
-import { isThread } from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "comparator" /* 1980 */;
-import closure_9 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "generateOldThreadCutoff" /* 4772 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../threads/JoinedThreadsStore.tsx";
+import { isThread } from "../../../records/ChannelRecord.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../../stores/GuildReadStateStore.tsx";
+import closure_10 from "../../../stores/GuildStore.tsx";
+import closure_11 from "../../../stores/ReadStateStore.tsx";
+import closure_12 from "../../../stores/RelationshipStore.tsx";
+import closure_13 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_14 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function GuildRowWrapper(guild) {

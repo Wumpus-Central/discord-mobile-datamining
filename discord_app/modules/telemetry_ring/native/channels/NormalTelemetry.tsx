@@ -1,7 +1,7 @@
 // discord_app/modules/telemetry_ring/native/channels/NormalTelemetry.tsx
-import TelemetryChannel from "TelemetryChannel" /* 13562 */;
-import importDefaultResult from "append" /* 13561 */;
-import importDefaultResult1 from "TelemetryChannel" /* 13562 */;
+import TelemetryChannel from "../TelemetryRingNative.android.tsx";
+import importDefaultResult from "BaseTelemetryChannel.tsx";
+import importDefaultResult1 from "../TelemetryRingNative.android.tsx";
 
 require = arg1;
 class NormalTelemetryImpl extends tmp3 {

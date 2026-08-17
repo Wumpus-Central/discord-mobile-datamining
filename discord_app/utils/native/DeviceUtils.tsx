@@ -1,7 +1,7 @@
 // discord_app/utils/native/DeviceUtils.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 671 */;
-import set from "set" /* 500 */;
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
+import set from "../PlatformUtils.tsx";
 
 if (set.isAndroid()) {
   const importDefaultResult = enforcingDefault;

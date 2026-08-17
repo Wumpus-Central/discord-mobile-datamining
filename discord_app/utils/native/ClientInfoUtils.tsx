@@ -1,8 +1,8 @@
 // discord_app/utils/native/ClientInfoUtils.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import enforcingDefault from "enforcing" /* 672 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../PlatformUtils.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeClientInfoModule.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");

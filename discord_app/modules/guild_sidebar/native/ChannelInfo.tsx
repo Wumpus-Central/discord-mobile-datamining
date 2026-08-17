@@ -1,17 +1,17 @@
 // discord_app/modules/guild_sidebar/native/ChannelInfo.tsx
-import noopAll from "noop" /* 19 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11233 */;
-import ActiveTimestamp from "ActiveTimestamp" /* 12105 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 15488 */;
-import useStartTime from "useStartTime" /* 15493 */;
-import closure_3 from "guildHasCommunity" /* 5276 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useEmbeddedAppsDefault from "../../activities/useEmbeddedAppsForChannel.tsx";
+import ActiveTimestamp from "../../icymi/native/content_inventory/Badges.tsx";
+import showChannelBadgeDefault from "../showChannelBadge.tsx";
+import useStartTime from "../../channel/useVoiceChannelStartTime.tsx";
+import closure_3 from "../../recent_channels/NewChannelsStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../../../stores/ReadStateStore.tsx";
+import closure_7 from "../../../stores/VoiceStateStore.tsx";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function LimitAndDurationInfo(channel) {

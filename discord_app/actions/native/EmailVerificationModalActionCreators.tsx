@@ -1,10 +1,10 @@
 // discord_app/actions/native/EmailVerificationModalActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../ModalActionCreators.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";

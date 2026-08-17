@@ -1,13 +1,13 @@
 // discord_app/modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 15781 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import { PermissionPromptType } from "set" /* 11578 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../../../../stores/VoiceStateStore.tsx";
+import { PermissionPromptType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
+import EventActionType from "NotificationPermissionConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: c9 } = EventActionType);

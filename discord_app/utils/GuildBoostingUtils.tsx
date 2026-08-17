@@ -1,24 +1,24 @@
 // discord_app/utils/GuildBoostingUtils.tsx
-import _modDef1208 from "module_1208" /* 1208 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import combinedDefault from "combined" /* 1993 */;
-import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import tDefault from "t" /* 3975 */;
-import getPremiumPlanItemAll from "getPremiumPlanItem" /* 4039 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4268 */;
-import formatSize from "formatSize" /* 4269 */;
-import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4270 */;
-import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4281 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
-import closure_7 from "reset" /* 4045 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1925 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes" /* 4053 */;
-import importDefaultResult from "apply" /* 12 */;
+import _modDef1208 from "SentryUtils.native.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
+import combinedDefault from "HelpdeskUtils.tsx";
+import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import tDefault from "../../_runtime/03975_t.js";
+import getPremiumPlanItemAll from "PremiumUtils.tsx";
+import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
+import formatSize from "FileSizeUtils.tsx";
+import _fetchAppliedGuildBoostsForGuild from "../actions/BoostingActionCreators.tsx";
+import useGuildAppliedBoostCount from "../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
+import closure_4 from "../stores/GuildStore.tsx";
+import closure_5 from "../stores/UserStore.tsx";
+import closure_6 from "../stores/billing/GuildBoostSlotStore.tsx";
+import closure_7 from "../stores/billing/SubscriptionStore.tsx";
+import ME from "../Constants.tsx";
+import set from "../modules/emojis/EmojiConstants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
+import { getPremiumGroupProductName as closure_25 } from "../modules/premium/premium_group/PremiumGroupConstants.tsx";
+import importDefaultResult from "../../_runtime/00012_apply.js";
 
 require = arg1;
 function getGuildTierFromGuild(arg0) {

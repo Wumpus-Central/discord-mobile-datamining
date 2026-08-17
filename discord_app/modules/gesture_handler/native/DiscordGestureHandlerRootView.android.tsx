@@ -1,9 +1,9 @@
 // discord_app/modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx
-import noopAll from "noop" /* 19 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13921 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import LegacyBaseButton from "../../../../_runtime/06377_LegacyBaseButton.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

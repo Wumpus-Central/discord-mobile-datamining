@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 function ScheduleRuleRow(rule) {
   rule = rule.rule;

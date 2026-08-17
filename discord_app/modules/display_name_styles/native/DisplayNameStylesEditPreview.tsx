@@ -1,15 +1,15 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
-import Text from "Text" /* 4734 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9453 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import messagesProxyDefault from "../intl/DisplayNameStyles.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import AVERAGE_FONT_WIDTH_RATIODefault from "UsernameWithEffects.tsx";
+import DisplayNameStyleColorPreset from "../types.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ChatPreview(arg0) {

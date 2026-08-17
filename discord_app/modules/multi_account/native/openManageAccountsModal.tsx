@@ -1,9 +1,9 @@
 // discord_app/modules/multi_account/native/openManageAccountsModal.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11586 */;
+import set from "../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import MAX_ACCOUNTS from "../Constants.tsx";
 
 const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/multi_account/native/openManageAccountsModal.tsx");

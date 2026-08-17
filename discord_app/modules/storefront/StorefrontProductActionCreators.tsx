@@ -1,10 +1,10 @@
 // discord_app/modules/storefront/StorefrontProductActionCreators.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "getFetchState" /* 8963 */;
-import closure_6 from "fromServer" /* 5329 */;
-import { Endpoints } from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "StorefrontProductStore.tsx";
+import closure_6 from "records/StorefrontProductRecord.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _maybeFetchProductsWithSkus() {

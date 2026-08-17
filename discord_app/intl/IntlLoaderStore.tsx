@@ -1,7 +1,7 @@
 // discord_app/intl/IntlLoaderStore.tsx
-import codeDefault from "code" /* 1996 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import identity from "identity" /* 700 */;
+import codeDefault from "../../_runtime/01996_code.js";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import identity from "../../_runtime/00700_identity.js";
 
 const require = arg1;
 function _setAppLocale() {

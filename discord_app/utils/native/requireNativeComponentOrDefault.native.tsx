@@ -1,7 +1,7 @@
 // discord_app/utils/native/requireNativeComponentOrDefault.native.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 
 ({ requireNativeComponent: c0, UIManager: closure_1, View: obj1 } = get_ActivityIndicator);
 let closure_3 = new timestampDefault("RequireNativeComponentOrDefault");

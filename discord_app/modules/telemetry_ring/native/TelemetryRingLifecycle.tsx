@@ -1,12 +1,12 @@
 // discord_app/modules/telemetry_ring/native/TelemetryRingLifecycle.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
-import shouldRunDefault from "shouldRun" /* 13558 */;
-import closure_2 from "initialize" /* 1212 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import getHermesInstrumentedStatsSummaryDefault from "../../../utils/ProcessUtils.native.tsx";
+import shouldRunDefault from "channels/ZoomedInTelemetry.tsx";
+import closure_2 from "../../experiments/apex/ApexExperimentStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/native/AppStateStore.tsx";
+import { AppStates } from "../../../Constants.tsx";
 
 initializeDefault;
 class TelemetryRingLifecycleImpl extends tmp2 {

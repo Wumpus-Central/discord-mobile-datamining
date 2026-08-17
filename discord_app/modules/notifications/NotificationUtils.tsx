@@ -1,10 +1,10 @@
 // discord_app/modules/notifications/NotificationUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import closure_4 from "../../stores/UserGuildSettingsStore.tsx";
+import { UserNotificationSettings } from "../../Constants.tsx";
+import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 ({ MuteUntilSeconds: closure_6, ChannelNotificationSettingsFlags: error } = MAX_FAVORITES);

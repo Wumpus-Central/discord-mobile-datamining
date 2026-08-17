@@ -1,13 +1,13 @@
 // discord_app/modules/interactions/InteractionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import InteractionState from "InteractionState" /* 4809 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import InteractionState from "InteractionTypes.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
 
 require = arg1;
 function deleteNonce(first) {

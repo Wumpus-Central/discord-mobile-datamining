@@ -1,9 +1,9 @@
 // discord_app/lib/uploader/native/CloudUploaderUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "refreshSourceMapCookie" /* 706 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import closure_3 from "../../../modules/user_settings/LocaleStore.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/DeveloperOptionsStore.tsx";
 
 const require = arg1;
 function getUploadPayload(closure_0) {

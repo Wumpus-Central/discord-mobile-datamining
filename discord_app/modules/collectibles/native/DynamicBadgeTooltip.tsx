@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/DynamicBadgeTooltip.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_5 = { top: 14, bottom: 14, left: 14, right: 14 };

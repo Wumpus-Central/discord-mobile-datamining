@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelParticipantStoreHooks.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getActiveStageChannelIds" /* 4989 */;
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "StageChannelParticipantStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 

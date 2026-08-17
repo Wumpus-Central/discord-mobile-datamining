@@ -1,10 +1,10 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx
-import noopAll from "noop" /* 19 */;
-import keys from "keys" /* 691 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import { Gradients } from "items" /* 7403 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import keys from "../../../../../ConstantsIOS.tsx";
+import LinearGradientDefault from "../../../../../../_runtime/04756_LinearGradient.js";
+import { Gradients } from "../../../../colors/native/ColorConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

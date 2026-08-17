@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/leaveCurrentEmbeddedActivity.tsx
-import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 8712 */;
-import closure_2 from "participantFromServer" /* 1390 */;
+import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager.native.tsx";
+import closure_2 from "../EmbeddedActivitiesStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");
 

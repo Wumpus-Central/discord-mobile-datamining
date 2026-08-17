@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/ParentalConsentWarningActionCreators.tsx
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 14224 */;
-import importDefaultResult from "fails" /* 584 */;
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "ParentalConsentWarningStore.tsx";
+import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import { isParentalConsentWarningFetchEnabled } from "ParentalConsentWarningFetchExperiment.tsx";
 
 const require = arg1;

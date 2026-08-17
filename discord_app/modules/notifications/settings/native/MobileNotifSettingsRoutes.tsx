@@ -1,10 +1,10 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2629 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import frozen from "frozen" /* 15058 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../NotificationSettings.messages.js";
+import MobileUserSettings from "../../../user_settings/core/native/SettingsConstants.tsx";
+import frozen from "../../../user_settings/notifications/native/codegen/MobileNotifSettingsSections.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 let obj = {
   useTitle() {

@@ -1,16 +1,16 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 1982 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_12 from "set" /* 5049 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../impersonate/ImpersonateStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/SelectedGuildStore.tsx";
+import closure_11 from "../GuildOnboardingHomeSettingsStore.tsx";
+import closure_12 from "../GuildOnboardingMemberActionStore.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
 
 const require = arg1;
 initializeDefault;

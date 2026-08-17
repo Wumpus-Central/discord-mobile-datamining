@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import closure_2 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchApplications.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import set from "../../../_runtime/00002_set.js";
 
 let items = [require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);

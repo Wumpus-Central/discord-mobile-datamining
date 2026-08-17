@@ -1,11 +1,11 @@
 // discord_app/modules/activity_privacy/ActivityPrivacyUpsellUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "handleChannelSelect" /* 6772 */;
-import closure_3 from "handleInviteData" /* 4295 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import closure_2 from "../../stores/FrecencyStore.tsx";
+import closure_3 from "../../stores/GuildMemberCountStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/SortedGuildStore.tsx";
 
 require = arg1;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {

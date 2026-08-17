@@ -1,11 +1,11 @@
 // discord_app/modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10631 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES" /* 685 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import UnreadSettingNoticeImpressionTrackingDefault from "../UnreadSettingNoticeImpressionTracking.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ChannelNotificationSettingsFlags as closure_4 } from "../../../user_settings/UserSettingsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";

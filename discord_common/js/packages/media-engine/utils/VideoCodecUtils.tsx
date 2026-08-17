@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx
-import set2 from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set2 from "../../../../../_runtime/00002_set.js";
+import DesktopSources from "../Constants.tsx";
 
 const ExperimentFlags = DesktopSources.ExperimentFlags;
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];

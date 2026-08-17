@@ -1,16 +1,16 @@
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
-import setDefault from "set" /* 687 */;
-import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4643 */;
-import initializeDefault from "initialize" /* 5038 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import getGamePlatformDefault from "getGamePlatform" /* 15961 */;
-import closure_3 from "initialize" /* 4504 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "filterPlayingActivities" /* 7250 */;
-import closure_7 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_8 from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import _openRobloxURLWithRootPlaceId from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import collectGuildAnalyticsMetadata from "AppAnalyticsUtils.tsx";
+import getGamePlatformDefault from "../activities/utils/getGamePlatform.tsx";
+import closure_3 from "../game_detection/RunningGameStore.native.tsx";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../../stores/SelfPresenceStore.tsx";
+import closure_7 from "../../stores/SpeakingStore.tsx";
+import closure_8 from "../../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c9, ActivityTypes: c10 } = ME);

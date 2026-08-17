@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import NotificationUserFeedbackReasons from "NotificationUserFeedbackReasons" /* 10809 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import NotificationUserFeedbackReasons from "Constants.tsx";
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

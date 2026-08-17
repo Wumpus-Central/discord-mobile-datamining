@@ -1,16 +1,16 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7124 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9395 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button2 from "../../../design/components/Button/native/Button.native.tsx";
+import ActionSheetHeaderBar from "../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
+import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function Footer(eligibleToReceivePremiumRewards) {

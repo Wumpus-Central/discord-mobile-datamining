@@ -1,11 +1,11 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 11429 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../_runtime/11429_registerAsset.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 let obj = { badgeImageContainer: null, badgeImage: null };
 obj = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };

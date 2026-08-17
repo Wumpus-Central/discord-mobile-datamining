@@ -1,10 +1,10 @@
 // discord_app/modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import hasBit from "hasBit" /* 1376 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { UserSettingsDelay } from "MAX_FAVORITES" /* 685 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import hasBit from "../../utils/Uint8ArrayUtils.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
+import { UserSettingsDelay } from "../user_settings/UserSettingsConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";

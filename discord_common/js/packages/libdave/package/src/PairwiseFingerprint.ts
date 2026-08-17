@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "module_36" /* 36 */;
+import closure_2 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../_runtime/00036__arrayLikeToArray.js";
 
 const require = arg1;
 function compareArrays(arg0, arg1) {

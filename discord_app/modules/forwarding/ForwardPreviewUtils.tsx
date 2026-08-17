@@ -1,5 +1,5 @@
 // discord_app/modules/forwarding/ForwardPreviewUtils.tsx
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "../../stores/PermissionStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/nuf/native/useNotificationPermissionPrompt.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateUser" /* 1384 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "handleRequiredAction" /* 1385 */;
-import closure_7 from "set" /* 11578 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../auth/LoginRequiredActionStore.tsx";
+import closure_5 from "../../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../../stores/UserRequiredActionStore.tsx";
+import closure_7 from "../../../stores/native/PushNotificationPermissionStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");

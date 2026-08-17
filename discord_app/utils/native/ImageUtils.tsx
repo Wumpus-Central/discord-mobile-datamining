@@ -1,12 +1,12 @@
 // discord_app/utils/native/ImageUtils.tsx
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import items2 from "items" /* 1471 */;
-import parseDefault from "parse" /* 1484 */;
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME" /* 676 */;
+import getAvatarURL from "../AvatarUtils.tsx";
+import ensureAvatarSource from "AvatarUtils.tsx";
+import items2 from "../../modules/image_upload/AttachmentImageLadder.tsx";
+import parseDefault from "../../../_runtime/01484_parse.js";
+import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "../../Constants.tsx";
 
 require = arg1;
 function getSrcWithWidthAndHeight(animated) {

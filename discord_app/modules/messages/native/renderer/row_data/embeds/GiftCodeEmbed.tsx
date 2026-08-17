@@ -1,25 +1,25 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx
-import set from "set" /* 2 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import metadataDefault from "metadata" /* 11979 */;
-import registerAssetDefault from "registerAsset" /* 12741 */;
-import registerAssetDefault2 from "registerAsset" /* 12742 */;
-import registerAssetDefault3 from "registerAsset" /* 12743 */;
-import registerAssetDefault4 from "registerAsset" /* 12744 */;
-import registerAssetDefault5 from "registerAsset" /* 12745 */;
-import registerAssetDefault6 from "registerAsset" /* 12746 */;
-import registerAssetDefault7 from "registerAsset" /* 12747 */;
-import registerAssetDefault8 from "registerAsset" /* 12748 */;
-import registerAssetDefault9 from "registerAsset" /* 12749 */;
-import registerAssetDefault10 from "registerAsset" /* 12750 */;
-import registerAssetDefault11 from "registerAsset" /* 12751 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "updateGiftCode" /* 10641 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "addSku" /* 4521 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import getEmbedThemeColorsDefault from "getEmbedThemeColors.tsx";
+import metadataDefault from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import registerAssetDefault from "../../../../../../../_runtime/12741_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../../_runtime/12742_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../../_runtime/12743_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../../_runtime/12744_registerAsset.js";
+import registerAssetDefault5 from "../../../../../../../_runtime/12745_registerAsset.js";
+import registerAssetDefault6 from "../../../../../../../_runtime/12746_registerAsset.js";
+import registerAssetDefault7 from "../../../../../../../_runtime/12747_registerAsset.js";
+import registerAssetDefault8 from "../../../../../../../_runtime/12748_registerAsset.js";
+import registerAssetDefault9 from "../../../../../../../_runtime/12749_registerAsset.js";
+import registerAssetDefault10 from "../../../../../../../_runtime/12750_registerAsset.js";
+import registerAssetDefault11 from "../../../../../../../_runtime/12751_registerAsset.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../../../../stores/GiftCodeStore.tsx";
+import closure_7 from "../../../../../../stores/UserStore.tsx";
+import closure_8 from "../../../../../../stores/game_store/SKUStore.tsx";
+import ME from "../../../../../../Constants.tsx";
+import GuildFeatures from "../../../../../premium/PremiumConstants.tsx";
 import { getGradientColorByPercentage } from "../../../../../client_themes/native/ClientThemesUtils.tsx";
 
 function getGiftStyleUrl(arg0) {

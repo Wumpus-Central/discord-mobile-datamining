@@ -1,8 +1,8 @@
 // discord_app/modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx
-import create from "create" /* 7635 */;
-import closure_3 from "createEmptyPromotionsByType" /* 7628 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
+import create from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
+import closure_3 from "../../promotions/PromotionsStore.tsx";
+import { PremiumTypes } from "../../PremiumConstants.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticsSections: c5, AnalyticsObjects: closure_6, AnalyticsObjectTypes: error, UserSettingsSections: closure_8 } = ME);

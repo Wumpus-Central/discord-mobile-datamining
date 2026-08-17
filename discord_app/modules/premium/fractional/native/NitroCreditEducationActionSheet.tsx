@@ -1,15 +1,15 @@
 // discord_app/modules/premium/fractional/native/NitroCreditEducationActionSheet.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import Text from "Text" /* 4734 */;
-import Background from "Background" /* 6950 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 const HelpdeskArticles = ME.HelpdeskArticles;

@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/utils/StreamerApplicationSelectors.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import { ActivityTypes } from "ME" /* 676 */;
+import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import closure_3 from "../../../stores/PresenceStore.tsx";
+import { ActivityTypes } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

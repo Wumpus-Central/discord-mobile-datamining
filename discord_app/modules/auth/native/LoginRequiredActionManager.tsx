@@ -1,9 +1,9 @@
 // discord_app/modules/auth/native/LoginRequiredActionManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import handleLogoutDefault from "handleLogout" /* 5256 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handleUpdateUser" /* 1384 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import handleLogoutDefault from "../../../actions/AuthenticationActionCreators.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../LoginRequiredActionStore.tsx";
+import ME from "../../../Constants.tsx";
 
 const require = arg1;
 ({ LoginRequiredActions: c5, Routes: closure_6, UserSettingsSections: error } = ME);

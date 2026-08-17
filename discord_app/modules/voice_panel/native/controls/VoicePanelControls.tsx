@@ -1,18 +1,18 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControls.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import TwinButtons from "TwinButtons" /* 8811 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 16384 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import CARD_SIZE from "CARD_SIZE" /* 11443 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import TwinButtons from "../../../../design/components/experimental/native.tsx";
+import useDrawerToggleDefault from "useDrawerToggle.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../calls/ChannelRTCStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import CARD_SIZE from "../card/VoicePanelCardConstants.tsx";
+import VoicePanelControlsModes from "VoicePanelControlsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
 
 require = arg1;
 let c4 = importAllResult;

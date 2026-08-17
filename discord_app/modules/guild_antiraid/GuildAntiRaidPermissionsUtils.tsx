@@ -1,7 +1,7 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_3 from "computeAlertSettings" /* 10014 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../stores/PermissionStore.tsx";
+import closure_3 from "GuildIncidentsStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { isInMentionRaidExperiment } from "../guild_automod/ExperimentUtils.tsx";
 

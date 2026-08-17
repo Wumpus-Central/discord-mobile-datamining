@@ -1,8 +1,8 @@
 // discord_app/modules/guild_themes/GuildThemePresets.tsx
-import sum from "sum" /* 505 */;
-import nDefault from "n" /* 689 */;
-import items21 from "items" /* 4227 */;
-import set from "set" /* 2 */;
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import nDefault from "../../../_runtime/00689_n.js";
+import items21 from "../client_themes/CustomThemesRandomUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const ThemeTypes = sum.ThemeTypes;
 let obj = { TWILIGHT: 1, PLUM: 2, FIRE: 3, GOLD_DUST: 4, MOSS: 5, JADE: 6, OBSIDIAN: 7, OCEAN: 8, DENIM: 9, BLURPLE: 10 };

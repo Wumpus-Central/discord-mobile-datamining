@@ -1,13 +1,13 @@
 // discord_app/modules/home_drawer/native/useHomeDrawerGesture.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "withEqualityFn" /* 15289 */;
-import { computeMaxX } from "withEqualityFn" /* 15289 */;
-import closure_7 from "keys" /* 15290 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
-import { Gesture } from "LegacyBaseButton" /* 6377 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_5 from "HomeDrawerStore.tsx";
+import { computeMaxX } from "HomeDrawerStore.tsx";
+import closure_7 from "HomeDrawerSubtitleStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { LaunchPadTypes } from "../../launchpad/native/LaunchPadConstants.tsx";
+import { Gesture } from "../../../../_runtime/06377_LegacyBaseButton.js";
+import createFakeSharedValue from "../../reanimated/ReanimatedHelperTypes.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

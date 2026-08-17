@@ -1,5 +1,5 @@
 // discord_app/utils/TrackedHTTPUtils.tsx
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "../../_runtime/metro/00109__objectWithoutProperties.js";
 
 const require = arg1;
 let closure_2 = ["trackedActionData"];

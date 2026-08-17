@@ -1,7 +1,7 @@
 // discord_app/modules/rtc/hooks/useIsSecureFramesVerified.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "computeCallVerification" /* 9690 */;
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../SecureFramesVerifiedStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesVerified.tsx");

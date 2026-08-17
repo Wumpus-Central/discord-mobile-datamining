@@ -1,7 +1,7 @@
 // discord_app/design/components/Button/native/ButtonConstants.native.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import IconSizes from "IconSizes" /* 4747 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import IconSizes from "../../../void/Icon/native/Icon.tsx";
 
 const SMALL = IconSizes.IconSizes.SMALL;
 const SMALL_20 = IconSizes.IconSizes.SMALL_20;

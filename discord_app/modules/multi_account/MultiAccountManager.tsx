@@ -1,9 +1,9 @@
 // discord_app/modules/multi_account/MultiAccountManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import noop from "noop" /* 13188 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "initialize" /* 13268 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import noop from "../gateway/GatewaySocket.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import closure_4 from "MultiAccountSwitchStore.tsx";
 
 require = arg1;
 initializeDefault;

@@ -1,6 +1,6 @@
 // discord_app/modules/device/native/WakeLock.tsx
-import closure_3 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/device/native/WakeLock.tsx");

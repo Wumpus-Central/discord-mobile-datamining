@@ -1,12 +1,12 @@
 // discord_common/js/packages/http-utils/HTTPUtils.tsx
-import log from "log" /* 4 */;
-import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 531 */;
-import failsDefault from "fails" /* 584 */;
-import convertStringArrayToSkemaErrorItems from "convertStringArrayToSkemaErrorItems" /* 585 */;
-import convertSkemaError from "convertSkemaError" /* 586 */;
-import stringifyErrors from "stringifyErrors" /* 587 */;
-import getFieldMessage from "getFieldMessage" /* 588 */;
-import set from "set" /* 2 */;
+import log from "../logger/Logger.tsx";
+import _createForOfIteratorHelperDefault from "../../../../_runtime/00531__createForOfIteratorHelper.js";
+import failsDefault from "../backoff/Backoff.tsx";
+import convertStringArrayToSkemaErrorItems from "V8APIError.tsx";
+import convertSkemaError from "convertSkemaError.tsx";
+import stringifyErrors from "stringifyErrors.tsx";
+import getFieldMessage from "V6OrEarlierAPIError.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 function sendRequest(arg0, signal) {
   closure_0 = arg0;

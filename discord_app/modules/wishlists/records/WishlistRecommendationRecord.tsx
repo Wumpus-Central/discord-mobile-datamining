@@ -1,7 +1,7 @@
 // discord_app/modules/wishlists/records/WishlistRecommendationRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createFromServer" /* 4515 */;
-import closure_1 from "createExecutable" /* 4479 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import closure_0 from "../../skus/SKURecord.tsx";
+import closure_1 from "../../../records/ApplicationRecord.tsx";
 
 toJSDefault;
 let prototype;

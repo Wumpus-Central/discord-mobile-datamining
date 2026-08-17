@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesTable.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import registerAssetDefault from "registerAsset" /* 12908 */;
-import registerAssetDefault2 from "registerAsset" /* 12909 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HorizontalGradient } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import AccessibilityAnnouncer from "../../../../design/shared.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import registerAssetDefault from "../../../../../_runtime/12908_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12909_registerAsset.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { HorizontalGradient } from "../../../../Constants.tsx";
+import GuildFeatures from "../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/usePendingFolderGuildIds.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");

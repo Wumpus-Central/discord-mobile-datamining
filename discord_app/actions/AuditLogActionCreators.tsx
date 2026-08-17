@@ -1,8 +1,8 @@
 // discord_app/actions/AuditLogActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "AuditLogActions" /* 16757 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function makeRequest(arg0, arg1) {

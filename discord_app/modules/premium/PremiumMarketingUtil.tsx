@@ -1,9 +1,9 @@
 // discord_app/modules/premium/PremiumMarketingUtil.tsx
-import set from "set" /* 2 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import pushLayer from "pushLayer" /* 5353 */;
-import openUserSettings from "openUserSettings" /* 7360 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import transitionTo from "../routing/router_utils.tsx";
+import pushLayer from "../../actions/LayerActionCreators.tsx";
+import openUserSettings from "../user_settings/core/native/openUserSettings.tsx";
+import ME from "../../Constants.tsx";
 
 ({ Routes: obj1, UserSettingsSections: c3 } = ME);
 const result = set.fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");

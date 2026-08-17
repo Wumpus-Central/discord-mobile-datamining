@@ -1,7 +1,7 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryRowGenerator.tsx
-import set2 from "set" /* 2 */;
-import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
-import ArrayResult from "module_20" /* 20 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import DirectoryEntryTypes from "../GuildDirectoryConstants.tsx";
+import ArrayResult from "../../../../_runtime/00020_noop.js";
 
 const DirectoryEntryCategories = DirectoryEntryTypes.DirectoryEntryCategories;
 let obj = { ENTRY: 0, [0]: "ENTRY", HEADER: 1, [1]: "HEADER", PLACEHOLDER: 2, [2]: "PLACEHOLDER" };

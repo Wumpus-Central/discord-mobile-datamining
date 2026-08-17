@@ -1,10 +1,10 @@
 // discord_app/modules/harvester/HarvesterUtils.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "harvestType" /* 13257 */;
-import { REQUEST_DATA_LIMIT_MS } from "REQUEST_DATA_LIMIT_DAYS" /* 14217 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "DataHarvestStore.tsx";
+import { REQUEST_DATA_LIMIT_MS } from "HarvesterConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");

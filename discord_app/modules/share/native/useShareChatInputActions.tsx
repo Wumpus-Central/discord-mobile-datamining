@@ -1,7 +1,7 @@
 // discord_app/modules/share/native/useShareChatInputActions.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");

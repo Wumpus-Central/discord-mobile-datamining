@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/referrals/ReferralMessageUtils.tsx
-import closure_0 from "reset" /* 4045 */;
-import closure_1 from "emitChanges" /* 7421 */;
+import closure_0 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_1 from "../../../../stores/billing/UserOfferStore.tsx";
 
 let result = require("set").fileFinishedImporting("modules/premium/native/referrals/ReferralMessageUtils.tsx");
 

@@ -1,11 +1,11 @@
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 const jsx = jsxProd.jsx;

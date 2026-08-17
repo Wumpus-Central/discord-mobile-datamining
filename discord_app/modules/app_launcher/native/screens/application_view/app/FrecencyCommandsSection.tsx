@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11326 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "../../../../hooks/useFilterAndSortToOnlyFrecentCommands.tsx";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../../../../Constants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

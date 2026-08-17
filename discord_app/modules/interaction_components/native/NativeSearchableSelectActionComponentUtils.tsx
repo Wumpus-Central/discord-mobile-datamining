@@ -1,11 +1,11 @@
 // discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import registerAssetDefault from "registerAsset" /* 8338 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/08338_registerAsset.js";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
 import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 require = arg1;

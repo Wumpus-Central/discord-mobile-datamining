@@ -1,14 +1,14 @@
 // discord_app/design/void/BetaTag/native/BetaTag.tsx
-import noopAll from "noop" /* 19 */;
-import keys from "keys" /* 691 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7403 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import keys from "../../../../ConstantsIOS.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Gradients } from "../../../../modules/colors/native/ColorConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

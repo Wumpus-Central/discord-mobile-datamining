@@ -1,21 +1,21 @@
 // discord_app/modules/stage_channels/native/components/StageAudienceNotificationSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import preloadDefault from "preload" /* 5449 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8081 */;
-import registerAssetDefault from "registerAsset" /* 8082 */;
-import registerAssetDefault2 from "registerAsset" /* 8117 */;
-import registerAssetDefault3 from "registerAsset" /* 8118 */;
-import registerAssetDefault4 from "registerAsset" /* 8119 */;
-import registerAssetDefault5 from "registerAsset" /* 8120 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { STAGE_AUDIENCE_NOTICE_SHEET_KEY as closure_5 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet.tsx";
+import registerAssetDefault from "../../../../../_runtime/08082_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08117_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/08118_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/08119_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/08120_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../StageInstanceStore.tsx";
+import { STAGE_AUDIENCE_NOTICE_SHEET_KEY as closure_5 } from "../../StageChannelsConstants.tsx";
+import { GuildScheduledEventPrivacyLevel as closure_6 } from "../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handleDismiss() {

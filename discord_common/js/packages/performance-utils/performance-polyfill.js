@@ -1,5 +1,5 @@
 // discord_common/js/packages/performance-utils/performance-polyfill.js
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let _Date = Date;
 if (Date.now) {

@@ -1,7 +1,7 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardConstants.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 
 if (isMetaQuest.isMetaQuest()) {
   let obj = { slotHeight: 24, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };

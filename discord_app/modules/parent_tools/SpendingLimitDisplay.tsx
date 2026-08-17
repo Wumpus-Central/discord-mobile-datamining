@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
-import initialize from "initialize" /* 589 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import spendingLimitEqual from "spendingLimitEqual" /* 14184 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
+import spendingLimitEqual from "SpendingLimitUtils.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "FamilyCenterStore.tsx";
+import { SubscriptionIntervalTypes } from "../premium/PremiumConstants.tsx";
 
 require = arg1;
 function getSpendingLimitDisplayState(amount) {

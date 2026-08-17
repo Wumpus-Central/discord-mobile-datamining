@@ -1,15 +1,15 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListBody.tsx
-import noopAll from "noop" /* 19 */;
-import ForumPostUsername from "ForumPostUsername" /* 11181 */;
-import ForumPostMediaAndroid from "ForumPostMediaAndroid" /* 11185 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11190 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11191 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11192 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11200 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ForumPostUsername from "../ForumPostUsername.tsx";
+import ForumPostMediaAndroid from "../ForumPostMedia.tsx";
+import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
+import ForumPostNewTagDefault from "../ForumPostNewTag.tsx";
+import ForumPostTitleDefault from "../ForumPostTitle.tsx";
+import ForumPostMessageContentDefault from "../ForumPostMessageContent.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ForumTimestampFormats } from "../../../ForumConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

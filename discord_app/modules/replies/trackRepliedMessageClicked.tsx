@@ -1,9 +1,9 @@
 // discord_app/modules/replies/trackRepliedMessageClicked.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import processMessage from "processMessage" /* 5013 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 9164 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import processMessage from "ReferencedMessageStore.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import maybeCreateMessageRecordFromSnapshotDefault from "../forwarding/maybeCreateMessageRecordFromSnapshot.tsx";
 
 const ReferencedMessageState = processMessage.ReferencedMessageState;
 const AnalyticEvents = ME.AnalyticEvents;

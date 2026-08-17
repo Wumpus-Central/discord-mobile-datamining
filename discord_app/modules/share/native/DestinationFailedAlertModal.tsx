@@ -1,21 +1,21 @@
 // discord_app/modules/share/native/DestinationFailedAlertModal.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import Text from "Text" /* 4734 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "sortActivity" /* 4559 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { StatusTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import computeChannelNameDefault from "../../channel/useChannelName.tsx";
+import FacepileGroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PresenceStore.tsx";
+import closure_7 from "../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import { StatusTypes } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FailedGroupDMRow(channel) {

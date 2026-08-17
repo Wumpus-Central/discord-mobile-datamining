@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/SurfaceDirectRendererExperiment.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

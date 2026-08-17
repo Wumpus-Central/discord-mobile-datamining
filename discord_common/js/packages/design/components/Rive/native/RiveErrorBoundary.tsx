@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx
-import noopAll from "noop" /* 19 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
 
 const Component = noopAll.Component;
 class RiveErrorBoundary extends Component {

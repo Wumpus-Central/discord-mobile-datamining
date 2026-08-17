@@ -1,13 +1,13 @@
 // discord_app/modules/guild_automod/GuildAutomodMessageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import items from "items" /* 5040 */;
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5232 */;
-import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7608 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import items from "../../lib/MessageQueue.tsx";
+import getDecisionOutcomeFromMessage from "AutomodMessageUtils.tsx";
+import getAutomodErrorMessageFromErrorResponse from "AutomodErrorUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/MessageStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function handleMessageSendFailedAutomod(messageData) {

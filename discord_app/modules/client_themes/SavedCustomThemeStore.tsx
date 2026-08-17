@@ -1,9 +1,9 @@
 // discord_app/modules/client_themes/SavedCustomThemeStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import SystemThemeState from "../user_settings/ThemeConstants.tsx";
 
 function validateSavedTheme(colors) {
   try {

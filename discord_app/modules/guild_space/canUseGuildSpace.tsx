@@ -1,6 +1,6 @@
 // discord_app/modules/guild_space/canUseGuildSpace.tsx
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { experiment } from "GuildSpaceExperiment.tsx";
 

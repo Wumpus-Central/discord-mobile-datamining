@@ -1,7 +1,7 @@
 // discord_app/modules/feedback/FeedbackOverrideStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import optOutEligibilityCheck from "optOutEligibilityCheck" /* 16562 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import optOutEligibilityCheck from "FeedbackManager.tsx";
 
 require = arg1;
 let closure_2 = {};

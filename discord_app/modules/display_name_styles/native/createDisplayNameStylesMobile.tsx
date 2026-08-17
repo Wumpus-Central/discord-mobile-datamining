@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/native/createDisplayNameStylesMobile.tsx
-import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_1 from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "../../a11y/AccessibilityStore.tsx";
+import closure_1 from "../../../stores/UserStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
 

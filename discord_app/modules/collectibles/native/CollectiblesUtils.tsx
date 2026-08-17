@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/CollectiblesUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4052 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import updateProductDefault from "updateProduct" /* 5319 */;
-import BalanceWidgetMode from "BalanceWidgetMode" /* 9250 */;
-import metadataDefault from "metadata" /* 9251 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import isPremiumGiftingSupported from "../../device/BillingPlatformUtils.tsx";
+import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
+import updateProductDefault from "../../../stores/native/IAPStore.android.tsx";
+import BalanceWidgetMode from "../../virtual_currency/types.tsx";
+import metadataDefault from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
 
 function hasAtLeastOneGPlaySynced(nextResult) {
   const products = nextResult.products;

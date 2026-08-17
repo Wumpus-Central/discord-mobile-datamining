@@ -1,8 +1,8 @@
 // discord_app/modules/activities/useSubscribeMissingActivities.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpenOrResumed" /* 10672 */;
-import closure_5 from "sortActivity" /* 4559 */;
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";
+import closure_5 from "../../stores/PresenceStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

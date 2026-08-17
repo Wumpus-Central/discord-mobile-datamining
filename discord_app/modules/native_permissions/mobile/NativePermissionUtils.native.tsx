@@ -1,16 +1,16 @@
 // discord_app/modules/native_permissions/mobile/NativePermissionUtils.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 4848 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import { NativePermissionBaseUtils } from "requestAuthorization" /* 4844 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import openPrivacySettingsDefault from "openPrivacySettings.native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import NativePermissionStatus from "../NativePermissionConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import { NativePermissionBaseUtils } from "../NativePermissionBaseUtils.tsx";
 
 require = arg1;
 function combineStatuses(items) {

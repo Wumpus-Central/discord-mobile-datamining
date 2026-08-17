@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/RowGenerator.tsx
-import applyDefault from "apply" /* 12 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 8160 */;
-import generateMessageRowData from "generateMessageRowData" /* 8162 */;
-import generateSeparatorRowData from "generateSeparatorRowData" /* 12800 */;
-import generateLoadingRowData from "generateLoadingRowData" /* 12801 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import Changeset from "Changeset" /* 8158 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import isDiscordFrontendDevelopment from "../../../../utils/GlobalUtils.tsx";
+import generateBlockedGroupRowData from "rows/BlockedGroup.tsx";
+import generateMessageRowData from "MessageWithContent.tsx";
+import generateSeparatorRowData from "rows/Separator.tsx";
+import generateLoadingRowData from "rows/Loading.tsx";
+import closure_3 from "../../../user_settings/ThemeStore.tsx";
+import Changeset from "RowGeneratorConstants.tsx";
 
 require = arg1;
 ({ RowType: c4, SeparatorType: c5, LoadingType: closure_6 } = Changeset);

@@ -1,10 +1,10 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import ChatWarningIcon from "ChatWarningIcon" /* 11621 */;
-import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK" /* 11620 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import ChatInputGuardDefault from "ChatInputGuard.tsx";
+import ChatWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ChatWarningIcon.tsx";
+import { QUARANTINE_APPEAL_LINK } from "../../../quarantine/QuarantineConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function ChatInputGuardQuarantineDM() {

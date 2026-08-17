@@ -1,19 +1,19 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
-import ClockIcon from "ClockIcon" /* 4338 */;
-import ReactionIcon from "ReactionIcon" /* 7939 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import TrophyIcon from "TrophyIcon" /* 8010 */;
-import HeartIcon from "HeartIcon" /* 9183 */;
-import StarIcon from "StarIcon" /* 9410 */;
-import NatureIcon from "NatureIcon" /* 9426 */;
-import FoodIcon from "FoodIcon" /* 9428 */;
-import GameControllerIcon from "GameControllerIcon" /* 9430 */;
-import BicycleIcon from "BicycleIcon" /* 9431 */;
-import ObjectIcon from "ObjectIcon" /* 9433 */;
-import FlagIcon from "FlagIcon" /* 9435 */;
-import { EmojiCategories } from "EmojiCategoryTypes" /* 6731 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import ClockIcon from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import TrophyIcon from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
+import HeartIcon from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
+import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import NatureIcon from "../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx";
+import FoodIcon from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
+import GameControllerIcon from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import BicycleIcon from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
+import ObjectIcon from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
+import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import { EmojiCategories } from "../../../EmojiPickerConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {

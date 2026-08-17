@@ -1,5 +1,5 @@
 // discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 function toAsciiDigits(arg0, get) {
   let str = "";

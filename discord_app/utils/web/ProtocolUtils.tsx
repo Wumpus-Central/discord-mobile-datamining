@@ -1,5 +1,5 @@
 // discord_app/utils/web/ProtocolUtils.tsx
-import formatDefault from "format" /* 4465 */;
+import formatDefault from "../../../_runtime/04465_format.js";
 
 const os = formatDefault.os;
 let family;

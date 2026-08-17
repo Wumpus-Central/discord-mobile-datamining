@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
+import set from "../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");

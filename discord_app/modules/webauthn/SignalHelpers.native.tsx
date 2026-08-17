@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/SignalHelpers.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import timestampDefault from "../debug/Logger.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 let closure_4 = new timestampDefault("SignalHelpers.native");

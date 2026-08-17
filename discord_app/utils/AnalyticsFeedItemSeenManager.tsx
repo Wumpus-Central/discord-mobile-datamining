@@ -1,6 +1,6 @@
 // discord_app/utils/AnalyticsFeedItemSeenManager.tsx
-import _modDef38 from "module_38" /* 38 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 let obj = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
 class TrackedFeedItem {

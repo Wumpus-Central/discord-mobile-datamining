@@ -1,10 +1,10 @@
 // discord_app/modules/custom_status/utils/formatClearAfterValue.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import resetCache from "resetCache" /* 4063 */;
-import StatusTypes from "StatusTypes" /* 9292 */;
+import set from "../../../../_runtime/00002_set.js";
+import setDefault from "../../../utils/Durations.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import resetCache from "../../../utils/DateUtils.tsx";
+import StatusTypes from "../Constants.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 let result = set.fileFinishedImporting("modules/custom_status/utils/formatClearAfterValue.tsx");

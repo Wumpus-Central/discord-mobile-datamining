@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesConstants.tsx
-import set from "set" /* 2 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
-import DisplayNameFont from "DisplayNameFont" /* 1936 */;
+import set from "../../../_runtime/00002_set.js";
+import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 
 let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];
 const items1 = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];

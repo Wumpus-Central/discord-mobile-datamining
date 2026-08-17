@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import TextAreaCta from "TextAreaCta" /* 11149 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import TextAreaCta from "../ChatInputConstants.tsx";
 
 const require = arg1;
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: c4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: c5, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: error } = TextAreaCta);

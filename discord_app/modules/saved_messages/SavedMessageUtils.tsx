@@ -1,11 +1,11 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { UnknownChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { UnknownChannelRecord } from "../../records/ChannelRecord.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

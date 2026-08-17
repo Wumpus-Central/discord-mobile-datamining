@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/StageChannelAnimationUtils.tsx
-import set from "set" /* 2 */;
-import _mod4115 from "module_4115" /* 4115 */;
+import set from "../../../../../_runtime/00002_set.js";
+import _mod4115 from "../../../reanimated/ReanimatedRexport.tsx";
 
 let obj = { duration: 250, easing: null };
 const Easing = _mod4115.Easing;

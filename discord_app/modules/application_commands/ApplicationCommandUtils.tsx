@@ -1,18 +1,18 @@
 // discord_app/modules/application_commands/ApplicationCommandUtils.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import IntegerDefault from "Integer" /* 14 */;
-import sum2 from "sum" /* 505 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import handleChanged from "handleChanged" /* 4825 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import commandPermissions from "commandPermissions" /* 5247 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import ME from "ME" /* 676 */;
-import deserializeResult from "module_0" /* 0 */;
-import importAllResult from "fromString" /* 506 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import IntegerDefault from "../../../_runtime/00014_Integer.js";
+import sum2 from "../../../discord_common/js/shared/Constants.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import handleChanged from "../../stores/DraftStore.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import commandPermissions from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
+import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
+import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
+import ME from "../../Constants.tsx";
+import deserializeResult from "../../index.native.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 function buildCommand(arg0) {
   ({ rootCommand, command, subCommandPath } = arg0);

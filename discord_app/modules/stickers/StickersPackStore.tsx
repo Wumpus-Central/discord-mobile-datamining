@@ -1,9 +1,9 @@
 // discord_app/modules/stickers/StickersPackStore.tsx
-import setDefault from "set" /* 687 */;
-import StickerFormat from "StickerFormat" /* 4964 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { TypeTag } from "TypeTag" /* 1432 */;
-import { LibdiscoreStore } from "identity" /* 1911 */;
+import setDefault from "../../utils/Durations.tsx";
+import StickerFormat from "StickersTypes.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { TypeTag } from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
+import { LibdiscoreStore } from "../libdiscore/stores/LibdiscoreStore.tsx";
 
 require = arg1;
 function parseServerPackSticker(id) {

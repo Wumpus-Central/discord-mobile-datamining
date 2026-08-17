@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/native/FavoritesGuildUpsellSheet.tsx
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 9984 */;
-import closure_3 from "noop" /* 19 */;
-import { MAX_FAVORITE_CHANNELS } from "date" /* 1429 */;
-import { FAVORITES } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "../analytics/useTrackFavoritesGuildUpsellModalOpened.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { MAX_FAVORITE_CHANNELS } from "../FavoritesConstants.tsx";
+import { FAVORITES } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

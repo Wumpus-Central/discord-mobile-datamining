@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/language_and_time/native/UserSettingsLocale.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { setAppLocale } from "_setAppLocale" /* 1995 */;
-import closure_7 from "_getSystemLocale" /* 1994 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { setAppLocale } from "../../../../intl/IntlLoaderStore.tsx";
+import closure_7 from "../../LocaleStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";

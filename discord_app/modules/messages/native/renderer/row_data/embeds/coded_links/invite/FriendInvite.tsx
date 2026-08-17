@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import set from "../../../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import getSystemLocale from "../../../../../../../../intl/index.native.tsx";
+import InviteSendStates from "../../../../../../../instant_invite/Constants.tsx";
+import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
+import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const InviteTypes = InviteSendStates.InviteTypes;

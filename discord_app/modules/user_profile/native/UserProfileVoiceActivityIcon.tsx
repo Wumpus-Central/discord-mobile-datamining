@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileVoiceActivityIcon.tsx
-import noopAll from "noop" /* 19 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import isRoleRequiredDefault from "../../channel/isRoleRequired.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

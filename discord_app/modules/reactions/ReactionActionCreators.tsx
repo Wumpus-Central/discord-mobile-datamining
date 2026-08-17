@@ -1,15 +1,15 @@
 // discord_app/modules/reactions/ReactionActionCreators.tsx
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault2 from "set" /* 4827 */;
-import ReactionTypes2 from "ReactionTypes" /* 7510 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import ME from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import setDefault2 from "../../actions/AlertActionCreators.tsx";
+import ReactionTypes2 from "../messages/MessageReactionsTypes.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MessageStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function checkReactionResponse(arg0, arg1, isRetry) {

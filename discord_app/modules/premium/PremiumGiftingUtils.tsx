@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumGiftingUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
 const require = arg1;
 function _sendGiftMessage() {

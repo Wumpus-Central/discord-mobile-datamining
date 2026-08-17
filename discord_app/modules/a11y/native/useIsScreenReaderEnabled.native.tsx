@@ -1,7 +1,7 @@
 // discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import keys from "../../../../_runtime/00644_keys.js";
 import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;

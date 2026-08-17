@@ -1,8 +1,8 @@
 // discord_app/modules/routing/KeybindRouterStore.tsx
-import set from "set" /* 2 */;
-import matchPath from "matchPath" /* 4202 */;
-import ME from "ME" /* 676 */;
-import identity from "identity" /* 700 */;
+import set from "../../../_runtime/00002_set.js";
+import matchPath from "matchPathCompat.tsx";
+import ME from "../../Constants.tsx";
+import identity from "../../../_runtime/00700_identity.js";
 
 function getMatchData(pathname) {
   let str = pathname;

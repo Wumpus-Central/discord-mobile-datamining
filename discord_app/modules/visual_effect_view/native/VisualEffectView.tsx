@@ -1,12 +1,12 @@
 // discord_app/modules/visual_effect_view/native/VisualEffectView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import MODERN_ANDROID_BLURRING_AVAILABLE from "MODERN_ANDROID_BLURRING_AVAILABLE" /* 4730 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides" /* 4726 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import MODERN_ANDROID_BLURRING_AVAILABLE from "VisualEffectViewAndroid.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useVisualEffectViewOverrides as closure_4 } from "overrides/VEVOOStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_6 = set.isAndroid();

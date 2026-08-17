@@ -1,15 +1,15 @@
 // discord_app/modules/messages/native/renderer/transformContentInventoryEntryMessageComponent.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items32 from "items3" /* 4481 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import registerAssetDefault from "registerAsset" /* 6684 */;
-import registerAssetDefault2 from "registerAsset" /* 8011 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8344 */;
-import registerAssetDefault3 from "registerAsset" /* 8352 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import items32 from "../../../activities/Constants.tsx";
+import getNicknameDefault from "../../../../utils/NicknameUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/06684_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08011_registerAsset.js";
+import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import registerAssetDefault3 from "../../../../../_runtime/08352_registerAsset.js";
+import closure_4 from "../../../applications/ApplicationStore.tsx";
+import closure_5 from "../../../user_settings/LocaleStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const ImageSizes = items32.ImageSizes;

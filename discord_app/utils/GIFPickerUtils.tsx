@@ -1,7 +1,7 @@
 // discord_app/utils/GIFPickerUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GIF_PROVIDER from "GIF_PROVIDER" /* 10196 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import GIF_PROVIDER from "../modules/gif_picker/GifProvider.tsx";
 
 const SearchTypes = ME.SearchTypes;
 const result = set.fileFinishedImporting("utils/GIFPickerUtils.tsx");

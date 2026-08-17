@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/PremiumPlanPurchasedStore.tsx
-import batchUpdates from "batchUpdates" /* 705 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7393 */;
-import closure_3 from "setContent" /* 4086 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import keys from "keys" /* 644 */;
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet.tsx";
+import closure_3 from "../../action_sheet/native/ActionSheetStore.tsx";
+import GuildFeatures from "../PremiumConstants.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;

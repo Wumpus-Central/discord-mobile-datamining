@@ -1,21 +1,21 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9515 */;
-import stylesDefault from "styles" /* 9516 */;
-import ClickableGameIconDefault from "ClickableGameIcon" /* 9518 */;
-import TraitEmojiDefault from "TraitEmoji" /* 9531 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import isThemeLight from "../../../../design/utils/shared/themes.tsx";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import useProfilePrimaryColor from "../GuildProfileUtils.tsx";
+import stylesDefault from "GuildProfileHeader.tsx";
+import ClickableGameIconDefault from "GuildProfileGames.tsx";
+import TraitEmojiDefault from "GuildProfileTraits.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GuildProfileBackground(guildProfile) {

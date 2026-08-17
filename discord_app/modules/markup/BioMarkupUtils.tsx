@@ -1,12 +1,12 @@
 // discord_app/modules/markup/BioMarkupUtils.tsx
-import privDefault from "priv" /* 1405 */;
-import tDefault from "t" /* 4092 */;
-import MarkupTextDefault from "MarkupText" /* 4766 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
-import importDefaultResult from "combineMarkupRules" /* 6808 */;
-import importAllResult from "reactParserFor" /* 6902 */;
-import importDefaultResult1 from "get defaultRules" /* 6807 */;
-import importDefaultResult3 from "apply" /* 12 */;
+import privDefault from "../../../_runtime/01405_priv.js";
+import tDefault from "../../../_runtime/04092_t.js";
+import MarkupTextDefault from "MarkupReactRules.native.tsx";
+import parseLinkDefault from "MarkupRules.tsx";
+import importDefaultResult from "combineMarkupRules.tsx";
+import importAllResult from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import importDefaultResult1 from "MarkupUtils.tsx";
+import importDefaultResult3 from "../../../_runtime/00012_apply.js";
 
 const items = [parseLinkDefault.PROFILE_BIO_RULES, MarkupTextDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true })];
 const importDefaultResultResult = importDefaultResult(items);

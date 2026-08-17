@@ -1,7 +1,7 @@
 // discord_app/modules/verification/native/components/CountrySelectModal.tsx
-import NavigationStack from "NavigationStack" /* 6312 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");

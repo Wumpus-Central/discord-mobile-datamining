@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/PlatformUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
 let c1 = true;

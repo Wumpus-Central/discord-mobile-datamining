@@ -1,5 +1,5 @@
 // discord_app/modules/debug/logThirdPartyImportsDone.tsx
-import timestampDefault from "timestamp" /* 3 */;
+import timestampDefault from "Logger.tsx";
 
 new timestampDefault("app").log("Finished loading third party imports");
 const obj = new timestampDefault("app");

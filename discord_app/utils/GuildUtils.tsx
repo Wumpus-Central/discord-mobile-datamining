@@ -1,10 +1,10 @@
 // discord_app/utils/GuildUtils.tsx
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserAll from "nameFromUser" /* 4219 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import importDefaultResult from "priv" /* 1405 */;
+import setDefault from "Durations.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import nameFromUserAll from "UserUtils.tsx";
+import closure_5 from "../stores/GuildStore.tsx";
+import closure_6 from "../stores/UserStore.tsx";
+import importDefaultResult from "../../_runtime/01405_priv.js";
 
 require = arg1;
 function getGuildNameSuggestion(truncateUsername) {

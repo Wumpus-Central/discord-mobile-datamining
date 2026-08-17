@@ -1,21 +1,21 @@
 // discord_app/modules/user_profile/native/UserProfileContent.tsx
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 12174 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "get" /* 9186 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "handleFormOpen" /* 8370 */;
-import closure_12 from "createUserWidgetFromServer" /* 5365 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
+import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import WidgetRendererDefault from "UserProfileWidgetsBoard.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../wishlists/WishlistStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import closure_9 from "../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import closure_11 from "../UserProfileSettingsStore.tsx";
+import closure_12 from "../UserProfileStore.tsx";
+import { UserProfileSections } from "../Constants.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import { RelationshipTypes } from "../../../Constants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function CustomStatusBubble(guildId) {

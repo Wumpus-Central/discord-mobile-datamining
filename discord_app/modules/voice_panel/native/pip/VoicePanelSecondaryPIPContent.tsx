@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "map" /* 8708 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { ActivityLayoutMode } from "items3" /* 4481 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../../frames/FramesStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import { ActivityLayoutMode } from "../../../activities/Constants.tsx";
+import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
+import FrameLayoutModes from "../../../frames/FramesConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ asLaunched: c9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: unpackModuleId } = FrameLayoutModes);

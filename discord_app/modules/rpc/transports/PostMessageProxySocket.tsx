@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 8751 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import checkRpcVersionDefault from "checkRpcVersion" /* 8762 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import HANDSHAKEDefault from "../RPCOpcodes.tsx";
+import prototypeDefault from "../RPCError.tsx";
+import checkRpcVersionDefault from "BaseSocket.tsx";
 
 const RPCCloseCodes = ME.RPCCloseCodes;
 checkRpcVersionDefault;

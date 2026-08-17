@@ -1,22 +1,22 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputSendUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 4876 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import dispatcherDefault from "dispatcher" /* 7524 */;
-import useMessageMaxLength from "useMessageMaxLength" /* 8462 */;
-import dispatcherDefault2 from "dispatcher" /* 8466 */;
-import isMediaAttachment from "isMediaAttachment" /* 8515 */;
-import items2 from "items" /* 10171 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_6 from "setCooldown" /* 7440 */;
-import closure_7 from "map" /* 4824 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getPremiumPlanItemDefault from "../../../../utils/PremiumUtils.tsx";
+import KESTREL_GA_UPLOAD_LIMIT_MB from "../../../media_uploads/experiments/KestrelExperiment.tsx";
+import rebuildDefault from "../../../messages/MessageParser.tsx";
+import dispatcherDefault from "../../../../actions/DraftActionCreators.tsx";
+import useMessageMaxLength from "../../../messages/useMessageMaxLength.tsx";
+import dispatcherDefault2 from "../../../../actions/UploadAttachmentActionCreators.tsx";
+import isMediaAttachment from "../../../forums/ForumPostMediaUtils.tsx";
+import items2 from "../../../../utils/ChatRestrictions.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../stores/DraftStore.tsx";
+import { DraftType } from "../../../../stores/DraftStore.tsx";
+import closure_6 from "../../../../stores/SlowmodeStore.tsx";
+import closure_7 from "../../../../stores/UploadAttachmentStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { MessageSendLocation } from "../../../messages/MessageConstants.tsx";
+import { PremiumUpsellTypes } from "../../../premium/PremiumConstants.tsx";
 
 require = arg1;
 function recoverDraft(chatInputRef) {

@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/useParentalConsentWarning.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "initialize" /* 14224 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "ParentalConsentWarningStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");

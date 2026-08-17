@@ -1,15 +1,15 @@
 // discord_app/stores/NotificationSettingsModalStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5279 */;
-import closure_4 from "setIndex" /* 5278 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "handleInviteData" /* 4295 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import getFlattenedChannelListDefault from "../modules/channel/getFlattedChannelList.tsx";
+import closure_4 from "GuildCategoryStore.tsx";
+import closure_5 from "GuildChannelStore.tsx";
+import closure_6 from "GuildMemberCountStore.tsx";
+import closure_7 from "GuildStore.tsx";
+import closure_8 from "UserGuildSettingsStore.tsx";
+import ME from "../Constants.tsx";
 
 let closure_3 = createChannelRecord.isGuildSelectableChannelType;
 const FormStates = ME.FormStates;

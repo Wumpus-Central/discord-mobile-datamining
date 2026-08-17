@@ -1,19 +1,19 @@
 // discord_app/modules/slayer_storefront/SlayerStorefrontUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import keysSorter from "keysSorter" /* 4376 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
-import RewardRequirementType from "RewardRequirementType" /* 7204 */;
-import useSKUPrice from "useSKUPrice" /* 7205 */;
-import closure_3 from "addApplication" /* 4478 */;
-import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 7201 */;
-import closure_5 from "createExecutable" /* 4479 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 7202 */;
-import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 7203 */;
-import ME from "ME" /* 676 */;
-import { CollectibleShopTab } from "items" /* 678 */;
-import { CurrencyCodes } from "sum" /* 505 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import keysSorter from "../../../_runtime/04376_keysSorter.js";
+import _httpGetWithCountryCodeQuery from "../../utils/StoreUtils.tsx";
+import RewardRequirementType from "SocialLayerStorefrontTypes.tsx";
+import useSKUPrice from "../storefront/StorefrontUtils.tsx";
+import closure_3 from "../applications/ApplicationStore.tsx";
+import { WishlistRecommendationReason as closure_4 } from "../wishlists/records/WishlistRecommendationRecord.tsx";
+import closure_5 from "../../records/ApplicationRecord.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "SocialLayerStorefrontStore.tsx";
+import STOREFRONT_MARKETING_GUILD_ID from "SocialLayerStorefrontConstants.tsx";
+import ME from "../../Constants.tsx";
+import { CollectibleShopTab } from "../collectibles/CollectiblesShopConstants.tsx";
+import { CurrencyCodes } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 

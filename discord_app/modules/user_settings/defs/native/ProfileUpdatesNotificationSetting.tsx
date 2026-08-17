@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import apexExperiment from "apexExperiment" /* 14815 */;
-import onProfileUpdatesNotificationSettingsChanged from "onProfileUpdatesNotificationSettingsChanged" /* 14816 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import apexExperiment from "../../../notifications/profile_updates/ProfileUpdatesNotificationExperiment.tsx";
+import onProfileUpdatesNotificationSettingsChanged from "../../../notifications/profile_updates/ProfileUpdatesNotificationUtils.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

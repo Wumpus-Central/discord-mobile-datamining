@@ -1,13 +1,13 @@
 // discord_app/modules/stickers/StickersActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "handleConnectionOpen" /* 4826 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "loadSavedGuildStickers" /* 6769 */;
-import { Endpoints } from "ME" /* 676 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../user_settings/LocaleStore.tsx";
+import closure_6 from "../../stores/GuildAvailabilityStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import closure_8 from "StickersStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;

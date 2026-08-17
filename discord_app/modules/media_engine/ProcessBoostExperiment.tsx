@@ -1,7 +1,7 @@
 // discord_app/modules/media_engine/ProcessBoostExperiment.tsx
-import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const ProcessPriority = DesktopSources.ProcessPriority;
 let obj = { processPriority: ProcessPriority.HIGH, threadPriorityConfiguration: 0 };

@@ -1,8 +1,8 @@
 // discord_app/modules/routing/RouteUtils.tsx
-import set from "set" /* 2 */;
-import INVITE from "INVITE" /* 677 */;
-import set2 from "set" /* 1398 */;
-import RouteParam from "RouteParam" /* 4216 */;
+import set from "../../../_runtime/00002_set.js";
+import INVITE from "RouteConstants.tsx";
+import set2 from "../channel/ChannelConstants.tsx";
+import RouteParam from "RouteParam.tsx";
 
 const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
 const isStaticChannelRoute = set2.isStaticChannelRoute;

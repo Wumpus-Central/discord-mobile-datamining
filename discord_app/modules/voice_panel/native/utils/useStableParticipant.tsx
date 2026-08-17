@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/utils/useStableParticipant.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import closure_3 from "getParticipants" /* 4773 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import closure_3 from "../../../calls/ChannelRTCStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/MediaEngineStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

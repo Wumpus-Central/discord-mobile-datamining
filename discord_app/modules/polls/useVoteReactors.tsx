@@ -1,6 +1,6 @@
 // discord_app/modules/polls/useVoteReactors.tsx
-import closure_3 from "reactionKey" /* 7509 */;
-import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 676 */;
+import closure_3 from "../../stores/MessageReactionsStore.tsx";
+import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");

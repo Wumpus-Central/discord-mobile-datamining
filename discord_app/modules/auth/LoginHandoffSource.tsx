@@ -1,8 +1,8 @@
 // discord_app/modules/auth/LoginHandoffSource.tsx
-import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import set2 from "set" /* 1398 */;
-import ME from "ME" /* 4488 */;
+import set from "../../../_runtime/00002_set.js";
+import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
+import set2 from "../channel/ChannelConstants.tsx";
+import ME from "../links/LinkUtils.tsx";
 
 const StaticChannelRoute = set2.StaticChannelRoute;
 const UserSettingsPath = MAX_FAVORITES.UserSettingsPath;

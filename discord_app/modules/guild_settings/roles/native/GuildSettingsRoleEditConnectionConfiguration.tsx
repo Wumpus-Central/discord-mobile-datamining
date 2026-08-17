@@ -1,18 +1,18 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionConfiguration.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import request from "request" /* 10755 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getPlatformUserUrlDefault from "../../../../lib/Platforms.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import request from "../../../applications/useGetOrFetchApplicationBatched.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PlatformTypes } from "../../../../Constants.tsx";
+import OperatorTypes from "../../../connections/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function Header(arg0) {

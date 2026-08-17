@@ -1,7 +1,7 @@
 // discord_app/modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx
-import noopAll from "noop" /* 19 */;
-import items from "items" /* 11506 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import items from "../../../HubProgressBarConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

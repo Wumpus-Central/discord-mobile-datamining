@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 
 const require = arg1;
 function performRoleSubscriptionUpsellRedirect(guildId) {

@@ -1,8 +1,8 @@
 // discord_app/modules/push_notifications/PushNotificationConstants.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import getConstants from "getConstants" /* 1626 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import getConstants from "../../utils/native/ClientInfoUtils.tsx";
+import isMetaQuest from "../device/MetaQuestUtils.android.tsx";
 
 getConstants = getConstants.getConstants();
 let str;

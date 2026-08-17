@@ -1,8 +1,8 @@
 // discord_app/modules/safety_hub/native/AppealIngestionModalActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+import set from "../../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 
 const APPEAL_INGESTION_MODAL_KEY = "APPEAL_INGESTION_MODAL_KEY";
 const result = set.fileFinishedImporting("modules/safety_hub/native/AppealIngestionModalActionCreators.tsx");

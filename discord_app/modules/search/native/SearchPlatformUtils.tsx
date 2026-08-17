@@ -1,18 +1,18 @@
 // discord_app/modules/search/native/SearchPlatformUtils.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import LinkIcon from "LinkIcon" /* 4318 */;
-import ClydeIcon from "ClydeIcon" /* 9551 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import _modDef11518 from "module_11518" /* 11518 */;
-import _modDef11531 from "module_11531" /* 11531 */;
-import _modDef11534 from "module_11534" /* 11534 */;
-import closure_3 from "handleReaction" /* 4971 */;
-import closure_4 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import SEARCH_TEXT_INPUT_DEBOUNCE_TIME from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11524 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "apply" /* 12 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
+import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import SearchTokenTypes from "../SearchUtils.tsx";
+import _modDef11518 from "../SearchActionCreators.tsx";
+import _modDef11531 from "tracking/Tracking.tsx";
+import _modDef11534 from "SearchPlatformActionCreators.tsx";
+import closure_3 from "../SearchMessageStore.tsx";
+import closure_4 from "stores/SearchQueryStore.tsx";
+import MessageEmbedTypes from "../SearchConstants.tsx";
+import SEARCH_TEXT_INPUT_DEBOUNCE_TIME from "SearchPlatformConstants.tsx";
+import ME from "../../../Constants.tsx";
+import importDefaultResult from "../../../../_runtime/00012_apply.js";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 import { SearchTokenTypes } from "../SearchUtils.tsx";
 

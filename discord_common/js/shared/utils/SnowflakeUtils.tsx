@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/SnowflakeUtils.tsx
-import set from "set" /* 2 */;
-import IntegerDefault from "Integer" /* 14 */;
+import set from "../../../../_runtime/00002_set.js";
+import IntegerDefault from "../../../../_runtime/00014_Integer.js";
 
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;

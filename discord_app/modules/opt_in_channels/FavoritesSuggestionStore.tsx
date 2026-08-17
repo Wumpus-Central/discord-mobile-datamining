@@ -1,9 +1,9 @@
 // discord_app/modules/opt_in_channels/FavoritesSuggestionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "handleConnectionOpen" /* 1979 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/ChannelStore.tsx";
+import closure_1 from "../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../stores/UserGuildSettingsStore.tsx";
 
 function handleChange() {
   channelId = channelId.getChannelId();

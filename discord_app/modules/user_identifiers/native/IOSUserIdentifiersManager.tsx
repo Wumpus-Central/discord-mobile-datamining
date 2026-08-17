@@ -1,9 +1,9 @@
 // discord_app/modules/user_identifiers/native/IOSUserIdentifiersManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 let require = arg1;
 initializeDefault;

@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx
-import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import fromServer from "fromServer" /* 5306 */;
-import fromServer2 from "fromServer" /* 5307 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../_runtime/00002_set.js";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import fromServer from "../collectibles/records/AvatarDecorationRecord.tsx";
+import fromServer2 from "../collectibles/records/ProfileEffectRecord.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {

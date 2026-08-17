@@ -1,6 +1,6 @@
 // discord_common/js/shared/hooks/useIntersectionObserver.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
 ({ useEffect: c3, useMemo: c4, useRef: c5, useLayoutEffect: closure_6 } = noop);
 let closure_7 = {};

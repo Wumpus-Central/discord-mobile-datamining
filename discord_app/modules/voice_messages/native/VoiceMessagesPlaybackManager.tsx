@@ -1,11 +1,11 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import enforcingDefault from "enforcing" /* 13908 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
+import set from "../../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
 
 ({ AppState: c3, NativeModules: c4 } = get_ActivityIndicator);
 initializeDefault;

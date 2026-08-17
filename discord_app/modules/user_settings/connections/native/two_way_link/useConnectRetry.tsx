@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx
-import closure_0 from "noop" /* 19 */;
+import closure_0 from "../../../../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx");
 

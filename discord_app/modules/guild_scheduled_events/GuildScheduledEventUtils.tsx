@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
-import set from "set" /* 2 */;
-import tDefault from "t" /* 3975 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import set from "../../../_runtime/00002_set.js";
+import tDefault from "../../../_runtime/03975_t.js";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 
 ({ UpcomingGuildEventNoticeTypes: obj1, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: c4, ACKED_RECENTLY_WINDOW_DAYS: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");

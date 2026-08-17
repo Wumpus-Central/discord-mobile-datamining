@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/native/UserProfileAlertUtils.tsx
-import noopAll from "noop" /* 19 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 11792 */;
-import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 11793 */;
-import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 11794 */;
-import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 11795 */;
-import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 11796 */;
-import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 11797 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest.tsx";
+import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend.tsx";
+import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend.tsx";
+import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection.tsx";
+import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported.tsx";
+import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

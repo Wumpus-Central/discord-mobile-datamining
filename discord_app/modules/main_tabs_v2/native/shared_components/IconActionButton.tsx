@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/IconActionButton.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 8498 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8498 */;
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import getFontScale from "../../../screen/native/useFontScale.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import DEFAULT_BADGE_SIZE from "Badge.tsx";
+import DEFAULT_BADGE_SIZEDefault from "Badge.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class ButtonBadge {

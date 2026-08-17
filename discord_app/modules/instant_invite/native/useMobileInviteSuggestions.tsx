@@ -1,13 +1,13 @@
 // discord_app/modules/instant_invite/native/useMobileInviteSuggestions.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "_computeRows" /* 11502 */;
-import closure_8 from "getVoiceStatesForGuild" /* 4545 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { NOOP_NULL } from "sum" /* 505 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/InviteSuggestionsStore.tsx";
+import closure_8 from "../../../stores/views/SortedVoiceStateStore.tsx";
+import { InviteTargetTypes } from "../Constants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { NOOP_NULL } from "../../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileMutuals.tsx
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import { DIVIDER_DOT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserProfileSections } from "../Constants.tsx";
+import { DIVIDER_DOT } from "Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

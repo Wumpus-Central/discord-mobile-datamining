@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftAnalytics.tsx
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");

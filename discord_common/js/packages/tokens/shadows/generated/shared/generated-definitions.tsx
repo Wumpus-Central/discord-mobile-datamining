@@ -1,6 +1,6 @@
 // discord_common/js/packages/tokens/shadows/generated/shared/generated-definitions.tsx
-import set from "set" /* 2 */;
-import items from "items" /* 713 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import items from "../../../themes/generated/generated-definitions.tsx";
 
 const Themes = items._private.Themes;
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/shadows/generated/shared/generated-definitions.tsx");

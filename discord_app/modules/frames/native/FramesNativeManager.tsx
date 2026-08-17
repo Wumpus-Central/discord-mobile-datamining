@@ -1,20 +1,20 @@
 // discord_app/modules/frames/native/FramesNativeManager.tsx
-import v1 from "v1" /* 514 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import enforcingDefault from "enforcing" /* 8714 */;
-import leaveFrameDefault from "leaveFrame" /* 8767 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 8708 */;
-import { isLaunched } from "FrameLayoutModes" /* 8709 */;
-import { ComponentActions } from "ME" /* 676 */;
-import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 4481 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import WebView from "WebView" /* 6304 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import v1 from "../../../../_runtime/00514_v1.js";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
+import leaveFrameDefault from "../FramesManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../FramesStore.tsx";
+import { isLaunched } from "../FramesConstants.tsx";
+import { ComponentActions } from "../../../Constants.tsx";
+import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../../activities/Constants.tsx";
+import { TransportTypes } from "../../rpc/Constants.tsx";
+import WebView from "../../../../_runtime/06304_WebView.js";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 require = arg1;
 function postMessageToWebView() {

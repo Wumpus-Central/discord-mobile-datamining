@@ -1,10 +1,10 @@
 // discord_app/modules/notification_center/native/ForYouLoadMore.tsx
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_validate" /* 4801 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../NotificationCenterItemsStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

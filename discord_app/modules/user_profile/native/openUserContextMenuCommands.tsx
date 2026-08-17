@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/openUserContextMenuCommands.tsx
-import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../../_runtime/00002_set.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let result = set.fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
 

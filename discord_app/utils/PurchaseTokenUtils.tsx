@@ -1,8 +1,8 @@
 // discord_app/utils/PurchaseTokenUtils.tsx
-import v1 from "v1" /* 514 */;
-import Storage3 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import v1 from "../../_runtime/00514_v1.js";
+import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
+import setDefault from "Durations.tsx";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 function getPurchaseToken() {

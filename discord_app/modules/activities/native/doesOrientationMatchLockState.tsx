@@ -1,6 +1,6 @@
 // discord_app/modules/activities/native/doesOrientationMatchLockState.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
+import set from "../../../../_runtime/00002_set.js";
+import items3 from "../Constants.tsx";
 
 const OrientationLockState = items3.OrientationLockState;
 const result = set.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");

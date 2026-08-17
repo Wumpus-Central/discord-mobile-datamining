@@ -1,17 +1,17 @@
 // discord_app/modules/stickers/StickersHooks.tsx
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import useFrecencySettings from "useFrecencySettings" /* 10200 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "insertUnsortedGuilds" /* 5078 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "handleStickersStoreUpdate" /* 6768 */;
-import closure_11 from "loadSavedGuildStickers" /* 6769 */;
-import { Permissions } from "ME" /* 676 */;
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import getStickerExtensionFromFormatType from "StickersUtils.tsx";
+import useFrecencySettings from "../user_settings/FrecencyUserSettingsHooks.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../stores/SortedGuildStore.tsx";
+import closure_9 from "../../stores/UserStore.tsx";
+import closure_10 from "StickersPersistedStore.tsx";
+import closure_11 from "StickersStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 

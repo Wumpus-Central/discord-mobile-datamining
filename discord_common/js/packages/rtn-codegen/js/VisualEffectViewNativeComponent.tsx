@@ -1,7 +1,7 @@
 // discord_common/js/packages/rtn-codegen/js/VisualEffectViewNativeComponent.tsx
-import set from "set" /* 2 */;
-import result2 from "result" /* 26 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import set from "../../../../../_runtime/00002_set.js";
+import result2 from "../../../../../_runtime/00026_result.js";
+import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "DCDVisualEffectView", validAttributes: null };
 obj = { blurAmount: true, blurEffectName: true, blurTintIOSParityCompensationColor: result2.colorAttribute, tintColor: result2.colorAttribute, blurTargetViewNativeId: true };

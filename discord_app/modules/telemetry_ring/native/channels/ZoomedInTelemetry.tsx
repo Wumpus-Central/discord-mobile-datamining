@@ -1,9 +1,9 @@
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx
-import apexExperiment from "apexExperiment" /* 13559 */;
-import getIntervalMsDefault from "getIntervalMs" /* 13560 */;
-import TelemetryChannel from "TelemetryChannel" /* 13562 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult1 from "TelemetryChannel" /* 13562 */;
+import apexExperiment from "../ZoomedInAnalyticsExperiment.tsx";
+import getIntervalMsDefault from "BaseTelemetryExportChannel.tsx";
+import TelemetryChannel from "../TelemetryRingNative.android.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importDefaultResult1 from "../TelemetryRingNative.android.tsx";
 
 require = arg1;
 let closure_4 = { type: "ROWS", limit: 250 };

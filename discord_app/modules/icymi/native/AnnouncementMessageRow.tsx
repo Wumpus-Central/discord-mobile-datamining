@@ -1,15 +1,15 @@
 // discord_app/modules/icymi/native/AnnouncementMessageRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { ITEM_PADDING } from "ITEM_PADDING" /* 15746 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import { ITEM_PADDING } from "DesignConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

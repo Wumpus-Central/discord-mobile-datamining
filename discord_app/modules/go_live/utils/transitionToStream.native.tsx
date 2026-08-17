@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/utils/transitionToStream.native.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import openChannelCallModal from "openChannelCallModal" /* 8663 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import openChannelCallModal from "../../../utils/native/PrivateChannelCallUtils.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");

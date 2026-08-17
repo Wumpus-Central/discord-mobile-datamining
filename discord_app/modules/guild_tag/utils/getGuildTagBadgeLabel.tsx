@@ -1,8 +1,8 @@
 // discord_app/modules/guild_tag/utils/getGuildTagBadgeLabel.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import items from "items" /* 8168 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import items from "../GuildTagConstants.tsx";
 
 const GuildTagBadgeKind = items.GuildTagBadgeKind;
 const result = set.fileFinishedImporting("modules/guild_tag/utils/getGuildTagBadgeLabel.tsx");

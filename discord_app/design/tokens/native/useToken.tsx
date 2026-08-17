@@ -1,8 +1,8 @@
 // discord_app/design/tokens/native/useToken.tsx
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSemanticColorContextFromThemeContext from "getSemanticColorContextFromThemeContext" /* 4098 */;
-import ManaContext from "ManaContext" /* 4104 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSemanticColorContextFromThemeContext from "SemanticColorContext.native.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 
 require = arg1;
 const map = new Map();

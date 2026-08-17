@@ -1,12 +1,12 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandRootScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: c9 } = TRUE_OPTION_NAME);

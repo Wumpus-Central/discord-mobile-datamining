@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx
-import closure_2 from "noop" /* 19 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let items = [{ scaleX: -1 }];

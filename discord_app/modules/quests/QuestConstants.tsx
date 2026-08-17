@@ -1,13 +1,13 @@
 // discord_app/modules/quests/QuestConstants.tsx
-import setDefault from "set" /* 687 */;
-import QuestVariants from "QuestVariants" /* 6717 */;
-import Quests from "Quests" /* 6718 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import set4 from "set" /* 6723 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6724 */;
-import sendRequest from "sendRequest" /* 530 */;
-import apply from "apply" /* 12 */;
-import set from "set" /* 2 */;
+import setDefault from "../../utils/Durations.tsx";
+import QuestVariants from "../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
+import Quests from "../../../discord_common/js/shared/shared-constants/Quests.tsx";
+import QuestsVisibleMessagesChangedSource from "QuestTypes.tsx";
+import set4 from "../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import DismissibleQuestContentFlags from "../../../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import apply from "../../../_runtime/00012_apply.js";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [QuestVariants.QuestVariants.NITRO_2_POINT_0_CTA, QuestVariants.QuestVariants.ORBS_MULTIPLIER_QUEST, QuestVariants.QuestVariants.XBOX_GAME_PASS_QUEST];
 let set = new Set(items);

@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 import { cheapWorkletShallowEqual } from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 

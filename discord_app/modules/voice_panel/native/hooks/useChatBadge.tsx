@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/hooks/useChatBadge.tsx
-import closure_2 from "generateOldThreadCutoff" /* 4772 */;
+import closure_2 from "../../../../stores/ReadStateStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

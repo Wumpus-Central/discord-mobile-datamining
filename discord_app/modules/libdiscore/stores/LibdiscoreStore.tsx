@@ -1,7 +1,7 @@
 // discord_app/modules/libdiscore/stores/LibdiscoreStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import { Store } from "initialize" /* 589 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import { Store } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function identity(arg0) {

@@ -1,13 +1,13 @@
 // discord_app/stores/CreateInviteModalStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isGuildMemberDefault from "isGuildMember" /* 8920 */;
-import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 8922 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "map" /* 8043 */;
-import { FormStates } from "ME" /* 676 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isGuildMemberDefault from "../utils/InstantInviteUtils.tsx";
+import getDefaultInviteExpiration from "../modules/instant_invite/DefaultInviteExpirationExperiments.tsx";
+import closure_9 from "ChannelStore.tsx";
+import closure_10 from "GuildStore.tsx";
+import closure_11 from "InstantInviteStore.tsx";
+import { FormStates } from "../Constants.tsx";
 
 require = arg1;
 function updateWithLatestInvite(channelId, arg1) {

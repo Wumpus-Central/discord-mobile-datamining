@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import set from "set" /* 2 */;
-import isIterable from "isIterable" /* 4006 */;
-import identity from "identity" /* 700 */;
+import set from "../../../_runtime/00002_set.js";
+import isIterable from "../../../_runtime/04006_isIterable.js";
+import identity from "../../../_runtime/00700_identity.js";
 import { useDefaultVariantIndex } from "hooks/useDefaultVariantIndex.tsx";
 
 let closure_2 = identity.createWithEqualityFn(() => {

@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/StageChannelUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import { Permissions } from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8064 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import getNicknameDefault from "../../utils/NicknameUtils.tsx";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import closure_5 from "StageInstanceStore.tsx";
+import { RequestToSpeakPermissionStates as closure_6 } from "StageChannelsConstants.tsx";
+import { Permissions } from "../../Constants.tsx";
+import { RowType } from "../channel_permissions/ChannelPermissionsConstants.tsx";
 import { apply } from "../../../_runtime/00012_apply.js";
 
 require = arg1;

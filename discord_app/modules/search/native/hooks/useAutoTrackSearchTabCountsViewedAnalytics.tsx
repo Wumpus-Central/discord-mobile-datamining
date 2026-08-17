@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx
-import closure_2 from "noop" /* 19 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { SearchTabs } from "../../SearchConstants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 

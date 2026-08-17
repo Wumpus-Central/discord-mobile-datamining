@@ -1,10 +1,10 @@
 // discord_app/modules/parental_consent/native/AgeUpdateFooter.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import Text from "Text" /* 4734 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../safety_flows/SafetyFlows.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

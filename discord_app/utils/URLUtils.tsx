@@ -1,11 +1,11 @@
 // discord_app/utils/URLUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import ME from "ME" /* 676 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import ipDefault from "ip" /* 1488 */;
-import UrlAll from "Url" /* 1489 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import ME from "../Constants.tsx";
+import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "URLUtils.tsx";
+import ipDefault from "../../_runtime/01488_ip.js";
+import UrlAll from "../../_runtime/01489_Url.js";
+import set from "../../_runtime/00002_set.js";
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {
   if (tmp) {

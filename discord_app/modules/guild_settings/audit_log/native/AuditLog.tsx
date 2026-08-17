@@ -1,19 +1,19 @@
 // discord_app/modules/guild_settings/audit_log/native/AuditLog.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
-import getPermissionChangesAll from "getPermissionChanges" /* 16759 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "handleThemeChange" /* 1302 */;
-import closure_7 from "createdAt" /* 1930 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult1 from "initialize" /* 589 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useGetOrFetchApplications from "../../../applications/useGetOrFetchApplications.tsx";
+import getPermissionChangesAll from "../AuditLogUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import importDefaultResult from "../../../user_settings/ThemeStore.tsx";
+import closure_7 from "../../../../records/UserRecord.tsx";
+import closure_8 from "../../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult1 from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function ApplicationHook(applicationId) {

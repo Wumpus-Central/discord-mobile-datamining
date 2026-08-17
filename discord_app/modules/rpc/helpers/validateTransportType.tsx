@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/helpers/validateTransportType.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import prototypeDefault from "prototype" /* 8752 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import RPC_SCOPE_CONFIG from "../Constants.tsx";
+import prototypeDefault from "../RPCError.tsx";
 
 const TransportTypes = RPC_SCOPE_CONFIG.TransportTypes;
 const RPCErrors = ME.RPCErrors;

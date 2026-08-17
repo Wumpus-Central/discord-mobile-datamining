@@ -1,22 +1,22 @@
 // discord_app/modules/stickers/native/StickerDetailActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10217 */;
-import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10224 */;
-import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10224 */;
-import hideStickerDetailActionSheet from "hideStickerDetailActionSheet" /* 10233 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "loadSavedGuildStickers" /* 6769 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
-import ME from "ME" /* 676 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useStickerPackCategories from "../StickersHooks.tsx";
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet.tsx";
+import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet.tsx";
+import hideStickerDetailActionSheet from "showStickerDetailActionSheet.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import closure_11 from "../StickersStore.tsx";
+import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function StandardStickerDetail(chatInputRef) {

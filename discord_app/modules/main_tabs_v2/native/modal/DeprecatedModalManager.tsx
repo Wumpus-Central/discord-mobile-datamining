@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 5262 */;
-import UserRequiredActionsDefault from "UserRequiredActions" /* 8569 */;
-import isEligibleForSafetyFlowsExperiment from "isEligibleForSafetyFlowsExperiment" /* 16728 */;
-import closure_3 from "handleFormInit" /* 8875 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "updateWithLatestInvite" /* 8919 */;
-import closure_6 from "FormStates" /* 16727 */;
-import importDefaultResult from "handleRequiredAction" /* 1385 */;
-import ME from "ME" /* 676 */;
+import coerceMainRoute from "../../helpers/NavigationRouteUtils.native.tsx";
+import getRootNavigationRef from "../../RootNavigationRef.native.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import getDeprecatedModalDataDefault from "../../../../utils/getDeprecatedModalData.tsx";
+import UserRequiredActionsDefault from "../../../verification/VerificationUtils.tsx";
+import isEligibleForSafetyFlowsExperiment from "../../../safety_flows/SafetyFlowsExperiment.tsx";
+import closure_3 from "../../../guild_settings/GuildSettingsStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/CreateInviteModalStore.tsx";
+import closure_6 from "../../../../stores/NotificationSettingsModalStore.tsx";
+import importDefaultResult from "../../../../stores/UserRequiredActionStore.tsx";
+import ME from "../../../../Constants.tsx";
 import { handleTouch } from "../../../user_required_action/native/NewTermsModal.tsx";
 import { PhoneThenEmailInterstitial } from "../../../verification/native/components/VerificationModal.tsx";
 

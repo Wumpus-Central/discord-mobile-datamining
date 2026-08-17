@@ -1,8 +1,8 @@
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
 
 const jsx = jsxProd.jsx;
 let result = set.fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");

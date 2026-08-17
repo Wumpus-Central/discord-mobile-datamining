@@ -1,15 +1,15 @@
 // discord_app/utils/NotificationSettingsUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "initialize" /* 6796 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
-import ME from "ME" /* 676 */;
-import { NotificationSettingsUpdateType as closure_9 } from "AccountNotificationFlags" /* 4033 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../modules/notifications/LastMentionTimestampStore.tsx";
+import closure_4 from "../stores/ChannelStore.tsx";
+import closure_5 from "../stores/MessageStore.tsx";
+import closure_6 from "../stores/UserGuildSettingsStore.tsx";
+import ME from "../Constants.tsx";
+import { NotificationSettingsUpdateType as closure_9 } from "../modules/notifications/NotificationConstants.tsx";
+import { UnreadSetting } from "../modules/read_states/ReadStateConstants.tsx";
+import MAX_FAVORITES from "../modules/user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: error, UserNotificationSettings } = ME);

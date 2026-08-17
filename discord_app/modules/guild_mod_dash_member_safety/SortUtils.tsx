@@ -1,7 +1,7 @@
 // discord_app/modules/guild_mod_dash_member_safety/SortUtils.tsx
-import set from "set" /* 2 */;
-import result2 from "result" /* 5091 */;
-import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 5092 */;
+import set from "../../../_runtime/00002_set.js";
+import result2 from "MemberSafetyElasticSearchQueryTypes.tsx";
+import getJoinedAtDateFormatter from "DateUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/SortUtils.tsx");
 

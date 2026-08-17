@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/distributorStoreUrls.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const discord7937464 = "discord7937464";
 let c1 = "www.xbox.com";

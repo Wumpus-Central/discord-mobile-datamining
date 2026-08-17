@@ -1,9 +1,9 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx
-import Presets from "Presets" /* 5046 */;
-import _modDef6798 from "module_6798" /* 6798 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
-import { GuildNotificationSettingsFlags as closure_5 } from "MAX_FAVORITES" /* 685 */;
+import Presets from "notificationSettingsPresetUtils.tsx";
+import _modDef6798 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { UserNotificationSettings } from "../../../../Constants.tsx";
+import { GuildNotificationSettingsFlags as closure_5 } from "../../../user_settings/UserSettingsConstants.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Presets } from "notificationSettingsPresetUtils.tsx";
 

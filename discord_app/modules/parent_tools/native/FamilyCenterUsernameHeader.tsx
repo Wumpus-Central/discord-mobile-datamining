@@ -1,10 +1,10 @@
 // discord_app/modules/parent_tools/native/FamilyCenterUsernameHeader.tsx
-import noopAll from "noop" /* 19 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

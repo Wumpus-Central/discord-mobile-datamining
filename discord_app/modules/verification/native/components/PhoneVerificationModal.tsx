@@ -1,9 +1,9 @@
 // discord_app/modules/verification/native/components/PhoneVerificationModal.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { VerificationModalScenes } from "ME" /* 676 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { VerificationModalScenes } from "../../../../Constants.tsx";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "../../../phone/PhoneConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";

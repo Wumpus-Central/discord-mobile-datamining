@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ChangeLogSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import ChangeLogScreen from "ChangeLogScreen" /* 14850 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import ChangeLogScreen from "../../../../components_native/ChangeLogModal.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 obj = {
   useTitle() {

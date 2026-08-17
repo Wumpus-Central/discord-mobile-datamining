@@ -1,5 +1,5 @@
 // discord_app/modules/search/StringMatchUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 function calculateJaroWinklerDistance(formatted, arg1) {
   const diff = Math.floor(Math.max(formatted.length, arg1.length) / 2) - 1;

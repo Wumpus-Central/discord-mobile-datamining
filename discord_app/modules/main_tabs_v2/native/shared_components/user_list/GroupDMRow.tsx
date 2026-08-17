@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx
-import closure_3 from "noop" /* 19 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { UserRowModes } from "UserRowConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");

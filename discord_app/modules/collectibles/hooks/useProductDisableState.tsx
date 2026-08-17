@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useProductDisableState.tsx
-import initialize from "initialize" /* 589 */;
-import set from "set" /* 679 */;
-import closure_2 from "reset" /* 4045 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import set from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import closure_2 from "../../../stores/billing/SubscriptionStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");

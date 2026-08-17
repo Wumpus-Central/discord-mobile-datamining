@@ -1,9 +1,9 @@
 // discord_app/modules/screen/native/drawer/useDrawerWidth.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import useChatLayout from "useChatLayout" /* 4232 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4234 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import useChatLayout from "../../../chat/native/useChatLayout.tsx";
+import useBaseAppContainerDimensions from "../useBaseAppContainerDimensions.tsx";
+import useBaseAppContainerDimensionsDefault from "../useBaseAppContainerDimensions.tsx";
 
 const DM_WIDTH = ME.DM_WIDTH;
 const sum = 260 + DM_WIDTH;

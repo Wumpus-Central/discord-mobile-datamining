@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "isConnected" /* 5290 */;
-import closure_3 from "handleUpdate" /* 4541 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import closure_2 from "../../../stores/ConnectedAppsStore.tsx";
+import closure_3 from "../../../stores/SessionsStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ ActivityFlags: c4, ActivityGamePlatforms: c5 } = ME);

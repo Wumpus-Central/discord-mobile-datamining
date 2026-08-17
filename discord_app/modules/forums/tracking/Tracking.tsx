@@ -1,17 +1,17 @@
 // discord_app/modules/forums/tracking/Tracking.tsx
-import set from "set" /* 500 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import collectForumAnalyticsMetadata from "collectForumAnalyticsMetadata" /* 7516 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7521 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7522 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_6 from "handleLoadThreadsSuccess" /* 7239 */;
-import closure_7 from "initialize" /* 7515 */;
-import ME from "ME" /* 676 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import collectForumAnalyticsMetadata from "TrackingUtils.tsx";
+import collectThreadMetadata from "../../app_analytics/ThreadAnalyticsUtils.tsx";
+import trackChannelOpenedClickstreamDefault from "../../app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/DraftStore.tsx";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import closure_6 from "../ForumPostMessagesStore.tsx";
+import closure_7 from "../ForumSearchStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: closure_8, AnalyticsSections: c9 } = ME);

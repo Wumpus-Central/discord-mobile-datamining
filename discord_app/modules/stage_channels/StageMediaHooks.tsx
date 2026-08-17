@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/StageMediaHooks.tsx
-import sortKey from "sortKey" /* 6703 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "updateVoiceState" /* 4542 */;
-import closure_4 from "getActiveStageChannelIds" /* 4989 */;
+import sortKey from "StageChannelParticipants.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/VoiceStateStore.tsx";
+import closure_4 from "StageChannelParticipantStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

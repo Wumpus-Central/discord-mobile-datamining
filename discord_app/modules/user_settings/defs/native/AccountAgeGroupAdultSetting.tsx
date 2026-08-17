@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 let obj = {
   useTitle() {

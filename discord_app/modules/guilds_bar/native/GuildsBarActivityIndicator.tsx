@@ -1,24 +1,24 @@
 // discord_app/modules/guilds_bar/native/GuildsBarActivityIndicator.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import map from "map" /* 4097 */;
-import StageIcon from "StageIcon" /* 6892 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
-import setDefault from "set" /* 7190 */;
-import AppsIcon from "AppsIcon" /* 7974 */;
-import registerAssetDefault from "registerAsset" /* 7975 */;
-import VideoIcon from "VideoIcon" /* 7998 */;
-import registerAssetDefault2 from "registerAsset" /* 8129 */;
-import registerAssetDefault3 from "registerAsset" /* 8896 */;
-import CalendarIcon from "CalendarIcon" /* 8897 */;
-import ScreenIcon from "ScreenIcon" /* 12015 */;
-import canConnectToChannelDefault from "canConnectToChannel" /* 15594 */;
-import registerAssetDefault4 from "registerAsset" /* 15597 */;
-import registerAssetDefault5 from "registerAsset" /* 15598 */;
-import registerAssetDefault6 from "registerAsset" /* 15599 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
+import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import setDefault from "../../core/native/NativeView.tsx";
+import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import registerAssetDefault from "../../../../_runtime/07975_registerAsset.js";
+import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
+import registerAssetDefault2 from "../../../../_runtime/08129_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/08896_registerAsset.js";
+import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
+import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
+import canConnectToChannelDefault from "../useGuildMediaState.tsx";
+import registerAssetDefault4 from "../../../../_runtime/15597_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/15598_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/15599_registerAsset.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function getMediaIcon(closure_3) {

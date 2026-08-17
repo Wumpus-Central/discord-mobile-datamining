@@ -1,20 +1,20 @@
 // discord_app/modules/launchpad/native/shared/renderChannelItem.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getRelativeTimestamp from "getRelativeTimestamp" /* 4967 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8886 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16198 */;
-import ChannelContentDefault from "ChannelContent" /* 16201 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getRelativeTimestamp from "../../../notification_center/NotificationCenterUtils.tsx";
+import computeChannelName from "../../../channel/useChannelName.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import getChannelA11yLabelDefault from "../../../channel/getChannelA11yLabel.tsx";
+import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import renderChannelWrapperDefault from "renderChannelWrapper.tsx";
+import ChannelContentDefault from "renderChannelContent.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function LaunchpadChannelIcon(channel) {

@@ -1,10 +1,10 @@
 // discord_app/modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx
-import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import SettingsDefaultFeature from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../stores/UserStore.tsx";
+import { HelpdeskArticles } from "../../Constants.tsx";
 
 require = arg1;
 function resolveGoreSettingWithDefaults(isFriend) {

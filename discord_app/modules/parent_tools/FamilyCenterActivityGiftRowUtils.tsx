@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import _mod3618 from "module_3618" /* 3618 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import _mod3618 from "../../../_runtime/metro/03618__.js";
+import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 

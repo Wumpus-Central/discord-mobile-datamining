@@ -1,7 +1,7 @@
 // discord_app/modules/wishlists/records/PremiumWishlistItemRecord.tsx
-import fromServerDefault from "fromServer" /* 9188 */;
-import closure_0 from "createFromServer" /* 4515 */;
-import { SKUProductLines } from "ME" /* 676 */;
+import fromServerDefault from "BaseWishlistItemRecord.tsx";
+import closure_0 from "../../skus/SKURecord.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
 
 fromServerDefault;
 let prototype;

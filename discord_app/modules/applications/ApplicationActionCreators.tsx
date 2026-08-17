@@ -1,10 +1,10 @@
 // discord_app/modules/applications/ApplicationActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 7141 */;
-import closure_5 from "createExecutable" /* 4479 */;
-import importDefaultResult from "addApplication" /* 4478 */;
-import ME from "ME" /* 676 */;
-import initialize from "initialize" /* 589 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx";
+import closure_5 from "../../records/ApplicationRecord.tsx";
+import importDefaultResult from "ApplicationStore.tsx";
+import ME from "../../Constants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

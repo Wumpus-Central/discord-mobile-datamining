@@ -1,11 +1,11 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { HELP_CENTER_LINK } from "SubscriptionStatusTypes" /* 4053 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/UserStore.tsx";
+import { HELP_CENTER_LINK } from "../../premium/premium_group/PremiumGroupConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);

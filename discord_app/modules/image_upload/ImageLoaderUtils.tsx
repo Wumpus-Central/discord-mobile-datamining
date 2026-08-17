@@ -1,11 +1,11 @@
 // discord_app/modules/image_upload/ImageLoaderUtils.tsx
-import privDefault from "priv" /* 1405 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import fit from "fit" /* 1491 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import privDefault from "../../../_runtime/01405_priv.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import fit from "../../utils/ImageUtils.tsx";
+import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function handleImageLoad(arg0, callbacks) {

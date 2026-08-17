@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
+import { RelationshipTypes } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

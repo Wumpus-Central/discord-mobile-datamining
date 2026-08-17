@@ -1,6 +1,6 @@
 // discord_app/modules/self_mod/hooks/useUserIsTeen.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");

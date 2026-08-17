@@ -1,15 +1,15 @@
 // discord_app/modules/client_themes/native/CustomThemeMobileStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import getThemeForColor from "getThemeForColor" /* 1347 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 1366 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_6 from "initialize" /* 1303 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import getThemeForColor from "../ClientThemesUtils.tsx";
+import isPerModeThemingActive from "../../user_settings/isPerModeThemingActive.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import closure_6 from "../../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import closure_7 from "../../user_settings/ThemeStore.tsx";
+import closure_8 from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_9 from "../../user_settings/UserSettingsProtoStore.tsx";
+import { UserSettingsTypes } from "../../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 function reset() {

@@ -1,12 +1,12 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
-import version from "version" /* 4017 */;
-import isEqualDefault from "isEqual" /* 4632 */;
-import result2 from "result" /* 5091 */;
-import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 5092 */;
-import getSortValueForMember from "getSortValueForMember" /* 5094 */;
-import hasMemberSupplemental from "hasMemberSupplemental" /* 5095 */;
-import isSpamSupported from "isSpamSupported" /* 5231 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import isEqualDefault from "../../../_runtime/04632_isEqual.js";
+import result2 from "MemberSafetyElasticSearchQueryTypes.tsx";
+import getJoinedAtDateFormatter from "DateUtils.tsx";
+import getSortValueForMember from "SortUtils.tsx";
+import hasMemberSupplemental from "MemberSafetyStoreSupplemental.tsx";
+import isSpamSupported from "../messages/isSpam.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 require = arg1;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {

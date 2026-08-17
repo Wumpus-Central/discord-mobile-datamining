@@ -1,15 +1,15 @@
 // discord_app/utils/PermissionSpecUtils.tsx
-import set2 from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import combinedDefault from "combined" /* 1993 */;
-import experimentDefault from "experiment" /* 7233 */;
-import RowType from "RowType" /* 8064 */;
-import isGuildEligibleForStageChannels from "isGuildEligibleForStageChannels" /* 16047 */;
-import experiment from "experiment" /* 16048 */;
-import getGuildPermissionSpecAll from "getGuildPermissionSpec" /* 16050 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import set2 from "../../_runtime/00002_set.js";
+import getSystemLocale from "../intl/index.native.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import combinedDefault from "HelpdeskUtils.tsx";
+import experimentDefault from "../modules/messages/GuildOfficialMessagesExperiment.tsx";
+import RowType from "../modules/channel_permissions/ChannelPermissionsConstants.tsx";
+import isGuildEligibleForStageChannels from "../modules/stage_channels/useGuildEligibleForStageChannels.tsx";
+import experiment from "../modules/hangout_window/HangoutWindowExperiment.tsx";
+import getGuildPermissionSpecAll from "../modules/permissions/PermissionUtils.tsx";
+import closure_5 from "../stores/GuildStore.tsx";
+import ME from "../Constants.tsx";
 
 function getPermissionOptions(id) {
   let obj = isGuildEligibleForStageChannels;

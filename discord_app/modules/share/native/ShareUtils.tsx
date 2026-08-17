@@ -1,9 +1,9 @@
 // discord_app/modules/share/native/ShareUtils.tsx
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import registerAssetDefault from "registerAsset" /* 10455 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/10455_registerAsset.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
 
 const require = arg1;
 function _sendShareMessage() {

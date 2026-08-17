@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/native/CollectiblesBadges.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import LockIcon from "LockIcon" /* 6890 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8400 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import PremiumFeaturesBackgroundDefault from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

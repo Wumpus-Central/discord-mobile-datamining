@@ -1,8 +1,8 @@
 // discord_app/modules/friend_invites/native/FriendInviteUtils.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import generateAcceptInviteOptionsDefault from "../../../actions/InstantInviteActionCreators.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/RelationshipStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/friend_invites/native/FriendInviteUtils.tsx");

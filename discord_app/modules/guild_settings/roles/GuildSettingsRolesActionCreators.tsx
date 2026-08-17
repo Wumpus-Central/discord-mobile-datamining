@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../Constants.tsx";
 
 const require = arg1;
 function AsyncFromSyncIterator(arg0) {

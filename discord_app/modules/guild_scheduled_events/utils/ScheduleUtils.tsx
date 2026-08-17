@@ -1,15 +1,15 @@
 // discord_app/modules/guild_scheduled_events/utils/ScheduleUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import apply from "apply" /* 12 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import resetCache from "resetCache" /* 4063 */;
-import m from "m" /* 8787 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { RecurrenceOptions } from "RecurrenceOptions" /* 8786 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import apply from "../../../../_runtime/00012_apply.js";
+import setDefault from "../../../utils/Durations.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import tDefault from "../../../../_runtime/03975_t.js";
+import resetCache from "../../../utils/DateUtils.tsx";
+import m from "../../../../_runtime/08787_m.js";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { RecurrenceOptions } from "../CreateGuildScheduledEventConstants.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function getRRule(byWeekday) {

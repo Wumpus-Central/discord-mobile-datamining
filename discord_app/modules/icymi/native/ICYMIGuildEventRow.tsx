@@ -1,13 +1,13 @@
 // discord_app/modules/icymi/native/ICYMIGuildEventRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import scheduledEventSort from "scheduledEventSort" /* 4370 */;
-import closure_8 from "scheduledEventSort" /* 4370 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import scheduledEventSort from "../../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import closure_8 from "../../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import closure_9 from "../../../stores/ChannelStore.tsx";
+import closure_10 from "../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
 
 const require = arg1;
 function ICYMIGuildEventRow(event) {

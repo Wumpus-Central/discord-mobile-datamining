@@ -1,9 +1,9 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_1 from "_getSystemLocale" /* 1994 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_1 from "../user_settings/LocaleStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_1.locale) {

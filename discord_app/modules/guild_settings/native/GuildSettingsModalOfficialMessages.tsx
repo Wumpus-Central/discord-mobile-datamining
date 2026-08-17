@@ -1,21 +1,21 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import Text from "Text" /* 4734 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 7232 */;
-import registerAssetDefault from "registerAsset" /* 14628 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleFormInit" /* 8875 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import useCanManageGuildOfficialMessages from "../../messages/GuildOfficialMessageUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/14628_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import closure_8 from "../GuildSettingsStore.tsx";
+import MESSAGE_GROUP_SPACING from "../../messages/MessageConstants.tsx";
+import { ThemeTypes } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MessagePreview(theme) {

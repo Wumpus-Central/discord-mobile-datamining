@@ -1,6 +1,6 @@
 // discord_app/modules/screen/native/FWOMeasureUtils.tsx
-import set from "set" /* 2 */;
-import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 9963 */;
+import set from "../../../../_runtime/00002_set.js";
+import NativeFWOMeasureModule from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFWOMeasureModule.tsx";
 
 const __measureInWindowForFWO = global.__measureInWindowForFWO;
 function measureInWindowForFWO(value) {

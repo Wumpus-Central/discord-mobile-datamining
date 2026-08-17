@@ -1,9 +1,9 @@
 // discord_app/modules/clips/native/ClipsManager.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import result2 from "result" /* 4523 */;
-import handleRTCConnectionStateDefault from "handleRTCConnectionState" /* 17024 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import result2 from "../ClipsConstants.tsx";
+import handleRTCConnectionStateDefault from "../ClipsManager.tsx";
 
 const CLIPS_TOAST_DURATION = result2.CLIPS_TOAST_DURATION;
 handleRTCConnectionStateDefault;

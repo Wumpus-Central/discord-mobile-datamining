@@ -1,17 +1,17 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import SettingsIcon from "SettingsIcon" /* 7355 */;
-import CameraIcon from "CameraIcon" /* 10287 */;
-import registerAssetDefault from "registerAsset" /* 10293 */;
-import registerAssetDefault2 from "registerAsset" /* 10294 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { NativePermissionStatus } from "NativePermissionStatus" /* 4839 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
+import registerAssetDefault from "../../../../../_runtime/10293_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10294_registerAsset.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NativePermissionStatus } from "../../../native_permissions/NativePermissionConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class MediaKeyboardEmptyState {

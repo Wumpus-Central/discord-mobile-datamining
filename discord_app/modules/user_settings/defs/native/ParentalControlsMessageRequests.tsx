@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
-import useSelectedTeen from "useSelectedTeen" /* 7623 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import result2 from "result" /* 14182 */;
-import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15021 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
+import shouldAgeVerifyForDMDefaultOff from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
+import closure_3 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

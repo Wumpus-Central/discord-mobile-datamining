@@ -1,6 +1,6 @@
 // discord_app/hooks/useTimeout.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+import set from "../../_runtime/00002_set.js";
+import noop from "../../_runtime/00019_noop.js";
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 const result = set.fileFinishedImporting("hooks/useTimeout.tsx");

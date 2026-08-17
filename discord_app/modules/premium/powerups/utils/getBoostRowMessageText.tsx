@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/utils/getBoostRowMessageText.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import BOOST_EXPIRING_DISPLAY_WINDOW_DAYS from "BOOST_EXPIRING_DISPLAY_WINDOW_DAYS" /* 11750 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import BOOST_EXPIRING_DISPLAY_WINDOW_DAYS from "getBoostLifecyclePhase.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
 

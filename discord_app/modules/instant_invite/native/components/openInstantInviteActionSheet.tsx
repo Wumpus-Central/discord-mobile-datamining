@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/native/components/openInstantInviteActionSheet.tsx
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../../../_runtime/00002_set.js";
+import encodeProperties from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 

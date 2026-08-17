@@ -1,11 +1,11 @@
 // discord_app/stores/RelationshipStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "hasFlag" /* 4031 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../records/MessageRecord.tsx";
+import closure_4 from "UserStore.tsx";
+import { RelationshipTypes } from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 function markAllUserIdListsStale() {
   set3.add("friends");

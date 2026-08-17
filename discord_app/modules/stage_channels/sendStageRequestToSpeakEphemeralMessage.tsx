@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 
 ({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
 const result = set.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");

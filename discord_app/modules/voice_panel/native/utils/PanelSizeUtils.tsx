@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/utils/PanelSizeUtils.tsx
-import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import set from "../../../../../_runtime/00002_set.js";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
 function getMaxPanelWidth(windowWidth) {

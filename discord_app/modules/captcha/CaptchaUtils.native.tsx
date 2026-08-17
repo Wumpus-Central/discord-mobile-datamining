@@ -1,8 +1,8 @@
 // discord_app/modules/captcha/CaptchaUtils.native.tsx
-import initialize from "initialize" /* 589 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "setContent" /* 4086 */;
-import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10480 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../action_sheet/native/ActionSheetStore.tsx";
+import { CAPTCHA_MODAL_KEY } from "CaptchaConstants.tsx";
 import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 
 require = arg1;

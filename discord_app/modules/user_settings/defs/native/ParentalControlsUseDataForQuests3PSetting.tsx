@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataForQuests3PSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSelectedTeen from "useSelectedTeen" /* 7623 */;
-import result2 from "result" /* 14182 */;
-import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
+import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
+import closure_2 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

@@ -1,8 +1,8 @@
 // discord_app/modules/auth/native/components/RegisterPhoneOrEmailInput.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSetLocationMetadata" /* 8581 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../phone/PhoneStore.tsx";
+import useRegistrationUIStore from "../RegistrationUIStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ setRegistrationErrors: c5, useRegistrationUIStore: closure_6 } = useRegistrationUIStore);

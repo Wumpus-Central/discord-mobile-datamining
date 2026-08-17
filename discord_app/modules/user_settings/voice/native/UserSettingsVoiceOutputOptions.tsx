@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx
-import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../stores/MediaEngineStore.tsx";
+import { MediaEngineContextTypes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);

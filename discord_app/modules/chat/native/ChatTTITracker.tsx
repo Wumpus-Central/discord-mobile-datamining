@@ -1,7 +1,7 @@
 // discord_app/modules/chat/native/ChatTTITracker.tsx
-import set from "set" /* 2 */;
-import TTIMeasurementView from "TTIMeasurementView" /* 11076 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../_runtime/00002_set.js";
+import TTIMeasurementView from "../../tti_analytics/native/TTIMeasurementView.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 const result = set.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");

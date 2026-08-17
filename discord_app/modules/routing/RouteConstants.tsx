@@ -1,9 +1,9 @@
 // discord_app/modules/routing/RouteConstants.tsx
-import set from "set" /* 2 */;
-import items2 from "items" /* 678 */;
-import CONFERENCE_MODE_ENABLED from "CONFERENCE_MODE_ENABLED" /* 683 */;
-import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID" /* 684 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
+import set from "../../../_runtime/00002_set.js";
+import items2 from "../collectibles/CollectiblesShopConstants.tsx";
+import CONFERENCE_MODE_ENABLED from "../conference_mode/ConferenceModeConstants.tsx";
+import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "../global_discovery_apps/GlobalDiscoveryAppsConstants.tsx";
+import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 
 const CollectibleShopTab = items2.CollectibleShopTab;
 ({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: obj1 } = GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID);

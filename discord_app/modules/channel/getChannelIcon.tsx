@@ -1,9 +1,9 @@
 // discord_app/modules/channel/getChannelIcon.tsx
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/getChannelIcon.tsx");

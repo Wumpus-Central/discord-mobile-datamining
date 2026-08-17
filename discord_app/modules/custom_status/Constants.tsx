@@ -1,8 +1,8 @@
 // discord_app/modules/custom_status/Constants.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUser from "nameFromUser" /* 4219 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import nameFromUser from "../../utils/UserUtils.tsx";
 
 const StatusTypes = sum.StatusTypes;
 const frozen = Object.freeze({ MINUTES_30: 1800000, HOURS_1: 3600000, HOURS_4: 14400000, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });

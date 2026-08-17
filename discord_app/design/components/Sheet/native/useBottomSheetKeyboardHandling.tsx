@@ -1,5 +1,5 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");

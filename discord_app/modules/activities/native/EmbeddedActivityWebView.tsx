@@ -1,17 +1,17 @@
 // discord_app/modules/activities/native/EmbeddedActivityWebView.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import usePreviousDefault from "usePrevious" /* 6701 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 7872 */;
-import items3 from "items3" /* 4481 */;
-import ME from "ME" /* 676 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import usePreviousDefault from "../../../hooks/usePrevious.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../_runtime/00019_noop.js";
+import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../DeveloperActivityShelfStore.tsx";
+import items3 from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { TransportTypes } from "../../rpc/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 function getSafeArea(arg0, arg1) {

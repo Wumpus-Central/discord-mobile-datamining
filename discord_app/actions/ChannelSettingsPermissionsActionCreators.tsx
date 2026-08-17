@@ -1,6 +1,6 @@
 // discord_app/actions/ChannelSettingsPermissionsActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function _updatePermission() {

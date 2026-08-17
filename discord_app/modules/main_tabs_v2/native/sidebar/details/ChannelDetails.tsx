@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetails.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "prototype" /* 11510 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../search/native/stores/SearchQueryStore.tsx";
+import closure_6 from "../../../../../stores/ChannelStore.tsx";
+import useChannelDetailsStore from "stores/ChannelDetailsStore.tsx";
+import ChannelDetailsNavigatorScreens from "ChannelDetailsConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

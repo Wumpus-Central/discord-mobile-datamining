@@ -1,13 +1,13 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingModal.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "get" /* 6801 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import closure_8 from "handleUpdate" /* 6788 */;
-import { GuildOnboardingModalStates as closure_9 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../guild_member_verification/MemberVerificationFormStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/SelectedChannelStore.tsx";
+import closure_8 from "../GuildOnboardingPromptsStore.tsx";
+import { GuildOnboardingModalStates as closure_9 } from "GuildOnboardingConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function headerTitle() {

@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx
-import noopAll from "noop" /* 19 */;
-import { QuestTaskPlatform } from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import { QuestTaskPlatform } from "../../QuestConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

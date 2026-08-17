@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx
-import set from "set" /* 2 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8951 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ProfileFrameLayerOrder from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
 

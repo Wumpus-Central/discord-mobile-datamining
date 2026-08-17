@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/dev_settings/DevSettingsActions.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "getUserAgnosticState" /* 4737 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_2 from "DevSettingsStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");
 

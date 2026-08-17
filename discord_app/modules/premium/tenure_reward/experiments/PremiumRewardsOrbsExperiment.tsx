@@ -1,5 +1,5 @@
 // discord_app/modules/premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../../../experiments/apex/ApexExperiment.tsx";
 
 let obj = { CONTROL: "control", TREATMENT_A: "treatment_a", TREATMENT_B: "treatment_b", TREATMENT_C: "treatment_c", TREATMENT_D: "treatment_d" };
 let closure_1 = { [obj.CONTROL]: 0, [obj.TREATMENT_A]: 250, [obj.TREATMENT_B]: 500, [obj.TREATMENT_C]: 250, [obj.TREATMENT_D]: 500 };

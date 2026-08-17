@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5039 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 8455 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import explicitContentFromProto from "../UserSettings.tsx";
+import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
+import AgeGatedFeature from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import useNSFWAllowed from "useNSFWAllowed.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx");

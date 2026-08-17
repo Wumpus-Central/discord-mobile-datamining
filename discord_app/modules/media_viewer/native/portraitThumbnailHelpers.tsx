@@ -1,5 +1,5 @@
 // discord_app/modules/media_viewer/native/portraitThumbnailHelpers.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 function lerpVarWidthThumbnailScrollBounds(closure_1, arg1) {
   if (0 === closure_1.length) {

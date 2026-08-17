@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/UserSearchUtils.tsx
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "initialize" /* 5410 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import isNullOrEmpty from "../../utils/StringUtils.tsx";
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import closure_3 from "../friend_suggestions/FriendSuggestionStore.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import { RelationshipTypes } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");

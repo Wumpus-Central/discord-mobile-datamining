@@ -1,24 +1,24 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 9992 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 12535 */;
-import id from "id" /* 12675 */;
-import idDefault from "id" /* 12675 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 12676 */;
-import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 12677 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../../_runtime/09992_registerAsset.js";
+import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
+import id from "../CallStateHooks.tsx";
+import idDefault from "../CallStateHooks.tsx";
+import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
+import OnGoingCallTimerDefault from "../components/OngoingCallTimer.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/PermissionStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PrivateChannelSubtitle(channel) {

@@ -1,6 +1,6 @@
 // discord_app/utils/ErrorUtils.tsx
-import set from "set" /* 2 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 7732 */;
+import set from "../../_runtime/00002_set.js";
+import BAGGAGE_HEADER_NAME from "../../_runtime/07732_BAGGAGE_HEADER_NAME.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {

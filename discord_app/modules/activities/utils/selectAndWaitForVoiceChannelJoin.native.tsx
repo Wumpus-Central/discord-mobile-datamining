@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../stores/SelectedChannelStore.tsx";
 
 function _selectAndWaitForVoiceChannelJoin() {
   const self = this;

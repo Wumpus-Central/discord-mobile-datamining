@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import tDefault from "t" /* 3975 */;
+import set from "../../../_runtime/00002_set.js";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
 
 const TENURE_BADGES = GuildFeatures.TENURE_BADGES;
 const result = set.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");

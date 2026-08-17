@@ -1,24 +1,24 @@
 // discord_app/modules/inbox/RecentMentionsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import sleep from "sleep" /* 4548 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import isMentioned from "isMentioned" /* 4819 */;
-import isMentionedDefault from "isMentioned" /* 4819 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import closure_3 from "hasFlag" /* 4031 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import closure_7 from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { Storage } from "Storage" /* 595 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import sleep from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import isMentioned from "../messages/isMessageMentioned.tsx";
+import isMentionedDefault from "../messages/isMessageMentioned.tsx";
+import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
+import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
+import closure_3 from "../../records/MessageRecord.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MessageStore.tsx";
+import closure_7 from "../../stores/ReadStateStore.tsx";
+import closure_8 from "../../stores/RelationshipStore.tsx";
+import closure_9 from "../../stores/SelectedGuildStore.tsx";
+import closure_10 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 require = arg1;
 function findOrCreateMessageRecord(channel_id) {

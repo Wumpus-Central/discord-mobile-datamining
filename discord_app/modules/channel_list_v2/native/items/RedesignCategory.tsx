@@ -1,14 +1,14 @@
 // discord_app/modules/channel_list_v2/native/items/RedesignCategory.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 5275 */;
-import closure_6 from "incrementVersion" /* 5270 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../opt_in_channels/RecentlyActiveCollapseStore.tsx";
+import closure_6 from "../../../../stores/CategoryCollapseStore.tsx";
+import closure_7 from "../../../../stores/UserGuildSettingsStore.tsx";
+import hairlineWidth from "../RedesignChannelListConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function renderCategoryItem(longPressAction) {

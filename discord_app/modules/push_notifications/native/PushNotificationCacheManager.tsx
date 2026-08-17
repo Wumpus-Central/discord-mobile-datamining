@@ -1,7 +1,7 @@
 // discord_app/modules/push_notifications/native/PushNotificationCacheManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "initialize" /* 11585 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../multi_account/MultiAccountStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 
 initializeDefault;
 let prototype = function PushNotificationCacheManager() {

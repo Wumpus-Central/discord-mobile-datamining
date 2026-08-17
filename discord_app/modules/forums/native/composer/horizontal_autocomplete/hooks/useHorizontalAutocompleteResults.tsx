@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import ME from "../../../../../../Constants.tsx";
 
 const require = arg1;
 ({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);

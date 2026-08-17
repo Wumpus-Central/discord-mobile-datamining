@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/GameProfileHttpUtils.tsx
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import importDefaultResult from "getSimilarGames" /* 9098 */;
-import { Endpoints } from "ME" /* 676 */;
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "set" /* 9169 */;
-import initialize from "initialize" /* 589 */;
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import importDefaultResult from "GameProfileStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "../../../discord_common/js/shared/shared-constants/SimilarGamesConstants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function _getShopCollection() {

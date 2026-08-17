@@ -1,6 +1,6 @@
 // discord_app/modules/captcha/tooling/CaptchaTestUtils.tsx
-import set from "set" /* 2 */;
-import _testCaptcha from "_testCaptcha" /* 15139 */;
+import set from "../../../../_runtime/00002_set.js";
+import _testCaptcha from "CaptchaTestActionCreators.tsx";
 
 const entries = Object.entries(_testCaptcha.HCaptchaDifficulty);
 const mapped = entries.map((arg0) => {

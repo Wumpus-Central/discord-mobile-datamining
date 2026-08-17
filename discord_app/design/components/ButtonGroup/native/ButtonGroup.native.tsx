@@ -1,8 +1,8 @@
 // discord_app/design/components/ButtonGroup/native/ButtonGroup.native.tsx
-import noopAll from "noop" /* 19 */;
-import Stack from "Stack" /* 4733 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Stack from "../../Stack/native/Stack.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

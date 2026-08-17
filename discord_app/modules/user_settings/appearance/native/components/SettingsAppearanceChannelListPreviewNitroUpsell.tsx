@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelListPreviewNitroUpsell.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4748 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9275 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import SUBTLE_SPRING from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
+import LinearGradientDefault from "../../../../../../_runtime/04756_LinearGradient.js";
+import AnimatedRenderItemDefault from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 

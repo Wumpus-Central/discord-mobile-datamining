@@ -1,8 +1,8 @@
 // discord_app/modules/quests/experiments/index.tsx
-import set from "set" /* 2 */;
-import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 10493 */;
-import items from "items" /* 10494 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import getQuestOrbMultiplierEligibilityForUser from "../hooks/QuestOrbMultiplierHooks.tsx";
+import items from "../utils/QuestOrbMultiplierUtils.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };

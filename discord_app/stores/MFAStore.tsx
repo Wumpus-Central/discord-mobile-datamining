@@ -1,8 +1,8 @@
 // discord_app/stores/MFAStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 let c3 = false;
 let closure_4 = [];

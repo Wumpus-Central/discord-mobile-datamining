@@ -1,12 +1,12 @@
 // discord_app/components_native/calls/stream/StreamFullAlert.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import mapped from "mapped" /* 9668 */;
-import registerAssetDefault from "registerAsset" /* 17077 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import componentDidMountDefault from "../../common/Alert.tsx";
+import mapped from "../../../modules/errors/av_errors/AVError.tsx";
+import registerAssetDefault from "../../../../_runtime/17077_registerAsset.js";
+import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

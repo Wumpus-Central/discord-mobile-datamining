@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesAutoScroll.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { AppState } from "get ActivityIndicator" /* 17 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import set from "set" /* 2 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { AppState } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set();

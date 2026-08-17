@@ -1,9 +1,9 @@
 // discord_app/utils/ReportUtils.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "handleInviteData" /* 4295 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import closure_0 from "../stores/ChannelStore.tsx";
+import closure_1 from "../stores/GuildMemberCountStore.tsx";
+import closure_2 from "../stores/PermissionStore.tsx";
+import closure_3 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
 
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
 const result = require("set").fileFinishedImporting("utils/ReportUtils.tsx");

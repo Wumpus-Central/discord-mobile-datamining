@@ -1,9 +1,9 @@
 // discord_app/modules/guild_sidebar/native/VoiceUserSummary.tsx
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

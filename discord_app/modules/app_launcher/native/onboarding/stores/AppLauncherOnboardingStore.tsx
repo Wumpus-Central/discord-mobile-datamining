@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import result2 from "result" /* 11216 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../../Dispatcher.tsx";
+import ApplicationCommandSectionType from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import result2 from "../hooks/useCanShowAppLauncherOnboarding.tsx";
+import closure_5 from "../../../../../stores/UserStore.tsx";
 
 require = arg1;
 const Store = initializeDefault.Store;

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_profile/GuildPopoutStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _startLurking from "_startLurking" /* 7301 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _startLurking from "../../utils/GuildDiscoveryUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };

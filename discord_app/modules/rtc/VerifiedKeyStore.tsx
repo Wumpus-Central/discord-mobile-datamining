@@ -1,8 +1,8 @@
 // discord_app/modules/rtc/VerifiedKeyStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 9693 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../discord_common/js/packages/libdave/index.tsx";
 
 require = arg1;
 let closure_3 = {};

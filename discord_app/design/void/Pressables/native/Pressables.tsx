@@ -1,11 +1,11 @@
 // discord_app/design/void/Pressables/native/Pressables.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE" /* 4753 */;
-import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { IOS_POINTER_STYLE } from "../../../components/Styles/native/styleConstants.tsx";
+import { getThemedRippleConfig } from "../../Form/native/FormConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function PressableBase(androidRippleConfig) {

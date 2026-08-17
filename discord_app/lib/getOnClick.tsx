@@ -1,21 +1,21 @@
 // discord_app/lib/getOnClick.tsx
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import createGuildRecordFromRustDefault from "createGuildRecordFromRust" /* 1910 */;
-import scheduledEventSortDefault from "scheduledEventSort" /* 4370 */;
-import reinjectEphemeralsDefault from "reinjectEphemerals" /* 4994 */;
-import handleUserSettingsStoreUpdateDefault from "handleUserSettingsStoreUpdate" /* 7202 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "updateInvite" /* 4359 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "insertUnsortedGuilds" /* 5078 */;
-import ME from "ME" /* 676 */;
-import items from "items" /* 678 */;
-import { isGameShopPath } from "STOREFRONT_MARKETING_GUILD_ID" /* 7203 */;
+import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
+import createGuildRecordFromRustDefault from "../stores/GuildStore.tsx";
+import scheduledEventSortDefault from "../modules/guild_scheduled_events/GuildScheduledEventStore.tsx";
+import reinjectEphemeralsDefault from "../stores/MessageStore.tsx";
+import handleUserSettingsStoreUpdateDefault from "../modules/slayer_storefront/SocialLayerStorefrontStore.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../modules/applications/ApplicationStore.tsx";
+import closure_6 from "../stores/AuthenticationStore.tsx";
+import closure_7 from "../stores/GuildMemberStore.tsx";
+import closure_8 from "../stores/InviteStore.tsx";
+import closure_9 from "../stores/SelectedChannelStore.tsx";
+import closure_10 from "../stores/SelectedGuildStore.tsx";
+import closure_11 from "../stores/SortedGuildStore.tsx";
+import ME from "../Constants.tsx";
+import items from "../modules/collectibles/CollectiblesShopConstants.tsx";
+import { isGameShopPath } from "../modules/slayer_storefront/SocialLayerStorefrontConstants.tsx";
 import { trimTrailingPunctuation } from "../modules/coded_links/findCodedLinks.tsx";
 
 const require = arg1;

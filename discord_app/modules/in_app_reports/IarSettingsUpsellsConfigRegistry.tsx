@@ -1,8 +1,8 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx
-import itemsDefault from "items" /* 8149 */;
-import itemsDefault2 from "items" /* 8150 */;
-import itemsDefault3 from "items" /* 8151 */;
-import closure_2 from "noop" /* 19 */;
+import itemsDefault from "IarSettingsUpsellsConfigDmSpamFilter.tsx";
+import itemsDefault2 from "IarSettingsUpsellsConfigScFiltersSexualMedia.tsx";
+import itemsDefault3 from "IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const obj = {};

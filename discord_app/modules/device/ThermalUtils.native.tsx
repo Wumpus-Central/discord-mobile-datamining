@@ -1,8 +1,8 @@
 // discord_app/modules/device/ThermalUtils.native.tsx
-import enforcingDefault from "enforcing" /* 8721 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 500 */;
-import keys from "keys" /* 644 */;
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../utils/PlatformUtils.tsx";
+import keys from "../../../_runtime/00644_keys.js";
 import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;

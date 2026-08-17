@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/canViewInviteModal.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 
 const Permissions = ME.Permissions;
 const result = set.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");

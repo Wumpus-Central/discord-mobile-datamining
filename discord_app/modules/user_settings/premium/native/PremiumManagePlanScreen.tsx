@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/PremiumManagePlanScreen.tsx
-import noopAll from "noop" /* 19 */;
-import ManagePlanHeaderDefault from "ManagePlanHeader" /* 12928 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ManagePlanHeaderDefault from "PremiumManagePlan.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
 const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");

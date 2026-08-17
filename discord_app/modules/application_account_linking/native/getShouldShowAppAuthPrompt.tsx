@@ -1,8 +1,8 @@
 // discord_app/modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx
-import getAuthorizationApp from "getAuthorizationApp" /* 7144 */;
-import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7147 */;
-import closure_3 from "recomputeFromAppTokens" /* 5289 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
+import getAuthorizationApp from "../hooks/useAuthorizationApp.tsx";
+import tokensToAppTokensMapDefault from "../../oauth2/AuthorizedAppsActionCreators.tsx";
+import closure_3 from "../../oauth2/AuthorizedAppsStore.tsx";
+import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");

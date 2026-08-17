@@ -1,6 +1,6 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConstants.tsx
-import set from "set" /* 2 */;
-import Environments2 from "Environments" /* 1929 */;
+import set from "../../../_runtime/00002_set.js";
+import Environments2 from "../user/UserStoreConstants.tsx";
 
 const Environments = Environments2.Environments;
 let str = "1193841000108531764";

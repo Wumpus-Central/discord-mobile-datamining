@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/quests/native/QuestCardPreview.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/user_settings/quests/native/QuestCardPreview.tsx");

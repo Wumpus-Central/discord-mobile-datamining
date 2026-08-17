@@ -1,15 +1,15 @@
 // discord_app/modules/video_calls/native/ChannelCallStore.tsx
-import batchUpdates from "batchUpdates" /* 705 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 8673 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 8674 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
-import { OrientationLockState } from "items3" /* 4481 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import keys from "keys" /* 644 */;
-import importDefaultResult from "apply" /* 12 */;
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import areParticipantStatesEqualDefault from "useIsPrivateAudioOnlyCall.tsx";
+import useSelectedParticipantDefault from "../useSelectedParticipant.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
+import BOX_MODE_ACTIONSHEET_WIDTH from "ChannelCallConstants.tsx";
+import { OrientationLockState } from "../../activities/Constants.tsx";
+import { ParticipantTypes } from "../../calls/CallConstants.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
+import importDefaultResult from "../../../../_runtime/00012_apply.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";

@@ -1,10 +1,10 @@
 // discord_app/modules/safety_flows/native/LogOutDisclaimer.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import Text from "Text" /* 4734 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 13540 */;
+import set from "../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../SafetyFlows.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import ModalDisclaimer from "../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");

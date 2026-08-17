@@ -1,7 +1,7 @@
 // discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx
-import set from "set" /* 2 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import set from "../../../../../_runtime/00002_set.js";
+import weakSet from "../../../../../_runtime/00106_weakSet.js";
+import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "DCDFastImageView", directEventTypes: { topLoadStart: { registrationName: "onLoadStart" }, topProgress: { registrationName: "onProgress" }, topError: { registrationName: "onError" }, topLoad: { registrationName: "onLoad" }, topLoadEnd: { registrationName: "onLoadEnd" } }, validAttributes: null };
 obj = { source: true, resizeMode: true, placeholder: true, enableAnimation: true, paused: true, manualPlayback: true, fade: true, usesSmallCache: true };

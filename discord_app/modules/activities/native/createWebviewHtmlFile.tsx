@@ -1,6 +1,6 @@
 // discord_app/modules/activities/native/createWebviewHtmlFile.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 function _createWebviewHtmlFile() {

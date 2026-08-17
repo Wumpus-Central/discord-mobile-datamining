@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelAlertActionCreators.tsx
-import set from "set" /* 2 */;
-import openStageChannelSettingsAll from "openStageChannelSettings" /* 8058 */;
+import set from "../../../_runtime/00002_set.js";
+import openStageChannelSettingsAll from "StageChannelActionCreatorExtras.native.tsx";
 
 let result = set.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
 

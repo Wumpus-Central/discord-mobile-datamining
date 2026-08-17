@@ -1,9 +1,9 @@
 // discord_app/modules/guild_rooms/GuildRoomManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import _guildRoomConnect from "_guildRoomConnect" /* 9862 */;
-import experimentDefault from "experiment" /* 9882 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "resolveCreatingNotes" /* 9864 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import _guildRoomConnect from "GuildRoomActionCreators.native.tsx";
+import experimentDefault from "GuildRoomsExperiment.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "GuildRoomStore.tsx";
 
 require = arg1;
 let c5 = null;

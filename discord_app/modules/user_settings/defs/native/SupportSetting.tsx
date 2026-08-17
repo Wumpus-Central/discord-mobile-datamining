@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/SupportSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 10415 */;
-import _emailSupport from "_emailSupport" /* 14845 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import CircleQuestionIcon from "../../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
+import _emailSupport from "../../../../utils/native/SupportUtils.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {

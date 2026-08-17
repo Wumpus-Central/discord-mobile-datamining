@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/SyncContactsNameSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import _uploadContacts from "_uploadContacts" /* 11853 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import _uploadContacts from "../../../contact_sync/native/ContactSyncUtils.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const pressable = createToggle.createPressable({

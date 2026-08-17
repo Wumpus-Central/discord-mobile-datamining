@@ -1,7 +1,7 @@
 // discord_app/modules/client_themes/native/ClientThemesOverrides.tsx
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ none: { backgroundColor: "transparent" } });

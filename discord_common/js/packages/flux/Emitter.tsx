@@ -1,7 +1,7 @@
 // discord_common/js/packages/flux/Emitter.tsx
-import log from "log" /* 4 */;
-import addAll from "add" /* 594 */;
-import set from "set" /* 2 */;
+import log from "../logger/Logger.tsx";
+import addAll from "LastFewActions.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const logger = new log.Logger("Flux");
 function batchEmitChanges(arg0) {

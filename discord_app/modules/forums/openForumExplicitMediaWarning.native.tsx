@@ -1,7 +1,7 @@
 // discord_app/modules/forums/openForumExplicitMediaWarning.native.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _modDef4656 from "module_4656" /* 4656 */;
+import set from "../../../_runtime/00002_set.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import _modDef4656 from "../../actions/native/AlertActionCreators.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");

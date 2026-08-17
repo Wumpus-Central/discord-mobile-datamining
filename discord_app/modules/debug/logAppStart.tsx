@@ -1,7 +1,7 @@
 // discord_app/modules/debug/logAppStart.tsx
-import timestamp from "timestamp" /* 3 */;
-import serialize from "serialize" /* 9 */;
-import set from "set" /* 2 */;
+import timestamp from "Logger.tsx";
+import serialize from "../tti_analytics/TTITracker.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 set = set.clear();
 new timestamp.default("app").log("Initializing app");

@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarAvatarDefault.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import map from "map" /* 4097 */;
-import ReactionIcon from "ReactionIcon" /* 7939 */;
-import SolidCutout from "SolidCutout" /* 8402 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import { StatusTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import SolidCutout from "../../../../design/components/Icon/native/ClipView.tsx";
+import SolidCutoutDefault from "../../../../design/components/Icon/native/ClipView.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
+import { StatusTypes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function AvatarDefault() {

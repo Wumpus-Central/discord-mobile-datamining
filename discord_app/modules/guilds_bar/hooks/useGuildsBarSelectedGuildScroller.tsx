@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx
-import closure_0 from "noop" /* 19 */;
-import closure_1 from "handleConnectionOpen" /* 4197 */;
+import closure_0 from "../../../../_runtime/00019_noop.js";
+import closure_1 from "../../../stores/SelectedGuildStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
 

@@ -1,14 +1,14 @@
 // discord_app/modules/chat/native/NativeExperimentBridgeManager.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17039 */;
-import apexExperimentDefault from "apexExperiment" /* 17041 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import shouldEnableYYTextReplacement from "../../messages/YYTextReplacementExperiment.tsx";
+import apexExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import closure_5 from "../../../stores/AuthenticationStore.tsx";
 
 function syncYYTextReplacementExperiment() {
   if (obj.isIOS()) {

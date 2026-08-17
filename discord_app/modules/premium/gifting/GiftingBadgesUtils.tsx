@@ -1,9 +1,9 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
-import set from "set" /* 2 */;
-import initialize from "initialize" /* 8936 */;
-import apexExperiment from "apexExperiment" /* 9592 */;
-import apexExperiment2 from "apexExperiment" /* 13005 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../_runtime/00002_set.js";
+import initialize from "../../badges/BadgeDirectoryStore.tsx";
+import apexExperiment from "experiments/GiftingBadgeExperiment.tsx";
+import apexExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 
 let closure_2 = initialize.getSingleRequirementThreshold;
 let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");

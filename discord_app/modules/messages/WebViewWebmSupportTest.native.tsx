@@ -1,7 +1,7 @@
 // discord_app/modules/messages/WebViewWebmSupportTest.native.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import DCDDeviceManager from "../../utils/native/DeviceUtils.tsx";
 
 const ARM64_ = "ARM64_";
 const result = set.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");

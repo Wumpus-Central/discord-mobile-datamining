@@ -1,12 +1,12 @@
 // discord_app/components_native/chat/getMessageJumpData.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import set from "set" /* 500 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1895 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "subscribeToKeyboardUIStore" /* 1496 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
+import useSystemKeyboardHeight from "../../modules/keyboard/native/useSystemKeyboardHeight.native.tsx";
+import GuildThemeSourcePreference from "../../flow/Client.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");

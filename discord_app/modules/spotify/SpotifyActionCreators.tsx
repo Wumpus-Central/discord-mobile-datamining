@@ -1,10 +1,10 @@
 // discord_app/modules/spotify/SpotifyActionCreators.tsx
-import set from "set" /* 500 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault from "set" /* 7245 */;
-import closure_3 from "isProtocolRegistered" /* 7244 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
-import ME from "ME" /* 676 */;
+import set from "../../utils/PlatformUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import setDefault from "../../utils/GameUtils.native.tsx";
+import closure_3 from "SpotifyProtocolStore.tsx";
+import SPOTIFY_APP_PROTOCOL from "SpotifyConstants.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingStore.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import keys from "../../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0, arg1) => {
   closure_0 = arg0;

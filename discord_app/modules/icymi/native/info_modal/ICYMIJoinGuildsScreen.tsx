@@ -1,20 +1,20 @@
 // discord_app/modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import ServerIcon from "ServerIcon" /* 9813 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "initialize" /* 15739 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import SolidCutoutDefault from "../../../../design/components/Icon/native/ClipView.tsx";
+import ServerIcon from "../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../../../stores/GuildStore.tsx";
+import closure_10 from "../../ICYMIPopularGuildsStore.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "../createICYMIStyles.tsx";
 
 require = arg1;
 function SelectedServerIcon(guild) {

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_badge/GuildTraits.tsx
-import set2 from "set" /* 2 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import ME from "ME" /* 676 */;
+import set2 from "../../../_runtime/00002_set.js";
+import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
+import ME from "../../Constants.tsx";
 
 ({ GuildFeatures: obj1, BoostedGuildTiers: c3 } = ME);
 let obj = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO_JOIN: "APPLY_TO_JOIN" };

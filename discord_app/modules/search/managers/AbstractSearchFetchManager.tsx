@@ -1,5 +1,5 @@
 // discord_app/modules/search/managers/AbstractSearchFetchManager.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
 class AbstractSearchFetchManager {

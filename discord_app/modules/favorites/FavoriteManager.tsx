@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/FavoriteManager.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getNextPositionFromChannels from "getNextPositionFromChannels" /* 9978 */;
-import items from "items" /* 15464 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import getNextPositionFromChannels from "FavoritesActionCreators.tsx";
+import items from "FavoritesGuildSuggestionsStore.tsx";
 
 function handleChannelDelete(channel) {
   const result = getNextPositionFromChannels.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });

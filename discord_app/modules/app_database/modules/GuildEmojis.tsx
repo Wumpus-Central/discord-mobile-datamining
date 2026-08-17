@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/GuildEmojis.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = importDefault;
 let closure_3 = new timestampDefault("GuildEmojis");

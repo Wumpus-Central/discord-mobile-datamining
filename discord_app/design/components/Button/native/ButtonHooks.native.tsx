@@ -1,8 +1,8 @@
 // discord_app/design/components/Button/native/ButtonHooks.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../tokens/native/useToken.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";

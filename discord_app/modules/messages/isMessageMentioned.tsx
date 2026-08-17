@@ -1,7 +1,7 @@
 // discord_app/modules/messages/isMessageMentioned.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "trackCommunicationDisabled" /* 1990 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_0 from "../../stores/ChannelStore.tsx";
+import closure_1 from "../../stores/GuildMemberStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);

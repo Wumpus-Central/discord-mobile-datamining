@@ -1,10 +1,10 @@
 // discord_app/modules/channel/useChannelName.tsx
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../experiments/ExperimentStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";

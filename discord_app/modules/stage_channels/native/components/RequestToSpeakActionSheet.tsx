@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
-import registerAssetDefault from "registerAsset" /* 12519 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { REQUEST_TO_SPEAK_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useAudienceRequestToSpeakStateDefault from "../../useAudienceRequestToSpeakState.tsx";
+import registerAssetDefault from "../../../../../_runtime/12519_registerAsset.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import { REQUEST_TO_SPEAK_SHEET_KEY as closure_8 } from "../../StageChannelsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useRequestToSpeakPermission } from "../../useRequestToSpeakPermission.tsx";

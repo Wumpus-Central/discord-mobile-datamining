@@ -1,15 +1,15 @@
 // discord_app/actions/NotificationSettingsModalActionCreators.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
-import UserNotificationSettings from "UserNotificationSettings" /* 6795 */;
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 6797 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { Endpoints } from "ME" /* 676 */;
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4033 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import AccessibilityAnnouncer2 from "../design/shared.tsx";
+import UserNotificationSettings from "../utils/NotificationSettingsUtils.tsx";
+import handleConnectionOpenDefault from "../modules/user_settings/UserGuildSettingsManager.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/UserGuildSettingsStore.tsx";
+import { Endpoints } from "../Constants.tsx";
+import { NotificationSettingsUpdateType as closure_6 } from "../modules/notifications/NotificationConstants.tsx";
+import { ChannelNotificationSettingsFlags as closure_7 } from "../modules/user_settings/UserSettingsConstants.tsx";
 import { UserNotificationSettings } from "../utils/NotificationSettingsUtils.tsx";
 
 require = arg1;

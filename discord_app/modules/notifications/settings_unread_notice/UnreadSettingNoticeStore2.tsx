@@ -1,19 +1,19 @@
 // discord_app/modules/notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import useChannelPresetSettings from "useChannelPresetSettings" /* 10090 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { ChannelNotificationSettingsFlags as closure_10 } from "MAX_FAVORITES" /* 685 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../../utils/Durations.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import useChannelPresetSettings from "../settings/utils/notficationSettingsChannelFlagUtils.tsx";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../../stores/UserGuildSettingsStore.tsx";
+import { UserNotificationSettings } from "../../../Constants.tsx";
+import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
+import { ChannelNotificationSettingsFlags as closure_10 } from "../../user_settings/UserSettingsConstants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function startInterval() {

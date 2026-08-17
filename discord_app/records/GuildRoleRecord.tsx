@@ -1,8 +1,8 @@
 // discord_app/records/GuildRoleRecord.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import fromString from "fromString" /* 506 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
+import set from "../../_runtime/00002_set.js";
+import applyDefault from "../../_runtime/00012_apply.js";
+import fromString from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import isValueEqual from "../lib/PlainRecord.tsx";
 
 const TypeTag = isValueEqual.TypeTag;
 const result = set.fileFinishedImporting("records/GuildRoleRecord.tsx");

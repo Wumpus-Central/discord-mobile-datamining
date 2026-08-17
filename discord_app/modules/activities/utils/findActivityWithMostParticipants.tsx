@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/findActivityWithMostParticipants.tsx
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
+import closure_0 from "../../../stores/RelationshipStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
 

@@ -1,13 +1,13 @@
 // discord_app/modules/quests/native/BountiesModal/BountyVideo.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 14379 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import BountiesModalProgress from "BountiesModalProgress.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import PlatformTypes from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c5, StyleSheet: closure_6, ActivityIndicator: error } = get_ActivityIndicator);

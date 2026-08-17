@@ -1,24 +1,24 @@
 // discord_app/modules/skus/native/SKUPreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import apexExperiment from "apexExperiment" /* 8323 */;
-import SourceIcon from "SourceIcon" /* 9182 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 9205 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9206 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9208 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9218 */;
-import filterLayerDefault from "filterLayer" /* 9225 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9227 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9228 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import { SKUProductLines } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import apexExperiment from "../../slayer_storefront/experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx";
+import SourceIcon from "../../wishlists/native/WishlistItemCardBase.tsx";
+import firstAvatarDecoration from "../../collectibles/hooks/useShopProductItems.tsx";
+import BundleStaticPreviewContentDefault from "../../collectibles/native/BundleSampleV2.tsx";
+import ProfileEffectSampleDefault from "../../collectibles/native/ProfileEffectSampleV2.tsx";
+import AvatarDecorationSampleV2Default from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
+import filterLayerDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
+import NameplateCardPreviewDefault from "../../collectibles/nameplates/native/NameplateCardPreview.tsx";
+import SlayerStorefrontItemCardDefault from "../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { transformSKUToCollectiblesItem as closure_5 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class CollectiblesPreview {

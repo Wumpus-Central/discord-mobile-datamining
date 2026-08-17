@@ -1,7 +1,7 @@
 // discord_app/modules/quests/types/v2/Task.tsx
-import set from "set" /* 2 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7463 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7465 */;
+import set from "../../../../../_runtime/00002_set.js";
+import QuestTaskConfigTypes from "../../../../../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx";
+import QuestTaskJoinOperator from "../../../../../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx";
 
 function _firstPartyTasksFromServer(tasks) {
   let obj = {};

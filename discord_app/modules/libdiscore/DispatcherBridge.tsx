@@ -1,16 +1,16 @@
 // discord_app/modules/libdiscore/DispatcherBridge.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import items6 from "items" /* 1914 */;
-import closure_3 from "getUserAgnosticState" /* 4737 */;
-import importDefaultResult from "fromServer" /* 6729 */;
-import importDefaultResult1 from "parseServerGuildSticker" /* 6770 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult2 from "getNote" /* 12160 */;
-import importDefaultResult3 from "createGuildRoleRecordFromRust" /* 1983 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import importDefaultResult4 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../debug/Logger.tsx";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import items6 from "libdiscoreExperiments.tsx";
+import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
+import importDefaultResult from "../emojis/RawGuildEmojiStore.tsx";
+import importDefaultResult1 from "../stickers/GuildStickersStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import importDefaultResult2 from "../user_profile/notes/NoteStore.tsx";
+import importDefaultResult3 from "../../stores/GuildRoleStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import importDefaultResult4 from "../../stores/GuildStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_6 = new timestampDefault("DispatcherBridge");

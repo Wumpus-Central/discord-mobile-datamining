@@ -1,15 +1,15 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9453 */;
-import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 9457 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../intl/DisplayNameStyles.messages.js";
+import AVERAGE_FONT_WIDTH_RATIODefault from "UsernameWithEffects.tsx";
+import DisplayNameStyleColorPreset from "../types.tsx";
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "../hooks/useDisplayNameStylesEffectConfigs.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function EffectTile(arg0) {

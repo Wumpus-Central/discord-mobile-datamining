@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

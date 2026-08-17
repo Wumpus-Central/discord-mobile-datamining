@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ AllFriendSourceFlags: c5, FriendSourceFlags: closure_6 } = ME);

@@ -1,9 +1,9 @@
 // discord_app/modules/forwarding/native/ForwardMessageFooter.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/DraftStore.tsx";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");

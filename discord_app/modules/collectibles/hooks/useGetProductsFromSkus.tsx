@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useGetProductsFromSkus.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../CollectiblesCategoryStore.tsx";
 
 noop.useCallback;
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/debug/getLogMetadata.native.tsx
-import set from "set" /* 2 */;
-import getConstantsAll from "getConstants" /* 1626 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import set from "../../../_runtime/00002_set.js";
+import getConstantsAll from "../../utils/native/ClientInfoUtils.tsx";
+import DCDDeviceManager from "../../utils/native/DeviceUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 

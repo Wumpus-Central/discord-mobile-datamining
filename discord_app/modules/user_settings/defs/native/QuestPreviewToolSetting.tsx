@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/QuestPreviewToolSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useQuests from "useQuests" /* 10684 */;
-import QuestsIcon from "QuestsIcon" /* 14351 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useQuests from "../../../quests/hooks/QuestHooks.tsx";
+import QuestsIcon from "../../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsQuestPreviewScreen } from "../../quests/native/SettingsQuestPreviewScreen.tsx";
 
 obj = {

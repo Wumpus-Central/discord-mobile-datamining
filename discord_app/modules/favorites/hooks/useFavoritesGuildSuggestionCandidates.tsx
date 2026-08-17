@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "map" /* 15538 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { NO_SUGGESTIONS } from "items" /* 15464 */;
-import { isAllowedType } from "ALLOWED_TYPES" /* 7606 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../channel_affinities_v2/ChannelAffinitiesV2Store.tsx";
+import closure_5 from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import { NO_SUGGESTIONS } from "../FavoritesGuildSuggestionsStore.tsx";
+import { isAllowedType } from "../../share/ShareConstants.tsx";
 
 const require = arg1;
 function getAffineChannelId(channelId) {

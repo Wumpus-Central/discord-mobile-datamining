@@ -1,7 +1,7 @@
 // discord_common/js/packages/kv-storage/js/api/MessageDao.tsx
-import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
-import TableId from "TableId" /* 1962 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import fromDatabaseTransaction from "Table.tsx";
+import TableId from "../types/index.tsx";
 import { TableId } from "../types/index.tsx";
 
 let MessageDao;

@@ -1,15 +1,15 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8945 */;
-import getNameplateAssets from "getNameplateAssets" /* 9222 */;
-import ShopIcon from "ShopIcon" /* 11316 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14259 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import useMaybeFetchProfileFrameDefault from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
+import getNameplateAssets from "../../collectibles/nameplates/native/NameplateUtils.tsx";
+import ShopIcon from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
+import getCollectibleTypeName from "../FamilyCenterActivityPurchaseRowUtils.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "../../collectibles/profile_frames/native/ProfileFrameConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function AvatarDecorationPreviewImage(arg0) {

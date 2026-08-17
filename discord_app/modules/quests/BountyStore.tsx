@@ -1,7 +1,7 @@
 // discord_app/modules/quests/BountyStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let c0 = false;
 let closure_1 = [];

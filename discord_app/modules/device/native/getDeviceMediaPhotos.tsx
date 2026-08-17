@@ -1,9 +1,9 @@
 // discord_app/modules/device/native/getDeviceMediaPhotos.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10280 */;
+import set from "../../../../_runtime/00002_set.js";
+import timestampDefault from "../../debug/Logger.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import get_ActivityIndicatorDefault from "DCDPhotos.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = new timestampDefault("DeviceMedia.tsx");

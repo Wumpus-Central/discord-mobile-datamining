@@ -1,8 +1,8 @@
 // discord_app/modules/cache/CacheActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleClearCaches" /* 5067 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { ChannelLoader } from "../../stores/ChannelStore.tsx";
+import closure_4 from "CacheStore.tsx";
 
 function _writeCaches() {
   const self = this;

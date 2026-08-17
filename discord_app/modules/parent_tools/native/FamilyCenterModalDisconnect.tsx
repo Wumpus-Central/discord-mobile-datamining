@@ -1,15 +1,15 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalDisconnect.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import registerAssetDefault from "registerAsset" /* 8143 */;
-import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14279 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/08143_registerAsset.js";
+import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function FamilyCenterModalDisconnectScreen(otherUser) {

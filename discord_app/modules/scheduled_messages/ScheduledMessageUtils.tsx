@@ -1,19 +1,19 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import initialize from "initialize" /* 589 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import tDefault from "t" /* 3975 */;
-import regExp from "regExp" /* 7437 */;
-import regExpDefault from "regExp" /* 7437 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "hasFlag" /* 4031 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { MessageFlags } from "ME" /* 676 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11170 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import timestampDefault from "../debug/Logger.tsx";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import regExp from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
+import regExpDefault from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../records/MessageRecord.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import { MessageFlags } from "../../Constants.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
+import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "../../../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 require = arg1;
 ({ MAX_SCHEDULED_MESSAGES_PER_USER: closure_8, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);

@@ -1,5 +1,5 @@
 // discord_common/js/packages/app-start-performance/AppStartPerformance.tsx
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let fn = globalThis.__getTotalRequireTime;
 if (fn == null) {

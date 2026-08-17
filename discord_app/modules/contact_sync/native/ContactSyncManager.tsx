@@ -1,12 +1,12 @@
 // discord_app/modules/contact_sync/native/ContactSyncManager.tsx
-import Storage3 from "Storage" /* 595 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "set" /* 5221 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import setStoredContacts from "setStoredContacts" /* 11852 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import setStoredContacts from "ContactSyncPersistedStore.tsx";
+import { ContactPermissions } from "ContactSyncConstants.tsx";
+import { PlatformTypes } from "../../../Constants.tsx";
 
 require = arg1;
 function _requestAndSyncContacts() {

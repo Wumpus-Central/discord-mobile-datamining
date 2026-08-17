@@ -1,6 +1,6 @@
 // discord_app/modules/a11y/native/useAnnounceAsyncCompletion.native.tsx
-import closure_2 from "noop" /* 19 */;
-import { AccessibilityInfo } from "get ActivityIndicator" /* 17 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { AccessibilityInfo } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/poggermode/PoggermodeSettingsStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ConfettiLocation from "ConfettiLocation" /* 7433 */;
-import apply from "apply" /* 12 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ConfettiLocation from "PoggermodeConstants.tsx";
+import apply from "../../../_runtime/00012_apply.js";
 
 ({ ShakeLocation, ConfettiLocation } = ConfettiLocation);
 let c0 = false;

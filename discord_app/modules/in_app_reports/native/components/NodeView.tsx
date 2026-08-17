@@ -1,21 +1,21 @@
 // discord_app/modules/in_app_reports/native/components/NodeView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import Text from "Text" /* 4734 */;
-import ArrowDefault from "Arrow" /* 8146 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getUserAgnosticState" /* 4737 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8145 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8142 */;
-import ME from "ME" /* 676 */;
-import { Permissions } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import ArrowDefault from "Arrow.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_9 from "../../../../stores/ChannelStore.tsx";
+import closure_10 from "../../../../stores/PermissionStore.tsx";
+import { REMEDIATION_ELEMENT_TYPES } from "../../MenuConstants.tsx";
+import { IN_APP_REPORTS_NODE } from "InAppReportsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function HeaderView(node) {

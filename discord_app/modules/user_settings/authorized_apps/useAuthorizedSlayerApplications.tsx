@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeFromAppTokens" /* 5289 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../oauth2/AuthorizedAppsStore.tsx";
+import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getEmojiToGroupId" /* 6727 */;
-import closure_6 from "handleUpdate" /* 6788 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../emojis/EmojiStore.tsx";
+import closure_6 from "../GuildOnboardingPromptsStore.tsx";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DropdownOptionRow(option) {

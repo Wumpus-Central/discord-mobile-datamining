@@ -1,6 +1,6 @@
 // discord_app/modules/cache/deserializeChannels.tsx
-import fromStringAll from "fromString" /* 506 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 function deserializeChannels(arg0) {
   const iter = arg0[Symbol.iterator]();

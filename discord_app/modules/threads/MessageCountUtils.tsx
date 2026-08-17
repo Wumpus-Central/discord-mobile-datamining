@@ -1,8 +1,8 @@
 // discord_app/modules/threads/MessageCountUtils.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AbortCodes from "AbortCodes" /* 1235 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import AbortCodes from "ThreadConstants.tsx";
 
 function _formatMessageCountLabel(count, iTS3Xe, id) {
   let str = "0";

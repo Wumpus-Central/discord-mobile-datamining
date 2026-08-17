@@ -1,9 +1,9 @@
 // discord_app/utils/ChangeLogUtils.tsx
-import tDefault from "t" /* 4092 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import regExpDefault from "regExp" /* 6829 */;
-import _modDef6830 from "module_6830" /* 6830 */;
+import tDefault from "../../_runtime/04092_t.js";
+import get_defaultRulesDefault from "../modules/markup/MarkupUtils.tsx";
+import textRegexpDefault from "../modules/markup/MarkupTextRule.tsx";
+import regExpDefault from "../modules/markup/MarkupListRule.tsx";
+import _modDef6830 from "../modules/markup/MarkupSubtextRule.tsx";
 import { ChangeLogLink } from "native/ChangeLogUtils.tsx";
 
 const require = arg1;

@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4045 */;
-import closure_6 from "emitChanges" /* 7421 */;
-import closure_7 from "updateProduct" /* 5319 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "GuildFeatures" /* 1924 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../../../stores/billing/SubscriptionStore.tsx";
+import closure_6 from "../../../../../../stores/billing/UserOfferStore.tsx";
+import closure_7 from "../../../../../../stores/native/IAPStore.android.tsx";
+import { HelpdeskArticles } from "../../../../../../Constants.tsx";
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "../../../../../premium/PremiumConstants.tsx";
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;

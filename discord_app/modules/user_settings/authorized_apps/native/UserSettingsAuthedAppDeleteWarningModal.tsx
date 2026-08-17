@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 10724 */;
-import isAuthorizedAppTwoWayDefault from "isAuthorizedAppTwoWay" /* 11767 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import isSocialLayerApplication from "../../../applications/isSocialLayerApplication.tsx";
+import isAuthorizedAppTwoWayDefault from "../shouldWarnAuthorizedAppTwoWay.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let result = set.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx");

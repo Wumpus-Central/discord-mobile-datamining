@@ -1,6 +1,6 @@
 // discord_app/modules/messages/renderMessageMarkup.tsx
-import set from "set" /* 2 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
+import set from "../../../_runtime/00002_set.js";
+import get_defaultRulesDefault from "../markup/MarkupUtils.tsx";
 
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;

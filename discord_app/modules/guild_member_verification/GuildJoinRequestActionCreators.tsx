@@ -1,11 +1,11 @@
 // discord_app/modules/guild_member_verification/GuildJoinRequestActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 7607 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
-import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
-import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import trackMemberApplicationViewed from "GuildJoinRequestAnalyticUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { createChannelRecordFromServer as closure_4 } from "../../records/ChannelRecord.tsx";
+import closure_5 from "GuildJoinRequestStore.tsx";
+import { joinRequestFromServer } from "UserGuildJoinRequestStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function _fetchGuildJoinRequests() {

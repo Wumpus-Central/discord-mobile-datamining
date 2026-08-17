@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/helpers/transformUser.tsx
-import set from "set" /* 2 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
+import set from "../../../../_runtime/00002_set.js";
+import parseAvatarDecorationData from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
 

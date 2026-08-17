@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../../user_settings/LocaleStore.tsx";
+import MessageEmbedTypes from "../../../../../SearchConstants.tsx";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ SearchTabs: c5, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = MessageEmbedTypes);

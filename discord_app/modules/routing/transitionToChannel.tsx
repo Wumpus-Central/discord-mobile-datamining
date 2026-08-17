@@ -1,10 +1,10 @@
 // discord_app/modules/routing/transitionToChannel.tsx
-import _modDef38 from "module_38" /* 38 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4769 */;
-import _modDef4770 from "module_4770" /* 4770 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { Routes } from "ME" /* 676 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import transitionTo from "router_utils.tsx";
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute.tsx";
+import _modDef4770 from "../../actions/ChannelActionCreators.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import { Routes } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/routing/transitionToChannel.tsx");

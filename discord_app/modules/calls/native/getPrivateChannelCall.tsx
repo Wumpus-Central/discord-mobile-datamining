@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/getPrivateChannelCall.tsx
-import closure_2 from "updateVoiceState" /* 4542 */;
-import { NOOP_NULL } from "ME" /* 676 */;
+import closure_2 from "../../../stores/VoiceStateStore.tsx";
+import { NOOP_NULL } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");

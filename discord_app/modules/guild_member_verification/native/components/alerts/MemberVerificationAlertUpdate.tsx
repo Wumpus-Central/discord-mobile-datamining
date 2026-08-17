@@ -1,13 +1,13 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import registerAssetDefault from "registerAsset" /* 8542 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { DownloadLinks } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import componentDidMountDefault from "../../../../../components_native/common/Alert.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08542_registerAsset.js";
+import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { DownloadLinks } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

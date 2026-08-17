@@ -1,12 +1,12 @@
 // discord_common/js/packages/apex/BaseApexExperimentStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import UnitType from "UnitType" /* 1215 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { WebAnalyticsEvents } from "sum" /* 505 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../flux/index.tsx";
+import Storage2 from "../storage/Storage.tsx";
+import UnitType from "ApexTypes.tsx";
+import MurmurHashV3Default from "../../../../_runtime/01217_MurmurHashV3.js";
+import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { WebAnalyticsEvents } from "../../shared/Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function _toPropertyKey(obj) {

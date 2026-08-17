@@ -1,10 +1,10 @@
 // discord_app/modules/client_themes/ClientThemesConstants.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import ClientThemeType from "ClientThemeType" /* 1349 */;
-import apply from "apply" /* 12 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import ClientThemeType from "ClientThemesTypes.tsx";
+import apply from "../../../_runtime/00012_apply.js";
 
 const ThemeTypes = sum.ThemeTypes;
 const items = [, , ];

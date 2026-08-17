@@ -1,8 +1,8 @@
 // discord_app/modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 4045 */;
-import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../promotions/PromotionsStore.tsx";
+import { PremiumTypes } from "../../PremiumConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/voice_calls/native/components/OngoingCallStatusLabel.tsx
-import noopAll from "noop" /* 19 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "callConnect" /* 4496 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/CallStore.tsx";
+import closure_4 from "../../../../stores/VoiceStateStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

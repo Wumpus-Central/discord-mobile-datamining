@@ -1,6 +1,6 @@
 // discord_app/modules/core/isActionRequired.tsx
-import closure_0 from "handleUpdateUser" /* 1384 */;
-import closure_1 from "handleRequiredAction" /* 1385 */;
+import closure_0 from "../auth/LoginRequiredActionStore.tsx";
+import closure_1 from "../../stores/UserRequiredActionStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/core/isActionRequired.tsx");
 

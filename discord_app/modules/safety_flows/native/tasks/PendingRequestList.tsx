@@ -1,13 +1,13 @@
 // discord_app/modules/safety_flows/native/tasks/PendingRequestList.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 14234 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import messagesProxyDefault from "../../SafetyFlows.messages.js";
+import useRefreshLinkCodeOnExpiryDefault from "../../../parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { QrCodeIcon } from "../../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
 import { ShareIcon } from "../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";

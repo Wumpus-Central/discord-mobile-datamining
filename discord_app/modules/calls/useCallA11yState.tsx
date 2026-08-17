@@ -1,6 +1,6 @@
 // discord_app/modules/calls/useCallA11yState.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "callConnect" /* 4496 */;
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/CallStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

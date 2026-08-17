@@ -1,24 +1,24 @@
 // discord_app/modules/video_calls/native/components/CallTile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import registerAssetDefault from "registerAsset" /* 9839 */;
-import registerAssetDefault2 from "registerAsset" /* 9885 */;
-import StreamPreviewContainerDefault from "StreamPreviewContainer" /* 12615 */;
-import registerAssetDefault3 from "registerAsset" /* 12619 */;
-import registerAssetDefault4 from "registerAsset" /* 12620 */;
-import registerAssetDefault5 from "registerAsset" /* 12621 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 12622 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import registerAssetDefault from "../../../../../_runtime/09839_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09885_registerAsset.js";
+import StreamPreviewContainerDefault from "../../../../components_native/TouchableStreamPreview.tsx";
+import registerAssetDefault3 from "../../../../../_runtime/12619_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/12620_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/12621_registerAsset.js";
+import ParticipantTitleDefault from "ParticipantTitle.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import VoiceChatDrawerState from "../ChannelCallStore.tsx";
+import ParticipantTypes from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 class StreamPreviewTile {

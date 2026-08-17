@@ -1,19 +1,19 @@
 // discord_app/modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 10983 */;
-import newMemberActionFromServer from "newMemberActionFromServer" /* 11453 */;
-import useMemberActionsForChannel from "useMemberActionsForChannel" /* 11455 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "getEmojiToGroupId" /* 6727 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import { Routes } from "ME" /* 676 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../_runtime/10983_registerAsset.js";
+import newMemberActionFromServer from "../GuildOnboardingHomeTypes.tsx";
+import useMemberActionsForChannel from "../MemberActionUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../emojis/EmojiStore.tsx";
+import closure_8 from "../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../stores/GuildMemberStore.tsx";
+import { Routes } from "../../../Constants.tsx";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ActionChannelInfo(action) {

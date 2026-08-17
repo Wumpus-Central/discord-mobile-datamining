@@ -1,9 +1,9 @@
 // discord_app/utils/ColorUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import nDefault from "n" /* 689 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hslToRgbDefault from "hslToRgb" /* 4224 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import nDefault from "../../_runtime/00689_n.js";
+import getSystemLocale from "../intl/index.native.tsx";
+import hslToRgbDefault from "Color.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function hexToRgba(PRIMARY_760) {

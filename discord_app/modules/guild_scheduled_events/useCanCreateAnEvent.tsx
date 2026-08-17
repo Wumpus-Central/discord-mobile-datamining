@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/useCanCreateAnEvent.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,21 +1,21 @@
 // discord_app/modules/contact_sync/native/ContactSyncUtils.tsx
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import initialize from "initialize" /* 589 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import combinedDefault from "combined" /* 1993 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import _requestAndSyncContacts from "_requestAndSyncContacts" /* 11854 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 5221 */;
-import setStoredContacts from "setStoredContacts" /* 11852 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 11851 */;
-import ME from "ME" /* 676 */;
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import _modDef5227 from "../../../utils/TrackedHTTPUtils.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _requestAndSyncContacts from "ContactSyncManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ConnectedAccountsStore.tsx";
+import setStoredContacts from "ContactSyncPersistedStore.tsx";
+import ContactSyncLandingPage from "ContactSyncConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 function _uploadContacts() {

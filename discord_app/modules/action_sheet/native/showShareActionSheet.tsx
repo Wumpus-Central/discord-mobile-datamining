@@ -1,9 +1,9 @@
 // discord_app/modules/action_sheet/native/showShareActionSheet.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 9068 */;
-import trackAppClickInNativeShareSheet from "trackAppClickInNativeShareSheet" /* 9069 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
+import trackAppClickInNativeShareSheet from "ShowShareActionSheetUtils.tsx";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 if (PlatformTypes.isAndroid()) {
   const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcingDefault);

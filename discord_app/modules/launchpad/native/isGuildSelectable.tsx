@@ -1,8 +1,8 @@
 // discord_app/modules/launchpad/native/isGuildSelectable.tsx
-import closure_0 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_1 from "reset" /* 4652 */;
-import closure_2 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_0 from "../../stage_channels/StageInstanceStore.tsx";
+import closure_1 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_2 from "../../../stores/GuildReadStateStore.tsx";
+import closure_3 from "../../../stores/UserGuildSettingsStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
 

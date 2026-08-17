@@ -1,7 +1,7 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../Constants.tsx";
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");

@@ -1,7 +1,7 @@
 // discord_app/design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx
-import closure_2 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { createElement } from "noop" /* 19 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import { createElement } from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 function AnimatedRenderItem(shouldAnimate) {

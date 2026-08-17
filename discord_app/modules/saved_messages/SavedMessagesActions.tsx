@@ -1,7 +1,7 @@
 // discord_app/modules/saved_messages/SavedMessagesActions.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getTimeSafe" /* 10850 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "SavedMessagesStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _upsertSavedMessage() {

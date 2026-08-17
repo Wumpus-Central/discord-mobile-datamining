@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
-import _modDef4975 from "module_4975" /* 4975 */;
-import openStageChannelSettingsAll from "openStageChannelSettings" /* 8058 */;
-import _initializeDefault from "_initialize" /* 12825 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
+import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
+import openStageChannelSettingsAll from "StageChannelActionCreatorExtras.native.tsx";
+import _initializeDefault from "StageChannelNewUserManager.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "../../stores/SelectedChannelStore.tsx";
 import { watchStream } from "../../actions/StreamActionCreators.tsx";
 import { shouldShowVoiceChannelChangeConfirmation } from "../channel/shouldShowVoiceChannelChangeConfirmation.tsx";
 import { Permissions } from "StageChannelPermissions.tsx";

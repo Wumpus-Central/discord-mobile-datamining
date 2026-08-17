@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/message_reminders/native/MessageRemindersSeenStorage.tsx
-import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
+import set from "../../../../../_runtime/00002_set.js";
+import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 
 const MessageRemindersLastSeenAt = "MessageRemindersLastSeenAt";
 let result = set.fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersSeenStorage.tsx");

@@ -1,19 +1,19 @@
 // discord_app/utils/native/IAPUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import set2 from "set" /* 500 */;
-import v1 from "v1" /* 514 */;
-import getConstantsAll from "getConstants" /* 1626 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
-import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 7725 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 7726 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateProduct" /* 5319 */;
-import ME from "ME" /* 676 */;
-import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures" /* 1924 */;
-import set from "set" /* 500 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import set2 from "../PlatformUtils.tsx";
+import v1 from "../../../_runtime/00514_v1.js";
+import getConstantsAll from "ClientInfoUtils.tsx";
+import DCDDeviceManager from "DeviceUtils.tsx";
+import productSK2ToIAPProductDefault from "../../modules/billing/native/StorekitIAPQueue.tsx";
+import GeneratedPaymentCurrencies from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { convertToAlpha2 } from "../../modules/i18n/CountryCodeUtils.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import closure_7 from "../../stores/native/IAPStore.android.tsx";
+import ME from "../../Constants.tsx";
+import { NAMESPACE_SNOWFLAKE_UUID } from "../../modules/premium/PremiumConstants.tsx";
+import set from "../PlatformUtils.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

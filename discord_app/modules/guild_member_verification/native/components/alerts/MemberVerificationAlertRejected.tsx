@@ -1,10 +1,10 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertRejected.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
+import closure_7 from "../../../UserGuildJoinRequestStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);

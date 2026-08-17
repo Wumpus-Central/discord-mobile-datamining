@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 7356 */;
-import Form from "Form" /* 8083 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8086 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../../_runtime/07356_registerAsset.js";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

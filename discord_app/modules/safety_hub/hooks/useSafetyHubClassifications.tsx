@@ -1,8 +1,8 @@
 // discord_app/modules/safety_hub/hooks/useSafetyHubClassifications.tsx
-import initialize from "initialize" /* 589 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import { ViolationType } from "SafetyHubView" /* 5438 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../SafetyHubStore.tsx";
+import { ViolationType } from "../SafetyHubConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

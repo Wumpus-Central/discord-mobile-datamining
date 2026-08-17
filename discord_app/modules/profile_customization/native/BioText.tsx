@@ -1,11 +1,11 @@
 // discord_app/modules/profile_customization/native/BioText.tsx
-import Text from "Text" /* 4734 */;
-import closure_3 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import Text from "../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { Pressable } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { CHANGELOG_URL } from "../../changelog/ChangelogConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function LinkButton(arg0) {

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/NavigationHistoryStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_2 from "../../../stores/ChannelStore.tsx";
 
 const require = arg1;
 function getIdFromHistoryItem(str) {

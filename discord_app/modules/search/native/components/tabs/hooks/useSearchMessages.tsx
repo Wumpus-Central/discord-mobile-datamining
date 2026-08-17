@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessages.tsx
-import closure_2 from "handleReaction" /* 4971 */;
-import closure_3 from "prototype" /* 11510 */;
+import closure_2 from "../../../../SearchMessageStore.tsx";
+import closure_3 from "../../../stores/SearchQueryStore.tsx";
 import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

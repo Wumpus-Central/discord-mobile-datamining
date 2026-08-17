@@ -1,15 +1,15 @@
 // discord_app/modules/upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import closure_8 from "setContent" /* 4086 */;
-import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { DismissibleContentGroupName as closure_11 } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_8 from "../../action_sheet/native/ActionSheetStore.tsx";
+import closure_9 from "../../user_settings/UserSettingsProtoStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { DismissibleContentGroupName as closure_11 } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class GiftingPromotionCoachmarkImporter {

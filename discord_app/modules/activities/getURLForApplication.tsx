@@ -1,6 +1,6 @@
 // discord_app/modules/activities/getURLForApplication.tsx
-import closure_0 from "reset" /* 7874 */;
-import closure_1 from "initialize" /* 7872 */;
+import closure_0 from "../../stores/game_store/TestModeStore.tsx";
+import closure_1 from "DeveloperActivityShelfStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 

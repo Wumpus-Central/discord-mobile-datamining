@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/MessageTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = { UNDELETABLE: null, GUILD_DISCOVERY_STATUS: null, USER_MESSAGE: null, NOTIFIABLE_SYSTEM_MESSAGE: null, REPLYABLE: null, FORWARDABLE: null, REFERENCED_MESSAGE_AVAILABLE: null, AVAILABLE_IN_GUILD_FEED: null, DEADCHAT_PROMPTS: null, NON_COLLAPSIBLE: null, NON_PARSED: null, AUTOMOD_INCIDENT_ACTIONS: null, SELF_MENTIONABLE_SYSTEM: null, SCHEDULABLE: null, SILENTLY_CREATABLE: null };
 let set = new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]);

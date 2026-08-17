@@ -1,14 +1,14 @@
 // discord_app/modules/conversations/ConversationsActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 9873 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 9880 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 12686 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "removePendingListFetch" /* 5014 */;
-import closure_5 from "initialize" /* 12685 */;
-import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 5016 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import fetchSurveyDetailsDefault from "../qualtrics/QualtricsActionCreators.tsx";
+import SurveyActionTypes from "../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
+import ConversationsAnalytics2 from "ConversationsAnalytics.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "ConversationsStore.tsx";
+import closure_5 from "TopicalNavigationSurveyStore.tsx";
+import { FETCH_LIMIT } from "ConversationConstants.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function _fetchChannelConversations() {

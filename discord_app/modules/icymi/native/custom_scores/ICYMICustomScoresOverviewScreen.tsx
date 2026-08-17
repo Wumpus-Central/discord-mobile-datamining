@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "insertUnsortedGuilds" /* 5078 */;
-import closure_7 from "filterStaffGuild" /* 9044 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/SortedGuildStore.tsx";
+import closure_7 from "../../ICYMIStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { container: null };

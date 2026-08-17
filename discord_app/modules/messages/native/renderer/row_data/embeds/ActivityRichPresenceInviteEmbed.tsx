@@ -1,20 +1,20 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/ActivityRichPresenceInviteEmbed.tsx
-import resultDefault from "result" /* 10917 */;
-import getRequestToStreamCTAAndIsDisabledDefault from "getRequestToStreamCTAAndIsDisabled" /* 12791 */;
-import closure_3 from "addApplication" /* 4478 */;
-import closure_4 from "upsertAccount" /* 7241 */;
-import { SpotifyApplication } from "getIconURL" /* 12779 */;
-import closure_6 from "createdAt" /* 1930 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "updateParty" /* 12780 */;
-import closure_9 from "updateActivities" /* 7251 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
-import closure_11 from "sortActivity" /* 4559 */;
-import closure_12 from "filterPlayingActivities" /* 7250 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "handleActivityStateChanged" /* 10663 */;
-import ME from "ME" /* 676 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
+import resultDefault from "../../../../../activities/utils/isInviteActive.tsx";
+import getRequestToStreamCTAAndIsDisabledDefault from "../../../../../request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx";
+import closure_3 from "../../../../../applications/ApplicationStore.tsx";
+import closure_4 from "../../../../../spotify/SpotifyStore.tsx";
+import { SpotifyApplication } from "../../../../../../records/SpotifyApplicationRecord.tsx";
+import closure_6 from "../../../../../../records/UserRecord.tsx";
+import closure_7 from "../../../../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../../../../stores/GamePartyStore.tsx";
+import closure_9 from "../../../../../../stores/LocalActivityStore.tsx";
+import closure_10 from "../../../../../../stores/MessageStore.tsx";
+import closure_11 from "../../../../../../stores/PresenceStore.tsx";
+import closure_12 from "../../../../../../stores/SelfPresenceStore.tsx";
+import closure_13 from "../../../../../../stores/UserStore.tsx";
+import closure_14 from "../../../../../../stores/views/ActivityLauncherStore.tsx";
+import ME from "../../../../../../Constants.tsx";
+import SPOTIFY_APP_PROTOCOL from "../../../../../spotify/SpotifyConstants.tsx";
 import { ContentClassificationVisibility } from "../../../../../content_classification/ContentClassificationVisibility.tsx";
 
 const require = arg1;

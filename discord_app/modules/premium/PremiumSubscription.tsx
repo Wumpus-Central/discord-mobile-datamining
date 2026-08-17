@@ -1,6 +1,6 @@
 // discord_app/modules/premium/PremiumSubscription.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../_runtime/00002_set.js";
+import GuildFeatures from "PremiumConstants.tsx";
 
 ({ SubscriptionPlans: c0, SubscriptionPlanInfo: closure_1, PremiumSubscriptionSKUs: obj1 } = GuildFeatures);
 const result = set.fileFinishedImporting("modules/premium/PremiumSubscription.tsx");

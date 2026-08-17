@@ -1,16 +1,16 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalContentInProgress.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "n" /* 689 */;
-import alphaResult1 from "module_0" /* 0 */;
-import alphaResult2 from "module_0" /* 0 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../../../_runtime/00689_n.js";
+import alphaResult1 from "../../../../index.native.tsx";
+import alphaResult2 from "../../../../index.native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c4 = importAllResult;

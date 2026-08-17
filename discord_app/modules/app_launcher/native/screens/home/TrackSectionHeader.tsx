@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/home/TrackSectionHeader.tsx
-import encodeProperties from "encodeProperties" /* 503 */;
-import trackImpressionDefault from "trackImpression" /* 9177 */;
-import closure_3 from "handleDismissWithDismissed" /* 11264 */;
+import encodeProperties from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import trackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
+import closure_3 from "../../../AppLauncherStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");

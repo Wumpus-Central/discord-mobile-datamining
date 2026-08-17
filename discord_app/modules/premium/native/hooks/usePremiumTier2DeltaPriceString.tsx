@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx
-import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7378 */;
-import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7395 */;
-import closure_4 from "updateProduct" /* 5319 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import getPremiumBundledItemsFromProductId from "../PremiumBundledPlansUtils.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { useNativeCheckoutStore } from "../../../checkout/native/NativeCheckoutStore.tsx";
+import closure_4 from "../../../../stores/native/IAPStore.android.tsx";
+import { PremiumTypes } from "../../PremiumConstants.tsx";
 
 require = arg1;
 function getViewerProductId(subscription) {

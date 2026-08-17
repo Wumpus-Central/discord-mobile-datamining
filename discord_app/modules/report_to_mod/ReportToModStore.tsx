@@ -1,7 +1,7 @@
 // discord_app/modules/report_to_mod/ReportToModStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "handleConnectionOpen" /* 4197 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/SelectedGuildStore.tsx";
 
 function handleSelectedGuildChange() {
   lastSelectedGuildId = lastSelectedGuildId.getLastSelectedGuildId();

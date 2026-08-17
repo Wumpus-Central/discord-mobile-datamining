@@ -1,10 +1,10 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx
-import mapped from "mapped" /* 9668 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import ME from "ME" /* 676 */;
+import mapped from "../AVError.tsx";
+import getVoiceChannelErrorContext from "../AVErrorContext.tsx";
+import closure_2 from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ InputModes: c5, RTCConnectionStates: closure_6 } = ME);

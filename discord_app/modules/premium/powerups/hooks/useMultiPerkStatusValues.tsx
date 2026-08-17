@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 11668 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 
 const PowerupActiveStatusType = BoostedGuildTiers.PowerupActiveStatusType;
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../../../_runtime/00002_set.js";
+import sendRequest from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../../../Constants.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
 import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const Endpoints = ME.Endpoints;

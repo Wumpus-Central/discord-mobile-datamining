@@ -1,8 +1,8 @@
 // discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import constants2 from "constants" /* 4501 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import log from "../../../logger/Logger.tsx";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import constants2 from "VoiceEngineModule.android.tsx";
 
 let f31118 = require;
 let c1 = dependencyMap;

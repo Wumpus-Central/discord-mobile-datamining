@@ -1,19 +1,19 @@
 // discord_app/modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import IconSizes from "IconSizes" /* 4747 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7142 */;
-import GameIcon from "GameIcon" /* 7149 */;
-import GameIconDefault from "GameIcon" /* 7149 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "set" /* 5221 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isThemeLight from "../../../design/utils/shared/themes.tsx";
+import getAvatarURL from "../../../utils/AvatarUtils.tsx";
+import IconSizes from "../../../design/void/Icon/native/Icon.tsx";
+import IconSizesDefault from "../../../design/void/Icon/native/Icon.tsx";
+import useStartAuthorizeDefault from "useStartAuthorize.tsx";
+import GameIcon from "../../game_detection/native/GameIcon.tsx";
+import GameIconDefault from "../../game_detection/native/GameIcon.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../applications/ApplicationStore.tsx";
+import closure_6 from "../../../stores/ConnectedAccountsStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ConnectionIcon(arg0) {

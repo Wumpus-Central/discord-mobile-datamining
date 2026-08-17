@@ -1,11 +1,11 @@
 // discord_app/modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx
-import initialize from "initialize" /* 589 */;
-import useUserIsTeen from "useUserIsTeen" /* 8152 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10571 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 10572 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10573 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
+import useIsSpamMessageRequest from "../../../message_request/hooks/useIsSpamMessageRequest.tsx";
+import useIsMessageRequest from "../../../message_request/hooks/useIsMessageRequest.tsx";
+import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
+import closure_2 from "../../../../stores/UserStore.tsx";
+import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");

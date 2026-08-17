@@ -1,17 +1,17 @@
 // discord_app/modules/premium/gifting/native/views/promotions/GiftingPromotionCoachmark.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import usePreviousDefault from "usePrevious" /* 6701 */;
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "createEmptyPromotionsByType" /* 7628 */;
-import ME from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import preloadDefault from "../../../../../../components_native/common/FastImage.tsx";
+import usePreviousDefault from "../../../../../../hooks/usePrevious.tsx";
+import contextDefault from "../../../../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../../../../app_analytics/AnalyticsLocation.tsx";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../promotions/PromotionsStore.tsx";
+import ME from "../../../../../../Constants.tsx";
+import { ContentDismissActionType } from "../../../../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ AnalyticsSections: error, AnalyticsObjects: closure_8, AnalyticsPages: c9 } = ME);

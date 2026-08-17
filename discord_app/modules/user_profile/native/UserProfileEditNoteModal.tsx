@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileEditNoteModal.tsx
-import noopAll from "noop" /* 19 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import NavigationStack from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

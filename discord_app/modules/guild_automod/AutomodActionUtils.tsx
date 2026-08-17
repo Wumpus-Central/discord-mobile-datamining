@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/AutomodActionUtils.tsx
-import set from "set" /* 2 */;
-import AutomodEventType from "AutomodEventType" /* 11042 */;
+import set from "../../../_runtime/00002_set.js";
+import AutomodEventType from "Constants.tsx";
 
 let AutomodActionType = AutomodEventType.AutomodActionType;
 const result = set.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");

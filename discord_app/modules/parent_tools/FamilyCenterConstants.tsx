@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/FamilyCenterConstants.tsx
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
+import setDefault from "../../utils/Durations.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "FamilyCenter.messages.js";
+import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 
 require = arg1;
 const result = 30 * setDefault.Millis.SECOND;

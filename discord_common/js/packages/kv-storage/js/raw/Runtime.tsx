@@ -1,6 +1,6 @@
 // discord_common/js/packages/kv-storage/js/raw/Runtime.tsx
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import log from "../../../logger/Logger.tsx";
 
 let c2 = 1000000;
 let closure_3 = "1" === process.env.KV_STORAGE_LOGGING;

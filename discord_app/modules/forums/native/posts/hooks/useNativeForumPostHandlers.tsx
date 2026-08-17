@@ -1,13 +1,13 @@
 // discord_app/modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4086 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "handleLoadThreadsSuccess" /* 7239 */;
-import closure_9 from "handleLoadThreadsSuccess" /* 7274 */;
-import ME from "ME" /* 676 */;
-import { OpenThreadAnalyticsLocations as closure_14 } from "AbortCodes" /* 1235 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
+import closure_8 from "../../../ForumPostMessagesStore.tsx";
+import closure_9 from "../../../ForumPostRecentMessageStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import { OpenThreadAnalyticsLocations as closure_14 } from "../../../../threads/ThreadConstants.tsx";
 
 const require = arg1;
 ({ AnalyticsObjectTypes: c10, AnalyticsPages: unpackModuleId, AnalyticsSections: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1 } = ME);

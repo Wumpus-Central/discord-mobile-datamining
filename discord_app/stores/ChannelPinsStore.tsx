@@ -1,14 +1,14 @@
 // discord_app/stores/ChannelPinsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "../modules/user_settings/LocaleStore.tsx";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "GuildMemberStore.tsx";
+import closure_6 from "GuildStore.tsx";
+import closure_7 from "MessageStore.tsx";
+import closure_8 from "RelationshipStore.tsx";
+import closure_9 from "UserStore.tsx";
 
 const require = arg1;
 function handleChannelDelete(arg0) {

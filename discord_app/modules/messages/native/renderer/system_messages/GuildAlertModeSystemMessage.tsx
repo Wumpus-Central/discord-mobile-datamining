@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import resultDefault from "result" /* 8178 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8252 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
+import resultDefault from "../resolveMessageContentColors.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import getTagPropertiesDefault from "../getTagProperties.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { automodUsernameColor: ThemesDefault.colors.TEXT_BRAND };

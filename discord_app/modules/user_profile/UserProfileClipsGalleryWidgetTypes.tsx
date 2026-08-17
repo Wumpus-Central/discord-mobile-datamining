@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx
-import set from "set" /* 2 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import WidgetType from "WidgetType" /* 5366 */;
+import set from "../../../_runtime/00002_set.js";
+import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
+import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 
 function convertClip(gameId) {
   let obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };

@@ -1,6 +1,6 @@
 // discord_app/records/EmojiRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createdAt" /* 1930 */;
+import toJSDefault from "../lib/Record.tsx";
+import closure_0 from "UserRecord.tsx";
 
 toJSDefault;
 const result = require("set").fileFinishedImporting("records/EmojiRecord.tsx");

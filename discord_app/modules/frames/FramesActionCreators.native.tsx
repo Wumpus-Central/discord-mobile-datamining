@@ -1,7 +1,7 @@
 // discord_app/modules/frames/FramesActionCreators.native.tsx
-import _launchFrameAll from "_launchFrame" /* 8707 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import _launchFrameAll from "FramesActionCreators.shared.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/VoiceStateStore.tsx";
 
 function _launchFrameOnNative() {
   const self = this;

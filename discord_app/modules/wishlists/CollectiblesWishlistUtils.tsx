@@ -1,7 +1,7 @@
 // discord_app/modules/wishlists/CollectiblesWishlistUtils.tsx
-import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import set from "../../../_runtime/00002_set.js";
+import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import getItemRecordsFromPurchases from "../collectibles/CollectiblesUtils.tsx";
 
 let result = set.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 

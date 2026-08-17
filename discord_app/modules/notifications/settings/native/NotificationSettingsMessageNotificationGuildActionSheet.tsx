@@ -1,10 +1,10 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { GuildNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { UserNotificationSettings } from "../../../../Constants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { GuildNotificationSettingsFlags as closure_6 } from "../../../user_settings/UserSettingsConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 
 const require = arg1;

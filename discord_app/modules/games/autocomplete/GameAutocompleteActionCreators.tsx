@@ -1,7 +1,7 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 6899 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "GameAutocompleteStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
 
 const require = arg1;
 function _fetchGameAutocomplete() {

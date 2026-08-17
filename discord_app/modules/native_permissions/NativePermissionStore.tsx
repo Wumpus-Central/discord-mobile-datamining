@@ -1,10 +1,10 @@
 // discord_app/modules/native_permissions/NativePermissionStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import NativePermissionStatus from "NativePermissionConstants.tsx";
 
 const NativePermissionStates = NativePermissionStatus.NativePermissionStates;
 const AnalyticEvents = ME.AnalyticEvents;

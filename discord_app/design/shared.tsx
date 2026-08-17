@@ -1,8 +1,8 @@
 // discord_app/design/shared.tsx
-import set from "set" /* 2 */;
-import _mod1350 from "module_1350" /* 1350 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import WCAGContrastRatios from "WCAGContrastRatios" /* 1365 */;
+import set from "../../_runtime/00002_set.js";
+import _mod1350 from "../../discord_common/js/packages/design/shared.tsx";
+import isThemeLight from "utils/shared/themes.tsx";
+import WCAGContrastRatios from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
 
 const result = set.fileFinishedImporting("design/shared.tsx");
 

@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import useConnectRetry from "useConnectRetry" /* 9793 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 9794 */;
-import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes" /* 9782 */;
-import { AbortCodes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import useNavigation from "../../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import useConnectRetry from "../useConnectRetry.tsx";
+import TwoWayLinkError from "../TwoWayLinkError.tsx";
+import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkConstants.tsx";
+import { AbortCodes } from "../../../../../../Constants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import keys from "../../../../_runtime/00644_keys.js";
 
 let closure_0 = { selectedGuildId: "0" };
 let obj = keys.create((arg0) => {

@@ -1,22 +1,22 @@
 // discord_app/modules/autocompleter/native/AutocompleteWrapper.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import AutocompleteLabel from "AutocompleteLabel" /* 11560 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleInit" /* 7527 */;
-import closure_8 from "getEmojiToGroupId" /* 6727 */;
-import closure_9 from "_handleConnectionOpen" /* 4495 */;
-import closure_10 from "loadSavedGuildStickers" /* 6769 */;
-import ME from "ME" /* 676 */;
-import { BOOLEAN_CHOICES } from "TRUE_OPTION_NAME" /* 5246 */;
-import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
-import regExp from "regExp" /* 6810 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10254 */;
-import { EmojiInteractionPoint } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AutocompleteLabel from "Autocomplete.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../application_commands/ApplicationCommandStore.tsx";
+import closure_8 from "../../emojis/EmojiStore.tsx";
+import closure_9 from "../../gateway/GatewayConnectionStore.tsx";
+import closure_10 from "../../stickers/StickersStore.tsx";
+import ME from "../../../Constants.tsx";
+import { BOOLEAN_CHOICES } from "../../application_commands/ApplicationCommandConstants.tsx";
+import AUTOCOMPLETE_ROW_HEIGHT from "../../application_commands/native/ApplicationCommandsConstants.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { AutocompleteTypes } from "../../channel_text_area/native/ChannelAutocompleteConstants.tsx";
+import { EmojiInteractionPoint } from "../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function getStickersItemLayout(arg0, arg1) {

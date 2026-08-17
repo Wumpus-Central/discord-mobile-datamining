@@ -1,6 +1,6 @@
 // discord_app/modules/window/native/AppEntryKeyContext.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import importAllResult from "noop" /* 19 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 let c0 = importAllResult;
 let closure_1 = new timestampDefault("AppEntryKeyContext");

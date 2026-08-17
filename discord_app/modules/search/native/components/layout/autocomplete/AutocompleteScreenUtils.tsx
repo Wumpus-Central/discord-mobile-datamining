@@ -1,14 +1,14 @@
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 9087 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "prototype" /* 11510 */;
-import { SearchListItemTypes } from "MessageEmbedTypes" /* 8507 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import nameFromUserDefault from "../../../../../../utils/UserUtils.tsx";
+import ForwardingIconDefault from "../../../../../forwarding/native/ForwardingIcon.tsx";
+import SearchTokenTypes from "../../../../SearchUtils.tsx";
+import closure_3 from "../../../../../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/SearchQueryStore.tsx";
+import { SearchListItemTypes } from "../../../../SearchConstants.tsx";
+import { RelationshipTypes } from "../../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");

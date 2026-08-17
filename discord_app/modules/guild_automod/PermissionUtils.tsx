@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/PermissionUtils.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,8 +1,8 @@
 // discord_app/actions/native/UploadActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_4 from "initialize" /* 7582 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../stores/DraftStore.tsx";
+import { DraftType } from "../../stores/DraftStore.tsx";
+import closure_4 from "../../stores/UploadStore.tsx";
 
 const result = require("set").fileFinishedImporting("actions/native/UploadActionCreators.tsx");
 

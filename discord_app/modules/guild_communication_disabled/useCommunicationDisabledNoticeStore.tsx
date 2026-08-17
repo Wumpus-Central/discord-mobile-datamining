@@ -1,10 +1,10 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
-import identity from "identity" /* 700 */;
-import isIterable from "isIterable" /* 4006 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "getFriendlyDurationString" /* 1992 */;
-import keys from "keys" /* 645 */;
-import { Storage } from "Storage" /* 595 */;
+import identity from "../../../_runtime/00700_identity.js";
+import isIterable from "../../../_runtime/04006_isIterable.js";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "GuildDisableCommunicationConstants.tsx";
+import keys from "../../../_runtime/00645_keys.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 

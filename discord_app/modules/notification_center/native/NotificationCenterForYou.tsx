@@ -1,17 +1,17 @@
 // discord_app/modules/notification_center/native/NotificationCenterForYou.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_7 from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "_validate" /* 4801 */;
-import closure_10 from "handleLoadFinished" /* 15668 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import MODE_CHANGE_PHYSICS from "MODE_CHANGE_PHYSICS" /* 9588 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/GuildReadStateStore.tsx";
+import closure_7 from "../../../stores/ReadStateStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import closure_9 from "../NotificationCenterItemsStore.tsx";
+import closure_10 from "../NotificationCenterStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import MODE_CHANGE_PHYSICS from "../../main_tabs_v2/native/MainTabsConstants.tsx";
+import { ReadStateTypes } from "../../read_states/ReadStateConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MODE_CHANGE_PHYSICS);

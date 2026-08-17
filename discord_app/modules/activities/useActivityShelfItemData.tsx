@@ -1,6 +1,6 @@
 // discord_app/modules/activities/useActivityShelfItemData.tsx
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11212 */;
-import closure_2 from "noop" /* 19 */;
+import useActivityShelfItemsDefault from "useActivityShelfItems.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
 

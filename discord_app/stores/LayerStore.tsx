@@ -1,6 +1,6 @@
 // discord_app/stores/LayerStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 function handlePopAllLayers() {
   closure_0 = [];

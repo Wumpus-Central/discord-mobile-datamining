@@ -1,8 +1,8 @@
 // discord_app/modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import Storage2 from "Storage" /* 595 */;
-import appendDefault from "append" /* 13561 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
+import appendDefault from "BaseTelemetryChannel.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 appendDefault;

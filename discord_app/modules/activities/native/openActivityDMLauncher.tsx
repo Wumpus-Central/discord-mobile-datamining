@@ -1,6 +1,6 @@
 // discord_app/modules/activities/native/openActivityDMLauncher.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
 
 const require = arg1;
 function _openActivityDMLauncher() {

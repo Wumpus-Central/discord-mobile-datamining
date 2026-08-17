@@ -1,7 +1,7 @@
 // discord_app/modules/applications/useGetOrFetchApplicationBatched.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4478 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "ApplicationStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let set = arg1;
 class ApplicationFetchManager {

@@ -1,9 +1,9 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 10046 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../native_menu/native/NativeMenuStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../utils/PlatformUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_6 = set.isAndroid();

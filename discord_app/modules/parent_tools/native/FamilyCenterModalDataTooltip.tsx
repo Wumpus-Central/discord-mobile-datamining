@@ -1,15 +1,15 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import Modal from "Modal" /* 11115 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
+import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { ModalContent } from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import { ModalFooter } from "../../../design/components/Modal/native/ModalFooter.native.tsx";

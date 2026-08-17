@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/UserProfileEditForm.tsx
-import registerAssetDefault from "registerAsset" /* 14004 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 8936 */;
-import closure_7 from "zustandStore" /* 9537 */;
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import ME from "ME" /* 676 */;
-import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES" /* 685 */;
-import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement" /* 14003 */;
-import jsxProd from "jsxProd" /* 21 */;
+import registerAssetDefault from "../../../../_runtime/14004_registerAsset.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../badges/BadgeDirectoryStore.tsx";
+import closure_7 from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import { FLOATING_UPSELL_HEIGHT } from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { ProfileCustomizationScrollPositions as closure_11 } from "../../user_settings/UserSettingsConstants.tsx";
+import { UserProfileEditAutoFocusElement as closure_12 } from "../../user_settings/profiles/native/UserProfileEditConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function EditUserProfileBanner(user) {

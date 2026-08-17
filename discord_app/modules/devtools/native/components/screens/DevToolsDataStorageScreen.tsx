@@ -1,15 +1,15 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import databaseNameDefault from "databaseName" /* 1971 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PersistedStore } from "getClass" /* 590 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import databaseNameDefault from "../../../../app_database/system/DatabaseManager.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PersistedStore } from "../../../../../../discord_common/js/packages/flux/PersistedStore.tsx";
+import closure_7 from "../../../../../stores/AuthenticationStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import { createStandardNavigationFactories } from "../../../../../../_runtime/01501_createStandardNavigationFactories.js";
 import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 

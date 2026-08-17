@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useDisplayableBoardWidgets.tsx
-import toSubmission from "toSubmission" /* 5380 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 12296 */;
-import closure_3 from "noop" /* 19 */;
+import toSubmission from "../UserProfileApplicationWidgetTypes.tsx";
+import useUserProfileWidgetsDefault from "useUserProfileWidgets.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function isNonEmptyBoardWidget(games) {

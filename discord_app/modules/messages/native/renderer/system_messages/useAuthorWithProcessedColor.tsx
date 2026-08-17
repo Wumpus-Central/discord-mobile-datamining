@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
-import processColorStrings from "processColorStrings" /* 8186 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
+import processColorStrings from "../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");

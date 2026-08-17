@@ -1,5 +1,5 @@
 // discord_common/js/shared/MFA.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function finishMFACheck() {

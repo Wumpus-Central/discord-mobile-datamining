@@ -1,6 +1,6 @@
 // discord_app/modules/fastest_list/utils/getFastestListVisibleItemsWithErrorChecking.native.tsx
-import set from "set" /* 2 */;
-import logFastestListError from "logFastestListError" /* 8640 */;
+import set from "../../../../_runtime/00002_set.js";
+import logFastestListError from "FastestListLogger.native.tsx";
 
 const result = set.fileFinishedImporting("modules/fastest_list/utils/getFastestListVisibleItemsWithErrorChecking.native.tsx");
 

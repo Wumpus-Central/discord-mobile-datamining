@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalTimer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { Easing, Easing as Easing2, Easing as Easing3 } from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import { Easing, Easing as Easing2, Easing as Easing3 } from "../../../reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

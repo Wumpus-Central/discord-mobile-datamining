@@ -1,15 +1,15 @@
 // discord_app/modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { setDismissalTimeForUser } from "useSharedSpacesWarningStore" /* 13283 */;
-import GdmWarningMedium from "GdmWarningMedium" /* 13286 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import { setDismissalTimeForUser } from "../SharedSpacesWarningStore.tsx";
+import GdmWarningMedium from "../SharedSpaceWarningConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

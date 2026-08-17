@@ -1,14 +1,14 @@
 // discord_app/modules/application_commands/ApplicationCommandQueryApi.tsx
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import ScoreMethod from "ScoreMethod" /* 8456 */;
-import getOptionValue from "getOptionValue" /* 8458 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
-import closure_10 from "getIndexKey" /* 8448 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
-import { NOOP } from "ME" /* 676 */;
+import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
+import ScoreMethod from "ApplicationCommandQueryTypes.tsx";
+import getOptionValue from "ApplicationCommandBuiltIns.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/GuildStore.tsx";
+import getIndexKey from "ApplicationCommandIndexStore.tsx";
+import closure_10 from "ApplicationCommandIndexStore.tsx";
+import { BuiltInSectionId } from "ApplicationCommandConstants.tsx";
+import { NOOP } from "../../Constants.tsx";
 import { buildCommand } from "ApplicationCommandUtils.tsx";
 
 require = arg1;

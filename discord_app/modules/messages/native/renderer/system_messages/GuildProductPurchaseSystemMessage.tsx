@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_3 from "hasFlag" /* 4031 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { MessageTypes } from "ME" /* 676 */;
+import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
+import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import closure_3 from "../../../../../records/MessageRecord.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import { MessageTypes } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");

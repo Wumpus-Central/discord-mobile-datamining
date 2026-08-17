@@ -1,12 +1,12 @@
 // discord_app/actions/SelectedChannelActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 4976 */;
-import disconnectRemoteAll from "disconnectRemote" /* 9845 */;
-import closure_4 from "set" /* 4540 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import transitionTo from "../modules/routing/router_utils.tsx";
+import selectVoiceChannelAdditional from "SelectedChannelActionCreatorsAdditional.native.tsx";
+import disconnectRemoteAll from "../modules/game_console/GameConsoleActionCreators.tsx";
+import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_5 from "../stores/ChannelStore.tsx";
+import closure_6 from "../stores/MediaEngineStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 ({ ME: error, PopoutWindowKeys, Routes: closure_8 } = ME);

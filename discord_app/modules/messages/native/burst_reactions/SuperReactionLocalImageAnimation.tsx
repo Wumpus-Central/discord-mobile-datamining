@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx
-import noopAll from "noop" /* 19 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7574 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import _generateAnimationSource from "BurstReactionEffectUtils.tsx";
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

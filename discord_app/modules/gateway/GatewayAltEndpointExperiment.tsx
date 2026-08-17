@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/GatewayAltEndpointExperiment.tsx
-import set from "set" /* 2 */;
-import USE_ALT_GATEWAY_KEY from "USE_ALT_GATEWAY_KEY" /* 13918 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import USE_ALT_GATEWAY_KEY from "GatewayAltEndpointCache.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { enableAltGateway: false } };
 obj[2] = { enableAltGateway: true };

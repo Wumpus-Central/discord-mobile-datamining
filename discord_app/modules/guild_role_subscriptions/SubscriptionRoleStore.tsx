@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/SubscriptionRoleStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
-import isSubscriptionRole from "isSubscriptionRole" /* 4012 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
+import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
+import isSubscriptionRole from "PremiumRoleUtils.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../stores/GuildRoleStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function computeRolesForGuild(guildId) {
   const currentUser = authStore.getCurrentUser();

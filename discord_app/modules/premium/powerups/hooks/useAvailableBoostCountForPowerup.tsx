@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../GuildPowerupsStore.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 
 const require = arg1;
 ({ GuildPowerupType: closure_6, POWERUPS_INCLUDED_IN_LEVEL: error, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = BoostedGuildTiers);

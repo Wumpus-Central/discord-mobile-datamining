@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/UserSettingsProtoStore.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import create from "create" /* 1306 */;
-import now from "now" /* 1336 */;
-import create2 from "create" /* 1341 */;
-import b64ToProto from "b64ToProto" /* 1342 */;
-import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1343 */;
-import resolveDefaultGuildThemePreference from "resolveDefaultGuildThemePreference" /* 1344 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import now from "../../../discord_common/js/packages/protos/google/protobuf/timestamp.tsx";
+import create2 from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import b64ToProto from "UserSettingsUtils.tsx";
+import MAX_FAVORITESDefault from "UserSettingsMigrationsByType.tsx";
+import resolveDefaultGuildThemePreference from "GuildThemeSourcePreferenceUtils.tsx";
+import MAX_FAVORITES from "UserSettingsConstants.tsx";
 
 function handleConnectionClosedOrResumed() {
   const values = Object.values(closure_7);

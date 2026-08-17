@@ -1,7 +1,7 @@
 // discord_app/modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/SelectedGuildStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../DismissibleContentUnsafeUtils.tsx";
 

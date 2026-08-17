@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/server/commands/application.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import isTestModeForApplication from "isTestModeForApplication" /* 7871 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 13838 */;
-import closure_3 from "addApplication" /* 4478 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import isTestModeForApplication from "../../../game_store/TestModeUtils.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import getCurrentEmbeddedActivityChannelDefault from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import closure_3 from "../../../applications/ApplicationStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ ApplicationFlags: c4, Endpoints: c5, RPCCommands, RPCErrors: closure_6 } = ME);

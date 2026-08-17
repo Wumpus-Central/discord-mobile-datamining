@@ -1,13 +1,13 @@
 // discord_common/js/packages/flux/index.tsx
-import set from "set" /* 2 */;
-import initialize2 from "initialize" /* 591 */;
-import loggerDefault from "logger" /* 593 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import attach from "attach" /* 648 */;
-import connectStoresDefault from "connectStores" /* 649 */;
-import setDisplayName from "setDisplayName" /* 650 */;
-import getClass from "getClass" /* 590 */;
-import areStatesEqual from "areStatesEqual" /* 642 */;
+import set from "../../../../_runtime/00002_set.js";
+import initialize2 from "Store.tsx";
+import loggerDefault from "Emitter.tsx";
+import defaultAreStatesEqual from "useStateFromStores.tsx";
+import attach from "BatchedStoreListener.tsx";
+import connectStoresDefault from "connectStores.tsx";
+import setDisplayName from "Dispatcher.tsx";
+import getClass from "PersistedStore.tsx";
+import areStatesEqual from "createFetchStore.tsx";
 
 function initialize() {
   Store.initialize();

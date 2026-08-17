@@ -1,12 +1,12 @@
 // discord_app/modules/collectibles/profile_frames/native/ProfileFrame.tsx
-import OverrideProfileFrameLayerDefault from "OverrideProfileFrameLayer" /* 8968 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useFramePreviewOverrideStore as closure_4 } from "measure" /* 8947 */;
-import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import OverrideProfileFrameLayerDefault from "tooling/FramePreviewOverrideFrame.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useFramePreviewOverrideStore as closure_4 } from "tooling/FramePreviewOverrideStore.tsx";
+import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "ProfileFrameConstants.tsx";
+import { UserProfileThemeTypes } from "../../../user_profile/native/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 function ProfileFrameLayer(skuId) {
   const layer = skuId.layer;

@@ -1,21 +1,21 @@
 // discord_app/utils/AnalyticsUtils.tsx
-import reportAll from "report" /* 7 */;
-import v1 from "v1" /* 514 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 13568 */;
-import MEAll from "ME" /* 13571 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import withEqualityFn from "withEqualityFn" /* 699 */;
-import closure_9 from "refreshSourceMapCookie" /* 706 */;
-import ME from "ME" /* 676 */;
-import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags" /* 13570 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
-import importAllResult from "noop" /* 19 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import importAllResult1 from "encodeProperties" /* 503 */;
+import reportAll from "../modules/debug/LogAggregator.tsx";
+import v1 from "../../_runtime/00514_v1.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import _modDef1208 from "SentryUtils.native.tsx";
+import getHermesInstrumentedStatsSummaryDefault from "ProcessUtils.native.tsx";
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "../modules/errors/CommonSentryInitUtils.tsx";
+import MEAll from "AnalyticsSchema.tsx";
+import closure_6 from "../../_runtime/metro/00109__objectWithoutProperties.js";
+import withEqualityFn from "../modules/app_analytics/ImpressionStore.tsx";
+import closure_9 from "../stores/DeveloperOptionsStore.tsx";
+import ME from "../Constants.tsx";
+import { AccessibilityFeatureFlags } from "../modules/a11y/AccessibilityConstants.tsx";
+import { ApplicationTypes } from "../modules/applications/ApplicationConstants.tsx";
+import isBlockedDomain from "../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import importAllResult from "../../_runtime/00019_noop.js";
+import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import importAllResult1 from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
 require = arg1;
 function expandEventProperties(arg0) {

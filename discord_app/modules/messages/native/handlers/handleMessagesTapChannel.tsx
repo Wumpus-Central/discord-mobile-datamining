@@ -1,16 +1,16 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapChannel.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { isGuildVocalChannelType } from "createChannelRecord" /* 1395 */;
-import { isGuildLurker } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 5286 */;
-import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { isGuildVocalChannelType } from "../../../../records/ChannelRecord.tsx";
+import { isGuildLurker } from "../../../../records/GuildRecord.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../../stores/GuildRoleStore.tsx";
+import closure_10 from "../../../../stores/GuildStore.tsx";
+import closure_11 from "../../../../stores/PermissionStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import { GuildOnboardingTab } from "../../../guild_onboarding/GuildOnboardingPromptsConstants.tsx";
+import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "../../../guild_onboarding/native/GuildOnboardingConstants.tsx";
 
 const require = arg1;
 function maybeStartLurking() {

@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage3 from "Storage" /* 595 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SystemThemeState2 from "SystemThemeState" /* 1305 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import MAX_FAVORITES from "UserSettingsConstants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import SystemThemeState2 from "ThemeConstants.tsx";
+import ExpressionPickerViewType from "../expression_picker/ExpressionPickerConstants.tsx";
+import getSystemThemeDefault from "../themes/getSystemTheme.native.tsx";
+import ME from "../../Constants.tsx";
 
 const SystemThemeState = SystemThemeState2.SystemThemeState;
 const ListDensityMode = MAX_FAVORITES.ListDensityMode;

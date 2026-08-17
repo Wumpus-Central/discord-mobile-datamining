@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/useIsUserProfileObfuscated.tsx
-import closure_2 from "createUserWidgetFromServer" /* 5365 */;
+import closure_2 from "../UserProfileStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

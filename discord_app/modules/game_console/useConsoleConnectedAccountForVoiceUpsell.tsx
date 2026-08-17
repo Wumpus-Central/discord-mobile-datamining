@@ -1,9 +1,9 @@
 // discord_app/modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx
-import closure_3 from "set" /* 5221 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
-import closure_5 from "set" /* 4540 */;
-import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE" /* 9763 */;
-import { ActivityTypes } from "ME" /* 676 */;
+import closure_3 from "../../stores/ConnectedAccountsStore.tsx";
+import closure_4 from "../../stores/SelfPresenceStore.tsx";
+import closure_5 from "GameConsoleStore.tsx";
+import { CONSOLE_VOICE_PLATFORMS } from "GameConsoleConstants.tsx";
+import { ActivityTypes } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");

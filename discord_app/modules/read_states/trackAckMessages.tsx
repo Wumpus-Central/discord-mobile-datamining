@@ -1,10 +1,10 @@
 // discord_app/modules/read_states/trackAckMessages.tsx
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildReadStateStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/UserGuildSettingsStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");

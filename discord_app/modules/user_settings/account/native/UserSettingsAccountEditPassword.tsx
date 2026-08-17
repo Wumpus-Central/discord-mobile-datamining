@@ -1,21 +1,21 @@
 // discord_app/modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import TextInput from "TextInput" /* 8071 */;
-import saveProfileAndAccountRequestAll from "saveProfileAndAccountRequest" /* 8620 */;
-import handleOpenEmailVerificationDefault from "handleOpenEmailVerification" /* 8624 */;
-import registerAssetDefault from "registerAsset" /* 14135 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleUpdateUser" /* 1384 */;
-import closure_8 from "handleFormClose" /* 7361 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import saveProfileAndAccountRequestAll from "../../../../actions/UserSettingsAccountActionCreators.tsx";
+import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
+import registerAssetDefault from "../../../../../_runtime/14135_registerAsset.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../auth/LoginRequiredActionStore.tsx";
+import closure_8 from "../../../../stores/UserSettingsAccountStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);

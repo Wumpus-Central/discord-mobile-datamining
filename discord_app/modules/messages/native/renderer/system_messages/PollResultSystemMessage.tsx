@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 1925 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8261 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import set2 from "../../../../emojis/EmojiConstants.tsx";
+import parsePollResultSystemMessageEmbedDefault from "../../../../polls/parsePollResultSystemMessageEmbed.tsx";
 
 const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");

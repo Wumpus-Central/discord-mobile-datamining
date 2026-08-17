@@ -1,6 +1,6 @@
 // discord_app/modules/expression_picker/native/useExpressionPickerInsets.tsx
-import closure_2 from "noop" /* 19 */;
-import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { EXPRESSION_FOOTER_HEIGHT } from "../../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 

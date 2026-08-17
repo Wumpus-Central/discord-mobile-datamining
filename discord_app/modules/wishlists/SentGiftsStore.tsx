@@ -1,7 +1,7 @@
 // discord_app/modules/wishlists/SentGiftsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "_slicedToArray" /* 32 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 let closure_1 = { sentGifts: {} };
 const PersistedStore = initializeDefault.PersistedStore;

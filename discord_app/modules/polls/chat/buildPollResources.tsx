@@ -1,7 +1,7 @@
 // discord_app/modules/polls/chat/buildPollResources.tsx
-import set from "set" /* 2 */;
-import buildPlatformPollResources from "buildPlatformPollResources" /* 8432 */;
-import apply from "apply" /* 12 */;
+import set from "../../../../_runtime/00002_set.js";
+import buildPlatformPollResources from "buildPlatformPollResources.native.tsx";
+import apply from "../../../../_runtime/00012_apply.js";
 
 const memoizeResult = apply.memoize(function buildPollResources(arg0) {
   ({ theme, layoutType } = arg0);

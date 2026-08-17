@@ -1,8 +1,8 @@
 // discord_app/modules/guild_action_sheet/native/openGuildActionSheet.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import getFavoritesAwareGuildName from "../../favorites/FavoritesUtils.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ AnalyticEvents: c3, GuildFeatures: c4 } = ME);
 const result = set.fileFinishedImporting("modules/guild_action_sheet/native/openGuildActionSheet.tsx");

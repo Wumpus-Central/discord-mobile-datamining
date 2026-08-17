@@ -1,7 +1,7 @@
 // discord_app/modules/routing/convertRouteToNavigation.native.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
 
 const Routes = ME.Routes;
 let result = set.fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/themes/native/useNativeThemeUpdater.tsx
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../experiments/MobileVisualRefreshExperiment.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_settings/ThemeStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");

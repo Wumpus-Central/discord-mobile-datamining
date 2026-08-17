@@ -1,14 +1,14 @@
 // discord_app/modules/collectibles/native/FeedBlock.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "hasConsented" /* 5258 */;
-import { CollectiblesMobileShopScreen as closure_9 } from "items" /* 678 */;
-import { Consents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../user_settings/ThemeStore.tsx";
+import closure_8 from "../../../stores/ConsentStore.tsx";
+import { CollectiblesMobileShopScreen as closure_9 } from "../CollectiblesShopConstants.tsx";
+import { Consents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);

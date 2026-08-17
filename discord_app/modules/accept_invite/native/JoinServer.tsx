@@ -1,15 +1,15 @@
 // discord_app/modules/accept_invite/native/JoinServer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4734 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import _modDef8575 from "module_8575" /* 8575 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import _modDef8575 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import NUXGuildTemplatesAnalytics from "../../create_guild/native/CreateGuildConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class OrSeparator {

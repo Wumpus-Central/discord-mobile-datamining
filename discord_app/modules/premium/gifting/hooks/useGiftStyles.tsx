@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/hooks/useGiftStyles.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../../../_runtime/00002_set.js";
+import GuildFeatures from "../../PremiumConstants.tsx";
 
 const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");

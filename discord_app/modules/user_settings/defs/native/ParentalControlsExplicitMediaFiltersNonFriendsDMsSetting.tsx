@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import redactionSettingToRenderedString from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import closure_2 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function useObscuredContentNonFriendsDmSettingValue() {

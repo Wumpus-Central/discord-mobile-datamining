@@ -1,23 +1,23 @@
 // discord_app/modules/channel/native/ChannelLongPressActionSheet.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
-import closure_6 from "initialize" /* 5268 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "handleThreadCreateOrUpdate" /* 4969 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_13 from "incrementVersion" /* 5270 */;
-import closure_14 from "ensureGuildLoaded" /* 1391 */;
-import closure_15 from "handleConnectionOpen" /* 5271 */;
-import closure_16 from "createGuildRecordFromRust" /* 1910 */;
-import closure_17 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_18 from "markAllUserIdListsStale" /* 4030 */;
-import closure_19 from "handleConnectionOpen" /* 1979 */;
-import closure_20 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_21 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ChannelDetailsNavigatorScreens as closure_31 } from "ChannelDetailsNavigatorScreens" /* 9922 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { SafetyWarningTypes } from "../../self_mod/ChannelSafetyWarningsStore.tsx";
+import closure_6 from "../../spoiler_channels/ChannelSpoilerAgreeStore.tsx";
+import closure_7 from "../../stage_channels/StageInstanceStore.tsx";
+import closure_8 from "../../threads/ActiveThreadsStore.tsx";
+import createChannelRecord from "../../../records/ChannelRecord.tsx";
+import closure_13 from "../../../stores/CategoryCollapseStore.tsx";
+import closure_14 from "../../../stores/ChannelStore.tsx";
+import closure_15 from "../../../stores/CollapsedVoiceChannelStore.tsx";
+import closure_16 from "../../../stores/GuildStore.tsx";
+import closure_17 from "../../../stores/PermissionStore.tsx";
+import closure_18 from "../../../stores/RelationshipStore.tsx";
+import closure_19 from "../../../stores/SelectedChannelStore.tsx";
+import closure_20 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_21 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { ChannelDetailsNavigatorScreens as closure_31 } from "../../main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function handleVoiceOrStageChannelConnectPress() {

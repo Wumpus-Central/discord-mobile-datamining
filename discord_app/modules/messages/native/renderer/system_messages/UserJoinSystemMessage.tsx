@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import getSystemMessageUserJoinMobileDefault from "getSystemMessageUserJoinMobile" /* 8209 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import { SystemChannelFlags } from "ME" /* 676 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import getSystemMessageUserJoinMobileDefault from "../../../../../utils/SystemMessageUtils.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../stores/GuildStore.tsx";
+import { SystemChannelFlags } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");

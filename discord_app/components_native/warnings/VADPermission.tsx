@@ -1,8 +1,8 @@
 // discord_app/components_native/warnings/VADPermission.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import componentDidMountDefault from "../common/Alert.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 const Component = importAllResult.Component;

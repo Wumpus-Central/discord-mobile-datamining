@@ -1,16 +1,16 @@
 // discord_app/modules/stage_channels/native/StageChannelAgeVerificationNotice.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import Text2 from "Text" /* 4734 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 4991 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import WarningIcon2 from "WarningIcon" /* 8078 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import Text2 from "../../../design/components/Text/native/Text.tsx";
+import useIsStageSpeakingDisabledForCurrentUser from "../useStageSpeakingForCurrentUser.tsx";
+import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
+import WarningIcon2 from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {

@@ -1,9 +1,9 @@
 // discord_app/modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import QuestsExperimentLocations2 from "QuestsExperimentLocations" /* 6716 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import apexExperimentDefault from "apexExperiment" /* 10706 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import QuestsExperimentLocations2 from "../QuestConstants.tsx";
+import getApplicationIdsByTaskTypes from "QuestTaskUtils.tsx";
+import apexExperimentDefault from "../experiments/VQRemainingTimeTruncationExperiment.tsx";
 
 function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
   let obj = getApplicationIdsByTaskTypes;

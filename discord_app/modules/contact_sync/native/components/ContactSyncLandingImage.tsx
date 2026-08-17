@@ -1,10 +1,10 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingImage.tsx
-import noopAll from "noop" /* 19 */;
-import registerAssetDefault from "registerAsset" /* 11863 */;
-import registerAssetDefault2 from "registerAsset" /* 11864 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import registerAssetDefault from "../../../../../_runtime/11863_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/11864_registerAsset.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);

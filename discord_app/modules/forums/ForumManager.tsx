@@ -1,8 +1,8 @@
 // discord_app/modules/forums/ForumManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import loadForumPostData from "loadForumPostData" /* 7269 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import { isStaticChannelRoute } from "set" /* 1398 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import loadForumPostData from "ForumPostDataLoader.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
 initializeDefault;

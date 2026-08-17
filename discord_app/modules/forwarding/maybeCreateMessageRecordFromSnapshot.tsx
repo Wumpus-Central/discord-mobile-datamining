@@ -1,6 +1,6 @@
 // discord_app/modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx
-import set from "set" /* 2 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
+import set from "../../../_runtime/00002_set.js";
+import isForwardMessageDefault from "isForwardMessage.tsx";
 
 const result = set.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 

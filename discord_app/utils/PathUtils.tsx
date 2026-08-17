@@ -1,5 +1,5 @@
 // discord_app/utils/PathUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("utils/PathUtils.tsx");
 

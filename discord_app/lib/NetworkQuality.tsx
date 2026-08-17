@@ -1,7 +1,7 @@
 // discord_app/lib/NetworkQuality.tsx
-import sleep from "sleep" /* 4548 */;
-import closure_2 from "handleConnectionInfoChange" /* 4564 */;
-import ME from "ME" /* 676 */;
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import closure_2 from "../stores/NetworkStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 ({ NetworkConnectionTypes: c3, NetworkConnectionSpeeds: c4 } = ME);

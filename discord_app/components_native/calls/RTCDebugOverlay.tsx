@@ -1,22 +1,22 @@
 // discord_app/components_native/calls/RTCDebugOverlay.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Button2 from "Button" /* 4745 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "updateStats" /* 12596 */;
-import closure_11 from "initialize" /* 4558 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Button from "../../design/void/native.tsx";
+import Button2 from "../../design/components/Button/native/Button.native.tsx";
+import SafeAreaPaddingView from "../common/SafeAreaView.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import closure_9 from "../../stores/RTCConnectionStore.tsx";
+import closure_10 from "../../stores/RTCDebugStore.tsx";
+import closure_11 from "../../stores/StreamRTCConnectionStore.tsx";
+import closure_12 from "../../stores/UserStore.tsx";
+import { MediaEngineContextTypes } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../utils/ColorUtils.tsx";
 
 require = arg1;
 function Text(arg0) {

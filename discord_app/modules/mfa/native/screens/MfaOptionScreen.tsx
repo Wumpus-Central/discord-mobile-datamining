@@ -1,13 +1,13 @@
 // discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
-import BackgroundImageDefault from "BackgroundImage" /* 8612 */;
-import _modDef15125 from "module_15125" /* 15125 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
+import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
+import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
+import _modDef15125 from "../MfaScreenUtils.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const ScrollView = get_ActivityIndicator.ScrollView;
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);

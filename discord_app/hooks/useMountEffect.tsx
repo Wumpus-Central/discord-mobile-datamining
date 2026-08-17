@@ -1,7 +1,7 @@
 // discord_app/hooks/useMountEffect.tsx
-import set from "set" /* 2 */;
-import useMountEffect from "useMountEffect" /* 4762 */;
-import useMountEffectDefault from "useMountEffect" /* 4762 */;
+import set from "../../_runtime/00002_set.js";
+import useMountEffect from "../../discord_common/js/shared/hooks/useMountEffect.tsx";
+import useMountEffectDefault from "../../discord_common/js/shared/hooks/useMountEffect.tsx";
 
 const result = set.fileFinishedImporting("hooks/useMountEffect.tsx");
 

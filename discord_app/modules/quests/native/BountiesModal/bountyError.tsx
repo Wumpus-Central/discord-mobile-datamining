@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import registerAssetDefault from "registerAsset" /* 8555 */;
-import BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS from "BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS" /* 14374 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
+import registerAssetDefault from "../../../../../_runtime/08555_registerAsset.js";
+import BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS from "BountiesModalConstants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 let closure_3 = BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
 let set = new Set([260021]);

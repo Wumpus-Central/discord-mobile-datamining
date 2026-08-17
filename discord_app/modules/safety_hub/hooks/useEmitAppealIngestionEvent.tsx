@@ -1,8 +1,8 @@
 // discord_app/modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 5438 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../SafetyHubStore.tsx";
+import { SafetyHubAnalyticsActionSource as closure_5 } from "../SafetyHubConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: error } = ME);

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "generateOldThreadCutoff" /* 4772 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import closure_2 from "../../../../stores/ReadStateStore.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 

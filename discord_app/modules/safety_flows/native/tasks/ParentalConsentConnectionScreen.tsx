@@ -1,14 +1,14 @@
 // discord_app/modules/safety_flows/native/tasks/ParentalConsentConnectionScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "freshTeenActivityWithMap" /* 5296 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_9 } from "items" /* 5297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../parent_tools/FamilyCenterStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_9 } from "../../../parent_tools/FamilyCenterConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

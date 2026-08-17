@@ -1,11 +1,11 @@
 // discord_app/modules/spotify/SpotifyUtils.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4504 */;
-import closure_5 from "isProtocolRegistered" /* 7244 */;
-import closure_6 from "upsertAccount" /* 7241 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../game_detection/RunningGameStore.native.tsx";
+import closure_5 from "SpotifyProtocolStore.tsx";
+import closure_6 from "SpotifyStore.tsx";
+import SPOTIFY_APP_PROTOCOL from "SpotifyConstants.tsx";
+import { PlatformTypes } from "../../Constants.tsx";
 
 const require = arg1;
 function asString(str) {

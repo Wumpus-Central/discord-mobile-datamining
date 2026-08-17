@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx
-import ShieldUserIcon from "ShieldUserIcon" /* 8859 */;
-import stylesDefault from "styles" /* 11357 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "getRoleMemberCount" /* 6928 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_8 from "createGuildRoleRecordFromRust" /* 1983 */;
-import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ShieldUserIcon from "../../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
+import stylesDefault from "../../base_components/AppLauncherOptionIcon.tsx";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../../guild_settings/GuildRoleMemberCountStore.tsx";
+import { isEveryoneRole } from "../../../../../records/GuildRoleRecord.tsx";
+import closure_8 from "../../../../../stores/GuildRoleStore.tsx";
+import { DEFAULT_ROLE_COLOR_HEX } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class RoleIcon {

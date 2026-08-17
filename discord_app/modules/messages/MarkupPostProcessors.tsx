@@ -1,9 +1,9 @@
 // discord_app/modules/messages/MarkupPostProcessors.tsx
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
-import getEffectiveVideoProvider from "getEffectiveVideoProvider" /* 4821 */;
-import useIsUserProfileEmbedRenderingEnabled from "useIsUserProfileEmbedRenderingEnabled" /* 8317 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
+import getEffectiveVideoProvider from "../../utils/EmbedUtils.tsx";
+import useIsUserProfileEmbedRenderingEnabled from "../user_profile/experiments/UserProfileEmbedRenderingExperiment.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 
 function checkSpoilerEmbeds(ast, inline) {

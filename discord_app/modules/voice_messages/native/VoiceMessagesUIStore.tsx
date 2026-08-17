@@ -1,10 +1,10 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesUIStore.tsx
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 705 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11148 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
+import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
+import VoiceMessageAnimationState from "../VoiceMessageConstants.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);

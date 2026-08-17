@@ -1,20 +1,20 @@
 // discord_app/modules/accept_invite/native/InviteError.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import combinedDefault from "combined" /* 1993 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import getDescriptiveInviteError from "getDescriptiveInviteError" /* 11902 */;
-import registerAssetDefault from "registerAsset" /* 11903 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import getDescriptiveInviteError from "../../../utils/InviteErrorUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/11903_registerAsset.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function InviteErrorBase(invite) {

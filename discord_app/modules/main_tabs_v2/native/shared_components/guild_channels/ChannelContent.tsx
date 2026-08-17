@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx
-import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15380 */;
-import _modDef15885 from "module_15885" /* 15885 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import isRoleRequiredDefault from "../../../../channel/isRoleRequired.tsx";
+import getLayoutStyles from "layouts/ChannelListLayout.tsx";
+import SubscriptionGatedChannelIconDefault from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
+import _modDef15885 from "ChannelTitle.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UnreadSetting } from "../../../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function ChannelContentComponent(arg0) {

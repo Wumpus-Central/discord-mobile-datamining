@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import set from "../../../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 let closure_2 = set.isAndroid();

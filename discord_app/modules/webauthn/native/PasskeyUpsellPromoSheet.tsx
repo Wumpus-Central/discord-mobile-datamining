@@ -1,9 +1,9 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellPromoSheet.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

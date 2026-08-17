@@ -1,6 +1,6 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesUtils.tsx
-import set from "set" /* 2 */;
-import t from "t" /* 4486 */;
+import set from "../../../_runtime/00002_set.js";
+import t from "../../../_runtime/04486_t.js";
 
 const result = set.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 

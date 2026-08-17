@@ -1,5 +1,5 @@
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "../../../../lib/Record.tsx";
 
 toJSDefault;
 const obj = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };

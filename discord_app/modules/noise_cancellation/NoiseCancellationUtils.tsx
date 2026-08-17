@@ -1,7 +1,7 @@
 // discord_app/modules/noise_cancellation/NoiseCancellationUtils.tsx
-import initialize from "initialize" /* 589 */;
-import setDefault from "set" /* 12559 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "getEffectiveNoiseCancellation.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");

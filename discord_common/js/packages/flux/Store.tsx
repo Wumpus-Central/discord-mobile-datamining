@@ -1,7 +1,7 @@
 // discord_common/js/packages/flux/Store.tsx
-import set from "set" /* 2 */;
-import isTracingDefault from "isTracing" /* 10 */;
-import loggerDefault from "logger" /* 593 */;
+import set from "../../../../_runtime/00002_set.js";
+import isTracingDefault from "../app-start-performance/AppStartPerformance.tsx";
+import loggerDefault from "Emitter.tsx";
 
 let closure_4 = [];
 let c5 = false;

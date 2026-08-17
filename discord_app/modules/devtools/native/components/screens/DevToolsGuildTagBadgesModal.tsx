@@ -1,8 +1,8 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx
-import itemsDefault from "items" /* 15158 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import importAllResult from "noop" /* 19 */;
+import itemsDefault from "DevToolsGuildTagBadgesScreen.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../../_runtime/09931_createNativeStackNavigator.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;

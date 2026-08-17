@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/activityLaunchErrorUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7872 */;
-import { DevShelfFetchState } from "initialize" /* 7872 */;
-import { AbortCodes } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../DeveloperActivityShelfStore.tsx";
+import { DevShelfFetchState } from "../DeveloperActivityShelfStore.tsx";
+import { AbortCodes } from "../../../Constants.tsx";
 
 const require = arg1;
 function _getActivityLaunchErrorInfo() {

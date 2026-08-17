@@ -1,26 +1,26 @@
 // discord_app/modules/premium/native/PremiumTabBadge.tsx
-import noopAll from "noop" /* 19 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7625 */;
-import MarketingComponentType from "MarketingComponentType" /* 7931 */;
-import trackImpressionDefault from "trackImpression" /* 9177 */;
-import registerAssetDefault from "registerAsset" /* 14339 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4045 */;
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures" /* 1924 */;
-import { Gradients } from "items" /* 7403 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
+import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
+import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
+import trackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
+import registerAssetDefault from "../../../../_runtime/14339_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/billing/SubscriptionStore.tsx";
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "../PremiumConstants.tsx";
+import { Gradients } from "../../colors/native/ColorConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ThemedTabBadge(children) {

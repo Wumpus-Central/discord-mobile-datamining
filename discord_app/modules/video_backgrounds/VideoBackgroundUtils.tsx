@@ -1,11 +1,11 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import VideoFilterType from "VideoFilterType" /* 8381 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import VideoFilterType from "VideoBackgroundConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 function isAnimatedBackgroundOption(closure_0) {

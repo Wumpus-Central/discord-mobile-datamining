@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../../Constants.tsx";
 
 const require = arg1;
 function _requestAgeSignalChallenge() {

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyPagination.tsx
-import result2 from "result" /* 5091 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import result2 from "MemberSafetyElasticSearchQueryTypes.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
 
 require = arg1;
 let items = [12, 25, 50, 100];

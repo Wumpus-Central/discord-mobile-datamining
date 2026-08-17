@@ -1,17 +1,17 @@
 // discord_app/modules/polls/PollsActionCreators.tsx
-import setDefault from "set" /* 4827 */;
-import showVotesForAnswerAll from "showVotesForAnswer" /* 10884 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "processMessage" /* 5013 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_10 from "recomputeGuild" /* 4977 */;
-import closure_11 from "reinjectEphemerals" /* 4994 */;
-import closure_12 from "map" /* 4824 */;
-import useMessagePollInteractions from "useMessagePollInteractions" /* 8430 */;
-import ME from "ME" /* 676 */;
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import showVotesForAnswerAll from "PollInteractionUtils.native.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../replies/ReferencedMessageStore.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import { DraftType } from "../../stores/DraftStore.tsx";
+import closure_10 from "../../stores/GuildVerificationStore.tsx";
+import closure_11 from "../../stores/MessageStore.tsx";
+import closure_12 from "../../stores/UploadAttachmentStore.tsx";
+import useMessagePollInteractions from "PollsInteractionStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function getPollVoteEventProperties(arg0, arg1) {

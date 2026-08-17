@@ -1,10 +1,10 @@
 // discord_app/modules/premium/ReferralTrialStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _fetchReferralEligibleUsers from "_fetchReferralEligibleUsers" /* 7424 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { NOOP_NULL } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _fetchReferralEligibleUsers from "ReferralTrialActionCreators.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import { NOOP_NULL } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function emitChanges() {

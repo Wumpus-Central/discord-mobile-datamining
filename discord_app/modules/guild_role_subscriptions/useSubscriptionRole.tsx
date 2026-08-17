@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/useSubscriptionRole.tsx
-import closure_2 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_2 from "../../stores/GuildRoleStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useFetchListingsForGuild } from "GuildRoleSubscriptionsHooks.tsx";
 

@@ -1,9 +1,9 @@
 // discord_app/modules/messages/isNewMessageGroup.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import resetCache from "resetCache" /* 4063 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import setDefault from "../../utils/Durations.tsx";
+import resetCache from "../../utils/DateUtils.tsx";
+import isSystemMessageDefault from "isSystemMessage.tsx";
+import ME from "../../Constants.tsx";
 
 function isNewMessageGroup(isForumPost, content, hasFlag) {
   let type = hasFlag;

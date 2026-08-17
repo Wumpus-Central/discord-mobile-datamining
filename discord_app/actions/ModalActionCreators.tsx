@@ -1,10 +1,10 @@
 // discord_app/actions/ModalActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import uniqueIdDefault from "uniqueId" /* 5261 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 5262 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import coerceMainRoute from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import uniqueIdDefault from "../../_runtime/05261_uniqueId.js";
+import getDeprecatedModalDataDefault from "../utils/getDeprecatedModalData.tsx";
 import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 
 const AppContext = ME.AppContext;

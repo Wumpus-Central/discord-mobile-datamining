@@ -1,11 +1,11 @@
 // discord_app/modules/app_dms/useAppDMChatInputState.tsx
-import closure_3 from "noop" /* 19 */;
-import { useQueryState } from "getIndexKey" /* 8448 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "createUserWidgetFromServer" /* 5365 */;
-import closure_7 from "createExecutable" /* 4479 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import { useQueryState } from "../application_commands/ApplicationCommandIndexStore.tsx";
+import closure_5 from "../applications/ApplicationStore.tsx";
+import closure_6 from "../user_profile/UserProfileStore.tsx";
+import closure_7 from "../../records/ApplicationRecord.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
 
 const require = arg1;
 let items = [require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT, require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.MESSAGE, require("PermissionOverwriteType").ApplicationCommandType.USER];

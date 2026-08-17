@@ -1,7 +1,7 @@
 // discord_app/modules/opt_in_channels/useShowChannelOptInNotice.tsx
-import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { NULL_STRING_GUILD_ID } from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import closure_2 from "../../stores/UserGuildSettingsStore.tsx";
+import { NULL_STRING_GUILD_ID } from "../../Constants.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 
 const require = arg1;

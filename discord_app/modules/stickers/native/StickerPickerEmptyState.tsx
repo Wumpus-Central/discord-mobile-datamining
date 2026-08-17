@@ -1,15 +1,15 @@
 // discord_app/modules/stickers/native/StickerPickerEmptyState.tsx
-import StickerDefault from "Sticker" /* 10119 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10217 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "loadSavedGuildStickers" /* 6769 */;
-import { EMPTY_STATE_STICKERS } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import StickerDefault from "Sticker.tsx";
+import useStickerPackCategories from "../StickersHooks.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../StickersStore.tsx";
+import { EMPTY_STATE_STICKERS } from "../StickersConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";

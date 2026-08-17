@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/utils/VoicePanelControlUtils.tsx
-import set from "set" /* 2 */;
-import tDefault from "t" /* 11259 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import tDefault from "../../utils/roundToNearestPixel.tsx";
 
 function getDrawerSpec(height, top) {
   const diff = height - top;

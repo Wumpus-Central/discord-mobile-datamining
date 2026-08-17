@@ -1,16 +1,16 @@
 // discord_app/modules/message_previews/MessagePreviewManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 5038 */;
-import FetchStatus from "FetchStatus" /* 14666 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import { isThread } from "createChannelRecord" /* 1395 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "initialize" /* 13265 */;
-import { Endpoints } from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import FetchStatus from "RemoteFetchData.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../gateway/GatewayConnectionStore.tsx";
+import { isThread } from "../../records/ChannelRecord.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "MessagePreviewStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 let closure_11 = new timestampDefault("MessagePreviewManager");

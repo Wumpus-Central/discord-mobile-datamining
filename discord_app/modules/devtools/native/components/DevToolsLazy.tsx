@@ -1,12 +1,12 @@
 // discord_app/modules/devtools/native/components/DevToolsLazy.tsx
-import enforcingDefault from "enforcing" /* 13945 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "init" /* 7472 */;
-import closure_6 from "initialize" /* 7471 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import enforcingDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/DeveloperExperimentStore.tsx";
+import closure_6 from "../../DevToolsSettingsStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 if (set.isAndroid()) {

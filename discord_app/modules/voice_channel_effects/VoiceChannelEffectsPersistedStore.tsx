@@ -1,8 +1,8 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 7308 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
 
 let closure_1 = VoiceChannelEffectAnimationType.VoiceChannelEffectAnimationType;
 const PersistedStore = initializeDefault.PersistedStore;

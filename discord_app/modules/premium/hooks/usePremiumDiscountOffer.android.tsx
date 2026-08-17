@@ -1,7 +1,7 @@
 // discord_app/modules/premium/hooks/usePremiumDiscountOffer.android.tsx
-import useDiscountOfferDefault from "useDiscountOffer" /* 7626 */;
-import closure_3 from "updateProduct" /* 5319 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import useDiscountOfferDefault from "useDiscountOffer.tsx";
+import closure_3 from "../../../stores/native/IAPStore.android.tsx";
+import GuildFeatures from "../PremiumConstants.tsx";
 
 const require = arg1;
 ({ PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: c4, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: c5 } = GuildFeatures);

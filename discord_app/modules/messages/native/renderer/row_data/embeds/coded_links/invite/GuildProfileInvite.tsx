@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import ThemesDefault from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
+import closure_3 from "../../../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../../user_settings/LocaleStore.tsx";
+import { CodedLinkExtendedType } from "../CodedLinksConstants.tsx";
+import { GuildFeatures } from "../../../../../../../../Constants.tsx";
+import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");

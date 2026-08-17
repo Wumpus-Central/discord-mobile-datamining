@@ -1,6 +1,6 @@
 // discord_app/modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx
-import set from "set" /* 2 */;
-import isTablet from "isTablet" /* 4383 */;
+import set from "../../../_runtime/00002_set.js";
+import isTablet from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
 

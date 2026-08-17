@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function _updateClipsAllowVoiceRecording() {

@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "createExecutable" /* 4479 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../applications/ApplicationStore.tsx";
+import closure_5 from "../../../records/ApplicationRecord.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
 
 const require = arg1;
 function _getCachedOrFetchActivityApplicationForLaunch() {

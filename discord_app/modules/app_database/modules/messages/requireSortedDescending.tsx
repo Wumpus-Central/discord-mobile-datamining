@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/messages/requireSortedDescending.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import _modDef38 from "module_38" /* 38 */;
+import set from "../../../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 
 const result = set.fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
 

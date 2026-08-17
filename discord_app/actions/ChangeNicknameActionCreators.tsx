@@ -1,6 +1,6 @@
 // discord_app/actions/ChangeNicknameActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const Endpoints = ME.Endpoints;

@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileOverflowMenu.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../calls/ChannelRTCStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../stores/SelectedChannelStore.tsx";
+import { UserProfileThemeTypes } from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { ParticipantTypes } from "../../calls/CallConstants.tsx";
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "../../relationships/native/RestrictionConfirmationConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ AnalyticEvents: unpackModuleId, AVATAR_MAX_SIZE: closure_12, ChannelTypesSets: map1, NOOP: closure_14, RelationshipTypes: closure_15 } = ME);

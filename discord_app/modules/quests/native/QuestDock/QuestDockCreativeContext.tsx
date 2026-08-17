@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockCreativeContext.tsx
-import AdCreativeType from "AdCreativeType" /* 7469 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let context = importAllResult.createContext(null);

@@ -1,15 +1,15 @@
 // discord_app/modules/chat_input/native/useChatInputMaxHeight.tsx
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1895 */;
-import useKeyboardType from "useKeyboardType" /* 4239 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5444 */;
-import mutable from "mutable" /* 11154 */;
-import mutable2 from "mutable" /* 11155 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "subscribeToKeyboardUIStore" /* 1496 */;
-import { CHAT_INPUT_PILL_CONTENT_SIZE } from "TextAreaCta" /* 11149 */;
+import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
+import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import useSystemKeyboardHeight from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
+import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
+import useCustomKeyboardHeight from "../../keyboard/native/useCustomKeyboardHeight.tsx";
+import mutable from "../../keyboard/native/useKeyboardStateSharedValue.native.tsx";
+import mutable2 from "../../screen/useWindowDimensionsSharedValue.native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
+import { CHAT_INPUT_PILL_CONTENT_SIZE } from "ChatInputConstants.tsx";
 
 require = arg1;
 function getChatInputMaxHeight() {

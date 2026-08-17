@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/ExperimentEmbedUtils.tsx
-import set from "set" /* 2 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
-import getFirstEligibleUserExperimentDefault from "getFirstEligibleUserExperiment" /* 4365 */;
-import getExperimentVariantsForDevTools from "getExperimentVariantsForDevTools" /* 4366 */;
+import set from "../../../_runtime/00002_set.js";
+import trackExposureToExperiment from "ExperimentManager.tsx";
+import getFirstEligibleUserExperimentDefault from "../../utils/ExperimentUtils.tsx";
+import getExperimentVariantsForDevTools from "devtools/ExperimentDevToolsUtils.tsx";
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 const result = set.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/native/playInAppMessageSound.tsx
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import closure_2 from "DesktopNotificationTypes" /* 10015 */;
-import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled" /* 10039 */;
-import { InAppNotificationTypes } from "ME" /* 676 */;
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import closure_2 from "../../../stores/NotificationSettingsStore.tsx";
+import { isInAppMessageSoundsEnabled as closure_3 } from "InAppMessageSoundsStore.tsx";
+import { InAppNotificationTypes } from "../../../Constants.tsx";
 
 require = arg1;
 const message1 = "message1";

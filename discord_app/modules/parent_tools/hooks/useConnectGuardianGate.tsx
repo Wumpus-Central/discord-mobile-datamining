@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/hooks/useConnectGuardianGate.tsx
-import initialize from "initialize" /* 589 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../FamilyCenterStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");

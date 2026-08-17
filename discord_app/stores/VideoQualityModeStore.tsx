@@ -1,8 +1,8 @@
 // discord_app/stores/VideoQualityModeStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 const AUTO = ME.VideoQualityMode.AUTO;
 const Store = initializeDefault.Store;

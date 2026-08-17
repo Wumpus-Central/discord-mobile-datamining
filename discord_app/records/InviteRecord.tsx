@@ -1,6 +1,6 @@
 // discord_app/records/InviteRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3975 */;
+import toJSDefault from "../lib/Record.tsx";
+import tDefault from "../../_runtime/03975_t.js";
 
 toJSDefault;
 let InviteRecord;

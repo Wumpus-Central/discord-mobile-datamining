@@ -1,9 +1,9 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
-import v1 from "v1" /* 514 */;
-import formatDefault from "format" /* 669 */;
-import setDefault from "set" /* 12835 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
+import v1 from "../../../../_runtime/00514_v1.js";
+import formatDefault from "../../../../_runtime/00669_format.js";
+import setDefault from "getDescription.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];

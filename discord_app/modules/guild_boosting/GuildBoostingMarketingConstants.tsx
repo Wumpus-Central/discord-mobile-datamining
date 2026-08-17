@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/GuildBoostingMarketingConstants.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4266 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
+import getGuildTierFromGuild from "../../utils/GuildBoostingUtils.tsx";
+import ME from "../../Constants.tsx";
 
 const BoostedGuildTiers = ME.BoostedGuildTiers;
 let closure_3 = ME.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;

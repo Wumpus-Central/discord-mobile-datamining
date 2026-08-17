@@ -1,5 +1,5 @@
 // discord_app/modules/links/native/LinkingSchemas.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 obj = { bestbuy: obj };
 obj = { regex: /(?:^https?:\/\/)(?:www\.)?bestbuy\.com(?:\/(.*))?$/i, protocol: "bestbuy://" };

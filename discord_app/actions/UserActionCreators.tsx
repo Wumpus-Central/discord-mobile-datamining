@@ -1,15 +1,15 @@
 // discord_app/actions/UserActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ImpressionNames from "ImpressionNames" /* 663 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { Endpoints } from "ME" /* 676 */;
-import { PSEUDO_GUILD_IDS } from "INVITE" /* 677 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ImpressionNames from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../records/UserRecord.tsx";
+import closure_5 from "../stores/UserStore.tsx";
+import { Endpoints } from "../Constants.tsx";
+import { PSEUDO_GUILD_IDS } from "../modules/routing/RouteConstants.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

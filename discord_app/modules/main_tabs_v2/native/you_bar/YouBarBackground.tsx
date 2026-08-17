@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx
-import nDefault from "n" /* 689 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6352 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 14535 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import nDefault from "../../../../../_runtime/00689_n.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../../_runtime/06352__isNativeReflectConstruct.js";
+import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";

@@ -1,8 +1,8 @@
 // discord_app/modules/messages/CtaButtonUtils.tsx
-import initialize from "initialize" /* 589 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import shouldRenderReportFalsePositiveButton2 from "shouldRenderReportFalsePositiveButton" /* 11097 */;
-import closure_2 from "initialize" /* 4993 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
+import shouldRenderReportFalsePositiveButton2 from "../explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx";
+import closure_2 from "../parent_tools/FamilyCenterPendingConnectionStore.tsx";
 
 require = arg1;
 let obj = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen" };

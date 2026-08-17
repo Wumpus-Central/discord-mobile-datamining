@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/hooks/useProductDescription.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 function getBundleDescription(bundledProducts) {
   let flag = arg1;

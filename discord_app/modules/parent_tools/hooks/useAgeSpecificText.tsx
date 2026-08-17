@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/hooks/useAgeSpecificText.tsx
-import set from "set" /* 2 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
+import set from "../../../../_runtime/00002_set.js";
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup.tsx";
 
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useAgeSpecificText.tsx");
 

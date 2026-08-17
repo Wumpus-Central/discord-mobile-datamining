@@ -1,7 +1,7 @@
 // discord_app/design/components/AlertModal/native/useAlertStore.native.tsx
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4659 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import keys from "keys" /* 644 */;
+import markAccessibilityFocusDefault from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import keys from "../../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;

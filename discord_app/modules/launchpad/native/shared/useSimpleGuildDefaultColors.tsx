@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/shared/useSimpleGuildDefaultColors.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 let obj = { iconBackground: null, iconBackgroundBrand: null, iconStroke: null };
 obj = { color: ThemesDefault.colors.BACKGROUND_MOD_STRONG };

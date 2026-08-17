@@ -1,8 +1,8 @@
 // discord_app/modules/discord_md5/native/DiscordMd5Native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 1271 */;
-import fromBlobDefault from "fromBlob" /* 4858 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import fromBlobDefault from "../DiscordMd5.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 fromBlobDefault;

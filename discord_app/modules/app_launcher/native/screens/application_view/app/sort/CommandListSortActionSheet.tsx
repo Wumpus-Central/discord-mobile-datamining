@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import Background from "Background" /* 6950 */;
-import context from "context" /* 8101 */;
-import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 11329 */;
-import { CommandListSortOrder } from "CommandListSortOrder" /* 11313 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Background from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import context from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import ArrowsUpDownIcon from "../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
+import { CommandListSortOrder } from "../../../../../AppLauncherConstants.tsx";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,15 +1,15 @@
 // discord_app/modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4745 */;
-import PromoSheet from "PromoSheet" /* 8017 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12049 */;
-import metadataDefault from "metadata" /* 14974 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
+import metadataDefault from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

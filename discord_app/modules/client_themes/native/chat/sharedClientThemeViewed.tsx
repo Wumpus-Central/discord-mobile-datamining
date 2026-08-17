@@ -1,7 +1,7 @@
 // discord_app/modules/client_themes/native/chat/sharedClientThemeViewed.tsx
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import trackImpression from "trackImpression" /* 9177 */;
+import set from "../../../../../_runtime/00002_set.js";
+import encodeProperties from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import trackImpression from "../../../app_analytics/useTrackImpression.tsx";
 
 const result = set.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 

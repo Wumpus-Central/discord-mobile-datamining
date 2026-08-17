@@ -1,7 +1,7 @@
 // discord_app/modules/channel/ChannelVisibilityUtils.tsx
-import closure_0 from "handlePermissionsChange" /* 4970 */;
-import closure_1 from "handleConnectionOpen" /* 1979 */;
-import closure_2 from "handleConnectionOpen" /* 4197 */;
+import closure_0 from "../../stores/ChannelSectionStore.tsx";
+import closure_1 from "../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../stores/SelectedGuildStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/applications/utils/ApplicationInstallUtils.tsx
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
-import closure_2 from "getIndexKey" /* 8448 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
+import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import closure_2 from "../../application_commands/ApplicationCommandIndexStore.tsx";
+import { BuiltInSectionId } from "../../application_commands/ApplicationCommandConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");

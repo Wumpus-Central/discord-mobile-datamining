@@ -1,13 +1,13 @@
 // discord_app/modules/create_guild/native/components/AcceptInviteContainer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "updateInvite" /* 4359 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/InviteStore.tsx";
+import { GuildMemberFlags } from "../../../guild_member/GuildMemberConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { flex: { flex: 1 }, paddingContainer: null };

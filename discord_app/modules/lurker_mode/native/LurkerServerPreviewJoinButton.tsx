@@ -1,11 +1,11 @@
 // discord_app/modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "initialize" /* 4022 */;
-import { JoinGuildSources } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../LurkingStore.tsx";
+import { JoinGuildSources } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c5 = importAllResult;

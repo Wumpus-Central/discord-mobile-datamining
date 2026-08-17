@@ -1,19 +1,19 @@
 // discord_app/modules/user_profile/native/ChangeAvatarActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14008 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticsObjects } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import { AnalyticsObjects } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

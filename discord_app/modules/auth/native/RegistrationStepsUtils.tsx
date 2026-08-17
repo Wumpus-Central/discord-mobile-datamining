@@ -1,13 +1,13 @@
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
-import noopAll from "noop" /* 19 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isRateLimited" /* 14119 */;
-import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 5257 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
-import { AuthStates } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../unique_usernames/UniqueUsernamesStore.tsx";
+import { usePromoEmailConsentStore } from "../PromoEmailConsentStore.tsx";
+import useRegistrationUIStore from "RegistrationUIStore.tsx";
+import RegistrationTransitionActionTypes from "../RegistrationConstants.tsx";
+import { AuthStates } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function headerTitle() {

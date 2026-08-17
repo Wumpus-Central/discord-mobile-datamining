@@ -1,12 +1,12 @@
 // discord_app/modules/links/isAccessibleChannelOrThreadPath.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSubscriptionGated" /* 1981 */;
-import closure_5 from "shouldShowOnboarding" /* 6784 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1398 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../channel/GatedChannelStore.tsx";
+import closure_5 from "../guild_onboarding/GuildOnboardingStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildRoleStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../channel/ChannelConstants.tsx";
 
 const require = arg1;
 function _isAccessibleChannelOrThreadPath() {

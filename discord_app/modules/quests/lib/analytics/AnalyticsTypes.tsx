@@ -1,6 +1,6 @@
 // discord_app/modules/quests/lib/analytics/AnalyticsTypes.tsx
-import set from "set" /* 2 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
+import set from "../../../../../_runtime/00002_set.js";
+import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
 
 let closure_2 = Object.keys(QuestsVisibleMessagesChangedSource.QuestContent);
 const result = set.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");

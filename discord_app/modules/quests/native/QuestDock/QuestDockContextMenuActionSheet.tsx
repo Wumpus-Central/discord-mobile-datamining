@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import WreathIconDefault from "WreathIcon" /* 14455 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import WreathIconDefault from "WreathIcon.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { UserSettingsSections } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

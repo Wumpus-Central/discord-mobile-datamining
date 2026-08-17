@@ -1,11 +1,11 @@
 // discord_app/modules/frames/panel/native/FramePanelController.tsx
-import contextDefault from "context" /* 16260 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "map" /* 8708 */;
-import { asLaunched } from "FrameLayoutModes" /* 8709 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { jsx } from "jsxProd" /* 21 */;
+import contextDefault from "FramePanelStateContext.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../applications/ApplicationStore.tsx";
+import closure_5 from "../../FramesStore.tsx";
+import { asLaunched } from "../../FramesConstants.tsx";
+import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/forums/ForumActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 8517 */;
-import prototype from "prototype" /* 8518 */;
-import maybeMarkSeen from "maybeMarkSeen" /* 8519 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import markAnalyticsFeedItemSeen from "../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
+import prototype from "tracking/ForumChannelSeenManager.tsx";
+import maybeMarkSeen from "../../utils/AnalyticsFeedItemSeenManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 

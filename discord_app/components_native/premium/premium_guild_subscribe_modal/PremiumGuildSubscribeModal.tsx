@@ -1,14 +1,14 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4732 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import { PremiumGuildSubscribeModalScenes as closure_6 } from "PremiumGuildSubscribeModalScenes" /* 6712 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useBackPressHandlerDefault from "../../../modules/routing/native/useBackPressHandler.tsx";
+import NavigationStack from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../modules/user_settings/ThemeStore.tsx";
+import { PremiumGuildSubscribeModalScenes as closure_6 } from "PremiumGuildSubscribeConstants.tsx";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx");

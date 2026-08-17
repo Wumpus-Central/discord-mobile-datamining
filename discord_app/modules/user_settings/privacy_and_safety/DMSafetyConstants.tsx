@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx
-import set from "set" /* 2 */;
-import create from "create" /* 1306 */;
+import set from "../../../../_runtime/00002_set.js";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 const obj = { DISABLED: 0, [0]: "DISABLED", NON_FRIENDS: 1, [1]: "NON_FRIENDS", FRIENDS_AND_NON_FRIENDS: 2, [2]: "FRIENDS_AND_NON_FRIENDS" };
 const items = [obj.DISABLED, create.DmSpamFilterV2.DISABLED];

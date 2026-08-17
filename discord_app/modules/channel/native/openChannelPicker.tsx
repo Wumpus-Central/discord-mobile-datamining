@@ -1,9 +1,9 @@
 // discord_app/modules/channel/native/openChannelPicker.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "comparator" /* 1980 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");

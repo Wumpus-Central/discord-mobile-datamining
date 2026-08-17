@@ -1,25 +1,25 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPContent.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import setDefault from "set" /* 8125 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "getParticipants" /* 4773 */;
-import closure_8 from "initialize" /* 8683 */;
-import closure_9 from "reset" /* 4652 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16307 */;
-import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ComponentDispatcher from "../../../../utils/ComponentDispatchUtils.tsx";
+import setDefault from "../../../core/native/ReanimatedNativeView.tsx";
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../../calls/ChannelRTCStore.tsx";
+import closure_8 from "../../../video_calls/native/ChannelCallLifecycleStore.tsx";
+import closure_9 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_10 from "../../../../stores/AuthenticationStore.tsx";
+import closure_11 from "../../../../stores/ChannelStore.tsx";
+import closure_12 from "../../../../stores/UserStore.tsx";
+import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
+import { VoicePanelPIPModes } from "VoicePanelPIPConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import items3 from "../../../activities/Constants.tsx";
+import ParticipantTypes from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VideoStream(streamId) {

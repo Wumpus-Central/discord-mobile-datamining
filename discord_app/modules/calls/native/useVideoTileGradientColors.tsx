@@ -1,8 +1,8 @@
 // discord_app/modules/calls/native/useVideoTileGradientColors.tsx
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import getProfileTheme from "getProfileTheme" /* 8422 */;
-import closure_2 from "noop" /* 19 */;
-import { ThemeTypes } from "ME" /* 676 */;
+import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import getProfileTheme from "../../user_profile/UserProfileGradientUtils.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { ThemeTypes } from "../../../Constants.tsx";
 
 require = arg1;
 function rgbToHex(arg0) {

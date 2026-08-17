@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
-import setFontSize from "setFontSize" /* 13813 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import setFontSize from "../../../a11y/AccessibilityActionCreators.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function useValue() {

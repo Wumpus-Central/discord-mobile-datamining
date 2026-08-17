@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/ProductPurchaseSuccessModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import tinycolorDefault from "tinycolor" /* 5311 */;
-import Background from "Background" /* 6319 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_toArray" /* 853 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import tinycolorDefault from "../../../../_runtime/05311_tinycolor.js";
+import Background from "../../../../_runtime/06319_Background.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00853__toArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../a11y/AccessibilityStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function CancelButton(arg0) {

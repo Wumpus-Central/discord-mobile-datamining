@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/experiments/BioMaxLengthExperiment.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 ({ BIO_MAX_LENGTH, BIO_MAX_LENGTH_INCREASED } = ME);
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-08-user-bio-max-length", kind: "user", defaultConfig: { maxLength: BIO_MAX_LENGTH }, variations: { 0: { maxLength: BIO_MAX_LENGTH }, 1: { maxLength: BIO_MAX_LENGTH_INCREASED } } });

@@ -1,10 +1,10 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeaderWrapper.tsx
-import noopAll from "noop" /* 19 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import NAV_BAR_HEIGHT from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

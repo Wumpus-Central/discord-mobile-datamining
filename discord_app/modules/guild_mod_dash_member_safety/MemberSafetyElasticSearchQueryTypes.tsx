@@ -1,5 +1,5 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx
-import setDefault from "set" /* 687 */;
+import setDefault from "../../utils/Durations.tsx";
 
 const result = 2 * setDefault.Millis.DAY;
 const result1 = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx");

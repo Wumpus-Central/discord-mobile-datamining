@@ -1,8 +1,8 @@
 // discord_app/modules/premium/native/openPremiumPlanSelectionActionSheet.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../../_runtime/00002_set.js";
+import GuildFeatures from "../PremiumConstants.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let closure_3 = GuildFeatures.PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY;
 const result = set.fileFinishedImporting("modules/premium/native/openPremiumPlanSelectionActionSheet.tsx");

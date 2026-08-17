@@ -1,8 +1,8 @@
 // discord_app/modules/soundpacks/SoundpackActions.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "Soundpacks" /* 10041 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "SoundpackStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 

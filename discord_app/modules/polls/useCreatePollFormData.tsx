@@ -1,10 +1,10 @@
 // discord_app/modules/polls/useCreatePollFormData.tsx
-import getPollVoteEventPropertiesDefault from "getPollVoteEventProperties" /* 10883 */;
-import useRequestDefault from "useRequest" /* 11378 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import getPollVoteEventPropertiesDefault from "PollsActionCreators.tsx";
+import useRequestDefault from "../../hooks/useRequest.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../_runtime/00019_noop.js";
+import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
 
 const require = arg1;
 function createPollCreationImageForMedia(mediaURL, status) {

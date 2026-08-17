@@ -1,17 +1,17 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import preloadDefault from "preload" /* 5449 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import useQuests from "useQuests" /* 10684 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14470 */;
-import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "QUEST_PROGRESS_DIAMETER_BY_SIZE" /* 14483 */;
-import _modDef14512 from "module_14512" /* 14512 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
+import useQuests from "../../hooks/QuestHooks.tsx";
+import openQuestAccessSuspendedBottomSheetDefault from "../openQuestAccessSuspendedBottomSheet.tsx";
+import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "../QuestProgressIndicator.tsx";
+import _modDef14512 from "../QuestDock/QuestDockBlurredContentBackground.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);

@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14104 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 5430 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
+import { SafetySettingsNoticeType } from "../../../safety_common/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { resolveGoreSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
 

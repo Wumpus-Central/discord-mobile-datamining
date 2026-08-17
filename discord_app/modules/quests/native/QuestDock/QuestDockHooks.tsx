@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockHooks.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "QuestDockMode" /* 14445 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "QuestDockStore.tsx";
+import { QuestDockMode } from "../../QuestConstants.tsx";
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
 
 const require = arg1;
 ({ QUEST_DOCK_CLOSED_HEIGHT: error, QUEST_DOCK_COLLAPSED_HEIGHT: closure_8, QUEST_DOCK_EXTERNAL_OFFSET_CLOSED: c9, QUEST_DOCK_EXTERNAL_OFFSET_COLLAPSED_WITH_YOU_BAR: c10, QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR: unpackModuleId, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: closure_12 } = QUEST_DOCK_COLLAPSED_HEIGHT);

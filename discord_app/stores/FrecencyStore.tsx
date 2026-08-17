@@ -1,15 +1,15 @@
 // discord_app/stores/FrecencyStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "handleConnectionOpen" /* 4197 */;
-import { ID_REGEX } from "ME" /* 676 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import DEFAULT_FRECENCYDefault from "../lib/Frecency.tsx";
+import closure_2 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "GuildStore.tsx";
+import closure_5 from "SelectedChannelStore.tsx";
+import closure_6 from "SelectedGuildStore.tsx";
+import { ID_REGEX } from "../Constants.tsx";
+import { UserSettingsTypes } from "../modules/user_settings/UserSettingsConstants.tsx";
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);

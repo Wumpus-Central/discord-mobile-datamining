@@ -1,9 +1,9 @@
 // discord_app/modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx
-import closure_0 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import { CreatorMonetizationRestrictions as closure_3 } from "CreatorMonetizationRestrictions" /* 4016 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_0 from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
+import { FetchState } from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import { CreatorMonetizationRestrictions as closure_3 } from "CreatorMonetizationReviewConstants.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx");
 

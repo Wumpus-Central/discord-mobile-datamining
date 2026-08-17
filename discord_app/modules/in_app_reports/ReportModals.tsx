@@ -1,13 +1,13 @@
 // discord_app/modules/in_app_reports/ReportModals.tsx
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import ReportNames from "ReportNames" /* 8137 */;
-import _showReportModal from "_showReportModal" /* 8138 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_5 from "hasFlag" /* 4031 */;
-import closure_6 from "createdAt" /* 1930 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import ReportNames from "MenuTypes.tsx";
+import _showReportModal from "showReportModal.native.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stage_channels/StageInstanceStore.tsx";
+import closure_5 from "../../records/MessageRecord.tsx";
+import closure_6 from "../../records/UserRecord.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 function _submitHamReportForFirstDM() {

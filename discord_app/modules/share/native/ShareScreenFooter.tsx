@@ -1,10 +1,10 @@
 // discord_app/modules/share/native/ShareScreenFooter.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 4745 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 12037 */;
-import ShareFooterLayoutDefault from "ShareFooterLayout" /* 12038 */;
-import ShareChatInputDefault from "ShareChatInput" /* 12044 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import useShareChatInputActions from "useShareChatInputActions.tsx";
+import ShareFooterLayoutDefault from "ShareFooterLayout.tsx";
+import ShareChatInputDefault from "ShareChatInput.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

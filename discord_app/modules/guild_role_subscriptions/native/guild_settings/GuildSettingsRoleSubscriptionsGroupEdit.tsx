@@ -1,11 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
-import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 16955 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ApplicationRejectedNoticeDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ApplicationTypes } from "../../../applications/ApplicationConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {

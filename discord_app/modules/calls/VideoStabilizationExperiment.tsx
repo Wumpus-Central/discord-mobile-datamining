@@ -1,5 +1,5 @@
 // discord_app/modules/calls/VideoStabilizationExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
 
 const obj = { 1: null, 2: { mode: "standard" } };
 obj[2] = { mode: "low_latency" };

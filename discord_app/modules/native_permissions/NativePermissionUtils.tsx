@@ -1,6 +1,6 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.tsx
-import { ProcessArgs } from "get" /* 4842 */;
-import importDefaultResult from "isEnabled" /* 4841 */;
+import { ProcessArgs } from "../../utils/ProcessArgs.tsx";
+import importDefaultResult from "NativePermissionManager.tsx";
 
 importDefaultResult.initialize();
 if (ProcessArgs.isDiscordTestSet()) {

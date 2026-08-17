@@ -1,17 +1,17 @@
 // discord_app/modules/parent_tools/native/FamilyCenterBannerButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Button from "Button" /* 4745 */;
-import QrCodeIcon from "QrCodeIcon" /* 14239 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "freshTeenActivityWithMap" /* 5296 */;
-import items from "items" /* 5297 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import closure_6 from "../FamilyCenterStore.tsx";
+import items from "../FamilyCenterConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { NativePermissionTypes } from "../../native_permissions/NativePermissionConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FamilyCenterTeenQRCodeButtonInner() {

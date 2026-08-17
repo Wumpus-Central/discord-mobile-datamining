@@ -1,17 +1,17 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx
-import set from "set" /* 500 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { getGuildAcronym } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import set from "../../../../../../../utils/PlatformUtils.tsx";
+import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import closure_3 from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { Image } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getGuildAcronym } from "../../../../../../../records/GuildRecord.tsx";
+import closure_6 from "../../../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../../../../stores/PermissionStore.tsx";
+import closure_9 from "../../../../../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../../../../../stores/UserStore.tsx";
+import { Permissions } from "../../../../../../../Constants.tsx";
+import { InviteTypes } from "../../../../../../instant_invite/Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");

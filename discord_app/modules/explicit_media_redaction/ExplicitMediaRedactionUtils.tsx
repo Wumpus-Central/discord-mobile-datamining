@@ -1,19 +1,19 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import create from "create" /* 1306 */;
-import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4072 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 5005 */;
-import setDefault from "set" /* 5006 */;
-import set from "set" /* 5011 */;
-import resetManager from "resetManager" /* 5012 */;
-import ObscureReason from "ObscureReason" /* 5021 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5039 */;
-import closure_3 from "getUserAgnosticState" /* 4737 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getFpMessageInfo" /* 5002 */;
-import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
+import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
+import setDefault from "../monitoring/MonitoringAgent.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import resetManager from "ExplicitMediaManager.tsx";
+import ObscureReason from "ObscureMediaModels.tsx";
+import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "ExplicitMediaStore.tsx";
+import USER_SETTING_ACTION_SHEET_KEY from "ExplicitMediaRedactionConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: closure_6, EXPLICIT_MEDIA_MIN_WIDTH: error } = USER_SETTING_ACTION_SHEET_KEY);

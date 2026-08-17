@@ -1,8 +1,8 @@
 // discord_app/design/void/IconButton/native/IconButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class SquareIconButton {

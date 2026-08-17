@@ -1,6 +1,6 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
 import { timingNone } from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import { PlusLargeIcon } from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";

@@ -1,7 +1,7 @@
 // discord_app/lib/search/EnglishAnalyzer.tsx
-import applyDefault from "apply" /* 12 */;
-import snowballStem from "snowballStem" /* 15934 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import snowballStem from "snowballStemmer.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function stripPossessive(str) {
   return str.replace(/('|\u2019|\uFF07)(s|S)$/, "");

@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/CollectiblesShopOrbsPage.tsx
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../CollectiblesCategoryStore.tsx";
+import { CollectiblesMobileShopScreen as closure_6 } from "../CollectiblesShopConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ container: { display: "flex", flex: 1 } });

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx
-import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import set from "../../../../_runtime/00002_set.js";
+import getRootNavigationRef from "../RootNavigationRef.native.tsx";
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 

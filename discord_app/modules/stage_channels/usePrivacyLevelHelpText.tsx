@@ -1,11 +1,11 @@
 // discord_app/modules/stage_channels/usePrivacyLevelHelpText.tsx
-import fromStringAll from "fromString" /* 506 */;
-import combinedDefault from "combined" /* 1993 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { Permissions } from "sum" /* 505 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import combinedDefault from "../../utils/HelpdeskUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import { HelpdeskArticles } from "../../Constants.tsx";
+import { GuildScheduledEventPrivacyLevel as closure_6 } from "../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx
-import initialize from "initialize" /* 589 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
-import closure_8 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import { Permissions } from "ME" /* 676 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PermissionStore.tsx";
+import closure_7 from "../GuildJoinRequestStore.tsx";
+import closure_8 from "../UserGuildJoinRequestStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");

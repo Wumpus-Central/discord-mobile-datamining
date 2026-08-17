@@ -1,15 +1,15 @@
 // discord_app/modules/polls/PollsUtils.tsx
-import v1 from "v1" /* 514 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reactionKey" /* 7509 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
-import ME from "ME" /* 676 */;
+import v1 from "../../../_runtime/00514_v1.js";
+import setDefault from "../../utils/Durations.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import useNullableMessageAuthor from "../messages/useMessageAuthor.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/MessageReactionsStore.tsx";
+import closure_5 from "../../stores/MessageStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

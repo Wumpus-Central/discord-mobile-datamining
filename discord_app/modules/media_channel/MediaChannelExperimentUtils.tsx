@@ -1,6 +1,6 @@
 // discord_app/modules/media_channel/MediaChannelExperimentUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 
 const GuildFeatures = ME.GuildFeatures;
 const result = set.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");

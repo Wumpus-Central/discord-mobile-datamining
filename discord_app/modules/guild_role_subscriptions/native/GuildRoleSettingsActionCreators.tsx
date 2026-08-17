@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx
-import _modDef8874 from "module_8874" /* 8874 */;
-import closure_2 from "usePriceTiers" /* 16950 */;
-import { GuildSettingsSections } from "ME" /* 676 */;
+import _modDef8874 from "../../guild_settings/GuildSettingsActionCreators.tsx";
+import closure_2 from "RoleTierEditStore.tsx";
+import { GuildSettingsSections } from "../../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx");
 

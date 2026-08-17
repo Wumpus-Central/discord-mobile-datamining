@@ -1,17 +1,17 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef8928 from "module_8928" /* 8928 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "updateWithLatestInvite" /* 8919 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
-import { Permissions } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef8928 from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stage_channels/StageInstanceStore.tsx";
+import closure_8 from "../../../../stores/CreateInviteModalStore.tsx";
+import closure_9 from "../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../stores/PermissionStore.tsx";
+import { InviteTargetTypes } from "../../Constants.tsx";
+import { Permissions } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function Loading() {

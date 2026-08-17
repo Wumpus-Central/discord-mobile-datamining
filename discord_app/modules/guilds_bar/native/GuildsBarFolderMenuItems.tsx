@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "insertUnsortedGuilds" /* 5078 */;
-import { AnalyticsSections } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../stores/SortedGuildStore.tsx";
+import { AnalyticsSections } from "../../../Constants.tsx";
 import { EnvelopeIcon } from "../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
 import { SettingsIcon } from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";

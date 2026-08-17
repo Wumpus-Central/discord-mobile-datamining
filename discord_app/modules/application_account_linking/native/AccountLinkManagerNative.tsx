@@ -1,6 +1,6 @@
 // discord_app/modules/application_account_linking/native/AccountLinkManagerNative.tsx
-import set from "set" /* 2 */;
-import _claimIncentivizedAccountLinkingReward from "_claimIncentivizedAccountLinkingReward" /* 16158 */;
+import set from "../../../../_runtime/00002_set.js";
+import _claimIncentivizedAccountLinkingReward from "../AccountLinkManager.tsx";
 
 const AccountLinkManager = _claimIncentivizedAccountLinkingReward.AccountLinkManager;
 class AccountLinkManagerNative extends AccountLinkManager {

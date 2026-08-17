@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/voice/AudioSettingsPending.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 let closure_1 = {};
 const result = require("set").fileFinishedImporting("modules/user_settings/voice/AudioSettingsPending.tsx");

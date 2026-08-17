@@ -1,7 +1,7 @@
 // discord_app/modules/applications/ApplicationAssetsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {
   assets = assets.assets;

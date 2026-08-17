@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx
-import _openMediaModal from "_openMediaModal" /* 8992 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { AVATAR_MAX_SIZE } from "ME" /* 676 */;
+import _openMediaModal from "../../media_viewer/native/components/openMediaModal.tsx";
+import closure_2 from "../../a11y/AccessibilityStore.tsx";
+import { AVATAR_MAX_SIZE } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");

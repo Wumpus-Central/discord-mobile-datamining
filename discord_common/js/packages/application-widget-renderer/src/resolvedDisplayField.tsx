@@ -1,6 +1,6 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx
-import set from "set" /* 2 */;
-import resolveFieldValue2 from "resolveFieldValue" /* 12193 */;
+import set from "../../../../../_runtime/00002_set.js";
+import resolveFieldValue2 from "resolvedValues.tsx";
 
 let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
 

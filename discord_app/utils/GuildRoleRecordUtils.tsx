@@ -1,10 +1,10 @@
 // discord_app/utils/GuildRoleRecordUtils.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1984 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1986 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
+import set from "../../_runtime/00002_set.js";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import int2hslRaw from "../../discord_common/js/shared/utils/ColorUtils.tsx";
+import GuildRoleRecordTypeTag2 from "../records/GuildRoleRecord.tsx";
+import extractColorStringsFromServerColors from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
+import isValueEqual from "../lib/PlainRecord.tsx";
 
 function fromServerArray(id, roles) {
   const obj = {};

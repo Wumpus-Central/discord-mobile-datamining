@@ -1,6 +1,6 @@
 // discord_app/modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "reset" /* 13234 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../AdPersonalizationStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");

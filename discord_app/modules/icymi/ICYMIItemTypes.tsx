@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/ICYMIItemTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let set = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);
 const result = set.fileFinishedImporting("modules/icymi/ICYMIItemTypes.tsx");

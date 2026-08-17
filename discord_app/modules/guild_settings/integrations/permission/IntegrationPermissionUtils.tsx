@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import PermissionOverwriteType from "../../../../flow/Server.tsx";
+import ApplicationCommandSectionType from "../../../application_commands/ApplicationCommandTypes.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function commandPermissions(arg0, items) {

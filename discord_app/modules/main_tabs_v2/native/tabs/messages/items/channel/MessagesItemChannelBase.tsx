@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { ActivityTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../../../../../stores/ReadStateStore.tsx";
+import closure_7 from "../../../../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../../../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../../../../../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "../../../../../../../stores/UserStore.tsx";
+import { ActivityTypes } from "../../../../../../../Constants.tsx";
+import jsxProd from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

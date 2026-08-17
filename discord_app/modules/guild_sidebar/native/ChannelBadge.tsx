@@ -1,12 +1,12 @@
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import NewBadgeDefault from "NewBadge" /* 11463 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 15490 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
+import MentionsBadgeDefault from "MentionsBadge.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

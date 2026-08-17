@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getActiveStageChannelIds" /* 4989 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stage_channels/StageChannelParticipantStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");

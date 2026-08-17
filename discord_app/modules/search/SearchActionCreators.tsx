@@ -1,8 +1,8 @@
 // discord_app/modules/search/SearchActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import createRequestPayloadDefault from "createRequestPayload" /* 11519 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import updateUserGuildSettings from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import createRequestPayloadDefault from "managers/SearchTabsFetchManager.tsx";
 
 let result = set.fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 

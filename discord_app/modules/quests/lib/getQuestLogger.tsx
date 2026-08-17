@@ -1,7 +1,7 @@
 // discord_app/modules/quests/lib/getQuestLogger.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "refreshSourceMapCookie" /* 706 */;
-import { NOOP } from "sum" /* 505 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_2 from "../../../stores/DeveloperOptionsStore.tsx";
+import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 

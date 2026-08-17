@@ -1,21 +1,21 @@
 // discord_app/modules/user_profile/native/UserProfileModeratorActions.tsx
-import noopAll from "noop" /* 19 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4734 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import Divider from "Divider" /* 7185 */;
-import closure_4 from "buildStageChannelUserRoles" /* 4990 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import Divider from "UserProfileCard.tsx";
+import closure_4 from "../../stage_channels/StageChannelRoleStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildChannelStore.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../stores/VoiceStateStore.tsx";
+import ME from "../../../Constants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ModeratorActionRow(arg0) {

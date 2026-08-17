@@ -1,9 +1,9 @@
 // discord_app/design/components/Modal/native/Modal.native.tsx
-import noopAll from "noop" /* 19 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import NavigationStack from "../../Navigator/native/Navigator.native.tsx";
+import NAV_BAR_HEIGHT from "../../Navigator/native/NavigatorConstants.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

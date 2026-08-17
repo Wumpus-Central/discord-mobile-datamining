@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx
-import closure_3 from "noop" /* 19 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { PowerupActiveStatusType } from "../constants/GuildPowerupsConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");

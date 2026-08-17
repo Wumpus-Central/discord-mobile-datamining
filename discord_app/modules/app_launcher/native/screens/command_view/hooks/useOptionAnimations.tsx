@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/hooks/useOptionAnimations.tsx
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../../../../design/animation/reanimated/timing/timing.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let c4 = 300;

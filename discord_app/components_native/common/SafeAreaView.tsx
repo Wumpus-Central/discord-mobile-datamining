@@ -1,7 +1,7 @@
 // discord_app/components_native/common/SafeAreaView.tsx
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const result = require("set").fileFinishedImporting("components_native/common/SafeAreaView.tsx");
 

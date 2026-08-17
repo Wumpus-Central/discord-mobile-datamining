@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/panels/useMainTabsPanelsGesture.tsx
-import closure_3 from "noop" /* 19 */;
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
-import set from "set" /* 500 */;
-import isTimingConfig from "isTimingConfig" /* 15273 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { LaunchPadTypes } from "../../../launchpad/native/LaunchPadConstants.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import isTimingConfig from "../../../panels/native/PanelsConfig.tsx";
 
 const require = arg1;
 set = set.isAndroid();

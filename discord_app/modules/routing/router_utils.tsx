@@ -1,10 +1,10 @@
 // discord_app/modules/routing/router_utils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import set2 from "set" /* 1234 */;
-import ME from "ME" /* 676 */;
-import _extends from "_extends" /* 1223 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
+import set2 from "RoutingSources.tsx";
+import ME from "../../Constants.tsx";
+import _extends from "../../../_runtime/metro/01223__extends.js";
 
 function transitionTo(ME, closure_1) {
   closure_0 = ME;

@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import setIsOnStartStageScreen2 from "setIsOnStartStageScreen" /* 8059 */;
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8123 */;
-import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 8665 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8929 */;
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import set from "../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import setIsOnStartStageScreen2 from "useIsOnStartStageScreenStore.tsx";
+import useStageBlockedUsersCount from "useStageBlockedUsersCount.tsx";
+import useIsStageVoicePanelEnabled from "StageVoicePanelExperiment.tsx";
+import showUserProfileActionSheetDefault from "../user_profile/native/showUserProfileActionSheet.tsx";
+import MAX_STAGE_TOPIC_LENGTH from "StageChannelsConstants.tsx";
 
 const setIsOnStartStageScreen = setIsOnStartStageScreen2.setIsOnStartStageScreen;
 ({ STAGE_AUDIENCE_NOTICE_SHEET_KEY: c4, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c5, STAGE_BLOCKED_USERS_SHEET_KEY: closure_6, STAGE_SETTINGS_SHEET_KEY: error, EXPLICIT_END_STAGE_SHEET_KEY: closure_8 } = MAX_STAGE_TOPIC_LENGTH);

@@ -1,10 +1,10 @@
 // discord_app/actions/CreateChannelActionCreators.tsx
-import encodeProperties from "encodeProperties" /* 503 */;
-import sendRequest from "sendRequest" /* 530 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
-import ME from "ME" /* 676 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
+import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
+import closure_3 from "../stores/UserGuildSettingsStore.tsx";
+import ME from "../Constants.tsx";
+import { ChannelNotificationSettingsFlags as closure_7 } from "../modules/user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 ({ BITRATE_DEFAULT: c4, ChannelTypes: c5, Endpoints: closure_6 } = ME);

@@ -1,8 +1,8 @@
 // discord_common/js/packages/design/native.tsx
-import set from "set" /* 2 */;
-import context from "context" /* 4160 */;
-import isImage from "isImage" /* 4193 */;
-import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1357 */;
+import set from "../../../../_runtime/00002_set.js";
+import context from "components/ManaContext/ManaContext.native.tsx";
+import isImage from "components/Graphic/GraphicTypes.native.tsx";
+import LOW_SATURATION_THRESHOLD from "components/AccessibilityPreferencesContext/AccessibilityConstants.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {

@@ -1,8 +1,8 @@
 // discord_app/modules/messages/useMessageMaxLength.tsx
-import initialize from "initialize" /* 589 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ MAX_MESSAGE_LENGTH_PREMIUM: c4, MAX_MESSAGE_LENGTH: c5 } = ME);

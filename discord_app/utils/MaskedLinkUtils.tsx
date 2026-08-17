@@ -1,12 +1,12 @@
 // discord_app/utils/MaskedLinkUtils.tsx
-import closure_3 from "isBlockedDomain" /* 8776 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "set" /* 8777 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../modules/blocked_domains/BlockedDomainStore.tsx";
+import closure_4 from "../stores/ChannelStore.tsx";
+import closure_5 from "../stores/GuildStore.tsx";
+import closure_6 from "../stores/MaskedLinkStore.tsx";
+import closure_7 from "../stores/MessageStore.tsx";
+import closure_8 from "../stores/RelationshipStore.tsx";
+import closure_9 from "../stores/SelectedChannelStore.tsx";
+import ME from "../Constants.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { openInviteModal } from "../lib/getOnClick.tsx";
 import { set1 } from "../modules/masked_link/constants/TrustedURLs.tsx";

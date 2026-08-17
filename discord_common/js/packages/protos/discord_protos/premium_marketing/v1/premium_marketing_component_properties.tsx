@@ -1,26 +1,26 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7632 */;
-import create2 from "create" /* 7636 */;
-import create3 from "create" /* 7637 */;
-import create4 from "create" /* 7638 */;
-import create5 from "create" /* 7639 */;
-import create6 from "create" /* 7640 */;
-import create7 from "create" /* 7642 */;
-import create8 from "create" /* 7644 */;
-import create9 from "create" /* 7645 */;
-import create10 from "create" /* 7646 */;
-import create11 from "create" /* 7647 */;
-import create12 from "create" /* 7648 */;
-import create13 from "create" /* 7649 */;
-import create14 from "create" /* 7650 */;
-import create15 from "create" /* 7651 */;
-import create16 from "create" /* 7652 */;
-import create17 from "create" /* 7653 */;
-import create18 from "create" /* 7654 */;
-import create19 from "create" /* 7655 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import create from "announcement_modal_variant_1_properties.tsx";
+import create2 from "premium_tab.tsx";
+import create3 from "marketing_page_banner.tsx";
+import create4 from "payment_modal_banner.tsx";
+import create5 from "mobile_bottom_sheet.tsx";
+import create6 from "gift_icon.tsx";
+import create7 from "gift_icon_coachmark.tsx";
+import create8 from "gift_plan_selection_card_banner.tsx";
+import create9 from "gift_customization_banner.tsx";
+import create10 from "billing_settings_nitro_gift_banner.tsx";
+import create11 from "gift_reminder_nagbar.tsx";
+import create12 from "gift_reminder_coachmark.tsx";
+import create13 from "premium_tab_tooltip.tsx";
+import create14 from "premium_tab_popover.tsx";
+import create15 from "nagbar.tsx";
+import create16 from "plan_select_card_banner.tsx";
+import create17 from "billing_settings_banner.tsx";
+import create18 from "shop_nagbar.tsx";
+import create19 from "admin_editor_test_component.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class PremiumMarketingComponentProperties$Type extends MessageType {

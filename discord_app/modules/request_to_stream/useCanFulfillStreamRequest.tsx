@@ -1,13 +1,13 @@
 // discord_app/modules/request_to_stream/useCanFulfillStreamRequest.tsx
-import closure_2 from "initialize" /* 4504 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "sortActivity" /* 4559 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../game_detection/RunningGameStore.native.tsx";
+import closure_3 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/PresenceStore.tsx";
+import closure_9 from "../../stores/RTCConnectionStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function canFulfillStreamRequest(channel_id, arg1) {

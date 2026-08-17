@@ -1,8 +1,8 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidConstants.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import importAllResult from "fromString" /* 506 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const Permissions = sum.Permissions;
 const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);

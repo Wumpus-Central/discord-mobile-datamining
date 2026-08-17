@@ -1,15 +1,15 @@
 // discord_app/modules/a11y/native/AccessibilityManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import setSystemTheme from "setSystemTheme" /* 4222 */;
-import uDefault from "u" /* 10561 */;
-import AccessibilityFeatureFlagsDefault from "AccessibilityFeatureFlags" /* 13811 */;
-import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 13812 */;
-import updateSaturation from "updateSaturation" /* 13814 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { SystemTheme } from "SystemThemeState" /* 1305 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import setSystemTheme from "../../user_settings/ThemeActionCreators.tsx";
+import uDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import AccessibilityFeatureFlagsDefault from "AccessibilitySystemFeatures.tsx";
+import A11Y_FEATURE_MAP from "AccessibilityPreferencesSharedValue.tsx";
+import updateSaturation from "../../themes/native/updateSaturation.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../AccessibilityStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { SystemTheme } from "../../user_settings/ThemeConstants.tsx";
 
 require = arg1;
 ({ AccessibilityInfo: c4, Appearance: c5 } = get_ActivityIndicator);

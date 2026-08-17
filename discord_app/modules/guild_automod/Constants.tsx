@@ -1,8 +1,8 @@
 // discord_app/modules/guild_automod/Constants.tsx
-import set from "set" /* 2 */;
-import AutomodTriggerType from "AutomodTriggerType" /* 11043 */;
-import AutomodEventType from "AutomodEventType" /* 11044 */;
-import AutomodActionType from "AutomodActionType" /* 11045 */;
+import set from "../../../_runtime/00002_set.js";
+import AutomodTriggerType from "../../../discord_common/js/shared/shared-constants/AutomodTriggerType.tsx";
+import AutomodEventType from "../../../discord_common/js/shared/shared-constants/AutomodEventType.tsx";
+import AutomodActionType from "../../../discord_common/js/shared/shared-constants/AutomodActionType.tsx";
 
 const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];
 const result = set.fileFinishedImporting("modules/guild_automod/Constants.tsx");

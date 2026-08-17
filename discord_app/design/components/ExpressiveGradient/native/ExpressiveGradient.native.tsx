@@ -1,11 +1,11 @@
 // discord_app/design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx
-import noopAll from "noop" /* 19 */;
-import nDefault from "n" /* 689 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import nDefault from "../../../../../_runtime/00689_n.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../tokens/native/useToken.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

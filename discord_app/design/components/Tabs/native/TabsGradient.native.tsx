@@ -1,10 +1,10 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_2 from "noop" /* 19 */;
-import { HorizontalGradient } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { HorizontalGradient } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);

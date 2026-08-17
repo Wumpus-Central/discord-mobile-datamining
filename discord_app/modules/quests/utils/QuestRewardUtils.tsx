@@ -1,14 +1,14 @@
 // discord_app/modules/quests/utils/QuestRewardUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
-import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 10493 */;
-import getDurationStringOfFractionalPremium from "getDurationStringOfFractionalPremium" /* 10495 */;
-import getContextualEntrypointHeading from "getContextualEntrypointHeading" /* 10496 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 10497 */;
-import closure_2 from "updateCategoriesAndProducts" /* 5301 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import QuestsVisibleMessagesChangedSource from "../QuestTypes.tsx";
+import getQuestDeliveryDataForPlacement from "QuestDataUtils.tsx";
+import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
+import getQuestOrbMultiplierEligibilityForUser from "../hooks/QuestOrbMultiplierHooks.tsx";
+import getDurationStringOfFractionalPremium from "../lib/FractionalPremiumUtils.tsx";
+import getContextualEntrypointHeading from "QuestCopyUtils.tsx";
+import QuestRewardAssignmentMethods from "../../../../discord_common/js/shared/shared-constants/QuestRewardAssignmentMethods.tsx";
+import closure_2 from "../../collectibles/CollectiblesCategoryStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {

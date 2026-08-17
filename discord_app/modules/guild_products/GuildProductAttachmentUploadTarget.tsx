@@ -1,7 +1,7 @@
 // discord_app/modules/guild_products/GuildProductAttachmentUploadTarget.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY" /* 4873 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import GUILD_PRODUCT_EDIT_MODAL_KEY from "GuildProductConstants.tsx";
 
 ({ MAX_ATTACHMENT_UPLOAD_COUNT: c0, MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: closure_1, MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: obj1 } = GUILD_PRODUCT_EDIT_MODAL_KEY);
 const Endpoints = ME.Endpoints;

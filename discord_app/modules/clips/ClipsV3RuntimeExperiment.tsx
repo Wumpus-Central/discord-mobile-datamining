@@ -1,6 +1,6 @@
 // discord_app/modules/clips/ClipsV3RuntimeExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { 1: null, 2: { enableClipsV3: true, enableClipsV3ML: false } };
 obj[2] = { enableClipsV3: true, enableClipsV3ML: true };

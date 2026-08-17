@@ -1,8 +1,8 @@
 // discord_app/actions/native/DisplayedInviteActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import getDisplayedInviteCode from "getDisplayedInviteCode" /* 8923 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import generateAcceptInviteOptionsDefault from "../InstantInviteActionCreators.tsx";
+import getDisplayedInviteCode from "../../stores/native/DisplayedInviteStore.tsx";
 
 const result = set.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 

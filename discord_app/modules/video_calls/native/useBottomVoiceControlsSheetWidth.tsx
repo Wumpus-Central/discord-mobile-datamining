@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx
-import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
+import set from "../../../../_runtime/00002_set.js";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import BOX_MODE_ACTIONSHEET_WIDTH from "ChannelCallConstants.tsx";
 
 ({ BOX_MODE_ACTIONSHEET_WIDTH: obj1, BOX_MODE_THRESHOLD_WIDTH: c3 } = BOX_MODE_ACTIONSHEET_WIDTH);
 const result = set.fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");

@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/ICYMIConstants.tsx
-import setDefault from "set" /* 687 */;
+import setDefault from "../../utils/Durations.tsx";
 
 const result = 15 * setDefault.Millis.MINUTE;
 const result1 = require("set").fileFinishedImporting("modules/icymi/ICYMIConstants.tsx");

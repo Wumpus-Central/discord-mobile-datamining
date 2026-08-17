@@ -1,21 +1,21 @@
 // discord_app/modules/parent_tools/native/FamilyCenterRequestsPage.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import set from "set" /* 10606 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11107 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14230 */;
-import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14270 */;
-import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14272 */;
-import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14281 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 5297 */;
-import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
+import useUserIdsForLinkStatus from "../hooks/useUserLinks.tsx";
+import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
+import set from "../hooks/useHelpLineVisibility.tsx";
+import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice.tsx";
+import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBanner.tsx";
+import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinks.tsx";
+import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinks.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import items from "../FamilyCenterConstants.tsx";
+import { THROUGHLINE_URL } from "../../self_mod/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FamilyCenterMaxConnectionsBlurb() {

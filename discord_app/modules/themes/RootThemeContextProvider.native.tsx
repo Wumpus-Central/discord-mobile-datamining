@@ -1,9 +1,9 @@
 // discord_app/modules/themes/RootThemeContextProvider.native.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../a11y/AccessibilityStore.tsx";
+import closure_5 from "../user_settings/ThemeStore.tsx";
+import { ThemeTypes } from "../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/themes/RootThemeContextProvider.native.tsx");

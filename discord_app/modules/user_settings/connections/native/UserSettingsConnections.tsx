@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/connections/native/UserSettingsConnections.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12312 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14316 */;
-import closure_3 from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 5289 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "set" /* 5221 */;
-import closure_9 from "_getSystemLocale" /* 1994 */;
-import { AnalyticsLocations } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import useConnectionFilteredAppIdentitiesDefault from "../../../user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx";
+import EmptyStateCardDefault from "ConnectionsEmptyStateUpsell.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../oauth2/AuthorizedAppsStore.tsx";
+import { FetchState } from "../../../oauth2/AuthorizedAppsStore.tsx";
+import closure_7 from "../../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../../stores/ConnectedAccountsStore.tsx";
+import closure_9 from "../../LocaleStore.tsx";
+import { AnalyticsLocations } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);

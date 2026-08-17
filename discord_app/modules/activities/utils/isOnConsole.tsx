@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/isOnConsole.tsx
-import set from "set" /* 2 */;
-import isOnXboxDefault from "isOnXbox" /* 12099 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 12100 */;
+import set from "../../../../_runtime/00002_set.js";
+import isOnXboxDefault from "isOnXbox.tsx";
+import isOnPlayStationDefault from "isOnPlayStation.tsx";
 
 const result = set.fileFinishedImporting("modules/activities/utils/isOnConsole.tsx");
 

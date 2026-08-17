@@ -1,8 +1,8 @@
 // discord_app/modules/notifications_inbox/NotificationsInboxConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
 
 const NOTIFICATIONS_INBOX = ME.NOTIFICATIONS_INBOX;
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };

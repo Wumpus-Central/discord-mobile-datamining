@@ -1,9 +1,9 @@
 // discord_app/modules/forums/native/posts/ForumPostTitle.tsx
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4734 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import PlatformTypes from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 require = arg1;
 noopAll;

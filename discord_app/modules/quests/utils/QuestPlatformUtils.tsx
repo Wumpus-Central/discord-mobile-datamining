@@ -1,15 +1,15 @@
 // discord_app/modules/quests/utils/QuestPlatformUtils.tsx
-import set2 from "set" /* 2 */;
-import set3 from "set" /* 500 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import set4 from "set" /* 6723 */;
-import openUserSettings from "openUserSettings" /* 7360 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import apexExperiment from "apexExperiment" /* 9502 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9779 */;
-import ME from "ME" /* 676 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import set3 from "../../../utils/PlatformUtils.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
+import set4 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
+import getApplicationIdsByTaskTypes from "QuestTaskUtils.tsx";
+import apexExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import authorizeConnectionDefault from "../../connections/authorizeConnection.native.tsx";
+import ME from "../../../Constants.tsx";
 import { apexExperiment } from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import { getContextualEntrypointHeading } from "QuestCopyUtils.tsx";
 

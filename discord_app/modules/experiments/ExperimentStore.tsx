@@ -1,17 +1,17 @@
 // discord_app/modules/experiments/ExperimentStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import applyDefault from "apply" /* 12 */;
-import Storage5 from "Storage" /* 595 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcher from "dispatcher" /* 709 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import clearAllDefault from "clearAll" /* 1220 */;
-import Version from "Version" /* 4290 */;
-import isInRange from "isInRange" /* 4293 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import Storage5 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcher from "../../Dispatcher.tsx";
+import MurmurHashV3Default from "../../../_runtime/01217_MurmurHashV3.js";
+import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
+import Version from "../build_overrides/BuildOverrideUtils.tsx";
+import isInRange from "GuildFilters.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import ExperimentBuckets from "ExperimentConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function getHash(arg0) {

@@ -1,20 +1,20 @@
 // discord_app/modules/activities/panel/native/ActivityPanelPIPView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "module_12485" /* 12485 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "participantFromServer" /* 1390 */;
-import { ActivityLayoutMode } from "items3" /* 4481 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
-import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_15 } from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16237 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import { jsx } from "jsxProd" /* 21 */;
-import Button from "Button" /* 1297 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../EmbeddedActivitiesStore.tsx";
+import { ActivityLayoutMode } from "../../Constants.tsx";
+import ActivityPanelModes from "../ActivityPanelConstants.tsx";
+import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_15 } from "ActivityPanelNativeConstants.tsx";
+import { ThemeTypes } from "../../../../Constants.tsx";
+import { PIP_WINDOW_OFFSET } from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import Button from "../../../../design/void/native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

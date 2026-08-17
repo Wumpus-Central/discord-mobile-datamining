@@ -1,6 +1,6 @@
 // discord_app/modules/channel_text_area/compareChannelsByScoreAndPosition.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import closure_0 from "../../stores/ChannelStore.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 

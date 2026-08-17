@@ -1,8 +1,8 @@
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { AuthorizeFlow } from "AuthorizeFlow" /* 7143 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { AuthorizeFlow } from "../ApplicationAccountLinkingConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
 import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 

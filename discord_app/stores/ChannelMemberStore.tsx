@@ -1,21 +1,21 @@
 // discord_app/stores/ChannelMemberStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleInviteData" /* 4295 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "sortActivity" /* 4559 */;
-import closure_13 from "filterPlayingActivities" /* 7250 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import MurmurHashV3Default from "../../_runtime/01217_MurmurHashV3.js";
+import applyOverwritesAll from "../utils/PermissionUtils.tsx";
+import closure_4 from "../modules/experiments/ExperimentStore.tsx";
+import closure_5 from "ApplicationStreamingStore.tsx";
+import closure_6 from "AuthenticationStore.tsx";
+import closure_7 from "ChannelStore.tsx";
+import closure_8 from "GuildMemberCountStore.tsx";
+import closure_9 from "GuildMemberStore.tsx";
+import closure_10 from "GuildRoleStore.tsx";
+import closure_11 from "GuildStore.tsx";
+import closure_12 from "PresenceStore.tsx";
+import closure_13 from "SelfPresenceStore.tsx";
+import closure_14 from "UserStore.tsx";
+import ME from "../Constants.tsx";
 
 let require = arg1;
 function getMemberListId(arg0) {

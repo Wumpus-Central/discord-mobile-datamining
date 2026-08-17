@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/app/TryLoad.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _tryLoadAsync() {
   const self = this;

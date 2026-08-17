@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/server/commands/quests.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import questMatchesActivity from "questMatchesActivity" /* 10707 */;
-import closure_3 from "initializeState" /* 7453 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import getApplicationIdsByTaskTypes from "../../../quests/utils/QuestTaskUtils.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import questMatchesActivity from "../../../quests/utils/QuestMatchingUtils.tsx";
+import closure_3 from "../../../quests/QuestStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ RPCCommands, RPCErrors: c4, AnalyticEvents: c5 } = ME);

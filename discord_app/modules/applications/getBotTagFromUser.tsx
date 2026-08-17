@@ -1,6 +1,6 @@
 // discord_app/modules/applications/getBotTagFromUser.tsx
-import set from "set" /* 2 */;
-import ApplicationTypes from "ApplicationTypes" /* 4482 */;
+import set from "../../../_runtime/00002_set.js";
+import ApplicationTypes from "ApplicationConstants.tsx";
 
 const BotTagTypes = ApplicationTypes.BotTagTypes;
 const result = set.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");

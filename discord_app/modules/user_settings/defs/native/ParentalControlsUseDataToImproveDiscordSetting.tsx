@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataToImproveDiscordSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
-import { Consents } from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import maybeFetchCollectiblesForInvoicesDefault from "../../../parent_tools/FamilyCenterActionCreators.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import closure_3 from "../../../parent_tools/FamilyCenterStore.tsx";
+import { Consents } from "../../../../Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

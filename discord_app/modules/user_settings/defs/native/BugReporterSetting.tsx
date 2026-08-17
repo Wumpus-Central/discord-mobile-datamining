@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import apexExperimentDefault from "apexExperiment" /* 10156 */;
-import closure_3 from "zustandStore" /* 10127 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import apexExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
+import closure_3 from "../../../bug_reporter/BugReportStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function useBugReporterExperimentSettingPredicate() {

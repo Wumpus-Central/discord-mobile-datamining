@@ -1,11 +1,11 @@
 // discord_app/actions/ChannelSettingsActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "normalizeChannelPropertyForCompare" /* 8133 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/ChannelSettingsStore.tsx";
+import closure_5 from "../stores/ChannelStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function init(channelId, location, subsection) {

@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
+import toJSDefault from "../../../lib/Record.tsx";
 
 const require = arg1;
 toJSDefault;

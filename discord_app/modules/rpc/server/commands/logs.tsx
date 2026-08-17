@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/logs.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import timestampDefault from "../../../debug/Logger.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import ME from "../../../../Constants.tsx";
 
 ({ RPC_APPLICATION_LOGGING_CATEGORY, RPCCommands } = ME);
 let closure_3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);

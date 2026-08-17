@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../stores/GuildMemberStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

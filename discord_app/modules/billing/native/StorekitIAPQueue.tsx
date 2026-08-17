@@ -1,8 +1,8 @@
 // discord_app/modules/billing/native/StorekitIAPQueue.tsx
-import CurrencyCodes from "CurrencyCodes" /* 5317 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
-import set from "set" /* 2 */;
+import CurrencyCodes from "../../../../discord_common/js/shared/utils/PriceUtils.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { convertToAlpha2 } from "../../i18n/CountryCodeUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function productSK2ToIAPProduct(subscription) {

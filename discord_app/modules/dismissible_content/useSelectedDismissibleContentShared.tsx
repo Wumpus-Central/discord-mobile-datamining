@@ -1,7 +1,7 @@
 // discord_app/modules/dismissible_content/useSelectedDismissibleContentShared.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "set" /* 1381 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "DismissibleContentFrameworkStore.tsx";
+import { ContentDismissActionType } from "DismissibleContentConstants.tsx";
 import { set } from "DismissibleContentFatigueConfig.tsx";
 
 const require = arg1;

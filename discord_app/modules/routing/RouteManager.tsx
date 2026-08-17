@@ -1,8 +1,8 @@
 // discord_app/modules/routing/RouteManager.tsx
-import closure_2 from "_handleConnectionOpen" /* 4495 */;
-import closure_3 from "getMatchData" /* 12641 */;
-import { Routes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import closure_2 from "../gateway/GatewayConnectionStore.tsx";
+import closure_3 from "KeybindRouterStore.tsx";
+import { Routes } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let set = arg1;
 class RouteManager {

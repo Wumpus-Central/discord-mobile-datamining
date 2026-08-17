@@ -1,14 +1,14 @@
 // discord_app/components_native/StreamPreview.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12138 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import PressableBase from "../design/void/Pressables/native/Pressables.tsx";
+import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
+import importAllResult from "../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../modules/user_settings/ThemeStore.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ Image: c3, View: c4, StyleSheet } = get_ActivityIndicator);

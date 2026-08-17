@@ -1,9 +1,9 @@
 // discord_app/stores/SlowmodeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "PermissionStore.tsx";
 import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
 import { canBypassSlowmodeHelper } from "../modules/chat/SlowmodeUtils.tsx";
 

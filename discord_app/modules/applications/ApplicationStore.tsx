@@ -1,9 +1,9 @@
 // discord_app/modules/applications/ApplicationStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "createExecutable" /* 4479 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../records/ApplicationRecord.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function addApplication(fromServer) {
   const value = map.get(fromServer.id);

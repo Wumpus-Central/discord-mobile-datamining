@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/utils/WishlistBannerUtils.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../../../_runtime/00002_set.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
 
 const useMemo = noop.useMemo;
 let obj = { FULL_WISHLIST: "FULL_WISHLIST", MIXED: "MIXED", SHOP_ONLY: "SHOP_ONLY", SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY" };

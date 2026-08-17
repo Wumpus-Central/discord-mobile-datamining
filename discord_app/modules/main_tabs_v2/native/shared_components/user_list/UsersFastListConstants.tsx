@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastListConstants.tsx
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const PX_24 = ThemesDefault.space.PX_24;
 const PX_8 = ThemesDefault.space.PX_8;

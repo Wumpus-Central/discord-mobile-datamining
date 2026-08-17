@@ -1,14 +1,14 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelUI.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { useContext } from "noop" /* 19 */;
-import closure_6 from "module_12485" /* 12485 */;
-import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 13902 */;
-import { IS_IOS } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import { BORDER_RADIUS_PHYSICS } from "VoicePanelModes" /* 11440 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { useContext } from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../panels/morphable/native/SafeAreaDisabledStore.tsx";
+import MediaPlaybackPanelModes from "MediaPlaybackPanelConstants.tsx";
+import { IS_IOS } from "../../panels/morphable/native/MorphablePanelConstants.tsx";
+import { BORDER_RADIUS_PHYSICS } from "../../voice_panel/VoicePanelConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: error, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelModes);

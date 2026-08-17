@@ -1,13 +1,13 @@
 // discord_app/modules/multi_account/native/MultiAccountManagerNative.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11586 */;
-import _initializeDefault from "_initialize" /* 16640 */;
-import registerAssetDefault from "registerAsset" /* 16641 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import timestampDefault from "../../debug/Logger.tsx";
+import setDefault from "../../../utils/Durations.tsx";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import MAX_ACCOUNTS from "../Constants.tsx";
+import _initializeDefault from "../MultiAccountManager.tsx";
+import registerAssetDefault from "../../../../_runtime/16641_registerAsset.js";
+import ME from "../../../Constants.tsx";
 
 let obj = require;
 const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;

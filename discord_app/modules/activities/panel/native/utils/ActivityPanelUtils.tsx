@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/utils/ActivityPanelUtils.tsx
-import initialize from "initialize" /* 589 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import closure_3 from "../../../EmbeddedActivitiesStore.tsx";
+import { ActivityPanelModes } from "../../ActivityPanelConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");

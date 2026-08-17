@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import GenericHeaderTitle from "GenericHeaderTitle" /* 8492 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8495 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import GenericHeaderTitle from "../HeaderShared.tsx";
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");

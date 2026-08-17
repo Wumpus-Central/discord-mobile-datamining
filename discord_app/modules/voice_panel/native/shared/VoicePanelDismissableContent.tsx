@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
-import { jsx } from "jsxProd" /* 21 */;
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
+import { isActivityParticipant } from "../../../calls/CallConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function VoiceControlsNuxActionSheetImporter() {

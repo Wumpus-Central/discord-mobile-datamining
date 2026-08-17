@@ -1,6 +1,6 @@
 // discord_app/modules/media_engine/AudioEffectsExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { probeAudioEffects: false };
 obj = { name: "2026-03-audio-effects-probe", kind: "user", defaultConfig: obj, variations: null };

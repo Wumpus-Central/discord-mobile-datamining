@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsPerksSection.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 11721 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);

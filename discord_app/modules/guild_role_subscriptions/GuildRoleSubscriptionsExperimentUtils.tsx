@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

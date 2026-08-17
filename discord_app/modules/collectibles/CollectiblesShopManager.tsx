@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/CollectiblesShopManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _maybeFetchProductsWithSkus from "_maybeFetchProductsWithSkus" /* 8962 */;
-import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 12001 */;
-import closure_2 from "getFetchState" /* 11999 */;
-import closure_3 from "getFetchState" /* 8963 */;
-import set from "set" /* 2 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _maybeFetchProductsWithSkus from "../storefront/StorefrontProductActionCreators.tsx";
+import _maybeFetchCollectionsWithProducts from "../storefront/StorefrontCollectionActionCreators.tsx";
+import closure_2 from "../storefront/StorefrontCollectionStore.tsx";
+import closure_3 from "../storefront/StorefrontProductStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function chunk(arr) {

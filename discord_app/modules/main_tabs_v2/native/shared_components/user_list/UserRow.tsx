@@ -1,19 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserRow.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9893 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "addApplication" /* 4478 */;
-import closure_7 from "initialize" /* 5410 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "sortActivity" /* 4559 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ActivityStatusDefault from "../../../../activity_status/native/ActivityStatus.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../applications/ApplicationStore.tsx";
+import closure_7 from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
+import closure_8 from "../../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../../stores/PresenceStore.tsx";
+import closure_10 from "../../../../../stores/RelationshipStore.tsx";
+import { UserRowModes } from "UserRowConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function UserRowSubLabel(arg0) {

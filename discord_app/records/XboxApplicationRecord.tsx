@@ -1,6 +1,6 @@
 // discord_app/records/XboxApplicationRecord.tsx
-import createExecutableDefault from "createExecutable" /* 4479 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import createExecutableDefault from "ApplicationRecord.tsx";
+import getPlatformUserUrlDefault from "../lib/Platforms.tsx";
 
 createExecutableDefault;
 let c2 = "xbox:";

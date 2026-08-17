@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSources.tsx
-import set2 from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import defaultStatesAreEqual from "../../../lib/ZustandStore.tsx";
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
   const obj = { sources: [], spoilerIndexes: new Set() };

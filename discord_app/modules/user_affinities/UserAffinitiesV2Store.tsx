@@ -1,8 +1,8 @@
 // discord_app/modules/user_affinities/UserAffinitiesV2Store.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
-import { USER_AFFINITY_TTL } from "result" /* 5408 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/RelationshipStore.tsx";
+import { USER_AFFINITY_TTL } from "UserAffinitiesConstants.tsx";
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;

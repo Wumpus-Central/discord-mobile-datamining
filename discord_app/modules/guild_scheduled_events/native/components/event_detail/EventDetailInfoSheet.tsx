@@ -1,20 +1,20 @@
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 8795 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_10 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_11 } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
-import { Fonts } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import useGuildScheduledEventUserCountDefault from "../../../useGuildScheduledEventUserCount.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../../stores/RTCConnectionStore.tsx";
+import closure_9 from "../../../../../stores/UserStore.tsx";
+import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_10 } from "../../../GuildScheduledEventsConstants.tsx";
+import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_11 } from "../../GuildEventModalConstants.tsx";
+import { Fonts } from "../../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../rebrand/native/TextStyles.tsx";
 
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);

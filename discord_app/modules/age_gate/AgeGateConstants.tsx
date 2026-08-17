@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/AgeGateConstants.tsx
-import setDefault from "set" /* 687 */;
-import set from "set" /* 2 */;
+import setDefault from "../../utils/Durations.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const obj = { AUTH: "Register Age Gate", NEW_USER_FLOW: "NUF", CLAIM_ACCOUNT: "Claim Age Gate", NSFW_CHANNEL: "NSFW Channel", NSFW_SERVER: "NSFW Server", NSFW_SERVER_INVITE: "NSFW Server Invite", NSFW_SERVER_INVITE_EMBED: "NSFW Server Invite Embed", NSFW_VOICE_CHANNEL: "NSFW Voice Channel", LARGE_GUILD: "Large Guild", ACCESS_LARGE_GUILD_UNDERAGE: "Access Large Guild Access Underage", JOIN_LARGE_GUILD_UNDERAGE: "Join Large Guild Underage", FAMILY_CENTER: "Family Center", REGISTER: "Register", DEEP_LINK_PROMPT: "Deep Link Prompt", UNSPECIFIED: "Unspecified" };
 const items = [, , ];

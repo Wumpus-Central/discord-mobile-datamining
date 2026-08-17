@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx
-import closure_0 from "noop" /* 19 */;
-import { ActivityGamePlatforms } from "ME" /* 676 */;
+import closure_0 from "../../../../_runtime/00019_noop.js";
+import { ActivityGamePlatforms } from "../../../Constants.tsx";
 
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   ({ platforms, currentPlatform } = isGameLaunchable);

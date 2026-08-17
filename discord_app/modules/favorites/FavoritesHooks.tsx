@@ -1,15 +1,15 @@
 // discord_app/modules/favorites/FavoritesHooks.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initialize from "initialize" /* 589 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1945 */;
-import FREE_FAVORITE_LIMIT from "FREE_FAVORITE_LIMIT" /* 9980 */;
-import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9981 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "initializeFromUserSettings" /* 1394 */;
-import { MAX_FAVORITE_CHANNELS } from "date" /* 1429 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getFavoritesAwareGuildName from "FavoritesUtils.tsx";
+import isPremiumAtLeastDefault from "../../utils/PremiumTypeUtils.tsx";
+import FREE_FAVORITE_LIMIT from "../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx";
+import useFavoritesGuildConfig from "FavoritesGuildExperiment.tsx";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "FavoriteStore.tsx";
+import { MAX_FAVORITE_CHANNELS } from "FavoritesConstants.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getFavoritesAwareGuildName } from "FavoritesUtils.tsx";
 

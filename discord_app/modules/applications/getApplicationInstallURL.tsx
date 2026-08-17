@@ -1,6 +1,6 @@
 // discord_app/modules/applications/getApplicationInstallURL.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 
 const Routes = ME.Routes;
 let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");

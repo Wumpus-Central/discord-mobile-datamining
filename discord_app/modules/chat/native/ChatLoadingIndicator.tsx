@@ -1,21 +1,21 @@
 // discord_app/modules/chat/native/ChatLoadingIndicator.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "_handleConnectionOpen" /* 4495 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../gateway/GatewayConnectionStore.tsx";
+import closure_8 from "../../../stores/MessageStore.tsx";
+import closure_9 from "../../../stores/SelectedChannelStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import closure_11 from "../../../stores/native/AppStateStore.tsx";
+import { AppStates } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function openLoadingIndicatorDebugBody() {

@@ -1,14 +1,14 @@
 // discord_app/modules/channel_list_v2/native/items/UnknownChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import registerAssetDefault from "registerAsset" /* 10455 */;
-import getChannelModeDefault from "getChannelMode" /* 15378 */;
-import importAllResult from "noop" /* 19 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import registerAssetDefault from "../../../../../_runtime/10455_registerAsset.js";
+import getChannelModeDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handlePress() {

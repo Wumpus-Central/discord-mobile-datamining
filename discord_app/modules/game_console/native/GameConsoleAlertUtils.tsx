@@ -1,10 +1,10 @@
 // discord_app/modules/game_console/native/GameConsoleAlertUtils.tsx
-import noopAll from "noop" /* 19 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "XBOX_URL_BASE" /* 9763 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import closure_3 from "../../../stores/MediaEngineStore.tsx";
+import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "../GameConsoleConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 

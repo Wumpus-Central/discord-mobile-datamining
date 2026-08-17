@@ -1,10 +1,10 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ChatInputGuardDefault from "ChatInputGuard.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/GuildMemberStore.tsx";
+import { GuildMemberFlags } from "../../../guild_member/GuildMemberConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

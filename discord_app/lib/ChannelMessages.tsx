@@ -1,12 +1,12 @@
 // discord_app/lib/ChannelMessages.tsx
-import set2 from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 4999 */;
-import ME from "ME" /* 676 */;
+import set2 from "../../_runtime/00002_set.js";
+import timestampDefault from "../modules/debug/Logger.tsx";
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../_runtime/00012_apply.js";
+import GuildThemeSourcePreference from "../flow/Client.tsx";
+import createMinimalMessageRecord from "../modules/messages/MessageRecordUtils.tsx";
+import isIOSPushNotificationRawPayloadFixExperimentEnabled from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
+import ME from "../Constants.tsx";
 
 function mergeMessage(self, id) {
   let messageRecord = self.get(id.id);

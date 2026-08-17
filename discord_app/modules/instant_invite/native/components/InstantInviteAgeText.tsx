@@ -1,11 +1,11 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteAgeText.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "updateWithLatestInvite" /* 8919 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_3 from "../../../../stores/CreateInviteModalStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,16 +1,16 @@
 // discord_app/modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 15781 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_9 from "set" /* 11578 */;
-import { PermissionPromptType } from "set" /* 11578 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
+import { PermissionPromptType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
+import EventActionType from "NotificationPermissionConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ EventActionLocation: unpackModuleId, NotificationNudgeSurface: closure_12 } = EventActionType);

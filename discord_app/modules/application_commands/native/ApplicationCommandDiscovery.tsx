@@ -1,18 +1,18 @@
 // discord_app/modules/application_commands/native/ApplicationCommandDiscovery.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import ScoreMethod from "ScoreMethod" /* 8456 */;
-import useCommandDiscoveryManager from "useCommandDiscoveryManager" /* 11569 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import { ITEM_HEIGHT } from "ICON_SIZE" /* 11567 */;
-import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PermissionOverwriteType from "../../../flow/Server.tsx";
+import getFontScale from "../../screen/native/useFontScale.tsx";
+import ScoreMethod from "../ApplicationCommandQueryTypes.tsx";
+import useCommandDiscoveryManager from "../ApplicationCommandDiscoveryManager.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
+import { ITEM_HEIGHT } from "ApplicationCommandsCategoriesConstants.tsx";
+import { AUTOCOMPLETE_ROW_HEIGHT } from "ApplicationCommandsConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: closure_6, SectionList: error } = get_ActivityIndicator);

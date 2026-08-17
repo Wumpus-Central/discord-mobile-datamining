@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/hooks/useIsOnMainSurface.native.tsx
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function getIsOnMainSurface() {

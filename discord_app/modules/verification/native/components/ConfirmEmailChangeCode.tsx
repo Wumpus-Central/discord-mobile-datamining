@@ -1,8 +1,8 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeCode.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { setEmailToken } from "ChangeEmailFields" /* 8563 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { setEmailToken } from "../../ChangeEmailStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 

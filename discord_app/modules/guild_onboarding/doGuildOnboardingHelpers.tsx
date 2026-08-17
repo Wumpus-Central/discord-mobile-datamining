@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding/doGuildOnboardingHelpers.tsx
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/row_data/CtaButton.tsx
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import CtaButtonType from "CtaButtonType" /* 11096 */;
-import closure_2 from "getFpMessageInfo" /* 5002 */;
+import useAgeVerificationRunner from "../../../../age_assurance/AgeVerificationUtils.tsx";
+import CtaButtonType from "../../../CtaButtonUtils.tsx";
+import closure_2 from "../../../../explicit_media_redaction/ExplicitMediaStore.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");

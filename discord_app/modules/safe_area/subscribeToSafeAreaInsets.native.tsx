@@ -1,5 +1,5 @@
 // discord_app/modules/safe_area/subscribeToSafeAreaInsets.native.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 import { context } from "../window/native/AppEntryKeyContext.tsx";
 
 const result = set.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");

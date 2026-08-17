@@ -1,9 +1,9 @@
 // discord_app/modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import closure_2 from "../../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/game_console/native/beginConsoleTransfer.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 function _beginConsoleTransfer() {

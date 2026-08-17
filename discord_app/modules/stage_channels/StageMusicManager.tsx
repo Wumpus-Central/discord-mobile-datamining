@@ -1,14 +1,14 @@
 // discord_app/modules/stage_channels/StageMusicManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import sortKey from "sortKey" /* 6703 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import closure_6 from "getActiveStageChannelIds" /* 4989 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "initialize" /* 12506 */;
-import createSoundForPack from "createSoundForPack" /* 10040 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import sortKey from "StageChannelParticipants.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import importDefaultResult from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../stores/VoiceStateStore.tsx";
+import closure_6 from "StageChannelParticipantStore.tsx";
+import closure_7 from "StageInstanceStore.tsx";
+import closure_8 from "StageMusicStore.tsx";
+import createSoundForPack from "../sound_playback/SoundUtils.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { sortKey } from "StageChannelParticipants.tsx";
 import { useStageParticipants } from "StageChannelParticipantStoreHooks.tsx";

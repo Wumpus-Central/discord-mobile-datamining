@@ -1,22 +1,22 @@
 // discord_app/modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
-import Text from "Text" /* 4734 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import preloadDefault from "preload" /* 5449 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import PlayIcon from "PlayIcon" /* 9003 */;
-import VideoComponentDefault from "VideoComponent" /* 9018 */;
-import VoiceMessageIcon from "VoiceMessageIcon" /* 10070 */;
-import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "useEnabledHarmTypesBitmaskForChannelAndAuthorId" /* 10118 */;
-import StickerDefault from "Sticker" /* 10119 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import isBlurDisabledDefault from "../../visual_effect_view/native/VisualEffectView.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import redactionSettingToRenderedString from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import PlayIcon from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
+import VideoComponentDefault from "../../../components_native/common/Video.tsx";
+import VoiceMessageIcon from "hooks/usePreviewableMedia.tsx";
+import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
+import StickerDefault from "../../stickers/native/Sticker.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VideoBadge() {

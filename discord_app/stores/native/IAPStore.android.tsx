@@ -1,11 +1,11 @@
 // discord_app/stores/native/IAPStore.android.tsx
-import sum from "sum" /* 505 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4054 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 5320 */;
-import set from "set" /* 2 */;
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _createGatewayCheckoutContext from "../../utils/BillingUtils.tsx";
+import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
+import GPlayConnectionState from "../../modules/gplay/native/Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function updateProduct(currencyCode) {
   const formatted = currencyCode.currencyCode.toLowerCase();

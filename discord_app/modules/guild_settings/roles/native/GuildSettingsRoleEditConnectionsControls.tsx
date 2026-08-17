@@ -1,21 +1,21 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 9545 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getRoleMemberCount" /* 6928 */;
-import closure_6 from "handleSetSection" /* 16831 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import CirclePlusIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../GuildRoleMemberCountStore.tsx";
+import closure_6 from "../GuildSettingsRolesStore.tsx";
+import { HelpdeskArticles } from "../../../../Constants.tsx";
+import OperatorTypes from "../../../connections/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 
 require = arg1;

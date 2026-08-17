@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx
-import set from "set" /* 2 */;
-import Button from "Button" /* 1297 */;
-import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1436 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../../../_runtime/00002_set.js";
+import Button from "../../../../design/void/native.tsx";
+import DECORATION_TO_AVATAR_RATIO from "../AvatarDecorationConstants.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
 let closure_3 = DECORATION_TO_AVATAR_RATIO.DECORATION_TO_AVATAR_RATIO;

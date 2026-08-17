@@ -1,7 +1,7 @@
 // discord_app/modules/chat/useTypingUsersIds.tsx
-import closure_2 from "markAllUserIdListsStale" /* 4030 */;
-import closure_3 from "handleTypingStart" /* 11152 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "../../stores/RelationshipStore.tsx";
+import closure_3 from "../../stores/TypingStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");

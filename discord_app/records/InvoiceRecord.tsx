@@ -1,6 +1,6 @@
 // discord_app/records/InvoiceRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4049 */;
+import toJSDefault from "../lib/Record.tsx";
+import coalesceInvoiceItems from "../modules/premium/PremiumSubscriptionInvoiceItem.tsx";
 
 require = arg1;
 toJSDefault;

@@ -1,11 +1,11 @@
 // discord_app/modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "map" /* 9199 */;
-import closure_3 from "initialize" /* 4504 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "sortActivity" /* 4559 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../content_inventory/ContentInventoryOutboxStore.tsx";
+import closure_3 from "../../game_detection/RunningGameStore.native.tsx";
+import closure_4 from "../../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PresenceStore.tsx";
+import closure_7 from "../SocialLayerStorefrontStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

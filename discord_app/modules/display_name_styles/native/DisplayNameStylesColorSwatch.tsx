@@ -1,13 +1,13 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import GummyStripesDefault from "GummyStripes" /* 14035 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import GummyStripesDefault from "effects/GummyStripes.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

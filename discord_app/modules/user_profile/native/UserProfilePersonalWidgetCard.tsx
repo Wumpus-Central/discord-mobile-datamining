@@ -1,17 +1,17 @@
 // discord_app/modules/user_profile/native/UserProfilePersonalWidgetCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import preloadDefault from "preload" /* 5449 */;
-import GifTagDefault from "GifTag" /* 8989 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import GifTagDefault from "GifTag.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../stores/AuthenticationStore.tsx";
+import { ThemeTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PersonalWidgetText(lineClamp) {

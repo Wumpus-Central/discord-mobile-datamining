@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 8995 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../../reanimated/native/useStateFromSharedValue.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 let closure_3 = createCacheKey.createStyles((arg0, arg1) => {
   let str = "transparent";

@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/QuestAccessSuspendedBottomSheet.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4745 */;
-import PromoSheet from "PromoSheet" /* 8017 */;
-import closure_3 from "noop" /* 19 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import { AccountSettingsTabs } from "../../user_settings/account/native/SettingsAccountConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");

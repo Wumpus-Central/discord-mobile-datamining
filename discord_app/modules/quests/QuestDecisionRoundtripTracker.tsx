@@ -1,14 +1,14 @@
 // discord_app/modules/quests/QuestDecisionRoundtripTracker.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5052 */;
-import isForegrounded from "isForegrounded" /* 5055 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
-import result2 from "result" /* 7468 */;
-import AdCreativeType from "AdCreativeType" /* 7469 */;
-import closure_3 from "handleConnectionInfoChange" /* 4564 */;
-import closure_4 from "initializeState" /* 7453 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import receiveNetworkInfoformation from "../network/NetStats.android.tsx";
+import isForegrounded from "../analytics_sessions/SessionForegroundUtils.native.tsx";
+import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
+import result2 from "../ads/utils/AdDecisionUtils.tsx";
+import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import closure_3 from "../../stores/NetworkStore.tsx";
+import closure_4 from "QuestStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {

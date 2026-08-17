@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/base_components/CommandRowButton.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");

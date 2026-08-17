@@ -1,5 +1,5 @@
 // discord_app/modules/report_to_mod/getGuildModeratorReportChannelId.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
 

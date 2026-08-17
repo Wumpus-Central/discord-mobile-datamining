@@ -1,12 +1,12 @@
 // discord_app/actions/UserSettingsActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import dispatcherDefault from "../Dispatcher.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/client_themes/ClientThemesBackgroundStore.tsx";
+import closure_5 from "../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import closure_6 from "../modules/user_settings/ThemeStore.tsx";
+import { ThemeTypes } from "../Constants.tsx";
+import SystemThemeState from "../modules/user_settings/ThemeConstants.tsx";
 import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;

@@ -1,8 +1,8 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx
-import messagesProxyDefault from "messagesProxy" /* 3403 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import CustomTypingIndicatorAnimation from "CustomTypingIndicatorAnimation" /* 14707 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import messagesProxyDefault from "intl/CustomTypingIndicator.messages.js";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import CustomTypingIndicatorAnimation from "CustomTypingIndicatorTypes.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 function getRandomCustomTypingIndicatorEmojis() {

@@ -1,11 +1,11 @@
 // discord_app/modules/icymi/native/ICYMIForumThreadRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
 
 const require = arg1;
 class ICYMIForumThreadRow {

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/openPinnedMessages.tsx
-import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
+import set from "../../../../_runtime/00002_set.js";
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import ChannelDetailsNavigatorScreens from "../../main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx";
 
 let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
 const result = set.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");

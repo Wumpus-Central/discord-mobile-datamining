@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding/DefaultChannelUtils.tsx
-import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_3 from "isSubscriptionGated" /* 1981 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import closure_3 from "../channel/GatedChannelStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

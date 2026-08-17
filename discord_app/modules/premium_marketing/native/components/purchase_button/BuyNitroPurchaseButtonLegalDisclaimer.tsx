@@ -1,14 +1,14 @@
 // discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import set from "../../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
+import getPremiumPlanItem from "../../../../../utils/PremiumUtils.tsx";
+import getPremiumPlanItemDefault from "../../../../../utils/PremiumUtils.tsx";
+import ME from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,24 +1,24 @@
 // discord_app/utils/PermissionUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import compareGuildRoles from "compareGuildRoles" /* 1987 */;
-import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "storeThread" /* 4023 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_12 from "fetchFingerprint" /* 1218 */;
-import closure_13 from "ensureGuildLoaded" /* 1391 */;
-import closure_14 from "trackCommunicationDisabled" /* 1990 */;
-import closure_15 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_16 from "createGuildRecordFromRust" /* 1910 */;
-import closure_17 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import deserializeResult from "module_0" /* 0 */;
-import importAllResult from "fromString" /* 506 */;
-import importDefaultResult from "apply" /* 12 */;
+import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
+import PermissionOverwriteType from "../flow/Server.tsx";
+import compareGuildRoles from "GuildRoleUtils.tsx";
+import GuildMemberFlags from "../modules/guild_automod/AutomodPermissionUtils.tsx";
+import closure_4 from "../modules/impersonate/ImpersonateStore.tsx";
+import closure_5 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_6 from "../modules/threads/JoinedThreadsStore.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
+import { hasPermission } from "../records/GuildRoleRecord.tsx";
+import closure_12 from "../stores/AuthenticationStore.tsx";
+import closure_13 from "../stores/ChannelStore.tsx";
+import closure_14 from "../stores/GuildMemberStore.tsx";
+import closure_15 from "../stores/GuildRoleStore.tsx";
+import closure_16 from "../stores/GuildStore.tsx";
+import closure_17 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import deserializeResult from "../index.native.tsx";
+import importAllResult from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import importDefaultResult from "../../_runtime/00012_apply.js";
 
 require = arg1;
 function applyOverwrites(id, member, closure_23, overwrites) {

@@ -1,10 +1,10 @@
 // discord_app/design/components/mana-assets/native/generated/NitroSupergraphicLogo.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import metadataDefault from "metadata" /* 6005 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../tokens/native/useToken.tsx";
+import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/NitroSupergraphicLogo-2x.png.js";
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

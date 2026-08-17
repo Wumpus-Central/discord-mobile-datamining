@@ -1,8 +1,8 @@
 // discord_app/modules/channel/useCreateChannelSubmit.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../_runtime/00019_noop.js";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 ({ ChannelTypes: error, Permissions: closure_8 } = ME);

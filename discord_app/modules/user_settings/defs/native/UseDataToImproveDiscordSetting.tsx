@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/UseDataToImproveDiscordSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import setDefault from "set" /* 4827 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import handleRequestSuccess from "handleRequestSuccess" /* 14212 */;
-import closure_3 from "hasConsented" /* 5258 */;
-import { Consents } from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
+import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import handleRequestSuccess from "../../../../actions/ConsentActionCreators.tsx";
+import closure_3 from "../../../../stores/ConsentStore.tsx";
+import { Consents } from "../../../../Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

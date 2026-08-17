@@ -1,6 +1,6 @@
 // discord_app/modules/action_sheet/native/ActionSheetStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 let array = new Array();
 let c1;

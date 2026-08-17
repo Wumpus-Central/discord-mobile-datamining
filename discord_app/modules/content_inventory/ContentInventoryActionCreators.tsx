@@ -1,14 +1,14 @@
 // discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import showUserProfileAll from "showUserProfile" /* 11124 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateImpressionCaches" /* 11123 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
+import showUserProfileAll from "ContentInventoryPlatformActionCreators.native.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import closure_7 from "ContentInventoryPersistedStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 

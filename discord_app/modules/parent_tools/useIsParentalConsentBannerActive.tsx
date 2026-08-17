@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/useIsParentalConsentBannerActive.tsx
-import set from "set" /* 2 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14223 */;
-import frozen from "frozen" /* 14225 */;
+import set from "../../../_runtime/00002_set.js";
+import useParentalConsentWarning from "useParentalConsentWarning.tsx";
+import frozen from "ParentalConsentWarningTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 

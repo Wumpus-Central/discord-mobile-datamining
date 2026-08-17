@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateUtils.tsx
-import set from "set" /* 2 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1901 */;
+import set from "../../../../../_runtime/00002_set.js";
+import parseSkuIdFromServerData from "../../utils/CollectiblesAssetUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/transformStickers.tsx
-import set from "set" /* 2 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import apexExperiment from "apexExperiment" /* 8177 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getStickerExtensionFromFormatType from "../../../stickers/StickersUtils.tsx";
+import apexExperiment from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
 

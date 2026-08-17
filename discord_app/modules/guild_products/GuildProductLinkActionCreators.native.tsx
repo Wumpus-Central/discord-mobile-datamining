@@ -1,7 +1,7 @@
 // discord_app/modules/guild_products/GuildProductLinkActionCreators.native.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4656 from "module_4656" /* 4656 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import _modDef4656 from "../../actions/native/AlertActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 

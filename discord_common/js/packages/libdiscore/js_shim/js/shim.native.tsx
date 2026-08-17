@@ -1,7 +1,7 @@
 // discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx
-import set from "set" /* 2 */;
-import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1918 */;
-import _initLibdiscore from "_initLibdiscore" /* 1920 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import LIBDISCORE_JSI from "../../mobile/js/index.tsx";
+import _initLibdiscore from "initLibdiscore.native.tsx";
 
 let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 

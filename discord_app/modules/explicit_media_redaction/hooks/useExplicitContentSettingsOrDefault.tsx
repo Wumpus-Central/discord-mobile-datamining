@@ -1,8 +1,8 @@
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import resolveExplicitContentSettingWithDefaults from "../SensitiveMediaExplicitRedactionSettingsUtils.tsx";
+import resolveGoreSettingWithDefaults from "../SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import closure_2 from "../../user_settings/UserSettingsProtoStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");

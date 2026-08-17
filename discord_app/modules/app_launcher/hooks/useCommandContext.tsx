@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/hooks/useCommandContext.tsx
-import closure_0 from "noop" /* 19 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
+import closure_0 from "../../../../_runtime/00019_noop.js";
+import closure_1 from "../../../stores/GuildStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
 

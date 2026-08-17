@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/getStreamURL.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
+import set from "../../../../_runtime/00002_set.js";
+import items3 from "../Constants.tsx";
 
 const validStreamURL = items3.validStreamURL;
 const result = set.fileFinishedImporting("modules/activities/utils/getStreamURL.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/FeedProductList.tsx
-import noopAll from "noop" /* 19 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9172 */;
-import sharedValueDefault from "sharedValue" /* 14434 */;
-import ShopCardGridItemDefault from "ShopCardGridItem" /* 14968 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardV2.tsx";
+import sharedValueDefault from "SkeletonCard.tsx";
+import ShopCardGridItemDefault from "CollectiblesShopCardsGrid.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function SkeletonGrid(accessibilityLabel) {

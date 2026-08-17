@@ -1,16 +1,16 @@
 // discord_app/modules/quests/native/BountiesCtaHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 14418 */;
-import _modDef14438 from "module_14438" /* 14438 */;
-import metadataDefault from "metadata" /* 14439 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "getOrCreateSet" /* 14437 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet.tsx";
+import _modDef14438 from "BountiesBannerBackground.tsx";
+import metadataDefault from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../AdContentSeenStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { items } from "../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
 import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";

@@ -1,6 +1,6 @@
 // discord_app/modules/qualtrics/QualtricsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 let obj = { surveys: new Map() };
 const Store = initializeDefault.Store;

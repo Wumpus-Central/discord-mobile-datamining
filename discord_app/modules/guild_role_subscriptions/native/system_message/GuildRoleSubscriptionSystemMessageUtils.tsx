@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import identityHook from "identityHook" /* 8211 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import collectGuildAnalyticsMetadataDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import trackInviteDefault from "../../../../actions/MessageActionCreators.tsx";
+import identityHook from "../../GuildRoleSubscriptionSystemMessageUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx");

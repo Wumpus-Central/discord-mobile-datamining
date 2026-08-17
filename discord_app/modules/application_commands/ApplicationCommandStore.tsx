@@ -1,9 +1,9 @@
 // discord_app/modules/application_commands/ApplicationCommandStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "handlePermissionsChange" /* 4970 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/ChannelSectionStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
 
 const require = arg1;
 function handleInit() {

@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/useCurrentEmbeddedApplication.tsx
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11234 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 

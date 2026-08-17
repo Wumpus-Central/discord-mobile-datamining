@@ -1,18 +1,18 @@
 // discord_app/modules/keyboard/native/PortalKeyboardPlaceholder.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1895 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4239 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5444 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7925 */;
-import useGradientBottom from "useGradientBottom" /* 8501 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import KeyboardTypes from "KeyboardTypes.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight.native.tsx";
+import useKeyboardTypeDefault from "useKeyboardType.tsx";
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight.tsx";
+import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
+import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PortalKeyboardPlaceholderInner(keyboardType) {

@@ -1,8 +1,8 @@
 // discord_app/modules/channel/useTextareaPlaceholderAndLabels.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import computeChannelNameDefault from "useChannelName.tsx";
+import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, ChannelTypesSets: c4 } = ME);
 const result = set.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");

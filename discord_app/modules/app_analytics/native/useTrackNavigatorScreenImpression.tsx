@@ -1,7 +1,7 @@
 // discord_app/modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import trackImpressionDefault from "trackImpression" /* 9177 */;
+import set from "../../../../_runtime/00002_set.js";
+import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import trackImpressionDefault from "../useTrackImpression.tsx";
 
 const result = set.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 

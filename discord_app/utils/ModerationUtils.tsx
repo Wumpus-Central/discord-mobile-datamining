@@ -1,10 +1,10 @@
 // discord_app/utils/ModerationUtils.tsx
-import set from "set" /* 2 */;
-import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import items2 from "items" /* 4068 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import unsafe_getRawColor from "../../discord_common/js/packages/tokens/shims.native.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import create from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import items2 from "../modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx";
+import ME from "../Constants.tsx";
 
 function mapColorToHighlightColor(arg0) {
   if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {

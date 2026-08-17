@@ -1,10 +1,10 @@
 // discord_app/modules/coded_links/MessageCodedLinkManager.tsx
-import trimTrailingPunctuationDefault from "trimTrailingPunctuation" /* 4358 */;
-import initializeDefault from "initialize" /* 5038 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleGuildTemplateResolveSuccess" /* 7429 */;
-import closure_5 from "updateInvite" /* 4359 */;
+import trimTrailingPunctuationDefault from "findCodedLinks.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../guild_templates/GuildTemplateStore.tsx";
+import closure_5 from "../../stores/InviteStore.tsx";
 
 const require = arg1;
 function resolveMessageCodedLinks(content) {

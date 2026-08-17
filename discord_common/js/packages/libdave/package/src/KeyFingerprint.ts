@@ -1,5 +1,5 @@
 // discord_common/js/packages/libdave/package/src/KeyFingerprint.ts
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _generateKeyFingerprint() {
   const self = this;

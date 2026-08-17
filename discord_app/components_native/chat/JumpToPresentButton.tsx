@@ -1,15 +1,15 @@
 // discord_app/components_native/chat/JumpToPresentButton.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateChatInputContainerHeight" /* 8682 */;
-import { useChatInputContainerHeight as closure_5 } from "updateChatInputContainerHeight" /* 8682 */;
-import closure_6 from "_handleConnectionOpen" /* 4495 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../design/tokens/native/useToken.tsx";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../modules/chat_input/native/useChatBottomManagerUIStore.tsx";
+import { useChatInputContainerHeight as closure_5 } from "../../modules/chat_input/native/useChatBottomManagerUIStore.tsx";
+import closure_6 from "../../modules/gateway/GatewayConnectionStore.tsx";
+import closure_7 from "../../stores/MessageStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 require = arg1;
 noopAll;

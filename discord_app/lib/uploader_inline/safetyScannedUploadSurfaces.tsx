@@ -1,6 +1,6 @@
 // discord_app/lib/uploader_inline/safetyScannedUploadSurfaces.tsx
-import set from "set" /* 2 */;
-import UploadTypes2 from "UploadTypes" /* 8380 */;
+import set from "../../../_runtime/00002_set.js";
+import UploadTypes2 from "../../modules/image_cropping/web/ImageCroppingConstants.tsx";
 
 const UploadTypes = UploadTypes2.UploadTypes;
 const obj = { USER_DEFAULT_PROFILE_AVATAR: "USER_DEFAULT_PROFILE_AVATAR", USER_DEFAULT_PROFILE_BANNER: "USER_DEFAULT_PROFILE_BANNER", USER_GUILD_PROFILE_AVATAR: "USER_GUILD_PROFILE_AVATAR", USER_GUILD_PROFILE_BANNER: "USER_GUILD_PROFILE_BANNER", GUILD_ICON: "GUILD_ICON", GUILD_BANNER: "GUILD_BANNER", GUILD_DISCOVERY_SPLASH: "GUILD_DISCOVERY_SPLASH", GUILD_INVITE_SPLASH: "GUILD_INVITE_SPLASH", EMOJI: "EMOJI", STICKER: "STICKER" };

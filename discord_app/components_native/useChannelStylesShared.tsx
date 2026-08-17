@@ -1,7 +1,7 @@
 // discord_app/components_native/useChannelStylesShared.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../_runtime/00002_set.js";
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
 let obj = { container: { flex: 1 }, background: null };
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };

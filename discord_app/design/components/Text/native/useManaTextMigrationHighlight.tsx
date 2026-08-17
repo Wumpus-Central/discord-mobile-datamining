@@ -1,10 +1,10 @@
 // discord_app/design/components/Text/native/useManaTextMigrationHighlight.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import importDefaultResult from "getUserAgnosticState" /* 4737 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importDefaultResult from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
+import closure_4 from "../../../../modules/user_settings/ThemeStore.tsx";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let c3 = importDefaultResult;

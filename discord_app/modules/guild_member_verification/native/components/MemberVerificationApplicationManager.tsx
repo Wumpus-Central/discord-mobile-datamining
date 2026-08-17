@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_4 from "../../UserGuildJoinRequestStore.tsx";
 
 let require = arg1;
 initializeDefault;

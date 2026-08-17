@@ -1,6 +1,6 @@
 // discord_app/actions/native/CreateGuildActionCreators.tsx
-import closure_2 from "comparator" /* 1980 */;
-import { InstantInviteSources } from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildChannelStore.tsx";
+import { InstantInviteSources } from "../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");

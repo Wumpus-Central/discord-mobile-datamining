@@ -1,25 +1,25 @@
 // discord_app/modules/guild_scheduled_events/native/guild_sidebar/GuildLiveChannelNotice.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import smartOutput from "smartOutput" /* 8308 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import getChannelFromEvent from "getChannelFromEvent" /* 8788 */;
-import map from "map" /* 9288 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getActiveStageChannelIds" /* 4989 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "reset" /* 4652 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
-import { GuildScheduledEventEntityTypes as closure_11 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { Permissions } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "get defaultRules" /* 6807 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import smartOutput from "../../../markup/MarkupRulesUtils.tsx";
+import useIsUsingClientThemeDefault from "../../../client_themes/native/useIsUsingClientTheme.tsx";
+import getChannelFromEvent from "../../utils/EntityUtils.tsx";
+import map from "../../../screen/native/useScaledTextLineHeight.android.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stage_channels/StageChannelParticipantStore.tsx";
+import closure_7 from "../../../stage_channels/StageInstanceStore.tsx";
+import closure_8 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_9 from "../../../../stores/PermissionStore.tsx";
+import closure_10 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import { GuildScheduledEventEntityTypes as closure_11 } from "../../GuildScheduledEventsConstants.tsx";
+import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../markup/MarkupUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function UserSummaryRow(arg0) {

@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import items from "items" /* 5297 */;
-import showShareActionSheet from "showShareActionSheet" /* 9067 */;
+import set from "../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import items from "../FamilyCenterConstants.tsx";
+import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
 
 let closure_3 = items.FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const result = set.fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");

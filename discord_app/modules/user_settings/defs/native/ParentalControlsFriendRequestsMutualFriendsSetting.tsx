@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualFriendsSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import result2 from "result" /* 14182 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
-import { FriendSourceFlags } from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import hasFlagAll from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../parent_tools/FamilyCenterStore.tsx";
+import { FriendSourceFlags } from "../../../../Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

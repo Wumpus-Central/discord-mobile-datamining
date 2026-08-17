@@ -1,13 +1,13 @@
 // discord_app/modules/app_icons/native/SettingsItemAppIcon.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7945 */;
-import FreemiumAppIconIds from "FreemiumAppIconIds" /* 7947 */;
-import ClydeIcon from "ClydeIcon" /* 9551 */;
-import AppIconDefault from "AppIcon" /* 14833 */;
-import { getIconById } from "items" /* 7946 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import fetchCurrentAppIcon from "AppIconUtils.tsx";
+import FreemiumAppIconIds from "../AppIconTypes.tsx";
+import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import AppIconDefault from "AppIcon.tsx";
+import { getIconById } from "AppIconConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

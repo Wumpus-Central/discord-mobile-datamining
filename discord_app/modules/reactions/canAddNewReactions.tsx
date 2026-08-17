@@ -1,7 +1,7 @@
 // discord_app/modules/reactions/canAddNewReactions.tsx
-import closure_0 from "recomputeGuild" /* 4977 */;
-import closure_1 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_0 from "../../stores/GuildVerificationStore.tsx";
+import closure_1 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { YOU_BAR_SPRING_CONFIG } from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { YOU_BAR_SPRING_CONFIG } from "YouBarConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_6 = { code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };

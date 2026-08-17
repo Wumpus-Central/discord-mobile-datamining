@@ -1,8 +1,8 @@
 // discord_app/modules/headless_tasks/android/DirectReply.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
 
 let closure_5 = new timestampDefault("DirectReply");
 let tmp = new timestampDefault("DirectReply");

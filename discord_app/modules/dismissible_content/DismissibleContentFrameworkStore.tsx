@@ -1,12 +1,12 @@
 // discord_app/modules/dismissible_content/DismissibleContentFrameworkStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1378 */;
-import set2 from "set" /* 1382 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../debug/Logger.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isSingleUseDismissibleContent from "DismissibleContentTypes.tsx";
+import set2 from "DismissibleContentFatigueConfig.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = new timestampDefault("DCF");

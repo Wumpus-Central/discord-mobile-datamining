@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/isVoiceEmbeddedActivity.tsx
-import set from "set" /* 692 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
+import set from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../../stores/VoiceStateStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");

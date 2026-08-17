@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/UserProfilePersonalWidget.tsx
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import WidgetType from "WidgetType" /* 5366 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 5376 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
+import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import PersonalWidgetSectionType from "../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
+import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 
 require = arg1;
 function isFieldEmpty(title) {

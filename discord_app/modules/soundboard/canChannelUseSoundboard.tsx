@@ -1,8 +1,8 @@
 // discord_app/modules/soundboard/canChannelUseSoundboard.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

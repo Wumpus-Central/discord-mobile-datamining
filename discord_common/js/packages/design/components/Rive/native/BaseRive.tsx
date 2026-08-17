@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import { DataBindByName } from "../../../../../../../_runtime/04110_DataBindByName.js";
 
 const require = arg1;

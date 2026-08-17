@@ -1,9 +1,9 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import ChatInputGuardDefault from "ChatInputGuard.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(channel) {

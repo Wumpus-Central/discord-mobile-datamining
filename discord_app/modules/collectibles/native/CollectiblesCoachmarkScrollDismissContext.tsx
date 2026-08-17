@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx
-import importAllResult from "noop" /* 19 */;
-import { NOOP } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let c0 = importAllResult;
 const context = importAllResult.createContext({

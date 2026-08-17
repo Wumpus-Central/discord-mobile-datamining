@@ -1,20 +1,20 @@
 // discord_app/design/components/Text/native/Text.tsx
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 4736 */;
-import PlainTextExperimentProvider from "PlainTextExperimentProvider" /* 4738 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4739 */;
-import set from "set" /* 4742 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4743 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { TextVariantsFlat } from "TEXT_VARIANT" /* 4735 */;
-import useManaTextMigrationHighlight from "useManaTextMigrationHighlight" /* 4736 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
+import PlainTextExperimentProvider from "PlainTextExperimentContext.tsx";
+import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
+import set from "PlainTextEligibility.tsx";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04743___INTERNAL_VIEW_CONFIG.js";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Fonts } from "../../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import { TextVariantsFlat } from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
+import useManaTextMigrationHighlight from "useManaTextMigrationHighlight.tsx";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 let closure_3 = ["color", "fontSize", "fontFamily", "fontWeight", "fontStyle", "textAlign", "textAlignVertical", "verticalAlign", "textDecorationLine", "lineHeight", "letterSpacing"];

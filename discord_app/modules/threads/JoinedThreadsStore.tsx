@@ -1,11 +1,11 @@
 // discord_app/modules/threads/JoinedThreadsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import resetDefault from "reset" /* 4024 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import resetDefault from "../../lib/MuteTimers.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function storeThread(channel) {
   let hasItem = ALL_CHANNEL_TYPES.has(channel.type);

@@ -1,10 +1,10 @@
 // discord_app/design/components/Forms/native/FormCheckbox.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 createCacheKey = { checkbox: null, unselected: null, selected: null, checkmark: null };

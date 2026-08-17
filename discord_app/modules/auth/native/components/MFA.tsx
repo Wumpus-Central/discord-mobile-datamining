@@ -1,8 +1,8 @@
 // discord_app/modules/auth/native/components/MFA.tsx
-import applyDefault from "apply" /* 12 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import { jsx } from "jsxProd" /* 21 */;
+import applyDefault from "../../../../../_runtime/00012_apply.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function statesAreEqual(arg0, arg1) {

@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/utils/calculatePIPState.tsx
-import isStreamKey from "isStreamKey" /* 4531 */;
-import PIPReferenceDimensions from "PIPReferenceDimensions" /* 16306 */;
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "reset" /* 4652 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import isStreamKey from "../../../go_live/utils/StreamKeyUtils.tsx";
+import PIPReferenceDimensions from "../pip/VoicePanelPIPUtils.tsx";
+import closure_2 from "../../../calls/ChannelRTCStore.tsx";
+import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
+import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");

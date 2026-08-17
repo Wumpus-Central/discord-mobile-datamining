@@ -1,8 +1,8 @@
 // discord_app/modules/touch_analytics/TouchEventAnalyticsManager.android.tsx
-import initializeDefault from "initialize" /* 4720 */;
-import apexExperiment from "apexExperiment" /* 13559 */;
-import enforcingDefault from "enforcing" /* 13914 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import apexExperiment from "../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 require = arg1;
 function updateEnabledState() {

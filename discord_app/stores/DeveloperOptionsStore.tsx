@@ -1,10 +1,10 @@
 // discord_app/stores/DeveloperOptionsStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import importDefaultResult from "fails" /* 584 */;
+import set from "../../_runtime/00002_set.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import ME from "../Constants.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import importDefaultResult from "../../discord_common/js/packages/backoff/Backoff.tsx";
 
 let closure_0 = require;
 let c1 = importDefault;

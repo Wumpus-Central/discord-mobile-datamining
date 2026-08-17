@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileTextButtonGroup.tsx
-import noopAll from "noop" /* 19 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PROFILE_SIDE_PADDING } from "Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

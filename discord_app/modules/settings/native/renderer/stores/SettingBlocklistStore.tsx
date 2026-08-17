@@ -1,6 +1,6 @@
 // discord_app/modules/settings/native/renderer/stores/SettingBlocklistStore.tsx
-import set from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import defaultStatesAreEqual from "../../../../../lib/ZustandStore.tsx";
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
   const obj = { blocklist: new Set() };

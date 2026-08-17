@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import memoResult1Default from "memoResult1" /* 11437 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import memoResult1Default from "VoicePanelChatView.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function renderChat(shown) {

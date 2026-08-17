@@ -1,9 +1,9 @@
 // discord_app/modules/channel/useVoiceChannelStartTime.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "_handleConnectionOpen" /* 4495 */;
-import closure_4 from "handleConnectionOpen" /* 4826 */;
-import closure_5 from "_toTimestampMs" /* 10509 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../gateway/GatewayConnectionStore.tsx";
+import closure_4 from "../../stores/GuildAvailabilityStore.tsx";
+import closure_5 from "VoiceChannelStartTimeStore.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");

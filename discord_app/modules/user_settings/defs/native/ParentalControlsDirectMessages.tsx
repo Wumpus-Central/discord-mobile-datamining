@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import result2 from "result" /* 14182 */;
-import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
+import closure_2 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/native/components/StageSparkle.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 8069 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../../_runtime/08069_registerAsset.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function StageSparkleInner(style) {

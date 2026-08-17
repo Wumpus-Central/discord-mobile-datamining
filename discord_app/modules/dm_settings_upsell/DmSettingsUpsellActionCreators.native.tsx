@@ -1,9 +1,9 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx
-import set from "set" /* 2 */;
-import Storage3 from "Storage" /* 595 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import DM_SETTINGS_UPSELL_LAST_SHOWN_KEY from "DM_SETTINGS_UPSELL_LAST_SHOWN_KEY" /* 16555 */;
+import set from "../../../_runtime/00002_set.js";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import DM_SETTINGS_UPSELL_LAST_SHOWN_KEY from "DmSettingsUpsellConstants.tsx";
 
 ({ DM_SETTINGS_UPSELL_LAST_SHOWN_KEY: c3, DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS: c4 } = DM_SETTINGS_UPSELL_LAST_SHOWN_KEY);
 let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx");

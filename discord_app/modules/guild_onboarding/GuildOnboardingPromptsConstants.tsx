@@ -1,11 +1,11 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import isNullOrEmpty from "../../utils/StringUtils.tsx";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { PlatformTypes } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function serverPromptToClientPrompt(id) {

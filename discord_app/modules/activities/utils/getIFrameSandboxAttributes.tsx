@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/getIFrameSandboxAttributes.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 const result = set.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesPurchaseStore.tsx
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import apply from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 require = arg1;
 let map = new Map();

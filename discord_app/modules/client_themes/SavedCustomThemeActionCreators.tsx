@@ -1,8 +1,8 @@
 // discord_app/modules/client_themes/SavedCustomThemeActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "validateSavedTheme" /* 4308 */;
-import { Endpoints } from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "SavedCustomThemeStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx
-import noopAll from "noop" /* 19 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import PlaceholderDefault from "Placeholder" /* 16901 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import PlaceholderDefault from "../components/Placeholder.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { ApplicationTypes } from "../../../applications/ApplicationConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {

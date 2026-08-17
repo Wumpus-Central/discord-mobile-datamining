@@ -1,13 +1,13 @@
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
-import set2 from "set" /* 500 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import set2 from "../../../utils/PlatformUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import resolveNsfwTogglesWithDefaults from "../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;

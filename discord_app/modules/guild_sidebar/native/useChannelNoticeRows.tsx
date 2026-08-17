@@ -1,13 +1,13 @@
 // discord_app/modules/guild_sidebar/native/useChannelNoticeRows.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "completeStep" /* 11644 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow" /* 5281 */;
-import { MFALevels } from "ME" /* 676 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1388 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../guild_progress/GuildProgressStore.tsx";
+import closure_6 from "../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import { ChannelListChannelNoticeRow as closure_9 } from "../GuildSidebarConstants.tsx";
+import { MFALevels } from "../../../Constants.tsx";
+import ContentDismissActionType from "../../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
 ({ ContentDismissActionType: unpackModuleId, DismissibleContentGroupName: closure_12 } = ContentDismissActionType);

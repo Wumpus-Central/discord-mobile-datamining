@@ -1,11 +1,11 @@
 // discord_app/modules/saved_messages/native/ForLaterNitroUpsellBar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8481 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
+import SAVED_BOOKMARKS_MAX from "../../../../discord_common/js/shared/shared-constants/SavedMessagesConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);

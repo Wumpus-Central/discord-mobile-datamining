@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 8174 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import createGiftIntentEmbed from "createGiftIntentEmbed" /* 8289 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08174_registerAsset.js";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import createGiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 let closure_3 = createCacheKey.createNativeStyleProperties({ iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG });
 let obj = { iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG };

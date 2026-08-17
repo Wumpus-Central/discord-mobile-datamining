@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 6877 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import ImageWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { UserSettingsSensitiveContentFilters } from "../../family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx";
 
 obj = {

@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx
-import noopAll from "noop" /* 19 */;
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 16401 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

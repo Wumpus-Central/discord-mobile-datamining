@@ -1,10 +1,10 @@
 // discord_app/modules/forums/native/posts/ForumPostTimestamp.tsx
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4734 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
-import { useForumChannelStore } from "set" /* 11177 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useLoadForumUnreadCounts from "../../ForumHooks.tsx";
+import { useForumChannelStore } from "../../ForumChannelStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

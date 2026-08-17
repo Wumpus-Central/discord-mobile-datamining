@@ -1,6 +1,6 @@
 // discord_app/modules/interaction_components/StringSelectActionComponentUtils.tsx
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import closure_2 from "getInteractionComponentStates" /* 8327 */;
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import closure_2 from "LocalInteractionComponentStateStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");

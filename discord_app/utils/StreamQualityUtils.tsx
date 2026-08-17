@@ -1,16 +1,16 @@
 // discord_app/utils/StreamQualityUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ApplicationStreamPresets" /* 4562 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
-import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1924 */;
-import { ResolutionTypes } from "DesktopSources" /* 4529 */;
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import closure_3 from "../../_runtime/00019_noop.js";
+import closure_4 from "../stores/ApplicationStreamingSettingsStore.tsx";
+import closure_5 from "../stores/AuthenticationStore.tsx";
+import closure_6 from "../stores/GuildStore.tsx";
+import closure_7 from "../stores/RTCConnectionStore.tsx";
+import closure_8 from "../stores/UserStore.tsx";
+import { AnalyticEvents } from "../Constants.tsx";
+import RESOLUTION_720 from "../modules/go_live/StreamSettingsConstants.tsx";
+import { StreamQualitiesToPremiumType as closure_15 } from "../modules/premium/PremiumConstants.tsx";
+import { ResolutionTypes } from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: unpackModuleId, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = RESOLUTION_720);

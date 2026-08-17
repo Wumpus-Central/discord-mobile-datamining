@@ -1,6 +1,6 @@
 // discord_common/js/packages/kv-storage/js/util/Key.tsx
-import set from "set" /* 2 */;
-import TableId from "TableId" /* 1962 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import TableId from "../types/index.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 

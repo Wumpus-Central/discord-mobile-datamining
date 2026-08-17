@@ -1,12 +1,12 @@
 // discord_app/components_native/premium/PremiumUnverifiedWarning.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import importDefaultResult from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult1 from "initialize" /* 589 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Button from "../../design/void/native.tsx";
+import importDefaultResult from "../../stores/UserStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import importDefaultResult1 from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 createCacheKey = { warning: null };

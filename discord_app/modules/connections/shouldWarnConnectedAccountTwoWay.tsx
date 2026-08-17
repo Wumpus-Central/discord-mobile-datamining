@@ -1,6 +1,6 @@
 // discord_app/modules/connections/shouldWarnConnectedAccountTwoWay.tsx
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [, , , ];
 ({ XBOX: arr[0], PLAYSTATION: arr[1], PLAYSTATION_STAGING: arr[2], CRUNCHYROLL: arr[3] } = ME.PlatformTypes);

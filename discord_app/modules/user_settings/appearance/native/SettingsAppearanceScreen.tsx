@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14609 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
+import closure_5 from "../../SelectivelySyncedUserSettingsStore.tsx";
+import closure_6 from "../../ThemeStore.tsx";
+import DEFAULT_FONT_SCALE_STORE_STATE from "FontScaleStore.tsx";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import { HelpdeskArticles } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 

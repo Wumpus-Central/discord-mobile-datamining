@@ -1,6 +1,6 @@
 // discord_app/modules/slayer_storefront/utils/carouselMediaItems.tsx
-import set from "set" /* 2 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
+import set from "../../../../_runtime/00002_set.js";
+import _httpGetWithCountryCodeQuery from "../../../utils/StoreUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/slayer_storefront/utils/carouselMediaItems.tsx");
 

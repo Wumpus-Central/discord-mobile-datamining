@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import CreatorMonetizationRestrictions from "CreatorMonetizationRestrictions" /* 4016 */;
-import version from "version" /* 4017 */;
-import set from "set" /* 2 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import CreatorMonetizationRestrictions from "../creator_monetization_review/CreatorMonetizationReviewConstants.tsx";
+import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function makeGroupListingIndexSubscriptionListingTag(arg0) {
   return "subscription_listing:" + arg0;

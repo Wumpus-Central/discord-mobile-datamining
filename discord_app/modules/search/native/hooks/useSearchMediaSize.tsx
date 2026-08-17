@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/hooks/useSearchMediaSize.tsx
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import set from "../../../../../_runtime/00002_set.js";
+import MessageEmbedTypes from "../../SearchConstants.tsx";
 
 ({ SEARCH_LIST_HORIZONTAL_PADDING: c0, MEDIA_NUM_COLUMNS: closure_1, MEDIA_ITEM_GAP_WIDTH: obj1 } = MessageEmbedTypes);
 const result = set.fileFinishedImporting("modules/search/native/hooks/useSearchMediaSize.tsx");

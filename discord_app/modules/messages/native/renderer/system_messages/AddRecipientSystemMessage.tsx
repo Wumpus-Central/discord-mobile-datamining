@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import createChannelRecord from "../../../../../records/ChannelRecord.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/UserStore.tsx";
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");

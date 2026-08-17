@@ -1,8 +1,8 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
-import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 9367 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../../_runtime/09367_registerAsset.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
 const result = require("set").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");

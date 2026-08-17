@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/CollectiblesShopV2.tsx
-import _modDef1208 from "module_1208" /* 1208 */;
-import notSupportedDefault from "notSupported" /* 7935 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getUserAgnosticState" /* 4737 */;
-import closure_8 from "handleThemeChange" /* 1302 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "updateCategoriesAndProducts" /* 5301 */;
-import items from "items" /* 678 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import notSupportedDefault from "../../payments/native/hooks/NativePaymentHooks.android.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_8 from "../../user_settings/ThemeStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import closure_10 from "../CollectiblesCategoryStore.tsx";
+import items from "../CollectiblesShopConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class CollectiblesShopV2 {

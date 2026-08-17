@@ -1,5 +1,5 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");

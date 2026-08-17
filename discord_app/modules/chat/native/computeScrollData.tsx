@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/computeScrollData.tsx
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import Changeset from "Changeset" /* 8158 */;
+import closure_2 from "../../a11y/AccessibilityStore.tsx";
+import Changeset from "../../messages/native/renderer/RowGeneratorConstants.tsx";
 
 const require = arg1;
 ({ RowType: c3, SeparatorType: c4 } = Changeset);

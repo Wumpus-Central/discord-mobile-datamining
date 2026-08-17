@@ -1,5 +1,5 @@
 // discord_app/modules/screen_recording/native/StudyConfig.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const obj = {};
 const result = set.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/libdiscore/stores/DualReadUtils.tsx
-import set3 from "set" /* 2 */;
-import addAll from "add" /* 594 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
+import set3 from "../../../../_runtime/00002_set.js";
+import addAll from "../../../../discord_common/js/packages/flux/LastFewActions.tsx";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import areSetsEqual from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
 
 function deepEqualImpl(set, set1, map, arg3) {
   if (set === set1) {

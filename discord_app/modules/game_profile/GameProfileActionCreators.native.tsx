@@ -1,9 +1,9 @@
 // discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
 

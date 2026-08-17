@@ -1,14 +1,14 @@
 // discord_app/modules/threads/ArchivedThreadsStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 1400 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7514 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import closure_7 from "storeThread" /* 4023 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import trackForumChannelSeenBatch from "../forums/tracking/Tracking.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { ALL_CHANNEL_TYPES } from "../../records/ChannelRecord.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/ReadStateStore.tsx";
+import closure_7 from "JoinedThreadsStore.tsx";
 
 require = arg1;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {

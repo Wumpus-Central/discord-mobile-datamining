@@ -1,10 +1,10 @@
 // discord_app/design/void/Form/native/Form.tsx
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import context2 from "context" /* 6939 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

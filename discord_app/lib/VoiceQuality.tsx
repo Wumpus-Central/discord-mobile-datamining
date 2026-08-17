@@ -1,11 +1,11 @@
 // discord_app/lib/VoiceQuality.tsx
-import applyDefault from "apply" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import onDefault from "on" /* 4572 */;
-import getSamples from "getSamples" /* 7490 */;
-import getStatsDefault from "getStats" /* 7496 */;
-import _initStatsDefault from "_initStats" /* 13092 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
+import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
+import getSamples from "Histogram.tsx";
+import getStatsDefault from "SystemResources.tsx";
+import _initStatsDefault from "NetworkQuality.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 let obj = { InputDeviceSampleRateChanged: "input-device-sample-rate-changed" };

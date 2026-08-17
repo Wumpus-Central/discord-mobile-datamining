@@ -1,11 +1,11 @@
 // discord_app/modules/captcha/native/HcaptchaModal.tsx
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "_getSystemLocale" /* 1994 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../user_settings/LocaleStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class HcaptchaModal {

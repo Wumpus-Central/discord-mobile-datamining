@@ -1,13 +1,13 @@
 // discord_app/modules/connections/native/VerifiedRoleIcon.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import LinkIcon from "LinkIcon" /* 4318 */;
-import useRoleIcon from "useRoleIcon" /* 7163 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 7183 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import useRoleIcon from "../../guild_boosting/native/RoleIconUtils.tsx";
+import getHigherContrastColor from "../../user_profile/utils/getHigherContrastColor.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

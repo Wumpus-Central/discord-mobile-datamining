@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx
-import v1All from "v1" /* 514 */;
-import closure_4 from "initializeState" /* 7453 */;
+import v1All from "../../../../../_runtime/00514_v1.js";
+import closure_4 from "../../QuestStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");

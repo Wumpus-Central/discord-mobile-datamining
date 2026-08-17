@@ -1,10 +1,10 @@
 // discord_app/modules/soundboard/native/SoundboardManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _initializeDefault from "_initialize" /* 13904 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "handleSoundCreateOrUpdate" /* 4780 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import _initializeDefault from "../BaseSoundboardManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../SoundboardStore.tsx";
 
 const require = arg1;
 let map = new Map();

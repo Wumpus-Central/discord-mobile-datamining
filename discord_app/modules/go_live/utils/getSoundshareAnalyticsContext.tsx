@@ -1,5 +1,5 @@
 // discord_app/modules/go_live/utils/getSoundshareAnalyticsContext.tsx
-import closure_0 from "initialize" /* 4504 */;
+import closure_0 from "../../game_detection/RunningGameStore.native.tsx";
 
 const result = require("set").fileFinishedImporting("modules/go_live/utils/getSoundshareAnalyticsContext.tsx");
 

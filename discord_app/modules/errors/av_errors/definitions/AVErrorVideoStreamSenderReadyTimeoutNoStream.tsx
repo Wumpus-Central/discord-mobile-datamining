@@ -1,6 +1,6 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "makeTimeoutKey" /* 4776 */;
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/VideoStreamStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx");

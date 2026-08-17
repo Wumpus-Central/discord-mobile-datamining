@@ -1,9 +1,9 @@
 // discord_app/modules/reanimated/native/REAWorkaroundView.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4117 */;
-import importDefaultResult from "cancelAnimation" /* 1654 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
+import importDefaultResult from "../../../../_runtime/01654_cancelAnimation.js";
 
 const jsx = jsxProd.jsx;
 let closure_1 = importDefaultResult.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);

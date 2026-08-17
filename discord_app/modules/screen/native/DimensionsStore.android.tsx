@@ -1,13 +1,13 @@
 // discord_app/modules/screen/native/DimensionsStore.android.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import batchUpdates from "batchUpdates" /* 705 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
-import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1642 */;
-import readWindowSizeForAppEntry from "readWindowSizeForAppEntry" /* 1894 */;
-import keys from "keys" /* 644 */;
-import importDefaultResult from "subscribeToKeyboardUIStore" /* 1496 */;
-import importDefaultResult1 from "module_1630" /* 1630 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
+import APP_ENTRY_KEYS from "../../window/native/AppEntryKey.tsx";
+import readWindowSizeForAppEntry from "readAppEntryWindowMetrics.android.tsx";
+import keys from "../../../../_runtime/00644_keys.js";
+import importDefaultResult from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
+import importDefaultResult1 from "../../safe_area/SafeAreaStore.native.tsx";
 
 function getDimensionsStoreStateForEntry(appEntryKey) {
   const size = {};

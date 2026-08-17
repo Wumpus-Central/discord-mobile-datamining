@@ -1,6 +1,6 @@
 // discord_app/modules/hotspot/index.tsx
-import importDefaultResult from "set" /* 7194 */;
-import HotspotLocations from "HotspotLocations" /* 7195 */;
+import importDefaultResult from "HotspotStore.tsx";
+import HotspotLocations from "Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/hotspot/index.tsx");
 for (const key10022 in tmp4) {

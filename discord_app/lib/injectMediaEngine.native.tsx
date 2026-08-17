@@ -1,6 +1,6 @@
 // discord_app/lib/injectMediaEngine.native.tsx
-import set from "set" /* 2 */;
-import inject from "inject" /* 4499 */;
+import set from "../../_runtime/00002_set.js";
+import inject from "../../discord_common/js/packages/media-engine/native/inject.tsx";
 import { logger } from "../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx";
 
 inject.inject({

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
+import MAX_SUBSCRIPTION_TIERS from "GuildRoleSubscriptionsConstants.tsx";
 
 let closure_2 = MAX_SUBSCRIPTION_TIERS.GuildRoleSubscriptionBenefitTypes;
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;

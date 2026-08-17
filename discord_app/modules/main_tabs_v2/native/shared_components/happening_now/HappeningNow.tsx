@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15332 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import { Gesture } from "LegacyBaseButton" /* 6377 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import LegacyBaseButton from "../../../../../../_runtime/06377_LegacyBaseButton.js";
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createFakeSharedValue from "../../../../reanimated/ReanimatedHelperTypes.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import { Gesture } from "../../../../../../_runtime/06377_LegacyBaseButton.js";
 
 require = arg1;
 function renderCard(kind, fullWidth) {

@@ -1,11 +1,11 @@
 // discord_app/modules/messages/createMessage.tsx
-import _modDef38 from "module_38" /* 38 */;
-import snowflakeSequence from "snowflakeSequence" /* 7501 */;
-import closure_3 from "processMessage" /* 5013 */;
-import { ReferencedMessageState } from "processMessage" /* 5013 */;
-import closure_5 from "createdAt" /* 1930 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import snowflakeSequence from "createNonce.tsx";
+import closure_3 from "../replies/ReferencedMessageStore.tsx";
+import { ReferencedMessageState } from "../replies/ReferencedMessageStore.tsx";
+import closure_5 from "../../records/UserRecord.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ MessageStates: error, MessageTypes: closure_8, LOCAL_BOT_ID: c9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: unpackModuleId } = ME);

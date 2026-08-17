@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDisconnectCancelButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "withEqualityFn" /* 8664 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_6 from "../../../../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../../VoicePanelStore.tsx";
+import { VoicePanelModes } from "../../../VoicePanelConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_10 = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };

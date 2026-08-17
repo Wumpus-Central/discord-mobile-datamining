@@ -1,23 +1,23 @@
 // discord_app/modules/app_startup/native/NativeAppStartup.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import serializeDefault from "serialize" /* 9 */;
-import enforcingDefault from "enforcing" /* 502 */;
-import Storage4 from "Storage" /* 595 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import databaseNameDefault from "databaseName" /* 1971 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import index from "../../../i18n/native/index.tsx" /* 16442 */;
-import isAnalyticsEndpoint from "isAnalyticsEndpoint" /* 16492 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import timestamp from "timestamp" /* 16512 */;
-import { subscribeToIntlLoadingSuccess as closure_11 } from "_setAppLocale" /* 1995 */;
-import closure_12 from "handleConnectionOpen" /* 1979 */;
-import closure_13 from "getState" /* 7383 */;
-import result from "result" /* 5053 */;
-import ManagerRegistry.native from "../ManagerRegistry.native.tsx" /* 16513 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import serializeDefault from "../../tti_analytics/TTITracker.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import setSecondaryTokenAll from "../../../../discord_common/js/shared/lib/TokenManager.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import databaseNameDefault from "../../app_database/system/DatabaseManager.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import index from "../../../i18n/native/index.tsx";
+import isAnalyticsEndpoint from "../../../lib/superagentPatch.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import timestamp from "../../debug/logThirdPartyImportsDone.tsx";
+import { subscribeToIntlLoadingSuccess as closure_11 } from "../../../intl/IntlLoaderStore.tsx";
+import closure_12 from "../../../stores/SelectedChannelStore.tsx";
+import closure_13 from "../../../stores/native/AppStateStore.tsx";
+import result from "../../../stores/AnalyticsTrackingStore.tsx";
+import ManagerRegistry.native from "../ManagerRegistry.native.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 function linkFromAppsFlyer(arg0) {

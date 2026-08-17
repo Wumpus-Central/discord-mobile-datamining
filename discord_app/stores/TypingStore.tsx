@@ -1,11 +1,11 @@
 // discord_app/stores/TypingStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { SlowmodeType } from "setCooldown" /* 7440 */;
-import { Endpoints } from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_4 from "AuthenticationStore.tsx";
+import closure_5 from "ChannelStore.tsx";
+import { SlowmodeType } from "SlowmodeStore.tsx";
+import { Endpoints } from "../Constants.tsx";
 
 const require = arg1;
 function handleTypingStart(arg0) {

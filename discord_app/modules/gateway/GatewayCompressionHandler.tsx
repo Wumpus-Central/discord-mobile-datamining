@@ -1,12 +1,12 @@
 // discord_app/modules/gateway/GatewayCompressionHandler.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import get from "get" /* 4842 */;
-import supportsZstd from "supportsZstd" /* 13205 */;
-import enforcing from "enforcing" /* 13206 */;
-import _mod13207 from "module_13207" /* 13207 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../../utils/PlatformUtils.tsx";
+import get from "../../utils/ProcessArgs.tsx";
+import supportsZstd from "GatewayZstdUtils.native.tsx";
+import enforcing from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
+import _mod13207 from "../../../_runtime/metro/13207__.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const items = [];

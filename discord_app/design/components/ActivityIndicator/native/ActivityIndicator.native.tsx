@@ -1,9 +1,9 @@
 // discord_app/design/components/ActivityIndicator/native/ActivityIndicator.native.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../tokens/native/useToken.tsx";
 
 const ActivityIndicator = get_ActivityIndicator.ActivityIndicator;
 const jsx = jsxProd.jsx;

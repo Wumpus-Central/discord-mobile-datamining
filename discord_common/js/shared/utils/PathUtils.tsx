@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/PathUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 function getAuthenticationPath(login, arg1, flag, arg3) {
   let tmp = arg1;

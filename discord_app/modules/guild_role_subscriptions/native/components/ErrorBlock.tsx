@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ErrorBlock.tsx
-import noopAll from "noop" /* 19 */;
-import MessageBlock from "MessageBlock" /* 11385 */;
-import MessageBlockDefault from "MessageBlock" /* 11385 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import MessageBlock from "MessageBlock.tsx";
+import MessageBlockDefault from "MessageBlock.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

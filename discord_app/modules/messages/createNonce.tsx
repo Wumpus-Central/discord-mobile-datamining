@@ -1,7 +1,7 @@
 // discord_app/modules/messages/createNonce.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCH from "DISCORD_EPOCH" /* 11 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCH from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 
 let c2 = 0;
 const snowflakeSequence = new DISCORD_EPOCH.SnowflakeSequence();

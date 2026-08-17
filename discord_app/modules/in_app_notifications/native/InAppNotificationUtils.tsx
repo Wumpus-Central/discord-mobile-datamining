@@ -1,11 +1,11 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
-import apply from "apply" /* 12 */;
-import v1 from "v1" /* 514 */;
-import setDefault from "set" /* 687 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "noop" /* 19 */;
-import { REACTION_MILESTONE_COUNTS } from "set" /* 10030 */;
-import ME from "ME" /* 676 */;
+import apply from "../../../../_runtime/00012_apply.js";
+import v1 from "../../../../_runtime/00514_v1.js";
+import setDefault from "../../../utils/Durations.tsx";
+import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { REACTION_MILESTONE_COUNTS } from "InAppNotificationConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, ChannelTypes: closure_6, InAppNotificationTypes: error, MessageEmbedTypes: closure_8, MessageFlags: c9 } = ME);

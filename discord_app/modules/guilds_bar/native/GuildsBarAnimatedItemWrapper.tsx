@@ -1,11 +1,11 @@
 // discord_app/modules/guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import closure_3 from "noop" /* 19 */;
-import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE" /* 4753 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { IOS_POINTER_STYLE } from "../../../design/components/Styles/native/styleConstants.tsx";
+import GUILD_ITEM_SIZE from "GuildsBarConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class UnreadIndicator {

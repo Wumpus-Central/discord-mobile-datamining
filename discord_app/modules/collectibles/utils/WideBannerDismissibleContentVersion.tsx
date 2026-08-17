@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx
-import closure_2 from "map" /* 5352 */;
-import { CollectibleShopTab } from "items" /* 678 */;
+import closure_2 from "../CollectiblesShopHomeStore.tsx";
+import { CollectibleShopTab } from "../CollectiblesShopConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");

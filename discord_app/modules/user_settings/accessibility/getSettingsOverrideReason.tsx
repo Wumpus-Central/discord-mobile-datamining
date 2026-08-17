@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/accessibility/getSettingsOverrideReason.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "updateExistingSettings" /* 4067 */;
-import { SettingsOverrideReasonKeys as closure_3 } from "MAX_FAVORITES" /* 685 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import closure_2 from "../UserSettingsOverridesStore.tsx";
+import { SettingsOverrideReasonKeys as closure_3 } from "../UserSettingsConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

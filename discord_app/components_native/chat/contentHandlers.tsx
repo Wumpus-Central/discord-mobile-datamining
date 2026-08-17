@@ -1,14 +1,14 @@
 // discord_app/components_native/chat/contentHandlers.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import setDefault from "set" /* 4827 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import _copy from "_copy" /* 7167 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8929 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import presentAddedFriendToast from "../../modules/toast/native/ToastUtils.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import QUICK_SWITCHERDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
+import _copy from "../../utils/ClipboardUtils.native.tsx";
+import showUserProfileActionSheetDefault from "../../modules/user_profile/native/showUserProfileActionSheet.tsx";
+import showLongPressURLActionSheetDefault from "../../modules/links/native/showLongPressURLActionSheet.tsx";
+import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 let obj = {

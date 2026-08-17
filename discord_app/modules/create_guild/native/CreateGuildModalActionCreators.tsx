@@ -1,9 +1,9 @@
 // discord_app/modules/create_guild/native/CreateGuildModalActionCreators.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 11877 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
+import set from "../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _startContactSyncForDiscoverability from "../../nuf/native/NUFActionCreators.tsx";
+import NUXGuildTemplatesAnalytics from "CreateGuildConstants.tsx";
 
 ({ CreateGuildModalStates: c3, IN_APP_GUILD_TEMPLATES_MODAL_KEY: c4 } = NUXGuildTemplatesAnalytics);
 const result = set.fileFinishedImporting("modules/create_guild/native/CreateGuildModalActionCreators.tsx");

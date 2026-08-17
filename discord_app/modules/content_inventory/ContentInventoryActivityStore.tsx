@@ -1,11 +1,11 @@
 // discord_app/modules/content_inventory/ContentInventoryActivityStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import closure_4 from "map" /* 9045 */;
-import { ActivityTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../stores/PresenceStore.tsx";
+import closure_4 from "ContentInventoryStore.tsx";
+import { ActivityTypes } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let require = arg1;
 function entryToKey(content) {

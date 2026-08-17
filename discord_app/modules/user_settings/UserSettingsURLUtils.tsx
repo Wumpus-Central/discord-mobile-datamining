@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import keysSorter from "keysSorter" /* 4376 */;
-import WebUserSettings from "WebUserSettings" /* 6726 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { UserSettingsPath } from "MAX_FAVORITES" /* 685 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import keysSorter from "../../../_runtime/04376_keysSorter.js";
+import WebUserSettings from "UserSettingsKeys.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { UserSettingsPath } from "UserSettingsConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, Routes: closure_6 } = ME);

@@ -1,18 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/Elements.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import notSupportedDefault from "notSupported" /* 7935 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 7936 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import registerAssetDefault from "registerAsset" /* 15798 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "addSubscriptionPlan" /* 4044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import notSupportedDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
+import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/15798_registerAsset.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../stores/billing/SubscriptionPlanStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 require = arg1;

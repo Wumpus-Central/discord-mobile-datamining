@@ -1,9 +1,9 @@
 // discord_app/modules/game_relationships/GameRelationshipActionCreators.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import setDefault from "set" /* 4827 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import V6OrEarlierAPIError from "../../errors/index.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function showRequestFailedAlert(arg0) {

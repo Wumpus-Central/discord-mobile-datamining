@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx
-import initialize from "initialize" /* 589 */;
-import navigateToDevTools from "navigateToDevTools" /* 13946 */;
-import DevToolsContentSortButtons from "DevToolsContentSortButtons" /* 13947 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "initialize" /* 1212 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import navigateToDevTools from "../../../devtools/native/components/DevToolsNavigator.tsx";
+import DevToolsContentSortButtons from "../../../devtools/native/components/DevToolsContent.tsx";
+import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import closure_2 from "../../../experiments/ExperimentStore.tsx";
+import closure_3 from "../../../experiments/apex/ApexExperimentStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

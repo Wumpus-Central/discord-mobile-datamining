@@ -1,12 +1,12 @@
 // discord_app/modules/launchpad/native/shared/SimpleGuild.tsx
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import { ME } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getGuildIconSource } from "../../../../records/GuildRecord.tsx";
+import closure_6 from "../../../../stores/GuildReadStateStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import { ME } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_10 = createCacheKey.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });

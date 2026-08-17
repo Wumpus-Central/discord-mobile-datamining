@@ -1,18 +1,18 @@
 // discord_app/modules/search/SearchAutocompleteStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isEqualDefault from "isEqual" /* 4632 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7597 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import getShortcutsDefault from "getShortcuts" /* 11512 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "initialize" /* 4220 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isEqualDefault from "../../../_runtime/04632_isEqual.js";
+import getTransformedUserDefault from "../autocompleter/UserSearchManager.tsx";
+import SearchTokenTypes from "SearchUtils.tsx";
+import getShortcutsDefault from "tokens/SearchTokens.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../stores/StreamerModeStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function handleUserSearchResults(c165, results) {

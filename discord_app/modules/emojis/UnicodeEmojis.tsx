@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/UnicodeEmojis.tsx
-import applyDefault from "apply" /* 12 */;
-import EmojiTypes from "EmojiTypes" /* 4037 */;
-import _mod13444 from "module_13444" /* 13444 */;
-import closure_3 from "defaultImageSrcGenerator" /* 4035 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import EmojiTypes from "EmojiTypes.tsx";
+import _mod13444 from "../../../_runtime/metro/13444__.js";
+import closure_3 from "../../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
 import closure_13 from "module_917631" /* 917631 */;
 import closure_14 from "module_127988" /* 127988 */;
 import { 04036__ } from "../../../_runtime/metro/04036__.js";

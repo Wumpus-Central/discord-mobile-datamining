@@ -1,9 +1,9 @@
 // discord_app/modules/gateway/GatewaySocketAnalytics.tsx
-import isTracingDefault from "isTracing" /* 10 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import isTracingDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_5 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_6 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 function prettyPrintTrace_(calls, arg1) {
   let length;

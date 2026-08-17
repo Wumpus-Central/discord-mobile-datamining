@@ -1,17 +1,17 @@
 // discord_app/modules/one_time_login/native/OneTimeLoginModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_12 } from "ThemeTypes" /* 1348 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_12 } from "../../client_themes/ClientThemesConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c5, ActivityIndicator: closure_6, Image: error } = get_ActivityIndicator);

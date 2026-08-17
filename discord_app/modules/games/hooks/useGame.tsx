@@ -1,9 +1,9 @@
 // discord_app/modules/games/hooks/useGame.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "noop" /* 19 */;
-import importDefaultResult1 from "handleLoadMessages" /* 4505 */;
-import initialize from "initialize" /* 589 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import setDefault from "../../../utils/Durations.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import importDefaultResult1 from "../GameStore.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

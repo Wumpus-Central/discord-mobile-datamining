@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/GuildSettingActivityJoining.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 7357 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import getSanitizedRestrictedGuilds from "../../../../utils/UserSettingsUtils.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "../../privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 ({ getSelectedGuildId: obj1, useUserSafetySettingsSelectedGuildStore: c3 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 const toggle = createToggle.createToggle({

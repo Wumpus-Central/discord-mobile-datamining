@@ -1,6 +1,6 @@
 // discord_app/modules/game_store/getAnalyticsDataForSKU.tsx
-import closure_0 from "addApplication" /* 4478 */;
-import { SKUFeatureTypes } from "ME" /* 676 */;
+import closure_0 from "../applications/ApplicationStore.tsx";
+import { SKUFeatureTypes } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/app_database/managers/MobileAppDatabaseManager.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 5391 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../system/AppDatabaseManager.tsx";
 import { handleBackgroundSync } from "../modules/Channels.tsx";
 import { hasBasicChannelChanged } from "../modules/GuildBasicChannels.tsx";
 import { getAsync } from "../modules/GuildEmojis.tsx";

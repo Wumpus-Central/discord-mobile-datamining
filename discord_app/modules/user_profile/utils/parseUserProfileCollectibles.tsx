@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/utils/parseUserProfileCollectibles.tsx
-import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import set from "../../../../_runtime/00002_set.js";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const result = set.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 

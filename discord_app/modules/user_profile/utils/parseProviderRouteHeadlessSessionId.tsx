@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 let c3 = "h:";
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");

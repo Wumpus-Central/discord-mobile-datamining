@@ -1,8 +1,8 @@
 // discord_app/design/void/Form/native/FormCheckbox.tsx
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1297 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Button from "../../native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

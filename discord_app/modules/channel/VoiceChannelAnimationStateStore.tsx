@@ -1,9 +1,9 @@
 // discord_app/modules/channel/VoiceChannelAnimationStateStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "handleConnectionOpen" /* 4197 */;
-import closure_2 from "updateVoiceState" /* 4542 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../stores/SelectedGuildStore.tsx";
+import closure_2 from "../../stores/VoiceStateStore.tsx";
 
 function resetAllState() {
   (function clearAllTimers() {

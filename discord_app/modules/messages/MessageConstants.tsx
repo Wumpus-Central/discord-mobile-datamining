@@ -1,8 +1,8 @@
 // discord_app/modules/messages/MessageConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import importDefaultResult from "fails" /* 584 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 
 const ChannelStreamTypes = ME.ChannelStreamTypes;
 let obj = { timeout: null, backoff: null, retries: 8 };

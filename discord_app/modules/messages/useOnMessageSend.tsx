@@ -1,6 +1,6 @@
 // discord_app/modules/messages/useOnMessageSend.tsx
-import closure_2 from "noop" /* 19 */;
-import { MessageStates } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { MessageStates } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 

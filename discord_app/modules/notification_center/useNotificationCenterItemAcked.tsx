@@ -1,5 +1,5 @@
 // discord_app/modules/notification_center/useNotificationCenterItemAcked.tsx
-import closure_2 from "handleLoadFinished" /* 15668 */;
+import closure_2 from "NotificationCenterStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 

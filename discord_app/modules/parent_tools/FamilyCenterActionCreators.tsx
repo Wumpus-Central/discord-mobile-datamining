@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/FamilyCenterActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getSettings" /* 5299 */;
-import { FamilyCenterAction } from "items" /* 5297 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "FamilyCenterControlledSettingsStore.tsx";
+import { FamilyCenterAction } from "FamilyCenterConstants.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;

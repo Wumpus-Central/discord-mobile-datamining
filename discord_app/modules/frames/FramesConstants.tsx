@@ -1,5 +1,5 @@
 // discord_app/modules/frames/FramesConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };
 obj = { type: obj.MAIN };

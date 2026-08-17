@@ -1,8 +1,8 @@
 // discord_app/design/components/mana-assets/native/generated/LeafIllocon.native.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5923 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
+import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/LeafIllocon-2x.png.js";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");

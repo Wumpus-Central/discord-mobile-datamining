@@ -1,7 +1,7 @@
 // discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
-import set from "set" /* 2 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1938 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import set from "../../../../_runtime/00002_set.js";
+import parseServerPerkConfigKind from "../../premium/perks_state/PerksStateUtils.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
 
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };

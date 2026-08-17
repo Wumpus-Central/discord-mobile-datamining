@@ -1,7 +1,7 @@
 // discord_app/modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import setDefault from "../../../utils/Durations.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { questFetchJitterMs: 5 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * setDefault.Millis.SECOND };
 obj = { name: "2026-06-quest-fetch-reconnect-jitter", kind: "user", defaultConfig: obj, variations: null };

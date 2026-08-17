@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../../../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_4 from "items" /* 5325 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../CollectiblesCategoryStore.tsx";
+import closure_4 from "../CollectiblesShopStore.tsx";
 
 const useMemo = noop.useMemo;
 let closure_5 = {};

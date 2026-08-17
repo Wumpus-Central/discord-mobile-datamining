@@ -1,6 +1,6 @@
 // discord_app/utils/StringUtils.tsx
-import set from "set" /* 2 */;
-import cssValueToNumber from "cssValueToNumber" /* 1904 */;
+import set from "../../_runtime/00002_set.js";
+import cssValueToNumber from "../../discord_common/js/shared/utils/StringUtils.tsx";
 
 const result = set.fileFinishedImporting("utils/StringUtils.tsx");
 

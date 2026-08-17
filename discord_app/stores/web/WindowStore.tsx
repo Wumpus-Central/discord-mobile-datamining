@@ -1,9 +1,9 @@
 // discord_app/stores/web/WindowStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getWindowId from "getWindowId" /* 6913 */;
-import set from "set" /* 2 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getWindowId from "../../utils/web/WindowIdUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let c3 = null;

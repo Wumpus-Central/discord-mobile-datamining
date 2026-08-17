@@ -1,15 +1,15 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsTogglesScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getUserAgnosticState" /* 5294 */;
-import closure_7 from "getUserAgnosticState" /* 4737 */;
-import { CATEGORY_LABELS } from "getUserAgnosticState" /* 4737 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import fuzzysearchDefault from "../../../../../../_runtime/06775_fuzzysearch.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../design_toggles/DesignTogglesStore.tsx";
+import closure_7 from "../../../dev_settings/DevSettingsStore.tsx";
+import { CATEGORY_LABELS } from "../../../dev_settings/DevSettingsStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function fuzzySearchToggle(str, str2, str3) {

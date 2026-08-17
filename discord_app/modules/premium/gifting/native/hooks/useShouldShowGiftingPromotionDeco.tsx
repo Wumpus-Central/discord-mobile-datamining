@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9625 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import GuildFeatures from "../../../PremiumConstants.tsx";
+import NativeGiftContextProvider from "../../../../payments/native/NativeGiftContext.tsx";
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");

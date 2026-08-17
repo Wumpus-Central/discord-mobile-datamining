@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/useCurrentEmbeddedActivity.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "participantFromServer" /* 1390 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../EmbeddedActivitiesStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");

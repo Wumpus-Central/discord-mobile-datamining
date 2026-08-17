@@ -1,7 +1,7 @@
 // discord_app/modules/applications/useIsSocialLayerParentApplication.tsx
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
-import closure_2 from "noop" /* 19 */;
-import { ApplicationFlags } from "ME" /* 676 */;
+import getApplicationFlags from "utils/ApplicationFlagUtils.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { ApplicationFlags } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");

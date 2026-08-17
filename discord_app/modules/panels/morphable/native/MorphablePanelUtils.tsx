@@ -1,6 +1,6 @@
 // discord_app/modules/panels/morphable/native/MorphablePanelUtils.tsx
-import set from "set" /* 2 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
+import set from "../../../../../_runtime/00002_set.js";
+import MIN_PAN_GESTURE_MOVE from "MorphablePanelConstants.tsx";
 
 const MIN_PIP_TOSS_VELOCITY = MIN_PAN_GESTURE_MOVE.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MIN_PAN_GESTURE_MOVE.PIP_WINDOW_OFFSET;

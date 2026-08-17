@@ -1,8 +1,8 @@
 // discord_app/modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");

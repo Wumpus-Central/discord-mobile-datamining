@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/UserProfileGradientUtils.tsx
-import apply2 from "apply" /* 12 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import nDefault from "n" /* 689 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import apply from "apply" /* 12 */;
+import apply2 from "../../../_runtime/00012_apply.js";
+import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import nDefault from "../../../_runtime/00689_n.js";
+import AccessibilityAnnouncer from "../../design/shared.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { ThemeTypes } from "../../Constants.tsx";
+import apply from "../../../_runtime/00012_apply.js";
 
 require = arg1;
 const memoizeResult = apply.memoize((arg0) => {

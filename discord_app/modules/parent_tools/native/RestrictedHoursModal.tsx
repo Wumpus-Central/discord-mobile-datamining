@@ -1,14 +1,14 @@
 // discord_app/modules/parent_tools/native/RestrictedHoursModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4732 */;
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 16510 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useBackPressHandlerDefault from "../../routing/native/useBackPressHandler.tsx";
+import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import useIsInRestrictedHoursDefault from "../hooks/useIsInRestrictedHours.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RestrictedHoursLogoutBlockingLayer(visible) {

@@ -1,15 +1,15 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleUpdate" /* 6788 */;
-import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5286 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "GuildOnboardingPromptsStore.tsx";
+import { serverApiResponseToClientState as closure_8 } from "GuildOnboardingPromptsConstants.tsx";
+import ME from "../../Constants.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;

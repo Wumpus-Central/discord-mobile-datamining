@@ -1,6 +1,6 @@
 // discord_app/modules/app_analytics/sampleWithUserId.tsx
-import set from "set" /* 2 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
+import set from "../../../_runtime/00002_set.js";
+import MurmurHashV3Default from "../../../_runtime/01217_MurmurHashV3.js";
 
 let c2 = 2147483647;
 const result = set.fileFinishedImporting("modules/app_analytics/sampleWithUserId.tsx");

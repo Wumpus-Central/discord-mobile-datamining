@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import _modDef8783 from "module_8783" /* 8783 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import closure_4 from "scheduledEventSort" /* 4370 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import _modDef8783 from "GuildScheduledEventsActionCreators.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import closure_4 from "GuildScheduledEventStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function getGuildEventsForCurrentUser() {
   const self = this;

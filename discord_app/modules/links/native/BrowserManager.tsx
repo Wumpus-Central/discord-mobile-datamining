@@ -1,11 +1,11 @@
 // discord_app/modules/links/native/BrowserManager.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import keys2 from "keys" /* 691 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import enforcingDefault from "enforcing" /* 4341 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 644 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import keys2 from "../../../ConstantsIOS.tsx";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import keys from "../../../../_runtime/00644_keys.js";
 
 ({ AppState: c3, NativeEventEmitter: c4, NativeModules } = get_ActivityIndicator);
 let BrowserManager = NativeModules.BrowserManager;

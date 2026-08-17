@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/shared/SafetyWarningUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 

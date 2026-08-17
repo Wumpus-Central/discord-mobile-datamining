@@ -1,10 +1,10 @@
 // discord_app/modules/forwarding/canForwardMessage.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "isSubscriptionGated" /* 1981 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import closure_2 from "../channel/GatedChannelStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/GuildPowerupsManager.tsx
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getUnitIdDefault from "getUnitId" /* 11671 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "calculateAppliedBoosts" /* 4261 */;
+import getFavoritesAwareGuildName from "../../favorites/FavoritesUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import getUnitIdDefault from "../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../stores/SelectedGuildStore.tsx";
+import closure_6 from "GuildPowerupsStore.tsx";
 
 require = arg1;
 initializeDefault;

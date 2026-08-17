@@ -1,7 +1,7 @@
 // discord_app/modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "emitChanges" /* 7423 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../ReferralTrialStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/stickers/native/Sticker.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import StickerFormat from "StickerFormat" /* 4964 */;
-import preloadDefault from "preload" /* 5449 */;
-import NativeLottieViewDefault from "NativeLottieView" /* 8218 */;
-import _modDef10120 from "module_10120" /* 10120 */;
-import { PixelRatio } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import StickerFormat from "../StickersTypes.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import NativeLottieViewDefault from "NativeLottieView.tsx";
+import _modDef10120 from "../../../components_native/common/NativeAPNGView.tsx";
+import { PixelRatio } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../user_settings/ThemeStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,11 +1,11 @@
 // discord_app/modules/frames/panel/native/FramePanelContainer.tsx
-import initialize from "initialize" /* 589 */;
-import FramePanelControllerDefault from "FramePanelController" /* 16259 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16261 */;
-import closure_3 from "map" /* 8708 */;
-import { isLaunched } from "FrameLayoutModes" /* 8709 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import FramePanelControllerDefault from "FramePanelController.tsx";
+import renderActivityOrPIPDefault from "FramePanelUI.tsx";
+import closure_3 from "../../FramesStore.tsx";
+import { isLaunched } from "../../FramesConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function FramePanelContainer() {

@@ -1,21 +1,21 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuildFolder.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import preloadDefault from "preload" /* 5449 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleConnectionOpen" /* 4197 */;
-import closure_7 from "insertUnsortedGuilds" /* 5078 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import withEqualityFn from "withEqualityFn" /* 15547 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15553 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/GuildReadStateStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/SelectedGuildStore.tsx";
+import closure_7 from "../../../stores/SortedGuildStore.tsx";
+import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
+import withEqualityFn from "GuildsBarDnDStore.tsx";
+import { DEFAULT_FOLDER_COLOR } from "../GuildsBarConstants.tsx";
+import GUILD_ITEM_SIZE from "GuildsBarConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MiniGuildIcon(arg0) {

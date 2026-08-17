@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandConstants.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
 
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];
 const frozen = Object.freeze([]);

@@ -1,10 +1,10 @@
 // discord_app/modules/stage_channels/StageChannelNewUserManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "buildStageChannelUserRoles" /* 4990 */;
-import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import closure_6 from "StageChannelRoleStore.tsx";
+import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "StageChannelsConstants.tsx";
 
 let require = arg1;
 initializeDefault;

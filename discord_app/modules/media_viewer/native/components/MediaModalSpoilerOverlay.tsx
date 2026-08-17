@@ -1,13 +1,13 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12058 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

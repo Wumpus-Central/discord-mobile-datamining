@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/ChatUpdatesQueue.tsx
-import set2 from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const DCDChatBlockerManager = get_ActivityIndicator.NativeModules.DCDChatBlockerManager;

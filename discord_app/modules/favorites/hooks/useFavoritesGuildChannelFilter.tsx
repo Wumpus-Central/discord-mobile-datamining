@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "initializeFromUserSettings" /* 1394 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import closure_5 from "../FavoriteStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");

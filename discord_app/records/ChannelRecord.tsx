@@ -1,18 +1,18 @@
 // discord_app/records/ChannelRecord.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import Permissions from "Permissions" /* 1399 */;
-import set28 from "set" /* 1400 */;
-import set29 from "set" /* 1401 */;
-import set30 from "set" /* 1402 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import exact from "exact" /* 1404 */;
-import privDefault from "priv" /* 1405 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import ME from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
-import importAllResult from "fromString" /* 506 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../_runtime/00012_apply.js";
+import Permissions from "../modules/stage_channels/StageChannelPermissions.tsx";
+import set28 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import set29 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import set30 from "../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import exact from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
+import privDefault from "../../_runtime/01405_priv.js";
+import closure_4 from "../modules/stage_channels/StageInstanceStore.tsx";
+import ME from "../Constants.tsx";
+import { ChannelFlags } from "../modules/channel/ChannelConstants.tsx";
+import importAllResult from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function createChannelRecord(type) {

@@ -1,6 +1,6 @@
 // discord_app/modules/screen/native/readAppEntryWindowMetrics.android.tsx
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 671 */;
+import set from "../../../../_runtime/00002_set.js";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 
 const result = set.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 

@@ -1,10 +1,10 @@
 // discord_app/modules/channel_permissions/ChannelPermissionsConstants.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import getSystemLocaleDefault from "getSystemLocale" /* 8065 */;
-import getSystemLocaleDefault2 from "getSystemLocale" /* 8066 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import combinedDefault from "../../utils/HelpdeskUtils.tsx";
+import getSystemLocaleDefault from "../forums/ForumPlatformUtils.native.tsx";
+import getSystemLocaleDefault2 from "../text_in_voice/GuildTiVPlatformUtils.native.tsx";
+import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, ChannelTypesSets: c4, HelpdeskArticles: c5, Permissions: closure_6 } = ME);
 const result = set.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsConstants.tsx");

@@ -1,18 +1,18 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 9019 */;
-import ShieldIcon from "ShieldIcon" /* 9834 */;
-import registerAssetDefault from "registerAsset" /* 9835 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import Button from "Button" /* 1297 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import presentAddedFriendToast from "../../../toast/native/ToastUtils.tsx";
+import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import openImagePickerUnhandled from "../../../../utils/native/UploadUtils.tsx";
+import _isNativeReflectConstructDefault from "../../../../../_runtime/09019__isNativeReflectConstruct.js";
+import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import registerAssetDefault from "../../../../../_runtime/09835_registerAsset.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Button from "../../../../design/void/native.tsx";
 
 require = arg1;
 function ExplicitMediaFalsePositivePreviewEmbed(embed) {

@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/BotUserProfileOverflowMenu.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "../../relationships/native/RestrictionConfirmationConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ AnalyticEvents: closure_8, ApplicationFlags: c9, ChannelTypesSets: c10, RelationshipTypes: unpackModuleId } = ME);

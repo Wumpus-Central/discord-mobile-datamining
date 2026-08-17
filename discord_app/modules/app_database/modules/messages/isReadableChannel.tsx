@@ -1,9 +1,9 @@
 // discord_app/modules/app_database/modules/messages/isReadableChannel.tsx
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import createChannelRecord from "../../../../records/ChannelRecord.tsx";
+import closure_1 from "../../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../../stores/PermissionStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 const isTextChannel = createChannelRecord.isTextChannel;
 ({ ChannelTypes: c3, BasicPermissions } = ME);

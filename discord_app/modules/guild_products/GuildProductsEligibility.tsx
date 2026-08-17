@@ -1,6 +1,6 @@
 // discord_app/modules/guild_products/GuildProductsEligibility.tsx
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

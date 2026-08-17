@@ -1,10 +1,10 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10608 */;
-import getSafetyAlertsSettingOrDefault from "getSafetyAlertsSettingOrDefault" /* 10610 */;
+import set from "../../../../../_runtime/00002_set.js";
+import setDefault from "../../../../utils/Durations.tsx";
+import handleConnectionOpen from "../../ChannelSafetyWarningsStore.tsx";
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
+import getSafetyAlertsSettingOrDefault from "../InappropriateConversationUtils.tsx";
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const HOUR = setDefault.Millis.HOUR;

@@ -1,14 +1,14 @@
 // discord_app/modules/hub/native/components/HubSidebar.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 11553 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11553 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "comparator" /* 1980 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import { InstantInviteSources } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import BaseChannelSubtitle from "../../../guild_sidebar/native/BaseChannelItem.tsx";
+import BaseChannelSubtitleDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
+import { InstantInviteSources } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function HubItem(arg0) {

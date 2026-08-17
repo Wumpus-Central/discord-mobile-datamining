@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx
-import set from "set" /* 2 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import set from "../../../../../_runtime/00002_set.js";
+import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
 
 const result = set.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx");
 

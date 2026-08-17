@@ -1,8 +1,8 @@
 // discord_app/modules/guild_settings_picker/useFilteredGuilds.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/SortedGuildStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");

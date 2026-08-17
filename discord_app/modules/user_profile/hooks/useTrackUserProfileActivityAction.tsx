@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "map" /* 9199 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../content_inventory/ContentInventoryOutboxStore.tsx";
 
 noop.useCallback;
 let result = set.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/util/ExtendedMemoryLru.tsx
-import length from "length" /* 5072 */;
-import nextAll from "next" /* 5073 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import length from "Lru.tsx";
+import nextAll from "Iterable.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");

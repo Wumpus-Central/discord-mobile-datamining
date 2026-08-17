@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/transformMessageAttachments.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import Changeset from "Changeset" /* 8158 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import Changeset from "RowGeneratorConstants.tsx";
 
 const AttachmentType = Changeset.AttachmentType;
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;

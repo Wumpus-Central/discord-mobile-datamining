@@ -1,12 +1,12 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import _initializeDefault from "_initialize" /* 12646 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import _initializeDefault from "../../../nuf_channels/native/NUFChannelsManager.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);

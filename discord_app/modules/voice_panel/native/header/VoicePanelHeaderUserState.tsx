@@ -1,14 +1,14 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import setDefault from "set" /* 7190 */;
-import areStableParticipantsEqual from "areStableParticipantsEqual" /* 16322 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 16324 */;
-import useVoicePanelCardUserStateIconsDefault from "useVoicePanelCardUserStateIcons" /* 16324 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import setDefault from "../../../core/native/NativeView.tsx";
+import areStableParticipantsEqual from "../utils/useStableParticipant.tsx";
+import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
+import useVoicePanelCardUserStateIconsDefault from "../hooks/useVoicePanelCardUserStateIcons.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../calls/ChannelRTCStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {

@@ -1,9 +1,9 @@
 // discord_app/modules/autocompleter/createAutocompleterResultForChannelId.tsx
-import computeChannelName from "computeChannelName" /* 4984 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import computeChannelName from "../channel/useChannelName.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RelationshipStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 require = arg1;
 require("HeaderRecord").AutocompleterResultTypes;

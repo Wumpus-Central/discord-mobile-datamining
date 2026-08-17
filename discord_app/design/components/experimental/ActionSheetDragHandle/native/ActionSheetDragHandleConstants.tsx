@@ -1,5 +1,5 @@
 // discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandleConstants.tsx
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const PX_4 = ThemesDefault.space.PX_4;
 const PX_8 = ThemesDefault.space.PX_8;

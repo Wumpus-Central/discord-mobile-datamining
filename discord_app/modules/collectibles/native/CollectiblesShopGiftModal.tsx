@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftModal.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
-import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../CollectiblesCategoryStore.tsx";
+import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");

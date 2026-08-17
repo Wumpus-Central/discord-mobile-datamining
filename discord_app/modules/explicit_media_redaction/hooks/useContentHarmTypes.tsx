@@ -1,10 +1,10 @@
 // discord_app/modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import getEligibleHarmTypesConfigsForContext from "../ObscuredMediaUtils.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
 import { getShouldObscureForSetting } from "../SensitiveMediaRedactionSettingUtils.tsx";

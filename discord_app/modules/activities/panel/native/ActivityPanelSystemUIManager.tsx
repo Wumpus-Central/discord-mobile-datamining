@@ -1,11 +1,11 @@
 // discord_app/modules/activities/panel/native/ActivityPanelSystemUIManager.tsx
-import set from "set" /* 500 */;
-import componentDidMountDefault from "componentDidMount" /* 8032 */;
-import pushStackEntryDefault from "pushStackEntry" /* 8680 */;
-import useActivityWebViewLockDefault from "useActivityWebViewLock" /* 16234 */;
-import importAllResult from "noop" /* 19 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import jsxProd from "jsxProd" /* 21 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import pushStackEntryDefault from "../../../voice_panel/native/HomeIndicator.tsx";
+import useActivityWebViewLockDefault from "ActivityPanelStateContext.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class BaseActivityPanelSystemUIManager {

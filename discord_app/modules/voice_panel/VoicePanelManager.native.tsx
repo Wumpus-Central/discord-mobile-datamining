@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/VoicePanelManager.native.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_0 from "createRTCConnection" /* 4539 */;
-import closure_1 from "withEqualityFn" /* 8664 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_0 from "../../stores/RTCConnectionStore.tsx";
+import closure_1 from "VoicePanelStore.tsx";
 
 initializeDefault;
 let prototype = function VoicePanelManager() {

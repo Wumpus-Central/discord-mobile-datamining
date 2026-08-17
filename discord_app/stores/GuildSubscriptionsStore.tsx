@@ -1,24 +1,24 @@
 // discord_app/stores/GuildSubscriptionsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import _enqueueDefault from "_enqueue" /* 7262 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "getHash" /* 4288 */;
-import closure_6 from "initialize" /* 4022 */;
-import closure_7 from "upsertAccount" /* 7241 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 7249 */;
-import closure_10 from "handlePermissionsChange" /* 4970 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "handleConnectionOpen" /* 4826 */;
-import closure_13 from "trackCommunicationDisabled" /* 1990 */;
-import closure_14 from "createGuildRecordFromRust" /* 1910 */;
-import closure_15 from "createRTCConnection" /* 4539 */;
-import closure_16 from "markAllUserIdListsStale" /* 4030 */;
-import closure_17 from "handleConnectionOpen" /* 1979 */;
-import closure_18 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
+import _enqueueDefault from "../lib/guild/GuildSubscriptions.tsx";
+import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../modules/experiments/ExperimentStore.tsx";
+import closure_6 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_7 from "../modules/spotify/SpotifyStore.tsx";
+import closure_8 from "AuthenticationStore.tsx";
+import { EVERYONE_CHANNEL_ID } from "ChannelMemberStore.tsx";
+import closure_10 from "ChannelSectionStore.tsx";
+import closure_11 from "ChannelStore.tsx";
+import closure_12 from "GuildAvailabilityStore.tsx";
+import closure_13 from "GuildMemberStore.tsx";
+import closure_14 from "GuildStore.tsx";
+import closure_15 from "RTCConnectionStore.tsx";
+import closure_16 from "RelationshipStore.tsx";
+import closure_17 from "SelectedChannelStore.tsx";
+import closure_18 from "SelectedGuildStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 function handleConnectionOpenOrResumed(type) {

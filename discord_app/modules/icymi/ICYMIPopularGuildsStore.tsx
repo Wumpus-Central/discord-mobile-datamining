@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/ICYMIPopularGuildsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
 
 const require = arg1;
 let closure_3 = [];

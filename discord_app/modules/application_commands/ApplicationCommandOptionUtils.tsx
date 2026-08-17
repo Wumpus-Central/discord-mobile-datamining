@@ -1,9 +1,9 @@
 // discord_app/modules/application_commands/ApplicationCommandOptionUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import setDefault from "set" /* 4362 */;
-import TRUE_OPTION_NAME2 from "TRUE_OPTION_NAME" /* 5246 */;
-import numberParts from "numberParts" /* 10257 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import setDefault from "../../utils/RegexUtils.tsx";
+import TRUE_OPTION_NAME2 from "ApplicationCommandConstants.tsx";
+import numberParts from "../../intl/number-parts.tsx";
 
 function getString(arg0, arg1) {
   let str = "";

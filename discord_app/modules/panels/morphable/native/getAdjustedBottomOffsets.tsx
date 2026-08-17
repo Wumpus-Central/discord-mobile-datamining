@@ -1,5 +1,5 @@
 // discord_app/modules/panels/morphable/native/getAdjustedBottomOffsets.tsx
-import set from "set" /* 500 */;
+import set from "../../../../utils/PlatformUtils.tsx";
 
 set = set.isAndroid();
 const fn = function t(arg0) {

@@ -1,9 +1,9 @@
 // discord_app/modules/stickers/useLoadGuildStickerWithCreator.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "parseServerGuildSticker" /* 6770 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "GuildStickersStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

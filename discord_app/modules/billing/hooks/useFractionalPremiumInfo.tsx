@@ -1,14 +1,14 @@
 // discord_app/modules/billing/hooks/useFractionalPremiumInfo.tsx
-import tDefault from "t" /* 3975 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4054 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4045 */;
-import closure_7 from "addEntitlement" /* 5357 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import tDefault from "../../../../_runtime/03975_t.js";
+import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
+import _createGatewayCheckoutContext from "../../../utils/BillingUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/billing/SubscriptionStore.tsx";
+import closure_7 from "../../../stores/game_store/EntitlementStore.tsx";
+import ME from "../../../Constants.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
 require = arg1;
 function calculateFractionalPremiumInfo(isFetching) {

@@ -1,5 +1,5 @@
 // discord_app/modules/media_channel/useCanSetThumbnail.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

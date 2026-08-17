@@ -1,8 +1,8 @@
 // discord_app/modules/media_engine/VideoGuardBannerManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "initialize" /* 16722 */;
-import { RTCConnectionStates } from "ME" /* 676 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "VideoGuardBannerStore.tsx";
+import { RTCConnectionStates } from "../../Constants.tsx";
+import { MediaEngineContextTypes } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 let require = arg1;
 initializeDefault;

@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import combinedDefault from "combined" /* 1993 */;
-import preloadDefault from "preload" /* 5449 */;
-import OneWayToTwoWayNewTag from "OneWayToTwoWayNewTag" /* 14323 */;
-import registerAssetDefault from "registerAsset" /* 14324 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import DismissibleContent from "../../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import combinedDefault from "../../../../../../utils/HelpdeskUtils.tsx";
+import preloadDefault from "../../../../../../components_native/common/FastImage.tsx";
+import OneWayToTwoWayNewTag from "../OneWayToTwoWayLinkUpsell.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/14324_registerAsset.js";
+import ME from "../../../../../../Constants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

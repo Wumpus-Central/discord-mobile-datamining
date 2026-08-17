@@ -1,21 +1,21 @@
 // discord_app/modules/notifications/native/NotificationTokenManager.tsx
-import set2 from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2629 */;
-import initializeDefault from "initialize" /* 4720 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
-import items2 from "items2" /* 13820 */;
-import apexExperiment from "apexExperiment" /* 13823 */;
-import inferImportanceFromBehaviorDefault from "inferImportanceFromBehavior" /* 13824 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 13825 */;
-import closure_4 from "initialize" /* 1212 */;
-import closure_5 from "initialize" /* 11585 */;
-import closure_6 from "initialize" /* 13268 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../NotificationSettings.messages.js";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
+import items2 from "../NotificationSettingsConstants.tsx";
+import apexExperiment from "NotifSettingsExperiments.tsx";
+import inferImportanceFromBehaviorDefault from "NotifSettingsUtils.android.tsx";
+import NativeNotifSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
+import closure_4 from "../../experiments/apex/ApexExperimentStore.tsx";
+import closure_5 from "../../multi_account/MultiAccountStore.tsx";
+import closure_6 from "../../multi_account/MultiAccountSwitchStore.tsx";
+import closure_7 from "../../../stores/AuthenticationStore.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const NOTIF_SETTINGS = items2.NOTIF_SETTINGS;

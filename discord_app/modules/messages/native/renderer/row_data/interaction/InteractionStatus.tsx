@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx
-import set from "set" /* 2 */;
-import _executeMessageComponentInteraction from "_executeMessageComponentInteraction" /* 8330 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import _executeMessageComponentInteraction from "../../../../../interactions/InteractionUtils.tsx";
 
 let closure_2 = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERAL_SUCCESS: 999, [999]: "EPHEMERAL_SUCCESS" };
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");

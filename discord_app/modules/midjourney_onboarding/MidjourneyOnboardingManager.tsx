@@ -1,8 +1,8 @@
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID" /* 13320 */;
-import { Routes } from "ME" /* 676 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { MIDJOURNEY_GUILD_ID } from "MidjourneyOnboardingConstants.tsx";
+import { Routes } from "../../Constants.tsx";
 
 const require = arg1;
 initializeDefault;

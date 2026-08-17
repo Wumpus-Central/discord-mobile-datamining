@@ -1,8 +1,8 @@
 // discord_app/modules/guild_scheduled_events/useInterestedEventUsers.tsx
-import set2 from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
+import set2 from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import closure_3 from "GuildScheduledEventStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const useMemo = noop.useMemo;

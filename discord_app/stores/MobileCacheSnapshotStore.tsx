@@ -1,8 +1,8 @@
 // discord_app/stores/MobileCacheSnapshotStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 require = arg1;
 let MobileCacheSnapshotStore;

@@ -1,8 +1,8 @@
 // discord_app/modules/mfa/native/MfaScreenUtils.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import NAV_BAR_HEIGHT2 from "NAV_BAR_HEIGHT" /* 6370 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import NAV_BAR_HEIGHT2 from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 let obj = { useScreenStyles: null };
 obj[0] = createCacheKey.createStyles((arg0) => {

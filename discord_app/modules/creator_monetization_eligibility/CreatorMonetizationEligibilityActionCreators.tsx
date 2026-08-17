@@ -1,8 +1,8 @@
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
+import { ApplicationTypes } from "../applications/ApplicationConstants.tsx";
 
 require = arg1;
 function _createCreatorMonetizationEnableRequest() {

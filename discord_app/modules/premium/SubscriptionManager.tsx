@@ -1,11 +1,11 @@
 // discord_app/modules/premium/SubscriptionManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handlePaymentSourceCreateEnd" /* 4041 */;
-import closure_5 from "reset" /* 4045 */;
-import closure_6 from "addEntitlement" /* 5357 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/UserStore.tsx";
+import closure_4 from "../../stores/billing/BillingInfoStore.tsx";
+import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_6 from "../../stores/game_store/EntitlementStore.tsx";
+import GuildFeatures from "PremiumConstants.tsx";
 
 let require = arg1;
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: closure_8 } = GuildFeatures);

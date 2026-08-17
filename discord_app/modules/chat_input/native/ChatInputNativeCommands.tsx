@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
-import set2 from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11161 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
 import { snowflakeSequence } from "../../messages/createNonce.tsx";
 

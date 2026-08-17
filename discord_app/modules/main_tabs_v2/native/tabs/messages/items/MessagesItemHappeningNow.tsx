@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8403 */;
-import renderCardDefault from "renderCard" /* 15321 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../../../../design/tokens/native/useToken.tsx";
+import useCutoutBackgroundColor from "../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx";
+import renderCardDefault from "../../../shared_components/happening_now/HappeningNow.tsx";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "../../../shared_components/happening_now/HappeningNowConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import set from "../../../../../../../_runtime/00002_set.js";
 
 require = arg1;
 ({ HAPPENING_NOW_CARD_HEIGHT: c4, HappeningNowItem } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);

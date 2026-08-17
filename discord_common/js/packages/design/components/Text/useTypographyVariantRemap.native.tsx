@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx
-import set from "set" /* 2 */;
-import json from "json" /* 1359 */;
-import remapTypographyVariant from "remapTypographyVariant" /* 4740 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import json from "../ThemeContextProvider/ThemeContext.tsx";
+import remapTypographyVariant from "typographyVariantRemap.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 

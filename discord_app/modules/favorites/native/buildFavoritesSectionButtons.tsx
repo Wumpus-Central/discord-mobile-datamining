@@ -1,14 +1,14 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import StarIcon from "StarIcon" /* 9410 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9412 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 9982 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import StarOutlineIcon from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
+import openFavoritesGuildLimitUpsell from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function _addChannelToFavorites() {

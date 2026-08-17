@@ -1,6 +1,6 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingManager.ios.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const DCDScreenRecordingManager = get_ActivityIndicator.NativeModules.DCDScreenRecordingManager;
 const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");

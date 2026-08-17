@@ -1,7 +1,7 @@
 // discord_app/modules/action_sheet/native/components/EmojiRowUtils.tsx
-import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import ME from "../../../../Constants.tsx";
 
 ({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
 const result = set.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");

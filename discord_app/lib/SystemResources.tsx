@@ -1,7 +1,7 @@
 // discord_app/lib/SystemResources.tsx
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
-import getSamples from "getSamples" /* 7490 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import getHermesInstrumentedStatsSummaryDefault from "../utils/ProcessUtils.native.tsx";
+import getSamples from "Histogram.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("lib/SystemResources.tsx");

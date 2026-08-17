@@ -1,14 +1,14 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import registerAssetDefault from "registerAsset" /* 1902 */;
-import handleChanged from "handleChanged" /* 4825 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10267 */;
-import registerAssetDefault2 from "registerAsset" /* 11393 */;
-import registerAssetDefault3 from "registerAsset" /* 11394 */;
-import closure_4 from "map" /* 4824 */;
+import set from "../../../../_runtime/00002_set.js";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/01902_registerAsset.js";
+import handleChanged from "../../../stores/DraftStore.tsx";
+import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
+import ApplicationCommandSectionType from "../ApplicationCommandTypes.tsx";
+import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
+import registerAssetDefault2 from "../../../../_runtime/11393_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/11394_registerAsset.js";
+import closure_4 from "../../../stores/UploadAttachmentStore.tsx";
 
 const DraftType = handleChanged.DraftType;
 const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;

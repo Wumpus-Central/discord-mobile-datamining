@@ -1,6 +1,6 @@
 // discord_app/design/void/Shadows/native/Shadows.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import set from "../../../../../_runtime/00002_set.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 
 const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 

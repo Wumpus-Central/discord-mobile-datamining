@@ -1,17 +1,17 @@
 // discord_app/modules/auth/native/components/Login.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSetLocationMetadata" /* 8581 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import { AuthStates } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../phone/PhoneStore.tsx";
+import closure_8 from "../../../../stores/AuthenticationStore.tsx";
+import { AuthStates } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class LinkButton {

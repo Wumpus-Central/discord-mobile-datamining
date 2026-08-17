@@ -1,12 +1,12 @@
 // discord_app/modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
-import { Features } from "DesktopSources" /* 4529 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../stores/RTCConnectionStore.tsx";
+import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "../SecureFramesConstants.tsx";
+import { Features } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");

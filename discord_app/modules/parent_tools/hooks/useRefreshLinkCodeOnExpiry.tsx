@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx
-import setDefault from "set" /* 8601 */;
-import closure_2 from "noop" /* 19 */;
+import setDefault from "../../../hooks/useStableCallback.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
 

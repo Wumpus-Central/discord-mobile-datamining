@@ -1,6 +1,6 @@
 // discord_app/modules/user_offers/records/UserTrialOfferRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createFromServer" /* 7426 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import closure_0 from "../../billing/records/SubscriptionTrialRecord.tsx";
 
 toJSDefault;
 let UserTrialOfferRecord;

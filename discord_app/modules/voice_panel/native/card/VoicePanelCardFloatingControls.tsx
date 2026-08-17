@@ -1,24 +1,24 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardFloatingControls.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 16324 */;
-import registerAssetDefault from "registerAsset" /* 16326 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "reset" /* 4652 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { VOICE_PANEL_CARD_INNER_PADDING as closure_12 } from "CARD_SIZE" /* 11443 */;
-import { ThemeTypes } from "ME" /* 676 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
+import registerAssetDefault from "../../../../../_runtime/16326_registerAsset.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_8 from "../../../../stores/RTCConnectionStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { VOICE_PANEL_CARD_INNER_PADDING as closure_12 } from "VoicePanelCardConstants.tsx";
+import { ThemeTypes } from "../../../../Constants.tsx";
+import ParticipantTypes from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function StreamIcon(voicePlatform) {

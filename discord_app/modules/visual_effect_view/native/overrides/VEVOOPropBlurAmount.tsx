@@ -1,11 +1,11 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx
-import FormSwitch from "FormSwitch" /* 7179 */;
-import Form from "Form" /* 8083 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import useVisualEffectViewOverrides from "useVisualEffectViewOverrides" /* 4726 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import FormSwitch from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import useVisualEffectViewOverrides from "VEVOOStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c4 = importAllResult;

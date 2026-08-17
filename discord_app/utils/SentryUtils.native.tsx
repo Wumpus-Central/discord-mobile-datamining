@@ -1,10 +1,10 @@
 // discord_app/utils/SentryUtils.native.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 809 */;
-import addBreadcrumbAll from "addBreadcrumb" /* 810 */;
-import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing" /* 1209 */;
+import set from "../../_runtime/00002_set.js";
+import timestampDefault from "../modules/debug/Logger.tsx";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import addSentryBreadcrumbDefault from "../modules/sentry/addSentryBreadcrumb.native.tsx";
+import addBreadcrumbAll from "../../_runtime/00810_addBreadcrumb.js";
+import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
 import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;

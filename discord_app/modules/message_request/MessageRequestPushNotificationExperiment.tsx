@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/MessageRequestPushNotificationExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../_runtime/00002_set.js";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { enabled: true }, 3: { enabled: false } };
 obj[3] = { enabled: true };

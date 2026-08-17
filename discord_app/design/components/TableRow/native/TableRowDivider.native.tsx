@@ -1,13 +1,13 @@
 // discord_app/design/components/TableRow/native/TableRowDivider.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import result2 from "result" /* 6289 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getTableDividerWidth } from "TABLE_ROW_HEIGHT" /* 6288 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../tokens/native/useToken.tsx";
+import result2 from "../../../migrations/native/LegacyTokens.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getTableDividerWidth } from "TableRowConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

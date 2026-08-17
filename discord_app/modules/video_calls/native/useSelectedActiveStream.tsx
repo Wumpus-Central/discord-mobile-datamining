@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/useSelectedActiveStream.tsx
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "reset" /* 4652 */;
+import closure_2 from "../../calls/ChannelRTCStore.tsx";
+import closure_3 from "../../../stores/ApplicationStreamingStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

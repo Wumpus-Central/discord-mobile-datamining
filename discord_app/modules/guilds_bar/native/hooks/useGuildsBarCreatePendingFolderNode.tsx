@@ -1,8 +1,8 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9535 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_5 from "set" /* 5079 */;
+import usePendingFolderGuildIdsDefault from "../../usePendingFolderGuildIds.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_5 from "../../../../stores/ExpandedGuildFolderStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");

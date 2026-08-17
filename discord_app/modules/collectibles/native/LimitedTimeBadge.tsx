@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/LimitedTimeBadge.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useCountdownDefault from "useCountdown" /* 7410 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useCountdownDefault from "../../../hooks/useCountdown.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import closure_5 from "../../user_settings/ThemeStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

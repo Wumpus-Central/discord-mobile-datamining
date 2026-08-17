@@ -1,22 +1,22 @@
 // discord_app/actions/AudioActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import debounceDefault from "debounce" /* 636 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9656 */;
-import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9658 */;
-import _getFilterBlob from "_getFilterBlob" /* 9659 */;
-import isPremiumResolution from "isPremiumResolution" /* 9667 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4538 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import debounceDefault from "../../_runtime/00636_debounce.js";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import snapVolumeToDefault from "../modules/user_settings/voice/AudioSettingsUtils.tsx";
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
+import _getFilterBlob from "../modules/video_backgrounds/applyBackgroundOption.tsx";
+import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/CertifiedDeviceStore.tsx";
+import closure_5 from "../stores/ChannelStore.tsx";
+import closure_6 from "../stores/MediaEngineStore.tsx";
+import closure_7 from "../stores/RTCConnectionStore.tsx";
+import closure_8 from "../stores/SelectedChannelStore.tsx";
+import closure_9 from "../stores/UserStore.tsx";
+import ME from "../Constants.tsx";
+import { SoundOutputChannel } from "../modules/sound_playback/Constants.tsx";
+import { MediaEngineContextTypes } from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
 function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {

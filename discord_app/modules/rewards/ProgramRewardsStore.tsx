@@ -1,10 +1,10 @@
 // discord_app/modules/rewards/ProgramRewardsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13274 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import canFetchNitroProgramReward from "ProgramRewardsUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/UserStore.tsx";
 
 require = arg1;
 function updateTtl() {

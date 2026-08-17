@@ -1,9 +1,9 @@
 // discord_app/modules/guild_tag/useGuildTagBadgeCollection.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "handleFormInit" /* 8875 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
-import items from "items" /* 8168 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../guild_settings/GuildSettingsStore.tsx";
+import closure_4 from "../premium/powerups/GuildPowerupsStore.tsx";
+import items from "GuildTagConstants.tsx";
 
 const useMemo = noop.useMemo;
 ({ BADGE_PACKS: c5, BADGES: closure_6, BADGE_PACK_TO_SKU_ID: error } = items);

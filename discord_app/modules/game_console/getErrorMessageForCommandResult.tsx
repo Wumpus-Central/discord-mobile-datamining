@@ -1,8 +1,8 @@
 // discord_app/modules/game_console/getErrorMessageForCommandResult.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import combinedDefault from "../../utils/HelpdeskUtils.tsx";
+import XBOX_URL_BASE from "GameConsoleConstants.tsx";
 
 let closure_3 = XBOX_URL_BASE.GameConsoleCommandResultErrorCodes;
 const result = set.fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");

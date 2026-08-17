@@ -1,21 +1,21 @@
 // discord_app/modules/analytics_sessions/SessionHeartbeatScheduler.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import isForegrounded2 from "isForegrounded" /* 5055 */;
-import isActiveUserRoute2 from "isActiveUserRoute" /* 5056 */;
-import result2 from "result" /* 5063 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import importDefaultResult from "fetchFingerprint" /* 1218 */;
-import closure_6 from "checkIdleAFK" /* 4974 */;
-import importDefaultResult1 from "createRTCConnection" /* 4539 */;
-import ME from "ME" /* 676 */;
-import isForegrounded from "isForegrounded" /* 5055 */;
-import isActiveUserRoute from "isActiveUserRoute" /* 5056 */;
+import timestampDefault from "../debug/Logger.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import isForegrounded2 from "SessionForegroundUtils.native.tsx";
+import isActiveUserRoute2 from "SessionRouteUtils.native.tsx";
+import result2 from "SessionUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../gateway/GatewayConnectionStore.tsx";
+import importDefaultResult from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/IdleStore.tsx";
+import importDefaultResult1 from "../../stores/RTCConnectionStore.tsx";
+import ME from "../../Constants.tsx";
+import isForegrounded from "SessionForegroundUtils.native.tsx";
+import isActiveUserRoute from "SessionRouteUtils.native.tsx";
 
 require = arg1;
 function trackHeartbeat() {

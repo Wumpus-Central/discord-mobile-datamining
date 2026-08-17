@@ -1,8 +1,8 @@
 // discord_app/modules/premium/promotions/MarketingComponentHooks.tsx
-import initialize from "initialize" /* 589 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import isThemeLight from "../../../design/utils/shared/themes.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import closure_3 from "../../a11y/AccessibilityStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");

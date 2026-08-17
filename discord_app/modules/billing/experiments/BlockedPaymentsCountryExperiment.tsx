@@ -1,8 +1,8 @@
 // discord_app/modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx
-import set from "set" /* 2 */;
-import useGeoForUserDefault from "useGeoForUser" /* 7389 */;
-import createExperiment from "createExperiment" /* 4286 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import useGeoForUserDefault from "../../premium/hooks/useGeoForUser.native.tsx";
+import createExperiment from "../../experiments/index.tsx";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
 let closure_2 = createExperiment.createExperiment({ kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: items });

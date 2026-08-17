@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { showSettingsToggle: true }, 3: { showSettingsToggle: true } };
 obj[3] = { showSettingsToggle: true };

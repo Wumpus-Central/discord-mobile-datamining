@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardsGrid.tsx
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 9172 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardV2.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../CollectiblesCategoryStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function ShopCardGridItem(index) {

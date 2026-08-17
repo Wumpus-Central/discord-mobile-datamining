@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 11672 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
-import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers" /* 4262 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../GuildPowerupsStore.tsx";
+import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "../constants/GuildPowerupsConstants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 

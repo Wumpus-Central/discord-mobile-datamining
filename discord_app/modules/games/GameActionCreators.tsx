@@ -1,8 +1,8 @@
 // discord_app/modules/games/GameActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleLoadMessages" /* 4505 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "GameStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 let closure_0 = arg1;
 function requestGames() {

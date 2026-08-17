@@ -1,10 +1,10 @@
 // discord_app/lib/VideoQuality.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import onDefault from "on" /* 4572 */;
-import parseEncoder from "parseEncoder" /* 7489 */;
-import _initStatsDefault from "_initStats" /* 13092 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../_runtime/00012_apply.js";
+import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
+import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
+import parseEncoder from "VideoQualityStats.tsx";
+import _initStatsDefault from "NetworkQuality.tsx";
 
 require = arg1;
 function round(arg0) {

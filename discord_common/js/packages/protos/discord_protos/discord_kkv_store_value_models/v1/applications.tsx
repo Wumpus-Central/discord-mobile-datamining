@@ -1,8 +1,8 @@
 // discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import now from "now" /* 1336 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3 } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import now from "../../../google/protobuf/timestamp.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3 } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 let obj = { UNSPECIFIED_DISCLOSURE: 0, [0]: "UNSPECIFIED_DISCLOSURE", IP_LOCATION: 1, [1]: "IP_LOCATION", DISPLAYS_ADVERTISEMENTS: 2, [2]: "DISPLAYS_ADVERTISEMENTS", PARTNER_SDK_DATA_SHARING_MESSAGE: 3, [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE" };

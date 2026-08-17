@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/useBountySwipeUpNux.tsx
-import apexExperiment from "apexExperiment" /* 10712 */;
-import FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY from "FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY" /* 14367 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import apexExperiment from "../../experiments/BountiesVerticalScrollExperiment.tsx";
+import FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY from "bountiesSwipeUpNuxDevTools.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountySwipeUpNux.tsx");

@@ -1,14 +1,14 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx
-import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 8683 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import { Features } from "DesktopSources" /* 4529 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ManaContext from "../../../../../../discord_common/js/packages/design/native.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../video_calls/native/ChannelCallLifecycleStore.tsx";
+import closure_6 from "../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../../stores/MediaEngineStore.tsx";
+import closure_9 from "../../../../../stores/PermissionStore.tsx";
+import { Features } from "../../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function VideoButtonRive(arg0) {

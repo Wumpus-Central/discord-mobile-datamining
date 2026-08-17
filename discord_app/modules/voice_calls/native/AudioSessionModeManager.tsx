@@ -1,17 +1,17 @@
 // discord_app/modules/voice_calls/native/AudioSessionModeManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 16530 */;
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import closure_10 from "getState" /* 7383 */;
-import { AppStates } from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import handleVoiceChannelSelect from "../VoicePermissionManager.tsx";
+import closure_2 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../stage_channels/StageChannelRoleStore.tsx";
+import closure_4 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../../stores/VoiceStateStore.tsx";
+import closure_10 from "../../../stores/native/AppStateStore.tsx";
+import { AppStates } from "../../../Constants.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function handleAVAudioSessionMode() {

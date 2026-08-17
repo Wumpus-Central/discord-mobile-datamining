@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/experiments/FileUpload250MbPowerupExperiment.tsx
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../../../_runtime/00002_set.js";
+import createExperiment from "../../../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enable File Upload 250MB Powerup", config: { enabled: true, rollbackEnabled: false } }, { id: 2, label: "Rollback UI for File Upload 250MB Powerup", config: { enabled: true, rollbackEnabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-03_file_upload_250_mb_powerup", label: "File Upload 250MB Powerup", defaultConfig: { enabled: false, rollbackEnabled: false }, treatments: items });

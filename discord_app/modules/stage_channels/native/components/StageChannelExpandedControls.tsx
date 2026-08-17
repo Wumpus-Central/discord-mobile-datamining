@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/components/StageChannelExpandedControls.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9653 */;
-import useCanCurrentUserSpeakInChannelDefault from "useCanCurrentUserSpeakInChannel" /* 10526 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useChannelVideoLimitDefault from "../../../video_calls/useChannelVideoLimit.tsx";
+import useCanCurrentUserSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { container: null };

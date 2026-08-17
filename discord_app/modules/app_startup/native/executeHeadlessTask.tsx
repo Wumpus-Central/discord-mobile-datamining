@@ -1,9 +1,9 @@
 // discord_app/modules/app_startup/native/executeHeadlessTask.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import linkFromAppsFlyer from "linkFromAppsFlyer" /* 16441 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { AppState } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import linkFromAppsFlyer from "NativeAppStartup.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 const require = arg1;
 function _executeHeadlessTask() {

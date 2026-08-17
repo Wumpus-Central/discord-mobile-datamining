@@ -1,13 +1,13 @@
 // discord_app/modules/chat/native/ChatView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import { createChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../gateway/GatewayConnectionStore.tsx";
+import { createChannelRecord } from "../../../records/ChannelRecord.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/MessageStore.tsx";
+import { ChannelTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,8 +1,8 @@
 // discord_app/design/components/Navigator/native/NavigatorScreen.native.tsx
-import designConfig2 from "designConfig" /* 6546 */;
-import PostponeRender from "PostponeRender" /* 6547 */;
-import { jsxs } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import designConfig2 from "../../../config.tsx";
+import PostponeRender from "PostponeRender.native.tsx";
+import { jsxs } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo((arg0) => {

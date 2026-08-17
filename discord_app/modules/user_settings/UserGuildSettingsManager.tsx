@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/UserGuildSettingsManager.tsx
-import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "incrementVersion" /* 5270 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/CategoryCollapseStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function handleConnectionOpen() {

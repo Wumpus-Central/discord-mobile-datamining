@@ -1,6 +1,6 @@
 // discord_app/modules/spotify/SpotifyConstants.tsx
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import set from "set" /* 500 */;
+import getPlatformUserUrlDefault from "../../lib/Platforms.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 const spotify = "spotify";
 let c1 = "spotify:";

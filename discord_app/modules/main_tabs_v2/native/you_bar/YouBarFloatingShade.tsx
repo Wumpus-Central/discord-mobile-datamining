@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx
-import initialize from "initialize" /* 589 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import map from "map" /* 4097 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14452 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
-import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 15548 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import int2hslRaw from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
+import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "YouBarConstants.tsx";
+import { GUILD_LIST_WIDTH } from "../../../guilds_bar/native/GuildsBarConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);

@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/layout/SearchScreenSearchBar.tsx
-import _modDef15850 from "module_15850" /* 15850 */;
-import SearchFilterPrefixRowDefault from "SearchFilterPrefixRow" /* 15852 */;
-import _modDef15859 from "module_15859" /* 15859 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef15850 from "SearchBar.tsx";
+import SearchFilterPrefixRowDefault from "autocomplete/SearchFilterSuggestions.tsx";
+import _modDef15859 from "autocomplete/SearchFilterButton.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });

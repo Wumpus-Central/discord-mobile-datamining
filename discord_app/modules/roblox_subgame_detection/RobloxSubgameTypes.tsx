@@ -1,5 +1,5 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgameTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {

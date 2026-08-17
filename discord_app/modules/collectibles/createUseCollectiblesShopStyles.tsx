@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/createUseCollectiblesShopStyles.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../a11y/AccessibilityStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/createUseCollectiblesShopStyles.tsx");

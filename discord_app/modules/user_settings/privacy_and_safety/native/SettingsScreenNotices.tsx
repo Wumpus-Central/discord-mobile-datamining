@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5039 */;
-import FamilyCenterSettingsParentalControlsNoticeDefault from "FamilyCenterSettingsParentalControlsNotice" /* 14173 */;
-import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14175 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import AgeGatedFeature from "../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import FamilyCenterSettingsParentalControlsNoticeDefault from "../../family_center/native/FamilyCenterSettingsNotice.tsx";
+import AgeConfirmationNoticeDefault from "../../content_and_social/native/AgeConfirmationNotice.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { noticeContainer: null };

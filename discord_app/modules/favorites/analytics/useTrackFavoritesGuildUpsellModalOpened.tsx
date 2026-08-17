@@ -1,8 +1,8 @@
 // discord_app/modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import closure_2 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
 

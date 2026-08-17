@@ -1,13 +1,13 @@
 // discord_app/modules/premium/ProductCatalog.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import create from "create" /* 1940 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8482 */;
-import getUserMaxFileSize from "getUserMaxFileSize" /* 9366 */;
-import setDefault from "set" /* 13442 */;
-import apexExperimentDefault from "apexExperiment" /* 13443 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import importDefaultResult1 from "set" /* 13441 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import EntitlementFeatureNames from "../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import getUserMaxFileSize from "../../utils/PremiumFeatureUtils.tsx";
+import setDefault from "SKUListing.tsx";
+import apexExperimentDefault from "experiments/DenormalizedPerksReadExperiment.tsx";
+import GuildFeatures from "PremiumConstants.tsx";
+import importDefaultResult1 from "PremiumSKUFeature.tsx";
 
 let closure_0 = require;
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: c3 } = GuildFeatures);

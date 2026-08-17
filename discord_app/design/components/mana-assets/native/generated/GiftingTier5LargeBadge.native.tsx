@@ -1,8 +1,8 @@
 // discord_app/design/components/mana-assets/native/generated/GiftingTier5LargeBadge.native.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import vanityUrlDefault from "vanityUrl" /* 5873 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
+import vanityUrlDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier5LargeBadge-2x.png.js";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier5LargeBadge.native.tsx");

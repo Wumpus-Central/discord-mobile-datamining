@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/AcknowledgementsSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import _modDef4090 from "../../../../lib/native/Linking.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const MarketingURLs = ME.MarketingURLs;
 const pressable = createToggle.createPressable({

@@ -1,9 +1,9 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx
-import initialize from "initialize" /* 589 */;
-import create from "create" /* 1940 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 12918 */;
-import closure_3 from "reset" /* 4045 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import create from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName.tsx";
+import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
+import SubscriptionStatusTypes from "../PremiumGroupConstants.tsx";
 
 require = arg1;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);

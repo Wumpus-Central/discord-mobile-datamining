@@ -1,18 +1,18 @@
 // discord_app/components_native/TouchableStreamPreview.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 4540 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
-import { Permissions } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_6 from "../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../stores/AuthenticationStore.tsx";
+import closure_8 from "../stores/ChannelStore.tsx";
+import closure_9 from "../stores/GuildStore.tsx";
+import closure_10 from "../stores/PermissionStore.tsx";
+import closure_11 from "../stores/VoiceStateStore.tsx";
+import { Permissions } from "../Constants.tsx";
+import { jsx } from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../utils/ColorUtils.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,12 +1,12 @@
 // discord_app/modules/media_uploads/handleUploadAttachmentErrors.native.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
-import getUploadFileSizeSum from "getUploadFileSizeSum" /* 4834 */;
-import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 4876 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 8468 */;
-import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlertContent" /* 12736 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import getUploadFileSizeSum from "../../utils/FileUtils.tsx";
+import KESTREL_GA_UPLOAD_LIMIT_MB from "experiments/KestrelExperiment.tsx";
+import showUploadFileSizeErrorDefault from "native/showUploadFileSizeError.tsx";
+import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlert.tsx";
+import ME from "../../Constants.tsx";
 
 ({ AbortCodes: c3, MAX_UPLOAD_COUNT: c4 } = ME);
 const result = set.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");

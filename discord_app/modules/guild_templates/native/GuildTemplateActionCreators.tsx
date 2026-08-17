@@ -1,8 +1,8 @@
 // discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import mapDefault from "map" /* 7287 */;
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import mapDefault from "../GuildTemplateActionCreators.tsx";
 
 require = arg1;
 const GUILD_TEMPLATE_MODAL_KEY = "GUILD_TEMPLATE_MODAL_KEY";

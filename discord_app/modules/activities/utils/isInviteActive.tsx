@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/isInviteActive.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 687 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 
 const result = 2 * setDefault.Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");

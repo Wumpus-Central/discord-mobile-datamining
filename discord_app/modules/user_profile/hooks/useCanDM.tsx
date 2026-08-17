@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/hooks/useCanDM.tsx
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
-import closure_3 from "initialize" /* 4022 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_2 from "../../game_relationships/GameRelationshipStore.tsx";
+import closure_3 from "../../lurker_mode/LurkingStore.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 

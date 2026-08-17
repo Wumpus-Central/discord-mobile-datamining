@@ -1,10 +1,10 @@
 // discord_app/modules/game_console/native/XboxInstallAlert.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
+import XBOX_URL_BASE from "../GameConsoleConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;

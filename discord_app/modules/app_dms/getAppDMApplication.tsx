@@ -1,7 +1,7 @@
 // discord_app/modules/app_dms/getAppDMApplication.tsx
-import closure_0 from "addApplication" /* 4478 */;
-import closure_1 from "createUserWidgetFromServer" /* 5365 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "../applications/ApplicationStore.tsx";
+import closure_1 from "../user_profile/UserProfileStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 

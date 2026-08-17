@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx
-import set from "set" /* 2 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import set from "../../../../../_runtime/00002_set.js";
+import hasFlagAll from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import MAX_FAVORITES from "../../../user_settings/UserSettingsConstants.tsx";
 
 ({ GuildNotificationSettingsFlags: obj1, ChannelNotificationSettingsFlags: c3 } = MAX_FAVORITES);
 const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx");

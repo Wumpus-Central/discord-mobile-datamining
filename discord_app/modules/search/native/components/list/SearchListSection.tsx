@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/components/list/SearchListSection.tsx
-import Text from "Text" /* 4734 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

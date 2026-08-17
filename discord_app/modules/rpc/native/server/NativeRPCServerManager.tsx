@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/native/server/NativeRPCServerManager.tsx
-import itemsDefault from "items" /* 13835 */;
-import importDefaultResult from "loadServer" /* 13833 */;
+import itemsDefault from "../NativeRPCImplementation.tsx";
+import importDefaultResult from "../../server/RPCServerManager.tsx";
 
 importDefaultResult = new importDefaultResult(itemsDefault);
 const result = require("set").fileFinishedImporting("modules/rpc/native/server/NativeRPCServerManager.tsx");

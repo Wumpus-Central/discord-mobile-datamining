@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/native/ImageConversionDecision.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import _initializeDefault from "_initialize" /* 4861 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import _initializeDefault from "../../media/native/IosImageTypesManager.tsx";
 
 const result = set.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 

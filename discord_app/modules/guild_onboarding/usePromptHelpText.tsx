@@ -1,10 +1,10 @@
 // discord_app/modules/guild_onboarding/usePromptHelpText.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildRoleStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/usePromptHelpText.tsx");

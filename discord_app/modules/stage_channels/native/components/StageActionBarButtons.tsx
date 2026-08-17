@@ -1,26 +1,26 @@
 // discord_app/modules/stage_channels/native/components/StageActionBarButtons.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import registerAssetDefault from "registerAsset" /* 8069 */;
-import Form from "Form" /* 8083 */;
-import registerAssetDefault2 from "registerAsset" /* 8118 */;
-import ActionButtonAll from "ActionButton" /* 8694 */;
-import registerAssetDefault3 from "registerAsset" /* 11640 */;
-import registerAssetDefault4 from "registerAsset" /* 12507 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "initialize" /* 12506 */;
-import { REQUEST_TO_SPEAK_SHEET_KEY as closure_10 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import { NOOP } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import registerAssetDefault from "../../../../../_runtime/08069_registerAsset.js";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import registerAssetDefault2 from "../../../../../_runtime/08118_registerAsset.js";
+import ActionButtonAll from "../../../video_calls/native/components/CallBarAction.tsx";
+import registerAssetDefault3 from "../../../../../_runtime/11640_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/12507_registerAsset.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../a11y/AccessibilityStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../StageMusicStore.tsx";
+import { REQUEST_TO_SPEAK_SHEET_KEY as closure_10 } from "../../StageChannelsConstants.tsx";
+import { NOOP } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class AgeVerificationSpeakerActionSheet {

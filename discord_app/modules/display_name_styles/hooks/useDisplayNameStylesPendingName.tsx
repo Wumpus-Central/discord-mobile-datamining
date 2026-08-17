@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "handleFormOpen" /* 8370 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import closure_3 from "../../user_profile/UserProfileSettingsStore.tsx";
+import closure_4 from "../../../stores/GuildMemberStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

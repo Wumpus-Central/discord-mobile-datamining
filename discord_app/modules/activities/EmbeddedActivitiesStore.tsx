@@ -1,21 +1,21 @@
 // discord_app/modules/activities/EmbeddedActivitiesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
-import apexExperiment from "apexExperiment" /* 4784 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 8710 */;
-import getPlatformDefault from "getPlatform" /* 8718 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 8724 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import getEmbeddedActivityLocationChannelId from "utils/embeddedActivityLocationUtils.tsx";
+import apexExperiment from "ContentClassificationEmbeddedActivityFilterExperiment.tsx";
+import ApplicationCommandSectionType from "../application_commands/ApplicationCommandTypes.tsx";
+import getURLForApplicationDefault from "getURLForApplication.tsx";
+import getPlatformDefault from "utils/getPlatform.tsx";
+import isVoiceEmbeddedActivityDefault from "utils/isVoiceEmbeddedActivity.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ActivityPanelModes from "panel/ActivityPanelConstants.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function participantFromServer(userId) {

@@ -1,6 +1,6 @@
 // discord_app/lib/uploader/stageAttachmentFiles.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { AbortCodes } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { AbortCodes } from "../../Constants.tsx";
 
 const require = arg1;
 function _stageAttachmentFiles() {

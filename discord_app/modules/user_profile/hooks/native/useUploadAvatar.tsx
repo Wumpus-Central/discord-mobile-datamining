@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/hooks/native/useUploadAvatar.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { PremiumUpsellTypes } from "../../../premium/PremiumConstants.tsx";
 
 const require = arg1;
 require("noop").useCallback;

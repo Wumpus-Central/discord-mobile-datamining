@@ -1,13 +1,13 @@
 // discord_app/modules/app_database/modules/UserSearchItems.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1955 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recountRelationshipTypes" /* 5406 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import itemsDefault from "../DatabaseDaos.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../game_relationships/GameRelationshipStore.tsx";
+import closure_5 from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import { RelationshipTypes } from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = arg1;
 let closure_9 = new timestampDefault("UserSearchItems");

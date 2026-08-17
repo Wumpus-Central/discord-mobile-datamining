@@ -1,12 +1,12 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import create from "create" /* 1306 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
-import { SearchMediaTypes } from "MessageEmbedTypes" /* 8507 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import getEligibleHarmTypesConfigsForContext from "../ObscuredMediaUtils.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "../ExplicitMediaRedactionConstants.tsx";
+import { SearchMediaTypes } from "../../search/SearchConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");

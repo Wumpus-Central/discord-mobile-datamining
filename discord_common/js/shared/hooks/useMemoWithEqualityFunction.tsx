@@ -1,7 +1,7 @@
 // discord_common/js/shared/hooks/useMemoWithEqualityFunction.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import useInitRefDefault from "useInitRef" /* 15390 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import useInitRefDefault from "useInitRef.tsx";
 
 const useRef = noop.useRef;
 let closure_3 = Symbol();

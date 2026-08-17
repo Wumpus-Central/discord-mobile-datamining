@@ -1,5 +1,5 @@
 // discord_app/modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_2 from "../../../a11y/AccessibilityStore.tsx";
 
 const require = arg1;
 let obj = { duration: 1300, easing: require("Button").STANDARD_EASING };

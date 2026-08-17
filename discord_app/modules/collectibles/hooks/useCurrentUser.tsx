@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useCurrentUser.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initialize from "initialize" /* 589 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");

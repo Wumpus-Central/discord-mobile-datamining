@@ -1,7 +1,7 @@
 // discord_app/modules/public_guilds/PublicGuildsConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const items = [, , , , , , , , , , , , , ];
 ({ ADMINISTRATOR: arr[0], KICK_MEMBERS: arr[1], BAN_MEMBERS: arr[2], MANAGE_GUILD: arr[3], MANAGE_CHANNELS: arr[4], MANAGE_ROLES: arr[5], MANAGE_MESSAGES: arr[6], MANAGE_GUILD_EXPRESSIONS: arr[7], CREATE_GUILD_EXPRESSIONS: arr[8], MANAGE_EVENTS: arr[9], CREATE_EVENTS: arr[10], MODERATE_MEMBERS: arr[11], MENTION_EVERYONE: arr[12], MANAGE_OFFICIAL_MESSAGES: arr[13] } = ME.Permissions);

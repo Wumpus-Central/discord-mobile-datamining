@@ -1,14 +1,14 @@
 // discord_app/modules/threads/ThreadBrowserHooks.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { useShouldShowResolvedFlagsForChannel as closure_5 } from "useReportToModChannelFiltersStore" /* 11941 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_10 from "listKey" /* 7513 */;
-import closure_11 from "storeThread" /* 4023 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { useShouldShowResolvedFlagsForChannel as closure_5 } from "../report_to_mod/ReportToModChannelStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/ReadStateStore.tsx";
+import closure_9 from "ActiveThreadsStore.tsx";
+import closure_10 from "ArchivedThreadsStore.tsx";
+import closure_11 from "JoinedThreadsStore.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

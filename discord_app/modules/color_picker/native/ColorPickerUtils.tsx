@@ -1,5 +1,5 @@
 // discord_app/modules/color_picker/native/ColorPickerUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 function normalizeValue(arg0) {
   let num = 0;

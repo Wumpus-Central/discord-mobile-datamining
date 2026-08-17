@@ -1,13 +1,13 @@
 // discord_app/stores/GuildStore.tsx
-import set2 from "set" /* 2 */;
-import date2 from "date" /* 1429 */;
-import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
-import identity from "identity" /* 1911 */;
-import items from "items" /* 1914 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
+import set2 from "../../_runtime/00002_set.js";
+import date2 from "../modules/favorites/FavoritesConstants.tsx";
+import fromGuildPropertiesWithAdditionalFieldsAll from "../utils/GuildRecordUtils.tsx";
+import areSetsEqual from "../../discord_common/js/shared/utils/SetUtils.tsx";
+import identity from "../modules/libdiscore/stores/LibdiscoreStore.tsx";
+import items from "../modules/libdiscore/libdiscoreExperiments.tsx";
+import isValueEqual from "../lib/PlainRecord.tsx";
+import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
+import closure_9 from "AuthenticationStore.tsx";
 
 function createGuildRecordFromRust(features) {
   const obj = {};

@@ -1,9 +1,9 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "map" /* 13254 */;
-import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8876 */;
-import { Endpoints } from "ME" /* 676 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "GlobalDiscoveryServersSearchResultsStore.tsx";
+import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "GlobalDiscoveryServersConstants.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 initializeDefault;

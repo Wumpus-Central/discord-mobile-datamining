@@ -1,8 +1,8 @@
 // discord_app/modules/telemetry_ring/trackHttpRequest.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 16498 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest.android.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");

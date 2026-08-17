@@ -1,11 +1,11 @@
 // discord_app/modules/messages/useAllowedChatOverlays.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 8724 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { ChatOverlays } from "ChatOverlays" /* 10634 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import getEmbeddedActivityLocationChannelId from "../activities/utils/embeddedActivityLocationUtils.tsx";
+import isVoiceEmbeddedActivityDefault from "../activities/utils/isVoiceEmbeddedActivity.tsx";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import { ChatOverlays } from "ChatOverlayConstants.tsx";
+import { ActivityPanelModes } from "../activities/panel/ActivityPanelConstants.tsx";
 
 require = arg1;
 const no_text_activity = "no_text_activity";

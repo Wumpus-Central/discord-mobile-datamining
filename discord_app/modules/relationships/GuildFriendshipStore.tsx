@@ -1,7 +1,7 @@
 // discord_app/modules/relationships/GuildFriendshipStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
 
 function resetStates() {
   closure_3 = {};

@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/native/useProfileSectionTabs.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import closure_0 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../../_runtime/00019_noop.js";
+import { UserProfileSections } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 

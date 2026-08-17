@@ -1,7 +1,7 @@
 // discord_app/design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx
-import closure_2 from "noop" /* 19 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");

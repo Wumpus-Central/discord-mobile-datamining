@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollUploadAttachmentActionCreators.native.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { DraftType } from "../../stores/DraftStore.tsx";
+import { POLL_ATTACHMENT_FOLDER } from "PollsConstants.tsx";
 
 const require = arg1;
 function _handlePollGifAttachmentAdd() {

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/isSpam.tsx
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5232 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getDecisionOutcomeFromMessage from "../guild_automod/AutomodMessageUtils.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ UserFlags: c3, ChannelTypes: c4 } = ME);

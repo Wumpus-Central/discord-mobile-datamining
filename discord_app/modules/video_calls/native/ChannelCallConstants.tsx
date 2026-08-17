@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/ChannelCallConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
 
 const items = [, , , ];
 ({ TOP_LEFT: arr[0], TOP_RIGHT: arr[1], BOTTOM_LEFT: arr[2], BOTTOM_RIGHT: arr[3] } = ME.PictureInPicturePositions);

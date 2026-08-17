@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2853 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 14131 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
+import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import SettingsAgeGroupResetAlert from "../../age_group/native/SettingsAgeGroupResetAlert.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const jsx = jsxProd.jsx;
 const pressable = createToggle.createPressable({

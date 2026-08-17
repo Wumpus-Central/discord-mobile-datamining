@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputCover.tsx
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ StyleSheet: c3, TouchableWithoutFeedback: c4, View: c5 } = get_ActivityIndicator);

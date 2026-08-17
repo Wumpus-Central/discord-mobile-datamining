@@ -1,11 +1,11 @@
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 8711 */;
-import getFramesManagerDefault from "getFramesManager" /* 8765 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 8708 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
+import getFramesManagerDefault from "utils/getFramesManager.native.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "FramesStore.tsx";
+import FrameLayoutModes from "FramesConstants.tsx";
+import { ActivityPanelModes } from "../activities/panel/ActivityPanelConstants.tsx";
 
 require = arg1;
 function _launchFrame() {

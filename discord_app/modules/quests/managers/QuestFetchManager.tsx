@@ -1,9 +1,9 @@
 // discord_app/modules/quests/managers/QuestFetchManager.tsx
-import setDefault from "set" /* 687 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 10685 */;
-import closure_3 from "initializeState" /* 7453 */;
+import setDefault from "../../../utils/Durations.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import getIsEligibleForQuests from "../lib/QuestsEligibility.tsx";
+import closure_3 from "../QuestStore.tsx";
 
 require = arg1;
 const DAY = setDefault.Millis.DAY;

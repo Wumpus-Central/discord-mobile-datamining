@@ -1,12 +1,12 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import ME from "ME" /* 676 */;
-import { Gradients } from "items" /* 7403 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import GuildFeatures from "../../../PremiumConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import { Gradients } from "../../../../colors/native/ColorConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 

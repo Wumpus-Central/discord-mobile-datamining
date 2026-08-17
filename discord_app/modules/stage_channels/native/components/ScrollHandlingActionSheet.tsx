@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import Background from "Background" /* 6950 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

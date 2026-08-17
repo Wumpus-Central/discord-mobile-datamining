@@ -1,5 +1,5 @@
 // discord_app/modules/activities/getShelfItemData.tsx
-import closure_0 from "addApplication" /* 4478 */;
+import closure_0 from "../applications/ApplicationStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/activities/getShelfItemData.tsx");
 

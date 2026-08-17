@@ -1,7 +1,7 @@
 // discord_app/modules/react_asset/native/reactAssetProvider.tsx
-import enforcingDefault from "enforcing" /* 17122 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 500 */;
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeReactAssetModule.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../../utils/PlatformUtils.tsx";
 
 ({ Image: obj1, NativeModules } = get_ActivityIndicator);
 if (set.isAndroid()) {

@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/voice/native/KrispLogo.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import combinedDefault from "combined" /* 1993 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import Text from "Text" /* 4734 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../../design/shared.tsx";
+import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import _modDef4090 from "../../../../lib/native/Linking.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../ThemeStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function handleKrispLinkPressed() {

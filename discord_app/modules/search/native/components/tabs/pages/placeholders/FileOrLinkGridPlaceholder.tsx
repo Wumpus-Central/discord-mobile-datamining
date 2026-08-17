@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
-import _modDef4115 from "module_4115" /* 4115 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4115 from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");

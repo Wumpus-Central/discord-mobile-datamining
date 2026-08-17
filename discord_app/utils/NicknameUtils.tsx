@@ -1,9 +1,9 @@
 // discord_app/utils/NicknameUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import getSystemLocale from "../intl/index.native.tsx";
+import nameFromUserDefault from "UserUtils.tsx";
+import closure_3 from "../stores/ChannelStore.tsx";
+import closure_4 from "../stores/GuildMemberStore.tsx";
+import closure_5 from "../stores/RelationshipStore.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/stores/PremiumPromoStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../utils/Durations.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "RelationshipStore.tsx";
 
 let closure_4 = 180 * setDefault.Millis.DAY;
 let c5 = false;

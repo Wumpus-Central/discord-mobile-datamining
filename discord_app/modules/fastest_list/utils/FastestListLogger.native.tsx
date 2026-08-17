@@ -1,6 +1,6 @@
 // discord_app/modules/fastest_list/utils/FastestListLogger.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef1208 from "module_1208" /* 1208 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
 
 let closure_2 = new timestampDefault("FastestList");
 const tmp2 = new timestampDefault("FastestList");

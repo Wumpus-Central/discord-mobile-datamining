@@ -1,19 +1,19 @@
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx
-import getFontScale from "getFontScale" /* 4751 */;
-import computeSubtitle from "computeSubtitle" /* 5272 */;
-import renderDefaultEmpty from "renderDefaultEmpty" /* 8124 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_9 from "generateOldThreadCutoff" /* 4772 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { getScaledChannelRowHeight } from "hairlineWidth" /* 10055 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getFontScale from "../../../screen/native/useFontScale.tsx";
+import computeSubtitle from "../../../guild_sidebar/ChannelListState.tsx";
+import renderDefaultEmpty from "../../../../lib/native/FastList.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/GuildReadStateStore.tsx";
+import closure_9 from "../../../../stores/ReadStateStore.tsx";
+import closure_10 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { getScaledChannelRowHeight } from "../RedesignChannelListConstants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function shouldSkipSection(diff1) {

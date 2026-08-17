@@ -1,11 +1,11 @@
 // discord_app/modules/guild_antiraid/GuildIncidentsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 8234 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DATE_CONFIG from "GuildAntiRaidUtils.tsx";
+import closure_2 from "../experiments/ExperimentStore.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
 
 require = arg1;
 function computeAlertSettings() {

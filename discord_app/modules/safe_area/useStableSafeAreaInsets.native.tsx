@@ -1,9 +1,9 @@
 // discord_app/modules/safe_area/useStableSafeAreaInsets.native.tsx
-import context from "context" /* 1497 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
-import enforcingDefault from "enforcing" /* 1641 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import context from "../window/native/AppEntryKeyContext.tsx";
+import useSafeAreaInsets from "useSafeAreaInsets.native.tsx";
+import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safe_area/useStableSafeAreaInsets.native.tsx");

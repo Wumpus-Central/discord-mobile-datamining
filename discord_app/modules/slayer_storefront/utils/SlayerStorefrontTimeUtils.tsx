@@ -1,10 +1,10 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3271 */;
-import tDefault from "t" /* 3975 */;
-import useIntervalDefault from "useInterval" /* 7416 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
+import tDefault from "../../../../_runtime/03975_t.js";
+import useIntervalDefault from "../../../hooks/useInterval.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function getLimitedOfferTimeLeft(arg0) {

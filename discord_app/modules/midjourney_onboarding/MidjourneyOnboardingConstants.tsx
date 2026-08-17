@@ -1,5 +1,5 @@
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingConstants.tsx");
 

@@ -1,12 +1,12 @@
 // discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import AgeRestrictionSource from "AgeRestrictionSource" /* 4788 */;
-import AgeRestrictionStatus8 from "AgeRestrictionStatus" /* 4789 */;
-import frozen from "frozen" /* 4790 */;
-import set2 from "set" /* 4791 */;
-import set3 from "set" /* 4792 */;
-import set4 from "set" /* 4793 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import fromStringAll from "../../../utils/BigFlagUtils.tsx";
+import AgeRestrictionSource from "../../../shared-constants/AgeRestrictionSource.tsx";
+import AgeRestrictionStatus8 from "../../../shared-constants/AgeRestrictionStatus.tsx";
+import frozen from "../../../shared-constants/DiscordContentClassificationFlags.tsx";
+import set2 from "../../../shared-constants/ContentRatingESRBRating.tsx";
+import set3 from "../../../shared-constants/ContentRatingPEGIRating.tsx";
+import set4 from "../../../shared-constants/ContentRatingGOPClassification.tsx";
 
 function contentClassificationToAgeRestrictionConclusion(data) {
   if (null == data) {

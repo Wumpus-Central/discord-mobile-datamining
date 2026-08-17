@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/message_parsers/MessageSearchResultParser.tsx
-import closure_2 from "hasFlag" /* 4031 */;
-import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes" /* 8507 */;
+import closure_2 from "../../../../records/MessageRecord.tsx";
+import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "../../SearchConstants.tsx";
 import { SearchTokenTypes } from "../../SearchUtils.tsx";
 
 const require = arg1;

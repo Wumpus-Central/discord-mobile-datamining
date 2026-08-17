@@ -1,10 +1,10 @@
 // discord_app/modules/safety_hub/SafetyHubStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ContentIdType from "ContentIdType" /* 5439 */;
-import createAggregatorDefault from "createAggregator" /* 11062 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ContentIdType from "SafetyHubModels.tsx";
+import createAggregatorDefault from "../../../_runtime/11062_createAggregator.js";
+import SafetyHubView from "SafetyHubConstants.tsx";
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
   if (arg0 == null) {

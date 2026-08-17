@@ -1,11 +1,11 @@
 // discord_app/modules/messages/validateJumpWithAlert.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
-import isSpamSupported from "isSpamSupported" /* 5231 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import { Permissions } from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import isSpamSupported from "isSpam.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/RelationshipStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");

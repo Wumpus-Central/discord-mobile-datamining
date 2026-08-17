@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/ICYMIFiltersStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import MessageEmbedTypes from "ICYMITypes.tsx";
 
 require = arg1;
 let closure_2 = {};

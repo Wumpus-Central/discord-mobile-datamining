@@ -1,5 +1,5 @@
 // discord_app/modules/keyboard/native/ChatInputFocused.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 let c0 = false;
 const result = set.fileFinishedImporting("modules/keyboard/native/ChatInputFocused.tsx");

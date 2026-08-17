@@ -1,13 +1,13 @@
 // discord_app/modules/multi_account/native/ChooseAccount.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11586 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MultiAccountTokenStatus } from "../MultiAccountStore.tsx";
+import MAX_ACCOUNTS from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Form } from "../../../design/void/Form/native/index.tsx";

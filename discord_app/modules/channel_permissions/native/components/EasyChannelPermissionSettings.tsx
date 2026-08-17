@@ -1,22 +1,22 @@
 // discord_app/modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import setDefault from "set" /* 4827 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "init" /* 16040 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "trackCommunicationDisabled" /* 1990 */;
-import closure_12 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_15 from "markAllUserIdListsStale" /* 4030 */;
-import closure_16 from "mergeGuildAvatar" /* 1922 */;
-import { SettingMode } from "RowType" /* 8064 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../../../stores/ChannelSettingsPermissionsStore.tsx";
+import closure_10 from "../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../stores/GuildMemberStore.tsx";
+import closure_12 from "../../../../stores/GuildRoleStore.tsx";
+import closure_13 from "../../../../stores/GuildStore.tsx";
+import closure_14 from "../../../../stores/PermissionStore.tsx";
+import closure_15 from "../../../../stores/RelationshipStore.tsx";
+import closure_16 from "../../../../stores/UserStore.tsx";
+import { SettingMode } from "../../ChannelPermissionsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function ChannelPermissionSettingsBasicView(channel) {

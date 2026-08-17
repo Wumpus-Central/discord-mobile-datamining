@@ -1,18 +1,18 @@
 // discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import v1 from "v1" /* 514 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5449 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import getChannelIconURL from "getChannelIconURL" /* 12127 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 12128 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_SPRING_CONFIG } from "n" /* 12126 */;
-import jsxProd from "jsxProd" /* 21 */;
+import timestampDefault from "../../../../modules/debug/Logger.tsx";
+import v1 from "../../../../../_runtime/00514_v1.js";
+import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
+import SolidCutoutDefault from "../../../components/Icon/native/ClipView.tsx";
+import getChannelIconURL from "../../../../modules/channel/getChannelIcon.tsx";
+import getReactNativeSVGImageSourceDefault from "../../../../modules/svg/native/getReactNativeSVGImageSource.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CHANNEL_SPRING_CONFIG } from "../../../../modules/main_tabs_v2/native/shared_components/guild_channels/ChannelAnimationConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function StaticNativeCutoutAvatarImage(cutout) {

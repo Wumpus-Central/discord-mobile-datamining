@@ -1,9 +1,9 @@
 // discord_app/modules/channel/isRoleRequired.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import fromStringAll from "fromString" /* 506 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 
 let closure_2 = createChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
 const Permissions = sum.Permissions;

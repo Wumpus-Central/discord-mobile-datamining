@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AccountPhoneSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import ChangePhoneReason from "../../../phone/PhoneActionCreators.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "../../../phone/PhoneConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

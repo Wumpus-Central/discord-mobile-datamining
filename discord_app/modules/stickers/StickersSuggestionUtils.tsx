@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/StickersSuggestionUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const re0 = /(!|\.|;|,|-|—|–|\?|"|')/g;
 const re1 = /(\n|\t|\s)/g;

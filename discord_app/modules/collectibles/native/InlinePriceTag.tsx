@@ -1,24 +1,24 @@
 // discord_app/modules/collectibles/native/InlinePriceTag.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import Text from "Text" /* 4734 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9249 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9581 */;
-import useProductDisableState from "useProductDisableState" /* 9582 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 9583 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateProduct" /* 5319 */;
-import { ShopCtaEnum } from "items" /* 678 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
+import hasAtLeastOneGPlaySynced from "CollectiblesUtils.tsx";
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet.tsx";
+import useProductDisableState from "../hooks/useProductDisableState.tsx";
+import useVirtualCurrencyData from "hooks/useVirtualCurrencyData.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/native/IAPStore.android.tsx";
+import { ShopCtaEnum } from "../CollectiblesShopConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PriceTag(accessibilityLabel) {

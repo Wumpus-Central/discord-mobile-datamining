@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/GuildPowerupsNotificationStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 11662 */;
-import closure_2 from "handleGameServerInstanceCreated" /* 4282 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import getExpiringGuildEntitlements from "utils/getExpiringGuildEntitlements.tsx";
+import closure_2 from "../../game_server/GameServerStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "GuildPowerupsStore.tsx";
 
 require = arg1;
 let closure_5 = {};

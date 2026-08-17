@@ -1,7 +1,7 @@
 // discord_app/modules/age_gate/native/components/DateInput.tsx
-import importAllResult from "noop" /* 19 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

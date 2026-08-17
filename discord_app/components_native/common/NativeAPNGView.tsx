@@ -1,7 +1,7 @@
 // discord_app/components_native/common/NativeAPNGView.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10121 */;
-import set from "set" /* 500 */;
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import __INTERNAL_VIEW_CONFIG from "../../../discord_common/js/packages/rtn-codegen/js/APNGStickerNativeComponent.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 if (set.isAndroid()) {
   let _default = __INTERNAL_VIEW_CONFIG.default;

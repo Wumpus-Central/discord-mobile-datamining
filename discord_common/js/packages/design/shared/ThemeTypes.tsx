@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/shared/ThemeTypes.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [, ];

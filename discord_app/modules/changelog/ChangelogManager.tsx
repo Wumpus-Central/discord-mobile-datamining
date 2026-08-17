@@ -1,9 +1,9 @@
 // discord_app/modules/changelog/ChangelogManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "handleUserSettingsProtoStoreChange" /* 4771 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../user_settings/LocaleStore.tsx";
+import closure_6 from "ChangelogStore.tsx";
 
 const require = arg1;
 initializeDefault;

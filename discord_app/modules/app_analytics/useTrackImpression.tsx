@@ -1,13 +1,13 @@
 // discord_app/modules/app_analytics/useTrackImpression.tsx
-import encodeProperties2 from "encodeProperties" /* 503 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "handleConnectionOpen" /* 4197 */;
-import withEqualityFn from "withEqualityFn" /* 699 */;
-import encodeProperties from "encodeProperties" /* 503 */;
+import encodeProperties2 from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import collectGuildAnalyticsMetadata from "AppAnalyticsUtils.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../stores/SelectedGuildStore.tsx";
+import withEqualityFn from "ImpressionStore.tsx";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
 require = arg1;
 function trackImpression(type, arg1, arg2) {

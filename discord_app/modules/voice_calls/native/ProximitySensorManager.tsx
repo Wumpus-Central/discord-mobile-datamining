@@ -1,13 +1,13 @@
 // discord_app/modules/voice_calls/native/ProximitySensorManager.tsx
-import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 5038 */;
-import RouteTypes from "RouteTypes" /* 9649 */;
-import enforcingDefault from "enforcing" /* 16689 */;
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleAudioRouteChanged" /* 9648 */;
-import set from "set" /* 500 */;
+import set2 from "../../../utils/PlatformUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import RouteTypes from "../VoiceCallTypes.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeProximitySensorManagerModule.tsx";
+import closure_2 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../../stores/RTCConnectionStore.tsx";
+import closure_5 from "../AudioRouteStore.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function handleChange() {

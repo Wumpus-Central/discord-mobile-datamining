@@ -1,18 +1,18 @@
 // discord_app/modules/icymi/native/ICYMICardInCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import SolidCutout from "SolidCutout" /* 8402 */;
-import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import SolidCutout from "../../../design/components/Icon/native/ClipView.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import { DEFAULT_ROLE_COLOR_HEX } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createICYMIStyles from "createICYMIStyles.tsx";
 
 require = arg1;
 function CutoutGuildIconWithUserCustom(guild) {

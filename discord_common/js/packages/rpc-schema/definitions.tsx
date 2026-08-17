@@ -1,7 +1,7 @@
 // discord_common/js/packages/rpc-schema/definitions.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 4375 */;
-import RPCCommands from "RPCCommands" /* 13848 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../shared/shared-constants/OAuth2Scopes.tsx";
+import RPCCommands from "helpers.tsx";
 
 let obj = { request: "Array", response: 0 };
 obj[1] = function response(string) {

@@ -1,5 +1,5 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx
-import closure_3 from "initialize" /* 9692 */;
+import closure_3 from "../VerifiedKeyStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

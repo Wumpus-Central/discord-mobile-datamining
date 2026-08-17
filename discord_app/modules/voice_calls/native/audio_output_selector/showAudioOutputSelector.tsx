@@ -1,10 +1,10 @@
 // discord_app/modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import VOICE_PANEL_SETTINGS_KEY from "VOICE_PANEL_SETTINGS_KEY" /* 9673 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import VOICE_PANEL_SETTINGS_KEY from "../../../voice_panel/native/header/VoicePanelHeaderConstants.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = VOICE_PANEL_SETTINGS_KEY.VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;

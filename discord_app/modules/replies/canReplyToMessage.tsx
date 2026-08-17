@@ -1,11 +1,11 @@
 // discord_app/modules/replies/canReplyToMessage.tsx
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8200 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { Permissions } from "sum" /* 505 */;
+import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import useUserCommunicationDisabled from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { useUserCommunicationDisabled } from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
 import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
 

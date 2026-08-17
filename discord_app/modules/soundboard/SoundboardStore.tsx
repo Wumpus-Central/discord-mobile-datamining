@@ -1,21 +1,21 @@
 // discord_app/modules/soundboard/SoundboardStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import perceptualToAmplitude from "perceptualToAmplitude" /* 4782 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
-import closure_17 from "module_2026" /* 2026 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
+import perceptualToAmplitude from "../../utils/PerceptualVolumeUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import { DEFAULT_SOUND_GUILD_ID } from "SoundboardConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
+import closure_17 from "../../../_runtime/02026_registerAsset.js";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function handleSoundCreateOrUpdate(sound) {

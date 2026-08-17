@@ -1,8 +1,8 @@
 // discord_app/modules/foreground_service/mobile/ForegroundServiceManager.android.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setRequestedByAll from "setRequestedBy" /* 675 */;
-import initializeDefault from "initialize" /* 4720 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import setRequestedByAll from "../../gateway/RequestGatewaySocket.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
 
 let obj = importDefault;
 const NativeModules = get_ActivityIndicator.NativeModules;

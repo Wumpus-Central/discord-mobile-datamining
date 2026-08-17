@@ -1,16 +1,16 @@
 // discord_app/modules/polls/chat/formatPollMessageChatData.tsx
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8431 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { getPollState } from "useMessagePollInteractions" /* 8430 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import isCommunicationDisabled from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import GuildMemberFlags from "../../guild_automod/AutomodPermissionUtils.tsx";
+import formatExpirationLabel from "useFormattedExpirationLabel.tsx";
+import closure_3 from "../../a11y/AccessibilityStore.tsx";
+import closure_4 from "../../emojis/EmojiStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../stores/MessageStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import { getPollState } from "../PollsInteractionStore.tsx";
+import ME from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function reactionForId(reactions, first) {

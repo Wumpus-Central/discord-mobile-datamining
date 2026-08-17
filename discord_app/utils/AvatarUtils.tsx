@@ -1,16 +1,16 @@
 // discord_app/utils/AvatarUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import IntegerDefault from "Integer" /* 14 */;
-import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1436 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import parseDefault from "parse" /* 1484 */;
-import Url from "Url" /* 1489 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
-import registerAssetDefault from "registerAsset" /* 1902 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
+import IntegerDefault from "../../_runtime/00014_Integer.js";
+import DECORATION_TO_AVATAR_RATIO from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
+import ensureAvatarSource from "native/AvatarUtils.tsx";
+import handleImageLoad from "../modules/image_upload/ImageLoaderUtils.tsx";
+import parseDefault from "../../_runtime/01484_parse.js";
+import Url from "../../_runtime/01489_Url.js";
+import shortenAndLocalizeNumber from "NumberUtils.tsx";
+import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import registerAssetDefault from "../../_runtime/01902_registerAsset.js";
+import ME from "../Constants.tsx";
+import set from "PlatformUtils.tsx";
 
 function getAvatarURL(canAnimate) {
   ({ path, id, hash, size, lossless } = canAnimate);

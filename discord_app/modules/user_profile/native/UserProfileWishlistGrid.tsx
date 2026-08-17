@@ -1,23 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileWishlistGrid.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_7 from "initialize" /* 10369 */;
-import closure_8 from "get" /* 9186 */;
-import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 9189 */;
-import { isSKUWishlistItemRecord, getWishlistProductLines } from "fromServer" /* 9191 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "addSku" /* 4521 */;
-import closure_14 from "createUserWidgetFromServer" /* 5365 */;
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import ME from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_19 } from "items" /* 678 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../collectibles/CollectiblesCategoryStore.tsx";
+import closure_7 from "../../wishlists/SentGiftsStore.tsx";
+import closure_8 from "../../wishlists/WishlistStore.tsx";
+import { isCollectiblesWishlistItemRecord as closure_9 } from "../../wishlists/records/CollectiblesWishlistItemRecord.tsx";
+import { isSKUWishlistItemRecord, getWishlistProductLines } from "../../wishlists/records/SKUWishlistItemRecord.tsx";
+import closure_12 from "../../../stores/UserStore.tsx";
+import closure_13 from "../../../stores/game_store/SKUStore.tsx";
+import closure_14 from "../UserProfileStore.tsx";
+import USER_PROFILE_TOOLTIP_DELAY from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { CollectiblesMobileShopScreen as closure_19 } from "../../collectibles/CollectiblesShopConstants.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class WishlistEmptyState {

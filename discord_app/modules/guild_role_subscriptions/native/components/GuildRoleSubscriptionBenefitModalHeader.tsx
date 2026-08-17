@@ -1,18 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitModalHeader.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import renderDefault from "render" /* 8910 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
+import renderDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Fonts } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
 require = arg1;
 noopAll;

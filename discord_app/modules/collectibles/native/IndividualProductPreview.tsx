@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/IndividualProductPreview.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 9283 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 9570 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 9571 */;
-import NameplateUserDefault from "NameplateUser" /* 9572 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import ProfileEffectUserPreviewDefault from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
+import ProfileFrameUserPreviewDefault from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview.tsx";
+import NameplateUserDefault from "../nameplates/native/NameplateProductPreview.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import items from "../CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ProfilePreviewWrapper(children) {

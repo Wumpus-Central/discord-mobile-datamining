@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileSpeedBumpActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 8933 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../_runtime/08933_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import { UserProfileAnalyticsTypes } from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function InformationTable(speedBumpType) {

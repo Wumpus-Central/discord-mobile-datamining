@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx
-import InviteTypes2 from "InviteTypes" /* 4369 */;
-import createResolvingGuildInvite from "createResolvingGuildInvite" /* 12760 */;
-import closure_2 from "updateInvite" /* 4359 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import InviteTypes2 from "../../../../../../instant_invite/InviteTypeUtils.tsx";
+import createResolvingGuildInvite from "invite/GuildInvite.tsx";
+import closure_2 from "../../../../../../../stores/InviteStore.tsx";
+import closure_3 from "../../../../../../../stores/UserStore.tsx";
+import ME from "../../../../../../../Constants.tsx";
+import { InviteTypes } from "../../../../../../instant_invite/Constants.tsx";
 
 require = arg1;
 ({ InviteStates: c4, AbortCodes: c5 } = ME);

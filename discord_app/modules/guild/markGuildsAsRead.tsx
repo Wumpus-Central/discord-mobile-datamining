@@ -1,13 +1,13 @@
 // discord_app/modules/guild/markGuildsAsRead.tsx
-import applyDefault from "apply" /* 12 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "handleUpdate" /* 6788 */;
-import closure_4 from "rebuild" /* 5251 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "generateOldThreadCutoff" /* 4772 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_3 from "../guild_onboarding/GuildOnboardingPromptsStore.tsx";
+import closure_4 from "../threads/ActiveJoinedThreadsStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../stores/ReadStateStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { ReadStateTypes } from "../read_states/ReadStateConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");

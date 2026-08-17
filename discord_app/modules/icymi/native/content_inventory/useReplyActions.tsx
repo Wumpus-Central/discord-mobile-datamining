@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/native/content_inventory/useReplyActions.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { EmojiIntention } from "set" /* 1925 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import { DraftType } from "../../../../stores/DraftStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
+import { MessageSendLocation } from "../../../messages/MessageConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");

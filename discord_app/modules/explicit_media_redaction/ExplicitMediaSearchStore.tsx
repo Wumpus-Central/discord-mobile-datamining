@@ -1,8 +1,8 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import redactionSettingToRenderedString from "ExplicitMediaRedactionUtils.tsx";
 
 require = arg1;
 function handleSearchMessagesSuccess(data) {

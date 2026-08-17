@@ -1,5 +1,5 @@
 // discord_app/modules/install/native/DiskUsageManager.android.tsx
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
 initializeDefault;
 class DiskUsageManager extends tmp2 {

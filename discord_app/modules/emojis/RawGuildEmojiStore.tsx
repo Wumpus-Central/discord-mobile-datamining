@@ -1,9 +1,9 @@
 // discord_app/modules/emojis/RawGuildEmojiStore.tsx
-import EmojiTypes from "EmojiTypes" /* 4037 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { TypeTag } from "TypeTag" /* 1432 */;
-import { LibdiscoreStore } from "identity" /* 1911 */;
-import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1914 */;
+import EmojiTypes from "EmojiTypes.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { TypeTag } from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
+import { LibdiscoreStore } from "../libdiscore/stores/LibdiscoreStore.tsx";
+import { LibdiscoreBatchStoreRefactorExperiment } from "../libdiscore/libdiscoreExperiments.tsx";
 
 require = arg1;
 function fromServer(guildId) {

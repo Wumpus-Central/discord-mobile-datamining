@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventsConstants.tsx
-import ME from "ME" /* 676 */;
-import setDefault from "set" /* 687 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const ChannelTypes = ME.ChannelTypes;
 let obj = { SCHEDULED: 1, [1]: "SCHEDULED", ACTIVE: 2, [2]: "ACTIVE", COMPLETED: 3, [3]: "COMPLETED", CANCELED: 4, [4]: "CANCELED" };

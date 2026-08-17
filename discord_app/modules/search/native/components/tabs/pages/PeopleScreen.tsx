@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/tabs/pages/PeopleScreen.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "teardown" /* 11538 */;
-import closure_6 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { SearchResultContentEntityTypes as closure_9 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/SearchPeopleTabStore.tsx";
+import closure_6 from "../../../stores/SearchQueryStore.tsx";
+import MessageEmbedTypes from "../../../../SearchConstants.tsx";
+import { SearchResultContentEntityTypes as closure_9 } from "../../../tracking/TrackingConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c4 = importAllResult;

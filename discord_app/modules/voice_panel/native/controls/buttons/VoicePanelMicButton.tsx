@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 4540 */;
-import closure_6 from "initialize" /* 1982 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "updateVoiceState" /* 4542 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import timestampDefault from "../../../../debug/Logger.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../game_console/GameConsoleStore.tsx";
+import closure_6 from "../../../../impersonate/ImpersonateStore.tsx";
+import closure_7 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../../stores/MediaEngineStore.tsx";
+import closure_10 from "../../../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../../../stores/UserStore.tsx";
+import closure_12 from "../../../../../stores/VoiceStateStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);

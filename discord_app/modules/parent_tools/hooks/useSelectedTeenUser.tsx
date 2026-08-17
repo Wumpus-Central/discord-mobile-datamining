@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTeenUser.tsx
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "getSettings" /* 5299 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../FamilyCenterControlledSettingsStore.tsx";
+import closure_5 from "../FamilyCenterStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

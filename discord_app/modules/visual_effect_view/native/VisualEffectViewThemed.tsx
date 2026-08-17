@@ -1,9 +1,9 @@
 // discord_app/modules/visual_effect_view/native/VisualEffectViewThemed.tsx
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import isBlurDisabledDefault from "VisualEffectView.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const forwardRefResult = importAllResult.forwardRef(function VisualEffectViewThemed(arg0, ref) {

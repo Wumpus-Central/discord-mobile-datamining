@@ -1,19 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import Background from "Background" /* 6950 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import SectionTitle from "SectionTitle" /* 14583 */;
-import TruncatedText from "TruncatedText" /* 15797 */;
-import emphasisHookDefault from "emphasisHook" /* 15803 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import BottomSheetModal from "../../../../../_runtime/06952_BottomSheetModal.js";
+import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import SectionTitle from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
+import TruncatedText from "Elements.tsx";
+import emphasisHookDefault from "SubscribeButton.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

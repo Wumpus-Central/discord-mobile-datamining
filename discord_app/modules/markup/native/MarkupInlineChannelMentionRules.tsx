@@ -1,6 +1,6 @@
 // discord_app/modules/markup/native/MarkupInlineChannelMentionRules.tsx
-import noopAll from "noop" /* 19 */;
-import { jsxs } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import { jsxs } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let c0 = arg1;
 noopAll;

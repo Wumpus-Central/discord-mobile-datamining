@@ -1,5 +1,5 @@
 // discord_app/design/utils/native/mergeProps.native.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 function chainCallbacks(arg0, arg1) {
   closure_0 = [...arguments];

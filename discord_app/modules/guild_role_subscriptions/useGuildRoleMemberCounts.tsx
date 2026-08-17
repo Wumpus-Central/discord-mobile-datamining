@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getRoleMemberCount" /* 6928 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../guild_settings/GuildRoleMemberCountStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

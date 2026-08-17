@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx
-import set from "set" /* 2 */;
-import getGlobalObject from "getGlobalObject" /* 697 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getGlobalObject from "../../../shared/utils/GlobalUtils.tsx";
 
 const globalObject = getGlobalObject.getGlobalObject();
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");

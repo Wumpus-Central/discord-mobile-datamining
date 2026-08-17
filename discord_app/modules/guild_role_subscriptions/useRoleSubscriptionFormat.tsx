@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx
-import closure_2 from "noop" /* 19 */;
-import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildRoleSubscriptionFormat as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { hasPermission } from "../../records/GuildRoleRecord.tsx";
+import closure_4 from "../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import { GuildRoleSubscriptionFormat as closure_6 } from "GuildRoleSubscriptionsConstants.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");

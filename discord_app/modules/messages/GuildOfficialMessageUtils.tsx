@@ -1,14 +1,14 @@
 // discord_app/modules/messages/GuildOfficialMessageUtils.tsx
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import nDefault from "n" /* 689 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import experimentDefault from "experiment" /* 7233 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import ME from "ME" /* 676 */;
+import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import nDefault from "../../../_runtime/00689_n.js";
+import hexToRgba from "../../utils/ColorUtils.tsx";
+import isSystemMessageDefault from "isSystemMessage.tsx";
+import experimentDefault from "GuildOfficialMessagesExperiment.tsx";
+import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MessageConstants.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

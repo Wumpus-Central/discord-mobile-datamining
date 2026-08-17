@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member/useIsGuestOrLurker.tsx
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,16 +1,16 @@
 // discord_app/modules/wishlists/WishlistActionCreators.tsx
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import useSKUPrice from "useSKUPrice" /* 7205 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "handlePaymentSourceCreateEnd" /* 4041 */;
-import closure_7 from "fromServer" /* 7201 */;
-import closure_8 from "fromServer" /* 9187 */;
-import { getWishlistSkuIds } from "fromServer" /* 9187 */;
-import ME from "ME" /* 676 */;
+import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import useSKUPrice from "../storefront/StorefrontUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "../../stores/billing/BillingInfoStore.tsx";
+import closure_7 from "records/WishlistRecommendationRecord.tsx";
+import closure_8 from "records/WishlistRecord.tsx";
+import { getWishlistSkuIds } from "records/WishlistRecord.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function extraWishlistParams() {

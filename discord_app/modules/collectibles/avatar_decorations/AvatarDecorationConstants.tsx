@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx
-import set from "set" /* 2 */;
-import frozen from "frozen" /* 1437 */;
+import set from "../../../../_runtime/00002_set.js";
+import frozen from "../../../../discord_common/js/shared/constants/web/AvatarConstants.tsx";
 
 const AvatarSizes = frozen.AvatarSizes;
 const result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/push_feedback/PushFeedbackStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import str2 from "str2" /* 5259 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import str2 from "../push_notifications/PushNotificationConstants.tsx";
 
 const NotificationTypes = str2.NotificationTypes;
 let c1 = null;

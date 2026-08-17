@@ -1,7 +1,7 @@
 // discord_app/modules/premium/OverridePremiumTypeActions.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createMessage from "createMessage" /* 7500 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createMessage from "../messages/createMessage.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");

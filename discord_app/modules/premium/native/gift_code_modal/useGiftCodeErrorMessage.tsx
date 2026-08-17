@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "map" /* 5324 */;
-import closure_4 from "updateGiftCode" /* 10641 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../collectibles/CollectiblesPurchaseStore.tsx";
+import closure_4 from "../../../../stores/GiftCodeStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");

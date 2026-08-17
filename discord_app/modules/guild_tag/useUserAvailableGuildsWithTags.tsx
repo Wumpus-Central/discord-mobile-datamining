@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");

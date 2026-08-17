@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessagesTypes.tsx
-import set from "set" /* 2 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import set from "../../../_runtime/00002_set.js";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 

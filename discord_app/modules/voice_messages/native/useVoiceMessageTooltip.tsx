@@ -1,7 +1,7 @@
 // discord_app/modules/voice_messages/native/useVoiceMessageTooltip.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "subscribeToKeyboardUIStore" /* 1496 */;
-import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11147 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
+import VoiceMessageRecordingStatus from "VoiceMessagesUIStore.tsx";
 import { useTooltip } from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
 
 const require = arg1;

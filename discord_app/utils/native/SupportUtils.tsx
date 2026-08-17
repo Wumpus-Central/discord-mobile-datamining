@@ -1,6 +1,6 @@
 // discord_app/utils/native/SupportUtils.tsx
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
 
 const require = arg1;
 function _emailSupport() {

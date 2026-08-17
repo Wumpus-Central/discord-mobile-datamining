@@ -1,21 +1,21 @@
 // discord_app/modules/user_profile/native/UserProfileConnections.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import map from "map" /* 4097 */;
-import DividerDefault from "Divider" /* 7185 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 12314 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
-import closure_7 from "initialize" /* 4220 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import ME from "ME" /* 676 */;
-import { MetadataFields } from "OperatorTypes" /* 5225 */;
-import jsxProd from "jsxProd" /* 21 */;
-import Button from "Button" /* 1297 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import DividerDefault from "UserProfileCard.tsx";
+import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../user_settings/LocaleStore.tsx";
+import closure_7 from "../../../stores/StreamerModeStore.tsx";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { MetadataFields } from "../../connections/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import Button from "../../../design/void/native.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VerifiedIcon(arg0) {

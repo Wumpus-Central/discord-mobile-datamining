@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx
-import closure_2 from "recomputeAffinities" /* 5407 */;
-import closure_3 from "hasConsented" /* 5258 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
-import { Consents } from "ME" /* 676 */;
+import closure_2 from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_3 from "../../../stores/ConsentStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../../../stores/views/SortedVoiceStateStore.tsx";
+import { Consents } from "../../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");

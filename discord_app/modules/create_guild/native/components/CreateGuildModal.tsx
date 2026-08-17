@@ -1,10 +1,10 @@
 // discord_app/modules/create_guild/native/components/CreateGuildModal.tsx
-import closure_3 from "noop" /* 19 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "comparator" /* 1980 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/GuildChannelStore.tsx";
+import NUXGuildTemplatesAnalytics from "../CreateGuildConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ CreateGuildModalStates: closure_6, GuildTemplateTriggers: error } = NUXGuildTemplatesAnalytics);

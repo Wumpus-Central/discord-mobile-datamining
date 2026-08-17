@@ -1,8 +1,8 @@
 // discord_common/js/packages/flux/useStateFromStores.tsx
-import shallowEqual from "shallowEqual" /* 643 */;
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import shallowEqual from "../shallow-equal/shallowEqual.tsx";
+import shallowEqualDefault from "../shallow-equal/shallowEqual.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 
 require = arg1;

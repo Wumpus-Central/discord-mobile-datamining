@@ -1,8 +1,8 @@
 // discord_app/modules/guild_config_gates/GuildConfigGates.tsx
-import importDefaultResult1 from "hasLoaded" /* 16861 */;
-import { Endpoints } from "ME" /* 676 */;
-import initialize from "initialize" /* 589 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult1 from "GuildConfigGatesStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 initialize = {

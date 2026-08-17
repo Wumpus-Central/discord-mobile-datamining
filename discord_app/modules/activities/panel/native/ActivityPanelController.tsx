@@ -1,16 +1,16 @@
 // discord_app/modules/activities/panel/native/ActivityPanelController.tsx
-import _runPrimaryAppCommandOrJoinEmbeddedActivityAll from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 8701 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "addApplication" /* 4478 */;
-import closure_7 from "module_9010" /* 9010 */;
-import closure_8 from "module_12485" /* 12485 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "participantFromServer" /* 1390 */;
-import items3 from "items3" /* 4481 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
-import { jsx } from "jsxProd" /* 21 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import _runPrimaryAppCommandOrJoinEmbeddedActivityAll from "../../EmbeddedActivitiesActionCreators.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../applications/ApplicationStore.tsx";
+import closure_7 from "../../../panels/morphable/AppFreezeStore.tsx";
+import closure_8 from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
+import closure_9 from "../../../../stores/ChannelStore.tsx";
+import closure_10 from "../../EmbeddedActivitiesStore.tsx";
+import items3 from "../../Constants.tsx";
+import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import areArraysShallowlyEqual from "../../../../utils/FunctionUtils.tsx";
 
 const require = arg1;
 class BaseActivityPanelController {

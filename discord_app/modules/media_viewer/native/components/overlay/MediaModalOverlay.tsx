@@ -1,20 +1,20 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import renderDefault from "render" /* 8910 */;
-import nativeEventEmitter from "nativeEventEmitter" /* 9001 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 12056 */;
-import ObscuredViewDefault from "ObscuredView" /* 12057 */;
-import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 12059 */;
-import _modDef12063 from "module_12063" /* 12063 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import isBlurDisabledDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
+import SafeAreaPaddingView from "../../../../../components_native/common/SafeAreaView.tsx";
+import renderDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import nativeEventEmitter from "../../MediaPlayerMuteManager.tsx";
+import useOverlayLayoutDriver from "../../useOverlayLayoutDriver.tsx";
+import ObscuredViewDefault from "../MediaViewerThumbnails.tsx";
+import MediaModalOverlayHeader from "MediaModalOverlayHeader.tsx";
+import _modDef12063 from "MediaModalOverlayAltText.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function OverlayMuteButton(arg0) {

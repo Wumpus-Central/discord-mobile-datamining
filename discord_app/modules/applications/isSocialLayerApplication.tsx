@@ -1,7 +1,7 @@
 // discord_app/modules/applications/isSocialLayerApplication.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getApplicationFlags from "utils/ApplicationFlagUtils.tsx";
 
 const ApplicationFlags = ME.ApplicationFlags;
 const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");

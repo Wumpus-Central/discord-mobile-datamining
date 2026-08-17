@@ -1,8 +1,8 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import setDefault from "../../utils/Durations.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

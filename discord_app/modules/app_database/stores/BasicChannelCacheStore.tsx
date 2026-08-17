@@ -1,9 +1,9 @@
 // discord_app/modules/app_database/stores/BasicChannelCacheStore.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "allGuildIds" /* 1393 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../stores/GuildMembershipStore.tsx";
 
 let object = importDefault;
 new timestampDefault("BasicChannelCacheStore");

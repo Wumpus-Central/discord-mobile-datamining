@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import tDefault from "t" /* 3975 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 5437 */;
+import set from "../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../../Constants.tsx";
+import tDefault from "../../../../../../../_runtime/03975_t.js";
+import parseMessageEmbedForProps from "../../../../../safety_hub/SafetyHubUtils.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

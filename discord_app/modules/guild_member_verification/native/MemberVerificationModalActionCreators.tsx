@@ -1,11 +1,11 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import _fetchVerificationFormDefault from "_fetchVerificationForm" /* 6906 */;
-import items from "items" /* 6860 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _fetchVerificationFormDefault from "../MemberVerificationActionCreators.tsx";
+import items from "../MemberVerificationConstants.tsx";
 
 ({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: c4 } = items);
 const AnalyticEvents = ME.AnalyticEvents;

@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/KeyboardStateDebugging.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import timestampDefault from "../debug/Logger.tsx";
+import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 require = arg1;
 let closure_2 = new timestampDefault("KeyboardStateDebugging");

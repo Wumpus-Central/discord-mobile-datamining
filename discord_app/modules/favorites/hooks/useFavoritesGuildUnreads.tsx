@@ -1,11 +1,11 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildUnreads.tsx
-import closure_3 from "rebuild" /* 5251 */;
-import closure_4 from "storeThread" /* 4023 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_3 from "../../threads/ActiveJoinedThreadsStore.tsx";
+import closure_4 from "../../threads/JoinedThreadsStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildReadStateStore.tsx";
+import closure_7 from "../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../stores/UserGuildSettingsStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/headless_tasks/android/MuteAction.tsx
-import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import set from "../../../../_runtime/00002_set.js";
+import MAX_FAVORITES from "../../user_settings/UserSettingsConstants.tsx";
 
 const MuteUntilSeconds = MAX_FAVORITES.MuteUntilSeconds;
 let result = set.fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");

@@ -1,16 +1,16 @@
 // discord_app/components_native/common/UnreadBars.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import _toPropertyKey from "_toPropertyKey" /* 11595 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Button from "../../design/void/native.tsx";
+import _toPropertyKey from "../../../discord_common/js/packages/transition-group/TransitionGroup.tsx";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../modules/a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../utils/ColorUtils.tsx";
+import importDefaultResult from "../../modules/rebrand/native/TextStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

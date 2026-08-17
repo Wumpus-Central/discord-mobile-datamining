@@ -1,14 +1,14 @@
 // discord_app/modules/media_viewer/native/components/MediaShareActions.tsx
-import ActionSheet from "ActionSheet" /* 7175 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "filterStaffGuild" /* 9044 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import closure_7 from "messages" /* 9066 */;
-import ME from "ME" /* 676 */;
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ActionSheetRowIcon from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../icymi/ICYMIStore.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/MessageStore.tsx";
+import closure_7 from "../../../../stores/native/MessagePreviewStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "../../../explicit_media_redaction/ExplicitMediaRedactionConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function useMediaShareActions(source) {

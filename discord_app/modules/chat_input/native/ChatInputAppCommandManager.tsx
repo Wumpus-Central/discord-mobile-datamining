@@ -1,14 +1,14 @@
 // discord_app/modules/chat_input/native/ChatInputAppCommandManager.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_6 from "handleInit" /* 7526 */;
-import closure_7 from "handleInit" /* 7527 */;
-import closure_8 from "handleLoadMessages" /* 4505 */;
-import closure_9 from "set" /* 6899 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import regExp from "regExp" /* 6810 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../application_commands/ApplicationCommandAutocompleteStore.tsx";
+import closure_7 from "../../application_commands/ApplicationCommandStore.tsx";
+import closure_8 from "../../games/GameStore.tsx";
+import closure_9 from "../../games/autocomplete/GameAutocompleteStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function areResolvedGamesEqual(size, size2) {

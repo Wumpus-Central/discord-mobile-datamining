@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/ExperimentManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "getHash" /* 4288 */;
-import { registerExperiment } from "getHash" /* 4288 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "ExperimentStore.tsx";
+import { registerExperiment } from "ExperimentStore.tsx";
+import ExperimentBuckets from "ExperimentConstants.tsx";
 
 ({ ExperimentTypes: c4, ExposureTypes } = ExperimentBuckets);
 let obj = { LEGACY: "legacy", APEX: "apex" };

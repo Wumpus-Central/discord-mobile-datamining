@@ -1,7 +1,7 @@
 // discord_common/js/packages/application-widget-renderer/src/index.tsx
-import set from "set" /* 2 */;
-import isVisualUnfurledMedia from "isVisualUnfurledMedia" /* 12275 */;
-import isVisualUnfurledMediaDefault from "isVisualUnfurledMedia" /* 12275 */;
+import set from "../../../../../_runtime/00002_set.js";
+import isVisualUnfurledMedia from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
+import isVisualUnfurledMediaDefault from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
 for (const key10018 in require("toAsciiDigits")) {

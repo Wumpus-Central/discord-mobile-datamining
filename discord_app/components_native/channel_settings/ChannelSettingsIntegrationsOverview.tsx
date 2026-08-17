@@ -1,13 +1,13 @@
 // discord_app/components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import useNavigation from "../../design/components/Navigator/native/useNavigation.native.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import { ChannelSettingsSections } from "../../Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function LinkedLobbyFormSection(channel) {

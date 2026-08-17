@@ -1,16 +1,16 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Radius from "Radius" /* 806 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import ButtonGroup from "ButtonGroup" /* 6687 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 11425 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Radius from "../../../../../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import useIsUsingClientThemeDefault from "../../../client_themes/native/useIsUsingClientTheme.tsx";
+import getChatInputPositionStyleDefault from "../getChatInputPositionStyle.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { updateChatInputContainerHeight as closure_6 } from "../useChatBottomManagerUIStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

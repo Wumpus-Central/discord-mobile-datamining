@@ -1,9 +1,9 @@
 // discord_app/modules/messages/BackgroundTaskManager.native.tsx
-import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 7504 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 500 */;
+import set2 from "../../utils/PlatformUtils.tsx";
+import initializeDefault from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function startBackgroundTask(arg0) {

@@ -1,13 +1,13 @@
 // discord_app/modules/quests/lib/analytics/BrandSafetyContext.tsx
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9506 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9505 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 4197 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "ContentImpressionTrackerConstants.tsx";
+import SidebarVisibilityMethodStore from "../../../guild_sidebar/SidebarVisibilityMethodStore.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
 import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx";
 
 ({ getVisibleChannelIdsMethod: c3, getVisibleGuildIdsMethod: c4 } = SidebarVisibilityMethodStore);

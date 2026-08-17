@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/DisplayProfile.tsx
-import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import useAvatarsWithGuilds from "useAvatarsWithGuilds" /* 8376 */;
+import set from "../../../_runtime/00002_set.js";
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
+import useAvatarsWithGuilds from "../profile_customization/ProfileCustomizationUtils.tsx";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
 

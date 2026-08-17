@@ -1,12 +1,12 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/FinishingTouchesScreen.tsx
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleFormInit" /* 8875 */;
-import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8254 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../guild_settings/GuildSettingsStore.tsx";
+import closure_9 from "../../../../../stores/GuildRoleStore.tsx";
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "../../../PublicGuildsConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ Image: closure_6, View: error } = get_ActivityIndicator);

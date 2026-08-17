@@ -1,6 +1,6 @@
 // discord_app/modules/expression_picker/native/useExpressionPickerTabData.tsx
-import closure_2 from "noop" /* 19 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import ExpressionPickerViewType from "../ExpressionPickerConstants.tsx";
 
 const require = arg1;
 ({ ExpressionPickerOrder: c3, ExpressionPickerViewType: c4 } = ExpressionPickerViewType);

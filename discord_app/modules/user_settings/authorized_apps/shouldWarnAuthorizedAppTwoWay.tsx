@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 9788 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx");
 

@@ -1,14 +1,14 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 11859 */;
-import registerAssetDefault from "registerAsset" /* 11866 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 11867 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
+import registerAssetDefault from "../../../../../_runtime/11866_registerAsset.js";
+import ContactSyncErrorDefault from "ContactSyncError.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);

@@ -1,9 +1,9 @@
 // discord_app/stores/GuildMemberRequesterStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import acknowledgeDefault from "acknowledge" /* 6705 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult from "trackCommunicationDisabled" /* 1990 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import acknowledgeDefault from "../lib/guild/GuildMemberRequester.tsx";
+import closure_2 from "ChannelStore.tsx";
+import importDefaultResult from "GuildMemberStore.tsx";
 
 function handleConnectionReset() {
   navigation.reset();

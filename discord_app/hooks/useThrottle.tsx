@@ -1,5 +1,5 @@
 // discord_app/hooks/useThrottle.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../_runtime/00019_noop.js";
 import { apply } from "../../_runtime/00012_apply.js";
 
 const require = arg1;

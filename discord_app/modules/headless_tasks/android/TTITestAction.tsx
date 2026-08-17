@@ -1,15 +1,15 @@
 // discord_app/modules/headless_tasks/android/TTITestAction.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import enforcingDefault from "enforcing" /* 4236 */;
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
-import enforcingDefault2 from "enforcing" /* 16623 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import { applicationReady } from "linkFromAppsFlyer" /* 16441 */;
-import closure_6 from "getHash" /* 4288 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
+import getHermesInstrumentedStatsSummaryDefault from "../../../utils/ProcessUtils.native.tsx";
+import enforcingDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { applicationReady } from "../../app_startup/native/NativeAppStartup.tsx";
+import closure_6 from "../../experiments/ExperimentStore.tsx";
+import closure_8 from "../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../stores/ChannelStore.tsx";
+import closure_10 from "../../../stores/GuildStore.tsx";
 
 let closure_0 = arg1;
 function sendReply(status, message) {

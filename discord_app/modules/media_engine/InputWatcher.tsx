@@ -1,7 +1,7 @@
 // discord_app/modules/media_engine/InputWatcher.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER as closure_5 } from "StreamIssueReportReasons" /* 4532 */;
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER as closure_5 } from "../go_live/Constants.tsx";
 
 const require = arg1;
 const logger = new require("log").Logger("InputWatcher");

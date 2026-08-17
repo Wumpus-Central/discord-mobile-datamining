@@ -1,12 +1,12 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 7309 */;
-import apply from "apply" /* 12 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import AccessibilityAnnouncer2 from "../../design/shared.tsx";
+import ParticipantTypes from "../calls/CallConstants.tsx";
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectsUtils.tsx";
+import apply from "../../../_runtime/00012_apply.js";
 
 let closure_4 = ParticipantTypes.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT;
 let closure_5 = [];

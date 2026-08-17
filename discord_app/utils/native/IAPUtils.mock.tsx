@@ -1,6 +1,6 @@
 // discord_app/utils/native/IAPUtils.mock.tsx
-import set from "set" /* 2 */;
-import items from "items" /* 7728 */;
+import set from "../../../_runtime/00002_set.js";
+import items from "../../modules/billing/native/iapProducts.tsx";
 
 const result = set.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 

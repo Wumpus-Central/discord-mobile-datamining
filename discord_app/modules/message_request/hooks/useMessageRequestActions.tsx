@@ -1,10 +1,10 @@
 // discord_app/modules/message_request/hooks/useMessageRequestActions.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "createUserWidgetFromServer" /* 5365 */;
-import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 11611 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../user_profile/UserProfileStore.tsx";
+import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "../MessageRequestConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 let require = arg1;
 ({ MessageRequestAnalyticsAction: error, BATCH_REJECT_LIMIT: closure_8 } = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL);

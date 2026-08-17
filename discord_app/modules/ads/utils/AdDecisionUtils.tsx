@@ -1,6 +1,6 @@
 // discord_app/modules/ads/utils/AdDecisionUtils.tsx
-import setDefault from "set" /* 687 */;
-import AdCreativeType from "AdCreativeType" /* 7469 */;
+import setDefault from "../../../utils/Durations.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 
 require = arg1;
 let result = 6 * setDefault.Millis.HOUR;

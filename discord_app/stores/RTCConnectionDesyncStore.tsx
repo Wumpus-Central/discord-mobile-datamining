@@ -1,17 +1,17 @@
 // discord_app/stores/RTCConnectionDesyncStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import keysDefault from "keys" /* 4510 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import closure_3 from "isVoiceMuted" /* 4543 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { makeSortedVoiceState } from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import keysDefault from "../lib/CachedEntriesMap.tsx";
+import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
+import closure_3 from "../records/VoiceStateRecord.tsx";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "RTCConnectionStore.tsx";
+import closure_6 from "UserStore.tsx";
+import closure_7 from "VoiceStateStore.tsx";
+import { makeSortedVoiceState } from "views/SortedVoiceStateStore.tsx";
+import ME from "../Constants.tsx";
+import { ParticipantTypes } from "../modules/calls/CallConstants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function retryFailedUsers() {

@@ -1,14 +1,14 @@
 // discord_app/design/void/Form/native/FormCTAButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import context from "context" /* 6939 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import semanticColor from "semanticColor" /* 1301 */;
-import { Fonts } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../native.tsx";
+import context from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import semanticColor from "FormConstants.tsx";
+import { Fonts } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/rebrand/native/TextStyles.tsx";
 
 require = arg1;
 class FormCTAButton {

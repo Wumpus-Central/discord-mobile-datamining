@@ -1,19 +1,19 @@
 // discord_app/modules/safety_hub/native/SafetyHubViolationsContainer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 5437 */;
-import WarningIcon from "WarningIcon" /* 8078 */;
-import renderDefault from "render" /* 8910 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11066 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import parseMessageEmbedForProps from "../SafetyHubUtils.tsx";
+import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import renderDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import useSafetyHubClassifications from "../hooks/useSafetyHubClassifications.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../SafetyHubStore.tsx";
+import SafetyHubView from "../SafetyHubConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function SafetyHubViolationsHeader(count) {

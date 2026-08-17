@@ -1,13 +1,13 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "get" /* 6801 */;
-import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9" /* 8525 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../MemberVerificationFormStore.tsx";
+import BANNER_RATIO_HEIGHT_16_9 from "MemberVerificationFormConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ SCROLL_EVENT_TIMER_MS: error, useBannerHeight: closure_8 } = BANNER_RATIO_HEIGHT_16_9);

@@ -1,14 +1,14 @@
 // discord_app/modules/age_assurance/native/AgeVerificationIntroScreen.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getAgeVerificationGetStartedSteps as closure_6 } from "set" /* 5427 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 5438 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getAgeVerificationGetStartedSteps as closure_6 } from "../AgeVerificationConstants.tsx";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import { SafetyHubLinks } from "../../safety_hub/SafetyHubConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,10 +1,10 @@
 // discord_app/modules/vibegrations/lib/VibegrationsUtils.tsx
-import useIsVibegrationsGuildEnabled from "useIsVibegrationsGuildEnabled" /* 7215 */;
-import closure_2 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1980 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import useIsVibegrationsGuildEnabled from "../experiments/VibegrationsGuildExperiment.tsx";
+import closure_2 from "../../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useIsVibegrationsGuildEnabled } from "../experiments/VibegrationsGuildExperiment.tsx";
 

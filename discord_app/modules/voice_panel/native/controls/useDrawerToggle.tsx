@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/useDrawerToggle.tsx
-import closure_3 from "noop" /* 19 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { VoicePanelControlsModes } from "VoicePanelControlsConstants.tsx";
 
 const require = arg1;
 let closure_5 = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };

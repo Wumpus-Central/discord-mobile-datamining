@@ -1,9 +1,9 @@
 // discord_app/modules/game_console/trackVoiceCallTransfer.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "handleUpdate" /* 4541 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../stores/SessionsStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 

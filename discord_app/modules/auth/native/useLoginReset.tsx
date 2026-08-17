@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/useLoginReset.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 

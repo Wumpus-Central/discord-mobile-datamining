@@ -1,6 +1,6 @@
 // discord_app/modules/autocompleter/findNextSelectedResult.tsx
-import set from "set" /* 2 */;
-import HeaderRecord from "HeaderRecord" /* 6773 */;
+import set from "../../../_runtime/00002_set.js";
+import HeaderRecord from "AutocompleterConstants.tsx";
 
 ({ FindResultDirections: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
 const result = set.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");

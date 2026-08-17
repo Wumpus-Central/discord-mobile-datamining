@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "createUserWidgetFromServer" /* 5365 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../UserProfileStore.tsx";
 
 const useMemo = noop.useMemo;
 let closure_4 = [];

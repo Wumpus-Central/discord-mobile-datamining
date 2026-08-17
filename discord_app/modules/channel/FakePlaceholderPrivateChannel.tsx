@@ -1,7 +1,7 @@
 // discord_app/modules/channel/FakePlaceholderPrivateChannel.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
 
 const channelRecord = createChannelRecord.createChannelRecord({ id: "131", type: ME.ChannelTypes.DM, name: "Placeholder Channel" });
 const obj = { id: "131", type: ME.ChannelTypes.DM, name: "Placeholder Channel" };

@@ -1,19 +1,19 @@
 // discord_app/stores/StreamRTCConnectionStore.tsx
-import applyDefault from "apply" /* 12 */;
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import isOwnerDefault from "isOwner" /* 4561 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import canSpectateDefault from "canSpectate" /* 13074 */;
-import closure_4 from "initialize" /* 4504 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import ME from "ME" /* 676 */;
-import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import isOwnerDefault from "../modules/go_live/StreamRTCConnection.tsx";
+import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
+import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
+import closure_4 from "../modules/game_detection/RunningGameStore.native.tsx";
+import closure_5 from "AuthenticationStore.tsx";
+import importDefaultResult from "MediaEngineStore.tsx";
+import closure_7 from "PresenceStore.tsx";
+import closure_8 from "RTCConnectionStore.tsx";
+import ME from "../Constants.tsx";
+import { StreamTypes } from "../modules/go_live/Constants.tsx";
+import importDefaultResult1 from "../Dispatcher.tsx";
 
 require = arg1;
 ({ RTCConnectionQuality: c9, StreamLayouts } = ME);

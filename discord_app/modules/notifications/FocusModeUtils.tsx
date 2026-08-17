@@ -1,10 +1,10 @@
 // discord_app/modules/notifications/FocusModeUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import setDefault from "set" /* 4827 */;
-import closure_3 from "filterPlayingActivities" /* 7250 */;
-import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags" /* 4033 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import closure_3 from "../../stores/SelfPresenceStore.tsx";
+import { NotificationSettingsUpdateType as closure_4 } from "NotificationConstants.tsx";
+import ME from "../../Constants.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 

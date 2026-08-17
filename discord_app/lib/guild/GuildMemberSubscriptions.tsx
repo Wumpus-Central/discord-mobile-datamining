@@ -1,8 +1,8 @@
 // discord_app/lib/guild/GuildMemberSubscriptions.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import setDefault from "set" /* 687 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import setDefault from "../../utils/Durations.tsx";
 
 const require = arg1;
 const MINUTE = setDefault.Millis.MINUTE;

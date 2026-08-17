@@ -1,9 +1,9 @@
 // discord_app/modules/guild_sidebar/SectionFooterHelpers.tsx
-import computeSubtitle from "computeSubtitle" /* 5272 */;
-import closure_2 from "incrementVersion" /* 5270 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 5281 */;
-import { Permissions } from "ME" /* 676 */;
+import computeSubtitle from "ChannelListState.tsx";
+import closure_2 from "../../stores/CategoryCollapseStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import { ChannelListGuildActionRow } from "GuildSidebarConstants.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");

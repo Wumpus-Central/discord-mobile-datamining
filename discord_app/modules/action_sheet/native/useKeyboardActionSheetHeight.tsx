@@ -1,12 +1,12 @@
 // discord_app/modules/action_sheet/native/useKeyboardActionSheetHeight.tsx
-import set from "set" /* 2 */;
-import useWindowDimensions from "useWindowDimensions" /* 1494 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5444 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5444 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
+import set from "../../../../_runtime/00002_set.js";
+import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import useCustomKeyboardHeight from "../../keyboard/native/useCustomKeyboardHeight.tsx";
+import useCustomKeyboardHeightDefault from "../../keyboard/native/useCustomKeyboardHeight.tsx";
+import NAV_BAR_HEIGHT from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 
 const result = set.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
 

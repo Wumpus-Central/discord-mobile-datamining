@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/hideLaunchPad.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 
 const ComponentActions = ME.ComponentActions;
 const result = set.fileFinishedImporting("modules/launchpad/native/hideLaunchPad.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/game_profile/native/components/GameProfileShopCarousel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9172 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesShopCardInternalV2 from "../../../collectibles/native/CollectiblesShopCardV2.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../collectibles/CollectiblesCategoryStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function HorizontalSpacing() {

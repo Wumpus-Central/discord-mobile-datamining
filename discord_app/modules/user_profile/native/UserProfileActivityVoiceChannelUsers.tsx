@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 9450 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9450 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet.tsx";
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
+import closure_3 from "../../../stores/PresenceStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function UserRow(user) {

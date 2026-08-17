@@ -1,5 +1,5 @@
 // discord_app/modules/mfa/MFAConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const obj = {};

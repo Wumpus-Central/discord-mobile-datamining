@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
-import set from "set" /* 2 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
-import identity from "identity" /* 700 */;
+import set from "../../../../_runtime/00002_set.js";
+import insertUnsortedGuilds from "../../../stores/SortedGuildStore.tsx";
+import identity from "../../../../_runtime/00700_identity.js";
 import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 

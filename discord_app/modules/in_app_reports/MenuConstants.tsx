@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_reports/MenuConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/in_app_reports/MenuConstants.tsx");
 

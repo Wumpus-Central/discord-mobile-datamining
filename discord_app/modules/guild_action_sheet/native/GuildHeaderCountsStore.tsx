@@ -1,11 +1,11 @@
 // discord_app/modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "getMemberListId" /* 7249 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "handleInviteData" /* 4295 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_0 from "../../../stores/ChannelMemberStore.tsx";
+import closure_1 from "../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../stores/GuildMemberCountStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/VoiceStateStore.tsx";
 
 let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;

@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
-import noopAll from "noop" /* 19 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import IconButton from "IconButton" /* 8035 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import createStandardNavigationFactories from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,14 +1,14 @@
 // discord_app/modules/stickers/native/StickerPickerListRow.tsx
-import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10232 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
-import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/StickerPickerListRowNativeComponent.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import { StickerAnimationSettings } from "../StickersConstants.tsx";
+import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
+import { PADDING_VERTICAL } from "../../expression_picker/ExpressionPickerConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,15 +1,15 @@
 // discord_app/stores/UserStore.tsx
-import clearAllDefault from "clearAll" /* 1220 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import validatePremiumType from "validatePremiumType" /* 1928 */;
-import isUserPrimaryGuildEqual from "isUserPrimaryGuildEqual" /* 1932 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import closure_4 from "setPremiumTypeActual" /* 1923 */;
-import closure_5 from "createdAt" /* 1930 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
-import { UNSELECTED_PREMIUM_TYPE_OVERRIDE as closure_10 } from "GuildFeatures" /* 1924 */;
+import clearAllDefault from "MobileCacheSnapshotStore.tsx";
+import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
+import hasFlagAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import validatePremiumType from "../modules/user/UserStoreUtils.tsx";
+import isUserPrimaryGuildEqual from "../modules/guild_tag/PrimaryGuildUtils.tsx";
+import PermissionOverwriteType from "../flow/Server.tsx";
+import closure_4 from "../modules/premium/OverridePremiumTypeStore.tsx";
+import closure_5 from "../records/UserRecord.tsx";
+import closure_6 from "AuthenticationStore.tsx";
+import ME from "../Constants.tsx";
+import { UNSELECTED_PREMIUM_TYPE_OVERRIDE as closure_10 } from "../modules/premium/PremiumConstants.tsx";
 
 require = arg1;
 function mergeGuildAvatar(id, guildId, avatar) {

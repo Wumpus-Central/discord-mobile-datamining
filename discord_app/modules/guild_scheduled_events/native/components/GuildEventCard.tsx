@@ -1,14 +1,14 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventCard.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import ButtonGroup from "ButtonGroup" /* 6687 */;
-import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 8800 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 4370 */;
-import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import usePrimaryActionButtonType from "GuildEventCardComponents.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
+import { isGuildScheduledEventActive as closure_5 } from "../../GuildScheduledEventStore.tsx";
+import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "../../GuildScheduledEventsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function GuildEventCardControls(onCloseAction) {

@@ -1,8 +1,8 @@
 // discord_app/modules/search/managers/SearchTokensManager.tsx
-import set from "set" /* 2 */;
-import _setAppLocale from "_setAppLocale" /* 1995 */;
-import initializeDefault from "initialize" /* 5038 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+import set from "../../../../_runtime/00002_set.js";
+import _setAppLocale from "../../../intl/IntlLoaderStore.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import SearchTokenTypes from "../SearchUtils.tsx";
 
 let closure_2 = _setAppLocale.subscribeToIntlLoadingSuccess;
 initializeDefault;

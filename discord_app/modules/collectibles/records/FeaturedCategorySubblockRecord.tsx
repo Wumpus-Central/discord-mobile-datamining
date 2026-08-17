@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/FeaturedCategorySubblockRecord.tsx
-import set from "set" /* 2 */;
-import FeaturedSubblockType from "FeaturedSubblockType" /* 5342 */;
+import set from "../../../../_runtime/00002_set.js";
+import FeaturedSubblockType from "../../../../discord_common/js/shared/shared-constants/FeaturedSubblockType.tsx";
 
 let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {

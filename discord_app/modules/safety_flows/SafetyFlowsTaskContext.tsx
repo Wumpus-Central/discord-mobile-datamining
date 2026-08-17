@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/SafetyFlowsTaskContext.tsx
-import importAllResult from "noop" /* 19 */;
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(null);

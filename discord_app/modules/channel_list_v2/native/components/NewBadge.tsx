@@ -1,14 +1,14 @@
 // discord_app/modules/channel_list_v2/native/components/NewBadge.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useIsUsingClientThemeDefault from "../../../client_themes/native/useIsUsingClientTheme.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import closure_4 from "../../../../stores/PermissionStore.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import ME from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { experiment } from "../../../game_server/GameServerExperiment.tsx";
 import { experiment } from "../experiments/ServerThemeExperiment.tsx";

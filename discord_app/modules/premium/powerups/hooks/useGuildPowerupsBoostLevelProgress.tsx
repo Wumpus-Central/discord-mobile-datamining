@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx
-import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4281 */;
-import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4281 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import useGuildAppliedBoostCount from "useGuildPowerupsBoostCount.tsx";
+import useGuildAppliedBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import ME from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

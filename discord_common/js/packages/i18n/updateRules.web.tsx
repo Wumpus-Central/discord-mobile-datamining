@@ -1,7 +1,7 @@
 // discord_common/js/packages/i18n/updateRules.web.tsx
-import noopAll from "noop" /* 19 */;
-import t from "t" /* 4092 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import t from "../../../../_runtime/04092_t.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

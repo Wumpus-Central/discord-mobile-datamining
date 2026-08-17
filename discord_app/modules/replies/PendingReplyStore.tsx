@@ -1,10 +1,10 @@
 // discord_app/modules/replies/PendingReplyStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/MessageStore.tsx";
 
 let closure_5 = {};
 let closure_6 = {};

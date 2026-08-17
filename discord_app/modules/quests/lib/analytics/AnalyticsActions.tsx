@@ -1,19 +1,19 @@
 // discord_app/modules/quests/lib/analytics/AnalyticsActions.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import trackHeartbeat from "trackHeartbeat" /* 5054 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
-import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7473 */;
-import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7474 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import getQuestContentName from "getQuestContentName" /* 7480 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7471 */;
-import closure_5 from "refreshSourceMapCookie" /* 706 */;
-import closure_6 from "initializeState" /* 7453 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import trackHeartbeat from "../../../analytics_sessions/SessionHeartbeatScheduler.tsx";
+import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
+import getQuestDeliveryDataForPlacement from "../../utils/QuestDataUtils.tsx";
+import getOrRefreshAdSession from "../../../analytics_sessions/SessionAdGenerator.tsx";
+import isSponsoredPlayQuest from "../../utils/QuestUtils.tsx";
+import getApplicationIdsByTaskTypes from "../../utils/QuestTaskUtils.tsx";
+import getQuestContentName from "AnalyticsTypes.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../devtools/DevToolsSettingsStore.tsx";
+import closure_5 from "../../../../stores/DeveloperOptionsStore.tsx";
+import closure_6 from "../../QuestStore.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 function trackQuestEvent(sourceQuestContent) {

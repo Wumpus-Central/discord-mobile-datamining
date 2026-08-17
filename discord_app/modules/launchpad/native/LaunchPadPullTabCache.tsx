@@ -1,9 +1,9 @@
 // discord_app/modules/launchpad/native/LaunchPadPullTabCache.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import Storage2 from "Storage" /* 595 */;
-import enforcingDefault from "enforcing" /* 4849 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
+import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
 
 function setLaunchPadPullTabExclusionRect() {
   let tmp = arg0;

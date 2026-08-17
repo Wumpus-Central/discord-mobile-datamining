@@ -1,5 +1,5 @@
 // discord_app/modules/experiments/trigger_points/validateTriggerPoint.tsx
-import getHashDefault from "getHash" /* 4288 */;
+import getHashDefault from "../ExperimentStore.tsx";
 
 getHashDefault;
 const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestTranscriptActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import _toPropertyKey from "_toPropertyKey" /* 7455 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _toPropertyKey from "../../VideoQuestUIStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ FetchStatus: c5, useVideoQuestUIStore: closure_6 } = _toPropertyKey);

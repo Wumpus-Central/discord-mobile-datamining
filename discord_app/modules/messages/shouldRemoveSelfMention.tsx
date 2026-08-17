@@ -1,6 +1,6 @@
 // discord_app/modules/messages/shouldRemoveSelfMention.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 
 const MessageTypesSets = ME.MessageTypesSets;
 const result = set.fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");

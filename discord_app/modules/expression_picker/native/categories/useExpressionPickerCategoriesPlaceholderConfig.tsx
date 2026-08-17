@@ -1,8 +1,8 @@
 // discord_app/modules/expression_picker/native/categories/useExpressionPickerCategoriesPlaceholderConfig.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
-import { CATEGORY_ICON_SIZE } from "ME" /* 676 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { CATEGORY_ICON_SIZE } from "../../../../Constants.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 createCacheKey = { placeholder: null };

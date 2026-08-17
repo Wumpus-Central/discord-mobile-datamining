@@ -1,8 +1,8 @@
 // discord_app/design/components/Sheet/native/SimpleActionSheet.native.tsx
-import noopAll from "noop" /* 19 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ActionSheet from "ActionSheet.native.tsx";
+import ActionSheetRowIcon from "ActionSheetRow.native.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class SimpleActionSheet {

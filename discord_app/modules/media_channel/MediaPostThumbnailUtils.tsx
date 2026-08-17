@@ -1,6 +1,6 @@
 // discord_app/modules/media_channel/MediaPostThumbnailUtils.tsx
-import set from "set" /* 2 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import set from "../../../_runtime/00002_set.js";
+import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
 
 const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 

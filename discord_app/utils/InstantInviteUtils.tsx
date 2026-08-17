@@ -1,15 +1,15 @@
 // discord_app/utils/InstantInviteUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NOOPDefault from "NOOP" /* 6714 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "makeSortedChannel" /* 5388 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
+import getSystemLocale from "../intl/index.native.tsx";
+import NOOPDefault from "AutocompleteUtils.tsx";
+import closure_3 from "../modules/activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../stores/ChannelStore.tsx";
+import closure_5 from "../stores/GuildMemberStore.tsx";
+import closure_6 from "../stores/ReadStateStore.tsx";
+import closure_7 from "../stores/RelationshipStore.tsx";
+import closure_8 from "../stores/UserStore.tsx";
+import closure_9 from "../stores/views/PrivateChannelSortStore.tsx";
+import { ChannelTypes } from "../Constants.tsx";
+import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
 
 require = arg1;
 function isGuildMember(omitGuildId, id) {

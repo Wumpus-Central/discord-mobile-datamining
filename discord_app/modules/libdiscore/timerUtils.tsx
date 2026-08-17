@@ -1,10 +1,10 @@
 // discord_app/modules/libdiscore/timerUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import debounceDefault from "debounce" /* 636 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import setTimeoutAll from "setTimeout" /* 1921 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import debounceDefault from "../../../_runtime/00636_debounce.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import setTimeoutAll from "../../../discord_common/js/packages/libdiscore/mobile/js/timers.tsx";
 
 function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTime) {
   let obj = { timerId, expectedDelay, actualDelay, executionTime };

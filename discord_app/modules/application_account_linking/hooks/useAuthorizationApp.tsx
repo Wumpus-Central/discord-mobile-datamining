@@ -1,8 +1,8 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizationApp.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "addApplication" /* 4478 */;
-import closure_4 from "createExecutable" /* 4479 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../applications/ApplicationStore.tsx";
+import closure_4 from "../../../records/ApplicationRecord.tsx";
+import { ApplicationTypes } from "../../applications/ApplicationConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import initializeDefault from "initialize" /* 5038 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isCommunicationDisabled from "CommunicationDisabledUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 
 function clearGuildMemberTimeout(closure_2, closure_1) {
   member = member.getMember(closure_2, closure_1);

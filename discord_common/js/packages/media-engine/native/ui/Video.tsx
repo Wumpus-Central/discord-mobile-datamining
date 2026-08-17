@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/native/ui/Video.tsx
-import set from "set" /* 2 */;
-import loggerDefault from "logger" /* 4574 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import loggerDefault from "DirectVideo.tsx";
 
 class Video {
   constructor(arg0) {

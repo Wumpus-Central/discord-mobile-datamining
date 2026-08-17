@@ -1,5 +1,5 @@
 // discord_app/modules/errors/UploaderError.tsx
-import prototypeDefault from "prototype" /* 4274 */;
+import prototypeDefault from "../../errors/APIError.tsx";
 
 prototypeDefault;
 const prototype = function UploaderError(body) {

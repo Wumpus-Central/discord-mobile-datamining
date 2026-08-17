@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/records/CollectiblesCategoryRecord.tsx
-import fromServerDefault from "fromServer" /* 5310 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import closure_2 from "fromServer" /* 5303 */;
+import fromServerDefault from "CollectiblesStoreListingRecord.tsx";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
+import closure_2 from "CollectiblesProductRecord.tsx";
 
 require = arg1;
 fromServerDefault;

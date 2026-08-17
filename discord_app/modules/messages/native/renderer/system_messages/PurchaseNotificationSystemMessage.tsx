@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx
-import set from "set" /* 2 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import createGuildProductPurchaseSystemMessage from "createGuildProductPurchaseSystemMessage" /* 8243 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import PermissionOverwriteType from "../../../../../flow/Server.tsx";
+import createGuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 

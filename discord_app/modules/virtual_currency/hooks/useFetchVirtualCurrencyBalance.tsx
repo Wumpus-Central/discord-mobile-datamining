@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "redeemError" /* 9254 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../stores/VirtualCurrencyStore.tsx";
 
 const useEffect = noop.useEffect;
 const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");

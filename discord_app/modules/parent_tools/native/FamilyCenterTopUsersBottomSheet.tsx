@@ -1,17 +1,17 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getEmptyActivityFormatter from "../FamilyCenterUtils.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function UserRow(userActivity) {

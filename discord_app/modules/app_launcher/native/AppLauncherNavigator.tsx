@@ -1,18 +1,18 @@
 // discord_app/modules/app_launcher/native/AppLauncherNavigator.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import AppRowLabelDefault from "AppRowLabel" /* 11258 */;
-import AppLauncherApplicationViewScreenInnerDefault from "AppLauncherApplicationViewScreenInner" /* 11305 */;
-import AppLauncherCommandViewFooterDefault from "AppLauncherCommandViewFooter" /* 11331 */;
-import DEFAULT_CONTENT_PADDINGDefault from "DEFAULT_CONTENT_PADDING" /* 11370 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import AppRowLabelDefault from "screens/home/AppLauncherHomeScreen.tsx";
+import AppLauncherApplicationViewScreenInnerDefault from "screens/application_view/AppLauncherApplicationViewScreen.tsx";
+import AppLauncherCommandViewFooterDefault from "screens/command_view/AppLauncherCommandViewScreen.tsx";
+import DEFAULT_CONTENT_PADDINGDefault from "screens/app_list_view/AppLauncherViewAllScreen.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { AppLauncherRouteName } from "AppLauncherNativeConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../_runtime/09931_createNativeStackNavigator.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_3 = ["initialRouteName"];

@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessagesManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let require = arg1;
 function _refreshSavedMessages() {

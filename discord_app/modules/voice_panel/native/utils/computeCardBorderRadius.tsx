@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/utils/computeCardBorderRadius.tsx
-import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import set from "../../../../../_runtime/00002_set.js";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;
 const DEFAULT_BORDER_RADIUS_PIP = VoicePanelModes.DEFAULT_BORDER_RADIUS_PIP;

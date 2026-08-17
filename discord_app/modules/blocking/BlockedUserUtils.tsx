@@ -1,6 +1,6 @@
 // discord_app/modules/blocking/BlockedUserUtils.tsx
-import applyDefault from "apply" /* 12 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import closure_3 from "../../stores/RelationshipStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/blocking/BlockedUserUtils.tsx");

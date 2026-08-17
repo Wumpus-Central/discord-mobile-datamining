@@ -1,17 +1,17 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsCardFooter.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
-import Text from "Text" /* 4734 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11669 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 11694 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../GuildPowerups.messages.js";
+import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
+import entitlementExpirationDateToStringDefault from "../utils/entitlementExpirationDateToString.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 class GuildPowerupCardFooterActive {
   constructor(arg0) {

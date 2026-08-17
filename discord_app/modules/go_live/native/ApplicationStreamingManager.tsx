@@ -1,13 +1,13 @@
 // discord_app/modules/go_live/native/ApplicationStreamingManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import noopAll from "noop" /* 19 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import apexExperimentDefault from "apexExperiment" /* 10938 */;
-import updateRegionDefault from "updateRegion" /* 17075 */;
-import closure_3 from "ApplicationStreamPresets" /* 4562 */;
-import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4524 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import { jsx } from "jsxProd" /* 21 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import noopAll from "../../../../_runtime/00019_noop.js";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import apexExperimentDefault from "MobileGoLiveUpsellExperiment.tsx";
+import updateRegionDefault from "../ApplicationStreamingManager.tsx";
+import closure_3 from "../../../stores/ApplicationStreamingSettingsStore.tsx";
+import { ApplicationStreamPresets } from "../StreamSettingsConstants.tsx";
+import { MediaEngineContextTypes } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

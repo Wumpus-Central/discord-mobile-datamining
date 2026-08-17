@@ -1,14 +1,14 @@
 // discord_app/modules/saved_messages/native/ForLaterCardHeader.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6685 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import computeChannelNameDefault from "../../channel/useChannelName.tsx";
+import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
+import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
+import FacepileGroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 function HeaderIcon(channel) {
   channel = channel.channel;

@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/getEmbeddedActivityLaunchability.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 8699 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3" /* 4481 */;
-import { Permissions } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
+import closure_2 from "../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../stores/VoiceStateStore.tsx";
+import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "../Constants.tsx";
+import { Permissions } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,8 +1,8 @@
 // discord_app/modules/saved_messages/native/openForLaterLimitUpsell.tsx
-import set from "set" /* 2 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8479 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8482 */;
-import PremiumUpsellSubfeatureNames2 from "PremiumUpsellSubfeatureNames" /* 8483 */;
+import set from "../../../../_runtime/00002_set.js";
+import openPremiumUpsellActionSheetDefault from "../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
+import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import PremiumUpsellSubfeatureNames2 from "../../premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx";
 
 const result = set.fileFinishedImporting("modules/saved_messages/native/openForLaterLimitUpsell.tsx");
 

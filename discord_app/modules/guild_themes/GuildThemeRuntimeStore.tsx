@@ -1,13 +1,13 @@
 // discord_app/modules/guild_themes/GuildThemeRuntimeStore.tsx
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4265 */;
-import closure_2 from "calculateAppliedBoosts" /* 4261 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import apply from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import cloneGuildThemeSettings from "guildThemeSerialization.tsx";
+import VANITY_URL_POWERUP_SKU_ID from "../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import closure_2 from "../premium/powerups/GuildPowerupsStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/SelectedGuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 require = arg1;
 function snapshotSelectedGuildId(guildId) {

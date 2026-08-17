@@ -1,5 +1,5 @@
 // discord_app/modules/devtools/native/components/screens/performance/startFrameMonitor.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../../_runtime/00002_set.js";
 
 let c0 = 16.666666666666668;
 const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");

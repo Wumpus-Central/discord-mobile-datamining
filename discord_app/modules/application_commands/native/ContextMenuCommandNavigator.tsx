@@ -1,11 +1,11 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandNavigator.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../_runtime/09931_createNativeStackNavigator.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

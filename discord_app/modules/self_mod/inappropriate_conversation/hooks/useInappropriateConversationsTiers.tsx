@@ -1,9 +1,9 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx
-import initialize from "initialize" /* 589 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10575 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
+import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import closure_2 from "../../../../stores/UserStore.tsx";
+import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");

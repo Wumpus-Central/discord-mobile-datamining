@@ -1,9 +1,9 @@
 // discord_app/modules/custom_status/utils/userSettingToActivity.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import ME from "../../../Constants.tsx";
+import parseRawEmojiObjectDefault from "../../emojis/UnicodeEmojis.tsx";
+import closure_4 from "../../emojis/EmojiStore.tsx";
 
 function _activityFromSetting(emojiName) {
   if (null != arg1) {

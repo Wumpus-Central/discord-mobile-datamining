@@ -1,6 +1,6 @@
 // discord_app/modules/device/MetaQuestUtils.android.tsx
-import getConstantsAll from "getConstants" /* 1626 */;
-import importDefaultResult from "enforcing" /* 670 */;
+import getConstantsAll from "../../utils/native/ClientInfoUtils.tsx";
+import importDefaultResult from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
 
 const isMetaQuestResult = importDefaultResult.isMetaQuest();
 const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");

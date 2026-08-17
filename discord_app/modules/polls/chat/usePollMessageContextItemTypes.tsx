@@ -1,6 +1,6 @@
 // discord_app/modules/polls/chat/usePollMessageContextItemTypes.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 let obj = { END_EARLY: 0, [0]: "END_EARLY" };

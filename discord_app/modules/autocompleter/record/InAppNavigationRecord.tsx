@@ -1,9 +1,9 @@
 // discord_app/modules/autocompleter/record/InAppNavigationRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import settingsPathToRoute from "settingsPathToRoute" /* 6725 */;
-import { Routes } from "ME" /* 676 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 6716 */;
-import { UserSettingsPath } from "MAX_FAVORITES" /* 685 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import settingsPathToRoute from "../../user_settings/UserSettingsURLUtils.tsx";
+import { Routes } from "../../../Constants.tsx";
+import { RewardFilterTypes } from "../../quests/QuestConstants.tsx";
+import { UserSettingsPath } from "../../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 toJSDefault;

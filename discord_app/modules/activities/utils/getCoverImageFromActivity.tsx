@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getCoverImageFromActivity.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
-import updateAssets from "updateAssets" /* 7247 */;
+import set from "../../../../_runtime/00002_set.js";
+import items3 from "../Constants.tsx";
+import updateAssets from "../../../utils/ApplicationAssetUtils.tsx";
 
 let closure_2 = items3.ACTIVITY_INVITE_COVER_IMAGE_SIZE;
 const result = set.fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");

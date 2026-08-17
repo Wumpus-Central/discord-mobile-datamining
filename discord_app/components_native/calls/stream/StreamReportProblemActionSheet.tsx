@@ -1,17 +1,17 @@
 // discord_app/components_native/calls/stream/StreamReportProblemActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import BottomSheetModal from "BottomSheetModal" /* 6952 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
-import getStreamIssueReportOptionsDefault from "getStreamIssueReportOptions" /* 16432 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import BottomSheetModal from "../../../../_runtime/06952_BottomSheetModal.js";
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ActionSheetRowIcon from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import getStreamIssueReportOptionsDefault from "../../../modules/go_live/utils/getStreamIssueReportOptions.tsx";
+import closure_3 from "../../../stores/PresenceStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

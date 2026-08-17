@@ -1,8 +1,8 @@
 // discord_app/actions/native/CreateChannelModalActionCreators.tsx
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import set from "../../../_runtime/00002_set.js";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import _modDef5260 from "../ModalActionCreators.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
 
 let closure_3 = createChannelRecord.CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES;
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx
-import closure_3 from "noop" /* 19 */;
-import { GUILD_FEATURE_TO_PERK } from "BoostedGuildTiers" /* 4262 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { GUILD_FEATURE_TO_PERK } from "../constants/GuildPowerupsConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");

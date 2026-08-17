@@ -1,9 +1,9 @@
 // discord_app/modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import hasFetchedColors from "hasFetchedColors" /* 8345 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
+import hasFetchedColors from "../../../../avatar/useAvatarColor.tsx";
+import hexToRgba from "../../../../../utils/ColorUtils.tsx";
 
 let c3 = "#000000";
 let items = [hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760), ];

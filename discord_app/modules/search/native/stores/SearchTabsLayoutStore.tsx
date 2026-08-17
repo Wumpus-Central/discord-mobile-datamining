@@ -1,14 +1,14 @@
 // discord_app/modules/search/native/stores/SearchTabsLayoutStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleReaction" /* 4971 */;
-import closure_5 from "search" /* 11536 */;
-import closure_6 from "setAutocompleteOptions" /* 11537 */;
-import closure_7 from "teardown" /* 11538 */;
-import closure_8 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import SearchTokenTypes from "../../SearchUtils.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../SearchMessageStore.tsx";
+import closure_5 from "SearchGuildChannelTabStore.tsx";
+import closure_6 from "SearchMemberTabStore.tsx";
+import closure_7 from "SearchPeopleTabStore.tsx";
+import closure_8 from "SearchQueryStore.tsx";
+import MessageEmbedTypes from "../../SearchConstants.tsx";
 import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import { SearchTokenTypes } from "../../SearchUtils.tsx";
 

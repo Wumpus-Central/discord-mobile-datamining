@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/native/FamilyCenterAvatarPair.tsx
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_3 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

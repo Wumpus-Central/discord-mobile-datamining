@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5449 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8345 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8416 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createdAt" /* 1930 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getAvatarURLDefault from "../../../../../../utils/AvatarUtils.tsx";
+import preloadDefault from "../../../../../../components_native/common/FastImage.tsx";
+import hasFetchedColorsDefault from "../../../../../avatar/useAvatarColor.tsx";
+import useDisplayProfileDefault from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
+import UserProfileBannerDefault from "../../../../../user_profile/native/UserProfileBanner.tsx";
+import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../../records/UserRecord.tsx";
+import ME from "../../../../../../Constants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

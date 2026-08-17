@@ -1,13 +1,13 @@
 // discord_app/modules/game_console/GameConsoleActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9656 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleUpdate" /* 4541 */;
-import closure_6 from "set" /* 4540 */;
-import ME from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import snapVolumeToDefault from "../user_settings/voice/AudioSettingsUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import closure_5 from "../../stores/SessionsStore.tsx";
+import closure_6 from "GameConsoleStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function disconnectRemote() {

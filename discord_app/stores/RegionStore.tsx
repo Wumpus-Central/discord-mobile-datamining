@@ -1,8 +1,8 @@
 // discord_app/stores/RegionStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "GuildStore.tsx";
 
 let c3 = null;
 let closure_4 = {};

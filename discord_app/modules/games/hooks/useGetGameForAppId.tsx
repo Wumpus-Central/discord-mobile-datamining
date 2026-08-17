@@ -1,8 +1,8 @@
 // discord_app/modules/games/hooks/useGetGameForAppId.tsx
-import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleLoadMessages" /* 4505 */;
+import importDefaultResult1 from "useGame.tsx";
+import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../GameStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { importDefaultResult1 } from "useGame.tsx";
 

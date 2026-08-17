@@ -1,9 +1,9 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroGradient.tsx
-import noopAll from "noop" /* 19 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 noopAll;

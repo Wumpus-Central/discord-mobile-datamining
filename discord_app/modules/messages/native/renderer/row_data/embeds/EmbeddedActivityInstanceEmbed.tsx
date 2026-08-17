@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "addApplication" /* 4478 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "sortActivity" /* 4559 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
+import closure_2 from "../../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../../../applications/ApplicationStore.tsx";
+import closure_4 from "../../../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../../stores/PresenceStore.tsx";
+import closure_7 from "../../../../../../stores/UserStore.tsx";
+import { CodedLinkExtendedType } from "coded_links/CodedLinksConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");

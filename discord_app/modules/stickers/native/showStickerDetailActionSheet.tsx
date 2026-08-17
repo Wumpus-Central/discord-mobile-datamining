@@ -1,7 +1,7 @@
 // discord_app/modules/stickers/native/showStickerDetailActionSheet.tsx
-import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import set from "../../../../_runtime/00002_set.js";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
 const result = set.fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");

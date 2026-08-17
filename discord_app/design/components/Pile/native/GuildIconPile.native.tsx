@@ -1,11 +1,11 @@
 // discord_app/design/components/Pile/native/GuildIconPile.native.tsx
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import SolidCutout from "SolidCutout" /* 8402 */;
-import Pile from "Pile" /* 11788 */;
-import map from "map" /* 11789 */;
-import getListSummaryLabel from "getListSummaryLabel" /* 11790 */;
-import closure_2 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import GuildIconSizes from "../../../../modules/guild/native/GuildIcon.tsx";
+import SolidCutout from "../../Icon/native/ClipView.tsx";
+import Pile from "Pile.native.tsx";
+import map from "PileOverflow.native.tsx";
+import getListSummaryLabel from "../../../../utils/ListUtils.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

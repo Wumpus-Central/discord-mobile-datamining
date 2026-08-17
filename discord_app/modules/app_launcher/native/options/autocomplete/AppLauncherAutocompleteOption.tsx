@@ -1,12 +1,12 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 11347 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import useAnimationDelayedAutoFocus from "../../hooks/useAnimationDelayedAutoFocus.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { container: null, hasError: null, inputText: null };

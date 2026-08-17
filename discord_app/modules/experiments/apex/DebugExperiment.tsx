@@ -1,6 +1,6 @@
 // discord_app/modules/experiments/apex/DebugExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "index.tsx";
 
 const obj = { 1: null, 2: {} };
 obj[2] = {};

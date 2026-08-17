@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/hooks/useBadBundleFilter.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "map" /* 5324 */;
+import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../CollectiblesPurchaseStore.tsx";
 
 noop.useCallback;
 let result = set.fileFinishedImporting("modules/collectibles/hooks/useBadBundleFilter.tsx");

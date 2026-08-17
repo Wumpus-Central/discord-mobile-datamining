@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/GifTag.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "n" /* 689 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../_runtime/00689_n.js";
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

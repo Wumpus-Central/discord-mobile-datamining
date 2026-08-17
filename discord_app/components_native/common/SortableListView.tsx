@@ -1,7 +1,7 @@
 // discord_app/components_native/common/SortableListView.tsx
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ View: c3, Animated: c4, Dimensions, PanResponder: c5, FlatList: closure_6 } = get_ActivityIndicator);

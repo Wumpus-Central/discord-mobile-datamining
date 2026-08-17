@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ScanQrCodeSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import apply from "apply" /* 12 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
+import apply from "../../../../../_runtime/00012_apply.js";
+import importDefaultResult from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 apply = {

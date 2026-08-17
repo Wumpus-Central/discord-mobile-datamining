@@ -1,7 +1,7 @@
 // discord_app/actions/GuildSubscriptionsActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import reset from "reset" /* 7264 */;
+import set from "../../_runtime/00002_set.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import reset from "../lib/guild/GuildChannelSubscriptions.tsx";
 
 let result = set.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 

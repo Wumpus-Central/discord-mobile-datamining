@@ -1,10 +1,10 @@
 // discord_app/modules/saved_messages/SavedMessagesStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import SavedMessageSortTypes from "SavedMessagesTypes.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function getTimeSafe(dueAt) {

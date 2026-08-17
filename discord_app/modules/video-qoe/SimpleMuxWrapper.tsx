@@ -1,9 +1,9 @@
 // discord_app/modules/video-qoe/SimpleMuxWrapper.tsx
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import generateSessionId from "generateSessionId" /* 14491 */;
-import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 14492 */;
-import UDefault from "U" /* 14493 */;
+import set from "../../../_runtime/00002_set.js";
+import log from "../../../discord_common/js/packages/logger/Logger.tsx";
+import generateSessionId from "utils/SessionManager.tsx";
+import mapDiscordToMuxMetadata from "integrations/MuxIntegration.tsx";
+import UDefault from "../../../_runtime/14493_U.js";
 
 const logger = new log.Logger("SimpleMuxWrapper");
 const result = set.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");

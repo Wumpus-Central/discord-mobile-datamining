@@ -1,8 +1,8 @@
 // discord_app/design/void/Atoms/native/Atoms.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _modDef8115 from "module_8115" /* 8115 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 13492 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _modDef8115 from "../../LegacyText/native/LegacyText.tsx";
+import AccessibilityAnnouncer from "../../../native.tsx";
 
 const result = set.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/hooks/useInviteMembersCallback.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import ME from "../../../../Constants.tsx";
 
 const require = arg1;
 ({ AnalyticsPages: c4, InstantInviteSources: c5 } = ME);

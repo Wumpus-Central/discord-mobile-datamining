@@ -1,5 +1,5 @@
 // discord_app/modules/messages/ApplicationCommands.tsx
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;
 const result = require("set").fileFinishedImporting("modules/messages/ApplicationCommands.tsx");

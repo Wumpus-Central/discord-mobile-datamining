@@ -1,14 +1,14 @@
 // discord_app/modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getActiveStageChannelIds" /* 4989 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_10 from "initialize" /* 15446 */;
-import { GuildScheduledEventEntityTypes as closure_11 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../stage_channels/StageChannelParticipantStore.tsx";
+import closure_5 from "../stage_channels/StageInstanceStore.tsx";
+import closure_6 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_10 from "LiveChannelNoticesStore.tsx";
+import { GuildScheduledEventEntityTypes as closure_11 } from "GuildScheduledEventsConstants.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/accept_invite/native/components/AcceptInviteModal.tsx
-import closure_3 from "noop" /* 19 */;
-import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics" /* 8617 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { CreateGuildModalStates } from "../../../create_guild/native/CreateGuildConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;

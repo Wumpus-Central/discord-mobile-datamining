@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import Stack from "Stack" /* 4733 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8086 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 11443 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { CALL_TILE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function FloatingCTA(trailing) {

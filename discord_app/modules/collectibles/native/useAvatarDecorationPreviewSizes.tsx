@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx
-import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9218 */;
+import set from "../../../../_runtime/00002_set.js";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2.tsx";
 
 let result = set.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
 

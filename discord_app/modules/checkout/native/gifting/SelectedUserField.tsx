@@ -1,12 +1,12 @@
 // discord_app/modules/checkout/native/gifting/SelectedUserField.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import useInputStyles from "useInputStyles" /* 7345 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7351 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nameFromUserDefault from "../../../../utils/UserUtils.tsx";
+import useInputStyles from "../../../../design/components/Input/native/InputFieldContainer.native.tsx";
+import MagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

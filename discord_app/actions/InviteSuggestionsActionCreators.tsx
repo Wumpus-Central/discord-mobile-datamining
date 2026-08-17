@@ -1,8 +1,8 @@
 // discord_app/actions/InviteSuggestionsActionCreators.tsx
-import set2 from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9637 */;
-import _computeRows from "_computeRows" /* 11502 */;
+import set2 from "../../_runtime/00002_set.js";
+import dispatcherDefault from "../Dispatcher.tsx";
+import fetchUserAffinitiesV2 from "../modules/user_affinities/UserAffinitiesActionCreators.tsx";
+import _computeRows from "../stores/InviteSuggestionsStore.tsx";
 
 const result = set2.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
 

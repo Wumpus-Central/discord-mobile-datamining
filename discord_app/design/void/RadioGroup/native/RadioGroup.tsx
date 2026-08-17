@@ -1,12 +1,12 @@
 // discord_app/design/void/RadioGroup/native/RadioGroup.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import _modDef6937 from "module_6937" /* 6937 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import _modDef6937 from "../../Form/native/FormRow.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NOOP } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RadioEmpty(size) {

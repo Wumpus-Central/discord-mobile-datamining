@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useUserProfileWidgets.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createUserWidgetFromServer" /* 5365 */;
-import closure_4 from "initialize" /* 5370 */;
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../UserProfileStore.tsx";
+import closure_4 from "../WidgetStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

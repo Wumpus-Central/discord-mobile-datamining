@@ -1,9 +1,9 @@
 // discord_app/modules/markup/MarkupUtils.tsx
-import MarkupTextDefault from "MarkupText" /* 4766 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6808 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
-import reactParserForAll from "reactParserFor" /* 6902 */;
-import importDefaultResult from "apply" /* 12 */;
+import MarkupTextDefault from "MarkupReactRules.native.tsx";
+import combineMarkupRulesDefault from "combineMarkupRules.tsx";
+import parseLinkDefault from "MarkupRules.tsx";
+import reactParserForAll from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 let closure_3 = ["url", "autolink", "link", "mailto", "tel"];
 let obj = { enableBuildOverrides: false, enableEmojiClick: true };

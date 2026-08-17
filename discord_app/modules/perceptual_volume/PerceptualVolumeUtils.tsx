@@ -1,5 +1,5 @@
 // discord_app/modules/perceptual_volume/PerceptualVolumeUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let result = set.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
 

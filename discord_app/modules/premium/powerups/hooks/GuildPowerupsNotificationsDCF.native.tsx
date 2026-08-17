@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx
-import set from "set" /* 2 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
-import getUnitIdDefault from "getUnitId" /* 11671 */;
+import set from "../../../../../_runtime/00002_set.js";
+import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import useSelectedDismissibleContent from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import getUnitIdDefault from "../../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/hooks/useCardLayout.tsx
-import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9172 */;
+import set from "../../../../../_runtime/00002_set.js";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import CollectiblesShopCardInternalV2 from "../CollectiblesShopCardV2.tsx";
 
 let result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 

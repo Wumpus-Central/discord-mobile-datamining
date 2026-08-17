@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/ThemeActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
-import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import { SystemThemeState } from "SystemThemeState" /* 1305 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getSystemThemeDefault from "../themes/getSystemTheme.native.tsx";
+import closure_2 from "UnsyncedUserSettingsStore.tsx";
+import { SystemThemeState } from "ThemeConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/user_settings/ThemeActionCreators.tsx");
 

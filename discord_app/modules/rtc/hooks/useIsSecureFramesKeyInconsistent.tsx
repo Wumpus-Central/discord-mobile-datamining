@@ -1,7 +1,7 @@
 // discord_app/modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "initialize" /* 4558 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../../stores/StreamRTCConnectionStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/rtc/hooks/useIsEmptyRTCConnection.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "initialize" /* 4558 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../../stores/StreamRTCConnectionStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

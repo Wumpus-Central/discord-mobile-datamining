@@ -1,8 +1,8 @@
 // discord_app/modules/stickers/StickerMessagePreviewStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleChanged from "handleChanged" /* 4825 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import handleChanged from "../../stores/DraftStore.tsx";
 
 const DraftType = handleChanged.DraftType;
 let closure_1 = {};

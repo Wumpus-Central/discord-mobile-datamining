@@ -1,10 +1,10 @@
 // discord_app/modules/device/native/DeviceOrientation.tsx
-import set from "set" /* 500 */;
-import batchUpdates from "batchUpdates" /* 705 */;
-import closure_3 from "noop" /* 19 */;
-import { AppState } from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 644 */;
-import importDefaultResult from "get ActivityIndicator" /* 8672 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { AppState } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import keys from "../../../../_runtime/00644_keys.js";
+import importDefaultResult from "../../../../_runtime/08672_get_ActivityIndicator.js";
 
 require = arg1;
 function handleOrientationChange(initialOrientation) {

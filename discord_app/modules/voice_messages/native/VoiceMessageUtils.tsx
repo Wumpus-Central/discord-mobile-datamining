@@ -1,17 +1,17 @@
 // discord_app/modules/voice_messages/native/VoiceMessageUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import byteLengthDefault from "byteLength" /* 206 */;
-import set from "set" /* 500 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4343 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 11420 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11147 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11148 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import importDefaultResult from "apply" /* 12 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
+import set from "../../../utils/PlatformUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import HapticFeedbackTypes2 from "../../haptics/HapticUtils.native.tsx";
+import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import downsampleWaveformDefault from "../downsampleWaveform.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
+import VoiceMessageRecordingStatus from "VoiceMessagesUIStore.tsx";
+import VoiceMessageAnimationState from "../VoiceMessageConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import importDefaultResult from "../../../../_runtime/00012_apply.js";
 
 require = arg1;
 function _startAudioRecording() {

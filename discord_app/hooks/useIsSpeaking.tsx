@@ -1,8 +1,8 @@
 // discord_app/hooks/useIsSpeaking.tsx
-import closure_2 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import closure_4 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
+import closure_2 from "../modules/soundboard/SoundboardStore.tsx";
+import closure_3 from "../stores/SelectedChannelStore.tsx";
+import closure_4 from "../stores/SpeakingStore.tsx";
+import closure_5 from "../stores/VoiceStateStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("hooks/useIsSpeaking.tsx");

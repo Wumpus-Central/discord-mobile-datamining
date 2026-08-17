@@ -1,8 +1,8 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsChannelPost.tsx
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { TableCheckboxRow } from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";

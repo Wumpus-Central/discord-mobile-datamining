@@ -1,7 +1,7 @@
 // discord_app/modules/activities/getActivityReportOptions.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import items3 from "items3" /* 4481 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import items3 from "Constants.tsx";
 
 const ActivityFeedbackReasons = items3.ActivityFeedbackReasons;
 const result = set.fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");

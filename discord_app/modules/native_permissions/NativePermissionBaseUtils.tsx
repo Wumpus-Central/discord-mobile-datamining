@@ -1,8 +1,8 @@
 // discord_app/modules/native_permissions/NativePermissionBaseUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4845 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "NativePermissionStore.tsx";
+import NativePermissionStatus from "NativePermissionConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;

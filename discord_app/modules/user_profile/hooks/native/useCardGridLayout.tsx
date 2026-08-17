@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/native/useCardGridLayout.tsx
-import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import set from "../../../../../_runtime/00002_set.js";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import ARBITRARY_LARGE_OFFSET from "../../native/Constants.tsx";
 
 const PROFILE_SIDE_PADDING = ARBITRARY_LARGE_OFFSET.PROFILE_SIDE_PADDING;
 let result = set.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");

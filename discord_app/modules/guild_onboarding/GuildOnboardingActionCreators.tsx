@@ -1,19 +1,19 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingActionCreators.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import updateImpersonating from "updateImpersonating" /* 6792 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "initialize" /* 1982 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleUpdate" /* 6788 */;
-import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
-import importDefaultResult from "apply" /* 12 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../impersonate/ImpersonateStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "GuildOnboardingPromptsStore.tsx";
+import ME from "../../Constants.tsx";
+import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
+import { ReadStateTypes } from "../read_states/ReadStateConstants.tsx";
+import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 require = arg1;
 function _updateOnboardingResponses(guildId, arg1) {

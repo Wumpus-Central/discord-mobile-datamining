@@ -1,18 +1,18 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 7697 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 9278 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8936 */;
-import { useNativeCheckoutStore } from "context" /* 7395 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { PaymentGateways } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import NativeCheckoutStoreProviderDefault from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
+import useCollectiblesExternalGatewayFacetDefault from "hooks/useCollectiblesExternalGatewayFacet.android.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../badges/BadgeDirectoryStore.tsx";
+import { useNativeCheckoutStore } from "../../checkout/native/NativeCheckoutStore.tsx";
+import ME from "../../../Constants.tsx";
+import GuildFeatures from "../../premium/PremiumConstants.tsx";
+import { PaymentGateways } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 let require = arg1;
 function CollectiblesShopGiftPurchaseSection(disabled) {

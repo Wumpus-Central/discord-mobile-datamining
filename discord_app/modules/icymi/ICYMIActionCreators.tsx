@@ -1,8 +1,8 @@
 // discord_app/modules/icymi/ICYMIActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import generateHydrationId from "generateHydrationId" /* 9056 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import generateHydrationId from "ICYMIUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/icymi/ICYMIActionCreators.tsx");

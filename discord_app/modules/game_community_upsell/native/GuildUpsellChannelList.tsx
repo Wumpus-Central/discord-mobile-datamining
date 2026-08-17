@@ -1,12 +1,12 @@
 // discord_app/modules/game_community_upsell/native/GuildUpsellChannelList.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "set" /* 15074 */;
-import { MAX_DISPLAYED_UPSELL_GUILDS as closure_8 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 15528 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "MobileGameCommunitiesStore.tsx";
+import { MAX_DISPLAYED_UPSELL_GUILDS as closure_8 } from "MobileGameCommunitiesConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);

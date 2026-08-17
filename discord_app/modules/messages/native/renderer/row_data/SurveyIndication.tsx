@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/row_data/SurveyIndication.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import str2 from "str2" /* 5259 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import str2 from "../../../../push_notifications/PushNotificationConstants.tsx";
 
 const NotificationTypes = str2.NotificationTypes;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");

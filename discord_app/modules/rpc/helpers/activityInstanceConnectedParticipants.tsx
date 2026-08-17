@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/helpers/activityInstanceConnectedParticipants.tsx
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import RPC_SCOPE_CONFIG from "../Constants.tsx";
 import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
 

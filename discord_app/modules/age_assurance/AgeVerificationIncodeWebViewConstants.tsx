@@ -1,5 +1,5 @@
 // discord_app/modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";

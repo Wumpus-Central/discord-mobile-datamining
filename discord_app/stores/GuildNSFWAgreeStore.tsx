@@ -1,8 +1,8 @@
 // discord_app/stores/GuildNSFWAgreeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import Storage2 from "Storage" /* 595 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import shouldShowAgeGateForVoiceChannel from "../modules/age_gate/AgeGateUtils.tsx";
 
 require = arg1;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";

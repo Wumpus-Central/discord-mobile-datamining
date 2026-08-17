@@ -1,5 +1,5 @@
 // discord_common/js/packages/code-splitting/importWithRetry.tsx
-import closure_1 from "asyncGeneratorStep" /* 5 */;
+import closure_1 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function _importWithRetry() {

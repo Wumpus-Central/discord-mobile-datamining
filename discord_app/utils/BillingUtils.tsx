@@ -1,9 +1,9 @@
 // discord_app/utils/BillingUtils.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import setDefault from "set" /* 4061 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { PaymentGateways } from "sum" /* 505 */;
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _modDef1208 from "SentryUtils.native.tsx";
+import setDefault from "../errors/BillingError.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import { PaymentGateways } from "../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 function _createGatewayCheckoutContext() {

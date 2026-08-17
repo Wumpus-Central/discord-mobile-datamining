@@ -1,9 +1,9 @@
 // discord_app/modules/premium/OverridePremiumTypeStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import validatePremiumType from "validatePremiumType" /* 1928 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import validatePremiumType from "../user/UserStoreUtils.tsx";
+import GuildFeatures from "PremiumConstants.tsx";
 
 function setPremiumTypeActual(user) {
   user = user.user;

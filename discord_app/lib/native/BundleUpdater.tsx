@@ -1,9 +1,9 @@
 // discord_app/lib/native/BundleUpdater.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import t from "t" /* 4486 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import t from "../../../_runtime/04486_t.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);

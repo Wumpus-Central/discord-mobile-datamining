@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/defs/native/AccountSmsBackupSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
-import _modDef14101 from "module_14101" /* 14101 */;
-import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14151 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14153 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { UserFlags } from "ME" /* 676 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
-import apply from "apply" /* 12 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import ChangePhoneReason from "../../../phone/PhoneActionCreators.tsx";
+import _modDef14101 from "../../../../actions/MFAActionCreators.tsx";
+import getSMSBackupDisabledMessage from "../../account/MFAUtils.tsx";
+import showUserSettingsInputAlertDefault from "../../account/native/showUserSettingsInputAlert.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import { UserFlags } from "../../../../Constants.tsx";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "../../../phone/PhoneConstants.tsx";
+import apply from "../../../../../_runtime/00012_apply.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 let closure_6 = apply.debounce(function toggleSMS(user) {

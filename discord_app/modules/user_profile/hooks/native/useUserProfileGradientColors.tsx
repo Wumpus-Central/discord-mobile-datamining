@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileGradientColors.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";

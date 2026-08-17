@@ -1,13 +1,13 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import closure_3 from "refreshSourceMapCookie" /* 706 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import closure_3 from "../../../../../stores/DeveloperOptionsStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const ScrollView = get_ActivityIndicator.ScrollView;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

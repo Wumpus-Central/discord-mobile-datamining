@@ -1,5 +1,5 @@
 // discord_app/modules/forums/ForumPlatformHooks.native.tsx
-import closure_3 from "noop" /* 19 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");

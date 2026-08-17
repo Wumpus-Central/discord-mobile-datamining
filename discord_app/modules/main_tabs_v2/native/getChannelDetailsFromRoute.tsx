@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx
-import set from "set" /* 2 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import set from "../../../../_runtime/00002_set.js";
+import coerceMainRoute from "../helpers/NavigationRouteUtils.native.tsx";
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 

@@ -1,9 +1,9 @@
 // discord_app/modules/frames/FramesManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "map" /* 8708 */;
-import ME from "ME" /* 676 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "FramesStore.tsx";
+import ME from "../../Constants.tsx";
+import { TransportTypes } from "../rpc/Constants.tsx";
 
 let require = arg1;
 ({ AnalyticEvents: c4, RPCCloseCodes: c5 } = ME);

@@ -1,8 +1,8 @@
 // discord_app/modules/frames/panel/native/FramePanelSystemUIManager.tsx
-import BaseActivityPanelSystemUIManager from "BaseActivityPanelSystemUIManager" /* 16257 */;
-import contextDefault from "context" /* 16260 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import BaseActivityPanelSystemUIManager from "../../../activities/panel/native/ActivityPanelSystemUIManager.tsx";
+import contextDefault from "FramePanelStateContext.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let c3 = importAllResult;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/useSyncedModeThemeName.tsx
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "ThemeTypes" /* 1348 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import closure_3 from "../../ThemeStore.tsx";
+import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "../../../client_themes/ClientThemesConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

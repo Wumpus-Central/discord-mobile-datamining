@@ -1,11 +1,11 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
+import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
+import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 function handleUserSettingsProtoStoreChange() {
   const applicationCommandFrecency = obj.frecencyWithoutFetchingLatest.applicationCommandFrecency;

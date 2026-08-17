@@ -1,12 +1,12 @@
 // discord_app/modules/guilds_bar/native/GuildsBarPendingGuild.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "insertUnsortedGuilds" /* 5078 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
+import closure_7 from "../../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../../stores/SortedGuildStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,5 +1,5 @@
 // discord_app/modules/headless_tasks/android/ToggleDeafen.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "../../../stores/ChannelStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/headless_tasks/android/ToggleDeafen.tsx");

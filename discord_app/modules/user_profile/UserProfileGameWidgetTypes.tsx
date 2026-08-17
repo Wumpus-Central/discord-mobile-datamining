@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
-import set from "set" /* 2 */;
-import WidgetType from "WidgetType" /* 5366 */;
-import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
-import findGameWidget from "findGameWidget" /* 5369 */;
+import set from "../../../_runtime/00002_set.js";
+import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import GAME_WIDGET_LIMITS_BY_TYPE from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
+import findGameWidget from "WidgetUtils.tsx";
 
 const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];
 let BaseGameWidget;

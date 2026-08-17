@@ -1,18 +1,18 @@
 // discord_app/modules/native_intents/NativeIntentsManager.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getChannelIconURL from "getChannelIconURL" /* 12127 */;
-import experimentDefault from "experiment" /* 17080 */;
-import setDefault from "set" /* 17081 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import computeChannelName from "../channel/useChannelName.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import getChannelIconURL from "../channel/getChannelIcon.tsx";
+import experimentDefault from "NativeIntentsExperiment.tsx";
+import setDefault from "IntentsBindings.android.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function indexingEnabled() {

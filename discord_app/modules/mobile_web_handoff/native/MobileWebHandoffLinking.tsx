@@ -1,7 +1,7 @@
 // discord_app/modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import ME from "../../../Constants.tsx";
 
 const require = arg1;
 function createHandoffTokenWithLoadingModal(arg0) {

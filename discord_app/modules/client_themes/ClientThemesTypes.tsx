@@ -1,8 +1,8 @@
 // discord_app/modules/client_themes/ClientThemesTypes.tsx
-import set from "set" /* 2 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
-import _mod1350 from "module_1350" /* 1350 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import SystemThemeState from "../user_settings/ThemeConstants.tsx";
+import _mod1350 from "../../../discord_common/js/packages/design/shared.tsx";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 let closure_3 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;

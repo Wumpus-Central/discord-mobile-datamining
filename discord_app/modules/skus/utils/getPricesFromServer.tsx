@@ -1,6 +1,6 @@
 // discord_app/modules/skus/utils/getPricesFromServer.tsx
-import set from "set" /* 2 */;
-import createFromServer from "createFromServer" /* 4040 */;
+import set from "../../../../_runtime/00002_set.js";
+import createFromServer from "../../../records/SubscriptionPlanRecord.tsx";
 
 const getPriceFromServer = createFromServer.getPriceFromServer;
 const result = set.fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");

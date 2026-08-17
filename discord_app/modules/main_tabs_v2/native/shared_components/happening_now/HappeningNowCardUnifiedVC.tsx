@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx
-import noopAll from "noop" /* 19 */;
-import IconOrPreviewDefault from "IconOrPreview" /* 15336 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15348 */;
-import formatVoiceActivityTitleDefault from "formatVoiceActivityTitle" /* 15349 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import IconOrPreviewDefault from "HappeningNowCardActivity.tsx";
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity.tsx";
+import formatVoiceActivityTitleDefault from "HappeningNowCardVoice.tsx";
+import closure_3 from "../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../../../stores/RelationshipStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/profile_updates/ProfileUpdatesNotificationExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-01-profile-updates-notification", defaultConfig: { showSettingsToggle: false }, variations: { 0: { showSettingsToggle: false }, 1: { showSettingsToggle: true }, 2: { showSettingsToggle: true } } });
 const result = set.fileFinishedImporting("modules/notifications/profile_updates/ProfileUpdatesNotificationExperiment.tsx");

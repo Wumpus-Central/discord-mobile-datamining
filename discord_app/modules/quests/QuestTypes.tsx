@@ -1,8 +1,8 @@
 // discord_app/modules/quests/QuestTypes.tsx
-import QuestRewardCodePlatforms from "QuestRewardCodePlatforms" /* 6720 */;
-import set2 from "set" /* 6721 */;
-import AdPlacement from "AdPlacement" /* 6722 */;
-import set from "set" /* 2 */;
+import QuestRewardCodePlatforms from "../../../discord_common/js/shared/shared-constants/QuestRewardCodePlatforms.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
+import AdPlacement from "../../../discord_common/js/shared/shared-constants/AdPlacement.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const values = Object.values(QuestRewardCodePlatforms.QuestRewardCodePlatforms);
 let set = new Set(values.filter((num) => typeof num === "number"));

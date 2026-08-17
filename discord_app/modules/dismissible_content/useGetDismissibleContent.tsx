@@ -1,13 +1,13 @@
 // discord_app/modules/dismissible_content/useGetDismissibleContent.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import closure_6 from "set" /* 1381 */;
-import closure_7 from "withContent" /* 1383 */;
-import { removeCandidateContent } from "withContent" /* 1383 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "DismissibleContentFrameworkStore.tsx";
+import closure_7 from "DismissibleContentShownStateStore.tsx";
+import { removeCandidateContent } from "DismissibleContentShownStateStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

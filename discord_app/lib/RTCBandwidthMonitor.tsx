@@ -1,6 +1,6 @@
 // discord_app/lib/RTCBandwidthMonitor.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+import set from "../../_runtime/00002_set.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 
 let closure_2 = [];
 let RTCBandwidthMonitor;

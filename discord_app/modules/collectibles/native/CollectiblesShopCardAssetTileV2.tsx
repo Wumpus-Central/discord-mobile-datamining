@@ -1,25 +1,25 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import map from "map" /* 4097 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
-import preloadDefault from "preload" /* 5449 */;
-import LockIcon from "LockIcon" /* 6890 */;
-import useDefaultVariantIndex from "useDefaultVariantIndex" /* 9173 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9203 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9206 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9208 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9218 */;
-import filterLayerDefault from "filterLayer" /* 9225 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9227 */;
-import metadataDefault from "metadata" /* 9246 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
+import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import BundleStaticPreviewContentDefault from "BundleSampleV2.tsx";
+import ProfileEffectSampleDefault from "ProfileEffectSampleV2.tsx";
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import filterLayerDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
+import NameplateCardPreviewDefault from "../nameplates/native/NameplateCardPreview.tsx";
+import metadataDefault from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EXTERNAL_PRODUCT_SKU_IDS } from "../CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PurchasedAssetOverlay() {

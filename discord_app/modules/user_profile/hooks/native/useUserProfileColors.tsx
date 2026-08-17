@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileColors.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7161 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { ThemeTypes } from "sum" /* 505 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import useProfileThemeValues from "../../useProfileThemeValues.native.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");

@@ -1,12 +1,12 @@
 // discord_app/modules/media_channel/MediaPostEmbedUtils.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import MAX_THUMBNAIL_COUNT from "MAX_THUMBNAIL_COUNT" /* 4983 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
+import getNicknameDefault from "../../utils/NicknameUtils.tsx";
+import MAX_THUMBNAIL_COUNT from "MediaPostThumbnailUtils.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ GuildFeatures: closure_6, MessageAttachmentFlags: error } = ME);

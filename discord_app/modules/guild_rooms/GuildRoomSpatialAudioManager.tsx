@@ -1,14 +1,14 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudioManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import experimentDefault from "experiment" /* 9882 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "initialize" /* 1212 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "resolveCreatingNotes" /* 9864 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import experimentDefault from "GuildRoomsExperiment.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../experiments/ExperimentStore.tsx";
+import closure_5 from "../experiments/apex/ApexExperimentStore.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/MediaEngineStore.tsx";
+import closure_9 from "../../stores/RTCConnectionStore.tsx";
+import closure_10 from "GuildRoomStore.tsx";
 import { computeLivingRoomWorldPoints } from "GuildRoomSpatialAudio.tsx";
 
 let require = arg1;

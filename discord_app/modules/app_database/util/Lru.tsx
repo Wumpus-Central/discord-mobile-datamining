@@ -1,5 +1,5 @@
 // discord_app/modules/app_database/util/Lru.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 class Lru {
   constructor(arg0) {

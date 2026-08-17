@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx");

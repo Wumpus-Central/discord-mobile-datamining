@@ -1,11 +1,11 @@
 // discord_app/modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import keys from "keys" /* 691 */;
-import getErrorDefault from "getError" /* 8594 */;
-import headerTitle from "headerTitle" /* 15211 */;
-import trackRegTransition from "trackRegTransition" /* 15220 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../Constants.tsx";
+import keys from "../../../../../ConstantsIOS.tsx";
+import getErrorDefault from "../../getError.tsx";
+import headerTitle from "../../RegistrationStepsUtils.tsx";
+import trackRegTransition from "../../RegistrationUtils.tsx";
+import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
 
 function getRedirectStepForErrorKey(arg0) {
   if ("email" !== arg0) {

@@ -1,9 +1,9 @@
 // discord_app/modules/media_channel/native/MediaPostGridThumbnail.tsx
-import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5449 */;
-import ForumPostMediaAndroid from "ForumPostMediaAndroid" /* 11185 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import ForumPostMediaAndroid from "../../forums/native/posts/ForumPostMedia.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function MediaPostGridThumbnailAndroid(arg0) {

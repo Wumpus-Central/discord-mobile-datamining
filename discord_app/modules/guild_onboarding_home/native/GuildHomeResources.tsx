@@ -1,16 +1,16 @@
 // discord_app/modules/guild_onboarding_home/native/GuildHomeResources.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
-import registerAssetDefault from "registerAsset" /* 15823 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1980 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useResourceChannelsDefault from "../useResourceChannels.tsx";
+import registerAssetDefault from "../../../../_runtime/15823_registerAsset.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../../stores/MessageStore.tsx";
+import closure_9 from "../../../stores/PermissionStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function ResourceChannelRow(channelId) {

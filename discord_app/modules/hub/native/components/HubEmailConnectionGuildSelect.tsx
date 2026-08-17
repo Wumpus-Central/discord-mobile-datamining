@@ -1,20 +1,20 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionGuildSelect.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import Form from "Form" /* 8083 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11897 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../../../../utils/GuildRecordUtils.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { HubEmailConnectionSteps } from "../../HubConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class HubEmailConnectionGuildSelectRow {

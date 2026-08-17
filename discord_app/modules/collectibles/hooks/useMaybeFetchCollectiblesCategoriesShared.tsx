@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4288 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
-import items from "items" /* 678 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../experiments/ExperimentStore.tsx";
+import closure_6 from "../CollectiblesCategoryStore.tsx";
+import items from "../CollectiblesShopConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

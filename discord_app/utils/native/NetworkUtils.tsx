@@ -1,8 +1,8 @@
 // discord_app/utils/native/NetworkUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "configure" /* 1476 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import ME from "../../Constants.tsx";
+import importDefaultResult from "../../../_runtime/01476_configure.js";
 
 function notifyListeners(isConnected) {
   isConnected = isConnected.isConnected;

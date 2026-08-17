@@ -1,20 +1,20 @@
 // discord_app/modules/premium/powerups/native/EnhancedRoleColorsSelectStyleModal.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6814 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import Background from "Background" /* 6950 */;
-import setOptionsDefault from "setOptions" /* 8157 */;
-import title from "title" /* 16830 */;
-import handleSetSection from "handleSetSection" /* 16831 */;
-import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 16850 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import useHasEnhancedRoleColors from "../hooks/useHasEnhancedRoleColors.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import setOptionsDefault from "../../../messages/native/renderer/RowGenerator.tsx";
+import title from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
+import handleSetSection from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
+import HOLOGRAPHIC_ROLE_COLORS2 from "../constants/EnhancedRoleColorConstants.tsx";
+import useGuildSettingsRoleExampleMessage from "../../../guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 const RoleColorsStyle = handleSetSection.RoleColorsStyle;

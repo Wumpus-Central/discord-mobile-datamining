@@ -1,15 +1,15 @@
 // discord_app/modules/network/NetStats.android.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import configure from "configure" /* 1476 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "result" /* 5053 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import importDefaultResult from "notifyListeners" /* 1475 */;
-import importDefaultResult2 from "dispatcher" /* 709 */;
+import timestampDefault from "../debug/Logger.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import configure from "../../../_runtime/01476_configure.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../stores/AnalyticsTrackingStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import importDefaultResult from "../../utils/native/NetworkUtils.tsx";
+import importDefaultResult2 from "../../Dispatcher.tsx";
 
 require = arg1;
 function receiveNetworkInfoformation(arg0) {

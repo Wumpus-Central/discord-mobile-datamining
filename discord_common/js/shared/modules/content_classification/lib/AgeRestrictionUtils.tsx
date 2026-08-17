@@ -1,6 +1,6 @@
 // discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx
-import set from "set" /* 2 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 4789 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import AgeRestrictionStatus from "../../../shared-constants/AgeRestrictionStatus.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
 

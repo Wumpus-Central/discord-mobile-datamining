@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/utils/trackUserAvatarUpdated.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import getAvatarURL from "../../../utils/AvatarUtils.tsx";
+import AssetOriginTypes from "../../profile_customization/ProfilePendingImageTypes.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/user_profile/utils/trackUserAvatarUpdated.tsx");

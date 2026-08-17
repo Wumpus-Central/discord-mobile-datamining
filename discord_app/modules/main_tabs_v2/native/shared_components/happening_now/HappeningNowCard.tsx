@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4734 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7925 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import PressableCard from "../../../../../design/components/Card/native/Card.native.tsx";
+import useIsWindowLargeDefault from "../../../../screen/native/useIsWindowLarge.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

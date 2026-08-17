@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/hooks/useIsNewClassification.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import set from "../../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/safety_hub/hooks/useIsNewClassification.tsx");
 

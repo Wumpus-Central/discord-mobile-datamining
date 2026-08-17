@@ -1,7 +1,7 @@
 // discord_app/modules/stickers/native/useStickerPickerListData.tsx
-import closure_3 from "noop" /* 19 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10220 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { useStickerPickerStore } from "StickerPickerStore.tsx";
+import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
 
 const require = arg1;
 ({ MIN_MARGIN: c5, ROW_HEIGHT: closure_6, STICKER_SIZE: error, LABEL_HEIGHT } = PADDING_HORIZONTAL);

@@ -1,18 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 11849 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "recountRelationshipTypes" /* 5406 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { Sections } from "SuggestedFriendSource" /* 11872 */;
-import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import handleNameInputScreenOrSuggestions from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../game_relationships/GameRelationshipStore.tsx";
+import closure_9 from "../../../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../../../stores/UserStore.tsx";
+import { Sections } from "FriendsScreenConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import { ContactPermissions } from "../../../../contact_sync/native/ContactSyncConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handleFindFriends() {

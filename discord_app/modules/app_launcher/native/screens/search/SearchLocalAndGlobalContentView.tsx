@@ -1,15 +1,15 @@
 // discord_app/modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 11227 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getSection } from "getIndexKey" /* 8448 */;
-import { FetchState } from "getSearchResults" /* 11244 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import usePlaceholderWidth from "../../hooks/usePlaceholderSize.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { getSection } from "../../../../application_commands/ApplicationCommandIndexStore.tsx";
+import { FetchState } from "../../../../global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function getApplicationIdFromApplicationItem(type) {

@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/InteractionObserverUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 function __handleIntersections(arr) {
   closure_0 = arg1;

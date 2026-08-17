@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/QuestContextMenu.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import IconButton from "IconButton" /* 8035 */;
-import registerAssetDefault from "registerAsset" /* 9416 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import closure_6 from "initializeState" /* 7453 */;
-import { LinkingTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import registerAssetDefault from "../../../../_runtime/09416_registerAsset.js";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../QuestStore.tsx";
+import { LinkingTypes } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function renderDefaultButton(ref) {

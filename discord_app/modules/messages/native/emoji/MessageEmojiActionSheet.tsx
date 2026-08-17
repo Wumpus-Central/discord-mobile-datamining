@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/emoji/MessageEmojiActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import EmojiDefault from "Emoji" /* 9401 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 9408 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import EmojiDefault from "StandardEmojiContent.tsx";
+import CustomEmojiContentDefault from "CustomEmojiContent.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import { v1 } from "../../../../../_runtime/00514_v1.js";
 import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { useEmojiAndSource } from "../../../emojis/hooks/useEmojiAndSource.tsx";

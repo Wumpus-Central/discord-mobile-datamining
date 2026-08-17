@@ -1,12 +1,12 @@
 // discord_app/modules/messages/markUnread.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4023 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { Endpoints } from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../threads/JoinedThreadsStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MessageStore.tsx";
+import { shouldBadgeMessage } from "../../stores/ReadStateStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _markUnread() {

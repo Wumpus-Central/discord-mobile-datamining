@@ -1,6 +1,6 @@
 // discord_app/modules/wishlists/hooks/useAddToWishlistGridItems.tsx
-import closure_2 from "noop" /* 19 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { PremiumSubscriptionSKUs } from "../../premium/PremiumConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");

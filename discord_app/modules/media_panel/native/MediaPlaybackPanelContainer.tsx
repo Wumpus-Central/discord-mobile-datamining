@@ -1,9 +1,9 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelContainer.tsx
-import _initialize from "_initialize" /* 13901 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 16435 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 16437 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import _initialize from "../../media/native/MediaPlayerManager.tsx";
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController.tsx";
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function MediaPlaybackPanelContainer() {

@@ -1,6 +1,6 @@
 // discord_app/modules/guild/GuildUtils.tsx
-import set from "set" /* 2 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
+import set from "../../../_runtime/00002_set.js";
+import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
 
 let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 

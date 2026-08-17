@@ -1,13 +1,13 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
-import v1 from "v1" /* 514 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import prototypeDefault from "prototype" /* 17048 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "map" /* 13254 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8876 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import v1 from "../../../_runtime/00514_v1.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import prototypeDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../user_settings/LocaleStore.tsx";
+import closure_6 from "GlobalDiscoveryServersSearchResultsStore.tsx";
+import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 function _navigateToGuild() {

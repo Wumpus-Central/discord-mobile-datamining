@@ -1,11 +1,11 @@
 // discord_app/design/components/Sheet/native/ActionSheetRow.native.tsx
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import TableRowIcon from "TableRowIcon" /* 6296 */;
-import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import TableRowGroupTitle from "../../TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../TableRow/native/TableRow.native.tsx";
+import TableRowIcon from "../../TableRow/native/TableRowIcon.native.tsx";
+import TableSwitchRow from "../../TableRow/native/TableSwitchRow.native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 class ActionSheetRow {

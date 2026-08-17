@@ -1,8 +1,8 @@
 // discord_app/modules/safety_flows/pendingRequestTimestamp.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2597 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import messagesProxyDefault from "SafetyFlows.messages.js";
+import getEmptyActivityFormatter from "../parent_tools/FamilyCenterUtils.tsx";
 
 function SENT_TIMESTAMP_FORMATTER() {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };

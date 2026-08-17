@@ -1,11 +1,11 @@
 // discord_app/modules/rtc/SecureFramesActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/VoiceStateStore.tsx";
+import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SecureFramesConstants.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 const require = arg1;
 function savePersistentCodesEnabled() {

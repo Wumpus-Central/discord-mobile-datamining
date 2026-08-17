@@ -1,17 +1,17 @@
 // discord_app/modules/threads/ThreadMessageStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import AbortCodes from "AbortCodes" /* 1235 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_5 from "hasFlag" /* 4031 */;
-import closure_6 from "createdAt" /* 1930 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import AbortCodes from "ThreadConstants.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import createChannelRecord from "../../records/ChannelRecord.tsx";
+import closure_5 from "../../records/MessageRecord.tsx";
+import closure_6 from "../../records/UserRecord.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/MessageStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function updateState(type) {
   if (set.has(type.type)) {

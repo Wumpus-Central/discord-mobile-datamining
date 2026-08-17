@@ -1,10 +1,10 @@
 // discord_app/components_native/common/MessageLoadingSpinner.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import ActivityIndicator from "ActivityIndicator" /* 5446 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../design/tokens/native/useToken.tsx";
+import ActivityIndicator from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import set from "../../utils/PlatformUtils.tsx";
 
 require = arg1;
 noopAll;

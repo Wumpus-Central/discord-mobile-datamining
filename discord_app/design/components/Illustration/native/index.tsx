@@ -1,6 +1,6 @@
 // discord_app/design/components/Illustration/native/index.tsx
-import set from "set" /* 2 */;
-import ManaContext from "ManaContext" /* 4104 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 
 const result = set.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 

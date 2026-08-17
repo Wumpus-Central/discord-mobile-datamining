@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import closure_3 from "getActiveStageChannelIds" /* 4989 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import closure_3 from "../../../../stage_channels/StageChannelParticipantStore.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/PermissionStore.tsx";
+import ME from "../../../../../Constants.tsx";
 
 require = arg1;
 ({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: closure_8, Permissions: c9 } = ME);

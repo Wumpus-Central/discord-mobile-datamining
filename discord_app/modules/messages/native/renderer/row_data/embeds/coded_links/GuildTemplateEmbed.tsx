@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import InviteSendStates from "InviteSendStates" /* 4371 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
-import processColorOrThrow from "processColorOrThrow" /* 8161 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_4 from "handleGuildTemplateResolveSuccess" /* 7429 */;
+import set from "../../../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import InviteSendStates from "../../../../../../instant_invite/Constants.tsx";
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "../../../../../../guild_templates/GuildTemplatesConstants.tsx";
+import processColorOrThrow from "../../../RowGeneratorStyleSheet.tsx";
+import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import closure_4 from "../../../../../../guild_templates/GuildTemplateStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;

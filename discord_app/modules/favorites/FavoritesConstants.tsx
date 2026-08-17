@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/FavoritesConstants.tsx
-import set from "set" /* 2 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import set from "../../../_runtime/00002_set.js";
+import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
 
 const obj = { id: "373", name: "Favorites", description: "The place for all your favorite channels!", joinedAt: new Date(), maxMembers: 500000 };
 const result = fromGuildPropertiesWithAdditionalFields.constructFromPartialGuildRecord(obj);

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/ShowDevWidgetSetting.tsx
-import initialize from "initialize" /* 589 */;
-import updateDevToolsSettings from "updateDevToolsSettings" /* 13951 */;
-import closure_2 from "initialize" /* 7471 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import updateDevToolsSettings from "../../../devtools/DevToolsActionCreators.tsx";
+import closure_2 from "../../../devtools/DevToolsSettingsStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

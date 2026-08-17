@@ -1,7 +1,7 @@
 // discord_app/modules/media_engine/dispatchAutoDisableVideo.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
 const result = set.fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");

@@ -1,19 +1,19 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import t from "t" /* 4486 */;
-import _executeCommandDefault from "_executeCommand" /* 10255 */;
-import registerAssetDefault from "registerAsset" /* 11346 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleInit" /* 7526 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "apply" /* 12 */;
+import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import t from "../../../../../../_runtime/04486_t.js";
+import _executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
+import registerAssetDefault from "../../../../../../_runtime/11346_registerAsset.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../../../_runtime/00012_apply.js";
 
 require = arg1;
 function Item(arg0) {

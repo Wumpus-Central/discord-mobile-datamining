@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/OneWayToTwoWayLinkUpsell.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10261 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import SelectedDismissibleContentDefault from "../../../../dismissible_content/native/SelectedDismissibleContent.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Fonts } from "../../../../../Constants.tsx";
+import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../rebrand/native/TextStyles.tsx";
 
 const require = arg1;
 function OneWayToTwoWayNewTag(markAsDismissed) {

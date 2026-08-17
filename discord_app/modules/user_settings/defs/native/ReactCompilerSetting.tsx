@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ReactCompilerSetting.tsx
-import set from "set" /* 2 */;
-import WrenchIcon from "WrenchIcon" /* 14870 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const obj = {
   useTitle() {

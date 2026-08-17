@@ -1,13 +1,13 @@
 // discord_common/js/packages/analytics-utils/getSuperProperties.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import encodeProperties from "encodeProperties" /* 662 */;
-import getSystemLocale2 from "getSystemLocale" /* 665 */;
-import usesClientMods from "usesClientMods" /* 667 */;
-import clientLaunchId from "clientLaunchId" /* 668 */;
-import formatDefault from "format" /* 669 */;
-import enforcing from "enforcing" /* 670 */;
-import enforcing2 from "enforcing" /* 671 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import encodeProperties from "encodeProperties.tsx";
+import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
+import usesClientMods from "../../shared/utils/ClientModDetectionUtils.tsx";
+import clientLaunchId from "clientLaunchId.tsx";
+import formatDefault from "../../../../_runtime/00669_format.js";
+import enforcing from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
+import enforcing2 from "../rtn-codegen/js/NativeDeviceModule.tsx";
 
 function getOS() {
   const _default = enforcing.default;

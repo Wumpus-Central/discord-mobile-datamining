@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/getParticipantTitle.tsx
-import set from "set" /* 2 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4544 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import useIsGuestOrLurker from "useIsGuestOrLurker" /* 12607 */;
+import set from "../../../_runtime/00002_set.js";
+import ParticipantTypes2 from "../calls/CallConstants.tsx";
+import getNicknameDefault from "../../utils/NicknameUtils.tsx";
+import useIsGuestOrLurker from "../guild_member/useIsGuestOrLurker.tsx";
 
 const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
 let result = set.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");

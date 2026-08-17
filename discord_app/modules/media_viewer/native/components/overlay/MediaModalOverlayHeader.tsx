@@ -1,12 +1,12 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx
-import noopAll from "noop" /* 19 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import _modDef9075 from "module_9075" /* 9075 */;
-import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 10852 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { SHARE_PREPARING_MODAL_KEY } from "SHARE_PREPARING_MODAL_KEY" /* 9070 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef9075 from "MediaViewerOverlayButton.tsx";
+import useShouldHideMediaOptionsDefault from "../../../../media_channel/useShouldHideMediaOptions.tsx";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { SHARE_PREPARING_MODAL_KEY } from "../../../../share/native/SharePreparingModalConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

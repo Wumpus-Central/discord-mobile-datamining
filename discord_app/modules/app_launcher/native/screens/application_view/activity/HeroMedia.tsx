@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
-import noopAll from "noop" /* 19 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9567 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11232 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
+import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import getPreviewVideoAssetUrlDefault from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
+import closure_3 from "../../../../../a11y/AccessibilityStore.tsx";
+import { DEFAULT_CONTENT_PADDING } from "../../../AppLauncherNativeConstants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../../../../action_sheet/native/ActionSheetConstants.tsx";
+import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,9 +1,9 @@
 // discord_app/modules/external_pip/ExternalPipView.android.tsx
-import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 16222 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "module_9010" /* 9010 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideo.android.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../panels/morphable/AppFreezeStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 function FreezeAfterLayoutPipView() {
   importDefault = React.useRef(false);

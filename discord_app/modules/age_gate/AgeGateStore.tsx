@@ -1,8 +1,8 @@
 // discord_app/modules/age_gate/AgeGateStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import result2 from "result" /* 1221 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import result2 from "AgeGateConstants.tsx";
 
 const AGE_GATE_REGISTER_TIMEOUT_MS = result2.AGE_GATE_REGISTER_TIMEOUT_MS;
 let c0 = false;

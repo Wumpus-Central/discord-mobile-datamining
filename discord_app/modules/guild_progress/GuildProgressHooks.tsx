@@ -1,15 +1,15 @@
 // discord_app/modules/guild_progress/GuildProgressHooks.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_8 from "comparator" /* 1980 */;
-import closure_9 from "handleInviteData" /* 4295 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "handlePopAllLayers" /* 11642 */;
-import closure_12 from "reinjectEphemerals" /* 4994 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_8 from "../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../stores/GuildMemberCountStore.tsx";
+import closure_10 from "../../stores/GuildStore.tsx";
+import closure_11 from "../../stores/LayerStore.tsx";
+import closure_12 from "../../stores/MessageStore.tsx";
+import closure_13 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

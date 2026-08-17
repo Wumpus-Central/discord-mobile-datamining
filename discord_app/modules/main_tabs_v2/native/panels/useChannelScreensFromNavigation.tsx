@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import { ME } from "ME" /* 676 */;
-import { isStaticChannelRoute } from "set" /* 1398 */;
+import coerceMainRoute from "../../helpers/NavigationRouteUtils.native.tsx";
+import getRootNavigationRef from "../../RootNavigationRef.native.tsx";
+import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../../../stores/SelectedGuildStore.tsx";
+import { ME } from "../../../../Constants.tsx";
+import { isStaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 
 require = arg1;
 function getActiveTabsRoute(coerceTabsRouteResult) {

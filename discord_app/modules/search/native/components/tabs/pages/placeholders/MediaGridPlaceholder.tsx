@@ -1,15 +1,15 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/MediaGridPlaceholder.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import Text from "Text" /* 4734 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 15870 */;
-import _modDef15872 from "module_15872" /* 15872 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import _modDef4115 from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import Text from "../../../../../../../design/components/Text/native/Text.tsx";
+import useFullscreenPlaceholderCount from "../../../../hooks/usePlaceholderStyles.tsx";
+import _modDef15872 from "GridItemPlaceholder.tsx";
+import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import MessageEmbedTypes from "../../../../../SearchConstants.tsx";
+import jsxProd from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ MEDIA_NUM_COLUMNS: c5, MEDIA_ITEM_GAP_WIDTH: closure_6, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = MessageEmbedTypes);

@@ -1,20 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 11948 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14641 */;
-import registerAssetDefault2 from "registerAsset" /* 15355 */;
-import registerAssetDefault3 from "registerAsset" /* 15356 */;
-import registerAssetDefault4 from "registerAsset" /* 15357 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../../../_runtime/11948_registerAsset.js";
+import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HappeningNowCard.tsx";
+import registerAssetDefault2 from "../../../../../../_runtime/15355_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/15356_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../_runtime/15357_registerAsset.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../../stores/SelectedChannelStore.tsx";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

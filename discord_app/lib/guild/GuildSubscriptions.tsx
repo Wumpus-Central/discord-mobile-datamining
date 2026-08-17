@@ -1,12 +1,12 @@
 // discord_app/lib/guild/GuildSubscriptions.tsx
-import set5 from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import ME2 from "ME" /* 676 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import resetDefault from "reset" /* 7263 */;
-import reset from "reset" /* 7264 */;
-import resetDefault2 from "reset" /* 7264 */;
-import resetDefault3 from "reset" /* 7265 */;
+import set5 from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import ME2 from "../../Constants.tsx";
+import getFavoritesAwareGuildName from "../../modules/favorites/FavoritesUtils.tsx";
+import resetDefault from "GuildMemberSubscriptions.tsx";
+import reset from "GuildChannelSubscriptions.tsx";
+import resetDefault2 from "GuildChannelSubscriptions.tsx";
+import resetDefault3 from "GuildThreadSubscriptions.tsx";
 
 const ME = ME2.ME;
 const result = set5.fileFinishedImporting("lib/guild/GuildSubscriptions.tsx");

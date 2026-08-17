@@ -1,8 +1,8 @@
 // discord_app/modules/soundboard/useGuildIdsToFetchSoundsFor.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4780 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "SoundboardStore.tsx";
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");

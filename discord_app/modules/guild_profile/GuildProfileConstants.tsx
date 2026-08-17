@@ -1,5 +1,5 @@
 // discord_app/modules/guild_profile/GuildProfileConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { BOULDER: "Boulder", CASCADE: "Cascade", THUNDER: "Thunder", SOUL: "Soul", MARSH: "Marsh", VOLCANO: "Volcano", EARTH: "Earth", ZEPHYR: "Zephyr", RISING: "Rising" };
 obj = { name: obj.SOUL, color: "#ff1c90" };

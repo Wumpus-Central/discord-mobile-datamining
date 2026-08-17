@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/SearchPlatformConstants.tsx
-import set from "set" /* 2 */;
-import LINKING_WHITELIST from "LINKING_WHITELIST" /* 4091 */;
-import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8311 */;
-import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8313 */;
-import TiktokNeutralIcon from "TiktokNeutralIcon" /* 11525 */;
-import TwitterNeutralIcon from "TwitterNeutralIcon" /* 11527 */;
-import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 11529 */;
+import set from "../../../../_runtime/00002_set.js";
+import LINKING_WHITELIST from "../../links/native/LinkingWhitelist.tsx";
+import FacebookNeutralIcon from "../../../design/components/Icon/native/redesign/generated/FacebookNeutralIcon.tsx";
+import InstagramNeutralIcon from "../../../design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx";
+import TiktokNeutralIcon from "../../../design/components/Icon/native/redesign/generated/TiktokNeutralIcon.tsx";
+import TwitterNeutralIcon from "../../../design/components/Icon/native/redesign/generated/TwitterNeutralIcon.tsx";
+import YoutubeNeutralIcon from "../../../design/components/Icon/native/redesign/generated/YoutubeNeutralIcon.tsx";
 
 let obj = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.tiktok.regex, Icon: TiktokNeutralIcon.TiktokNeutralIcon };
 const items = [obj, , , , ];

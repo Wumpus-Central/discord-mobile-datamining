@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/useHandleUseNow.tsx
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9536 */;
-import closure_3 from "noop" /* 19 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9588 */;
+import useOpenProfileSettingsDefault from "../../profile_customization/useOpenProfileSettings.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { RootNavigatorScreen } from "../../main_tabs_v2/native/MainTabsConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");

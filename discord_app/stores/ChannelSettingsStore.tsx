@@ -1,21 +1,21 @@
 // discord_app/stores/ChannelSettingsStore.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import AbortCodes from "AbortCodes" /* 1235 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import set2 from "set" /* 1400 */;
-import set3 from "set" /* 1401 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import tDefault from "t" /* 3975 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import closure_10 from "createFromServer" /* 8044 */;
-import closure_11 from "createdAt" /* 1930 */;
-import closure_12 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
-import importDefaultResult from "apply" /* 12 */;
+import set from "../../_runtime/00002_set.js";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import AbortCodes from "../modules/threads/ThreadConstants.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import set2 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import set3 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../utils/GuildRecordUtils.tsx";
+import tDefault from "../../_runtime/03975_t.js";
+import MAX_REACTIONS from "../modules/reactions/ReactionUtils.tsx";
+import parseRawEmojiObjectDefault from "../modules/emojis/UnicodeEmojis.tsx";
+import closure_10 from "../records/InviteRecord.tsx";
+import closure_11 from "../records/UserRecord.tsx";
+import closure_12 from "ChannelStore.tsx";
+import ME from "../Constants.tsx";
+import importDefaultResult from "../../_runtime/00012_apply.js";
 
 function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
   let str = arg1;

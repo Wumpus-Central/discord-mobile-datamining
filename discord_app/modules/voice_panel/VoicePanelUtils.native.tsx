@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/VoicePanelUtils.native.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 8665 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "withEqualityFn" /* 8664 */;
+import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import useIsStageVoicePanelEnabled from "../stage_channels/StageVoicePanelExperiment.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "VoicePanelStore.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");

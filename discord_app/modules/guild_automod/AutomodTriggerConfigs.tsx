@@ -1,9 +1,9 @@
 // discord_app/modules/guild_automod/AutomodTriggerConfigs.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isInMentionRaidExperiment from "isInMentionRaidExperiment" /* 10035 */;
-import closure_2 from "noop" /* 19 */;
-import AutomodEventType from "AutomodEventType" /* 11042 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import isInMentionRaidExperiment from "ExperimentUtils.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import AutomodEventType from "Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = AutomodEventType);

@@ -1,9 +1,9 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import closure_3 from "noop" /* 19 */;
-import items3 from "items3" /* 1934 */;
+import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import items3 from "../DisplayNameStylesConstants.tsx";
 
 require = arg1;
 ({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: c4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: c5, DISPLAY_NAME_STYLES_PRISM_PRESETS: closure_6 } = items3);

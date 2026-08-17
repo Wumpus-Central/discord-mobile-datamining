@@ -1,11 +1,11 @@
 // discord_app/modules/forums/ForumPostRecentMessageStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
 
 require = arg1;
 function handleLoadThreadsSuccess(arg0) {

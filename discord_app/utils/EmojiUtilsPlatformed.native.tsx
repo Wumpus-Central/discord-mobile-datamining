@@ -1,12 +1,12 @@
 // discord_app/utils/EmojiUtilsPlatformed.native.tsx
-import applyDefault from "apply" /* 12 */;
-import set from "set" /* 500 */;
-import onDismiss from "onDismiss" /* 7570 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "defaultImageSrcGenerator" /* 4035 */;
-import importDefaultResult from "set" /* 7575 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import set from "PlatformUtils.tsx";
+import onDismiss from "../components_native/reactions/BurstReactionFirstSendActionSheet.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
+import importDefaultResult from "MemoizerUtils.tsx";
 
 require = arg1;
 function getURL(name) {

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeLeaf.tsx
-import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13377 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

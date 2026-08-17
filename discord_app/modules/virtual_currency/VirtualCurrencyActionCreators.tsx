@@ -1,9 +1,9 @@
 // discord_app/modules/virtual_currency/VirtualCurrencyActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addSku" /* 4521 */;
-import { Endpoints } from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/game_store/SKUStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function fetchVirtualCurrencyBalance() {

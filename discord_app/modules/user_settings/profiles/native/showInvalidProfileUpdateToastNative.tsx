@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import registerAssetDefault from "registerAsset" /* 8143 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
+import registerAssetDefault from "../../../../../_runtime/08143_registerAsset.js";
 
 const result = set.fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 

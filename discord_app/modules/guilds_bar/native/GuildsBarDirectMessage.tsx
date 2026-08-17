@@ -1,15 +1,15 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDirectMessage.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "callConnect" /* 4496 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/CallStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/GuildReadStateStore.tsx";
+import closure_8 from "../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import { ChannelTypes } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

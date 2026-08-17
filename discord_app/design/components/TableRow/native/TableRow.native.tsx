@@ -1,17 +1,17 @@
 // discord_app/design/components/TableRow/native/TableRow.native.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import context2 from "context" /* 6290 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6300 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import map from "../../../tokens/native/useToken.tsx";
+import getFontScale from "../../../../modules/screen/native/useFontScale.tsx";
+import context2 from "TableRowGroupContext.native.tsx";
+import PressableCard from "../../Card/native/Card.native.tsx";
+import TableRowTrailingText from "TableRowTrailingText.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 class TableRow {

@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../../../../intl/index.native.tsx";
+import Text from "../../../../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../../../../design/components/Button/native/Button.native.tsx";
+import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasNameplate) {

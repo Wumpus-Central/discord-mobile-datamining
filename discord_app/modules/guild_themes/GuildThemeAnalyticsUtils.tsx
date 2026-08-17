@@ -1,5 +1,5 @@
 // discord_app/modules/guild_themes/GuildThemeAnalyticsUtils.tsx
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
+import closure_0 from "../../stores/GuildStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
 

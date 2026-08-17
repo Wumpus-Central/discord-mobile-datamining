@@ -1,8 +1,8 @@
 // discord_app/modules/verification/ChangeEmailActionCreators.tsx
-import encodeProperties from "encodeProperties" /* 503 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function _confirmEmailChange() {

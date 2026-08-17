@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/ActivityFlagUtils.tsx
-import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import isEmbeddedActivityDefault from "isEmbeddedActivity.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: c4 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");

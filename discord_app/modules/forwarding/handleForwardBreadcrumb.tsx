@@ -1,8 +1,8 @@
 // discord_app/modules/forwarding/handleForwardBreadcrumb.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function _handleForwardBreadcrumb() {

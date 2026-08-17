@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/marketing_page_banner.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7633 */;
-import create2 from "create" /* 7634 */;
-import create3 from "create" /* 7635 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import create from "../../common/v1/localized_string.tsx";
+import create2 from "help_article.tsx";
+import create3 from "cta_button.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", EXPRESSIVE: 1, [1]: "EXPRESSIVE", PRIMARY: 2, [2]: "PRIMARY" };

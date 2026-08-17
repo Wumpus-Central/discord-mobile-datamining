@@ -1,9 +1,9 @@
 // discord_app/modules/changelog/useChangelogRenderedAnalytics.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "generateOldThreadCutoff" /* 4772 */;
-import closure_6 from "handleUserSettingsProtoStoreChange" /* 4771 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "../../stores/ReadStateStore.tsx";
+import closure_6 from "ChangelogStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");

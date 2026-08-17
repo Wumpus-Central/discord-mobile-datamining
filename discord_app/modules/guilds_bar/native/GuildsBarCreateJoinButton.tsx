@@ -1,14 +1,14 @@
 // discord_app/modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 15558 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import UnreadIndicatorDefault from "GuildsBarAnimatedItemWrapper.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/SelectedGuildStore.tsx";
+import ME from "../../../Constants.tsx";
+import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function _handleCreateJoinGuildPress() {

@@ -1,14 +1,14 @@
 // discord_app/modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import canViewInviteModal from "canViewInviteModal" /* 8802 */;
-import closure_3 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
-import { GuildScheduledEventEntityTypes as closure_9 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { Permissions } from "ME" /* 676 */;
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import canViewInviteModal from "../instant_invite/canViewInviteModal.tsx";
+import closure_3 from "../stage_channels/StageInstanceStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import { isGuildEventEnded } from "GuildScheduledEventStore.tsx";
+import { GuildScheduledEventEntityTypes as closure_9 } from "GuildScheduledEventsConstants.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

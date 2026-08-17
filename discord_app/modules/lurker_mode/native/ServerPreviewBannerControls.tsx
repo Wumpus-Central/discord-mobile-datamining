@@ -1,14 +1,14 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewBannerControls.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 6317 */;
-import IconButton from "IconButton" /* 8035 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 15440 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MOBILE_GUILD_UPSELL_LIST } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import registerAssetDefault from "../../../../_runtime/06317_registerAsset.js";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MOBILE_GUILD_UPSELL_LIST } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);

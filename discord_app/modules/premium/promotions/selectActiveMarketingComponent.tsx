@@ -1,5 +1,5 @@
 // discord_app/modules/premium/promotions/selectActiveMarketingComponent.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
   effectiveStartDate = effectiveStartDate.effectiveStartDate;

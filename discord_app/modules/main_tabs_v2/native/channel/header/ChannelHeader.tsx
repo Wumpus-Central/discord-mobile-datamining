@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import _modDef12706 from "module_12706" /* 12706 */;
-import _modDef12707 from "module_12707" /* 12707 */;
-import GroupDmMemberCountDefault from "GroupDmMemberCount" /* 12708 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { ComponentActions } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import set from "../../../../../utils/PlatformUtils.tsx";
+import _modDef12706 from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
+import _modDef12707 from "HomeChannelHeader.tsx";
+import GroupDmMemberCountDefault from "PrivateChannelHeader.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import { ComponentActions } from "../../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../../channel/ChannelConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,12 +1,12 @@
 // discord_app/modules/interaction_components/native/components/SelectComponentActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_7 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
+import { ACTION_SHEET_START_HEIGHT_RATIO as closure_7 } from "../../../action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function SelectionHeader(renderIcon) {

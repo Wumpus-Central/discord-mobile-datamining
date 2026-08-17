@@ -1,10 +1,10 @@
 // discord_app/lib/uploader/UploaderBase.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import applyDefault from "apply" /* 12 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AbortCodes } from "ME" /* 676 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import { EventEmitter } from "EventEmitter" /* 652 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { AbortCodes } from "../../Constants.tsx";
+import { FileUploadErrorTypes } from "../../modules/messages/MessageConstants.tsx";
+import { EventEmitter } from "../../../_runtime/00652_EventEmitter.js";
 
 const require = arg1;
 let closure_6 = new timestampDefault("UploaderBase.tsx");

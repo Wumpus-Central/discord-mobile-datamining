@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/StringUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 1906 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "DOMUtils.tsx";
 import { 01905__ } from "../../../../_runtime/metro/01905__.js";
 
 const re2 = /[\u0300-\u036f]/g;

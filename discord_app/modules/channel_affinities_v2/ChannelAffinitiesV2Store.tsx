@@ -1,8 +1,8 @@
 // discord_app/modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import result2 from "result" /* 15539 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import result2 from "ChannelAffinitiesV2Constants.tsx";
 
 const CHANNEL_AFFINITY_V2_TTL = result2.CHANNEL_AFFINITY_V2_TTL;
 let map = new Map();

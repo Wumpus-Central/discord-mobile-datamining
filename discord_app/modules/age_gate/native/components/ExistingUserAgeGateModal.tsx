@@ -1,11 +1,11 @@
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateModal.tsx
-import openAgeGateModal from "openAgeGateModal" /* 5255 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import result from "result" /* 1221 */;
-import { ExistingUserAgeGateScreens as closure_7 } from "ExistingUserAgeGateScreens" /* 16519 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import openAgeGateModal from "../../AgeGateModalActionCreators.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/SelectedGuildStore.tsx";
+import result from "../../AgeGateConstants.tsx";
+import { ExistingUserAgeGateScreens as closure_7 } from "../ExistingUserAgeGateConstants.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function onClose() {

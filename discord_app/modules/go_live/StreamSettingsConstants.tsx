@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/StreamSettingsConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import GuildFeatures from "../premium/PremiumConstants.tsx";
 
 let FPS_602 = require;
 let f31420 = dependencyMap;

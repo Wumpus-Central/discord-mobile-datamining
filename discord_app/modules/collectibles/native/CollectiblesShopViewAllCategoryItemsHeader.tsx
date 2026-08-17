@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx
-import noopAll from "noop" /* 19 */;
-import registerAssetDefault from "registerAsset" /* 8496 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import registerAssetDefault from "../../../../_runtime/08496_registerAsset.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { GenericHeaderTitle } from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";

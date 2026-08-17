@@ -1,9 +1,9 @@
 // discord_app/modules/local_app_detection/native/LocalAppDetectionStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "hasConsented" /* 5258 */;
-import { Consents } from "ME" /* 676 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/ConsentStore.tsx";
+import { Consents } from "../../../Constants.tsx";
 
 let object = arg1;
 let closure_6 = { detected: false, lastScannedAt: "Array" };

@@ -1,16 +1,16 @@
 // discord_app/modules/stage_channels/StageChannelRoleStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 4991 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
+import useIsStageSpeakingDisabledForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "../../stores/VoiceStateStore.tsx";
 
 require = arg1;
 function buildStageChannelUserRoles(id, closure_0, flag) {

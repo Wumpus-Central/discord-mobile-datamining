@@ -1,19 +1,19 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getEmojiToGroupId" /* 6727 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_11 from "set" /* 5049 */;
-import { Permissions } from "ME" /* 676 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../emojis/EmojiStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import closure_9 from "../../../stores/PermissionStore.tsx";
+import closure_10 from "../GuildOnboardingHomeSettingsStore.tsx";
+import closure_11 from "../GuildOnboardingMemberActionStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function MemberActionRow(channelId) {

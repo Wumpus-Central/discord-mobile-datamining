@@ -1,17 +1,17 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteCode.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import componentDidMountDefault from "componentDidMount" /* 9946 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import computeChannelName from "../../channel/useChannelName.tsx";
+import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
+import componentDidMountDefault from "../../../components_native/common/CountDown.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { createChannelRecordFromInvite as closure_5 } from "../../../records/ChannelRecord.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class InstantInviteDetails {

@@ -1,11 +1,11 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import isIterable from "isIterable" /* 4006 */;
-import importAllResult from "noop" /* 19 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import closure_5 from "withEqualityFn" /* 15547 */;
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15548 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import isIterable from "../../../../_runtime/04006_isIterable.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
+import closure_5 from "GuildsBarDnDStore.tsx";
+import { GUILD_ITEM_INSET_LEFT } from "GuildsBarConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PreviewItem(dragRegion) {

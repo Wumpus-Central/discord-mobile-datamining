@@ -1,16 +1,16 @@
 // discord_app/intl/index.native.tsx
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noopAll from "noop" /* 19 */;
-import enforcing from "enforcing" /* 666 */;
-import getAvailableLocales2 from "getAvailableLocales" /* 1237 */;
-import Button from "Button" /* 1297 */;
-import IntlLink from "IntlLink" /* 13548 */;
-import messagesProxyDefault from "messagesProxy" /* 13552 */;
-import { Fonts } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
-import getAvailableLocales from "getAvailableLocales" /* 1237 */;
-import 01274__ from "../../_runtime/metro/01274__.js" /* 1274 */;
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import noopAll from "../../_runtime/00019_noop.js";
+import enforcing from "../../discord_common/js/packages/rtn-codegen/js/NativeDeviceLocaleModule.tsx";
+import getAvailableLocales2 from "util.tsx";
+import Button from "../design/void/native.tsx";
+import IntlLink from "native/migration.tsx";
+import messagesProxyDefault from "messages/international.messages.js";
+import { Fonts } from "../Constants.tsx";
+import { jsx } from "../../_runtime/react/00021_jsxProd.js";
+import set from "../utils/PlatformUtils.tsx";
+import getAvailableLocales from "util.tsx";
+import 01274__ from "../../_runtime/metro/01274__.js";
 
 require = arg1;
 noopAll;

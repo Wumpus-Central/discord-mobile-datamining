@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/useLiveStageChannels.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "StageInstanceStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");

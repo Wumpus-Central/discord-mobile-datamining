@@ -1,15 +1,15 @@
 // discord_app/modules/user_profile/native/NonUserBotProfileContent.tsx
-import getNicknameDefault from "getNickname" /* 4796 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8970 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8972 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import useBadgesDefault from "useBadges" /* 8983 */;
-import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8984 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import useProfileThemeDefault from "../hooks/useProfileTheme.tsx";
+import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
+import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import useBadgesDefault from "../hooks/useBadges.tsx";
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ PROFILE_CONTENT_BOTTOM_PADDING: c4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5 } = ARBITRARY_LARGE_OFFSET);

@@ -1,7 +1,7 @@
 // discord_app/modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx
-import closure_2 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1980 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "../../../stores/GuildChannelStore.tsx";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

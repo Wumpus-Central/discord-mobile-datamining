@@ -1,11 +1,11 @@
 // discord_app/modules/oauth2/Authorize.tsx
-import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import set from "set" /* 4375 */;
-import keysSorter from "keysSorter" /* 4376 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
-import ME from "ME" /* 676 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import keysSorter from "../../../_runtime/04376_keysSorter.js";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/SelectedGuildStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ EMPTY_NUX_SERVER: c5, FAVORITES: closure_6, ME: error } = ME);

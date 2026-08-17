@@ -1,15 +1,15 @@
 // discord_app/stores/SpeakingStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import getUnitIdDefault from "getUnitId" /* 4775 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import { Permissions } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import applyOverwritesAll from "../utils/PermissionUtils.tsx";
+import getUnitIdDefault from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "MediaEngineStore.tsx";
+import closure_6 from "RTCConnectionStore.tsx";
+import closure_7 from "SelectedChannelStore.tsx";
+import { Permissions } from "../Constants.tsx";
+import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;

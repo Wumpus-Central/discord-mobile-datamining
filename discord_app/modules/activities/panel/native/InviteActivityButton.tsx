@@ -1,8 +1,8 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import closure_3 from "updateActivities" /* 7251 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import closure_3 from "../../../../stores/LocalActivityStore.tsx";
+import closure_4 from "../../../../stores/SelfPresenceStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const memoResult = importAllResult.memo(function InviteActivityButton(applicationId) {

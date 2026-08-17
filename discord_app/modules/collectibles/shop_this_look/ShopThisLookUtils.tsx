@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/shop_this_look/ShopThisLookUtils.tsx
-import set from "set" /* 2 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 12342 */;
+import set from "../../../../_runtime/00002_set.js";
+import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import CollectiblesSKUSourceType from "../../../../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx";
 
 const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 

@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../Constants.tsx";
+import int2hslRaw from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
 const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;

@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/getTagProperties.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 8253 */;
-import isCrosspostDefault from "isCrosspost" /* 8255 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import MESSAGE_GROUP_SPACING from "../../MessageConstants.tsx";
+import isPublicSystemMessage from "../../../public_guilds/PublicGuildsUtils.tsx";
+import isCrosspostDefault from "../../isCrosspost.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;

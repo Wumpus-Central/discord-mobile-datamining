@@ -1,11 +1,11 @@
 // discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx
-import set from "set" /* 2 */;
-import logger from "logger" /* 504 */;
-import ImpressionGroups from "ImpressionGroups" /* 657 */;
-import queueTrackingEventMaker from "queueTrackingEventMaker" /* 658 */;
-import encodeProperties from "encodeProperties" /* 662 */;
-import ImpressionNames from "ImpressionNames" /* 663 */;
-import getOS from "getOS" /* 664 */;
+import set from "../../../../_runtime/00002_set.js";
+import logger from "AnalyticsTrackingStore.tsx";
+import ImpressionGroups from "StandardAnalyticsConstants.tsx";
+import queueTrackingEventMaker from "AnalyticsTrackingActionCreators.tsx";
+import encodeProperties from "encodeProperties.tsx";
+import ImpressionNames from "AnalyticsSchema.tsx";
+import getOS from "getSuperProperties.tsx";
 
 let closure_4 = {};
 let closure_5 = {};

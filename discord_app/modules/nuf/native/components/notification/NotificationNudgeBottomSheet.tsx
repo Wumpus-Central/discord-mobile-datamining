@@ -1,12 +1,12 @@
 // discord_app/modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import EventActionType from "NotificationPermissionConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ EventActionType: c5, NotificationNudgeAnalyticsAction: closure_6 } = EventActionType);

@@ -1,11 +1,11 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx
-import _modDef4115 from "module_4115" /* 4115 */;
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11410 */;
-import closure_3 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11149 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import wrapChildrenDefault from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CHAT_INPUT_TIMING_CONFIG } from "../ChatInputConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function FadeTransitionItem(state) {

@@ -1,17 +1,17 @@
 // discord_app/modules/guild_settings/GuildSettingsActionCreators.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "handleFormInit" /* 8875 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../debug/Logger.tsx";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../impersonate/ImpersonateStore.tsx";
+import closure_5 from "../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import closure_9 from "GuildSettingsStore.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { toServerGuildProfile } from "../guild_tag/GuildTagTypes.tsx";
 

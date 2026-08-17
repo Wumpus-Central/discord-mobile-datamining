@@ -1,8 +1,8 @@
 // discord_app/design/void/Spacer/native/Spacer.tsx
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import apply from "apply" /* 12 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import apply from "../../../../../_runtime/00012_apply.js";
 
 noopAll;
 let closure_2 = apply.memoize((width) => ({ width, height: width }));

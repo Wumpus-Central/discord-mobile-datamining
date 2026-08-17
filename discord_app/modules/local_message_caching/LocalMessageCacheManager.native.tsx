@@ -1,19 +1,19 @@
 // discord_app/modules/local_message_caching/LocalMessageCacheManager.native.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import Storage3 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import resetCache from "resetCache" /* 4063 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "hasFlag" /* 4031 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import { MessageStates } from "ME" /* 676 */;
-import createLock from "createLock" /* 13916 */;
+import timestampDefault from "../debug/Logger.tsx";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import resetCache from "../../utils/DateUtils.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../records/MessageRecord.tsx";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/MessageStore.tsx";
+import { MessageStates } from "../../Constants.tsx";
+import createLock from "../../../discord_common/js/shared/utils/MutexUtils.tsx";
 
 require = arg1;
 function _getKeyForFileId(arg0) {

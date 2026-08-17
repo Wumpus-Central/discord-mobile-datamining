@@ -1,10 +1,10 @@
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
-import _mod4115 from "module_4115" /* 4115 */;
-import styleProperties from "styleProperties" /* 4750 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import _mod4115 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import styleProperties from "../../../Button/native/ButtonHooks.native.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 let closure_2 = ["style"];

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_2 from "handleConnectionOpen" /* 4197 */;
-import closure_3 from "insertUnsortedGuilds" /* 5078 */;
+import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import closure_2 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_3 from "../../../../stores/SortedGuildStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");

@@ -1,6 +1,6 @@
 // discord_app/lib/StateManager.tsx
-import set from "set" /* 2 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import set from "../../_runtime/00002_set.js";
+import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
 
 const result = set.fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {

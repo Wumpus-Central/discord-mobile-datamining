@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelsSection.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import items2 from "items" /* 11733 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import items2 from "../../../guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import PlatformTypes from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);

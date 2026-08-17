@@ -1,6 +1,6 @@
 // discord_app/modules/changelog/utils/isChangelogChannel.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import closure_0 from "../../../stores/ChannelStore.tsx";
+import { SYSTEM_UPDATES_USER_ID } from "../ChangelogConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
 

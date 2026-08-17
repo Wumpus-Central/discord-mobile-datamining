@@ -1,10 +1,10 @@
 // discord_app/modules/client_themes/native/useActiveTheme.tsx
-import initialize from "initialize" /* 589 */;
-import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4228 */;
-import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_5 from "reset" /* 1346 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import getGuildIdFromNavigationStateDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
+import closure_3 from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_4 from "../ClientThemesBackgroundStore.tsx";
+import closure_5 from "CustomThemeMobileStore.tsx";
+import SystemThemeState from "../../user_settings/ThemeConstants.tsx";
 
 require = arg1;
 function useActiveThemeType() {

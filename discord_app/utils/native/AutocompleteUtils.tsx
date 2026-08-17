@@ -1,7 +1,7 @@
 // discord_app/utils/native/AutocompleteUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
 
 ME.AutoCompleteResultTypes;
 const items = [["game", "gameMentionInput"]];

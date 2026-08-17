@@ -1,8 +1,8 @@
 // discord_app/modules/polls/native/PollDurationActionSheet.tsx
-import ActionSheet from "ActionSheet" /* 7175 */;
-import usePollDurationOptionsDefault from "usePollDurationOptions" /* 11375 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import usePollDurationOptionsDefault from "../usePollDurationOptions.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function PollDurationRadioGroup(onChange) {

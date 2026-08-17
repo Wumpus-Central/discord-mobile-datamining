@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 5564 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import BumpingFistsSpotIllustration from "../../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { UserProfileThemeTypes } from "../../../user_profile/native/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ShopThisLookMarketingCoachmarkImage() {

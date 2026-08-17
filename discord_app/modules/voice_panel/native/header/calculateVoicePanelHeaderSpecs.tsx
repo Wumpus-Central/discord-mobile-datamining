@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/header/calculateVoicePanelHeaderSpecs.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const fn = function t(top) {
   const bound = Math.max(arg1, top.top);

@@ -1,16 +1,16 @@
 // discord_app/components_native/ChannelContainer.tsx
-import initialize from "initialize" /* 589 */;
-import useChatLayoutDefault from "useChatLayout" /* 4232 */;
-import NotificationsDefault from "Notifications" /* 10012 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../discord_common/js/packages/flux/index.tsx";
+import useChatLayoutDefault from "../modules/chat/native/useChatLayout.tsx";
+import NotificationsDefault from "common/Notifications.tsx";
+import closure_3 from "../../_runtime/00019_noop.js";
+import { View } from "../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_6 from "../stores/ChannelStore.tsx";
+import closure_7 from "../stores/SelectedChannelStore.tsx";
+import { ChannelTypes } from "../Constants.tsx";
+import { ContentDismissActionType } from "../modules/dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function NotificationsContainer() {

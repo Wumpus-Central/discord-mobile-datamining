@@ -1,19 +1,19 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9444 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getEmojiToGroupId" /* 6727 */;
-import closure_9 from "loadSavedGuildStickers" /* 6769 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 1925 */;
-import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import useInitialValueDefault from "../../../../../hooks/useInitialValue.tsx";
+import _calculateScrollOffsetDefault from "../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../emojis/EmojiStore.tsx";
+import closure_9 from "../../../../stickers/StickersStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import set from "../../../../emojis/EmojiConstants.tsx";
+import { MAX_STICKER_FILE_SIZE } from "../../../../stickers/StickersConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c5 = importAllResult;

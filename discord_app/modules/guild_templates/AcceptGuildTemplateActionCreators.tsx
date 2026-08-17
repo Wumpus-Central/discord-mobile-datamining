@@ -1,8 +1,8 @@
 // discord_app/modules/guild_templates/AcceptGuildTemplateActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_handleConnectionOpen" /* 4495 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../gateway/GatewayConnectionStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");

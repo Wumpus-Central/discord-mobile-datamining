@@ -1,7 +1,7 @@
 // discord_app/modules/ads/native/AdUserActionCreators.android.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "adUser" /* 7482 */;
-import ME from "ME" /* 676 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "AdUserStore.tsx";
+import ME from "../../../Constants.tsx";
 
 function _fetchAdUser() {
   const self = this;

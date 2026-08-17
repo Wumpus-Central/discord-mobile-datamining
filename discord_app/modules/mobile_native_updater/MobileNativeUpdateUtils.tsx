@@ -1,9 +1,9 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import keys from "keys" /* 691 */;
-import _mod4090 from "module_4090" /* 4090 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4356 */;
+import timestampDefault from "../debug/Logger.tsx";
+import keys from "../../ConstantsIOS.tsx";
+import _mod4090 from "../../lib/native/Linking.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { UPDATE_CONFIG } from "MobileNativeUpdateConstants.tsx";
 
 require = arg1;
 function _checkForNewerBuild() {

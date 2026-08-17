@@ -1,11 +1,11 @@
 // discord_app/modules/stage_channels/native/components/EndStageActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8081 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "../../StageChannelsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

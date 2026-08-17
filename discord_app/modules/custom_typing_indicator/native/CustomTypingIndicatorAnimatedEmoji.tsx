@@ -1,6 +1,6 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_5 = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,RING_RADIUS,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-RING_RADIUS*Math.sin(currentAngle)},{translateY:translateY.get()+RING_RADIUS*(Math.cos(currentAngle)-1)}]};}" };

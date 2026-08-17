@@ -1,8 +1,8 @@
 // discord_app/modules/forums/tracking/ForumPostAnalyticsManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../threads/ActiveThreadsStore.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
 
 let require = arg1;
 initializeDefault;

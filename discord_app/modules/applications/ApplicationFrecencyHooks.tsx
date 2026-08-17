@@ -1,7 +1,7 @@
 // discord_app/modules/applications/ApplicationFrecencyHooks.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 8449 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "ApplicationFrecencyStore.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");

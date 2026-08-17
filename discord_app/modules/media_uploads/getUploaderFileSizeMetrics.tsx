@@ -1,5 +1,5 @@
 // discord_app/modules/media_uploads/getUploaderFileSizeMetrics.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
 

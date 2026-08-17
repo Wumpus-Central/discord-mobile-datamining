@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarGuildTagExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../../experiments/apex/index.tsx";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-you-bar-guild-tag", kind: "user", defaultConfig: { showGuildTag: false }, variations: { 0: { showGuildTag: false }, 1: { showGuildTag: true } } });
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarGuildTagExperiment.tsx");

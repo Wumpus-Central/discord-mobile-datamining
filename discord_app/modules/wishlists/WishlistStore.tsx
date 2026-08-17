@@ -1,11 +1,11 @@
 // discord_app/modules/wishlists/WishlistStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
-import fromServer from "fromServer" /* 9187 */;
-import closure_5 from "fromServer" /* 9187 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef1208 from "../../utils/SentryUtils.native.tsx";
+import createUserWidgetFromServer from "../user_profile/UserProfileStore.tsx";
+import fromServer from "records/WishlistRecord.tsx";
+import closure_5 from "records/WishlistRecord.tsx";
 
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: c4 } = fromServer);
 let closure_6 = {};

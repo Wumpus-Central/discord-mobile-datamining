@@ -1,8 +1,8 @@
 // discord_app/modules/game_profile/hooks/useResolveGameForProfile.tsx
-import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
-import useResolveGameDefault from "useResolveGame" /* 9523 */;
+import set from "../../../../_runtime/00002_set.js";
+import importDefaultResult1 from "../../games/hooks/useGame.tsx";
+import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
+import useResolveGameDefault from "../../games/hooks/useResolveGame.tsx";
 
 let result = set.fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 

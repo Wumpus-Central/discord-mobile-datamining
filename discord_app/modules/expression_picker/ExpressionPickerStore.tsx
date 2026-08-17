@@ -1,9 +1,9 @@
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
-import set from "set" /* 2 */;
-import ExpressionPickerViewType2 from "ExpressionPickerViewType" /* 1338 */;
-import uniqueIdDefault from "uniqueId" /* 5261 */;
-import identity from "identity" /* 700 */;
-import createJSONStorage from "createJSONStorage" /* 4242 */;
+import set from "../../../_runtime/00002_set.js";
+import ExpressionPickerViewType2 from "ExpressionPickerConstants.tsx";
+import uniqueIdDefault from "../../../_runtime/05261_uniqueId.js";
+import identity from "../../../_runtime/00700_identity.js";
+import createJSONStorage from "../../../_runtime/04242_createJSONStorage.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let ExpressionPickerViewType = ExpressionPickerViewType2.ExpressionPickerViewType;

@@ -1,11 +1,11 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import FadeTransitionItemDefault from "FadeTransitionItem" /* 11409 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ChatInputActionType } from "TextAreaCta" /* 11149 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FadeTransitionItemDefault from "ChatInputActionButtonTransitionItem.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ChatInputActionType } from "../ChatInputConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 

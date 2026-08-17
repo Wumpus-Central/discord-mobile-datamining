@@ -1,13 +1,13 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import frozen from "frozen" /* 8171 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 8294 */;
-import closure_3 from "getCurrentTime" /* 8290 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { GiftIntentType } from "GuildFeatures" /* 1924 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import nameFromUserDefault from "../../../../../../utils/UserUtils.tsx";
+import frozen from "../../EmbedUtils.tsx";
+import _sendGiftMessage from "../../../../../premium/PremiumGiftingUtils.tsx";
+import closure_3 from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
+import closure_4 from "../../../../../../stores/UserStore.tsx";
+import { GiftIntentType } from "../../../../../premium/PremiumConstants.tsx";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { headerTextColor: ThemesDefault.colors.TEXT_STRONG, subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_MUTED };

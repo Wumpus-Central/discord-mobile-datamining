@@ -1,15 +1,15 @@
 // discord_app/modules/chat_input/native/ChatInputNativeComponent.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import useTheme from "useTheme" /* 4310 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11161 */;
-import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import hexToRgba from "../../../utils/ColorUtils.tsx";
+import useTheme from "../../../hooks/useTheme.tsx";
+import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
+import closure_3 from "../../client_themes/ClientThemesBackgroundStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { style: { flex: 1 }, textColor: null, placeholderColor: null };

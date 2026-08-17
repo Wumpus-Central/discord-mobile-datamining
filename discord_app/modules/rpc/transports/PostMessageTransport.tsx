@@ -1,13 +1,13 @@
 // discord_app/modules/rpc/transports/PostMessageTransport.tsx
-import setDefault from "set" /* 687 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 8751 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import { RPC_EMBEDDED_APP_SCOPE } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
-import { EventEmitter } from "EventEmitter" /* 652 */;
-import set from "set" /* 2 */;
+import setDefault from "../../../utils/Durations.tsx";
+import HANDSHAKEDefault from "../RPCOpcodes.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../activities/EmbeddedActivitiesStore.tsx";
+import { RPC_EMBEDDED_APP_SCOPE } from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
+import { EventEmitter } from "../../../../_runtime/00652_EventEmitter.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 ({ AnalyticEvents: error, ComponentActions: closure_8, RPCCloseCodes: c9, RPCErrors: c10 } = ME);

@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/apex/ApexActionCreators.tsx
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "initialize" /* 1212 */;
-import { Endpoints } from "ME" /* 676 */;
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "ApexExperimentStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
 
 const require = arg1;
 function _fetchApexExperimentsMetadata() {

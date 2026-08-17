@@ -1,14 +1,14 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningManager.tsx
-import setDefault from "set" /* 687 */;
-import keys from "keys" /* 691 */;
-import initializeDefault from "initialize" /* 5038 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13284 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13288 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
-import closure_10 from "init" /* 13281 */;
+import setDefault from "../../utils/Durations.tsx";
+import keys from "../../ConstantsIOS.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import showGdmBlockedUserModal from "show_gdm_modal/showGdmBlockedUserModal.native.tsx";
+import showVoiceChannelBlockedUserWarning from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import useSharedSpacesWarningStore from "SharedSpacesWarningStore.tsx";
+import closure_10 from "VoiceChannelBlockedUserStore.tsx";
 
 require = arg1;
 function handleChannelSelect(channelId) {

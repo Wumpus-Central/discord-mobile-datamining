@@ -1,6 +1,6 @@
 // discord_app/modules/safety_flows/SafetyFlowsManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import _openSafetyFlow from "_openSafetyFlow" /* 17083 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import _openSafetyFlow from "openSafetyFlow.native.tsx";
 
 require = arg1;
 function handleConnectionOpenSupplemental() {

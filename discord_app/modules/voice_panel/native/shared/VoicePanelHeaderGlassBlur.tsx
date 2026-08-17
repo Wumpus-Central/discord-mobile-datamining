@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx
-import useThemeDefault from "useTheme" /* 4310 */;
-import animatedComponentDefault from "animatedComponent" /* 4724 */;
-import setDefault from "set" /* 7190 */;
-import setDefault2 from "set" /* 8125 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
-import importAllResult from "noop" /* 19 */;
+import useThemeDefault from "../../../../hooks/useTheme.tsx";
+import animatedComponentDefault from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
+import setDefault from "../../../core/native/NativeView.tsx";
+import setDefault2 from "../../../core/native/ReanimatedNativeView.tsx";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

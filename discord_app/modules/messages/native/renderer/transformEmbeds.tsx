@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/transformEmbeds.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

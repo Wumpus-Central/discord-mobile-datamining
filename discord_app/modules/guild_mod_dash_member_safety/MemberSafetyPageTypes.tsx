@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx
-import set from "set" /* 2 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import set from "../../../_runtime/00002_set.js";
+import MAX_RESULTS_PER_PAGE from "../guild_member_verification/MemberVerificationTypes.tsx";
 
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };
 const SUBMITTED = MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED;

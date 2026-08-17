@@ -1,6 +1,6 @@
 // discord_app/modules/labs/LabFeatureActions.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "getUserAgnosticState" /* 9059 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "LabFeatureStore.tsx";
 
 let closure_3 = {};
 const result = require("set").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");

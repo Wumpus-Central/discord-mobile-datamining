@@ -1,8 +1,8 @@
 // discord_app/modules/guild_settings/GuildSettingsModalMembersStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "trackCommunicationDisabled" /* 1990 */;
-import { FormStates } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/GuildMemberStore.tsx";
+import { FormStates } from "../../Constants.tsx";
 
 function handleStopEditingRoles() {
   c2 = null;

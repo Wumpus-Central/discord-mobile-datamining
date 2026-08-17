@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import FileIcon from "FileIcon" /* 10076 */;
-import AttachmentIconDefault from "AttachmentIcon" /* 10139 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_6 from "map" /* 4824 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import FileIcon from "../../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
+import AttachmentIconDefault from "../../../../media/native/AttachmentPreview.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { DraftType } from "../../../../../stores/DraftStore.tsx";
+import closure_6 from "../../../../../stores/UploadAttachmentStore.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function AttachmentPreviewAppLauncher(arg0) {

@@ -1,21 +1,21 @@
 // discord_app/stores/PrivateChannelRecipientsInviteStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7597 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import { PrivateChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "hasConsented" /* 5258 */;
-import closure_9 from "handleChannelSelect" /* 6772 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import isNullOrEmpty from "../utils/StringUtils.tsx";
+import nameFromUserDefault from "../utils/UserUtils.tsx";
+import getTransformedUserDefault from "../modules/autocompleter/UserSearchManager.tsx";
+import closure_4 from "../modules/experiments/ExperimentStore.tsx";
+import closure_5 from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
+import { PrivateChannelRecord } from "../records/ChannelRecord.tsx";
+import closure_7 from "ChannelStore.tsx";
+import closure_8 from "ConsentStore.tsx";
+import closure_9 from "FrecencyStore.tsx";
+import closure_10 from "GuildMemberStore.tsx";
+import closure_11 from "GuildStore.tsx";
+import closure_12 from "RelationshipStore.tsx";
+import closure_13 from "UserStore.tsx";
+import ME from "../Constants.tsx";
+import set from "../../_runtime/00002_set.js";
 
 require = arg1;
 function performQuery() {

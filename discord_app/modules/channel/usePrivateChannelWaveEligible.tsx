@@ -1,8 +1,8 @@
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
-import closure_3 from "reinjectEphemerals" /* 4994 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import { ChannelFlags } from "set" /* 1398 */;
-import { MessageTypes } from "ME" /* 676 */;
+import closure_3 from "../../stores/MessageStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import { ChannelFlags } from "ChannelConstants.tsx";
+import { MessageTypes } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { resetCache } from "../../utils/DateUtils.tsx";
 import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";

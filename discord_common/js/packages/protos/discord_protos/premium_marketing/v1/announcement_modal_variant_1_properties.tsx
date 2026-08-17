@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import create2 from "create" /* 7633 */;
-import create3 from "create" /* 7634 */;
-import create4 from "create" /* 7635 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import create2 from "../../common/v1/localized_string.tsx";
+import create3 from "help_article.tsx";
+import create4 from "cta_button.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class FeatureCard$Type extends MessageType {

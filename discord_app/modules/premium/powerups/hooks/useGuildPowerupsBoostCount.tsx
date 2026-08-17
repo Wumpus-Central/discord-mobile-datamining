@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx
-import experiment from "experiment" /* 4285 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import experiment from "../../../game_server/GameServerExperiment.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../game_server/GameServerStore.tsx";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../GuildPowerupsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");

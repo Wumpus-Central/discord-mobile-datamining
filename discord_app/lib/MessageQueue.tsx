@@ -1,14 +1,14 @@
 // discord_app/lib/MessageQueue.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import enqueueDefault from "enqueue" /* 5041 */;
-import getOverlayMessageAnalyticsLocationDefault from "getOverlayMessageAnalyticsLocation" /* 5051 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "getUserAgnosticState" /* 4737 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "handleConnectionInfoChange" /* 4564 */;
-import ME from "ME" /* 676 */;
-import { MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS as closure_12 } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import setDefault from "../utils/Durations.tsx";
+import enqueueDefault from "../utils/Queue.tsx";
+import getOverlayMessageAnalyticsLocationDefault from "../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx";
+import closure_5 from "../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_6 from "../modules/devtools/dev_settings/DevSettingsStore.tsx";
+import closure_7 from "../stores/AuthenticationStore.tsx";
+import closure_8 from "../stores/NetworkStore.tsx";
+import ME from "../Constants.tsx";
+import { MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS as closure_12 } from "../modules/messages/MessageConstants.tsx";
 
 let handleCommand = arg1;
 let closure_3 = ["channelId", "analyticsLocation"];

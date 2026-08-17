@@ -1,11 +1,11 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8142 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import { IN_APP_REPORTS_NODE } from "InAppReportsConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");

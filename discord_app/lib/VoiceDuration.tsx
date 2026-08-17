@@ -1,6 +1,6 @@
 // discord_app/lib/VoiceDuration.tsx
-import set2 from "set" /* 2 */;
-import sleep from "sleep" /* 4548 */;
+import set2 from "../../_runtime/00002_set.js";
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 
 let closure_2 = [1, 100, 1000, 10000];
 let closure_3 = [100, 500, 1000, 5000];

@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx
-import closure_2 from "guildHasCommunity" /* 5276 */;
-import closure_3 from "generateOldThreadCutoff" /* 4772 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_2 from "../../../recent_channels/NewChannelsStore.tsx";
+import closure_3 from "../../../../stores/ReadStateStore.tsx";
+import closure_4 from "../../../../stores/UserGuildSettingsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useOptInEnabledForGuild } from "../../../opt_in_channels/isOptInEnabled.tsx";
 

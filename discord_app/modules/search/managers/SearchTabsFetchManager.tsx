@@ -1,9 +1,9 @@
 // discord_app/modules/search/managers/SearchTabsFetchManager.tsx
-import fetch from "fetch" /* 11521 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
-import { SearchTypes } from "ME" /* 676 */;
-import { AbstractSearchFetchManager } from "cleanUp" /* 11520 */;
+import fetch from "../SearchFetcher.tsx";
+import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import MessageEmbedTypes from "../SearchConstants.tsx";
+import { SearchTypes } from "../../../Constants.tsx";
+import { AbstractSearchFetchManager } from "AbstractSearchFetchManager.tsx";
 
 require = arg1;
 let closure_2 = ["include_nsfw", "channel_id"];

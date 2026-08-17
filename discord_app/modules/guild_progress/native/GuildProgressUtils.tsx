@@ -1,15 +1,15 @@
 // discord_app/modules/guild_progress/native/GuildProgressUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import dispatcherDefault from "dispatcher" /* 11646 */;
-import closure_3 from "comparator" /* 1980 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "completeStep" /* 11644 */;
-import { Steps } from "Steps" /* 11637 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import dispatcherDefault from "../GuildProgressActionCreators.tsx";
+import closure_3 from "../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../GuildProgressStore.tsx";
+import { Steps } from "../GuildProgressConstants.tsx";
+import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { usePermissions } from "../GuildProgressHooks.tsx";
 

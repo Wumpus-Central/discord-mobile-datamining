@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingsManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = arg1;
 let c2 = false;

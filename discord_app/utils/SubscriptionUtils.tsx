@@ -1,14 +1,14 @@
 // discord_app/utils/SubscriptionUtils.tsx
-import _modDef38 from "module_38" /* 38 */;
-import tDefault from "t" /* 3975 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import prototype from "prototype" /* 10649 */;
-import PauseDuration from "PauseDuration" /* 10651 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "addSubscriptionPlan" /* 4044 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import _modDef38 from "../../_runtime/metro/00038__.js";
+import tDefault from "../../_runtime/03975_t.js";
+import getPremiumPlanItem from "PremiumUtils.tsx";
+import prototype from "../modules/checkout/CheckoutError.tsx";
+import PauseDuration from "../../discord_common/js/shared/shared-constants/PauseDuration.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00019_noop.js";
+import closure_5 from "../stores/billing/SubscriptionPlanStore.tsx";
+import ME from "../Constants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
 require = arg1;
 ({ SubscriptionStatusTypes: closure_6, SubscriptionTypes: error } = ME);

@@ -1,8 +1,8 @@
 // discord_app/modules/media_viewer/native/MediaViewerDimensionsContext.tsx
-import _modDef38 from "module_38" /* 38 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let context = importAllResult.createContext(null);
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");

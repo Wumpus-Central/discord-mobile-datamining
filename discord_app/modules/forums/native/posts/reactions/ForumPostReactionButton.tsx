@@ -1,21 +1,21 @@
 // discord_app/modules/forums/native/posts/reactions/ForumPostReactionButton.tsx
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import ReactionTypes from "ReactionTypes" /* 7510 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10160 */;
-import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 10456 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 10461 */;
-import AnimatedCountDefault from "AnimatedCount" /* 10519 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import int2hslRaw from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
+import MAX_REACTIONS from "../../../../reactions/ReactionUtils.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
+import ReactionTypes from "../../../../messages/MessageReactionsTypes.tsx";
+import useNativeForumPostHandlersDefault from "../hooks/useNativeForumPostHandlers.tsx";
+import handleOutOfSuperReactions from "../../../../reactions/native/ReactionUtils.tsx";
+import useEmojiColorPalette from "../../../../emojis/hooks/useEmojiColorPalette.tsx";
+import AnimatedCountDefault from "../AnimatedCounter.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class BurstReactionButton {

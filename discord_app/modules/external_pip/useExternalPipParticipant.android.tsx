@@ -1,11 +1,11 @@
 // discord_app/modules/external_pip/useExternalPipParticipant.android.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../stores/RTCConnectionStore.tsx";
+import ParticipantTypes from "../calls/CallConstants.tsx";
 
 const require = arg1;
 ({ isStreamParticipant: closure_8, ParticipantTypes: c9 } = ParticipantTypes);

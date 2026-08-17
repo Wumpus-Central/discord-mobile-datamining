@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/useMuteStates.tsx
-import closure_2 from "initialize" /* 1982 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import { Permissions } from "ME" /* 676 */;
+import closure_2 from "../impersonate/ImpersonateStore.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/VoiceStateStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

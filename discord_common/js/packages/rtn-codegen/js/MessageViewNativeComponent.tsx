@@ -1,6 +1,6 @@
 // discord_common/js/packages/rtn-codegen/js/MessageViewNativeComponent.tsx
-import set from "set" /* 2 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import set from "../../../../../_runtime/00002_set.js";
+import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
 
 const obj = { uiViewClassName: "DCDMessageView", validAttributes: { row: true } };
 const value = setRuntimeConfigProvider.get("DCDMessageView", () => obj);

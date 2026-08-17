@@ -1,11 +1,11 @@
 // discord_app/modules/notifications/friend_online/FriendOnlineTimer.tsx
-import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
-import closure_5 from "initialize" /* 17029 */;
-import { Endpoints } from "ME" /* 676 */;
-import { StatusTypes } from "sum" /* 505 */;
+import setDefault from "../../../utils/Durations.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/SelfPresenceStore.tsx";
+import closure_5 from "FriendOnlineTimerStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
+import { StatusTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 
 let require = arg1;
 function _reportSessionMeaningfullyOnline() {

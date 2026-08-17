@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/BountiesModal/BountyConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");
 

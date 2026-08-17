@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/native/server/NativeRPCHelpers.tsx
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import { RPCCloseCodes } from "ME" /* 676 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import { TransportTypes } from "../../Constants.tsx";
+import { RPCCloseCodes } from "../../../../Constants.tsx";
+import importDefaultResult from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_0 = arg1;
 closure_0 = importDefaultResult((arg0, arg1, arg2) => {

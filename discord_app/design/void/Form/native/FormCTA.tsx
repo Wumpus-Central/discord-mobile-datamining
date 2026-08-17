@@ -1,14 +1,14 @@
 // discord_app/design/void/Form/native/FormCTA.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import _modDef6937 from "module_6937" /* 6937 */;
-import FormCheckbox2 from "FormCheckbox" /* 8085 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8086 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../native.tsx";
+import _modDef6937 from "FormRow.tsx";
+import FormCheckbox2 from "../../../components/Forms/native/FormCheckbox.native.tsx";
+import RowButtonWrapper from "../../../components/TableRow/native/RowButton.native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { Fonts } from "../../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,20 +1,20 @@
 // discord_app/modules/clips/ClipsStore.tsx
-import _modDef38 from "module_38" /* 38 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import isClipsEnabled from "isClipsEnabled" /* 4526 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import apexExperimentDefault from "apexExperiment" /* 4534 */;
-import apexExperiment from "apexExperiment" /* 4535 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4504 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import result from "result" /* 4523 */;
-import { VoiceFlags } from "ME" /* 676 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
-import set from "set" /* 2 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
+import isClipsEnabled from "isClipsEnabled.tsx";
+import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
+import apexExperimentDefault from "DistributedClipsExperiment.tsx";
+import apexExperiment from "AutoclippingDefaultOverrideExperiment.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../game_detection/RunningGameStore.native.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import result from "ClipsConstants.tsx";
+import { VoiceFlags } from "../../Constants.tsx";
+import RESOLUTION_720 from "../go_live/StreamSettingsConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function _migrateDefaultStorage() {

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;

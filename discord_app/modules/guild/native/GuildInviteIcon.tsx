@@ -1,13 +1,13 @@
 // discord_app/modules/guild/native/GuildInviteIcon.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5449 */;
-import getClass from "getClass" /* 11833 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import getClass from "../../../utils/StylesheetUtils.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { SMALL: "small", MEDIUM: "medium", LARGE: "large" };

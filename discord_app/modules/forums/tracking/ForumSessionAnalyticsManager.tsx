@@ -1,6 +1,6 @@
 // discord_app/modules/forums/tracking/ForumSessionAnalyticsManager.tsx
-import set from "set" /* 2 */;
-import v1 from "v1" /* 514 */;
+import set from "../../../../_runtime/00002_set.js";
+import v1 from "../../../../_runtime/00514_v1.js";
 
 class ForumSessionAnalyticsManager {
 }

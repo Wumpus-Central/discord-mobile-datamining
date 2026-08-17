@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/FramesEarlyAccessBadge.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import Layer from "Layer" /* 7126 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Layer from "../../../design/components/Layers/native/LayerScope.native.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);

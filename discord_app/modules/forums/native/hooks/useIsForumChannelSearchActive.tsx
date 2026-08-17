@@ -1,5 +1,5 @@
 // discord_app/modules/forums/native/hooks/useIsForumChannelSearchActive.tsx
-import closure_2 from "initialize" /* 7515 */;
+import closure_2 from "../../ForumSearchStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useCanSearchForumPostsByChannelId } from "useCanSearchForumPostsByChannelId.tsx";
 

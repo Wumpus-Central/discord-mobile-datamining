@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/getCanSendInvite.tsx
-import set from "set" /* 2 */;
-import resultDefault from "result" /* 10917 */;
-import getPartySize from "getPartySize" /* 10918 */;
-import hasPartySize from "hasPartySize" /* 10919 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import resultDefault from "isInviteActive.tsx";
+import getPartySize from "getPartySize.tsx";
+import hasPartySize from "hasPartySize.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ActivityActionTypes: c4 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");

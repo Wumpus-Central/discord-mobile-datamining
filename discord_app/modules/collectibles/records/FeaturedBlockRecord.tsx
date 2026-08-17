@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/records/FeaturedBlockRecord.tsx
-import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 5339 */;
-import fromServer from "fromServer" /* 5341 */;
+import set from "../../../../_runtime/00002_set.js";
+import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import fromServer from "FeaturedCategorySubblockRecord.tsx";
 
 let closure_2 = fromServer.FeaturedCategorySubblockRecord;
 let prototype;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");

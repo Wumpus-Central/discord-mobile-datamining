@@ -1,13 +1,13 @@
 // discord_app/stores/GuildCategoryStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "initializeFromUserSettings" /* 1394 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_7 from "comparator" /* 1980 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "../modules/favorites/FavoriteStore.tsx";
+import closure_3 from "AuthenticationStore.tsx";
+import closure_4 from "ChannelStore.tsx";
+import comparator from "GuildChannelStore.tsx";
+import closure_7 from "GuildChannelStore.tsx";
+import closure_8 from "GuildStore.tsx";
+import ME from "../Constants.tsx";
 
 function setIndex(arg0, index) {
   arg0.index = index;

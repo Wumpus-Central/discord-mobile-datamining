@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionInfoChange" /* 4564 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/NetworkStore.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 
 const require = arg1;
 let closure_6 = [25, 50, 75];

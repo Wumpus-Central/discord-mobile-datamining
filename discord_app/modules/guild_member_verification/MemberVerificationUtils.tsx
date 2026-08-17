@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import items from "items" /* 6860 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
+import items from "MemberVerificationConstants.tsx";
 
 ({ AUTOMATIC_APPROVAL_FORM_FIELDS: obj1, MANUAL_APPROVAL_FORM_FIELDS: c3 } = items);
 const GuildFeatures = ME.GuildFeatures;

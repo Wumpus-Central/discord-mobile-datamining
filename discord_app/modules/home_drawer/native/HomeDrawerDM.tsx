@@ -1,15 +1,15 @@
 // discord_app/modules/home_drawer/native/HomeDrawerDM.tsx
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4235 */;
-import useMessagePreviewDefault from "useMessagePreview" /* 14663 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isMultiUserDM } from "createChannelRecord" /* 1395 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { NOOP } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import MobileHomeDrawerExperiment2 from "HomeDrawerExperiment.tsx";
+import useMessagePreviewDefault from "../../main_tabs_v2/useMessagePreviews.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isMultiUserDM } from "../../../records/ChannelRecord.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function HomeDrawerDMExpandedChildren(channel) {

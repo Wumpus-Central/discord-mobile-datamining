@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import { RelationshipTypes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../../stores/UserStore.tsx";
+import { UserRowModes } from "../../shared_components/user_list/UserRowConstants.tsx";
+import { RelationshipTypes } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");

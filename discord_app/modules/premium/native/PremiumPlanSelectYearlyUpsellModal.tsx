@@ -1,16 +1,16 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import createTextStyleDefault from "createTextStyle" /* 6782 */;
-import registerAssetDefault from "registerAsset" /* 12984 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "_getSystemLocale" /* 1994 */;
-import closure_8 from "updateProduct" /* 5319 */;
-import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore" /* 12974 */;
-import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures" /* 1924 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
+import createTextStyleDefault from "../../rebrand/native/TextStyles.tsx";
+import registerAssetDefault from "../../../../_runtime/12984_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../user_settings/LocaleStore.tsx";
+import closure_8 from "../../../stores/native/IAPStore.android.tsx";
+import { usePremiumPlanSelectStore } from "PremiumPlanSelectStore.tsx";
+import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "../PremiumConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);

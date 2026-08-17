@@ -1,23 +1,23 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx
-import applyDefault from "apply" /* 12 */;
-import extractId from "extractId" /* 513 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import Background from "Background" /* 6950 */;
-import useExperimentAssignment from "useExperimentAssignment" /* 10989 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getHash" /* 4288 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyDefault from "../../../../../../_runtime/00012_apply.js";
+import extractId from "../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import trackExposureToExperiment from "../../../../experiments/ExperimentManager.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Background from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import useExperimentAssignment from "../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../experiments/ExperimentStore.tsx";
+import closure_7 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../../../stores/GuildStore.tsx";
+import ExperimentBuckets from "../../../../experiments/ExperimentConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function UserExperimentDebugView(id) {

@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { OverlappingSchedulesWarning } from "../../../parent_tools/native/ScheduleDowntimeScreen.tsx";
 
 obj = {

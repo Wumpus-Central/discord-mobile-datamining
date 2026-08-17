@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
-import ForumChannelCloseSearchButton from "ForumChannelCloseSearchButton" /* 12701 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 12715 */;
-import GuildChannelMemberCountDefault from "GuildChannelMemberCount" /* 12716 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ForumChannelCloseSearchButton from "../../../../forums/native/ForumChannelSearch.tsx";
+import useIsForumChannelSearchActive from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
+import GuildChannelMemberCountDefault from "GuildChannelHeader.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_5 = createCacheKey.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: require("MIN_HEADER_HEIGHT").MIN_HEADER_HEIGHT } });

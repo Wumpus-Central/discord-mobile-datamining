@@ -1,6 +1,6 @@
 // discord_common/js/shared/lib/PlatformUtils.tsx
-import importDefaultResult1 from "format" /* 669 */;
-import set from "set" /* 2 */;
+import importDefaultResult1 from "../../../../_runtime/00669_format.js";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);

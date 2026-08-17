@@ -1,5 +1,5 @@
 // discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js");
 

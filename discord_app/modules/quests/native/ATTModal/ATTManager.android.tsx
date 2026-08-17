@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/ATTModal/ATTManager.android.tsx
-import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5038 */;
-import _fetchAdUser from "_fetchAdUser" /* 7484 */;
+import _modDef1208 from "../../../../utils/SentryUtils.native.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import _fetchAdUser from "../../../ads/native/AdUserActionCreators.android.tsx";
 
 require = arg1;
 initializeDefault;

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx
-import getUnitIdDefault from "getUnitId" /* 1368 */;
+import getUnitIdDefault from "../../experiments/apex/ApexExperiment.tsx";
 
 const tmp2 = getUnitIdDefault({ name: "2026-03-boost-to-unlock-mobile-coachmark", kind: "user", defaultConfig: { showCoachmark: false }, variations: { 0: { showCoachmark: false }, 1: { showCoachmark: true } } });
 const result = require("set").fileFinishedImporting("modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");

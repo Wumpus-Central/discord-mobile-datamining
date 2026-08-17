@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/top_emojis/TopEmojisActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { RouteParam } from "../../routing/RouteUtils.tsx";
 

@@ -1,20 +1,20 @@
 // discord_app/modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import AvatarPile from "AvatarPile" /* 12124 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12138 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
-import { ChannelTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
+import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/GuildChannelStore.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../stores/views/SortedVoiceStateStore.tsx";
+import { ChannelTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VoiceUsers(arg0) {

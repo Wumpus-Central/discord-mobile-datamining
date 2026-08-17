@@ -1,8 +1,8 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_2 from "handleFormInit" /* 8875 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { MFALevels } from "ME" /* 676 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import closure_2 from "../../guild_settings/GuildSettingsStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import { MFALevels } from "../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");

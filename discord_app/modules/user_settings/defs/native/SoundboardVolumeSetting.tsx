@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/SoundboardVolumeSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 7299 */;
-import hasPermissionToPlaySound from "hasPermissionToPlaySound" /* 7304 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import _fetchDefaultSoundsFromApi2 from "../../../soundboard/SoundboardActionCreators.tsx";
+import hasPermissionToPlaySound from "../../../soundboard/SoundboardUtils.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const volumeSlider = createToggle.createVolumeSlider({
   useTitle() {

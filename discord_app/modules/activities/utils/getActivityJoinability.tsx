@@ -1,15 +1,15 @@
 // discord_app/modules/activities/utils/getActivityJoinability.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import hasFlagDefault from "hasFlag" /* 7260 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 8699 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 8729 */;
-import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability" /* 8729 */;
-import getPartySize from "getPartySize" /* 10918 */;
-import getIsInParty from "getIsInParty" /* 10921 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 10924 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 12132 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import hasFlagDefault from "hasFlag.tsx";
+import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability.tsx";
+import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability.tsx";
+import getPartySize from "getPartySize.tsx";
+import getIsInParty from "getIsInParty.tsx";
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity.tsx";
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
 let obj = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };

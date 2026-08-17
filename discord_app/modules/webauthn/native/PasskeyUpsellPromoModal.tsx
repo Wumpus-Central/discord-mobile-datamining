@@ -1,10 +1,10 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellPromoModal.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Modal from "Modal" /* 11115 */;
-import getScreens from "getScreens" /* 14081 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
+import getScreens from "WebAuthnScreens.tsx";
+import { WebAuthnScreens } from "../WebAuthnConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,24 +1,24 @@
 // discord_app/modules/launchpad/native/LaunchPadSearchResultUser.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _isStreamingDefault from "_isStreaming" /* 8411 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 15606 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16198 */;
-import _modDef16200 from "module_16200" /* 16200 */;
-import ChannelContentDefault from "ChannelContent" /* 16201 */;
-import renderChannelBadgeDefault from "renderChannelBadge" /* 16203 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import closure_8 from "handleTypingStart" /* 11152 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { StatusTypes } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _isStreamingDefault from "../../activities/utils/isStreaming.tsx";
+import useChannelUnreadBadgeState from "shared/useChannelUnreadBadgeState.tsx";
+import getLayoutStyleDefault from "shared/getLayoutStyles.tsx";
+import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
+import _modDef16200 from "shared/UnreadBadge.tsx";
+import ChannelContentDefault from "shared/renderChannelContent.tsx";
+import renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../user_settings/LocaleStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/PresenceStore.tsx";
+import closure_8 from "../../../stores/TypingStore.tsx";
+import closure_9 from "../../../stores/UserGuildSettingsStore.tsx";
+import { StatusTypes } from "../../../Constants.tsx";
+import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function UserResult(user) {

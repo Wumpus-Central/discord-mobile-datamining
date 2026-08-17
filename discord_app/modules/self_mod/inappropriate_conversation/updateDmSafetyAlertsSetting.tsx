@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 import { updateUserGuildSettings } from "../../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");

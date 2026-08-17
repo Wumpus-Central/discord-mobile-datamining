@@ -1,9 +1,9 @@
 // discord_app/modules/rtc/SecureFramesTracking.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import getProfileProperties from "getProfileProperties" /* 8935 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import getProfileProperties from "../user_profile/UserProfileAnalyticsUtils.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");

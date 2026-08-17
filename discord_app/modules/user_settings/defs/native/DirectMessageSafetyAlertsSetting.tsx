@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10577 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10578 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11057 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 14192 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import MobileUserSettings2 from "../../core/native/SettingsConstants.tsx";
+import InappropriateConversationExperiment from "../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
+import useSafetyAlertsSettingOrDefault from "../../../self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx";
+import InappropriateConversationsDefaultOn from "../../../self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx";
+import useUserIsConsideredAdultDefault from "../../../parent_tools/hooks/useUserIsConsideredAdult.tsx";
+import updateDmSafetyAlertsSetting from "../../../self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 const toggle = createToggle.createToggle({

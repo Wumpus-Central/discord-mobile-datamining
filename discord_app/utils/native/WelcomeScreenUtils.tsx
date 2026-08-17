@@ -1,11 +1,11 @@
 // discord_app/utils/native/WelcomeScreenUtils.tsx
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 11827 */;
-import { NO_WELCOME_SCREEN } from "handleInviteData" /* 11827 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../modules/welcome_screen/WelcomeScreenStore.tsx";
+import { NO_WELCOME_SCREEN } from "../../modules/welcome_screen/WelcomeScreenStore.tsx";
+import closure_6 from "../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
 
 require = arg1;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };

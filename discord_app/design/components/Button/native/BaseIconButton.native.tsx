@@ -1,14 +1,14 @@
 // discord_app/design/components/Button/native/BaseIconButton.native.tsx
-import _mod4115 from "module_4115" /* 4115 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import styleProperties from "styleProperties" /* 4750 */;
-import BaseButton from "BaseButton" /* 4752 */;
-import PillWrapper from "PillWrapper" /* 4754 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import _mod4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
+import MINIMUM_HIT_AREA from "ButtonConstants.native.tsx";
+import styleProperties from "ButtonHooks.native.tsx";
+import BaseButton from "BaseButton.native.tsx";
+import PillWrapper from "ButtonPill.native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 let closure_4 = createCacheKey.createStyles((arg0, arg1) => {

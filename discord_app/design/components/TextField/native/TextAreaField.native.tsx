@@ -1,16 +1,16 @@
 // discord_app/design/components/TextField/native/TextAreaField.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNodeText from "getNodeText" /* 4099 */;
-import Text from "Text" /* 4734 */;
-import useTextFieldState from "useTextFieldState" /* 7339 */;
-import useInputStyles from "useInputStyles" /* 7345 */;
-import useKeyboardBlurring from "useKeyboardBlurring" /* 7348 */;
-import useCharacterLimitAnnouncement from "useCharacterLimitAnnouncement" /* 8094 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getNodeText from "../../../utils/native.tsx";
+import Text from "../../Text/native/Text.tsx";
+import useTextFieldState from "useTextField.native.tsx";
+import useInputStyles from "../../Input/native/InputFieldContainer.native.tsx";
+import useKeyboardBlurring from "../../Input/native/NativeTextInput.native.tsx";
+import useCharacterLimitAnnouncement from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

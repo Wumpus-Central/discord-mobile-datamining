@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventUtils.tsx
-import set from "set" /* 2 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import registerAssetDefault from "registerAsset" /* 8825 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getChannelIcon from "../../../../utils/native/ChannelUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/08825_registerAsset.js";
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 

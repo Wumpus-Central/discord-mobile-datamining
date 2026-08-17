@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/BountiesBannerBackground.tsx
-import initialize from "initialize" /* 589 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import VideoComponent from "VideoComponent" /* 9018 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import VideoComponent from "../../../components_native/common/Video.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);

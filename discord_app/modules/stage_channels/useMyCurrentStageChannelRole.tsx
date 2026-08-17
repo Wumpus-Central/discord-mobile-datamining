@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/useMyCurrentStageChannelRole.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import closure_4 from "buildStageChannelUserRoles" /* 4990 */;
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/SelectedChannelStore.tsx";
+import closure_4 from "StageChannelRoleStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

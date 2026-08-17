@@ -1,17 +1,17 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import GuildFeatures2 from "GuildFeatures" /* 1924 */;
-import str11 from "str11" /* 4263 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4265 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4266 */;
-import experiment from "experiment" /* 4285 */;
-import apexExperiment from "apexExperiment" /* 4301 */;
-import experiment2 from "experiment" /* 4302 */;
-import apexExperiment2 from "apexExperiment" /* 4303 */;
-import experiment3 from "experiment" /* 4304 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import GuildFeatures2 from "../../PremiumConstants.tsx";
+import str11 from "../../../game_server/GameServerConstants.tsx";
+import VANITY_URL_POWERUP_SKU_ID from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import getGuildTierFromGuild from "../../../../utils/GuildBoostingUtils.tsx";
+import experiment from "../../../game_server/GameServerExperiment.tsx";
+import apexExperiment from "../experiments/FileUploadPowerupHoldoutExperiment.tsx";
+import experiment2 from "../experiments/FileUpload250MbPowerupExperiment.tsx";
+import apexExperiment2 from "../experiments/ServerThemeUserExperiment.tsx";
+import experiment3 from "../experiments/ServerThemeExperiment.tsx";
+import ME from "../../../../Constants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 const BoostedGuildFeatures = GuildFeatures2.BoostedGuildFeatures;
 const BoostedGuildTiers = ME.BoostedGuildTiers;

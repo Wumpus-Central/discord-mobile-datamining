@@ -1,18 +1,18 @@
 // discord_app/modules/connections/native/ConnectionMetadataVanityItems.tsx
-import applyDefault from "apply" /* 12 */;
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
-import Text from "Text" /* 4734 */;
-import officialApplicationIds from "officialApplicationIds" /* 5224 */;
-import registerAssetDefault from "registerAsset" /* 10773 */;
-import registerAssetDefault2 from "registerAsset" /* 10774 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import shortenAndLocalizeNumber from "../../../utils/NumberUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import officialApplicationIds from "../ConnectionsUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/10773_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10774_registerAsset.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import OperatorTypes from "../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PaypalVanityTag(style) {

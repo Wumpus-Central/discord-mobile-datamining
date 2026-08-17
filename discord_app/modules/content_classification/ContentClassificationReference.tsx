@@ -1,6 +1,6 @@
 // discord_app/modules/content_classification/ContentClassificationReference.tsx
-import set from "set" /* 2 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
+import set from "../../../_runtime/00002_set.js";
+import isAgeRestrictedContentClassification from "utils.tsx";
 
 let result = set.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/interaction_components/useFileUploadComponentState.tsx
-import closure_3 from "noop" /* 19 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_5 from "map" /* 4824 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import { DraftType } from "../../stores/DraftStore.tsx";
+import closure_5 from "../../stores/UploadAttachmentStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");

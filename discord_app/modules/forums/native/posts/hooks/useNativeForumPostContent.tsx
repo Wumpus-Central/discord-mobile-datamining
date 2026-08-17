@@ -1,10 +1,10 @@
 // discord_app/modules/forums/native/posts/hooks/useNativeForumPostContent.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import ME from "../../../../../Constants.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getStickerExtensionFromFormatType from "../../../../stickers/StickersUtils.tsx";
+import isSystemMessageDefault from "../../../../messages/isSystemMessage.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const MessageFlags = ME.MessageFlags;
 let closure_4 = createCacheKey.createStyles({ italics: { fontStyle: "italic" } });

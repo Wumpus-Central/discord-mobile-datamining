@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelParticipantUtils.tsx
-import setDefault from "set" /* 687 */;
-import nameFromUser from "nameFromUser" /* 4219 */;
+import setDefault from "../../utils/Durations.tsx";
+import nameFromUser from "../../utils/UserUtils.tsx";
 
 require = arg1;
 const DAY = setDefault.Millis.DAY;

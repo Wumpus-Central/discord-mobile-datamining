@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "QUEST_PROGRESS_DIAMETER_BY_SIZE" /* 14483 */;
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "../QuestProgressIndicator.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

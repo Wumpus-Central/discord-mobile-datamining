@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx
-import set from "set" /* 2 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import set2 from "set" /* 7227 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
+import set2 from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 import { useShouldHideGuildPurchaseEntryPoints } from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";

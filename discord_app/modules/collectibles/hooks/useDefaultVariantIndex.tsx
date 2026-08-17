@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/hooks/useDefaultVariantIndex.tsx
-import closure_2 from "map" /* 5324 */;
+import closure_2 from "../CollectiblesPurchaseStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 

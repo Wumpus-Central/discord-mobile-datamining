@@ -1,9 +1,9 @@
 // discord_app/design/utils/native.tsx
-import set from "set" /* 2 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import getNodeText from "getNodeText" /* 4100 */;
-import chainCallbacks from "chainCallbacks" /* 4101 */;
-import useFocus from "useFocus" /* 4102 */;
+import set from "../../../_runtime/00002_set.js";
+import isThemeLight from "shared/themes.tsx";
+import getNodeText from "shared/getNodeText.tsx";
+import chainCallbacks from "native/mergeProps.native.tsx";
+import useFocus from "native/useFocus.native.tsx";
 
 const result = set.fileFinishedImporting("design/utils/native.tsx");
 

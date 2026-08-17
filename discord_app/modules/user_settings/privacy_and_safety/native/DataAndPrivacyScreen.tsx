@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasConsented" /* 5258 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ConsentStore.tsx";
+import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);

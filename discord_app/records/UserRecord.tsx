@@ -1,12 +1,12 @@
 // discord_app/records/UserRecord.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
-import toJSDefault from "toJS" /* 1931 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import getAvatarURL from "../utils/AvatarUtils.tsx";
+import getAvatarURLDefault from "../utils/AvatarUtils.tsx";
+import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import toJSDefault from "../lib/Record.tsx";
+import isPremiumAtLeast from "../utils/PremiumTypeUtils.tsx";
+import ME from "../Constants.tsx";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 import { create } from "../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import { getNameplateData } from "../modules/collectibles/nameplates/utils.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";

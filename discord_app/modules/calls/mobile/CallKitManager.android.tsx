@@ -1,5 +1,5 @@
 // discord_app/modules/calls/mobile/CallKitManager.android.tsx
-import initializeDefault from "initialize" /* 4720 */;
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
 
 initializeDefault;
 class CallKitLifecycleManager extends tmp2 {

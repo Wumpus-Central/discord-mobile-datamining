@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "set" /* 14687 */;
-import items3 from "items3" /* 1934 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../DisplayNameStylesSeenStore.tsx";
+import items3 from "../DisplayNameStylesConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

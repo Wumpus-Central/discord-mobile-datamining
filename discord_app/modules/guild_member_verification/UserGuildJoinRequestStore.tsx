@@ -1,9 +1,9 @@
 // discord_app/modules/guild_member_verification/UserGuildJoinRequestStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4199 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
+import isActionedApplicationStatus from "GuildJoinRequestUtils.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
 require = arg1;
 function handleGatewayJoinRequestUpdate(arg0) {

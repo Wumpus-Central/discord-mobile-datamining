@@ -1,23 +1,23 @@
 // discord_app/modules/notification_center/native/ForYouItems.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import createRulesAll from "createRules" /* 4764 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 11799 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 15673 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_10 from "addApplication" /* 4478 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "handleLoadFinished" /* 15668 */;
-import ME from "ME" /* 676 */;
-import { NotificationTypes } from "str2" /* 5259 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import createRulesAll from "../../markup/CustomMarkup.native.tsx";
+import ApplicationIconAndNameDefault from "../../user_profile/native/ApplicationIconAndName.tsx";
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../a11y/AccessibilityStore.tsx";
+import closure_10 from "../../applications/ApplicationStore.tsx";
+import closure_11 from "../../../stores/ChannelStore.tsx";
+import closure_12 from "../../../stores/GuildStore.tsx";
+import closure_13 from "../../../stores/UserStore.tsx";
+import closure_14 from "../NotificationCenterStore.tsx";
+import ME from "../../../Constants.tsx";
+import { NotificationTypes } from "../../push_notifications/PushNotificationConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ForYouFooter(loading) {

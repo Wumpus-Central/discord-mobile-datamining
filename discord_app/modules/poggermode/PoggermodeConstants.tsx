@@ -1,5 +1,5 @@
 // discord_app/modules/poggermode/PoggermodeConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { LEVEL_1: 0, [0]: "LEVEL_1", LEVEL_2: 1, [1]: "LEVEL_2", LEVEL_3: 2, [2]: "LEVEL_3", LEVEL_4: 3, [3]: "LEVEL_4", LEVEL_5: 4, [4]: "LEVEL_5" };
 obj = { [obj.LEVEL_1]: items, [obj.LEVEL_2]: items1, [obj.LEVEL_3]: items2, [obj.LEVEL_4]: items3, [obj.LEVEL_5]: items4 };

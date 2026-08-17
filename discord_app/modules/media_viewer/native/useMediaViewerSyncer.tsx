@@ -1,8 +1,8 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSyncer.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 9012 */;
-import set from "set" /* 500 */;
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import THUMBNAIL_MARGIN from "Constants.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const require = arg1;
 ({ THUMBNAIL_MARGIN: c5, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: error, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: c9 } = THUMBNAIL_MARGIN);

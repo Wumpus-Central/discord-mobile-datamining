@@ -1,13 +1,13 @@
 // discord_app/modules/voice_calls/native/AudioManagerStore.android.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import enforcingDefault from "enforcing" /* 9652 */;
-import enforcing from "enforcing" /* 9652 */;
+import set from "../../../../_runtime/00002_set.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import ME from "../../../Constants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import DesktopSources from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
+import enforcing from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
 
 const RTCConnectionStates = ME.RTCConnectionStates;
 const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;

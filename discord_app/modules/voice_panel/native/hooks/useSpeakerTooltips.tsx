@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/hooks/useSpeakerTooltips.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import useConsoleVoiceUpsellStore from "useConsoleVoiceUpsellStore" /* 16337 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import useConsoleVoiceUpsellStore from "../../../game_console/ConsoleVoiceUpsellStore.tsx";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ setVoiceUpsellDismissed: c5, useConsoleVoiceUpsellStore: closure_6 } = useConsoleVoiceUpsellStore);

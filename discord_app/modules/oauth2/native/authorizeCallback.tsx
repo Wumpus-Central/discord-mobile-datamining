@@ -1,12 +1,12 @@
 // discord_app/modules/oauth2/native/authorizeCallback.tsx
-import set from "set" /* 2 */;
-import keys from "keys" /* 691 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import NativeModules from "NativeModules" /* 4340 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
+import set from "../../../../_runtime/00002_set.js";
+import keys from "../../../ConstantsIOS.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import NativeModules from "../../links/native/BrowserManager.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import OAUTH2_AUTHORIZE_MODAL_KEY from "Constants.tsx";
 
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: c4 } = OAUTH2_AUTHORIZE_MODAL_KEY);
 const re5 = /oauth2\/authorized/;

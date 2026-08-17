@@ -1,8 +1,8 @@
 // discord_app/design/components/LottieIcon/native/generated/NotificationsTabLottie.tsx
-import LottieIcon from "LottieIcon" /* 10404 */;
-import registerAsset from "registerAsset" /* 13506 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import LottieIcon from "../LottieIcon.tsx";
+import registerAsset from "../../../../../../_runtime/13506_registerAsset.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_3 = ["IconAnimation_Notifications_3D_LottieFix02"];

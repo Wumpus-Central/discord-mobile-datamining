@@ -1,8 +1,8 @@
 // discord_app/modules/cache/trackCacheSkipped.native.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import getDeviceMetadata from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");

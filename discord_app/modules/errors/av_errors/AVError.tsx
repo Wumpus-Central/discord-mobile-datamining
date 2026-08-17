@@ -1,6 +1,6 @@
 // discord_app/modules/errors/av_errors/AVError.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 let mapped = importDefault;
 let closure_1 = dependencyMap;

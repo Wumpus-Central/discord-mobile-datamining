@@ -1,14 +1,14 @@
 // discord_app/modules/dice_roll/DiceRollLifecycleManager.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import initializeDefault from "initialize" /* 5038 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "INITIAL_STATE" /* 11146 */;
-import { INITIAL_STATE } from "INITIAL_STATE" /* 11146 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8459 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
+import rebuildDefault from "../messages/MessageParser.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import closure_5 from "DiceRollStore.tsx";
+import { INITIAL_STATE } from "DiceRollStore.tsx";
+import ROLL_DURATION_MS from "DiceRollConstants.tsx";
+import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
 require = arg1;
 ({ AFTER_ROLL_DELAY_MS: error, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: c9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: unpackModuleId, ROLL_DURATION_MS: closure_12 } = ROLL_DURATION_MS);

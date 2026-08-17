@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/useLaunchPadState.native.tsx
-import closure_3 from "noop" /* 19 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
-import setLaunchPadPullTabExclusionRect from "setLaunchPadPullTabExclusionRect" /* 16180 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
+import setLaunchPadPullTabExclusionRect from "LaunchPadPullTabCache.tsx";
 
 const require = arg1;
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: c4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: c5 } = LAUNCH_PAD_SPRING_CONFIG);

@@ -1,10 +1,10 @@
 // discord_app/modules/markup/native/MarkupReactCommandRule.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5246 */;
-import { COMMAND_SENTINEL } from "regExp" /* 6810 */;
-import { jsxs } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import { SUB_COMMAND_KEY_SEPARATOR } from "../../application_commands/ApplicationCommandConstants.tsx";
+import { COMMAND_SENTINEL } from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { jsxs } from "../../../../_runtime/react/00021_jsxProd.js";
 import { SlashBoxIcon } from "../../../design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";

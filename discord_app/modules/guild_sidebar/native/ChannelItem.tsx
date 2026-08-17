@@ -1,22 +1,22 @@
 // discord_app/modules/guild_sidebar/native/ChannelItem.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 6871 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 11553 */;
-import registerAssetDefault from "registerAsset" /* 15379 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "sortActivity" /* 4559 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
+import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
+import BaseChannelSubtitle from "BaseChannelItem.tsx";
+import registerAssetDefault from "../../../../_runtime/15379_registerAsset.js";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/PresenceStore.tsx";
+import closure_7 from "../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import { StaticChannelRoute } from "../../channel/ChannelConstants.tsx";
+import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 function getChannelMode(selected) {

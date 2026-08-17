@@ -1,5 +1,5 @@
 // discord_app/modules/client_themes/CustomThemesRandomUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let items = ["#94E0CF", "#9AF0B1", "#9A90FF", "#9A53FF", "#FDA6E4", "#FFE6C0", "#EFB4AA", "#56B69F", "#29C566", "#5348CA", "#6D24D4", "#CA48C8", "#F0AE29", "#DF4232"];
 let closure_3 = [0, 45, 90, 135, 180, 225, 270, 315];

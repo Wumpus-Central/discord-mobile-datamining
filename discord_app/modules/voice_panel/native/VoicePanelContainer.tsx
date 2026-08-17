@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import isIterable from "isIterable" /* 4006 */;
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 16271 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "withEqualityFn" /* 8664 */;
-import { jsx } from "jsxProd" /* 21 */;
+import isIterable from "../../../../_runtime/04006_isIterable.js";
+import wrapChildrenDefault from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import VoicePanelControllerDefault from "VoicePanelController.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../VoicePanelStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

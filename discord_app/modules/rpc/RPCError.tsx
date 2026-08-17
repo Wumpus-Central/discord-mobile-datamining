@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/RPCError.tsx
-import set from "set" /* 2 */;
-import prototype from "prototype" /* 8753 */;
+import set from "../../../_runtime/00002_set.js";
+import prototype from "../../../discord_common/js/shared/lib/RPCError.tsx";
 
 const result = set.fileFinishedImporting("modules/rpc/RPCError.tsx");
 

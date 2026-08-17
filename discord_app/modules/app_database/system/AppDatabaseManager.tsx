@@ -1,10 +1,10 @@
 // discord_app/modules/app_database/system/AppDatabaseManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import databaseNameDefault from "databaseName" /* 1971 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import databaseNameDefault from "DatabaseManager.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 

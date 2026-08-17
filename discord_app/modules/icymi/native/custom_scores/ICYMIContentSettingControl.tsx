@@ -1,20 +1,20 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 8799 */;
-import generateHydrationId from "generateHydrationId" /* 9056 */;
-import SegmentedControl from "SegmentedControl" /* 10096 */;
-import registerAssetDefault from "registerAsset" /* 15716 */;
-import registerAssetDefault2 from "registerAsset" /* 15717 */;
-import registerAssetDefault3 from "registerAsset" /* 15718 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_7 from "filterStaffGuild" /* 9044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
+import generateHydrationId from "../../ICYMIUtils.tsx";
+import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
+import registerAssetDefault from "../../../../../_runtime/15716_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/15717_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/15718_registerAsset.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_7 from "../../ICYMIStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ContentSettingsControl(initialValue) {

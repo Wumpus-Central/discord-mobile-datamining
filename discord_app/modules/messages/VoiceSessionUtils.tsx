@@ -1,9 +1,9 @@
 // discord_app/modules/messages/VoiceSessionUtils.tsx
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeAffinities" /* 5407 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 import { maybeSortByProbability } from "../user_affinities/maybeSortByProbability.tsx";
 import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 

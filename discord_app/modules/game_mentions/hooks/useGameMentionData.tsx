@@ -1,9 +1,9 @@
 // discord_app/modules/game_mentions/hooks/useGameMentionData.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 6901 */;
-import closure_3 from "handleLoadMessages" /* 4505 */;
-import closure_4 from "set" /* 6899 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import useGameProfileObscured from "../../game_profile/hooks/useGameProfileObscured.tsx";
+import closure_3 from "../../games/GameStore.tsx";
+import closure_4 from "../../games/autocomplete/GameAutocompleteStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/useGetEventChannelsByType.tsx
-import canManageResource from "canManageResource" /* 8839 */;
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_3 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8838 */;
+import canManageResource from "../permissions/useManageResourcePermissions.tsx";
+import closure_2 from "../stage_channels/StageInstanceStore.tsx";
+import closure_3 from "../../stores/GuildChannelStore.tsx";
+import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import VIEW_CHANNEL from "PermissionsConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

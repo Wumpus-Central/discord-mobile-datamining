@@ -1,18 +1,18 @@
 // discord_app/modules/voice_calls/native/VoiceNotificationManager.android.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { processColor } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { InputModes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { processColor } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../applications/ApplicationStore.tsx";
+import closure_6 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/MediaEngineStore.tsx";
+import closure_9 from "../../../stores/RTCConnectionStore.tsx";
+import closure_10 from "../../../stores/RelationshipStore.tsx";
+import closure_11 from "../../../stores/UserStore.tsx";
+import { InputModes } from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = arg1;
 let closure_13 = processColor(ThemesDefault.unsafe_rawColors.BRAND_500);

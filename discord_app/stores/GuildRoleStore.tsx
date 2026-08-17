@@ -1,13 +1,13 @@
 // discord_app/stores/GuildRoleStore.tsx
-import set2 from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import identity from "identity" /* 1911 */;
-import items from "items" /* 1914 */;
-import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1984 */;
-import fromServerArrayAll from "fromServerArray" /* 1985 */;
-import compareGuildRolesAll from "compareGuildRoles" /* 1987 */;
+import set2 from "../../_runtime/00002_set.js";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import isValueEqual from "../lib/PlainRecord.tsx";
+import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
+import identity from "../modules/libdiscore/stores/LibdiscoreStore.tsx";
+import items from "../modules/libdiscore/libdiscoreExperiments.tsx";
+import GuildRoleRecordTypeTag2 from "../records/GuildRoleRecord.tsx";
+import fromServerArrayAll from "../utils/GuildRoleRecordUtils.tsx";
+import compareGuildRolesAll from "../utils/GuildRoleUtils.tsx";
 
 function createGuildRoleRecordFromRust(permissions) {
   const obj = {};

@@ -1,16 +1,16 @@
 // discord_app/modules/safety_hub/native/SuspendedUserPage.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import IconButton from "IconButton" /* 8035 */;
-import registerAssetDefault from "registerAsset" /* 8143 */;
-import AutomatedUnderageAppealStatusDefault from "AutomatedUnderageAppealStatus" /* 14106 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 5438 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import registerAssetDefault from "../../../../_runtime/08143_registerAsset.js";
+import AutomatedUnderageAppealStatusDefault from "SafetyHubPage.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { SafetyHubLinks } from "../SafetyHubConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

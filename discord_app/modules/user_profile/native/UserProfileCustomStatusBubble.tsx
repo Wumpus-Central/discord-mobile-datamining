@@ -1,17 +1,17 @@
 // discord_app/modules/user_profile/native/UserProfileCustomStatusBubble.tsx
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function EmojiImage(id) {

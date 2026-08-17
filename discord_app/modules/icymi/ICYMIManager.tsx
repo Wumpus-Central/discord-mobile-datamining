@@ -1,8 +1,8 @@
 // discord_app/modules/icymi/ICYMIManager.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import _modDef9057 from "module_9057" /* 9057 */;
-import apexExperiment from "apexExperiment" /* 9058 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/LifecycleManager.tsx";
+import _modDef9057 from "ICYMIActionCreators.tsx";
+import apexExperiment from "ICYMIExperiment.tsx";
 
 require = arg1;
 let c3 = null;

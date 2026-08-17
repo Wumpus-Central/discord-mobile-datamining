@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import registerAssetDefault from "registerAsset" /* 1902 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import setActiveCommandAll from "setActiveCommand" /* 7525 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8447 */;
-import Placeholder from "Placeholder" /* 11225 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/01902_registerAsset.js";
+import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
+import setActiveCommandAll from "../../application_commands/ApplicationCommandActionCreators.tsx";
+import getShelfBadgeTypeIfActive from "../utils/AppLauncherUtils.tsx";
+import Placeholder from "screens/home/FrecencySection.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "AppLauncherNativeConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { BuiltInSectionId } from "../../application_commands/ApplicationCommandConstants.tsx";
 import { context } from "AppLauncherContext.tsx";
 
 require = arg1;

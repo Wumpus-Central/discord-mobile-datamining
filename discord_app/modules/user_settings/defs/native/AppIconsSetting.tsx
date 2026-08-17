@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AppIconsSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7945 */;
-import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 14832 */;
-import createDismissiblePremiumNewBadgeRouteProps from "createDismissiblePremiumNewBadgeRouteProps" /* 14702 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import fetchCurrentAppIcon from "../../../app_icons/native/AppIconUtils.tsx";
+import SettingsItemAppIconDefault from "../../../app_icons/native/SettingsItemAppIcon.tsx";
+import createDismissiblePremiumNewBadgeRouteProps from "DismissiblePremiumNewBadgeRouteProps.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons.tsx";
 
 const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);

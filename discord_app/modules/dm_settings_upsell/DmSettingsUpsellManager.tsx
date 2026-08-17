@@ -1,9 +1,9 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellManager.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import ME from "ME" /* 676 */;
-import initializeDefault from "initialize" /* 5038 */;
-import _modDef16554 from "module_16554" /* 16554 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ME from "../../Constants.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import _modDef16554 from "DmSettingsUpsellActionCreators.native.tsx";
 
 const Endpoints = ME.Endpoints;
 initializeDefault;

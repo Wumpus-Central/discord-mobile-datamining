@@ -1,11 +1,11 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 7870 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 7202 */;
-import { Endpoints } from "ME" /* 676 */;
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../storefront/StorefrontPromotionOverrideStore.tsx";
+import closure_5 from "SocialLayerStorefrontStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;

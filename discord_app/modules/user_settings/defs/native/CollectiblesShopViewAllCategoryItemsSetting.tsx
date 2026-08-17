@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/CollectiblesShopViewAllCategoryItemsSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { CollectiblesShopViewAllCategoryItemsScreen } from "../../shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx";
 
 obj = {

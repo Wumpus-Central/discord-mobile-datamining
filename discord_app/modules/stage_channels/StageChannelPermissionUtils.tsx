@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/StageChannelPermissionUtils.tsx
-import fromStringAll from "fromString" /* 506 */;
-import Permissions from "Permissions" /* 1399 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_3 from "initialize" /* 4022 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import ME from "ME" /* 676 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import Permissions from "StageChannelPermissions.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import closure_3 from "../lurker_mode/LurkingStore.tsx";
+import { isGuildOwner } from "../../records/GuildRecord.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "StageInstanceStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

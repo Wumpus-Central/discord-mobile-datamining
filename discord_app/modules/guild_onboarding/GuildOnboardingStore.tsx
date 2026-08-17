@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME2 from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import ME2 from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
 
 const ME = ME2.ME;
 let obj = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };

@@ -1,8 +1,8 @@
 // discord_app/modules/content_classification/ContentClassificationVisibility.tsx
-import initialize from "initialize" /* 589 */;
-import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 4787 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 4789 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import contentClassificationToAgeRestrictionConclusion from "../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx";
+import AgeRestrictionStatus from "../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
 require = arg1;
 let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };

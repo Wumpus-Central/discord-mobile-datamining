@@ -1,9 +1,9 @@
 // discord_app/lib/RTCConnectionStats.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import ME from "ME" /* 676 */;
-import sleep from "sleep" /* 4548 */;
-import zipWithNextDefault from "zipWithNext" /* 13077 */;
+import set from "../../_runtime/00002_set.js";
+import applyDefault from "../../_runtime/00012_apply.js";
+import ME from "../Constants.tsx";
+import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import zipWithNextDefault from "zipWithNext.tsx";
 
 const RTCConnectionStates = ME.RTCConnectionStates;
 const result = set.fileFinishedImporting("lib/RTCConnectionStats.tsx");

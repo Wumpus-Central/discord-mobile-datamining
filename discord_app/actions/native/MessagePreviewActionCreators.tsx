@@ -1,7 +1,7 @@
 // discord_app/actions/native/MessagePreviewActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 ({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: c4 } = ME);

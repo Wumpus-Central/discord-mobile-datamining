@@ -1,8 +1,8 @@
 // discord_app/modules/wishlists/native/CollectiblesWishlistItemCard.tsx
-import closure_3 from "noop" /* 19 */;
-import { transformSKUToCollectiblesItem as closure_4 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import closure_5 from "initialize" /* 10369 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { transformSKUToCollectiblesItem as closure_4 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
+import closure_5 from "../SentGiftsStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");

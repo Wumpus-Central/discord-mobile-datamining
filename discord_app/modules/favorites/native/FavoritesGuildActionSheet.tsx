@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/native/FavoritesGuildActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 15400 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 15401 */;
-import closure_3 from "initializeFromUserSettings" /* 1394 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import useFavoritesGuildHideActionDefault from "../hooks/useFavoritesGuildHideAction.tsx";
+import useFavoritesGuildResetActionDefault from "../hooks/useFavoritesGuildResetAction.tsx";
+import closure_3 from "../FavoriteStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

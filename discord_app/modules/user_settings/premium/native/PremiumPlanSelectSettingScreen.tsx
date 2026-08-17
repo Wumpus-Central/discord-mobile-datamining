@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx
-import noopAll from "noop" /* 19 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
-import BoostPurchaseNitroBannerDefault from "BoostPurchaseNitroBanner" /* 12973 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
+import BoostPurchaseNitroBannerDefault from "../../../premium/native/PremiumPlanSelect.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

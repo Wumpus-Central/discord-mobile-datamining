@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx
-import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

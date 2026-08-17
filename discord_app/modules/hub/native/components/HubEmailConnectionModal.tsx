@@ -1,13 +1,13 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionModal.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11897 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import { HubEmailConnectionSteps } from "../../HubConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

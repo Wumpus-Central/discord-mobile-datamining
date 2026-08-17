@@ -1,8 +1,8 @@
 // discord_app/modules/captcha/tooling/native/OpenCaptchaTestModal.tsx
-import noopAll from "noop" /* 19 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

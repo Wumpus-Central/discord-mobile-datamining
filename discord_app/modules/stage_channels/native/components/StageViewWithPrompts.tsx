@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/native/components/StageViewWithPrompts.tsx
-import noopAll from "noop" /* 19 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import StageSparkleInnerDefault from "StageSparkleInner" /* 8068 */;
-import FocusedControlsHeader from "FocusedControlsHeader" /* 12493 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ThemeTypes } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import StageSparkleInnerDefault from "StageSparkle.tsx";
+import FocusedControlsHeader from "../../../video_calls/native/components/FocusedControls.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/transports/BaseSocket.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import prototypeDefault from "../RPCError.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ RPC_VERSION: obj1, RPCCloseCodes: c3 } = ME);
 const result = set.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");

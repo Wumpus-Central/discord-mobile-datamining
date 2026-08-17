@@ -1,20 +1,20 @@
 // discord_app/modules/content_inventory/ContentInventoryManager.tsx
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import mapDefault from "map" /* 13060 */;
-import apexExperiment from "apexExperiment" /* 13242 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 17033 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "set" /* 5221 */;
-import closure_6 from "checkIdleAFK" /* 4974 */;
-import closure_7 from "updateImpressionCaches" /* 11123 */;
-import closure_8 from "map" /* 9045 */;
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 9064 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import apply from "apply" /* 12 */;
-import set from "set" /* 2 */;
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import mapDefault from "../../stores/web/WindowStore.tsx";
+import apexExperiment from "ContentInventoryExperiments.tsx";
+import ContentInventoryFeature from "../../../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../../stores/ConnectedAccountsStore.tsx";
+import closure_6 from "../../stores/IdleStore.tsx";
+import closure_7 from "ContentInventoryPersistedStore.tsx";
+import closure_8 from "ContentInventoryStore.tsx";
+import { ContentInventoryFeedKey } from "ContentInventoryConstants.tsx";
+import { PlatformTypes } from "../../Constants.tsx";
+import apply from "../../../_runtime/00012_apply.js";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function getBackoffJitter() {

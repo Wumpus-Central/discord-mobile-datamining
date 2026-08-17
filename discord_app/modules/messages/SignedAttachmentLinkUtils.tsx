@@ -1,10 +1,10 @@
 // discord_app/modules/messages/SignedAttachmentLinkUtils.tsx
-import setDefault from "set" /* 687 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import isImageProxyURL from "isImageProxyURL" /* 4508 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import setDefault from "../../utils/Durations.tsx";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import isImageProxyURL from "../image_proxy/ImageProxyUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function shouldRefreshAttachmentUrl(searchParams) {

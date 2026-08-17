@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileRoleUtils.tsx
-import set from "set" /* 2 */;
-import compareGuildRoles from "compareGuildRoles" /* 1987 */;
+import set from "../../../_runtime/00002_set.js";
+import compareGuildRoles from "../../utils/GuildRoleUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 

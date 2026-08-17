@@ -1,9 +1,9 @@
 // discord_app/modules/hotspot/HotspotStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import CONFERENCE_MODE_ENABLED2 from "CONFERENCE_MODE_ENABLED" /* 683 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import get from "get" /* 4842 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import CONFERENCE_MODE_ENABLED2 from "../conference_mode/ConferenceModeConstants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import get from "../../utils/ProcessArgs.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
 let set = new Set();

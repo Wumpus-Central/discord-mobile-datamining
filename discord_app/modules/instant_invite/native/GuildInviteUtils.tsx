@@ -1,19 +1,19 @@
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "handleInviteData" /* 4295 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "insertUnsortedGuilds" /* 5078 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { setSendState } from "setSendState" /* 12332 */;
-import { InviteSendStates } from "InviteSendStates" /* 4371 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../../stores/GuildMemberCountStore.tsx";
+import closure_7 from "../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import closure_9 from "../../../stores/PermissionStore.tsx";
+import closure_10 from "../../../stores/SortedGuildStore.tsx";
+import closure_11 from "../../../stores/UserStore.tsx";
+import { setSendState } from "../GuildInviteSendStateStore.tsx";
+import { InviteSendStates } from "../Constants.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 function _sendGuildInvite() {

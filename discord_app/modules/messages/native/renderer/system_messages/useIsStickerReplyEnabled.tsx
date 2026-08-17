@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
+import useCanUnarchiveThread from "../../../../threads/ThreadHooks.tsx";
+import closure_2 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../../../stores/UserStore.tsx";
+import { Permissions } from "../../../../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");

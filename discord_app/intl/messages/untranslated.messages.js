@@ -1,8 +1,8 @@
 // discord_app/intl/messages/untranslated.messages.js
-import set from "set" /* 2 */;
-import loadJsonAsset from "loadJsonAsset" /* 1239 */;
-import registerAsset from "registerAsset" /* 13551 */;
-import 01274__ from "../../../_runtime/metro/01274__.js" /* 1274 */;
+import set from "../../../_runtime/00002_set.js";
+import loadJsonAsset from "../../modules/asset_json/native/AssetJsonUtils.tsx";
+import registerAsset from "../../../_runtime/13551_registerAsset.js";
+import 01274__ from "../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   () => {

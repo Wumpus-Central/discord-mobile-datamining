@@ -1,7 +1,7 @@
 // discord_app/modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import AbortCodes from "AbortCodes" /* 1235 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import AbortCodes from "../../ThreadConstants.tsx";
 
 let closure_3 = AbortCodes.getThreadNotificationOptions;
 const jsx = jsxProd.jsx;

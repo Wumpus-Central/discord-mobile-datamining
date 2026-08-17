@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/profiles/native/useUserProfileEditForm.tsx
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "noop" /* 19 */;
-import closure_7 from "handleFormOpen" /* 8370 */;
-import closure_8 from "createUserWidgetFromServer" /* 5365 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { FormStates } from "ME" /* 676 */;
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
+import closure_7 from "../../../user_profile/UserProfileSettingsStore.tsx";
+import closure_8 from "../../../user_profile/UserProfileStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
+import { FormStates } from "../../../../Constants.tsx";
 
 const require = arg1;
 let closure_3 = ["bannerOriginalMd5"];

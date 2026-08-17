@@ -1,7 +1,7 @@
 // discord_common/js/packages/flux/connectStores.tsx
-import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _objectWithoutPropertiesDefault from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 _objectWithoutPropertiesDefault;

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
-import PX_8Default from "PX_8" /* 15846 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
+import PX_8Default from "ChannelDetails.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

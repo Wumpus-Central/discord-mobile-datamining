@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
-import set from "set" /* 2 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
+import ME from "../../Constants.tsx";
 
 ({ GuildFeatures: obj1, ME: c3 } = ME);
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");

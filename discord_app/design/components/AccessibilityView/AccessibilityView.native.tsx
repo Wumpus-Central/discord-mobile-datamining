@@ -1,9 +1,9 @@
 // discord_app/design/components/AccessibilityView/AccessibilityView.native.tsx
-import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 4718 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle.native.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import importDefaultResult from "../../../modules/reanimated/ReanimatedRexport.tsx";
 
 const forwardRefResult = importAllResult.forwardRef((accessibilityViewIsModal, ref) => {
   let flag = accessibilityViewIsModal.accessibilityViewIsModal;

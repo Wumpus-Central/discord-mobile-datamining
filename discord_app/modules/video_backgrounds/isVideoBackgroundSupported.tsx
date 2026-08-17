@@ -1,6 +1,6 @@
 // discord_app/modules/video_backgrounds/isVideoBackgroundSupported.tsx
-import closure_0 from "_detectH265HardwareDecode" /* 4497 */;
-import { Features } from "DesktopSources" /* 4529 */;
+import closure_0 from "../../stores/MediaEngineStore.tsx";
+import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

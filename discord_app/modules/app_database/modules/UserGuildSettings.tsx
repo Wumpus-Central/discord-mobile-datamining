@@ -1,8 +1,8 @@
 // discord_app/modules/app_database/modules/UserGuildSettings.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import updateUserGuildSettingsInternal from "../../../stores/UserGuildSettingsStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = importDefault;
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: c4 } = updateUserGuildSettingsInternal);

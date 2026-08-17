@@ -1,16 +1,16 @@
 // discord_app/modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10071 */;
-import WaveformIcon from "WaveformIcon" /* 10074 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import urlMatchesFileExtension from "../../../messages/MediaFormatTesters.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
+import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
+import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VoiceMessageIcon() {

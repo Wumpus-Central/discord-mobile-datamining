@@ -1,5 +1,5 @@
 // discord_app/modules/premium/promotions/constants.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const items = ["logitech", "call_of_duty"];
 let set = new Set(items);

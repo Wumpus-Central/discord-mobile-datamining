@@ -1,8 +1,8 @@
 // discord_app/errors/AppliedGuildBoostError.tsx
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import prototypeDefault from "prototype" /* 4062 */;
-import resetCache from "resetCache" /* 4063 */;
+import setDefault from "../utils/Durations.tsx";
+import getSystemLocale from "../intl/index.native.tsx";
+import prototypeDefault from "V6OrEarlierAPIError.tsx";
+import resetCache from "../utils/DateUtils.tsx";
 
 require = arg1;
 prototypeDefault;

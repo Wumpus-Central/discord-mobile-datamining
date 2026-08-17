@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationConstants.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import set from "set" /* 2 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = new Set([10, 25]);
 const obj = { duration: 220, easing: null };

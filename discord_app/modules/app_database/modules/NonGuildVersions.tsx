@@ -1,11 +1,11 @@
 // discord_app/modules/app_database/modules/NonGuildVersions.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import applyDefault from "apply" /* 12 */;
-import setDefault from "set" /* 687 */;
-import itemsDefault from "items" /* 1955 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "handleConnectionOpen" /* 4197 */;
-import isCacheEnabled from "isCacheEnabled" /* 5395 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import setDefault from "../../../utils/Durations.tsx";
+import itemsDefault from "../DatabaseDaos.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import importDefaultResult from "../../../stores/SelectedGuildStore.tsx";
+import isCacheEnabled from "../../cache/isCacheEnabled.native.tsx";
 
 let obj = arg1;
 let c4 = importDefaultResult;

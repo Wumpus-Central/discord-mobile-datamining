@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/RoleIconUtils.tsx
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
+import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 ({ Endpoints: c3, GuildFeatures: c4 } = ME);
 let closure_5 = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/role-icons";

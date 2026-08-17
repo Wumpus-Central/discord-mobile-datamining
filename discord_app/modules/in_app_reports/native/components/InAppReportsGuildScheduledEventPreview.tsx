@@ -1,11 +1,11 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupConfirmSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2853 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
+import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import AgeVerificationModalEntryPoint from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {

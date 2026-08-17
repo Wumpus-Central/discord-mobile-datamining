@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/getCanJoin.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import resultDefault from "result" /* 10917 */;
-import getPartySize from "getPartySize" /* 10918 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
+import resultDefault from "isInviteActive.tsx";
+import getPartySize from "getPartySize.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityActionTypes: c3, ActivityFlags: c4 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/getCanJoin.tsx");

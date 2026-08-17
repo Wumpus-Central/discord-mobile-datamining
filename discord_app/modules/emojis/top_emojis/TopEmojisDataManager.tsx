@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/top_emojis/TopEmojisDataManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import maybeFetchTopEmojisByGuild from "maybeFetchTopEmojisByGuild" /* 9304 */;
-import closure_2 from "handleConnectionOpen" /* 4197 */;
-import { EmojiInteractionPoint } from "set" /* 1925 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import maybeFetchTopEmojisByGuild from "TopEmojisUtils.tsx";
+import closure_2 from "../../../stores/SelectedGuildStore.tsx";
+import { EmojiInteractionPoint } from "../EmojiConstants.tsx";
 
 require = arg1;
 initializeDefault;

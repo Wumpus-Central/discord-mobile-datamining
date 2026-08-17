@@ -1,8 +1,8 @@
 // discord_app/utils/native/ChatInputUtils.tsx
-import set from "set" /* 2 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1892 */;
-import zustandStore from "zustandStore" /* 4240 */;
+import set from "../../../_runtime/00002_set.js";
+import KeyboardTypes from "../../modules/keyboard/native/KeyboardTypes.tsx";
+import dismissGlobalKeyboard from "KeyboardManagerUtils.tsx";
+import zustandStore from "../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx";
 
 function getBestActiveInput() {
   let str;

@@ -1,7 +1,7 @@
 // discord_common/js/shared/lib/TokenManager.tsx
-import set from "set" /* 2 */;
-import Storage6 from "Storage" /* 595 */;
-import sum from "sum" /* 505 */;
+import set from "../../../../_runtime/00002_set.js";
+import Storage6 from "../../packages/storage/Storage.tsx";
+import sum from "../Constants.tsx";
 
 function setSecondaryToken(token, __analytics__) {
   if (null != __analytics__) {

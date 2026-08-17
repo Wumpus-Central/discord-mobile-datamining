@@ -1,13 +1,13 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import ArrowSmallLeftIcon from "ArrowSmallLeftIcon" /* 10767 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getAvatarURL from "../../../../utils/AvatarUtils.tsx";
+import ArrowSmallLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallLeftIcon.tsx";
+import ChatInputGuardDefault from "ChatInputGuard.tsx";
+import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { icon: null };

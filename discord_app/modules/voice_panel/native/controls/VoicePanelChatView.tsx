@@ -1,15 +1,15 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelChatView.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import IconButton from "IconButton" /* 8035 */;
-import setDefault from "set" /* 8125 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import importAllResult from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes" /* 11438 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import setDefault from "../../../core/native/ReanimatedNativeView.tsx";
+import getMixedGradientColorDefault from "../../../client_themes/native/ThemedGradient.tsx";
+import dismissPanelDefault from "../VoicePanelStateContext.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { Platform } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let c3 = importAllResult;

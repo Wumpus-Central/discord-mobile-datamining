@@ -1,8 +1,8 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import isSystemMessageDefault from "isSystemMessage.tsx";
+import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ ChannelTypes: c4, Permissions: c5 } = ME);

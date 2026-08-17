@@ -1,11 +1,11 @@
 // discord_app/modules/multi_account/MultiAccountStore.tsx
-import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 589 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MAX_ACCOUNTS2 from "MAX_ACCOUNTS" /* 11586 */;
-import isStaffDefault from "isStaff" /* 11587 */;
-import calculatePositionDeltas from "calculatePositionDeltas" /* 11588 */;
+import set from "../../../_runtime/00002_set.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import MAX_ACCOUNTS2 from "Constants.tsx";
+import isStaffDefault from "../user/isStaffFromRawUser.tsx";
+import calculatePositionDeltas from "../../utils/DragAndDropUtils.tsx";
 
 const MAX_ACCOUNTS = MAX_ACCOUNTS2.MAX_ACCOUNTS;
 let obj = { INVALID: 0, [0]: "INVALID", VALIDATING: 1, [1]: "VALIDATING", VALID: 2, [2]: "VALID" };

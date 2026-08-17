@@ -1,16 +1,16 @@
 // discord_app/modules/explicit_media_redaction/ObscuredMediaUtils.tsx
-import create from "create" /* 1306 */;
-import ContentHarmType from "ContentHarmType" /* 5020 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 5022 */;
-import isForwardMessage from "isForwardMessage" /* 5026 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "getFpMessageInfo" /* 5002 */;
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import ContentHarmType from "HarmTypeConfiguration.tsx";
+import ContentHarmTypeChannel from "ExplicitMediaRedactionModels.tsx";
+import isForwardMessage from "../forwarding/isForwardMessage.tsx";
+import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MessageStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "ExplicitMediaStore.tsx";
 import { ContentHarmType } from "HarmTypeConfiguration.tsx";
 
 require = arg1;

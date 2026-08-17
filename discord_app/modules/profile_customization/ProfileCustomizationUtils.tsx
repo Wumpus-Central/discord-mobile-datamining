@@ -1,11 +1,11 @@
 // discord_app/modules/profile_customization/ProfileCustomizationUtils.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer4 from "AccessibilityAnnouncer" /* 1363 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleFormOpen" /* 8370 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import AccessibilityAnnouncer4 from "../../design/shared.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../user_profile/UserProfileSettingsStore.tsx";
+import closure_4 from "../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

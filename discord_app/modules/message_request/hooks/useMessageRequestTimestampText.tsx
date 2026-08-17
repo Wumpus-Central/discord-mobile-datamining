@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import tDefault from "t" /* 3975 */;
-import closure_3 from "generateOldThreadCutoff" /* 4772 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import tDefault from "../../../../_runtime/03975_t.js";
+import closure_3 from "../../../stores/ReadStateStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getAccessibilityLabelFormatter } from "../../threads/ThreadUtils.tsx";
 import { loadMessageRequestData } from "useMessageRequestPreview.tsx";

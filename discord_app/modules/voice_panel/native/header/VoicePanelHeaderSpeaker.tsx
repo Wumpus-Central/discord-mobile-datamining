@@ -1,16 +1,16 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderSpeaker.tsx
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 16340 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { setVoiceUpsellDismissed } from "useConsoleVoiceUpsellStore" /* 16337 */;
-import closure_8 from "set" /* 4540 */;
-import closure_9 from "handleAudioRouteChanged" /* 16338 */;
-import closure_10 from "handleAudioRouteChanged" /* 9648 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "handleUpdate" /* 4541 */;
-import { PlatformTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import useSpeakerTooltipsDefault from "../hooks/useSpeakerTooltips.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { setVoiceUpsellDismissed } from "../../../game_console/ConsoleVoiceUpsellStore.tsx";
+import closure_8 from "../../../game_console/GameConsoleStore.tsx";
+import closure_9 from "../../../stage_channels/native/StageChannelAudioStore.tsx";
+import closure_10 from "../../../voice_calls/AudioRouteStore.native.tsx";
+import closure_11 from "../../../../stores/ChannelStore.tsx";
+import closure_12 from "../../../../stores/SessionsStore.tsx";
+import { PlatformTypes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["ref"];

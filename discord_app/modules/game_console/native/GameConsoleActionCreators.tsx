@@ -1,5 +1,5 @@
 // discord_app/modules/game_console/native/GameConsoleActionCreators.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function _transferToPlaystationWithAlert() {

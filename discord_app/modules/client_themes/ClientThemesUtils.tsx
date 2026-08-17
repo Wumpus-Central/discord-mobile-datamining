@@ -1,9 +1,9 @@
 // discord_app/modules/client_themes/ClientThemesUtils.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import SystemThemeState from "SystemThemeState" /* 1305 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import ThemeTypes from "ThemeTypes" /* 1348 */;
+import set from "../../../_runtime/00002_set.js";
+import sum from "../../../discord_common/js/shared/Constants.tsx";
+import SystemThemeState from "../user_settings/ThemeConstants.tsx";
+import AccessibilityAnnouncer from "../../design/shared.tsx";
+import ThemeTypes from "ClientThemesConstants.tsx";
 
 ({ LEGACY_STANDARD_BACKGROUND_THEMES: obj1, REFRESH_STANDARD_BACKGROUND_THEMES: c3 } = ThemeTypes);
 let closure_4 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;

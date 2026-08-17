@@ -1,10 +1,10 @@
 // discord_app/utils/GuildDiscoveryUtils.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4022 */;
-import closure_5 from "handleInviteData" /* 4295 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/lurker_mode/LurkingStore.tsx";
+import closure_5 from "../stores/GuildMemberCountStore.tsx";
+import closure_6 from "../stores/GuildStore.tsx";
+import ME from "../Constants.tsx";
 
 const require = arg1;
 function _startLurking() {

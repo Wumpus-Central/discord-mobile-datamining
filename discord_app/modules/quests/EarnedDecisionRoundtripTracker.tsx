@@ -1,11 +1,11 @@
 // discord_app/modules/quests/EarnedDecisionRoundtripTracker.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5052 */;
-import isForegrounded from "isForegrounded" /* 5055 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
-import closure_3 from "handleConnectionInfoChange" /* 4564 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import receiveNetworkInfoformation from "../network/NetStats.android.tsx";
+import isForegrounded from "../analytics_sessions/SessionForegroundUtils.native.tsx";
+import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
+import closure_3 from "../../stores/NetworkStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function trackRoundtrip(apiResponseTimestamp) {

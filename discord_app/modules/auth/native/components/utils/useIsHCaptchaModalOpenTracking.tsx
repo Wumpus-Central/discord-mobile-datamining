@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx
-import closure_2 from "noop" /* 19 */;
-import { doesRegistrationHaveIdentityType as closure_3 } from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import { doesRegistrationHaveIdentityType as closure_3 } from "../../RegistrationUIStore.tsx";
+import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
 
 const require = arg1;
 ({ RegisterTransitionSteps: c4, RegistrationTransitionActionTypes: c5 } = RegistrationTransitionActionTypes);

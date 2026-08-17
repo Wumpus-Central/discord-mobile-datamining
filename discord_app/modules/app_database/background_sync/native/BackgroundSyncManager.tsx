@@ -1,8 +1,8 @@
 // discord_app/modules/app_database/background_sync/native/BackgroundSyncManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import _backgroundSync from "_backgroundSync" /* 16534 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import _backgroundSync from "BackgroundSync.tsx";
+import closure_2 from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;
 initializeDefault;

@@ -1,5 +1,5 @@
 // discord_app/utils/ValidationUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 const re0 = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\.[a-z]{2})?)$/i;
 const re1 = /^((https:\/\/)?(discord\.gg\/)|(discord\.com\/)(invite\/)?)?[A-Za-z0-9]{8,8}$/;

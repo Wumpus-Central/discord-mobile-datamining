@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useShopProductItems.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "noop" /* 19 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 require = arg1;

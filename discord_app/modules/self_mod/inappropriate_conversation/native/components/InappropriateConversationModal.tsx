@@ -1,22 +1,22 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationModal.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 10588 */;
-import TakeActionButtonsDefault from "TakeActionButtons" /* 15176 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { useState } from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import useNavigation from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import nameFromUserDefault from "../../../../../utils/UserUtils.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../../design/components/Button/native/Button.native.tsx";
+import AccountAgeTier10LargeBadge from "../../../../../design/assets/native.tsx";
+import SafetyTipsContainerDefault from "../../../shared/native/SafetyTipsSection.tsx";
+import TakeActionButtonsDefault from "TakeActionScreen.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { useState } from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../../stores/UserStore.tsx";
+import LOCATION_CONTEXT_MOBILE from "../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function IntroScreen(arg0) {

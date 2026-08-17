@@ -1,20 +1,20 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftPurchaseButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import Text from "Text" /* 4734 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10306 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 8936 */;
-import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 5306 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "createEmptyPromotionsByType" /* 7628 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import getNameplateData from "../../../collectibles/nameplates/utils.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import useShouldShowGiftingPromotionDecoDefault from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../badges/BadgeDirectoryStore.tsx";
+import { isAvatarDecorationRecord, isNameplateRecord } from "../../../collectibles/records/AvatarDecorationRecord.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
+import closure_10 from "../../promotions/PromotionsStore.tsx";
+import { HelpdeskArticles } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RewardPreview(arg0) {

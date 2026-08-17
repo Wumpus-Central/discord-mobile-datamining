@@ -1,20 +1,20 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import getInviteURLDefault from "getInviteURL" /* 7506 */;
-import TextInput from "TextInput" /* 8071 */;
-import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 16744 */;
-import _modDef16865 from "module_16865" /* 16865 */;
-import registerAssetDefault from "registerAsset" /* 16866 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "FormStates" /* 16864 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleFormInit" /* 8875 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
+import TextInput from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
+import getErrorMessageFromErrorCode from "../GuildSettingsVanityURLUtils.tsx";
+import _modDef16865 from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
+import registerAssetDefault from "../../../../../../_runtime/16866_registerAsset.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../stores/ChangeVanityURLModalStore.tsx";
+import closure_6 from "../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../GuildSettingsStore.tsx";
+import { GuildFeatures } from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);

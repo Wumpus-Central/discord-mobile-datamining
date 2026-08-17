@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

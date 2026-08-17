@@ -1,15 +1,15 @@
 // discord_app/modules/launchpad/native/shared/TextChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "rebuild" /* 5251 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../threads/ActiveJoinedThreadsStore.tsx";
+import closure_6 from "../../../user_settings/LocaleStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import { getThemedRippleConfig } from "../../../../design/void/Form/native/FormConstants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,14 +1,14 @@
 // discord_app/modules/guild_sidebar/native/BaseChannelItem.tsx
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth" /* 10055 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../design/void/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CHANNEL_TITLE_LINE_HEIGHT } from "../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class BaseChannelSubtitle {

@@ -1,6 +1,6 @@
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { SubscriptionStatusTypes } from "ME" /* 676 */;
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import { SubscriptionStatusTypes } from "../../../../Constants.tsx";
 import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 

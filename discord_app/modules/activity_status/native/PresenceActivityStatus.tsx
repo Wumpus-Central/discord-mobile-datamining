@@ -1,13 +1,13 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
-import noopAll from "noop" /* 19 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import AppsIcon2 from "AppsIcon" /* 7974 */;
-import GameControllerIcon from "GameControllerIcon" /* 9430 */;
-import TvIcon from "TvIcon" /* 9899 */;
-import MusicIcon from "MusicIcon" /* 9904 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 9906 */;
-import { ActivityTypes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
+import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
+import { ActivityTypes } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

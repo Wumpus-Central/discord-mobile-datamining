@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/native/ContentInventoryEntryRow.tsx
-import noopAll from "noop" /* 19 */;
-import itemsDefault from "items" /* 15757 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 15766 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import itemsDefault from "content_inventory/GamingLikeEntryRow.tsx";
+import CustomStatusEntryRowDefault from "content_inventory/CustomStatusEntryRow.tsx";
+import closure_3 from "../../../stores/RelationshipStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

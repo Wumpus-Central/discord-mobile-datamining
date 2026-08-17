@@ -1,8 +1,8 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "map" /* 13252 */;
-import closure_1 from "map" /* 13254 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "GlobalDiscoveryServersSearchCountsStore.tsx";
+import closure_1 from "GlobalDiscoveryServersSearchResultsStore.tsx";
 
 function reset() {
   closure_2 = [];

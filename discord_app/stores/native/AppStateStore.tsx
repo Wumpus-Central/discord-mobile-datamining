@@ -1,11 +1,11 @@
 // discord_app/stores/native/AppStateStore.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import promise from "expandEventProperties" /* 698 */;
+import set from "../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import promise from "../../utils/AnalyticsUtils.tsx";
 
 const AppStates = ME.AppStates;
 const currentState = get_ActivityIndicator.AppState.currentState;

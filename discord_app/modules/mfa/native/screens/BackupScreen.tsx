@@ -1,9 +1,9 @@
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
-import finishMFACheck from "finishMFACheck" /* 15129 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import finishMFACheck from "../../../../../discord_common/js/shared/MFA.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function isValidClipboardCode(arg0) {

@@ -1,6 +1,6 @@
 // discord_app/modules/zustand/LocalStorageWrapper.tsx
-import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
+import set from "../../../_runtime/00002_set.js";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 const frozen = Object.freeze({
   getItem(arg0) {

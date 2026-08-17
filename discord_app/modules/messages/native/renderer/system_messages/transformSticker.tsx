@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/transformSticker.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import apexExperiment from "apexExperiment" /* 8177 */;
-import closure_2 from "noop" /* 19 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../../../user_settings/UserSettings.tsx";
+import getStickerExtensionFromFormatType from "../../../../stickers/StickersUtils.tsx";
+import apexExperiment from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import { StickerAnimationSettings } from "../../../../stickers/StickersConstants.tsx";
 
 require = arg1;
 function transform(id, isPreview) {

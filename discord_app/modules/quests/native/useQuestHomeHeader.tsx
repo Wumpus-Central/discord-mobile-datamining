@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/useQuestHomeHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import QuestsIcon from "QuestsIcon" /* 14351 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { QuestHomeSortMethods } from "QuestsExperimentLocations" /* 6716 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { CollectiblesMobileShopScreen as closure_7 } from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import QuestsIcon from "../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { QuestHomeSortMethods } from "../QuestConstants.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { CollectiblesMobileShopScreen as closure_7 } from "../../collectibles/CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function QuestHomeHeaderTitle() {

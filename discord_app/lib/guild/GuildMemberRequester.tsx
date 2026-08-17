@@ -1,6 +1,6 @@
 // discord_app/lib/guild/GuildMemberRequester.tsx
-import set3 from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+import set3 from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
 
 class GuildMemberRequestState {
   constructor(arg0, arg1) {

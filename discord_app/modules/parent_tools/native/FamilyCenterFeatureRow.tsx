@@ -1,21 +1,21 @@
 // discord_app/modules/parent_tools/native/FamilyCenterFeatureRow.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import EyeIcon from "EyeIcon" /* 8607 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11107 */;
-import registerAssetDefault from "registerAsset" /* 11550 */;
-import registerAssetDefault2 from "registerAsset" /* 12370 */;
-import QrCodeIcon from "QrCodeIcon" /* 14239 */;
-import registerAssetDefault3 from "registerAsset" /* 14243 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 14244 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../FamilyCenter.messages.js";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
+import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
+import registerAssetDefault from "../../../../_runtime/11550_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/12370_registerAsset.js";
+import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
+import registerAssetDefault3 from "../../../../_runtime/14243_registerAsset.js";
+import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

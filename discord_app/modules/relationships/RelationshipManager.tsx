@@ -1,10 +1,10 @@
 // discord_app/modules/relationships/RelationshipManager.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
-import initializeDefault from "initialize" /* 5038 */;
-import showPendingNotificationAll from "showPendingNotification" /* 16692 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import AccessibilityAnnouncer2 from "../../design/shared.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import showPendingNotificationAll from "../../utils/RelationshipUtils.tsx";
 
 function handleRelationshipAdd(relationship) {
   relationship = relationship.relationship;

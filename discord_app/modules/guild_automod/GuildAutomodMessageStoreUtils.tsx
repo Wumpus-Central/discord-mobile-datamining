@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/GuildAutomodMessageStoreUtils.tsx
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 693 */;
+import set from "../../../_runtime/00002_set.js";
+import MessageEmbedTypes from "../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");
 

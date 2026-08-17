@@ -1,9 +1,9 @@
 // discord_app/modules/create_guild/CreateGuildConstants.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
 let obj = { CREATE: "CREATE", GAMING: "GAMING", FRIENDS: "FRIENDS", STUDY: "STUDY", CLUBS: "CLUBS", CREATORS: "CREATORS", LOCAL_COMMUNITY: "LOCAL_COMMUNITY", SCHOOL_CLUB: "SCHOOL_CLUB" };

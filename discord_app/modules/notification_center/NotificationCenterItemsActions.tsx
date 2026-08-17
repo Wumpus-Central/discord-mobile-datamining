@@ -1,9 +1,9 @@
 // discord_app/modules/notification_center/NotificationCenterItemsActions.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getRelativeTimestamp from "getRelativeTimestamp" /* 4967 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_validate" /* 4801 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getRelativeTimestamp from "NotificationCenterUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "NotificationCenterItemsStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function _fetchNotificationCenterItems() {

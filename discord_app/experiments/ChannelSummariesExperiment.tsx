@@ -1,10 +1,10 @@
 // discord_app/experiments/ChannelSummariesExperiment.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 1398 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import set2 from "../modules/channel/ChannelConstants.tsx";
+import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
+import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
+import closure_3 from "../stores/GuildStore.tsx";
+import ME from "../Constants.tsx";
 import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 function canSeeChannelSummaries(channel, flag, arg2) {

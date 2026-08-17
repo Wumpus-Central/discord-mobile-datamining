@@ -1,9 +1,9 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import useVisualEffectViewOverrides from "useVisualEffectViewOverrides" /* 4726 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import useVisualEffectViewOverrides from "VEVOOStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

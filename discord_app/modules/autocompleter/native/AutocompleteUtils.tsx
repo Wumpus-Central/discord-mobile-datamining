@@ -1,18 +1,18 @@
 // discord_app/modules/autocompleter/native/AutocompleteUtils.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import DividerDefault from "Divider" /* 7693 */;
-import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord" /* 1395 */;
-import closure_4 from "comparator" /* 1980 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
-import regExp from "regExp" /* 6810 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import computeChannelName from "../../channel/useChannelName.tsx";
+import DividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
+import { isGuildSelectableChannelType as closure_3 } from "../../../records/ChannelRecord.tsx";
+import closure_4 from "../../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
+import AUTOCOMPLETE_ROW_HEIGHT from "../../application_commands/native/ApplicationCommandsConstants.tsx";
+import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function AutocompleteFormDivider() {

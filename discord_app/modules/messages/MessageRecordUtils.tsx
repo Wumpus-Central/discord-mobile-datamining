@@ -1,20 +1,20 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import tDefault from "t" /* 3975 */;
-import trimTrailingPunctuationDefault from "trimTrailingPunctuation" /* 4358 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
-import isMentionedDefault from "isMentioned" /* 4819 */;
-import transformMessagePollDefault from "transformMessagePoll" /* 4820 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import closure_3 from "createFromServer" /* 4804 */;
-import hasFlag from "hasFlag" /* 4031 */;
-import closure_6 from "hasFlag" /* 4031 */;
-import importDefaultResult from "createdAt" /* 1930 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import trimTrailingPunctuationDefault from "../coded_links/findCodedLinks.tsx";
+import _resolveGiftCode from "../../utils/GiftCodeUtils.tsx";
+import useNullableMessageAuthor from "useMessageAuthor.tsx";
+import isMentionedDefault from "isMessageMentioned.tsx";
+import transformMessagePollDefault from "../polls/transformMessagPoll.tsx";
+import getStickerExtensionFromFormatType from "../stickers/StickersUtils.tsx";
+import closure_3 from "../../records/InteractionRecord.tsx";
+import hasFlag from "../../records/MessageRecord.tsx";
+import closure_6 from "../../records/MessageRecord.tsx";
+import importDefaultResult from "../../records/UserRecord.tsx";
+import closure_8 from "../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../stores/RelationshipStore.tsx";
+import closure_10 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 import { flattenComponents } from "../interaction_components/InteractionComponentUtils.tsx";
 

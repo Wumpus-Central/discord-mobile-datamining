@@ -1,8 +1,8 @@
 // discord_app/stores/native/NUFStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
-import closure_1 from "markAllUserIdListsStale" /* 4030 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../GuildStore.tsx";
+import closure_1 from "../RelationshipStore.tsx";
 
 function handleCacheOrSocketLoaded() {
   let flag = false;

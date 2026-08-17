@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
-import { NOOP } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import { COLLECTIBLES_PREVIEW_SIZE } from "Constants.tsx";
+import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);

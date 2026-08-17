@@ -1,10 +1,10 @@
 // discord_app/modules/voice_calls/native/CallStateHooks.tsx
-import closure_3 from "getParticipants" /* 4773 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "callConnect" /* 4496 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import closure_3 from "../../calls/ChannelRTCStore.tsx";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/CallStore.tsx";
+import closure_6 from "../../../stores/RTCConnectionStore.tsx";
+import ME from "../../../Constants.tsx";
+import { ParticipantTypes } from "../../calls/CallConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

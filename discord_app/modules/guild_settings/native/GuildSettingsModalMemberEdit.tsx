@@ -1,21 +1,21 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import closure_15 from "handleStopEditingRoles" /* 11017 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nameFromUserDefault from "../../../utils/UserUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
+import { isEveryoneRole } from "../../../records/GuildRoleRecord.tsx";
+import closure_10 from "../../../stores/GuildMemberStore.tsx";
+import closure_11 from "../../../stores/GuildRoleStore.tsx";
+import closure_12 from "../../../stores/GuildStore.tsx";
+import closure_13 from "../../../stores/PermissionStore.tsx";
+import closure_14 from "../../../stores/UserStore.tsx";
+import closure_15 from "../GuildSettingsModalMembersStore.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class GuildSettingsModalMemberEditScene {

@@ -1,7 +1,7 @@
 // discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
-import set from "set" /* 2 */;
-import sendRequest from "sendRequest" /* 530 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
+import set from "../../../_runtime/00002_set.js";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
 
 let result = set.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 

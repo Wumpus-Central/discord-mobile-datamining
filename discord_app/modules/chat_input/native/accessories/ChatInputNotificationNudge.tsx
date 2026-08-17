@@ -1,18 +1,18 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputNotificationNudge.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsAppDMDefault from "useIsAppDM" /* 11323 */;
-import apexExperimentDefault from "apexExperiment" /* 11592 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "storeThread" /* 4023 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { PermissionPromptType } from "set" /* 11578 */;
-import ME from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import EventActionType from "EventActionType" /* 11582 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsAppDMDefault from "../../../app_dms/useIsAppDM.tsx";
+import apexExperimentDefault from "../../../nuf/native/PostReactionPermissionNudgeExperiment.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../threads/JoinedThreadsStore.tsx";
+import closure_8 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { PermissionPromptType } from "../../../../stores/native/PushNotificationPermissionStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import EventActionType from "../../../nuf/native/components/notification/NotificationPermissionConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function ChatInputNotificationNudgeImpl(onDismiss) {

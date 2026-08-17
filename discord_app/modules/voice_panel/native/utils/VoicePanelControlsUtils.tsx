@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx
-import set from "set" /* 2 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import CARD_SIZE from "CARD_SIZE" /* 11443 */;
+import set from "../../../../../_runtime/00002_set.js";
+import VoicePanelControlsModes from "../controls/VoicePanelControlsConstants.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import CARD_SIZE from "../card/VoicePanelCardConstants.tsx";
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
 const EDGE_GUTTER = CARD_SIZE.EDGE_GUTTER;

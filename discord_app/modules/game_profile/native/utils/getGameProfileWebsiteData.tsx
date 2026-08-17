@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/utils/getGameProfileWebsiteData.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9104 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ThirdPartyGameApplicationWebsiteCategory from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/game_profile/native/utils/getGameProfileWebsiteData.tsx");

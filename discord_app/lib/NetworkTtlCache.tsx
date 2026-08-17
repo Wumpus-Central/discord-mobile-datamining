@@ -1,5 +1,5 @@
 // discord_app/lib/NetworkTtlCache.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 
 let closure_0 = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
 let obj = { IDLE: "idle", LOADING: "loading", VALID: "valid", STALE: "stale", ERROR: "error" };

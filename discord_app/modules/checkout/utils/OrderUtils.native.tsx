@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/utils/OrderUtils.native.tsx
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4357 */;
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { OrderStatus } from "../../payments/PaymentConstants.tsx";
 
 const require = arg1;
 function _discardDraftOrder() {

@@ -1,7 +1,7 @@
 // discord_common/js/packages/protos/google/protobuf/wrappers.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9 } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../_runtime/metro/01307__.js";
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9 } from "../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class DoubleValue$Type extends MessageType {

@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "redeemError" /* 9254 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../stores/VirtualCurrencyStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

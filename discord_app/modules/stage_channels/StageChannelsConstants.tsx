@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 const result = set.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");

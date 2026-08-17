@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/components/native/ConversationNavigatorUtils.tsx
-import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import transitionToChannel from "transitionToChannel" /* 4768 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 
 const result = set.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 

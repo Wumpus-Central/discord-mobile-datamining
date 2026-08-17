@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/Colors/shared/Colors.tsx
-import nDefault from "n" /* 689 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import nDefault from "../../../../../../../_runtime/00689_n.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 
 let obj = { NonText: 3, Text: 4.5, HighContrastText: 7 };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Colors/shared/Colors.tsx");

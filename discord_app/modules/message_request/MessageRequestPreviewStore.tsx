@@ -1,11 +1,11 @@
 // discord_app/modules/message_request/MessageRequestPreviewStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "processChannel" /* 4800 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import closure_3 from "MessageRequestStore.tsx";
+import closure_4 from "SpamMessageRequestStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function isMessagePreviewEnabledForChannel(id) {

@@ -1,9 +1,9 @@
 // discord_app/actions/CreateInviteModalActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import closure_3 from "updateWithLatestInvite" /* 8919 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import generateAcceptInviteOptionsDefault from "InstantInviteActionCreators.tsx";
+import closure_3 from "../stores/CreateInviteModalStore.tsx";
+import { AnalyticEvents } from "../Constants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _trackAppBackgrounded from "_trackAppBackgrounded" /* 13199 */;
-import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13197 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _trackAppBackgrounded from "BasicWorkScheduler.tsx";
+import DISPATCHER_STANDARD_TIMEOUT_MS from "DispatcherWorkConstants.tsx";
 
 ({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: obj1, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: c4, WorkIdleDeadline: c5 } = DISPATCHER_STANDARD_TIMEOUT_MS);
 const AppStates = ME.AppStates;

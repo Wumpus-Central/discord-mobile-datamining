@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx
-import set from "set" /* 2 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import useCanPurchaseFramesDefault from "useCanPurchaseFrames" /* 9233 */;
-import useShouldShowPremiumProfileFrameEADefault from "useShouldShowPremiumProfileFrameEA" /* 11995 */;
+import set from "../../../../_runtime/00002_set.js";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import useCanPurchaseFramesDefault from "useCanPurchaseFrames.tsx";
+import useShouldShowPremiumProfileFrameEADefault from "useShouldShowPremiumProfileFrameEA.tsx";
 
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
 

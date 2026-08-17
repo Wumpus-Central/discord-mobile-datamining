@@ -1,9 +1,9 @@
 // discord_app/components_native/MemberRolesList.tsx
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../_runtime/00019_noop.js";
+import { View } from "../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../stores/GuildRoleStore.tsx";
+import { jsx } from "../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

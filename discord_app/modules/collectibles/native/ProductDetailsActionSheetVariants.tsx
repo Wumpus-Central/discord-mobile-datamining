@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetVariants.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6933 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 9243 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9261 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import getProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
+import useIsVariantColorLightDefault from "../hooks/useIsVariantColorLight.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function VariantOption(onPress) {

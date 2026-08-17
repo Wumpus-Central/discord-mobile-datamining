@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");
 

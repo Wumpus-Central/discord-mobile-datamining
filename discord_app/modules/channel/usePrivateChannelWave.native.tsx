@@ -1,9 +1,9 @@
 // discord_app/modules/channel/usePrivateChannelWave.native.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import ME from "../../Constants.tsx";
+import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 import { usePrivateChannelWaveEligible } from "usePrivateChannelWaveEligible.tsx";
 
 const require = arg1;

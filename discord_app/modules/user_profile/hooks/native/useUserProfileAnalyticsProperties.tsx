@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx
-import closure_0 from "noop" /* 19 */;
-import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import closure_0 from "../../../../../_runtime/00019_noop.js";
+import { UserProfileAnalyticsTypes } from "../../Constants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 

@@ -1,13 +1,13 @@
 // discord_app/modules/interactions/InteractionUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import _fetchMessageInteractionData from "_fetchMessageInteractionData" /* 8331 */;
-import getFirstSkemaFieldError from "getFirstSkemaFieldError" /* 8332 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "deleteNonce" /* 8165 */;
-import ME from "ME" /* 676 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import _fetchMessageInteractionData from "InteractionActionCreators.tsx";
+import getFirstSkemaFieldError from "SkemaUtils.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "InteractionStore.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 function _executeMessageComponentInteraction() {

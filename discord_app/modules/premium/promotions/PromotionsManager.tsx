@@ -1,14 +1,14 @@
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import fetchActivePromotions from "fetchActivePromotions" /* 7928 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4045 */;
-import closure_7 from "createEmptyPromotionsByType" /* 7628 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { EntitlementTypes } from "ME" /* 676 */;
-import { SubscriptionTypes } from "sum" /* 505 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import fetchActivePromotions from "PromotionsActionCreators.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/billing/SubscriptionStore.tsx";
+import closure_7 from "PromotionsStore.tsx";
+import { PremiumTypes } from "../PremiumConstants.tsx";
+import { EntitlementTypes } from "../../../Constants.tsx";
+import { SubscriptionTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 initializeDefault;

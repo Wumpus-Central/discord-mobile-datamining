@@ -1,15 +1,15 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10302 */;
-import metadataDefault from "metadata" /* 16156 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 8936 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../../GiftingBadge.messages.js";
+import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
+import metadataDefault from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../badges/BadgeDirectoryStore.tsx";
+import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function HasBadgeCoachmark(markAsDismissed) {

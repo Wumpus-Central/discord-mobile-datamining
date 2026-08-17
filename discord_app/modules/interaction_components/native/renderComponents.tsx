@@ -1,17 +1,17 @@
 // discord_app/modules/interaction_components/native/renderComponents.tsx
-import noopAll from "noop" /* 19 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import StringSelectActionComponentDefault from "StringSelectActionComponent" /* 15165 */;
-import SearchableSelectActionComponentDefault from "SearchableSelectActionComponent" /* 15168 */;
-import TextDisplayComponentDefault from "TextDisplayComponent" /* 15169 */;
-import ActionRowLayoutComponentDefault from "ActionRowLayoutComponent" /* 16604 */;
-import _modDef16605 from "module_16605" /* 16605 */;
-import LabelLayoutComponentDefault from "LabelLayoutComponent" /* 16606 */;
-import MainAreaCanUploadDefault from "MainAreaCanUpload" /* 16607 */;
-import _modDef16609 from "module_16609" /* 16609 */;
-import _modDef16610 from "module_16610" /* 16610 */;
-import _modDef16611 from "module_16611" /* 16611 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import PermissionOverwriteType from "../../../flow/Server.tsx";
+import StringSelectActionComponentDefault from "actions/StringSelectActionComponent.tsx";
+import SearchableSelectActionComponentDefault from "actions/SearchableSelectActionComponent.tsx";
+import TextDisplayComponentDefault from "display/TextDisplayComponent.tsx";
+import ActionRowLayoutComponentDefault from "layouts/ActionRowLayoutComponent.tsx";
+import _modDef16605 from "actions/TextInputActionComponent.tsx";
+import LabelLayoutComponentDefault from "layouts/LabelLayoutComponent.tsx";
+import MainAreaCanUploadDefault from "actions/FileUploadActionComponent.tsx";
+import _modDef16609 from "actions/RadioGroupActionComponent.tsx";
+import _modDef16610 from "actions/CheckboxGroupActionComponent.tsx";
+import _modDef16611 from "actions/CheckboxActionComponent.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function renderComponents(components) {

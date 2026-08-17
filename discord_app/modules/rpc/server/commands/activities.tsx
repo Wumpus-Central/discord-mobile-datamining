@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/activities.tsx
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 13834 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../../Constants.tsx";
+import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
 require = arg1;
 ({ RPCCommands, RPCErrors: c4, ApplicationFlags: c5 } = ME);

@@ -1,9 +1,9 @@
 // discord_app/design/components/Input/native/NativeTextInput.native.tsx
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "subscribeToKeyboardUIStore" /* 1496 */;
-import { KeyboardThemes } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_8 from "../../../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
+import { KeyboardThemes } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

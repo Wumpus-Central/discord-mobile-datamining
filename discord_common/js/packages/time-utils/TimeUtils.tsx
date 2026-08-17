@@ -1,8 +1,8 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
-import u from "u" /* 653 */;
-import findLastIndexDefault from "findLastIndex" /* 4550 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import tryCatch from "tryCatch" /* 4549 */;
+import u from "../performance-utils/index.js";
+import findLastIndexDefault from "../../../../_runtime/04550_findLastIndex.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import tryCatch from "../../../../_runtime/04549_tryCatch.js";
 
 require = arg1;
 function sleep(num) {

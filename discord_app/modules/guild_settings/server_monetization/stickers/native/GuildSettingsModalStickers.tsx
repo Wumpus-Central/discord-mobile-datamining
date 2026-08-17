@@ -1,15 +1,15 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickers.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { intl, intl as intl2, intl as intl3, intl as intl4 } from "getSystemLocale" /* 1236 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../../stores/PermissionStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import { MAX_STICKER_FILE_SIZE } from "../../../../stickers/StickersConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import { intl, intl as intl2, intl as intl3, intl as intl4 } from "../../../../../intl/index.native.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);

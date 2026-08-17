@@ -1,13 +1,13 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_9 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/RelationshipStore.tsx";
+import { SafetyWarningTypes } from "../../../ChannelSafetyWarningsStore.tsx";
+import LOCATION_CONTEXT_MOBILE from "../../../Constants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_9 } from "../../../../relationships/native/RestrictionConfirmationConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 class StrangerDangerWarningBanner {

@@ -1,11 +1,11 @@
 // discord_app/modules/forums/ForumUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import set from "set" /* 1400 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
+import { ForumTimestampFormats } from "ForumConstants.tsx";
+import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
 function getCreationDefaultFormatter() {

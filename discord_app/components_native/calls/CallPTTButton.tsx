@@ -1,14 +1,14 @@
 // discord_app/components_native/calls/CallPTTButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import { InputModes } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../stores/RTCConnectionStore.tsx";
+import { InputModes } from "../../Constants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../utils/ColorUtils.tsx";
 
 const require = arg1;
 let c4 = importAllResult;

@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1351 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function announceActioned(intl) {

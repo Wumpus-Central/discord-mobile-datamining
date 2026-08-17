@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx
-import importAllResult from "noop" /* 19 */;
-import { BACKDROP_OPAQUE_MAX_OPACITY as closure_4 } from "BACKDROP_OPAQUE_MAX_OPACITY" /* 13493 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { BACKDROP_OPAQUE_MAX_OPACITY as closure_4 } from "../../../../design/components/Backdrop/native/BackdropConstants.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import { VoicePanelControlsModes } from "VoicePanelControlsConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

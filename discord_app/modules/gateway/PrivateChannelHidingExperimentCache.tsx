@@ -1,6 +1,6 @@
 // discord_app/modules/gateway/PrivateChannelHidingExperimentCache.tsx
-import set from "set" /* 2 */;
-import Storage2 from "Storage" /* 595 */;
+import set from "../../../_runtime/00002_set.js";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 const private_channel_obfuscation = "private_channel_obfuscation";
 const result = set.fileFinishedImporting("modules/gateway/PrivateChannelHidingExperimentCache.tsx");

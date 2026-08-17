@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/native/components/AudienceTile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import useAudienceRequestToSpeakState from "../../useAudienceRequestToSpeakState.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../../stores/GuildMemberStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function RaisedHandIcon(rtsState) {

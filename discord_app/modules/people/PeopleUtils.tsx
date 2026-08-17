@@ -1,8 +1,8 @@
 // discord_app/modules/people/PeopleUtils.tsx
-import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9736 */;
-import showRequestFailedAlertDefault from "showRequestFailedAlert" /* 9888 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import { AbortCodes } from "ME" /* 676 */;
+import handleRelationshipAddErrorDefault from "../../actions/RelationshipActionCreators.tsx";
+import showRequestFailedAlertDefault from "../game_relationships/GameRelationshipActionCreators.tsx";
+import closure_3 from "../../stores/RelationshipStore.tsx";
+import { AbortCodes } from "../../Constants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/people/PeopleUtils.tsx");

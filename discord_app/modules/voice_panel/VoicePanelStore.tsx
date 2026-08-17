@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/VoicePanelStore.tsx
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import identity from "identity" /* 700 */;
+import closure_2 from "../../stores/ChannelStore.tsx";
+import identity from "../../../_runtime/00700_identity.js";
 
 const require = arg1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {

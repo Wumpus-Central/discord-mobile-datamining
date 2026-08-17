@@ -1,6 +1,6 @@
 // discord_app/modules/messages/isSystemMessage.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 686 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/messages/isSystemMessage.tsx");
 

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_templates/useTrackCreateGuildViewed.tsx
-import closure_2 from "noop" /* 19 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import { GuildTemplateStates } from "GuildTemplatesConstants.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");
 

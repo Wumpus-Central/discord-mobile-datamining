@@ -1,8 +1,8 @@
 // discord_app/modules/media/native/IosImageTypesManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 let closure_2 = new timestampDefault("IosImageTypesManager");
 let c3 = null;

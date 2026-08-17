@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/MessageAccessibilityActions.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "recomputeGuild" /* 4977 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import closure_2 from "../../../stores/GuildVerificationStore.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../Constants.tsx";
 
 require = arg1;
 let obj = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };

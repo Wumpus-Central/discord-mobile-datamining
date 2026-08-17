@@ -1,8 +1,8 @@
 // discord_app/modules/activities/ActivitiesInTextUtils.tsx
-import set from "set" /* 692 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "sum" /* 505 */;
+import set from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

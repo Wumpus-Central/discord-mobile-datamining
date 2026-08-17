@@ -1,20 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/GuildChannelHeader.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 12717 */;
-import closure_7 from "_handleConnectionOpen" /* 4495 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_9 from "getMemberListId" /* 7249 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "handleInviteData" /* 4295 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "markAllUserIdListsStale" /* 4030 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../channel/ChannelMemberCountStore.tsx";
+import closure_7 from "../../../../gateway/GatewayConnectionStore.tsx";
+import { THREAD_CHANNEL_TYPES } from "../../../../../records/ChannelRecord.tsx";
+import closure_9 from "../../../../../stores/ChannelMemberStore.tsx";
+import closure_10 from "../../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../../stores/GuildMemberCountStore.tsx";
+import closure_12 from "../../../../../stores/GuildStore.tsx";
+import closure_13 from "../../../../../stores/RelationshipStore.tsx";
+import closure_14 from "../../../../../stores/UserStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function GuildChannelMemberCount(channel) {

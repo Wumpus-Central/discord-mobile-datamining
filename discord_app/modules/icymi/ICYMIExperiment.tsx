@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/ICYMIExperiment.tsx
-import useLabFeatureDefault from "useLabFeature" /* 9061 */;
-import closure_2 from "getUserAgnosticState" /* 9059 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import useLabFeatureDefault from "../labs/useLabFeature.tsx";
+import closure_2 from "../labs/LabFeatureStore.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
 const hide_icymi_tab = "hide_icymi_tab";
 ApexExperiment = { 1: null };

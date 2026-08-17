@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesBundledProductRecord.tsx
-import set from "set" /* 2 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 4517 */;
+import set from "../../../../_runtime/00002_set.js";
+import getPricesFromServerDefault from "../../skus/utils/getPricesFromServer.tsx";
 
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {

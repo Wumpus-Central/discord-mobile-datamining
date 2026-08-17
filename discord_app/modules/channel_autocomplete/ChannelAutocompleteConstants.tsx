@@ -1,5 +1,5 @@
 // discord_app/modules/channel_autocomplete/ChannelAutocompleteConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;

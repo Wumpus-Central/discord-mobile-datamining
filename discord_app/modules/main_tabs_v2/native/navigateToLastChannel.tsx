@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/navigateToLastChannel.tsx
-import set from "set" /* 2 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import transitionToChannel from "transitionToChannel" /* 4768 */;
-import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 9569 */;
+import set from "../../../../_runtime/00002_set.js";
+import coerceMainRoute from "../helpers/NavigationRouteUtils.native.tsx";
+import transitionToChannel from "../../routing/transitionToChannel.tsx";
+import getNavigatorCurrentRouteDefault from "../navigator/getNavigatorCurrentRoute.tsx";
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 

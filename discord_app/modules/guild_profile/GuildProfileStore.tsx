@@ -1,10 +1,10 @@
 // discord_app/modules/guild_profile/GuildProfileStore.tsx
-import set from "set" /* 2 */;
-import failsDefault from "fails" /* 584 */;
-import initializeDefault from "initialize" /* 589 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import getEmoji from "getEmoji" /* 6907 */;
+import set from "../../../_runtime/00002_set.js";
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import ME from "../../Constants.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import getEmoji from "GuildProfileBuilders.tsx";
 
 function handleUpdateStart(guildId) {
   guildId = guildId.guildId;

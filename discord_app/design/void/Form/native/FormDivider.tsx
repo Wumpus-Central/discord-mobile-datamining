@@ -1,13 +1,13 @@
 // discord_app/design/void/Form/native/FormDivider.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import context from "context" /* 6939 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7161 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import context from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import useProfileThemeValues from "../../../../modules/user_profile/useProfileThemeValues.native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);

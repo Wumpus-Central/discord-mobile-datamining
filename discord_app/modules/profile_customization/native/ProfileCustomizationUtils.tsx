@@ -1,8 +1,8 @@
 // discord_app/modules/profile_customization/native/ProfileCustomizationUtils.tsx
-import set from "set" /* 2 */;
-import int2hslRaw from "int2hslRaw" /* 688 */;
-import getAvatarURL2 from "getAvatarURL" /* 1435 */;
-import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8413 */;
+import set from "../../../../_runtime/00002_set.js";
+import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import getAvatarURL2 from "../../../utils/AvatarUtils.tsx";
+import useDominantRGBFromImage from "../../calls/native/VideoBackground.tsx";
 
 const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/custom_status/utils/getRandomCustomStatusPrompt.tsx
-import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 9292 */;
+import set from "../../../../_runtime/00002_set.js";
+import StatusTypes from "../Constants.tsx";
 
 ({ CustomStatusPrompts: obj1, CustomStatusPromptValues: c3 } = StatusTypes);
 const result = set.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");

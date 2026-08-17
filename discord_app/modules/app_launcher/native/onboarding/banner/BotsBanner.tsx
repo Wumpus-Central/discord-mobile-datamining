@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/BotsBanner.tsx
-import noopAll from "noop" /* 19 */;
-import BannerBaseDefault from "BannerBase" /* 11237 */;
-import useBannerBots from "useBannerBots" /* 11242 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import BannerBaseDefault from "BannerBase.tsx";
+import useBannerBots from "../hooks/useBannerBots.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

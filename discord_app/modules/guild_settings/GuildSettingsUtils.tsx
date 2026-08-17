@@ -1,9 +1,9 @@
 // discord_app/modules/guild_settings/GuildSettingsUtils.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
-import getPermissionOptionsDefault from "getPermissionOptions" /* 16046 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
+import getPermissionOptionsDefault from "../../utils/PermissionSpecUtils.tsx";
+import ME from "../../Constants.tsx";
 
 const hasPermission = GuildRoleRecordTypeTag.hasPermission;
 ({ ElevatedPermissions: c4, ElevatedPermissionsList: c5 } = ME);

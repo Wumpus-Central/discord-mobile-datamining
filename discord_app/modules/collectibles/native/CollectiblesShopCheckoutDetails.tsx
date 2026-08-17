@@ -1,22 +1,22 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
-import set from "set" /* 679 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import Text from "Text" /* 4734 */;
-import preloadDefault from "preload" /* 5449 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8945 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8969 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9218 */;
-import NameplateInnerDefault from "NameplateInner" /* 9221 */;
-import metadataDefault from "metadata" /* 9246 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 9207 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getNameplateData from "../nameplates/utils.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import useMaybeFetchProfileFrameDefault from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
+import useProfileEffectDefault from "../profile_effects/useProfileEffect.tsx";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import NameplateInnerDefault from "../nameplates/native/Nameplate.tsx";
+import metadataDefault from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { EXTERNAL_PRODUCT_SKU_IDS } from "../CollectiblesShopConstants.tsx";
+import SAMPLE_PROFILE_ASPECT_RATIO from "CollectiblesPreviewConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ProfileEffectAssetPreview(item) {

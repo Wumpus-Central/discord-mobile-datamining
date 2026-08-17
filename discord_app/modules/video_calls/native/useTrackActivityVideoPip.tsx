@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/useTrackActivityVideoPip.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 8683 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "ChannelCallLifecycleStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

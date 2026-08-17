@@ -1,10 +1,10 @@
 // discord_app/lib/uploader/native/CloudUploader.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import _fileSizeDefault from "_fileSize" /* 7584 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import timestampDefault from "../../../modules/debug/Logger.tsx";
+import _fileSizeDefault from "../UploaderBase.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../Constants.tsx";
+import MESSAGE_GROUP_SPACING from "../../../modules/messages/MessageConstants.tsx";
 
 const require = arg1;
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);

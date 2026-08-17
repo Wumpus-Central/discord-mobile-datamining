@@ -1,12 +1,12 @@
 // discord_app/modules/age_assurance/AgeVerificationActionCreators.native.tsx
-import _modDef4090 from "module_4090" /* 4090 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import set from "set" /* 5427 */;
-import { AGE_VERIFICATION_INCODE_PATH as closure_9 } from "AGE_VERIFICATION_INCODE_PATH" /* 5429 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4090 from "../../lib/native/Linking.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import set from "AgeVerificationConstants.tsx";
+import { AGE_VERIFICATION_INCODE_PATH as closure_9 } from "AgeVerificationIncodeWebViewConstants.tsx";
+import { NativePermissionTypes } from "../native_permissions/NativePermissionConstants.tsx";
+import { SafetyToastType } from "../safety_common/Constants.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function openIncodeAgeVerificationModal(arg0) {

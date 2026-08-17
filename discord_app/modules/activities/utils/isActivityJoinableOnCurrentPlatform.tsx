@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx
-import set from "set" /* 2 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
-import hasFlagDefault from "hasFlag" /* 7260 */;
-import ME from "ME" /* 676 */;
+import set from "../../../../_runtime/00002_set.js";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import hasFlagDefault from "hasFlag.tsx";
+import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ActivityGamePlatforms: c4, ActivityTypes: c5 } = ME);
 const result = set.fileFinishedImporting("modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx");

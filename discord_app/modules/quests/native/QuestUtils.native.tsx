@@ -1,22 +1,22 @@
 // discord_app/modules/quests/native/QuestUtils.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import useAlertStore from "useAlertStore" /* 4657 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7474 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10477 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 10491 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "zustandStore" /* 10948 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import { UserSettingsSections } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import createStandardNavigationFactories from "../../../../_runtime/01501_createStandardNavigationFactories.js";
+import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import isSponsoredPlayQuest from "../utils/QuestUtils.tsx";
+import _manuallyStartConsoleQuest from "../QuestActionCreators.tsx";
+import _getDefaultRewardName from "../utils/QuestRewardUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../QuestHomeNavigationStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
+import { UserSettingsSections } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function openRewardClaimBottomSheet(arg0) {

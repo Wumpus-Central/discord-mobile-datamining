@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/hooks/useGameProfileStoreWebsites.tsx
-import closure_3 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set(["1402418703554842694", "356877880938070016"]);

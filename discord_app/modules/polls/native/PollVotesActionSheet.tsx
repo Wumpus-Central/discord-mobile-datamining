@@ -1,20 +1,20 @@
 // discord_app/modules/polls/native/PollVotesActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import EmojiDefault from "Emoji" /* 6930 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_10 from "getEmojiToGroupId" /* 6727 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "reinjectEphemerals" /* 4994 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_9 from "../../a11y/AccessibilityStore.tsx";
+import closure_10 from "../../emojis/EmojiStore.tsx";
+import closure_11 from "../../../stores/ChannelStore.tsx";
+import closure_12 from "../../../stores/MessageStore.tsx";
+import closure_13 from "../../../stores/UserStore.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function PollEmoji(emoji) {

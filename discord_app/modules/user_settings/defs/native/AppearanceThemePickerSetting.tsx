@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import closure_3 from "../../ThemeStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
 
 require = arg1;

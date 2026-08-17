@@ -1,9 +1,9 @@
 // discord_app/actions/ChannelRTCActionCreators.tsx
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import collectGuildAnalyticsMetadata from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import ME from "../Constants.tsx";
 import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
 
 ({ AppContext: c3, AnalyticEvents: c4, ComponentActions: c5 } = ME);

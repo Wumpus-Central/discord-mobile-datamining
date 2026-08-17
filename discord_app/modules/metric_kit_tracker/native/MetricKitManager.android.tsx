@@ -1,5 +1,5 @@
 // discord_app/modules/metric_kit_tracker/native/MetricKitManager.android.tsx
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
 initializeDefault;
 class MetricKitManager extends tmp2 {

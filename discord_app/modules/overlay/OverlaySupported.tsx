@@ -1,6 +1,6 @@
 // discord_app/modules/overlay/OverlaySupported.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
 
 let flag = set2.isPlatformEmbedded;
 if (flag) {

@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/DOMUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../../_runtime/00002_set.js";
 
 const re0 = /input/i;
 const re1 = /textarea/i;

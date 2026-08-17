@@ -1,6 +1,6 @@
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../stores/UserGuildSettingsStore.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");

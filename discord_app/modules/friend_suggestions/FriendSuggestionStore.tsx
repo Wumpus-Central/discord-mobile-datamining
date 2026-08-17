@@ -1,11 +1,11 @@
 // discord_app/modules/friend_suggestions/FriendSuggestionStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5411 from "module_5411" /* 5411 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 5412 */;
-import closure_2 from "createdAt" /* 1930 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import applyDefault from "../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import _modDef5411 from "FriendSuggestionActionCreators.tsx";
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions.tsx";
+import closure_2 from "../../records/UserRecord.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 
 let closure_4 = {};
 let c5 = 0;

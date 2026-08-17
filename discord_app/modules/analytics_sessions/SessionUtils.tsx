@@ -1,5 +1,5 @@
 // discord_app/modules/analytics_sessions/SessionUtils.tsx
-import setDefault from "set" /* 687 */;
+import setDefault from "../../utils/Durations.tsx";
 
 const result = 30 * setDefault.Millis.MINUTE;
 let c0 = result;

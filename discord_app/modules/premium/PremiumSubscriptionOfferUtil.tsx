@@ -1,16 +1,16 @@
 // discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
-import initialize from "initialize" /* 589 */;
-import tDefault from "t" /* 3975 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7625 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 7626 */;
-import _fetchUserOffer from "_fetchUserOffer" /* 7876 */;
-import useHasActiveTrial from "useHasActiveTrial" /* 8277 */;
-import useIsInReverseTrial from "useIsInReverseTrial" /* 8278 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "reset" /* 4045 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
+import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
+import useDiscountOfferDefault from "hooks/useDiscountOffer.tsx";
+import _fetchUserOffer from "UserOfferActionCreators.tsx";
+import useHasActiveTrial from "PremiumSubscriptionTrialUtil.tsx";
+import useIsInReverseTrial from "ReverseTrialUtils.native.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
+import GuildFeatures from "PremiumConstants.tsx";
 
 require = arg1;
 ({ PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: error, PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: closure_8, PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: c9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1, PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14, PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16, PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_17 } = GuildFeatures);

@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellButton.tsx
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import ME from "../../../Constants.tsx";
+import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ AnalyticsPages: c4, UpsellTypes: c5, AnalyticsSections: closure_6, AnalyticEvents: error } = ME);

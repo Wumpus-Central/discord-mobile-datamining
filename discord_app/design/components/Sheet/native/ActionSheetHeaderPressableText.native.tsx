@@ -1,10 +1,10 @@
 // discord_app/design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import Text from "../../Text/native/Text.tsx";
+import PressableBase from "../../../void/Pressables/native/Pressables.tsx";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 const jsx = jsxProd.jsx;
 let closure_4 = createCacheKey.createStyles(() => ({ container: { marginTop: 3 } }));

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/logMessageSendFailure.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");

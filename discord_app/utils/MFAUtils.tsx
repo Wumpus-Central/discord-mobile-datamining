@@ -1,9 +1,9 @@
 // discord_app/utils/MFAUtils.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _modDef1208 from "module_1208" /* 1208 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import encodeDefault from "encode" /* 8589 */;
+import set from "../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import _modDef1208 from "SentryUtils.native.tsx";
+import isMetaQuest from "../modules/device/MetaQuestUtils.android.tsx";
+import encodeDefault from "../../_runtime/08589_encode.js";
 
 let _crypto;
 if (window != null) {

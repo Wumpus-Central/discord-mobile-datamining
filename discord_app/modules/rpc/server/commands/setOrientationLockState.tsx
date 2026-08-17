@@ -1,11 +1,11 @@
 // discord_app/modules/rpc/server/commands/setOrientationLockState.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import closure_2 from "map" /* 8708 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
-import { OrientationLockState } from "items3" /* 4481 */;
-import sum from "sum" /* 505 */;
+import dispatcherDefault from "../../../../Dispatcher.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import closure_2 from "../../../frames/FramesStore.tsx";
+import { TransportTypes } from "../../Constants.tsx";
+import { OrientationLockState } from "../../../activities/Constants.tsx";
+import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 
 const RPCErrors = sum.RPCErrors;
 const result = require("set").fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");

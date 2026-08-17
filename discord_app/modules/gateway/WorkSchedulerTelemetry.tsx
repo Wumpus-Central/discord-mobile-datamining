@@ -1,6 +1,6 @@
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
-import apply from "apply" /* 12 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import apply from "../../../_runtime/00012_apply.js";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
 let obj = { LONGER_DISPATCH: "longer_dispatch", EXCEEDED_MAX_CONSECUTIVE_FLUSHES: "exceeded_max_consecutive_flushes", FIRED_DUE_TO_MAX_TIMEOUT: "fired_due_to_max_timeout", SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED: "skip_idle_callback_due_to_backgrounded" };

@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import XLargeIcon from "XLargeIcon" /* 4328 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6316 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateGuildUnreadSentinel" /* 5383 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
+import ArrowLargeLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/GuildReadStateStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 

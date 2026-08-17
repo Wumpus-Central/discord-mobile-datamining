@@ -1,10 +1,10 @@
 // discord_app/modules/i18n/CountryCodeUtils.tsx
-import set from "set" /* 2 */;
-import _modDef38 from "module_38" /* 38 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import itemsDefault from "items" /* 4075 */;
-import set2 from "set" /* 4076 */;
-import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 4077 */;
+import set from "../../../_runtime/00002_set.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import itemsDefault from "../../../discord_common/js/shared/Countries.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/CountryCodes.tsx";
+import CountryCodesISO3to2 from "../../../discord_common/js/shared/shared-constants/CountryCodesISO3to2.tsx";
 
 let c3 = "United States";
 let closure_4 = {

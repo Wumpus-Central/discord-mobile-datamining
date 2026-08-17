@@ -1,12 +1,12 @@
 // discord_app/modules/stage_channels/native/components/JoinStageView.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import sortKey from "sortKey" /* 6703 */;
-import useStageParticipants from "useStageParticipants" /* 6708 */;
-import fillChunk from "fillChunk" /* 8063 */;
-import stylesDefault from "styles" /* 12491 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 12505 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import sortKey from "../../StageChannelParticipants.tsx";
+import useStageParticipants from "../../StageChannelParticipantStoreHooks.tsx";
+import fillChunk from "../../StageChannelUtils.tsx";
+import stylesDefault from "StageViewWithPrompts.tsx";
+import AgeVerificationSpeakerActionSheet from "StageActionBarButtons.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

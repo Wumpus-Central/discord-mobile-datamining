@@ -1,9 +1,9 @@
 // discord_app/modules/mfa/native/components/KeyImage.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import registerAssetDefault from "registerAsset" /* 14097 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import registerAssetDefault from "../../../../../_runtime/14097_registerAsset.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

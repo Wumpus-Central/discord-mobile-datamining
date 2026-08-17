@@ -1,5 +1,5 @@
 // discord_app/modules/user_affinities/maybeSortByProbability.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 import { apexExperiment } from "VoiceUserAffinityExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");

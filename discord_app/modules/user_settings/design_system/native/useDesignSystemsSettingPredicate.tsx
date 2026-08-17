@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx
-import set from "set" /* 2 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
+import set from "../../../../../_runtime/00002_set.js";
+import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
 

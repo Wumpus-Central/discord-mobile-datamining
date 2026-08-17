@@ -1,8 +1,8 @@
 // discord_app/modules/monitoring/MonitoringAgent.tsx
-import ME from "ME" /* 676 */;
-import enforcing from "enforcing" /* 5009 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 500 */;
+import ME from "../../Constants.tsx";
+import enforcing from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetricMonitorModule.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../utils/PlatformUtils.tsx";
 
 let obj = require;
 const Endpoints = ME.Endpoints;

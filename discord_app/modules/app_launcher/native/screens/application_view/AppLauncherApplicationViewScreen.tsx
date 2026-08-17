@@ -1,11 +1,11 @@
 // discord_app/modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getIndexKey" /* 8448 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../application_commands/ApplicationCommandIndexStore.tsx";
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
+import { BuiltInSectionId } from "../../../../application_commands/ApplicationCommandConstants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function AppLauncherApplicationViewScreenInner(application) {

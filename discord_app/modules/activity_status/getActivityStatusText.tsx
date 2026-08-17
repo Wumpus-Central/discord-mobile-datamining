@@ -1,8 +1,8 @@
 // discord_app/modules/activity_status/getActivityStatusText.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 9907 */;
+import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
+import isEmbeddedActivityDefault from "../activities/utils/isEmbeddedActivity.tsx";
+import StatusDisplayTypes from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");

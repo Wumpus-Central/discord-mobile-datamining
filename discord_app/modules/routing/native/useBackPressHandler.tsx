@@ -1,6 +1,6 @@
 // discord_app/modules/routing/native/useBackPressHandler.tsx
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const require = arg1;
 ({ BackHandler: c3, NativeModules: c4 } = get_ActivityIndicator);

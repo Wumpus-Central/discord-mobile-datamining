@@ -1,6 +1,6 @@
 // discord_app/modules/headless_tasks/android/SelectVoiceChannel.tsx
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/RTCConnectionStore.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/headless_tasks/android/SelectVoiceChannel.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/base_components/UsernameText.tsx
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4734 */;
-import getNickname from "getNickname" /* 4796 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import getNickname from "../../../../utils/NicknameUtils.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

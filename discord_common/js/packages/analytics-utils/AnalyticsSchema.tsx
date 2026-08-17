@@ -1,6 +1,6 @@
 // discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
+import set from "../../../../_runtime/00002_set.js";
+import sum from "../../shared/Constants.tsx";
 
 const WebAnalyticsEvents = sum.WebAnalyticsEvents;
 const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx");

@@ -1,21 +1,21 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import registerAssetDefault from "registerAsset" /* 4323 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import registerAssetDefault2 from "registerAsset" /* 6298 */;
-import registerAssetDefault3 from "registerAsset" /* 7352 */;
-import registerAssetDefault4 from "registerAsset" /* 7356 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8086 */;
-import TwinButtons from "TwinButtons" /* 8811 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import registerAssetDefault from "../../../../../_runtime/04323_registerAsset.js";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import registerAssetDefault2 from "../../../../../_runtime/06298_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/07352_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/07356_registerAsset.js";
+import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import TwinButtons from "../../../../design/components/experimental/native.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

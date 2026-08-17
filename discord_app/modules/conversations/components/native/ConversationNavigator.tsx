@@ -1,12 +1,12 @@
 // discord_app/modules/conversations/components/native/ConversationNavigator.tsx
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import GenericHeaderTitle from "GenericHeaderTitle" /* 8492 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import set from "../../../../utils/PlatformUtils.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import GenericHeaderTitle from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
 
 require = arg1;
 function HeaderWithBorder(arg0) {

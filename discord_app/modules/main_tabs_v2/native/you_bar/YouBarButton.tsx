@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import IconButton from "IconButton" /* 8035 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class YouBarButtonIcon {

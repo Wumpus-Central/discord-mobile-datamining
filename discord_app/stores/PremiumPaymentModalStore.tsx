@@ -1,7 +1,7 @@
 // discord_app/stores/PremiumPaymentModalStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import V6OrEarlierAPIError from "../errors/index.tsx";
 
 require = arg1;
 function handleSubscribeFailure(error) {

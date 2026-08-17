@@ -1,7 +1,7 @@
 // discord_app/modules/activities/native/applyActivityOrientationLock.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
-import applyOrientationLock from "applyOrientationLock" /* 10964 */;
+import set from "../../../../_runtime/00002_set.js";
+import items3 from "../Constants.tsx";
+import applyOrientationLock from "../../device/native/applyOrientationLock.tsx";
 
 const OrientationLockState = items3.OrientationLockState;
 let result = set.fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");

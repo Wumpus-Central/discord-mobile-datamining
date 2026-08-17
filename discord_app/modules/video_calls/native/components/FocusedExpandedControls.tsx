@@ -1,24 +1,24 @@
 // discord_app/modules/video_calls/native/components/FocusedExpandedControls.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import Form from "Form" /* 8083 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
-import stopScreenshareDefault from "stopScreenshare" /* 10931 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12135 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
-import NOOP from "NOOP" /* 12567 */;
-import registerAssetDefault from "registerAsset" /* 12576 */;
-import registerAssetDefault2 from "registerAsset" /* 12577 */;
-import useDeafStatesDefault from "useDeafStates" /* 12578 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/void/native.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import _handleToggleVideo from "../../../voice_calls/native/CallsUtils.tsx";
+import stopScreenshareDefault from "../useScreenshareUtils.tsx";
+import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
+import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
+import NOOP from "../VoiceActionUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/12576_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12577_registerAsset.js";
+import useDeafStatesDefault from "../../useDeafStates.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import { MediaEngineContextTypes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ExpandedControlItemIcon(iconSource) {

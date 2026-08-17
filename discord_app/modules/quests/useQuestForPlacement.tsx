@@ -1,10 +1,10 @@
 // discord_app/modules/quests/useQuestForPlacement.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
-import _modDef10501 from "module_10501" /* 10501 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 10685 */;
-import noop from "noop" /* 19 */;
-import closure_5 from "initializeState" /* 7453 */;
+import set from "../../../_runtime/00002_set.js";
+import setDefault from "../../utils/Durations.tsx";
+import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
+import getIsEligibleForQuests from "lib/QuestsEligibility.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import closure_5 from "QuestStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {

@@ -1,9 +1,9 @@
 // discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useGuildInviteSendStates } from "setSendState" /* 12332 */;
-import { InviteSendStates } from "InviteSendStates" /* 4371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { useGuildInviteSendStates } from "../../../GuildInviteSendStateStore.tsx";
+import { InviteSendStates } from "../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const memoResult = importAllResult.memo(function GuildInviteRow(arg0) {

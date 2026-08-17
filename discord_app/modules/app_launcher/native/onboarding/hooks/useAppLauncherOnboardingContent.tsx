@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx
-import resultDefault from "result" /* 11216 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 8449 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { DismissibleContentGroupName as closure_6 } from "ContentDismissActionType" /* 1388 */;
+import resultDefault from "useCanShowAppLauncherOnboarding.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../applications/ApplicationFrecencyStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import { DismissibleContentGroupName as closure_6 } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");

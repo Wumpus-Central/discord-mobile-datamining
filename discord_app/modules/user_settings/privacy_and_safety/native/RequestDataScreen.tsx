@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/RequestDataScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef14219 from "module_14219" /* 14219 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef14219 from "RequestDataContent.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
 let obj = { container: null };

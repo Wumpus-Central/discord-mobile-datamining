@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/GameConsoleConstants.tsx
-import ME from "ME" /* 676 */;
-import set2 from "set" /* 4375 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import set2 from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [set2.OAuth2Scopes.VOICE, set2.OAuth2Scopes.DM_CHANNELS_READ, set2.OAuth2Scopes.GUILDS, set2.OAuth2Scopes.GUILDS_MEMBERS_READ, set2.OAuth2Scopes.IDENTIFY, set2.OAuth2Scopes.CONNECTIONS, set2.OAuth2Scopes.ACTIVITIES_READ];
 const items1 = [set2.OAuth2Scopes.VOICE, set2.OAuth2Scopes.DM_CHANNELS_READ, set2.OAuth2Scopes.GUILDS, set2.OAuth2Scopes.GUILDS_MEMBERS_READ, set2.OAuth2Scopes.IDENTIFY, set2.OAuth2Scopes.CONNECTIONS];

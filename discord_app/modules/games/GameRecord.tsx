@@ -1,9 +1,9 @@
 // discord_app/modules/games/GameRecord.tsx
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import toJSDefault from "toJS" /* 1931 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4507 */;
-import closure_3 from "createExecutable" /* 4479 */;
-import { createExecutable } from "createExecutable" /* 4479 */;
+import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import toJSDefault from "../../lib/Record.tsx";
+import getGameMediaRefURLDefault from "getGameMediaRefURL.tsx";
+import closure_3 from "../../records/ApplicationRecord.tsx";
+import { createExecutable } from "../../records/ApplicationRecord.tsx";
 
 require = arg1;
 toJSDefault;

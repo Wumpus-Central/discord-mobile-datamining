@@ -1,6 +1,6 @@
 // discord_app/modules/build_overrides/ApplyBuildOverrideUtils.tsx
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
 
 let closure_0 = arg1;
 function _applyStaffBuildOverride() {

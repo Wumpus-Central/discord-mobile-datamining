@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
-import ManaContext from "ManaContext" /* 4104 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import useUserProfileColors from "useUserProfileColors" /* 8979 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8980 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
+import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

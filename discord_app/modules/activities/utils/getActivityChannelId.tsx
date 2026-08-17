@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getActivityChannelId.tsx
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "updateVoiceState" /* 4542 */;
+import set from "../../../../_runtime/00002_set.js";
+import createChannelRecord from "../../../records/ChannelRecord.tsx";
+import closure_1 from "../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../stores/VoiceStateStore.tsx";
 
 const isTextChannel = createChannelRecord.isTextChannel;
 const result = set.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");

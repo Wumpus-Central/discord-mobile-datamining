@@ -1,9 +1,9 @@
 // discord_app/actions/FriendsActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import transitionTo from "transitionTo" /* 1222 */;
-import trackFriendsListClickedDefault from "trackFriendsListClicked" /* 15971 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import transitionTo from "../modules/routing/router_utils.tsx";
+import trackFriendsListClickedDefault from "../modules/app_analytics/track/friends_list_viewed/trackFriendListClicked.tsx";
 
 const Routes = ME.Routes;
 const result = set.fileFinishedImporting("actions/FriendsActionCreators.tsx");

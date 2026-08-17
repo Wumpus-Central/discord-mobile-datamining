@@ -1,9 +1,9 @@
 // discord_app/modules/webauthn/native/WebAuthnScreens.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 14078 */;
-import _modDef14084 from "module_14084" /* 14084 */;
+import set from "../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import WebAuthnScreens2 from "../WebAuthnConstants.tsx";
+import _modDef14084 from "PasskeyUpsellActionCreators.tsx";
 
 const WebAuthnScreens = WebAuthnScreens2.WebAuthnScreens;
 const jsx = jsxProd.jsx;

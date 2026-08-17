@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import Text from "../../../../../../design/components/Text/native/Text.tsx";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../../../../stores/UserStore.tsx";
+import { UserNotificationSettings } from "../../../../../../Constants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);

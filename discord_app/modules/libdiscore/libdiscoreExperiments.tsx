@@ -1,9 +1,9 @@
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import _modDef38 from "module_38" /* 38 */;
-import ensureValidMode2 from "ensureValidMode" /* 1915 */;
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import set from "../../../_runtime/00002_set.js";
+import timestampDefault from "../debug/Logger.tsx";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import ensureValidMode2 from "stores/BridgedStore.tsx";
+import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 
 const ensureValidMode = ensureValidMode2.ensureValidMode;
 let closure_4 = new timestampDefault("libdiscoreExperiments");

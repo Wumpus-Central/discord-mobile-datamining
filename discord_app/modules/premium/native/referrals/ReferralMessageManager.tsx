@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/referrals/ReferralMessageManager.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import set from "set" /* 686 */;
-import initializeDefault from "initialize" /* 5038 */;
-import _fetchUserOffer from "_fetchUserOffer" /* 7876 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
-import closure_3 from "reset" /* 4045 */;
-import closure_4 from "emitChanges" /* 7421 */;
+import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
+import set from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import _fetchUserOffer from "../../UserOfferActionCreators.tsx";
+import setupLoadFromMessageManagerHandlersDefault from "../../../messages/setupLoadFromMessageManagerHandlers.tsx";
+import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../../../stores/billing/UserOfferStore.tsx";
 
 require = arg1;
 function handleReferralMessages(type) {

@@ -1,16 +1,16 @@
 // discord_app/design/components/Navigator/native/NavigatorHeader.native.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 6315 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6316 */;
-import Background from "Background" /* 6319 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import Text from "../../Text/native/Text.tsx";
+import useHeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
+import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
+import Background from "../../../../../_runtime/06319_Background.js";
+import NAV_BAR_HEIGHT from "NavigatorConstants.native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 class HeaderBackImage {

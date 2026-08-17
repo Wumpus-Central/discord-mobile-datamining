@@ -1,6 +1,6 @@
 // discord_app/modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx
-import noopAll from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

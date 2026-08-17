@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/GuildPowerupsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../stores/GuildStore.tsx";
+import BoostedGuildTiers from "constants/GuildPowerupsConstants.tsx";
+import ME from "../../../Constants.tsx";
 
 function calculateAppliedBoosts(guildId) {
   guild = guild.getGuild(guildId);

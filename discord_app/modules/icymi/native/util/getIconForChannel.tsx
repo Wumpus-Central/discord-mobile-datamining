@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/native/util/getIconForChannel.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import TextIcon from "TextIcon" /* 6876 */;
-import ImageIcon from "ImageIcon" /* 6882 */;
-import ForumIcon from "ForumIcon" /* 6883 */;
-import AnnouncementsIcon from "AnnouncementsIcon" /* 6889 */;
-import StageIcon from "StageIcon" /* 6892 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
+import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
+import AnnouncementsIcon from "../../../../design/components/Icon/native/redesign/generated/AnnouncementsIcon.tsx";
+import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
+import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 
 const ChannelTypes = ME.ChannelTypes;
 const result = set.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");

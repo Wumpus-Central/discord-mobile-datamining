@@ -1,6 +1,6 @@
 // discord_app/modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
 obj[2] = { enabled: true, trialCTAEnabled: false };

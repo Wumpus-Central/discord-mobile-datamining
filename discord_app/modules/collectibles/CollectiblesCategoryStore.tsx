@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/CollectiblesCategoryStore.tsx
-import failsDefault from "fails" /* 584 */;
-import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "fromServer" /* 5302 */;
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../user_settings/LocaleStore.tsx";
+import closure_4 from "records/CollectiblesCategoryRecord.tsx";
 
 const require = arg1;
 function updateCategoriesAndProducts(map) {

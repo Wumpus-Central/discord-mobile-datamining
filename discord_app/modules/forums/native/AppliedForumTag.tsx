@@ -1,13 +1,13 @@
 // discord_app/modules/forums/native/AppliedForumTag.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10264 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ForumTagContextMenuDefault from "ForumTagContextMenu.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../emojis/EmojiStore.tsx";
+import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class AppliedForumTag {

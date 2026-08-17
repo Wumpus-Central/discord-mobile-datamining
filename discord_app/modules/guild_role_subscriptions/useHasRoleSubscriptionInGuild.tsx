@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 const require = arg1;
 function computeHasRoleSubscriptionsInGuild(c0, closure_3) {

@@ -1,15 +1,15 @@
 // discord_app/components_native/chat/ChatItem.tsx
-import set from "set" /* 686 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10067 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { MessageTypes } from "ME" /* 676 */;
-import Changeset from "Changeset" /* 8158 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import isSystemMessageDefault from "../../modules/messages/isSystemMessage.tsx";
+import __INTERNAL_VIEW_CONFIG from "../../../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../modules/a11y/AccessibilityStore.tsx";
+import { MessageTypes } from "../../Constants.tsx";
+import Changeset from "../../modules/messages/native/renderer/RowGeneratorConstants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DCDChatItem(message) {

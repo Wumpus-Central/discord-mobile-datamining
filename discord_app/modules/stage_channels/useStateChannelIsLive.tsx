@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/useStateChannelIsLive.tsx
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_2 from "StageInstanceStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

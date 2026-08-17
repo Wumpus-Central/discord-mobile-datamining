@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "fromServer" /* 5308 */;
-import { useFramePreviewOverrideStore as closure_4 } from "measure" /* 8947 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../records/ProfileFrameRecord.tsx";
+import { useFramePreviewOverrideStore as closure_4 } from "../native/tooling/FramePreviewOverrideStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");

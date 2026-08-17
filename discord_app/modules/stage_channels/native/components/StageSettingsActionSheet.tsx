@@ -1,15 +1,15 @@
 // discord_app/modules/stage_channels/native/components/StageSettingsActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { STAGE_SETTINGS_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../StageInstanceStore.tsx";
+import { STAGE_SETTINGS_SHEET_KEY } from "../../StageChannelsConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ ChannelSettingsSections: c10, UserSettingsSections: unpackModuleId } = ME);

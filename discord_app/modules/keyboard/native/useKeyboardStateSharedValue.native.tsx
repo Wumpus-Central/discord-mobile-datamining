@@ -1,10 +1,10 @@
 // discord_app/modules/keyboard/native/useKeyboardStateSharedValue.native.tsx
-import uDefault from "u" /* 10561 */;
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx" /* 4115 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5444 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1895 */;
-import useKeyboardType from "useKeyboardType" /* 4239 */;
-import importDefaultResult from "subscribeToKeyboardUIStore" /* 1496 */;
+import uDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import useCustomKeyboardHeight from "useCustomKeyboardHeight.tsx";
+import useSystemKeyboardHeight from "useSystemKeyboardHeight.native.tsx";
+import useKeyboardType from "useKeyboardType.tsx";
+import importDefaultResult from "subscribeToKeyboardUIStore.tsx";
 
 module_4115 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
 module_4115[0] = useCustomKeyboardHeight.getCustomKeyboardHeight();

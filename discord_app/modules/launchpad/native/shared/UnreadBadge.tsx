@@ -1,14 +1,14 @@
 // discord_app/modules/launchpad/native/shared/UnreadBadge.tsx
-import getFontScale from "getFontScale" /* 4751 */;
-import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 8498 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8498 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import getFontScale from "../../../screen/native/useFontScale.tsx";
+import DEFAULT_BADGE_SIZE from "../../../main_tabs_v2/native/shared_components/Badge.tsx";
+import DEFAULT_BADGE_SIZEDefault from "../../../main_tabs_v2/native/shared_components/Badge.tsx";
+import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MUTED_OPACITY_CONTENT } from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });

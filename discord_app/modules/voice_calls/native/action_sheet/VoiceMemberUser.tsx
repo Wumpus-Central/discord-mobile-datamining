@@ -1,18 +1,18 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberUser.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "callConnect" /* 4496 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_10 from "sortActivity" /* 4559 */;
-import { Fonts } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nameFromUserDefault from "../../../../utils/UserUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../user_settings/ThemeStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../../stores/CallStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../../stores/MediaEngineStore.tsx";
+import closure_10 from "../../../../stores/PresenceStore.tsx";
+import { Fonts } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function StreamingUserRow(user) {

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/hooks/useAndroidAndLegacyIOSPremiumTrialOfferCandidates.native.tsx
-import closure_2 from "updateProduct" /* 5319 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_2 from "../../../stores/native/IAPStore.android.tsx";
+import GuildFeatures from "../PremiumConstants.tsx";
 
 const require = arg1;
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: c4, PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: c5, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: closure_6, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: error, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID: closure_8 } = GuildFeatures);

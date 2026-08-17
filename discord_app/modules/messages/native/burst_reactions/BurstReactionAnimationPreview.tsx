@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx
-import noopAll from "noop" /* 19 */;
-import ReactionTypes from "ReactionTypes" /* 7510 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7573 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ReactionTypes from "../../MessageReactionsTypes.tsx";
+import BurstReactionAnimationDefault from "BurstReactionAnimation.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

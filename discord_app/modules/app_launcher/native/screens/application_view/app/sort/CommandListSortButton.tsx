@@ -1,11 +1,11 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CommandListSortOrder } from "CommandListSortOrder" /* 11313 */;
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { CommandListSortOrder } from "../../../../../AppLauncherConstants.tsx";
+import { ANDROID_FOREGROUND_RIPPLE } from "../../../../../../../design/void/Form/native/FormConstants.tsx";
+import jsxProd from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

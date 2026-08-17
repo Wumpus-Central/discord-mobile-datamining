@@ -1,12 +1,12 @@
 // discord_app/modules/messages/MessageAttachmentUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
-import ObscureReason from "ObscureReason" /* 5021 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 5022 */;
-import isMediaAttachment from "isMediaAttachment" /* 8515 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 10717 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import getEligibleHarmTypesConfigsForContext from "../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import ObscureReason from "../explicit_media_redaction/ObscureMediaModels.tsx";
+import ContentHarmTypeChannel from "../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
+import isMediaAttachment from "../forums/ForumPostMediaUtils.tsx";
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 require = arg1;
 function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChannelType) {

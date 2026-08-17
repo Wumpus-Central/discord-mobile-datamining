@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/StartEventUtils.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { createChannelRecordFromServer as closure_4 } from "../../records/ChannelRecord.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 const require = arg1;
 function createStageChannelForEvent(guild, name, arg2) {

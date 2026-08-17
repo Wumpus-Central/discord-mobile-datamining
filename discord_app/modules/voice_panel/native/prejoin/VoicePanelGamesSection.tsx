@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9519 */;
-import VoiceBadges from "VoiceBadges" /* 9676 */;
-import useIsVoiceChannelGamesExperimentEnabledDefault from "useIsVoiceChannelGamesExperimentEnabled" /* 9731 */;
-import _modDef9744 from "module_9744" /* 9744 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 16376 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
+import VoiceBadges from "../shared/FormComponents.tsx";
+import useIsVoiceChannelGamesExperimentEnabledDefault from "../../experiments/VoiceChannelGamesExperiment.tsx";
+import _modDef9744 from "../../../games/native/GameActivityIcon.tsx";
+import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import { importDefaultResult1 } from "../../../games/hooks/useGame.tsx";
 

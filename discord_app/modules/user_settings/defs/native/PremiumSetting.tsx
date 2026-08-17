@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/PremiumSetting.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import apexExperiment from "apexExperiment" /* 12850 */;
-import ThemedTabBadgeDefault from "ThemedTabBadge" /* 14338 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4045 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
+import apexExperiment from "../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx";
+import ThemedTabBadgeDefault from "../../../premium/native/PremiumTabBadge.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/billing/SubscriptionStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { PremiumScreen } from "../../premium/native/PremiumSettingScreen.tsx";
 
 require = arg1;

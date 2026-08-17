@@ -1,7 +1,7 @@
 // discord_app/modules/threads/ThreadConstants.tsx
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const AbortCodes = ME.AbortCodes;
 let obj = { HAS_INTERACTED: 1, ALL_MESSAGES: 2, ONLY_MENTIONS: 4, NO_MESSAGES: 8 };

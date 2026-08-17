@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/utils/useAuthFlowBackHandler.tsx
-import closure_2 from "noop" /* 19 */;
-import { RegistrationTransitionActionTypes as closure_3 } from "RegistrationTransitionActionTypes" /* 15213 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import { RegistrationTransitionActionTypes as closure_3 } from "../../../RegistrationConstants.tsx";
 import { useNavigatorBackPressHandler } from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 import { NavigatorWithCaptchaHook } from "../Auth.tsx";
 

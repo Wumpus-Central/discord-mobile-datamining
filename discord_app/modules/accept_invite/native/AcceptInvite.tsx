@@ -1,16 +1,16 @@
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import map from "map" /* 4097 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { InviteStates } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
+import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import map from "../../../design/tokens/native/useToken.tsx";
+import PressableCard from "../../../design/components/Card/native/Card.native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { InviteStates } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function getInviteState(invite) {

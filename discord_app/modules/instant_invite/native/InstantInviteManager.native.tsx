@@ -1,5 +1,5 @@
 // discord_app/modules/instant_invite/native/InstantInviteManager.native.tsx
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = arg1;
 initializeDefault;

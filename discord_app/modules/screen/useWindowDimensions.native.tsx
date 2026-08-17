@@ -1,6 +1,6 @@
 // discord_app/modules/screen/useWindowDimensions.native.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getDimensionsStoreStateForEntry" /* 1495 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "native/DimensionsStore.android.tsx";
 
 const require = arg1;
 let closure_4 = { ignoreKeyboard: false };

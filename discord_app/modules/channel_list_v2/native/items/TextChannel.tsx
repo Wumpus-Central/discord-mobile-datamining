@@ -1,16 +1,16 @@
 // discord_app/modules/channel_list_v2/native/items/TextChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "isSubscriptionGated" /* 1981 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "generateOldThreadCutoff" /* 4772 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_6 from "../../../channel/GatedChannelStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/PermissionStore.tsx";
+import closure_9 from "../../../../stores/ReadStateStore.tsx";
+import closure_10 from "../../../../stores/UserGuildSettingsStore.tsx";
+import hairlineWidth from "../RedesignChannelListConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

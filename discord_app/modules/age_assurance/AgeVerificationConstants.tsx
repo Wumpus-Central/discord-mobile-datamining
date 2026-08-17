@@ -1,8 +1,8 @@
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
-import ME from "ME" /* 676 */;
-import messagesProxyDefault from "messagesProxy" /* 2853 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import messagesProxyDefault from "AgeAssurance.messages.js";
+import AgeVerificationModalEntryPoint from "AgeVerificationAnalyticsUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;

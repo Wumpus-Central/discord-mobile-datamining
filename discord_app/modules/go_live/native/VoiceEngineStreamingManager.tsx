@@ -1,15 +1,15 @@
 // discord_app/modules/go_live/native/VoiceEngineStreamingManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import inject from "inject" /* 4499 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
-import { getAppIntentScheme } from "items3" /* 4481 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
+import initializeDefault from "../../../lib/LifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import importDefaultResult from "../../../stores/SelectedChannelStore.tsx";
+import ME from "../../../Constants.tsx";
+import { getAppIntentScheme } from "../../activities/Constants.tsx";
 
 require = arg1;
 function handleThumbnailUpload() {

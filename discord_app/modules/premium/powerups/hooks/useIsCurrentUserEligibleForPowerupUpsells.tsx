@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "insertUnsortedGuilds" /* 5078 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleGuildBoostsUpdate" /* 4267 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import closure_2 from "../../../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../../../stores/SortedGuildStore.tsx";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/billing/GuildBoostSlotStore.tsx";
+import { PremiumTypes } from "../../PremiumConstants.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx");

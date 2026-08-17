@@ -1,11 +1,11 @@
 // discord_app/modules/notifications/native/NativeNotificationsManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/GuildReadStateStore.tsx";
+import closure_6 from "../../../stores/ReadStateStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
 
 let require = arg1;
 function getDeliveredNotifications() {

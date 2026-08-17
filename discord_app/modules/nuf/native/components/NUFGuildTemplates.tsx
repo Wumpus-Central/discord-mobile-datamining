@@ -1,14 +1,14 @@
 // discord_app/modules/nuf/native/components/NUFGuildTemplates.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 4201 */;
-import ME from "ME" /* 676 */;
-import { GuildTemplateId } from "GuildTemplateId" /* 11880 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/DefaultRouteStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { GuildTemplateId } from "../../../create_guild/CreateGuildConstants.tsx";
+import NUXGuildTemplatesAnalytics from "../../../create_guild/native/CreateGuildConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function onCreateGuild() {

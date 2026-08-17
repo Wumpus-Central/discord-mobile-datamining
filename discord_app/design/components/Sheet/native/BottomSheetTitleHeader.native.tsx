@@ -1,14 +1,14 @@
 // discord_app/design/components/Sheet/native/BottomSheetTitleHeader.native.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4734 */;
-import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 6315 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import Text from "../../Text/native/Text.tsx";
+import useHeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 import { map } from "../../../tokens/native/useToken.tsx";
 
 require = arg1;

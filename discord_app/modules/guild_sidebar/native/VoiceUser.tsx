@@ -1,13 +1,13 @@
 // discord_app/modules/guild_sidebar/native/VoiceUser.tsx
-import noopAll from "noop" /* 19 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "handleUpdate" /* 4541 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../stores/SessionsStore.tsx";
+import closure_9 from "../../../stores/VoiceStateStore.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

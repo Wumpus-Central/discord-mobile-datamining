@@ -1,17 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7226 */;
-import registerAssetDefault from "registerAsset" /* 16747 */;
-import registerAssetDefault2 from "registerAsset" /* 16748 */;
-import registerAssetDefault3 from "registerAsset" /* 16750 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import computeGuildRoleSubscriptionSettingsVisibility from "../../feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
+import registerAssetDefault from "../../../../../_runtime/16747_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/16748_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/16750_registerAsset.js";
+import { isGuildOwner } from "../../../../records/GuildRecord.tsx";
+import closure_4 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function HasCreatedListingsSection(arg0) {

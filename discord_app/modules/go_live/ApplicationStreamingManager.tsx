@@ -1,19 +1,19 @@
 // discord_app/modules/go_live/ApplicationStreamingManager.tsx
-import setDefault from "set" /* 687 */;
-import mergeGuildAvatarDefault from "mergeGuildAvatar" /* 1922 */;
-import initializeDefault from "initialize" /* 5038 */;
-import watchStream from "watchStream" /* 9860 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleInviteData" /* 4295 */;
-import closure_7 from "initialize" /* 4565 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "initialize" /* 4558 */;
-import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4532 */;
-import ME from "ME" /* 676 */;
-import apply from "apply" /* 12 */;
-import set from "set" /* 2 */;
+import setDefault from "../../utils/Durations.tsx";
+import mergeGuildAvatarDefault from "../../stores/UserStore.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import watchStream from "../../actions/StreamActionCreators.tsx";
+import closure_3 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildMemberCountStore.tsx";
+import closure_7 from "../../stores/RTCRegionStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../stores/StreamRTCConnectionStore.tsx";
+import StreamIssueReportReasons from "Constants.tsx";
+import ME from "../../Constants.tsx";
+import apply from "../../../_runtime/00012_apply.js";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function updateRegion(encodeStreamKeyResult, preferredRegion) {

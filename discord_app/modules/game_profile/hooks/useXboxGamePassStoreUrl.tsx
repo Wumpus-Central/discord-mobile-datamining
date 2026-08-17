@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import XBOX_DISCORD_OCID from "XBOX_DISCORD_OCID" /* 9100 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import XBOX_DISCORD_OCID from "../../activities/utils/distributorStoreUrls.tsx";
 
 const Distributors = ME.Distributors;
 const result = set.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");

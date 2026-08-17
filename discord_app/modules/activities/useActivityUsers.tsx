@@ -1,6 +1,6 @@
 // discord_app/modules/activities/useActivityUsers.tsx
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "participantFromServer" /* 1390 */;
+import closure_2 from "../../stores/UserStore.tsx";
+import closure_3 from "EmbeddedActivitiesStore.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/hooks/useUserProfileVoiceActivity.tsx
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
+import closure_3 from "../../../stores/PresenceStore.tsx";
+import closure_4 from "../../../stores/VoiceStateStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");

@@ -1,11 +1,11 @@
 // discord_app/modules/profile_customization/useOpenProfileSettings.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import ME from "ME" /* 676 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import mergeGuildAvatarDefault from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "zustandStore" /* 9537 */;
-import handleFormOpen from "handleFormOpen" /* 8370 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import ME from "../../Constants.tsx";
+import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
+import mergeGuildAvatarDefault from "../../stores/UserStore.tsx";
+import closure_3 from "ProfileCustomizationNavigationStore.tsx";
+import handleFormOpen from "../user_profile/UserProfileSettingsStore.tsx";
 
 noop.useCallback;
 mergeGuildAvatarDefault;

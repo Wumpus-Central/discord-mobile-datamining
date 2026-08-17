@@ -1,10 +1,10 @@
 // discord_app/modules/stage_channels/native/components/AudienceGridRow.tsx
-import _modDef12624 from "module_12624" /* 12624 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import _modDef12624 from "BlankAudienceTile.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MAX_AUDIENCE_ROW_LIMIT } from "../../StageChannelsConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 class BlankAudience {
   constructor(arg0) {

@@ -1,14 +1,14 @@
 // discord_app/modules/favorites/FavoritesDismissibleContent.tsx
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
-import canShowTimeRecurringContent from "canShowTimeRecurringContent" /* 7367 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9981 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 9988 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9989 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import useSelectedDismissibleContent from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import canShowTimeRecurringContent from "../dismissible_content/useGetDismissibleContent.tsx";
+import useFavoritesAccess from "FavoritesHooks.tsx";
+import useFavoritesGuildConfig from "FavoritesGuildExperiment.tsx";
+import hasOfferedFavoritesGuildOnboarding from "onboarding/FavoritesGuildIntroPopover.tsx";
+import useCanShowFavoritesGuildOnboardingDefault from "hooks/useCanShowFavoritesGuildOnboarding.native.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
 
 require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_NEW_BADGE, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding/native/ConnectionCard.tsx
-import noopAll from "noop" /* 19 */;
-import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7138 */;
-import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7155 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5286 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ApplicationConnectionCardDefault from "ApplicationConnectionCard.tsx";
+import ProviderConnectionCardDefault from "ProviderConnectionCard.tsx";
+import { OnboardingConnectionType } from "../GuildOnboardingPromptsConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");

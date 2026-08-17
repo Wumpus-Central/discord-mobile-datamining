@@ -1,7 +1,7 @@
 // discord_app/modules/core/web/UID.tsx
-import set from "set" /* 2 */;
-import uniqueIdDefault from "uniqueId" /* 5261 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import set from "../../../../_runtime/00002_set.js";
+import uniqueIdDefault from "../../../../_runtime/05261_uniqueId.js";
+import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
 
 const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
 

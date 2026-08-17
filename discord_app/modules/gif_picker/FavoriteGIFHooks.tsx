@@ -1,6 +1,6 @@
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
-import useFrecencySettings from "useFrecencySettings" /* 10200 */;
-import closure_3 from "noop" /* 19 */;
+import useFrecencySettings from "../user_settings/FrecencyUserSettingsHooks.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
 import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
 
 require = arg1;

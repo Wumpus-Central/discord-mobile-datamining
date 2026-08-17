@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
-import set from "set" /* 2 */;
-import OpenCriticTier from "OpenCriticTier" /* 9139 */;
-import metadataDefault from "metadata" /* 9140 */;
-import metadataDefault2 from "metadata" /* 9141 */;
-import metadataDefault3 from "metadata" /* 9142 */;
-import metadataDefault4 from "metadata" /* 9143 */;
+import set from "../../../../_runtime/00002_set.js";
+import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
+import metadataDefault from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
+import metadataDefault2 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
+import metadataDefault3 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
+import metadataDefault4 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
 
 const result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 

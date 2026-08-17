@@ -1,8 +1,8 @@
 // discord_app/modules/badges/BadgeDirectoryActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 
 const require = arg1;
 function urlUserId(arg0) {

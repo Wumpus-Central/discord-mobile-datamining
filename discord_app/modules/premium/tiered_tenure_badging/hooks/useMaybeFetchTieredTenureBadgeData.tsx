@@ -1,7 +1,7 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import { PremiumTypes } from "../../PremiumConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useIsPremiumSubscriber } from "../../useIsPremiumSubscriber.tsx";
 

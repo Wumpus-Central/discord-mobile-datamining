@@ -1,9 +1,9 @@
 // discord_app/modules/guild_member/GuildMemberActionCreators.tsx
-import sendRequest from "sendRequest" /* 530 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import updateImpersonating from "updateImpersonating" /* 6792 */;
-import closure_3 from "initialize" /* 1982 */;
-import { Endpoints } from "ME" /* 676 */;
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
+import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");

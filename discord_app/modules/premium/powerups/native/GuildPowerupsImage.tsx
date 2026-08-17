@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsImage.tsx
-import initialize from "initialize" /* 589 */;
-import preloadDefault from "preload" /* 5449 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8406 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 let closure_5 = createCacheKey.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });

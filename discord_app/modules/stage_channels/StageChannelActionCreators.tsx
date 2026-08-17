@@ -1,20 +1,20 @@
 // discord_app/modules/stage_channels/StageChannelActionCreators.tsx
-import _modDef38 from "module_38" /* 38 */;
-import fromStringAll from "fromString" /* 506 */;
-import sendRequest from "sendRequest" /* 530 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import _modDef4770 from "module_4770" /* 4770 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 4991 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
-import fillChunk from "fillChunk" /* 8063 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import _modDef4770 from "../../actions/ChannelActionCreators.tsx";
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
+import useIsStageSpeakingDisabledForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
+import fillChunk from "StageChannelUtils.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../stores/VoiceStateStore.tsx";
+import ME from "../../Constants.tsx";
+import { SafetyToastType } from "../safety_common/Constants.tsx";
 
 require = arg1;
 function audienceAckRequestToSpeak(channel, suppress) {

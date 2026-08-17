@@ -1,5 +1,5 @@
 // discord_app/modules/oauth2/convertor.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/oauth2/convertor.tsx");
 

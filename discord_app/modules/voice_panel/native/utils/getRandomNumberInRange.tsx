@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/utils/getRandomNumberInRange.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const fn = function n(arg0, arg1) {
   return Math.random() * (arg1 - arg0) + arg0;

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/useMessagePreviews.tsx
-import useIsNsfwGatedDefault from "useIsNsfwGated" /* 8512 */;
-import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 14664 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import useIsNsfwGatedDefault from "../age_gate/useIsNsfwGated.tsx";
+import useLatestChannelMessageDefault from "../message_previews/useLatestChannelMessage.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

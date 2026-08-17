@@ -1,11 +1,11 @@
 // discord_app/modules/age_assurance/native/AgeVerificationEmbeddedIntroScreen.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2853 */;
-import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 6697 */;
-import closure_3 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import messagesProxyDefault from "../AgeAssurance.messages.js";
+import useAgeVerificationMethodsDefault from "../hooks/useAgeVerificationMethods.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { HelpdeskArticles } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

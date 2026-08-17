@@ -1,6 +1,6 @@
 // discord_app/modules/wishlists/experiments/WishlistingNitroExperiment.tsx
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import set from "../../../../_runtime/00002_set.js";
+import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-03-wishlisting-nitro", kind: "user", defaultConfig: { isEnabled: false, isRoadblocksEnabled: false }, variations: { 0: { isEnabled: false, isRoadblocksEnabled: false }, 1: { isEnabled: true, isRoadblocksEnabled: false }, 2: { isEnabled: true, isRoadblocksEnabled: true } } });
 const result = set.fileFinishedImporting("modules/wishlists/experiments/WishlistingNitroExperiment.tsx");

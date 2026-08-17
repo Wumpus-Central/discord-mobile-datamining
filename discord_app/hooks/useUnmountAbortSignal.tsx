@@ -1,6 +1,6 @@
 // discord_app/hooks/useUnmountAbortSignal.tsx
-import set from "set" /* 2 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import set from "../../_runtime/00002_set.js";
+import useInitialValueDefault from "useInitialValue.tsx";
 import { useMountLayoutEffect } from "useMountEffect.tsx";
 
 const result = set.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");

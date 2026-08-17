@@ -1,10 +1,10 @@
 // discord_app/modules/message_request/hooks/useMessageRequestPreview.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "generateOldThreadCutoff" /* 4772 */;
-import closure_6 from "isMessagePreviewEnabledForChannel" /* 11764 */;
-import { Endpoints } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/MessageStore.tsx";
+import closure_5 from "../../../stores/ReadStateStore.tsx";
+import closure_6 from "../MessageRequestPreviewStore.tsx";
+import { Endpoints } from "../../../Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 function loadMessageRequestData() {

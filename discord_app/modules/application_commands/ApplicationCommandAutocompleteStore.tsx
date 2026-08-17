@@ -1,10 +1,10 @@
 // discord_app/modules/application_commands/ApplicationCommandAutocompleteStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_2 from "handleInit" /* 7527 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import closure_2 from "ApplicationCommandStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 

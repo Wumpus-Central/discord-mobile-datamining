@@ -1,6 +1,6 @@
 // discord_app/utils/PremiumTypeUtils.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import set from "../../_runtime/00002_set.js";
+import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
 function isPremiumAtLeast(premiumType, TIER_2) {
   let tmp = null == TIER_2;

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import dispatcherDefault from "../../../../toast/native/ToastActionCreators.tsx";
+import CircleInformationIcon from "../../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import CircleErrorIcon from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx");
 

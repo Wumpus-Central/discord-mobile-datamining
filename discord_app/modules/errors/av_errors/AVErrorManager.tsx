@@ -1,15 +1,15 @@
 // discord_app/modules/errors/av_errors/AVErrorManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import mapped from "mapped" /* 9668 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 17053 */;
-import getCurrentScreenshareCaptureMethod from "getCurrentScreenshareCaptureMethod" /* 17073 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import closure_8 from "isAVErrorContextOfType" /* 12440 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import mapped from "AVError.tsx";
+import ErrorDefinitions from "definitions/index.tsx";
+import getCurrentScreenshareCaptureMethod from "AVErrorAnalytics.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../../stores/VoiceStateStore.tsx";
+import closure_8 from "AVErrorStore.tsx";
 
 require = arg1;
 function setDifference(set, set2) {

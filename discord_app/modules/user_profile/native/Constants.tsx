@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/Constants.tsx
-import set from "set" /* 2 */;
-import Button from "Button" /* 1297 */;
-import ICON_SIZE from "ICON_SIZE" /* 7187 */;
+import set from "../../../../_runtime/00002_set.js";
+import Button from "../../../design/void/native.tsx";
+import ICON_SIZE from "../../../design/components/Icon/IconSize.tsx";
 
 const XXLARGE = Button.AvatarSizes.XXLARGE;
 const tmp2 = Button.AVATAR_SIZE_MAP[XXLARGE];

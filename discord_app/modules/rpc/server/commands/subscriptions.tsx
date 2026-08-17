@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/commands/subscriptions.tsx
-import prototypeDefault from "prototype" /* 8752 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import prototypeDefault from "../../RPCError.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../../Constants.tsx";
 
 const require = arg1;
 ({ AnalyticEvents: c4, RPCCommands, RPCErrors: c5 } = ME);

@@ -1,12 +1,12 @@
 // discord_app/utils/native/ApplicationUtils.tsx
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 506 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import set2 from "set" /* 4375 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
+import set from "../../../_runtime/00002_set.js";
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import ME from "../../Constants.tsx";
+import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import set2 from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import _modDef5260 from "../../actions/ModalActionCreators.tsx";
+import OAUTH2_AUTHORIZE_MODAL_KEY from "../../modules/oauth2/native/Constants.tsx";
 import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
 
 const AnalyticEvents = ME.AnalyticEvents;

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx
-import closure_0 from "noop" /* 19 */;
+import closure_0 from "../../../../../_runtime/00019_noop.js";
 
 function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
   let num = 0;

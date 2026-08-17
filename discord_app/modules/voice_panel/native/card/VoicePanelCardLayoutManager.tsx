@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardLayoutManager.tsx
-import shallowEqualDefault from "shallowEqual" /* 643 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { PixelRatio } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import CARD_SIZE from "CARD_SIZE" /* 11443 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import set from "set" /* 2 */;
+import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { PixelRatio } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../calls/ChannelRTCStore.tsx";
+import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import CARD_SIZE from "VoicePanelCardConstants.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
 const require = arg1;
 function getTargetCardSize(windowWidth) {

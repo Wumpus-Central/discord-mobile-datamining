@@ -1,10 +1,10 @@
 // discord_app/stores/EditMessageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import createEmptyState from "createEmptyState" /* 7439 */;
-import closure_3 from "reinjectEphemerals" /* 4994 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
+import rebuildDefault from "../modules/messages/MessageParser.tsx";
+import createEmptyState from "../modules/channel_text_area/slate/SlateUtils.tsx";
+import closure_3 from "MessageStore.tsx";
 
 require = arg1;
 let closure_4 = {};

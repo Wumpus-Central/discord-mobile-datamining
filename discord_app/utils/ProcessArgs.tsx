@@ -1,6 +1,6 @@
 // discord_app/utils/ProcessArgs.tsx
-import set from "set" /* 2 */;
-import setDefault from "set" /* 4004 */;
+import set from "../../_runtime/00002_set.js";
+import setDefault from "../lib/DiscordNative.tsx";
 
 let prototype;
 prototype = function ProcessArgs() {

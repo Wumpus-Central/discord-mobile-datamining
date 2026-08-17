@@ -1,7 +1,7 @@
 // discord_app/lib/uploadRtcLogFiles.android.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import timestampDefault from "../modules/debug/Logger.tsx";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../Constants.tsx";
 
 const require = arg1;
 function _uploadRtcLogFiles() {

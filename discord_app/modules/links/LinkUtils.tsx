@@ -1,9 +1,9 @@
 // discord_app/modules/links/LinkUtils.tsx
-import setDefault from "set" /* 4362 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import ME from "ME" /* 676 */;
+import setDefault from "../../utils/RegexUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import ME from "../../Constants.tsx";
 
 ME = ME.ME;
 const Permissions = ME.Permissions;

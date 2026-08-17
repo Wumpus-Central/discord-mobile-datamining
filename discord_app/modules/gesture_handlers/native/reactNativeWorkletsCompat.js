@@ -1,6 +1,6 @@
 // discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js
-import set from "set" /* 2 */;
-import _mod4115 from "module_4115" /* 4115 */;
+import set from "../../../../_runtime/00002_set.js";
+import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
 
 const result = set.fileFinishedImporting("modules/gesture_handlers/native/reactNativeWorkletsCompat.js");
 

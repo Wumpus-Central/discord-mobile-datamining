@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/useChatInputHeightWorklet.native.tsx
-import set from "set" /* 500 */;
-import closure_3 from "noop" /* 19 */;
+import set from "../../../utils/PlatformUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_4 = { code: "function useChatInputHeightWorkletNativeTsx1(event){const{contentSize,textFieldHeight,getChatInputHeightAnimationTimingWorklet,textFieldMinHeight}=this.__closure;contentSize.set(event.height);textFieldHeight.set(getChatInputHeightAnimationTimingWorklet(event.height,textFieldMinHeight.get()));}" };

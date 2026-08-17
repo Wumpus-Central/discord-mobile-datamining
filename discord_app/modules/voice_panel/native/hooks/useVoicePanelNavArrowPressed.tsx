@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx
-import closure_2 from "noop" /* 19 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 

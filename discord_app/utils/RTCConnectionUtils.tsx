@@ -1,7 +1,7 @@
 // discord_app/utils/RTCConnectionUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ME from "ME" /* 676 */;
+import set from "../../_runtime/00002_set.js";
+import getSystemLocale from "../intl/index.native.tsx";
+import ME from "../Constants.tsx";
 
 ({ RTCConnectionStates: obj1, ConnectionStatus: c3 } = ME);
 const result = set.fileFinishedImporting("utils/RTCConnectionUtils.tsx");

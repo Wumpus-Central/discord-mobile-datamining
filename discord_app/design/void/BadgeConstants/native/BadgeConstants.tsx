@@ -1,5 +1,5 @@
 // discord_app/design/void/BadgeConstants/native/BadgeConstants.tsx
-import ThemesDefault from "Themes" /* 712 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 const PX_16 = ThemesDefault.space.PX_16;
 const PX_12 = ThemesDefault.space.PX_12;

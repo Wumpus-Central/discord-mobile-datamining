@@ -1,11 +1,11 @@
 // discord_app/design/void/IconPill/native/IconPill.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import _modDef8115 from "module_8115" /* 8115 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import IconSizesDefault from "../../Icon/native/Icon.tsx";
+import _modDef8115 from "../../LegacyText/native/LegacyText.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

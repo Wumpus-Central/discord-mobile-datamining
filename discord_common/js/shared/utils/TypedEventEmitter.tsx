@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/TypedEventEmitter.tsx
-import set from "set" /* 2 */;
-import EventEmitter from "EventEmitter" /* 652 */;
+import set from "../../../../_runtime/00002_set.js";
+import EventEmitter from "../../../../_runtime/00652_EventEmitter.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {

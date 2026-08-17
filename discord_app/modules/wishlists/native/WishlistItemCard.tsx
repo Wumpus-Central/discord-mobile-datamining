@@ -1,11 +1,11 @@
 // discord_app/modules/wishlists/native/WishlistItemCard.tsx
-import noopAll from "noop" /* 19 */;
-import apexExperiment from "apexExperiment" /* 8323 */;
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 10368 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 10370 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 10371 */;
-import { SKUProductLines } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import apexExperiment from "../../slayer_storefront/experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx";
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard.tsx";
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard.tsx";
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard.tsx";
+import { SKUProductLines } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

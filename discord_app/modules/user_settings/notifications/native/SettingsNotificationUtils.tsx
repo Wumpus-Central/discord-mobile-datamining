@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import set from "../../../../../_runtime/00002_set.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
+import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
 

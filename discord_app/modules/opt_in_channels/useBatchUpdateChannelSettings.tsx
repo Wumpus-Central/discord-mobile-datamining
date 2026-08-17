@@ -1,8 +1,8 @@
 // discord_app/modules/opt_in_channels/useBatchUpdateChannelSettings.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "incrementVersion" /* 5270 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { AnalyticsSections } from "ME" /* 676 */;
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/CategoryCollapseStore.tsx";
+import closure_5 from "../../stores/UserGuildSettingsStore.tsx";
+import { AnalyticsSections } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

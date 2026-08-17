@@ -1,7 +1,7 @@
 // discord_app/modules/activities/useIsActivityFocused.tsx
-import sortKey from "sortKey" /* 4777 */;
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "participantFromServer" /* 1390 */;
+import sortKey from "../calls/ChannelRTCParticipants.tsx";
+import closure_2 from "../calls/ChannelRTCStore.tsx";
+import closure_3 from "EmbeddedActivitiesStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

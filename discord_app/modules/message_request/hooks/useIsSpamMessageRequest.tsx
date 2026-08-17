@@ -1,5 +1,5 @@
 // discord_app/modules/message_request/hooks/useIsSpamMessageRequest.tsx
-import closure_2 from "processChannel" /* 4800 */;
+import closure_2 from "../SpamMessageRequestStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

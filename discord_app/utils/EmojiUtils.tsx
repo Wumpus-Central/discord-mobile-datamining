@@ -1,15 +1,15 @@
 // discord_app/utils/EmojiUtils.tsx
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import fit from "fit" /* 1491 */;
-import EmojiTypes from "EmojiTypes" /* 4037 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import getURLDefault from "getURL" /* 7530 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { Permissions } from "ME" /* 676 */;
-import set from "set" /* 1925 */;
+import getAvatarURLDefault from "AvatarUtils.tsx";
+import fit from "ImageUtils.tsx";
+import EmojiTypes from "../modules/emojis/EmojiTypes.tsx";
+import getPremiumPlanItemDefault from "PremiumUtils.tsx";
+import getURLDefault from "EmojiUtilsPlatformed.native.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import closure_6 from "../stores/PermissionStore.tsx";
+import closure_7 from "../stores/UserStore.tsx";
+import { Permissions } from "../Constants.tsx";
+import set from "../modules/emojis/EmojiConstants.tsx";
 
 require = arg1;
 function getEmojiUnavailableReason(intention) {

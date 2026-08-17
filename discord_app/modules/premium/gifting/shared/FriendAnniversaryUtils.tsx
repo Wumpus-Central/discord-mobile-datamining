@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/shared/FriendAnniversaryUtils.tsx
-import set from "set" /* 2 */;
-import _mod3618 from "module_3618" /* 3618 */;
+import set from "../../../../../_runtime/00002_set.js";
+import _mod3618 from "../../../../../_runtime/metro/03618__.js";
 
 const result = set.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
 

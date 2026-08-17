@@ -1,8 +1,8 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createExecutable" /* 4479 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_0 from "../../../records/ApplicationRecord.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_2 = {};

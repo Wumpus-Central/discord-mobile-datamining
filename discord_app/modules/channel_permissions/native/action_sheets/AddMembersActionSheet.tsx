@@ -1,20 +1,20 @@
 // discord_app/modules/channel_permissions/native/action_sheets/AddMembersActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import getRoleRowDataAll from "getRoleRowData" /* 8850 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import RowType from "RowType" /* 8064 */;
-import { Permissions } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import applyOverwritesAll from "../../../../utils/PermissionUtils.tsx";
+import getRoleRowDataAll from "../../ChannelPermissionsUtils.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_6 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_7 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_10 from "../../../../stores/GuildMemberStore.tsx";
+import closure_11 from "../../../../stores/GuildRoleStore.tsx";
+import closure_12 from "../../../../stores/GuildStore.tsx";
+import closure_13 from "../../../../stores/UserStore.tsx";
+import RowType from "../../ChannelPermissionsConstants.tsx";
+import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function _toPropertyKey(obj) {

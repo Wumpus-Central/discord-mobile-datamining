@@ -1,5 +1,5 @@
 // discord_app/modules/calls/CallConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
 obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };

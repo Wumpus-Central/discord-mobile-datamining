@@ -1,10 +1,10 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
-import apexExperiment from "apexExperiment" /* 9629 */;
-import apexExperiment2 from "apexExperiment" /* 9630 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
-import { SubscriptionPlans } from "GuildFeatures" /* 1924 */;
+import apexExperiment from "../../experiments/PremiumGiftingGogoPromotionExperiment.tsx";
+import apexExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../promotions/PromotionsStore.tsx";
+import { SubscriptionPlans } from "../../../PremiumConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");

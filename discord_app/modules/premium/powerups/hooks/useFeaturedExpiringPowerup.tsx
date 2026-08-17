@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../game_server/GameServerStore.tsx";
+import closure_4 from "../GuildPowerupsStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");

@@ -1,8 +1,8 @@
 // discord_app/modules/debug/DebugUploadManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { Endpoints } from "ME" /* 676 */;
+import timestampDefault from "Logger.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
 function _uploadDebugLogFiles() {

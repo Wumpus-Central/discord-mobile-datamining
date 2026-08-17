@@ -1,7 +1,7 @@
 // discord_app/modules/guild_communication_disabled/useUserCommunicationDisabled.tsx
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import isCommunicationDisabled from "CommunicationDisabledUtils.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 

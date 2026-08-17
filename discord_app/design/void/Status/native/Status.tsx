@@ -1,15 +1,15 @@
 // discord_app/design/void/Status/native/Status.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13467 */;
-import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13468 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { STATUS_PADDING } from "STATUS_PADDING" /* 1298 */;
-import { StatusTypes } from "ME" /* 676 */;
-import n from "n" /* 12126 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAnimatedTypingTranslateX from "StatusUtils.tsx";
+import STATUS_PADDINGDefault from "getStatusContainerStyle.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { STATUS_PADDING } from "StatusConstants.tsx";
+import { StatusTypes } from "../../../../Constants.tsx";
+import n from "../../../../modules/main_tabs_v2/native/shared_components/guild_channels/ChannelAnimationConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

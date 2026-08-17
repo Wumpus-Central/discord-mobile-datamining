@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 16397 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 16413 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 16413 */;
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import dismissPanelDefault from "../../VoicePanelStateContext.tsx";
+import useVoicePanelButtonStyles from "VoicePanelStyles.tsx";
+import useSoundboardConfig from "../../hooks/useSoundboardConfig.tsx";
+import useSoundboardConfigDefault from "../../hooks/useSoundboardConfig.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);

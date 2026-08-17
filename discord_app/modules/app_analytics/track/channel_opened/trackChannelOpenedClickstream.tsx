@@ -1,8 +1,8 @@
 // discord_app/modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx
-import isClickstreamEnabled from "isClickstreamEnabled" /* 5057 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
+import isClickstreamEnabled from "../../clickstream/Clickstream.tsx";
+import closure_2 from "../../../../stores/ChannelStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 
 require = arg1;
 ({ ChannelTypes: c3, AnalyticEvents: c4 } = ME);

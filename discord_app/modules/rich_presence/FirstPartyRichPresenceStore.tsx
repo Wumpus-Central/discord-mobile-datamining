@@ -1,8 +1,8 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import handleUpdateActivityDefault from "handleUpdateActivity" /* 7253 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import handleUpdateActivityDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
 
 function updateActivities() {
   items = [];

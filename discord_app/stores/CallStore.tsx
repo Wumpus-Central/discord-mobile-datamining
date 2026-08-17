@@ -1,12 +1,12 @@
 // discord_app/stores/CallStore.tsx
-import applyDefault from "apply" /* 12 */;
-import sendRequest from "sendRequest" /* 530 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
-import { Endpoints } from "ME" /* 676 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "SelectedChannelStore.tsx";
+import closure_5 from "SelectedGuildStore.tsx";
+import { Endpoints } from "../Constants.tsx";
 
 require = arg1;
 function callConnect() {

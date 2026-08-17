@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/VideoQuestModal/captions/VttParser.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 
 const prototype = function VttParserError(arg0, error) {
   tmp = new tmp(arg0, new.target);

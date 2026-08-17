@@ -1,12 +1,12 @@
 // discord_app/design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9120 */;
-import registerAsset2 from "registerAsset" /* 9121 */;
-import registerAsset3 from "registerAsset" /* 9122 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import BaseIconImage from "../../BaseIconImage.tsx";
+import registerAsset from "../../../../../../../_runtime/09120_registerAsset.js";
+import registerAsset2 from "../../../../../../../_runtime/09121_registerAsset.js";
+import registerAsset3 from "../../../../../../../_runtime/09122_registerAsset.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

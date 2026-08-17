@@ -1,14 +1,14 @@
 // discord_app/modules/search/native/components/list/rows/SearchHistoryRow.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { SearchHistoryItemTypes } from "MessageEmbedTypes" /* 8507 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../../stores/ReadStateStore.tsx";
+import closure_8 from "../../../../../../stores/UserStore.tsx";
+import { SearchHistoryItemTypes } from "../../../../SearchConstants.tsx";
+import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function SearchHistoryRemoveIcon(searchContext) {

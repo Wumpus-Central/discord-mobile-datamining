@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/hooks/useSteamWebsiteUrl.tsx
-import closure_2 from "handleLoadMessages" /* 4505 */;
-import { Distributors } from "ME" /* 676 */;
+import closure_2 from "../../games/GameStore.tsx";
+import { Distributors } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

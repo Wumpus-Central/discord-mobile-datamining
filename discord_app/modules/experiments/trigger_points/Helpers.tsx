@@ -1,6 +1,6 @@
 // discord_app/modules/experiments/trigger_points/Helpers.tsx
-import closure_0 from "initialize" /* 1212 */;
-import { CommonTriggerPoints } from "ExperimentBuckets" /* 4289 */;
+import closure_0 from "../apex/ApexExperimentStore.tsx";
+import { CommonTriggerPoints } from "../ExperimentConstants.tsx";
 
 let result = require("set").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {

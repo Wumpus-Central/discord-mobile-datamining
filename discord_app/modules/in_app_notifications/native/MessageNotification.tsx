@@ -1,10 +1,10 @@
 // discord_app/modules/in_app_notifications/native/MessageNotification.tsx
-import NativeMessagePreviewContentDefault from "NativeMessagePreviewContent" /* 10048 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import set from "set" /* 10030 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import NativeMessagePreviewContentDefault from "MessagePreviewText.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import set from "InAppNotificationConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

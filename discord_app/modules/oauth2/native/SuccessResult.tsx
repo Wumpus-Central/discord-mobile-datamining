@@ -1,14 +1,14 @@
 // discord_app/modules/oauth2/native/SuccessResult.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import ME from "ME" /* 676 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/PermissionStore.tsx";
+import closure_9 from "../../../stores/SelectedChannelStore.tsx";
+import ME from "../../../Constants.tsx";
+import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/ChatViewPopups.tsx
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 11822 */;
-import importAllResult from "noop" /* 19 */;
+import useIsHubRealNamePromptShowingDefault from "../../hub/useIsHubRealNamePromptShowing.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 class ChatViewPopups {

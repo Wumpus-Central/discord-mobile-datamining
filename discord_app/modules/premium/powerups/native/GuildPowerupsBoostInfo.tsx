@@ -1,14 +1,14 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 712 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
-import Text from "Text" /* 4734 */;
-import BoostGemIcon from "BoostGemIcon" /* 7979 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 11723 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import getGuildPowerupsBoostInfoText from "../utils/getGuildPowerupsBoostInfoText.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const View = get_ActivityIndicator.View;
 const BoostInfoType = BoostedGuildTiers.BoostInfoType;

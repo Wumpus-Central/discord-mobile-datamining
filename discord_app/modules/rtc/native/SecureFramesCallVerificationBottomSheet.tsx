@@ -1,9 +1,9 @@
 // discord_app/modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9723 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import { AnalyticsSections } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/RTCConnectionStore.tsx";
+import { AnalyticsSections } from "../../../Constants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");

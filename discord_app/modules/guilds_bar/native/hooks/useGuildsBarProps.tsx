@@ -1,20 +1,20 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarProps.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "processChannel" /* 4799 */;
-import closure_7 from "processChannel" /* 4800 */;
-import closure_8 from "getGeoRestrictedGuilds" /* 13294 */;
-import closure_9 from "handleConnectionOpen" /* 4826 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "rebuildUnreads" /* 13302 */;
-import closure_13 from "handleConnectionOpen" /* 4197 */;
-import closure_14 from "insertUnsortedGuilds" /* 5078 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import closure_16 from "withEqualityFn" /* 15547 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../../../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../../../message_request/MessageRequestStore.tsx";
+import closure_7 from "../../../message_request/SpamMessageRequestStore.tsx";
+import closure_8 from "../../../../stores/GeoRestrictedGuildStore.tsx";
+import closure_9 from "../../../../stores/GuildAvailabilityStore.tsx";
+import closure_10 from "../../../../stores/GuildMemberStore.tsx";
+import closure_11 from "../../../../stores/GuildStore.tsx";
+import closure_12 from "../../../../stores/PrivateChannelReadStateStore.tsx";
+import closure_13 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_14 from "../../../../stores/SortedGuildStore.tsx";
+import { GuildsNodeType } from "../../../../stores/SortedGuildStore.tsx";
+import closure_16 from "../GuildsBarDnDStore.tsx";
+import GUILD_ITEM_SIZE from "../GuildsBarConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function findGuildSectionIndex(arg0) {

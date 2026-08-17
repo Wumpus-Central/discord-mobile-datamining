@@ -1,12 +1,12 @@
 // discord_app/modules/search/native/components/layout/SearchBarActivityIcon.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleReaction" /* 4971 */;
-import closure_6 from "prototype" /* 11510 */;
-import { SEARCH_MESSAGE_TAB_SENTINEL as closure_7 } from "MessageEmbedTypes" /* 8507 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { ActivityIndicator } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../SearchMessageStore.tsx";
+import closure_6 from "../../stores/SearchQueryStore.tsx";
+import { SEARCH_MESSAGE_TAB_SENTINEL as closure_7 } from "../../../SearchConstants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

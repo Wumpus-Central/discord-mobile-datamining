@@ -1,7 +1,7 @@
 // discord_app/modules/channel/ChannelInfoActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_handleConnectionOpen" /* 4495 */;
-import closure_3 from "handleConnectionReset" /* 5273 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../gateway/GatewayConnectionStore.tsx";
+import closure_3 from "ChannelStatusStore.tsx";
 
 const result = require("set").fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");
 

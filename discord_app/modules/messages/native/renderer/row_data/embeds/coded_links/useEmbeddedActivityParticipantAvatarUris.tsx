@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import isDiscordFrontendDevelopment from "../../../../../../../utils/GlobalUtils.tsx";
+import closure_2 from "../../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../../../../../../stores/UserStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");

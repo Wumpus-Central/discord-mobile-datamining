@@ -1,14 +1,14 @@
 // discord_app/modules/premium/referral_program/ReferralProgramUtils.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initialize from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8274 */;
-import closure_3 from "emitChanges" /* 7423 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import setDefault from "../../../utils/Durations.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import addVersionedDismissedContent from "../../dismissible_content/DismissibleContentUtils.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import useIsEligibleSenderForReferralProgram from "hooks/useIsEligibleSenderForReferralProgram.tsx";
+import closure_3 from "../ReferralTrialStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");

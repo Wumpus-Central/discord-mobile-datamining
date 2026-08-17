@@ -1,20 +1,20 @@
 // discord_app/components_native/reactions/BurstReactionFirstSendActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import Background from "Background" /* 6950 */;
-import ReactionTypes from "ReactionTypes" /* 7510 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
-import getDeviceSpecificString from "getDeviceSpecificString" /* 7571 */;
-import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7572 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import Button from "../../design/void/native.tsx";
+import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
+import Button2 from "../../design/components/Button/native/Button.native.tsx";
+import Background from "../../design/components/Sheet/native/BottomSheet.native.tsx";
+import ReactionTypes from "../../modules/messages/MessageReactionsTypes.tsx";
+import _generateAnimationSource from "../../modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx";
+import getDeviceSpecificString from "../../modules/intl/overrides/getDeviceSpecificString.tsx";
+import BurstReactionAnimationPreviewDefault from "../../modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function onDismiss() {

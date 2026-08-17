@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountHeader.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import handleOpenEmailVerification from "handleOpenEmailVerification" /* 8624 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14104 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { AnalyticsSections } from "ME" /* 676 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 5430 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import handleOpenEmailVerification from "UserSettingsAccountUnverifiedHeader.tsx";
+import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import { AnalyticsSections } from "../../../../Constants.tsx";
+import { SafetySettingsNoticeType } from "../../../safety_common/Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RestrictedAccountRedirect() {

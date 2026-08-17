@@ -1,7 +1,7 @@
 // discord_app/modules/interaction_components/native/SelectMenuNativeComponent.tsx
-import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15167 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/SelectActionComponentViewNativeComponent.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
 const result = require("set").fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");

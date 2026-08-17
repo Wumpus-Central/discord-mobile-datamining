@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/controller/usePanelOpenState.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "withEqualityFn" /* 8664 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import ME from "ME" /* 676 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../VoicePanelStore.tsx";
+import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
+import ME from "../../../../Constants.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;

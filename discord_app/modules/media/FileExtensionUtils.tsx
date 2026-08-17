@@ -1,6 +1,6 @@
 // discord_app/modules/media/FileExtensionUtils.tsx
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import set from "../../../_runtime/00002_set.js";
+import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 
 let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
 const result = set.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");

@@ -1,13 +1,13 @@
 // discord_app/modules/search/SearchMessageStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import { ChannelTypes } from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import MAX_REACTIONS from "../reactions/ReactionUtils.tsx";
+import V6OrEarlierAPIError from "../../errors/index.tsx";
+import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import { ChannelTypes } from "../../Constants.tsx";
 
 require = arg1;
 function handleReaction(optimistic) {

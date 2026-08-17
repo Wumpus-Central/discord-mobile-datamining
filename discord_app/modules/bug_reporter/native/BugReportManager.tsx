@@ -1,10 +1,10 @@
 // discord_app/modules/bug_reporter/native/BugReportManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "refreshSourceMapCookie" /* 706 */;
-import { InAppNotificationTypes } from "ME" /* 676 */;
-import { NativePermissionStatus } from "NativePermissionStatus" /* 4839 */;
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/DeveloperOptionsStore.tsx";
+import { InAppNotificationTypes } from "../../../Constants.tsx";
+import { NativePermissionStatus } from "../../native_permissions/NativePermissionConstants.tsx";
 
 const require = arg1;
 function showNotification(uri) {

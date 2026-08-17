@@ -1,10 +1,10 @@
 // discord_app/modules/emojis/records/ExpressionSourceRecord.tsx
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import areSetsEqual from "areSetsEqual" /* 1433 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import toJSDefault from "toJS" /* 1931 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import fromGuildPropertiesWithAdditionalFields from "../../../utils/GuildRecordUtils.tsx";
+import areSetsEqual from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import toJSDefault from "../../../lib/Record.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 function getEmojiSourceData() {

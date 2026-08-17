@@ -1,10 +1,10 @@
 // discord_app/components_native/premium/GiftPurchaseButton.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4045 */;
-import closure_7 from "updateProduct" /* 5319 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_7 from "../../stores/native/IAPStore.android.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("components_native/premium/GiftPurchaseButton.tsx");

@@ -1,21 +1,21 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx
-import initialize from "initialize" /* 589 */;
-import keys from "keys" /* 691 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import componentDidMountDefault2 from "componentDidMount" /* 13055 */;
-import _mod13056 from "module_13056" /* 13056 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import { Gradients } from "items" /* 7403 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import keys from "../../../ConstantsIOS.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import componentDidMountDefault from "../../common/Alert.tsx";
+import componentDidMountDefault2 from "../../common/SequencedLottieAnimationView.tsx";
+import _mod13056 from "../../../../_runtime/metro/13056__.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import { Gradients } from "../../../modules/colors/native/ColorConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class PremiumPaymentGuildAnimation {

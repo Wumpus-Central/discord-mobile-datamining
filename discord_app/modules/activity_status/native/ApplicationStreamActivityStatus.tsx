@@ -1,9 +1,9 @@
 // discord_app/modules/activity_status/native/ApplicationStreamActivityStatus.tsx
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 9898 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 9901 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
+import ActivityStatusTextDefault from "ActivityStatusText.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

@@ -1,15 +1,15 @@
 // discord_app/modules/forums/native/composer/ForumComposerModal.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 10046 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_9 from "map" /* 4824 */;
-import closure_10 from "handleLoadThreadsSuccess" /* 7239 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../native_menu/native/NativeMenuStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/DraftStore.tsx";
+import { DraftType } from "../../../../stores/DraftStore.tsx";
+import closure_9 from "../../../../stores/UploadAttachmentStore.tsx";
+import closure_10 from "../../ForumPostMessagesStore.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_home/native/components/GuildFeedBanner.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 13428 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_FEED_CARD_MARGIN_HORIZONTAL from "GUILD_FEED_CARD_MARGIN_HORIZONTAL" /* 15809 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../guild_profile/GuildPopoutStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import GUILD_FEED_CARD_MARGIN_HORIZONTAL from "../GuildFeedConstants.tsx";
+import { GuildFeatures } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function GuildFeedBanner(guild) {

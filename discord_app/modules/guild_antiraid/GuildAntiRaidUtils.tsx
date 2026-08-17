@@ -1,9 +1,9 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidUtils.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import GuildIncidentActionSources from "GuildIncidentActionSources" /* 8236 */;
-import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 */;
+import set from "../../../_runtime/00002_set.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import tDefault from "../../../_runtime/03975_t.js";
+import GuildIncidentActionSources from "GuildAntiRaidTypes.tsx";
+import GUILD_REPORT_RAID_MOBILE_KEY from "GuildAntiRaidConstants.tsx";
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: c4, getTimeframes: c5 } = GUILD_REPORT_RAID_MOBILE_KEY);
 let obj = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };

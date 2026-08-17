@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/RedesignChannelListConstants.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import map from "map" /* 9288 */;
-import PlatformTypes from "PlatformTypes" /* 501 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
 let c2 = "text-xs/medium";
 let num = 20;

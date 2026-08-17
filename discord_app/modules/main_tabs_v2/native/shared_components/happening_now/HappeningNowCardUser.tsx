@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { HappeningNowCardTrackingType as closure_7 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
+import { HappeningNowCardTrackingType as closure_7 } from "HappeningNowConstants.tsx";
+import { AnalyticEvents } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;

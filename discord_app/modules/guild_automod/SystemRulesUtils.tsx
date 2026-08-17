@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/SystemRulesUtils.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let set = new Set(["1030554520465440818"]);
 const result = set.fileFinishedImporting("modules/guild_automod/SystemRulesUtils.tsx");

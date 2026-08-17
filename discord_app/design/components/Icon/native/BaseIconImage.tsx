@@ -1,8 +1,8 @@
 // discord_app/design/components/Icon/native/BaseIconImage.tsx
-import noopAll from "noop" /* 19 */;
-import map from "map" /* 4097 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import map from "../../../tokens/native/useToken.tsx";
+import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

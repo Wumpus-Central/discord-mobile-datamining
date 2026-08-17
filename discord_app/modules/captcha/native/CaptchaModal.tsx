@@ -1,17 +1,17 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
-import Background from "Background" /* 6950 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import createStandardNavigationFactories from "../../../../_runtime/01501_createStandardNavigationFactories.js";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
+import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { doesRegistrationHaveIdentityType as closure_6 } from "../../auth/native/RegistrationUIStore.tsx";
+import RegistrationTransitionActionTypes from "../../auth/RegistrationConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ Keyboard: c4, View: c5 } = get_ActivityIndicator);

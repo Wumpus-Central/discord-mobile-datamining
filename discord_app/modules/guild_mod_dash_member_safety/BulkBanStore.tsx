@@ -1,8 +1,8 @@
 // discord_app/modules/guild_mod_dash_member_safety/BulkBanStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../stores/AuthenticationStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let set = new Set();
 const set1 = new Set();

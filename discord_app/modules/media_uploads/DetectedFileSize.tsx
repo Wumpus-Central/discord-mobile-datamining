@@ -1,5 +1,5 @@
 // discord_app/modules/media_uploads/DetectedFileSize.tsx
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _getDetectedFileSize() {
   const self = this;

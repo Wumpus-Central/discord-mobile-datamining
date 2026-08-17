@@ -1,6 +1,6 @@
 // discord_app/modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx
-import closure_2 from "initialize" /* 4022 */;
-import { JoinGuildSources } from "ME" /* 676 */;
+import closure_2 from "../LurkingStore.tsx";
+import { JoinGuildSources } from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

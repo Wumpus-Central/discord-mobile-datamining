@@ -1,16 +1,16 @@
 // discord_app/modules/auth/native/components/RegisterAgeGate.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "hasConsented" /* 5258 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
-import { AuthStates } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "t" /* 3975 */;
-import subtractResult from "module_100" /* 100 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/ConsentStore.tsx";
+import useRegistrationUIStore from "../RegistrationUIStore.tsx";
+import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
+import { AuthStates } from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../../_runtime/03975_t.js";
+import subtractResult from "../../../../../_runtime/00100_getConstants.js";
 
 const require = arg1;
 ({ updateRegistrationOptions: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);

@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/FrecencyUserSettingsManager.tsx
-import setDefault from "set" /* 687 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 8450 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 8449 */;
-import closure_6 from "getEmojiToGroupId" /* 6727 */;
-import closure_7 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_8 from "handleStickersStoreUpdate" /* 6768 */;
-import closure_9 from "handleChannelSelect" /* 6772 */;
-import { MAX_NUM_SELECTED_ITEMS } from "handleChannelSelect" /* 6772 */;
-import closure_11 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
-import { FREQUENCY_ITEM_LIMIT } from "ApplicationTypes" /* 4482 */;
+import setDefault from "../../utils/Durations.tsx";
+import updateUserGuildSettings from "UserSettingsProtoActionCreators.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../application_commands/ApplicationCommandFrecencyStore.tsx";
+import closure_5 from "../applications/ApplicationFrecencyStore.tsx";
+import closure_6 from "../emojis/EmojiStore.tsx";
+import closure_7 from "../soundboard/SoundboardStore.tsx";
+import closure_8 from "../stickers/StickersPersistedStore.tsx";
+import closure_9 from "../../stores/FrecencyStore.tsx";
+import { MAX_NUM_SELECTED_ITEMS } from "../../stores/FrecencyStore.tsx";
+import closure_11 from "UserSettingsProtoStore.tsx";
+import { UserSettingsTypes } from "UserSettingsConstants.tsx";
+import { FREQUENCY_ITEM_LIMIT } from "../applications/ApplicationConstants.tsx";
 
 require = arg1;
 function handleConnectionOpen() {

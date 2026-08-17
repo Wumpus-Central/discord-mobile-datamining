@@ -1,7 +1,7 @@
 // discord_app/lib/uploader/UploaderQueue.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import set from "../../../_runtime/00002_set.js";
 
 let closure_1 = new timestampDefault("UploaderQueue.tsx");
 class UploaderQueue {

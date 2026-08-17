@@ -1,8 +1,8 @@
 // discord_app/utils/HelpdeskUtils.tsx
-import set from "set" /* 500 */;
-import getLocalizedLinkDefault from "getLocalizedLink" /* 4005 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import ME from "ME" /* 676 */;
+import set from "PlatformUtils.tsx";
+import getLocalizedLinkDefault from "../modules/links/getLocalizedLink.tsx";
+import closure_3 from "../modules/user_settings/LocaleStore.tsx";
+import ME from "../Constants.tsx";
 
 require = arg1;
 const LocalizedLinks = ME.LocalizedLinks;

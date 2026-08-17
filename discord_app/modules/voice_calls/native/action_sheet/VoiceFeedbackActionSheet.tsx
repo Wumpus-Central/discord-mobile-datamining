@@ -1,11 +1,11 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx
-import noopAll from "noop" /* 19 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import messagesProxyDefault from "messagesProxy" /* 2565 */;
-import closeActionSheetDefault from "closeActionSheet" /* 16566 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import FeedbackRating from "FeedbackRating" /* 10811 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import messagesProxyDefault from "../../../feedback/intl/Feedback.messages.js";
+import closeActionSheetDefault from "../../../feedback/native/FeedbackActionSheetV2.tsx";
+import { AnalyticEvents } from "../../../../Constants.tsx";
+import FeedbackRating from "../../../feedback/Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function trackOpen() {

@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/native/VideoUploadUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import set from "../../../../_runtime/00002_set.js";
+import timestampDefault from "../../debug/Logger.tsx";
+import CHANNEL_SIDEBAR_WIDTH from "../../user_settings/UnsyncedUserSettingsStore.tsx";
 
 const VideoCompressionQuality = CHANNEL_SIDEBAR_WIDTH.VideoCompressionQuality;
 let closure_1 = new timestampDefault("VideoUploadUtils.tsx");

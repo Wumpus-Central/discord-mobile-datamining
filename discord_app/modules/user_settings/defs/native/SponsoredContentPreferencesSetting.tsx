@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/SponsoredContentPreferencesSetting.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2041 */;
-import QuestsIcon from "QuestsIcon" /* 14351 */;
-import apexExperiment from "apexExperiment" /* 14999 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../ads/SponsoredContentPreferences.messages.js";
+import QuestsIcon from "../../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
+import apexExperiment from "../../../ads/AdTopicOptOutClientExperiment.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SponsoredContentPreferencesScreen } from "../../privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx";
 
 obj = {

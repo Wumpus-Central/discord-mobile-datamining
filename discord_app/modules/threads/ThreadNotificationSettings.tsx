@@ -1,10 +1,10 @@
 // discord_app/modules/threads/ThreadNotificationSettings.tsx
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_4 from "storeThread" /* 4023 */;
-import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
+import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_4 from "JoinedThreadsStore.tsx";
+import { ThreadMemberFlags } from "ThreadConstants.tsx";
+import { UserNotificationSettings } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

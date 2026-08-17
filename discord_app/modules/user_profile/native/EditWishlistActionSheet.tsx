@@ -1,21 +1,21 @@
 // discord_app/modules/user_profile/native/EditWishlistActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "get" /* 9186 */;
-import { getWishlistProductLines } from "fromServer" /* 9187 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "createUserWidgetFromServer" /* 5365 */;
-import { TrackUserProfileWishlistActions as closure_12 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import { LinearTransition } from "module_4115" /* 4115 */;
-import closure_17 from "module_300" /* 300 */;
-import dampingResult from "module_100" /* 100 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CONFIG_NEVER_ANIMATE_TIMING from "../../../design/animation/reanimated/timing/timing.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../a11y/AccessibilityStore.tsx";
+import closure_8 from "../../wishlists/WishlistStore.tsx";
+import { getWishlistProductLines } from "../../wishlists/records/WishlistRecord.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
+import closure_11 from "../UserProfileStore.tsx";
+import { TrackUserProfileWishlistActions as closure_12 } from "../Constants.tsx";
+import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { LinearTransition } from "../../reanimated/ReanimatedRexport.tsx";
+import closure_17 from "../../../../_runtime/00300_get_BatchedBridge.js";
+import dampingResult from "../../../../_runtime/00100_getConstants.js";
 
 require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);

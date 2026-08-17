@@ -1,7 +1,7 @@
 // discord_app/modules/badges/BadgeIdResolution.tsx
-import BadgeId from "BadgeId" /* 8932 */;
-import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8938 */;
-import set from "set" /* 2 */;
+import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import LEGACY_BADGE_ID_MAP from "../../../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let set = new Set(Object.values(LEGACY_BADGE_ID_MAP.LEGACY_BADGE_ID_MAP));
 const result = set.fileFinishedImporting("modules/badges/BadgeIdResolution.tsx");

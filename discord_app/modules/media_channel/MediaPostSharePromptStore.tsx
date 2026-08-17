@@ -1,12 +1,12 @@
 // discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8167 */;
-import closure_3 from "isSubscriptionGated" /* 1981 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost.tsx";
+import closure_3 from "../channel/GatedChannelStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let set = new Set();

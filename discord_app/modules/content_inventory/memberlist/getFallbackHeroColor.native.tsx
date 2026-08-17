@@ -1,6 +1,6 @@
 // discord_app/modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 const result = set.fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
 

@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/client_override_hooks/useApexExperiments.tsx
-import create from "create" /* 4367 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import closure_5 from "initialize" /* 1212 */;
+import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../apex/ApexExperimentStore.tsx";
 
 require = arg1;
 function makeClientVariant(id) {

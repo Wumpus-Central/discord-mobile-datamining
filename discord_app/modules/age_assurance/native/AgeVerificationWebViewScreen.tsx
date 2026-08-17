@@ -1,13 +1,13 @@
 // discord_app/modules/age_assurance/native/AgeVerificationWebViewScreen.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AGE_VERIFICATION_MODAL_KEY as closure_6 } from "set" /* 5427 */;
-import AGE_VERIFICATION_INCODE_PATH from "AGE_VERIFICATION_INCODE_PATH" /* 5429 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { AGE_VERIFICATION_MODAL_KEY as closure_6 } from "../AgeVerificationConstants.tsx";
+import AGE_VERIFICATION_INCODE_PATH from "../AgeVerificationIncodeWebViewConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ AgeVerificationIncodeResultStatus: error, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: c9 } = AGE_VERIFICATION_INCODE_PATH);

@@ -1,8 +1,8 @@
 // discord_app/modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../stores/SelectedChannelStore.tsx";
 
 const require = arg1;
 function _joinOrStartActivityInChannel() {

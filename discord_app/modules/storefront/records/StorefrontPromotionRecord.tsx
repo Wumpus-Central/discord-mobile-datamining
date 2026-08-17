@@ -1,6 +1,6 @@
 // discord_app/modules/storefront/records/StorefrontPromotionRecord.tsx
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "_slicedToArray" /* 32 */;
+import toJSDefault from "../../../lib/Record.tsx";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 function parseSkuIds(sku_ids) {
   if (null == sku_ids) {

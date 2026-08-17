@@ -1,26 +1,26 @@
 // discord_app/modules/forums/native/ForumChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 7919 */;
-import useGradientBottom from "useGradientBottom" /* 8501 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleChanged" /* 4825 */;
-import closure_9 from "recomputeGuild" /* 4977 */;
-import { useForumChannelStore } from "set" /* 11177 */;
-import ME from "ME" /* 676 */;
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
-import { Fonts } from "sum" /* 505 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
-import set from "set" /* 500 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../_runtime/07919_registerAsset.js";
+import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../../threads/ActiveThreadsStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/DraftStore.tsx";
+import closure_9 from "../../../stores/GuildVerificationStore.tsx";
+import { useForumChannelStore } from "../ForumChannelStore.tsx";
+import ME from "../../../Constants.tsx";
+import { ANDROID_FOREGROUND_RIPPLE } from "../../../design/void/Form/native/FormConstants.tsx";
+import { Fonts } from "../../../../discord_common/js/shared/Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function forumKeyExtractor(arg0, arg1) {

@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import noopAll from "noop" /* 19 */;
-import chunkDefault from "chunk" /* 9420 */;
-import GappedList from "GappedList" /* 9422 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import chunkDefault from "../../../../../../_runtime/09420_chunk.js";
+import GappedList from "../LayoutUtils.tsx";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

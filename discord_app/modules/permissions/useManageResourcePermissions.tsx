@@ -1,11 +1,11 @@
 // discord_app/modules/permissions/useManageResourcePermissions.tsx
-import fromStringAll from "fromString" /* 506 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8838 */;
-import { Permissions } from "sum" /* 505 */;
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import VIEW_CHANNEL from "../guild_scheduled_events/PermissionsConstants.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 
 const require = arg1;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/utils/GiftAnimationData.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 8294 */;
+import set from "../../../../../_runtime/00002_set.js";
+import GuildFeatures from "../../PremiumConstants.tsx";
+import _sendGiftMessage from "../../PremiumGiftingUtils.tsx";
 
 const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };

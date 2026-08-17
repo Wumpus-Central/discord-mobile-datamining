@@ -1,14 +1,14 @@
 // discord_app/modules/app_icons/native/AppIconsCoachmark.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import registerAssetDefault from "registerAsset" /* 9397 */;
-import registerAssetDefault2 from "registerAsset" /* 16143 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import registerAssetDefault from "../../../../_runtime/09397_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16143_registerAsset.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/UserStore.tsx";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
 // discord_app/modules/bug_reporter/native/BugReportUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function uriScheme(str) {

@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10765 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 12603 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import UserSummaryItemDefault from "../../../../components_native/common/UserSummaryItem.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import useActiveSpeakerPillScrollHandler from "../StageChannelListStore.tsx";
 
 const require = arg1;
 ({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));

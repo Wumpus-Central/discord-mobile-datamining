@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelIconButton.tsx
-import IconButton from "IconButton" /* 8035 */;
-import setDefault from "set" /* 8125 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import setDefault from "../../../core/native/ReanimatedNativeView.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVariant, ref) => {

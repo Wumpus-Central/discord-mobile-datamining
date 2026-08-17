@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/useCanSpeakInChannel.tsx
-import initialize from "initialize" /* 589 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");

@@ -1,13 +1,13 @@
 // discord_app/design/void/Avatar/native/Avatar.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getDecorationSizeForAvatarSize from "getDecorationSizeForAvatarSize" /* 8367 */;
-import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12125 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { StatusTypes } from "ME" /* 676 */;
-import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getDecorationSizeForAvatarSize from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
+import StaticNativeCutoutAvatarImage from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { StatusTypes } from "../../../../Constants.tsx";
+import STATUS_PADDING from "../../Status/native/StatusConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function getStatusSize(arg0) {

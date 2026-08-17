@@ -1,8 +1,8 @@
 // discord_app/utils/SnowflakeUtils.tsx
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import extractTimestamp from "extractTimestamp" /* 13 */;
-import extractTimestampAll from "extractTimestamp" /* 13 */;
+import set from "../../_runtime/00002_set.js";
+import applyDefault from "../../_runtime/00012_apply.js";
+import extractTimestamp from "../../discord_common/js/shared/utils/SnowflakeUtils.tsx";
+import extractTimestampAll from "../../discord_common/js/shared/utils/SnowflakeUtils.tsx";
 
 const result = set.fileFinishedImporting("utils/SnowflakeUtils.tsx");
 

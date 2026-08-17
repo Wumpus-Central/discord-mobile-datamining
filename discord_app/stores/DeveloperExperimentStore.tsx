@@ -1,11 +1,11 @@
 // discord_app/stores/DeveloperExperimentStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import validatePremiumType from "validatePremiumType" /* 1928 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { ExperimentBuckets } from "ExperimentBuckets" /* 4289 */;
-import { Environments } from "Environments" /* 1929 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import validatePremiumType from "../modules/user/UserStoreUtils.tsx";
+import closure_2 from "GuildStore.tsx";
+import closure_3 from "UserStore.tsx";
+import { ExperimentBuckets } from "../modules/experiments/ExperimentConstants.tsx";
+import { Environments } from "../modules/user/UserStoreConstants.tsx";
 
 require = arg1;
 let tmp2 = "production" === Environments.DEVELOPMENT;

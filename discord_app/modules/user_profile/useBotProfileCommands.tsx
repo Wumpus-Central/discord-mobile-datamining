@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/useBotProfileCommands.tsx
-import findCommandInSectionAll from "findCommandInSection" /* 9555 */;
-import closure_3 from "noop" /* 19 */;
+import findCommandInSectionAll from "../application_commands/ApplicationCommandQueryApi.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");

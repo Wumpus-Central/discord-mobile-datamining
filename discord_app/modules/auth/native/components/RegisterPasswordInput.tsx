@@ -1,16 +1,16 @@
 // discord_app/modules/auth/native/components/RegisterPasswordInput.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import PasswordScore from "PasswordScore" /* 15236 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_7 from "handleSetLocationMetadata" /* 8581 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4115" /* 4115 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PasswordScore from "utils/usePasswordScore.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import closure_7 from "../../../phone/PhoneStore.tsx";
+import useRegistrationUIStore from "../RegistrationUIStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { FadeIn, FadeOut, LinearTransition, Easing } from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function PasswordStrength(passwordScore) {

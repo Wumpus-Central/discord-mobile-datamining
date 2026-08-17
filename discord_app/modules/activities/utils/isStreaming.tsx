@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/isStreaming.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import items3 from "../Constants.tsx";
 
 function _isStreaming(type) {
   let tmp = type.type === ActivityTypes.STREAMING;

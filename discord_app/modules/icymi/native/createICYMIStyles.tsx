@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/createICYMIStyles.tsx
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { createCacheKey } from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;

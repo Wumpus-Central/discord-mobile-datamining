@@ -1,7 +1,7 @@
 // discord_app/modules/applications/message_embed/native/createActivityMessageEmbed.tsx
-import set from "set" /* 2 */;
-import createAppMessageEmbed from "createAppMessageEmbed" /* 11126 */;
-import fetchCustomActivityLink from "fetchCustomActivityLink" /* 12411 */;
+import set from "../../../../../_runtime/00002_set.js";
+import createAppMessageEmbed from "createAppMessageEmbed.tsx";
+import fetchCustomActivityLink from "../../../activities/utils/CustomActivityLinkUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 

@@ -1,7 +1,7 @@
 // discord_common/js/packages/kv-storage/js/api/Table.tsx
-import combineKey from "combineKey" /* 1961 */;
-import TableId from "TableId" /* 1962 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import combineKey from "../util/Key.tsx";
+import TableId from "../types/index.tsx";
+import closure_2 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = arg1;
 let TableTransaction;

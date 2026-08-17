@@ -1,11 +1,11 @@
 // discord_app/modules/channel_list_v2/native/components/StaticChannelIndicator.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import ReadStateTypes from "ReadStateTypes" /* 5044 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import ReadStateTypes from "../../../read_states/ReadStateConstants.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const UnreadSetting = ReadStateTypes.UnreadSetting;

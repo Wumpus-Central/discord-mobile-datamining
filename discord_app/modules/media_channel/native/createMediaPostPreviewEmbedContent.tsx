@@ -1,16 +1,16 @@
 // discord_app/modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getMediaPostEmbedCommonData from "getMediaPostEmbedCommonData" /* 4982 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import getMediaPostEmbed from "getMediaPostEmbed" /* 10639 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getUserAgnosticState" /* 4737 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleConnectionOpen" /* 4197 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "getMediaPostEmbed" /* 10639 */;
+import set from "../../../../_runtime/00002_set.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getMediaPostEmbedCommonData from "../MediaPostEmbedUtils.tsx";
+import formatUsernameOnClickDefault from "../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx";
+import getMediaPostEmbed from "../MediaPostEmbedStore.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import closure_8 from "../../../stores/SelectedGuildStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import closure_10 from "../MediaPostEmbedStore.tsx";
 
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
 const FetchState = getMediaPostEmbed.FetchState;

@@ -1,17 +1,17 @@
 // discord_app/modules/content_inventory/ContentInventoryActivityImageUtils.tsx
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import items3 from "items3" /* 4481 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9051 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 12097 */;
-import isOnXboxDefault from "isOnXbox" /* 12099 */;
-import closure_4 from "addApplication" /* 4478 */;
-import ME from "ME" /* 676 */;
+import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import items3 from "../activities/Constants.tsx";
+import importDefaultResult1 from "../games/hooks/useGame.tsx";
+import useGetOrFetchApplications from "../applications/useGetOrFetchApplications.tsx";
+import unpackStageChannelParty from "../stage_channels/StageChannelRichPresenceUtils.tsx";
+import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication.tsx";
+import isOnXboxDefault from "../activities/utils/isOnXbox.tsx";
+import closure_4 from "../applications/ApplicationStore.tsx";
+import ME from "../../Constants.tsx";
 
 function useComputedImagesForActivity(activity, getIconURL) {
   ({ largeImage, smallImage } = useRichImageForActivity(activity, getIconURL));

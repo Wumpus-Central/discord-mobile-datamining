@@ -1,7 +1,7 @@
 // discord_common/js/packages/libdiscore/mobile/js/index.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import typedGlobal from "typedGlobal" /* 1919 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import typedGlobal from "global_types.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (NativeModules.LibDiscoreModule) {

@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherFlashList.tsx
-import context from "context" /* 11280 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import context from "../../../voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let forwardRefResult = importAllResult.forwardRef((simultaneousHandlers) => {

@@ -1,13 +1,13 @@
 // discord_app/modules/action_sheet/native/components/EmojiRow.tsx
-import noopAll from "noop" /* 19 */;
-import map from "map" /* 4097 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 10894 */;
-import EmojiPickerRowButton from "EmojiPickerRowButton" /* 10895 */;
-import DoubleTapEmojiEditNudgeInner from "DoubleTapEmojiEditNudgeInner" /* 10896 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import useEmojisForReactionRow from "../../../reactions/native/useEmojisForReactionRow.tsx";
+import EmojiPickerRowButton from "../../../reactions/native/EmojiReactionRowButton.tsx";
+import DoubleTapEmojiEditNudgeInner from "../../../double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ACTION_SHEET_MAX_WIDTH } from "../ActionSheetConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

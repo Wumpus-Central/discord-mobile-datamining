@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import items2 from "items" /* 4483 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import Button from "Button" /* 1297 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ME from "../../../../Constants.tsx";
+import items2 from "../../../user_application_identity/UserApplicationIdentityConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Button from "../../../../design/void/native.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 

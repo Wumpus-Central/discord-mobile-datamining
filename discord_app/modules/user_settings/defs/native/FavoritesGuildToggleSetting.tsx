@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import getNextPositionFromChannels from "getNextPositionFromChannels" /* 9978 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import computeIsFavoritesGuildVisibleDefault from "computeIsFavoritesGuildVisible" /* 14671 */;
-import createToggle from "createToggle" /* 10669 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../../../favorites/intl/FavoritesGuild.messages.js";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import getNextPositionFromChannels from "../../../favorites/FavoritesActionCreators.tsx";
+import useFavoritesAccess from "../../../favorites/FavoritesHooks.tsx";
+import computeIsFavoritesGuildVisibleDefault from "../../../favorites/hooks/useIsFavoritesGuildVisible.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {

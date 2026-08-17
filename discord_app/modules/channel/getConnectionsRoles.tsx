@@ -1,8 +1,8 @@
 // discord_app/modules/channel/getConnectionsRoles.tsx
-import closure_2 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
+import closure_2 from "../../stores/GuildRoleStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import ME from "../../Constants.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 ({ ChannelTypes, Permissions } = ME);
 let items = [, , , , , ];

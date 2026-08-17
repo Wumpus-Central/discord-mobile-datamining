@@ -1,9 +1,9 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "map" /* 8527 */;
-import { setInitialVerification } from "map" /* 8527 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "InitialMemberVerificationStore.tsx";
+import { setInitialVerification } from "InitialMemberVerificationStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;

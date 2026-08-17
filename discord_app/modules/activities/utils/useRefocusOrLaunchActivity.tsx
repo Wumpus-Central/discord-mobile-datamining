@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/useRefocusOrLaunchActivity.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "map" /* 8708 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../frames/FramesStore.tsx";
+import closure_6 from "../EmbeddedActivitiesStore.tsx";
+import FrameLayoutModes from "../../frames/FramesConstants.tsx";
 
 const require = arg1;
 ({ MAIN_SURFACE: error, FrameLayoutModes: closure_8 } = FrameLayoutModes);

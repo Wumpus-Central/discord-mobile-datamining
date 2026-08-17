@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/QuestModalContentCloudBackground.tsx
-import noopAll from "noop" /* 19 */;
-import isThemeLight from "isThemeLight" /* 1364 */;
-import useTheme from "useTheme" /* 4310 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import preloadDefault from "preload" /* 5449 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import isThemeLight from "../../../design/utils/shared/themes.tsx";
+import useTheme from "../../../hooks/useTheme.tsx";
+import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

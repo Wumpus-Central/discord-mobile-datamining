@@ -1,25 +1,25 @@
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx
-import noopAll from "noop" /* 19 */;
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import preloadDefault from "preload" /* 5449 */;
-import RoleIconDefault from "RoleIcon" /* 7165 */;
-import registerAssetDefault from "registerAsset" /* 8338 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import noopAll from "../../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import nameFromUserDefault from "../../../../../utils/UserUtils.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import useMountLayoutEffectDefault from "../../../../../hooks/useMountEffect.tsx";
+import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
+import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08338_registerAsset.js";
+import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../../../stores/UserStore.tsx";
+import ME from "../../../../../Constants.tsx";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import importDefaultResult from "../../../../rebrand/native/TextStyles.tsx";
 
 require = arg1;
 function HorizontalAutocompleteOption(arg0) {

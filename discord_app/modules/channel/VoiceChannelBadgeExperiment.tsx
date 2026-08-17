@@ -1,7 +1,7 @@
 // discord_app/modules/channel/VoiceChannelBadgeExperiment.tsx
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import set from "../../../_runtime/00002_set.js";
+import ExperimentBuckets from "../experiments/ExperimentConstants.tsx";
+import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 0, label: "Control", config: { enabled: false } }, { id: 1, label: "Show voice badges", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: items });

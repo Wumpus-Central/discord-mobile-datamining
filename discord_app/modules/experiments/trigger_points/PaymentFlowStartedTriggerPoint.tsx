@@ -1,9 +1,9 @@
 // discord_app/modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 7660 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import ExperimentBuckets from "../ExperimentConstants.tsx";
+import registeredExperimentIds from "Helpers.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });

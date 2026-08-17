@@ -1,20 +1,20 @@
 // discord_app/modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 1297 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import Text from "Text" /* 4734 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8387 */;
-import registerAssetDefault from "registerAsset" /* 8397 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
+import registerAssetDefault from "../../../../_runtime/08397_registerAsset.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../stores/UserStore.tsx";
+import { CollectiblesMobileShopScreen as closure_6 } from "../CollectiblesShopConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class EditCollectibleListItem {

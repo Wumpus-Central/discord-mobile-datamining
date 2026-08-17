@@ -1,10 +1,10 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import PlatformTypes from "PlatformTypes" /* 5220 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 676 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import AccessibilityAnnouncer from "../../design/shared.tsx";
+import getPlatformUserUrlDefault from "../../lib/Platforms.tsx";
+import PlatformTypes from "../connections/ConnectionsHooks.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import { Endpoints } from "../../Constants.tsx";
 
 require = arg1;
 function createFetchKeys(arg0, arr) {

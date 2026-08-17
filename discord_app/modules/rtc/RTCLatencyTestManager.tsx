@@ -1,10 +1,10 @@
 // discord_app/modules/rtc/RTCLatencyTestManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "initialize" /* 4565 */;
-import { Features } from "DesktopSources" /* 4529 */;
+import timestampDefault from "../debug/Logger.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/RTCRegionStore.tsx";
+import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 let require = arg1;
 const SECOND = setDefault.Millis.SECOND;

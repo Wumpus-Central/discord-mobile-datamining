@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useEnsureHydratedUsers.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionReset" /* 6704 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../stores/GuildMemberRequesterStore.tsx";
+import closure_4 from "../../../../../stores/UserStore.tsx";
 import { subscribeGuildMembers } from "../../../../../lib/guild/subscribeGuildMembers.tsx";
 
 const require = arg1;

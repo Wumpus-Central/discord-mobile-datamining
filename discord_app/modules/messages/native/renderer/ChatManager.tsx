@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/ChatManager.tsx
-import set from "set" /* 2 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 10731 */;
-import Changeset from "Changeset" /* 8158 */;
+import set from "../../../../../_runtime/00002_set.js";
+import isUndefinedOrNullDefault from "../../../../../_runtime/00659_isUndefinedOrNull.js";
+import getEmbeddedActivityKeyDefault from "../getEmbeddedActivityKey.tsx";
+import Changeset from "RowGeneratorConstants.tsx";
 
 ({ Changeset: obj1, RowType: c3 } = Changeset);
 const result = set.fileFinishedImporting("modules/messages/native/renderer/ChatManager.tsx");

@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/native/components/BlankAudienceTile.tsx
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import RaisedHandIcon from "RaisedHandIcon" /* 12625 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
+import RaisedHandIcon from "AudienceTile.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 const memoResult = importAllResult.memo(() => {

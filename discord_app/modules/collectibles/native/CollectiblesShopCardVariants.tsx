@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardVariants.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6933 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 9243 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9261 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9262 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import getProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
+import useIsVariantColorLightDefault from "../hooks/useIsVariantColorLight.tsx";
+import PlusSmallIcon from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 function VariantOption(variant) {

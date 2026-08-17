@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
-import compactDefault from "compact" /* 9244 */;
-import closure_3 from "map" /* 5324 */;
+import compactDefault from "../../../../_runtime/09244_compact.js";
+import closure_3 from "../CollectiblesPurchaseStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 

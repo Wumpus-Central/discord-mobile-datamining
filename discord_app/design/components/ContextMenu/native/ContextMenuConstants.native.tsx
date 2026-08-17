@@ -1,6 +1,6 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuConstants.native.tsx
-import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4343 */;
-import set from "set" /* 500 */;
+import HapticFeedbackTypes2 from "../../../../modules/haptics/HapticUtils.native.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 set = set.isIOS();
 const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;

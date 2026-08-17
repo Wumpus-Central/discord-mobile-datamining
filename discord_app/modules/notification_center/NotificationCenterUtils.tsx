@@ -1,10 +1,10 @@
 // discord_app/modules/notification_center/NotificationCenterUtils.tsx
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
-import getDurationString from "getDurationString" /* 4968 */;
-import getDurationStringDefault from "getDurationString" /* 4968 */;
+import set from "../../../_runtime/00002_set.js";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import NotificationCenterScenes from "NotificationCenterItemsTypes.tsx";
+import getDurationString from "getTimestampString.tsx";
+import getDurationStringDefault from "getTimestampString.tsx";
 
 const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 

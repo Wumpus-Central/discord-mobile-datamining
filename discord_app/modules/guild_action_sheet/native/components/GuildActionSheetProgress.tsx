@@ -1,11 +1,11 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import useIOSCompletionStates from "useIOSCompletionStates" /* 11643 */;
-import GuildProgressOverviewViewDefault from "GuildProgressOverviewView" /* 13435 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
+import useIOSCompletionStates from "../../../guild_progress/native/GuildProgressUtils.tsx";
+import GuildProgressOverviewViewDefault from "../../../guild_progress/native/components/GuildProgressOverview.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;

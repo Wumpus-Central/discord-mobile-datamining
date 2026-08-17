@@ -1,5 +1,5 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigModels.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 class SettingsConfig {
   constructor(arg0) {

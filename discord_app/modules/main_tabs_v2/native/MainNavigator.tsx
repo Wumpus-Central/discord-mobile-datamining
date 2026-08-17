@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/MainNavigator.tsx
-import AccessibleNativeStackNavigatorDefault from "AccessibleNativeStackNavigator" /* 13537 */;
-import ChatPanelNativeStackNavigatorDefault from "ChatPanelNativeStackNavigator" /* 15209 */;
-import componentDidMount from "componentDidMount" /* 15956 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings" /* 15208 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import AccessibleNativeStackNavigatorDefault from "../../../design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx";
+import ChatPanelNativeStackNavigatorDefault from "panels/createChatPanelNativeStackNavigator.tsx";
+import componentDidMount from "../../../components_native/AutoAnalytics.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import { StackNavigationAnimationSettings as closure_7 } from "NavigationConstants.tsx";
+import ME from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import { ContextMenuCommandNavigator } from "../../application_commands/native/ContextMenuCommandNavigator.tsx";
 import { NavigatorWithCaptchaHook } from "../../auth/native/components/Auth.tsx";
 import { HeaderWithBorder } from "../../conversations/components/native/ConversationNavigator.tsx";

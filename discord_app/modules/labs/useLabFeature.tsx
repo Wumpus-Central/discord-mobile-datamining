@@ -1,5 +1,5 @@
 // discord_app/modules/labs/useLabFeature.tsx
-import closure_2 from "getUserAgnosticState" /* 9059 */;
+import closure_2 from "LabFeatureStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

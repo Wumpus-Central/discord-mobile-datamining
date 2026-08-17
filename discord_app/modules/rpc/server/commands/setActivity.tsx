@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/server/commands/setActivity.tsx
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 9907 */;
-import closure_3 from "addApplication" /* 4478 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
-import ME from "ME" /* 676 */;
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import StatusDisplayTypes from "../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
+import closure_3 from "../../../applications/ApplicationStore.tsx";
+import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ TransportTypes: c4, RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);

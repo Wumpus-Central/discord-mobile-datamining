@@ -1,8 +1,8 @@
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import { Permissions } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 

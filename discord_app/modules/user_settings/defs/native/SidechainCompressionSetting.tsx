@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/defs/native/SidechainCompressionSetting.tsx
-import initialize from "initialize" /* 589 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import { Features } from "DesktopSources" /* 4529 */;
-import createToggle from "createToggle" /* 10669 */;
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import { Features } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 createToggle = {

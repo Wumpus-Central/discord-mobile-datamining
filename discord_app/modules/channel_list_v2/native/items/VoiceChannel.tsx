@@ -1,17 +1,17 @@
 // discord_app/modules/channel_list_v2/native/items/VoiceChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11233 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 5271 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
-import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4545 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useEmbeddedAppsDefault from "../../../activities/useEmbeddedAppsForChannel.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../../stores/CollapsedVoiceChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import { NO_VOICE_STATES } from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function _handleVoiceChannelPress() {

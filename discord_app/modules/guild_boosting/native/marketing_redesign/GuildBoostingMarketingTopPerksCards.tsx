@@ -1,15 +1,15 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import playDefault from "play" /* 7130 */;
-import registerAssetDefault from "registerAsset" /* 13034 */;
-import _mod13035 from "module_13035" /* 13035 */;
-import registerAssetDefault2 from "registerAsset" /* 13036 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
+import registerAssetDefault from "../../../../../_runtime/13034_registerAsset.js";
+import _mod13035 from "../../../../../_runtime/metro/13035__.js";
+import registerAssetDefault2 from "../../../../../_runtime/13036_registerAsset.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { items } from "MarketingCardsScroller.tsx";

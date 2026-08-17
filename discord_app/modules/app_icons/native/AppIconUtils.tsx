@@ -1,15 +1,15 @@
 // discord_app/modules/app_icons/native/AppIconUtils.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import openUserSettings from "openUserSettings" /* 7360 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import items from "items" /* 7946 */;
-import ME from "ME" /* 676 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import set from "set" /* 500 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import items from "AppIconConstants.tsx";
+import ME from "../../../Constants.tsx";
+import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 
 require = arg1;

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15814 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useResourceChannelsDefault from "../useResourceChannels.tsx";
+import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "OnboardingHomeConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

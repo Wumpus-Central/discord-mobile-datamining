@@ -1,6 +1,6 @@
 // discord_app/modules/routing/RoutingSources.tsx
-import AbortCodes from "AbortCodes" /* 1235 */;
-import set from "set" /* 2 */;
+import AbortCodes from "../threads/ThreadConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [, ];
 ({ EMBED: arr[0], FORUM: arr[1] } = AbortCodes.OpenThreadAnalyticsLocations);

@@ -1,9 +1,9 @@
 // discord_app/modules/oauth2/native/OAuth2AuthorizeModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";

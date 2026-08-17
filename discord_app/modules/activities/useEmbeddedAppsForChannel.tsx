@@ -1,10 +1,10 @@
 // discord_app/modules/activities/useEmbeddedAppsForChannel.tsx
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortActivity" /* 4559 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import { NO_ACTIVITIES } from "participantFromServer" /* 1390 */;
+import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchApplications.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../stores/PresenceStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "EmbeddedActivitiesStore.tsx";
+import { NO_ACTIVITIES } from "EmbeddedActivitiesStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

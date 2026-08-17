@@ -1,21 +1,21 @@
 // discord_app/stores/GuildChannelStore.tsx
-import applyDefault from "apply" /* 12 */;
-import fromStringAll from "fromString" /* 506 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_4 from "isSubscriptionGated" /* 1981 */;
-import closure_5 from "initializeFromUserSettings" /* 1394 */;
-import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4020 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "trackCommunicationDisabled" /* 1990 */;
-import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_15 from "markAllUserIdListsStale" /* 4030 */;
-import closure_16 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import applyDefault from "../../_runtime/00012_apply.js";
+import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import applyOverwritesAll from "../utils/PermissionUtils.tsx";
+import closure_4 from "../modules/channel/GatedChannelStore.tsx";
+import closure_5 from "../modules/favorites/FavoriteStore.tsx";
+import { createFavoritesGuildChannelRecord as closure_6 } from "../modules/favorites/utils/createFavoritesGuildChannelRecord.tsx";
+import createChannelRecord from "../records/ChannelRecord.tsx";
+import closure_10 from "AuthenticationStore.tsx";
+import closure_11 from "ChannelStore.tsx";
+import closure_12 from "GuildMemberStore.tsx";
+import closure_13 from "GuildStore.tsx";
+import closure_14 from "PermissionStore.tsx";
+import closure_15 from "RelationshipStore.tsx";
+import closure_16 from "UserStore.tsx";
+import ME from "../Constants.tsx";
 
 const require = arg1;
 function comparator(comparator, comparator2) {

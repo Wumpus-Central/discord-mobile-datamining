@@ -1,17 +1,17 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityRow.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14258 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14262 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
-import { ACTION_TO_TEXT } from "items" /* 5297 */;
-import { GuildFeatures } from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getEmptyActivityFormatter from "../FamilyCenterUtils.tsx";
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow.tsx";
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow.tsx";
+import importAllResult from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../FamilyCenterStore.tsx";
+import { ACTION_TO_TEXT } from "../FamilyCenterConstants.tsx";
+import { GuildFeatures } from "../../../Constants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

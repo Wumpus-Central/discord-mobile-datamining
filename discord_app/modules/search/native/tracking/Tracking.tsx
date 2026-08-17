@@ -1,13 +1,13 @@
 // discord_app/modules/search/native/tracking/Tracking.tsx
-import v1 from "v1" /* 514 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import _initializeDefault from "_initialize" /* 11532 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "prototype" /* 11510 */;
-import { SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY as closure_5 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
-import ME from "ME" /* 676 */;
+import v1 from "../../../../../_runtime/00514_v1.js";
+import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
+import collectGuildAnalyticsMetadataDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import SearchTokenTypes from "../../SearchUtils.tsx";
+import _initializeDefault from "../../managers/native/SearchSessionAnalyticsManager.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../stores/SearchQueryStore.tsx";
+import { SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY as closure_5 } from "TrackingConstants.tsx";
+import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ SearchTokenTypes: closure_6, AnalyticEvents: error } = ME);

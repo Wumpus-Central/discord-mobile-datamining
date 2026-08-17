@@ -1,7 +1,7 @@
 // discord_app/modules/activities/Constants.tsx
-import ME from "ME" /* 676 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import set from "set" /* 2 */;
+import ME from "../../Constants.tsx";
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const ChannelTypes = ME.ChannelTypes;
 const items = ["1037680572660727838", "235088799074484224", "1007373802981822582", "1067803140071620628", "1194351737264406548", "1245041113882955918", "1245040907732910201", "1245040436427489471", "1208090049871351890", "1235205910863806484", "1227719606223765687"];

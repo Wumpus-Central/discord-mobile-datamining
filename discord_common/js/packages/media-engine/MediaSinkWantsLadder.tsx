@@ -1,6 +1,6 @@
 // discord_common/js/packages/media-engine/MediaSinkWantsLadder.tsx
-import set2 from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import set2 from "../../../../_runtime/00002_set.js";
+import DesktopSources from "Constants.tsx";
 
 ({ defaultVideoQualityOptions: c0, VIDEO_QUALITY_FRAMERATE: closure_1, VIDEO_QUALITY_FRAMERATE_MUTED_2: obj1, VIDEO_QUALITY_FRAMERATE_MUTED: c3 } = DesktopSources);
 let MediaSinkWantsLadder;

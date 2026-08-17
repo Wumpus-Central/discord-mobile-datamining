@@ -1,7 +1,7 @@
 // discord_app/actions/ContextMenuActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../_runtime/00002_set.js";
+import ME from "../Constants.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
 
 function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
   stopPropagation.stopPropagation();

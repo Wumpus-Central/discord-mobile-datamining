@@ -1,8 +1,8 @@
 // discord_app/modules/game_console/hooks/useVoiceStateForRemoteSession.tsx
-import initialize from "initialize" /* 589 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "updateVoiceState" /* 4542 */;
-import closure_4 from "set" /* 4540 */;
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../stores/VoiceStateStore.tsx";
+import closure_4 from "../GameConsoleStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");

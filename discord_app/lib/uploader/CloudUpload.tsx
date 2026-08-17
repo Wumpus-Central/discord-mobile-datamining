@@ -1,18 +1,18 @@
 // discord_app/lib/uploader/CloudUpload.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import failsDefault from "fails" /* 584 */;
-import setDefault from "set" /* 687 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import cancel from "cancel" /* 4829 */;
-import cancelDefault from "cancel" /* 4829 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "getUserAgnosticState" /* 4737 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionInfoChange" /* 4564 */;
-import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import timestampDefault from "../../modules/debug/Logger.tsx";
+import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import cancel from "Upload.tsx";
+import cancelDefault from "Upload.tsx";
+import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_7 from "../../modules/devtools/dev_settings/DevSettingsStore.tsx";
+import closure_8 from "../../modules/user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_9 from "../../stores/NetworkStore.tsx";
+import ME from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_3 = ["Content-Range"];

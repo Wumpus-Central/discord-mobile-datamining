@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx
-import closure_2 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import closure_2 from "../GuildJoinRequestStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");

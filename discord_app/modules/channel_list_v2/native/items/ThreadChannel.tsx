@@ -1,23 +1,23 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4023 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
-import closure_12 from "getVoiceStatesForGuild" /* 4545 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
-import { Permissions } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes" /* 1235 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../threads/JoinedThreadsStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_10 from "../../../../stores/UserStore.tsx";
+import closure_11 from "../../../../stores/VoiceStateStore.tsx";
+import closure_12 from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import hairlineWidth from "../RedesignChannelListConstants.tsx";
+import { Permissions } from "../../../../Constants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { OpenThreadAnalyticsLocations as closure_16 } from "../../../threads/ThreadConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ThreadChannel(channel) {

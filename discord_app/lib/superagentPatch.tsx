@@ -1,13 +1,13 @@
 // discord_app/lib/superagentPatch.tsx
-import reportAll from "report" /* 7 */;
-import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 531 */;
-import getTimeZoneDefault from "getTimeZone" /* 16495 */;
-import closure_4 from "getHash" /* 4288 */;
-import { AbortCodes } from "ME" /* 676 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import sendRequest from "sendRequest" /* 530 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import reportAll from "../modules/debug/LogAggregator.tsx";
+import _createForOfIteratorHelperDefault from "../../_runtime/00531__createForOfIteratorHelper.js";
+import getTimeZoneDefault from "getTimeZone.native.tsx";
+import closure_4 from "../modules/experiments/ExperimentStore.tsx";
+import { AbortCodes } from "../Constants.tsx";
+import ApexExperiment from "../modules/experiments/apex/index.tsx";
+import importDefaultResult from "../../_runtime/00005_asyncGeneratorStep.js";
+import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import importDefaultResult1 from "../Dispatcher.tsx";
 
 let closure_0 = arg1;
 function isAnalyticsEndpoint(pathname) {

@@ -1,8 +1,8 @@
 // discord_app/modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx
-import set from "set" /* 2 */;
-import create from "create" /* 1306 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
-import result2 from "result" /* 14182 */;
+import set from "../../../_runtime/00002_set.js";
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import resolveExplicitContentSettingWithDefaults from "../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
+import result2 from "../user_settings/family_center/ParentalControlledUserSettings.tsx";
 
 function getGoreContentSettingOrDefault(arg0) {
   const ParentalControlledGoreContent = result2.ParentalControlledGoreContent;

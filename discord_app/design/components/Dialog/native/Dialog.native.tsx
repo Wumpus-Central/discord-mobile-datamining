@@ -1,8 +1,8 @@
 // discord_app/design/components/Dialog/native/Dialog.native.tsx
-import AccessibilityView from "AccessibilityView" /* 4717 */;
-import closure_2 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import AccessibilityView from "../../AccessibilityView/AccessibilityView.native.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");

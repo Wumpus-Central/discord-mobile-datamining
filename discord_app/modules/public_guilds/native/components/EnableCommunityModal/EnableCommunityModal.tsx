@@ -1,12 +1,12 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import HeaderBackImage from "HeaderBackImage" /* 6314 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6318 */;
-import _modDef16882 from "module_16882" /* 16882 */;
-import EnableCommunityModalSteps from "EnableCommunityModalSteps" /* 16884 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import NavigationStack from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import HeaderBackImage from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import useNavigatorBackPressHandler from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
+import _modDef16882 from "../../EnableCommunityModalActionCreators.tsx";
+import EnableCommunityModalSteps from "EnableCommunitySharedNavigation.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function onModalClose() {

@@ -1,9 +1,9 @@
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "getPrimaryCategories" /* 15726 */;
-import { Endpoints } from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "GuildDiscoveryCategoryStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;

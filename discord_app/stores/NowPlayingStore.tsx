@@ -1,10 +1,10 @@
 // discord_app/stores/NowPlayingStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "recomputeAffinities" /* 5407 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { ActivityTypes } from "ME" /* 676 */;
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../Dispatcher.tsx";
+import closure_2 from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
+import closure_3 from "PresenceStore.tsx";
+import closure_4 from "UserStore.tsx";
+import { ActivityTypes } from "../Constants.tsx";
 
 function _handlePresenceUpdate(user) {
   user = user.user;

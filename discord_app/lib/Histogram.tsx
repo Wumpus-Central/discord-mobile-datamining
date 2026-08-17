@@ -1,6 +1,6 @@
 // discord_app/lib/Histogram.tsx
-import set from "set" /* 2 */;
-import TDigest from "TDigest" /* 7491 */;
+import set from "../../_runtime/00002_set.js";
+import TDigest from "../../_runtime/07491_TDigest.js";
 
 const result = set.fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {

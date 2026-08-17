@@ -1,6 +1,6 @@
 // discord_app/modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx
-import closure_3 from "comparator" /* 1980 */;
-import { Permissions } from "sum" /* 505 */;
+import closure_3 from "../../stores/GuildChannelStore.tsx";
+import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

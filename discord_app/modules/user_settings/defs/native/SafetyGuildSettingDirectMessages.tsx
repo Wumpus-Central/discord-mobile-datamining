@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import setDefault from "set" /* 4827 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15018 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15019 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
-import createToggle from "createToggle" /* 10669 */;
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import explicitContentFromProto from "../../UserSettings.tsx";
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
+import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import useDefaultGuildsRestricted from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
+import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx";
+import closure_3 from "../../../../stores/GuildStore.tsx";
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "../../privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx";
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "../../../settings/native/renderer/SettingRendererConstants.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getSanitizedRestrictedGuilds } from "../../../../utils/UserSettingsUtils.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";

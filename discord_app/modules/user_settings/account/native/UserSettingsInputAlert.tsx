@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import _modDef6551 from "module_6551" /* 6551 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
+import _modDef6551 from "../../../keyboard/native/KeyboardAwareView.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

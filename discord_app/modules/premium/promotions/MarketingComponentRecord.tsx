@@ -1,7 +1,7 @@
 // discord_app/modules/premium/promotions/MarketingComponentRecord.tsx
-import setDefault from "set" /* 687 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
-import toJSDefault from "toJS" /* 1931 */;
+import setDefault from "../../../utils/Durations.tsx";
+import MurmurHashV3Default from "../../../../_runtime/01217_MurmurHashV3.js";
+import toJSDefault from "../../../lib/Record.tsx";
 
 const require = arg1;
 toJSDefault;

@@ -1,6 +1,6 @@
 // discord_app/modules/clips/ClipsConstants.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
+import timestampDefault from "../debug/Logger.tsx";
+import setDefault from "../../utils/Durations.tsx";
 
 let obj = {};
 const result = 30 * setDefault.Millis.SECOND;

@@ -1,11 +1,11 @@
 // discord_app/modules/activities/panel/native/BlurVisualEffectView.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import map from "../../../../design/tokens/native/useToken.tsx";
+import isBlurDisabledDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
+import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_5 = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.24);

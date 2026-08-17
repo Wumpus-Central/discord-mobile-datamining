@@ -1,19 +1,19 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaManager.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "processMessage" /* 5013 */;
-import { ReferencedMessageState } from "processMessage" /* 5013 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "handlePermissionsChange" /* 4970 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "handleSearchMessagesSuccess" /* 5018 */;
-import { MessageTypesWithLazyLoadedReferences as closure_12 } from "ME" /* 676 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import redactionSettingToRenderedString from "ExplicitMediaRedactionUtils.tsx";
+import getEligibleHarmTypesConfigsForContext from "ObscuredMediaUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../replies/ReferencedMessageStore.tsx";
+import { ReferencedMessageState } from "../replies/ReferencedMessageStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/ChannelSectionStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/MessageStore.tsx";
+import closure_9 from "../../stores/SelectedChannelStore.tsx";
+import closure_10 from "../../stores/SelectedGuildStore.tsx";
+import closure_11 from "ExplicitMediaSearchStore.tsx";
+import { MessageTypesWithLazyLoadedReferences as closure_12 } from "../../Constants.tsx";
+import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 require = arg1;
 function resetManager() {

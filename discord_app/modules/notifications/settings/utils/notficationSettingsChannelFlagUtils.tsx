@@ -1,14 +1,14 @@
 // discord_app/modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx
-import Presets from "Presets" /* 5046 */;
-import UserNotificationSettings2 from "UserNotificationSettings" /* 6795 */;
-import _modDef6798 from "module_6798" /* 6798 */;
-import resetGuildUnreadFlags from "resetGuildUnreadFlags" /* 10091 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { UserNotificationSettings } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
-import { ChannelNotificationSettingsFlags as closure_8 } from "MAX_FAVORITES" /* 685 */;
+import Presets from "notificationSettingsPresetUtils.tsx";
+import UserNotificationSettings2 from "../../../../utils/NotificationSettingsUtils.tsx";
+import _modDef6798 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import resetGuildUnreadFlags from "notificationSettingsFlagUtils.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
+import { UserNotificationSettings } from "../../../../Constants.tsx";
+import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
+import { ChannelNotificationSettingsFlags as closure_8 } from "../../../user_settings/UserSettingsConstants.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Presets } from "notificationSettingsPresetUtils.tsx";
 

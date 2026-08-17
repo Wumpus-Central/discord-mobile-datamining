@@ -1,8 +1,8 @@
 // discord_app/modules/urgent_system_dm/native/UrgentSystemDMManager.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import maybeShowUrgentMessageModalDefault from "maybeShowUrgentMessageModal" /* 16714 */;
-import navigateToSystemDMDefault from "navigateToSystemDM" /* 16716 */;
+import getSystemLocale from "../../../intl/index.native.tsx";
+import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import maybeShowUrgentMessageModalDefault from "../UrgentSystemDMManagerBase.tsx";
+import navigateToSystemDMDefault from "../navigateToSystemDM.tsx";
 
 require = arg1;
 const tmp2 = new maybeShowUrgentMessageModalDefault(() => {

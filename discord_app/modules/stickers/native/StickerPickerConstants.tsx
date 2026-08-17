@@ -1,7 +1,7 @@
 // discord_app/modules/stickers/native/StickerPickerConstants.tsx
-import set from "set" /* 2 */;
-import StickerFormat from "StickerFormat" /* 4964 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
+import set from "../../../../_runtime/00002_set.js";
+import StickerFormat from "../StickersTypes.tsx";
+import ExpressionPickerViewType from "../../expression_picker/ExpressionPickerConstants.tsx";
 
 const PADDING_VERTICAL = ExpressionPickerViewType.PADDING_VERTICAL;
 ({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerViewType);

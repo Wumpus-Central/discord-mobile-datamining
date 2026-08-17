@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/AdsVideoUtils.tsx
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
 
 let closure_2 = [-1000, -1003, -1004, -1008];
 const result = set.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");

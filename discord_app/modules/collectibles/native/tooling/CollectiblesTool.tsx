@@ -1,14 +1,14 @@
 // discord_app/modules/collectibles/native/tooling/CollectiblesTool.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 9172 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_8 from "map" /* 5324 */;
-import { useFramePreviewOverrideStore as closure_9 } from "measure" /* 8947 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesShopCardInternalV2Default from "../CollectiblesShopCardV2.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../CollectiblesCategoryStore.tsx";
+import closure_8 from "../../CollectiblesPurchaseStore.tsx";
+import { useFramePreviewOverrideStore as closure_9 } from "../../profile_frames/native/tooling/FramePreviewOverrideStore.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 

@@ -1,15 +1,15 @@
 // discord_app/components_native/premium/PremiumBillingInfo.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4052 */;
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 7916 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import isPremiumGiftingSupported from "../../modules/device/BillingPlatformUtils.tsx";
+import contextDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
+import QUICK_SWITCHERDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
+import createSubscriptionInvoicePreview from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../Constants.tsx";
+import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 class GoogleManagementLink {

@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import FlashIcon from "FlashIcon" /* 12108 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 15647 */;
-import YouBarButtonIconDefault from "YouBarButtonIcon" /* 15648 */;
-import { YOU_BAR_BUTTON_ICON_SIZE } from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import FlashIcon from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
+import useICYMITabBadgeDefault from "../../../icymi/useICYMITabBadge.tsx";
+import YouBarButtonIconDefault from "YouBarButton.tsx";
+import { YOU_BAR_BUTTON_ICON_SIZE } from "YouBarConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: null };

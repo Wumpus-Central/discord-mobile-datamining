@@ -1,8 +1,8 @@
 // discord_app/modules/forwarding/isStaffToNonStaffForward.tsx
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { GuildFeatures } from "ME" /* 676 */;
+import closure_0 from "../../stores/ChannelStore.tsx";
+import closure_1 from "../../stores/GuildStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import { GuildFeatures } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 

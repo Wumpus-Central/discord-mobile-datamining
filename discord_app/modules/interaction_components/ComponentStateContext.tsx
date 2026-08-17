@@ -1,16 +1,16 @@
 // discord_app/modules/interaction_components/ComponentStateContext.tsx
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import ActionComponentState from "ActionComponentState" /* 4813 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "deleteNonce" /* 8165 */;
-import closure_6 from "initialize" /* 4022 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "recomputeGuild" /* 4977 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "getInteractionComponentStates" /* 8327 */;
-import { jsx } from "jsxProd" /* 21 */;
+import PermissionOverwriteType from "../../flow/Server.tsx";
+import ActionComponentState from "InteractionComponentTypes.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
+import closure_5 from "../interactions/InteractionStore.tsx";
+import closure_6 from "../lurker_mode/LurkingStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../stores/GuildVerificationStore.tsx";
+import closure_10 from "../../stores/UserStore.tsx";
+import closure_11 from "LocalInteractionComponentStateStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function isInteractionComponent(type) {

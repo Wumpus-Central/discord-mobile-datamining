@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/PauseGatewaySocket.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 let c0 = false;
 const result = set.fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");

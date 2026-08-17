@@ -1,7 +1,7 @@
 // discord_app/modules/generated_test_users/GeneratedTestUsersStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createdAt" /* 1930 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_0 from "../../records/UserRecord.tsx";
 
 function handleAddUser(id) {
   if (null == closure_1.users) {

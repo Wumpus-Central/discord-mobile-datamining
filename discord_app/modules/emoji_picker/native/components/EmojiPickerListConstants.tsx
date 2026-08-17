@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListConstants.tsx
-import set from "set" /* 2 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
+import set from "../../../../../_runtime/00002_set.js";
+import ExpressionPickerViewType from "../../../expression_picker/ExpressionPickerConstants.tsx";
 
 const result = 2 * ExpressionPickerViewType.PADDING_VERTICAL;
 const result1 = set.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListConstants.tsx");

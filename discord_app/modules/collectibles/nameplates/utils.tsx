@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/nameplates/utils.tsx
-import set from "set" /* 2 */;
-import sum from "sum" /* 505 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import fromServer from "fromServer" /* 1947 */;
-import NAMEPLATE_PALETTES from "NAMEPLATE_PALETTES" /* 1950 */;
-import decodeImageDefault from "decodeImage" /* 1952 */;
+import set from "../../../../_runtime/00002_set.js";
+import sum from "../../../../discord_common/js/shared/Constants.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import fromServer from "../records/NameplateRecord.tsx";
+import NAMEPLATE_PALETTES from "constants.tsx";
+import decodeImageDefault from "../../../../_runtime/01952_decodeImage.js";
 
 const isNameplateRecord = fromServer.isNameplateRecord;
 const ThemeTypes = sum.ThemeTypes;

@@ -1,11 +1,11 @@
 // discord_app/modules/saved_messages/native/useForLaterCoachmark.tsx
-import registerAssetDefault from "registerAsset" /* 12732 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import registerAssetDefault from "../../../../_runtime/12732_registerAsset.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 function CoachmarkImg() {

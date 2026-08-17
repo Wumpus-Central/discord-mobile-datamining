@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 4339 */;
-import Text from "Text" /* 4734 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import registerAssetDefault2 from "registerAsset" /* 8190 */;
-import registerAssetDefault3 from "registerAsset" /* 8545 */;
-import registerAssetDefault4 from "registerAsset" /* 10455 */;
-import registerAssetDefault5 from "registerAsset" /* 10756 */;
-import registerAssetDefault6 from "registerAsset" /* 11948 */;
-import registerAssetDefault7 from "registerAsset" /* 14922 */;
-import registerAssetDefault8 from "registerAsset" /* 14923 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import registerAssetDefault from "../../../../../_runtime/04339_registerAsset.js";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
+import registerAssetDefault2 from "../../../../../_runtime/08190_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/08545_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/10455_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/10756_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/11948_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/14922_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/14923_registerAsset.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DemoContextMenu(align) {

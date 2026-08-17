@@ -1,6 +1,6 @@
 // discord_app/modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import set from "../../../../../_runtime/00002_set.js";
+import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 
 const result = set.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
 

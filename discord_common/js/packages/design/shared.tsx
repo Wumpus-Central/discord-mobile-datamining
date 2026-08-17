@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/shared.tsx
-import set from "set" /* 2 */;
-import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1357 */;
+import set from "../../../../_runtime/00002_set.js";
+import LOW_SATURATION_THRESHOLD from "components/AccessibilityPreferencesContext/AccessibilityConstants.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {

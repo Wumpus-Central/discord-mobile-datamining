@@ -1,11 +1,11 @@
 // discord_app/modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import initializeSearch from "initializeSearch" /* 9302 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 9346 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import EmojiCategoryTypes from "EmojiCategoryTypes" /* 6731 */;
-import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE" /* 9301 */;
+import parseRawEmojiObjectDefault from "../../../emojis/UnicodeEmojis.tsx";
+import initializeSearch from "../../EmojiPickerUtils.tsx";
+import GuildNSFWContentLevel from "../../../age_gate/native/AgeGateUtils.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import EmojiCategoryTypes from "../../EmojiPickerConstants.tsx";
+import { EmojiPickerRenderingDataType as closure_7 } from "EmojiPickerListConstants.tsx";
 
 require = arg1;
 function _computeCategories(arg0) {

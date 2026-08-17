@@ -1,21 +1,21 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx
-import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "handleFormInit" /* 8875 */;
-import title from "title" /* 16830 */;
-import ME from "ME" /* 676 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef38 from "../../../../../_runtime/metro/00038__.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { isGuildOwner } from "../../../../records/GuildRecord.tsx";
+import closure_10 from "../../../../stores/GuildRoleStore.tsx";
+import closure_11 from "../../../../stores/UserStore.tsx";
+import closure_12 from "../../GuildSettingsStore.tsx";
+import title from "../GuildSettingsRoleConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function RoleCreateScene() {

@@ -1,11 +1,11 @@
 // discord_app/modules/application_widget/ApplicationWidgetConfigActions.tsx
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateApplicationConfigs" /* 12288 */;
-import { FetchState } from "updateApplicationConfigs" /* 12288 */;
-import { Endpoints } from "ME" /* 676 */;
-import importDefaultResult from "fails" /* 584 */;
-import importDefaultResult1 from "dispatcher" /* 709 */;
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "ApplicationWidgetConfigStore.tsx";
+import { FetchState } from "ApplicationWidgetConfigStore.tsx";
+import { Endpoints } from "../../Constants.tsx";
+import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import importDefaultResult1 from "../../Dispatcher.tsx";
 
 const require = arg1;
 function getApplicationsFromConfigs(arg0) {

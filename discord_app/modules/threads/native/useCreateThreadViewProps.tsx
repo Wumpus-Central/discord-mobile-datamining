@@ -1,6 +1,6 @@
 // discord_app/modules/threads/native/useCreateThreadViewProps.tsx
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10167 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import useGetThreadDraftSettingsDefault from "../useGetThreadDraftSettings.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;

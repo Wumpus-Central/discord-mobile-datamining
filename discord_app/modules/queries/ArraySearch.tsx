@@ -1,5 +1,5 @@
 // discord_app/modules/queries/ArraySearch.tsx
-import set from "set" /* 2 */;
+import set from "../../../_runtime/00002_set.js";
 
 function sortGroup(arr) {
   closure_0 = arg1;

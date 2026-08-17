@@ -1,6 +1,6 @@
 // discord_app/modules/messages/useIsRelationshipTypeSpamReportable.tsx
-import closure_2 from "markAllUserIdListsStale" /* 4030 */;
-import { RelationshipTypes } from "ME" /* 676 */;
+import closure_2 from "../../stores/RelationshipStore.tsx";
+import { RelationshipTypes } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

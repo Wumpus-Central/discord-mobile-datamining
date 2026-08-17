@@ -1,5 +1,5 @@
 // discord_app/design/void/Status/native/StatusConstants.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("design/void/Status/native/StatusConstants.tsx");
 

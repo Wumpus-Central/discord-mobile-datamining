@@ -1,5 +1,5 @@
 // discord_app/lib/ZustandStore.tsx
-import set from "set" /* 2 */;
+import set from "../../_runtime/00002_set.js";
 import { identity } from "../../_runtime/00700_identity.js";
 import { createJSONStorage } from "../../_runtime/04242_createJSONStorage.js";
 

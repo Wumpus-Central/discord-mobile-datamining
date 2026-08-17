@@ -1,8 +1,8 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_reminder_nagbar.tsx
-import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7633 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1307" /* 1307 */;
+import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
+import create from "../../common/v1/localized_string.tsx";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class GiftReminderNagbar$Type extends MessageType {

@@ -1,10 +1,10 @@
 // discord_app/modules/search/native/SearchPlatformActionCreators.tsx
-import set from "set" /* 2 */;
-import ME from "ME" /* 676 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import handleSearchQuery from "handleSearchQuery" /* 11535 */;
-import prototype from "prototype" /* 11510 */;
+import set from "../../../../_runtime/00002_set.js";
+import ME from "../../../Constants.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import SearchTokenTypes from "../SearchUtils.tsx";
+import handleSearchQuery from "stores/SearchTabsLayoutStore.tsx";
+import prototype from "stores/SearchQueryStore.tsx";
 
 const SearchTypes = ME.SearchTypes;
 const result = set.fileFinishedImporting("modules/search/native/SearchPlatformActionCreators.tsx");

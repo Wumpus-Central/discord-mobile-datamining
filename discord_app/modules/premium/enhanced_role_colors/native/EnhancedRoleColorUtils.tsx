@@ -1,13 +1,13 @@
 // discord_app/modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx
-import nDefault from "n" /* 689 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6814 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6814 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { processColor } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import { ThemeTypes } from "sum" /* 505 */;
+import nDefault from "../../../../../_runtime/00689_n.js";
+import isDiscordFrontendDevelopment from "../../../../utils/GlobalUtils.tsx";
+import useHasEnhancedRoleColors from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
+import useHasEnhancedRoleColorsDefault from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import { processColor } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_6 from "../../../user_settings/ThemeStore.tsx";
+import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
 
 require = arg1;
 function processColorStrings(colorStrings) {

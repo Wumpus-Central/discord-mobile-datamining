@@ -1,7 +1,7 @@
 // discord_app/modules/forums/tracking/ForumChannelSeenManager.tsx
-import set from "set" /* 2 */;
-import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 8517 */;
-import maybeMarkSeen from "maybeMarkSeen" /* 8519 */;
+import set from "../../../../_runtime/00002_set.js";
+import markAnalyticsFeedItemSeen from "../../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
+import maybeMarkSeen from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
 import { maybeMarkSeen } from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
 import { collectForumAnalyticsMetadata } from "TrackingUtils.tsx";
 

@@ -1,11 +1,11 @@
 // discord_app/stores/game_store/TestModeStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_7 from "setLibraryApplications" /* 4512 */;
-import set from "set" /* 2 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import explicitContentFromProto from "../../modules/user_settings/UserSettings.tsx";
+import closure_5 from "../../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import closure_6 from "../../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_7 from "../LibraryApplicationStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 function reset() {

@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/native/screens/home/SubmittingOverlay.tsx
-import set from "set" /* 2 */;
-import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "../../../../../../_runtime/00002_set.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const jsx = jsxProd.jsx;
 let obj = { ellipsis: null };

@@ -1,8 +1,8 @@
 // discord_common/js/packages/i18n/parse.tsx
-import tDefault from "t" /* 4092 */;
-import _modDef16445 from "module_16445" /* 16445 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import FORMAT_RE from "FORMAT_RE" /* 16488 */;
+import tDefault from "../../../../_runtime/04092_t.js";
+import _modDef16445 from "../../../../_runtime/metro/16445__.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import FORMAT_RE from "Constants.tsx";
 import { link } from "markdownRules.tsx";
 import { updateRules } from "updateRules.web.tsx";
 

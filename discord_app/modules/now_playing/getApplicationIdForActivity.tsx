@@ -1,12 +1,12 @@
 // discord_app/modules/now_playing/getApplicationIdForActivity.tsx
-import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7261 */;
-import _isStreamingDefault from "_isStreaming" /* 8411 */;
-import isOnXboxDefault from "isOnXbox" /* 12099 */;
-import getIconURL from "getIconURL" /* 12779 */;
-import getIconURL2 from "getIconURL" /* 13298 */;
-import getIconURL3 from "getIconURL" /* 13299 */;
+import set from "../../../_runtime/00002_set.js";
+import items3 from "../activities/Constants.tsx";
+import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
+import _isStreamingDefault from "../activities/utils/isStreaming.tsx";
+import isOnXboxDefault from "../activities/utils/isOnXbox.tsx";
+import getIconURL from "../../records/SpotifyApplicationRecord.tsx";
+import getIconURL2 from "../../records/TwitchApplicationRecord.tsx";
+import getIconURL3 from "../../records/XboxApplicationRecord.tsx";
 
 const SpotifyApplication = getIconURL.SpotifyApplication;
 let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;

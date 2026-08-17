@@ -1,16 +1,16 @@
 // discord_app/modules/forums/native/posts/grid/ForumPostGridBody.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import Text from "Text" /* 4734 */;
-import registerAssetDefault from "registerAsset" /* 10447 */;
-import registerAssetDefault2 from "registerAsset" /* 11183 */;
-import registerAssetDefault3 from "registerAsset" /* 11184 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../../../../design/void/native.tsx";
+import isDiscordFrontendDevelopment from "../../../../../utils/GlobalUtils.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
+import registerAssetDefault from "../../../../../../_runtime/10447_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/11183_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/11184_registerAsset.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function GIFIcon() {

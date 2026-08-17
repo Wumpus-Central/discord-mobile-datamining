@@ -1,14 +1,14 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandItem.tsx
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import preloadDefault from "preload" /* 5449 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 11392 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import getApplicationCommandsIconSource from "ApplicationCommandUtils.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 createCacheKey = { commandIcon: null, loadingIcon: null, loadingName: null };

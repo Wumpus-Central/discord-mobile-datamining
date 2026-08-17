@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/account/MFAUtils.tsx
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _crypto from "_crypto" /* 8588 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import _crypto from "../../../utils/MFAUtils.tsx";
+import closure_2 from "../../../stores/GuildStore.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ GuildFeatures: c5, Permissions: closure_6, UserFlags: error } = ME);

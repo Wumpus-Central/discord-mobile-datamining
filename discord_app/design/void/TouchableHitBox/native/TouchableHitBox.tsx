@@ -1,11 +1,11 @@
 // discord_app/design/void/TouchableHitBox/native/TouchableHitBox.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importAllResult from "noop" /* 19 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Button from "../../native.tsx";
+import PressableBase from "../../Pressables/native/Pressables.tsx";
+import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 createCacheKey = { button: null, buttonText: null, buttonIcon: null, buttonSpinner: null, buttonDisabled: null };

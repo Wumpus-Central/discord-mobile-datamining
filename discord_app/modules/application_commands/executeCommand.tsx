@@ -1,15 +1,15 @@
 // discord_app/modules/application_commands/executeCommand.tsx
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import _fetchMessageInteractionDataAll from "_fetchMessageInteractionData" /* 8331 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "getEmojiToGroupId" /* 6727 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "map" /* 4824 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "handleInit" /* 7527 */;
-import ME from "ME" /* 676 */;
-import { DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE as closure_15 } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
+import _fetchMessageInteractionDataAll from "../interactions/InteractionActionCreators.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../emojis/EmojiStore.tsx";
+import closure_6 from "../user_settings/LocaleStore.tsx";
+import closure_7 from "../../stores/GuildStore.tsx";
+import closure_8 from "../../stores/UploadAttachmentStore.tsx";
+import closure_9 from "../../stores/UserStore.tsx";
+import closure_10 from "ApplicationCommandStore.tsx";
+import ME from "../../Constants.tsx";
+import { DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE as closure_15 } from "../messages/MessageConstants.tsx";
 
 require = arg1;
 function _executeCommand() {

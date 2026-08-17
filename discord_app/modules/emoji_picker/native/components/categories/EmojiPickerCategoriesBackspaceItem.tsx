@@ -1,8 +1,8 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx
-import closure_2 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { NODE_MARGIN } from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import { Pressable } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { NODE_MARGIN } from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx");

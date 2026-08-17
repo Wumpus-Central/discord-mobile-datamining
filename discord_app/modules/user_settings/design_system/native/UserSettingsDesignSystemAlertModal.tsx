@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx
-import useAlertStore from "useAlertStore" /* 4657 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import Button from "Button" /* 4745 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function DemoModal() {

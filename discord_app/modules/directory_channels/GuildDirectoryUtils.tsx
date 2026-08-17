@@ -1,8 +1,8 @@
 // discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
-import set2 from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import _modDef38 from "module_38" /* 38 */;
-import DirectoryEntryTypes2 from "DirectoryEntryTypes" /* 11472 */;
+import set2 from "../../../_runtime/00002_set.js";
+import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
+import DirectoryEntryTypes2 from "GuildDirectoryConstants.tsx";
 
 const DirectoryEntryTypes = DirectoryEntryTypes2.DirectoryEntryTypes;
 const result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");

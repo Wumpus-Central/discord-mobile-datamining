@@ -1,5 +1,5 @@
 // discord_app/lib/KeybindModKeys.tsx
-import set from "set" /* 500 */;
+import set from "../utils/PlatformUtils.tsx";
 
 if (set.isMac()) {
   let str = "cmd";

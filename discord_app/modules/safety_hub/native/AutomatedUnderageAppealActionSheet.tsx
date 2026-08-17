@@ -1,12 +1,12 @@
 // discord_app/modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6 } from "getSystemLocale" /* 1236 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../SafetyHubStore.tsx";
+import SafetyHubView from "../SafetyHubConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6 } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_6, SafetyHubLinks: error } = SafetyHubView);

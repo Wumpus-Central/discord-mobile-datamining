@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTile.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import StageTileSize2 from "StageTileSize" /* 12605 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import StageTileSize2 from "../../StageTileTypes.tsx";
+import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
 require = arg1;
 let c3 = importAllResult;

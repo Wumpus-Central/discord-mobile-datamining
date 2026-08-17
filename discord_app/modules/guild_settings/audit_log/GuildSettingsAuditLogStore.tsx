@@ -1,15 +1,15 @@
 // discord_app/modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "getTargetType" /* 16758 */;
-import { AuditLogChange } from "getTargetType" /* 16758 */;
-import { isGuildSelectableChannelType as closure_4 } from "createChannelRecord" /* 1395 */;
-import { hasAnyPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import ME from "ME" /* 676 */;
-import importAllResult from "fromString" /* 506 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import closure_2 from "../../../records/AuditLogRecord.tsx";
+import { AuditLogChange } from "../../../records/AuditLogRecord.tsx";
+import { isGuildSelectableChannelType as closure_4 } from "../../../records/ChannelRecord.tsx";
+import { hasAnyPermission } from "../../../records/GuildRoleRecord.tsx";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../stores/GuildRoleStore.tsx";
+import closure_8 from "../../../stores/GuildStore.tsx";
+import ME from "../../../Constants.tsx";
+import importAllResult from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const AuditLogActions = ME.AuditLogActions;
 ({ AuditLogActionTypes: c10, AuditLogTargetTypes: unpackModuleId, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = ME);

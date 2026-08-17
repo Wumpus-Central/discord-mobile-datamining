@@ -1,13 +1,13 @@
 // discord_app/modules/age_assurance/AgeVerificationManager.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { transformUser } from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import timestampDefault from "../debug/Logger.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/MessageStore.tsx";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import { transformUser } from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
+import { SafetyToastType } from "../safety_common/Constants.tsx";
 
 let require = arg1;
 function handleMessageCreate(channelId) {

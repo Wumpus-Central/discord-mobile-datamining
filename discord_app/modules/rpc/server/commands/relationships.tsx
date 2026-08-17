@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/server/commands/relationships.tsx
-import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import ME from "ME" /* 676 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import fromStringAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import prototypeDefault from "../../RPCError.tsx";
+import recurseReplaceContentTree from "../../RPCHelpers.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
+import ME from "../../../../Constants.tsx";
+import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
 require = arg1;
 ({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);

@@ -1,6 +1,6 @@
 // discord_app/utils/native/AppInfoUtils.tsx
-import set from "set" /* 2 */;
-import getConstants from "getConstants" /* 1626 */;
+import set from "../../../_runtime/00002_set.js";
+import getConstants from "ClientInfoUtils.tsx";
 
 const constants = getConstants.getConstants();
 const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");

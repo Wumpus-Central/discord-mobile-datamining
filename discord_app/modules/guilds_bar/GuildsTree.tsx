@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/GuildsTree.tsx
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
-import _modDef38 from "module_38" /* 38 */;
+import set from "../../../_runtime/00002_set.js";
+import apply from "../../../_runtime/00012_apply.js";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
 
 let obj = { ROOT: "root", FOLDER: "folder", GUILD: "guild" };
 const result = set.fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");

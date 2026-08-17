@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/tabs/TabsPerformanceTracker.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import timestampDefault from "../../../debug/Logger.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { AnalyticEvents } from "../../../../Constants.tsx";
 
 const require = arg1;
 let closure_5 = new timestampDefault("TabsPerformanceTracker");

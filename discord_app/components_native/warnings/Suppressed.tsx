@@ -1,10 +1,10 @@
 // discord_app/components_native/warnings/Suppressed.tsx
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 16135 */;
-import registerAssetDefault2 from "registerAsset" /* 16136 */;
-import closure_3 from "initialize" /* 13300 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import getSystemLocale from "../../intl/index.native.tsx";
+import registerAssetDefault from "../../../_runtime/16135_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/16136_registerAsset.js";
+import closure_3 from "../../stores/PermissionSpeakStore.tsx";
+import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 const Component = importAllResult.Component;

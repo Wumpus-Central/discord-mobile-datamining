@@ -1,5 +1,5 @@
 // discord_common/js/packages/flux/ChangeListeners.tsx
-import set2 from "set" /* 2 */;
+import set2 from "../../../../_runtime/00002_set.js";
 
 const result = set2.fileFinishedImporting("../discord_common/js/packages/flux/ChangeListeners.tsx");
 class ChangeListeners {

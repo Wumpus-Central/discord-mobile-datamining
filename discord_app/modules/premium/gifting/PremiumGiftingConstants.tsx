@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/PremiumGiftingConstants.tsx
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import messagesProxyDefault from "messagesProxy" /* 2399 */;
+import set from "../../../../_runtime/00002_set.js";
+import GuildFeatures from "../PremiumConstants.tsx";
+import messagesProxyDefault from "PremiumGifting.messages.js";
 
 ({ SNOWGLOBE, BOX, CUP, STANDARD_BOX, CAKE, CHEST, COFFEE, SEASONAL_STANDARD_BOX, SEASONAL_CAKE, SEASONAL_CHEST, SEASONAL_COFFEE, NITROWEEN_STANDARD } = GuildFeatures.PremiumGiftStyles);
 const obj = { [SNOWGLOBE]: messagesProxyDefault.M6cPwB, [BOX]: messagesProxyDefault.B9XqQk, [CUP]: messagesProxyDefault["6dCq/u"], [STANDARD_BOX]: messagesProxyDefault.GzPel1, [CAKE]: messagesProxyDefault.AJ4iir, [CHEST]: messagesProxyDefault.P5keo3, [COFFEE]: messagesProxyDefault.w84vET, [SEASONAL_STANDARD_BOX]: messagesProxyDefault["vd1fu/"], [SEASONAL_CAKE]: messagesProxyDefault.aubYGR, [SEASONAL_CHEST]: messagesProxyDefault.vjxYqU, [SEASONAL_COFFEE]: messagesProxyDefault.bHuJLa, [NITROWEEN_STANDARD]: messagesProxyDefault["+HMF8k"] };

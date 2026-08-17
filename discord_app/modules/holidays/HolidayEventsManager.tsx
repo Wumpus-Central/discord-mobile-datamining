@@ -1,13 +1,13 @@
 // discord_app/modules/holidays/HolidayEventsManager.tsx
-import initializeDefault from "initialize" /* 5038 */;
-import getSoundPackDefault from "getSoundPack" /* 10043 */;
-import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16593 */;
-import HolidayEmojiAnimationTypeDefault2 from "HolidayEmojiAnimationType" /* 16596 */;
-import setSoundpack from "setSoundpack" /* 16597 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 16598 */;
-import closure_3 from "initialize" /* 1212 */;
-import closure_4 from "Soundpacks" /* 10041 */;
-import { Soundpacks } from "Soundpacks" /* 10042 */;
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import getSoundPackDefault from "../soundpacks/getSoundsForPack.tsx";
+import HolidayEmojiAnimationTypeDefault from "HolidayEventsConfig.tsx";
+import HolidayEmojiAnimationTypeDefault2 from "HolidayEventsUtils.tsx";
+import setSoundpack from "../soundpacks/SoundpackActions.tsx";
+import setIncomingRingtone from "setIncomingRingtone.android.tsx";
+import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
+import closure_4 from "../soundpacks/SoundpackStore.tsx";
+import { Soundpacks } from "../soundpacks/Constants.tsx";
 
 require = arg1;
 initializeDefault;

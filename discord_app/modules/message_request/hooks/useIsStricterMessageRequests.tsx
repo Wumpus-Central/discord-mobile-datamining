@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useIsStricterMessageRequests.tsx
-import set2 from "set" /* 11591 */;
-import set from "set" /* 2 */;
+import set2 from "../../regional_feature_config/RegionalTeenUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let set = new Set(["GB"]);
 const result = set.fileFinishedImporting("modules/message_request/hooks/useIsStricterMessageRequests.tsx");

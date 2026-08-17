@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/options/mentionable/AppLauncherMentionableOption.tsx
-import initialize from "initialize" /* 589 */;
-import ThemesDefault from "Themes" /* 712 */;
-import UserCircleIcon from "UserCircleIcon" /* 9923 */;
-import stylesDefault from "styles" /* 11357 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { StatusTypes } from "sum" /* 505 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import UserCircleIcon from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
+import stylesDefault from "../../base_components/AppLauncherOptionIcon.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
+import { StatusTypes } from "../../../../../../discord_common/js/shared/Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function MentionableIcon(mentionable) {

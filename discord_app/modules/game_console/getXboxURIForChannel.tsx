@@ -1,11 +1,11 @@
 // discord_app/modules/game_console/getXboxURIForChannel.tsx
-import computeChannelName from "computeChannelName" /* 4984 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
-import ME from "ME" /* 676 */;
+import computeChannelName from "../channel/useChannelName.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import XBOX_URL_BASE from "GameConsoleConstants.tsx";
+import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: error } = XBOX_URL_BASE);

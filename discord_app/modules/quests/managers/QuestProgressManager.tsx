@@ -1,26 +1,26 @@
 // discord_app/modules/quests/managers/QuestProgressManager.tsx
-import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
-import setDefault from "set" /* 687 */;
-import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4643 */;
-import initializeDefault from "initialize" /* 5038 */;
-import QuestVariants from "QuestVariants" /* 6717 */;
-import set2 from "set" /* 6723 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
-import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7474 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
-import questMatchesActivity from "questMatchesActivity" /* 10707 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "map" /* 8708 */;
-import closure_6 from "initialize" /* 4504 */;
-import closure_7 from "reset" /* 4652 */;
-import closure_8 from "gameFromServer" /* 4509 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_10 from "initializeState" /* 7453 */;
-import closure_11 from "set" /* 16251 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
-import { isLaunched } from "FrameLayoutModes" /* 8709 */;
-import getQuestLogger from "getQuestLogger" /* 7459 */;
+import _slicedToArrayDefault from "../../../../_runtime/metro/00032__slicedToArray.js";
+import setDefault from "../../../utils/Durations.tsx";
+import _openRobloxURLWithRootPlaceId from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import QuestVariants from "../../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
+import set2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import getQuestDeliveryDataForPlacement from "../utils/QuestDataUtils.tsx";
+import isSponsoredPlayQuest from "../utils/QuestUtils.tsx";
+import getApplicationIdsByTaskTypes from "../utils/QuestTaskUtils.tsx";
+import questMatchesActivity from "../utils/QuestMatchingUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../frames/FramesStore.tsx";
+import closure_6 from "../../game_detection/RunningGameStore.native.tsx";
+import closure_7 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_8 from "../../../stores/DetectableGameStore.tsx";
+import closure_9 from "../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_10 from "../QuestStore.tsx";
+import closure_11 from "../UnenrolledActivityQuestStore.tsx";
+import QuestsExperimentLocations from "../QuestConstants.tsx";
+import { isLaunched } from "../../frames/FramesConstants.tsx";
+import getQuestLogger from "../lib/getQuestLogger.tsx";
 
 require = arg1;
 function isQuestProgressable(item10047) {

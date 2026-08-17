@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/notifications/EmailSettingsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
 
 function reset() {
   closure_0 = {};

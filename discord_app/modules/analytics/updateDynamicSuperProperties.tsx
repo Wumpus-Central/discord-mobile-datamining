@@ -1,8 +1,8 @@
 // discord_app/modules/analytics/updateDynamicSuperProperties.tsx
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 503 */;
-import trackHeartbeat from "trackHeartbeat" /* 5054 */;
-import _modDef10501 from "module_10501" /* 10501 */;
+import set from "../../../_runtime/00002_set.js";
+import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import trackHeartbeat from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
+import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 
 let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 

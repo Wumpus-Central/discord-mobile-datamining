@@ -1,6 +1,6 @@
 // discord_app/modules/storefront/records/StorefrontProductRecord.tsx
-import closure_0 from "fromServer" /* 5328 */;
-import closure_1 from "createFromServer" /* 4515 */;
+import closure_0 from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
+import closure_1 from "../../skus/SKURecord.tsx";
 
 let prototype;
 prototype = function StorefrontProductRecord(arg0) {

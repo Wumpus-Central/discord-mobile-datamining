@@ -1,9 +1,9 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPerks.tsx
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
-import closure_3 from "noop" /* 19 */;
-import { Gradients } from "items" /* 7403 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import importDefaultResult from "n" /* 689 */;
+import calculateFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import { Gradients } from "../../../colors/native/ColorConstants.tsx";
+import GuildFeatures from "../../../premium/PremiumConstants.tsx";
+import importDefaultResult from "../../../../../_runtime/00689_n.js";
 
 const require = arg1;
 ({ FractionalPremiumStates: c4, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: c5, PremiumTypes: closure_6 } = GuildFeatures);

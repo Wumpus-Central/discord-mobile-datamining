@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/getChatInputPositionStyle.tsx
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
+import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
 
 let obj = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);

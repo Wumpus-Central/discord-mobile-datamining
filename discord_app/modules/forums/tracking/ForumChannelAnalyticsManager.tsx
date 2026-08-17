@@ -1,6 +1,6 @@
 // discord_app/modules/forums/tracking/ForumChannelAnalyticsManager.tsx
-import set from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
+import set from "../../../stores/ChannelStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 set = Object.create(function ForumChannelAnalyticsManager() {
   const obj = Object.create(new.target.prototype);

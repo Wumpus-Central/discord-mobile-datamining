@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/hooks/useCollectiblesShopProducts.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getFetchState" /* 11999 */;
-import closure_5 from "getFetchState" /* 8963 */;
-import closure_6 from "fromServer" /* 5302 */;
-import closure_7 from "fromServer" /* 5303 */;
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../storefront/StorefrontCollectionStore.tsx";
+import closure_5 from "../../storefront/StorefrontProductStore.tsx";
+import closure_6 from "../records/CollectiblesCategoryRecord.tsx";
+import closure_7 from "../records/CollectiblesProductRecord.tsx";
 
 const require = arg1;
 function computeEntryState(arg0) {

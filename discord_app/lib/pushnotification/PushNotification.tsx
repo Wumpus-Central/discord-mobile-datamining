@@ -1,9 +1,9 @@
 // discord_app/lib/pushnotification/PushNotification.tsx
-import set from "set" /* 2 */;
-import enforcing from "enforcing" /* 10134 */;
-import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 11580 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 11581 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "../../../_runtime/00002_set.js";
+import enforcing from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
+import RNCPushNotificationIOSDefault from "../../../_runtime/11580_RNCPushNotificationIOS.js";
+import openNotificationSettingsDefault from "../../modules/native_permissions/mobile/openNotificationSettings.native.tsx";
+import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const PushNotificationAndroid = NativeModules.PushNotificationAndroid;

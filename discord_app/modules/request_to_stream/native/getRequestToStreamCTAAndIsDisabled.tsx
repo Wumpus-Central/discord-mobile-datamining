@@ -1,11 +1,11 @@
 // discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2789 */;
-import result2 from "result" /* 10917 */;
-import canFulfillStreamRequest from "canFulfillStreamRequest" /* 10929 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../RequestToStream.messages.js";
+import result2 from "../../activities/utils/isInviteActive.tsx";
+import canFulfillStreamRequest from "../useCanFulfillStreamRequest.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");

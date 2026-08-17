@@ -1,9 +1,9 @@
 // discord_app/modules/badges/PendingBadgeSettings.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import set2 from "set" /* 14022 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "initialize" /* 8936 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import set2 from "BadgeCustomization.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "BadgeDirectoryStore.tsx";
 
 require = arg1;
 function getSavedBadgeSettings() {

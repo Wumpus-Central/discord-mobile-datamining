@@ -1,10 +1,10 @@
 // discord_app/modules/hub/HubProgressBarUtils.tsx
-import create from "create" /* 1306 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "set" /* 5221 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 11506 */;
-import { PlatformTypes } from "ME" /* 676 */;
+import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../stores/ConnectedAccountsStore.tsx";
+import { HUB_PROGRESS_STEP_ORDER } from "HubProgressBarConstants.tsx";
+import { PlatformTypes } from "../../Constants.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");

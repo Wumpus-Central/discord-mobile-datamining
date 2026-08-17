@@ -1,7 +1,7 @@
 // discord_app/modules/expression_picker/ExpressionPickerGridStores.tsx
-import set from "set" /* 2 */;
-import identity from "identity" /* 700 */;
-import createJSONStorage from "createJSONStorage" /* 4242 */;
+import set from "../../../_runtime/00002_set.js";
+import identity from "../../../_runtime/00700_identity.js";
+import createJSONStorage from "../../../_runtime/04242_createJSONStorage.js";
 
 let c0 = require;
 let closure_2 = Object.freeze({ inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 }, hasInteracted: false, activeCategoryIndex: 0, searchPlaceholder: null, bottomPosition: null, analyticsId: null });

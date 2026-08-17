@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/utils/powerupListing.tsx
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildPowerupsStore.tsx";
+import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

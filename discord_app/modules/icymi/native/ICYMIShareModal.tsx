@@ -1,19 +1,19 @@
 // discord_app/modules/icymi/native/ICYMIShareModal.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 8803 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_9 from "map" /* 4824 */;
-import { AbortCodes } from "ME" /* 676 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import SHARE_EVENT_DETAILS_LINK from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import closure_9 from "../../../stores/UploadAttachmentStore.tsx";
+import { AbortCodes } from "../../../Constants.tsx";
+import { UserRowModes } from "../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
+import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 require = arg1;

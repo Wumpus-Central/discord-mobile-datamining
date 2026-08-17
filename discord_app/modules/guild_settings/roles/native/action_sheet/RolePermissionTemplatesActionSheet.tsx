@@ -1,14 +1,14 @@
 // discord_app/modules/guild_settings/roles/native/action_sheet/RolePermissionTemplatesActionSheet.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 16834 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import GuildSettingsRoleTemplateDefault from "../GuildSettingsRoleTemplate.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ME from "../../../../../Constants.tsx";
+import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);

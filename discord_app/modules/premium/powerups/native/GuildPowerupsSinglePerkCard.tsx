@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx
-import noopAll from "noop" /* 19 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 11665 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 11688 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 11689 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 11736 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 11740 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import useGuildPowerupRollbackEnabledDefault from "../hooks/useGuildPowerupRollbackEnabled.tsx";
+import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
+import useCalculatePowerupCardStatus from "../utils/useCalculatePowerupCardStatus.tsx";
+import useGetGuildPowerupBannerImageDefault from "../hooks/useGetGuildPowerupBannerImage.tsx";
+import useGuildPowerupOnShowMoreDefault from "hooks/useGuildPowerupOnShowMore.tsx";
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

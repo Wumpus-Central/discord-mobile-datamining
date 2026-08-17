@@ -1,7 +1,7 @@
 // discord_app/modules/regional_feature_config/RegionalTeenUtils.tsx
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getRegionalFeatureConfig" /* 4073 */;
-import set from "set" /* 2 */;
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "RegionalFeatureConfigStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 let items = ["GB", "AU"];

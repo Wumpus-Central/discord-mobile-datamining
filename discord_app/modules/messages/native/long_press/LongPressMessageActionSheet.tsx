@@ -1,16 +1,16 @@
 // discord_app/modules/messages/native/long_press/LongPressMessageActionSheet.tsx
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 8163 */;
-import closure_6 from "handleSelectedGuildChange" /* 10849 */;
-import closure_7 from "getTimeSafe" /* 10850 */;
-import { isMessageComponentsV2 } from "hasFlag" /* 4031 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
-import ME from "ME" /* 676 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../guild_automod/GuildAutomodMessageStore.tsx";
+import closure_6 from "../../../report_to_mod/ReportToModStore.tsx";
+import closure_7 from "../../../saved_messages/SavedMessagesStore.tsx";
+import { isMessageComponentsV2 } from "../../../../records/MessageRecord.tsx";
+import closure_9 from "../../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../../stores/GuildStore.tsx";
+import closure_11 from "../../../../stores/PermissionStore.tsx";
+import { FileUploadErrorTypes } from "../../MessageConstants.tsx";
+import ME from "../../../../Constants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16, LOCAL_BOT_ID: closure_17, MessageAttachmentFlags: closure_18, MessageFlags: closure_19, MessageStates: closure_20, MessageTypes: closure_21, MessageTypesSets: closure_22, Permissions: closure_23 } = ME);

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../collectibles/CollectiblesCategoryStore.tsx";
 
 const require = arg1;
 function _showMarketingMomentRewardScreen() {

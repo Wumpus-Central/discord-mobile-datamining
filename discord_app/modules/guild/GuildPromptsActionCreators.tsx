@@ -1,6 +1,6 @@
 // discord_app/modules/guild/GuildPromptsActionCreators.tsx
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "../../../_runtime/00002_set.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
 
 function viewPrompt(REAL_NAME_PROMPT, closure_0) {
   importDefault = REAL_NAME_PROMPT;

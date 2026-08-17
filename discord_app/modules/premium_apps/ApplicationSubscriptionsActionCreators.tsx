@@ -1,7 +1,7 @@
 // discord_app/modules/premium_apps/ApplicationSubscriptionsActionCreators.tsx
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 676 */;
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ME from "../../Constants.tsx";
 
 function transformSubscriptionListingToSku(id) {
   return { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };

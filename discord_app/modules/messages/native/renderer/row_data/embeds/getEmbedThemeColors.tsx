@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx
-import ThemesDefault from "Themes" /* 712 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccessibilityAnnouncer from "../../../../../../design/shared.tsx";
+import hexToRgba from "../../../../../../utils/ColorUtils.tsx";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {

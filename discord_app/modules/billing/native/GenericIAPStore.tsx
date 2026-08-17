@@ -1,8 +1,8 @@
 // discord_app/modules/billing/native/GenericIAPStore.tsx
-import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import SubscriptionPlans from "SubscriptionPlans" /* 5322 */;
+import applyDefault from "../../../../_runtime/00012_apply.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../../Dispatcher.tsx";
+import SubscriptionPlans from "../../premium/native/ProductIds.android.tsx";
 
 require = arg1;
 let c3 = null;

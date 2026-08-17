@@ -1,14 +1,14 @@
 // discord_app/modules/chat_input/native/useChatInputRefs.tsx
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "loadSavedGuildStickers" /* 6769 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_6 from "initialize" /* 7435 */;
-import closure_7 from "setCooldown" /* 7440 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { updateChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight" /* 8682 */;
-import { AnalyticEvents } from "ME" /* 676 */;
-import { COMMAND_SENTINEL } from "regExp" /* 6810 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../stickers/StickersStore.tsx";
+import { DraftType } from "../../../stores/DraftStore.tsx";
+import closure_6 from "../../../stores/EditMessageStore.tsx";
+import closure_7 from "../../../stores/SlowmodeStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
+import { updateChatInputContainerHeight as closure_9 } from "useChatBottomManagerUIStore.tsx";
+import { AnalyticEvents } from "../../../Constants.tsx";
+import { COMMAND_SENTINEL } from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");

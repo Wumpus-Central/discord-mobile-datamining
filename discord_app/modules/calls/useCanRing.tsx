@@ -1,16 +1,16 @@
 // discord_app/modules/calls/useCanRing.tsx
-import experimentDefault from "experiment" /* 4798 */;
-import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 6817 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "callConnect" /* 4496 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "recomputeGuild" /* 4977 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "sortActivity" /* 4559 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
-import ME from "ME" /* 676 */;
+import experimentDefault from "../voice_calls/GuildVoiceRingingExperiment.tsx";
+import getChannelRoleSubscriptionStatusDefault from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/CallStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../stores/GuildVerificationStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "../../stores/PresenceStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/VoiceStateStore.tsx";
+import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;

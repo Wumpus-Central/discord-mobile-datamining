@@ -1,12 +1,12 @@
 // discord_app/modules/guild_profile/GuildProfileActionCreators.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "handleUpdateStart" /* 8854 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
-import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "GuildProfileStore.tsx";
+import { GuildProfileFetchStatus } from "GuildProfileStore.tsx";
+import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { getEmoji } from "GuildProfileBuilders.tsx";
 

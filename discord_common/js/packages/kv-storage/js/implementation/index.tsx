@@ -1,5 +1,5 @@
 // discord_common/js/packages/kv-storage/js/implementation/index.tsx
-import set from "set" /* 2 */;
+import set from "../../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/index.tsx");
 for (const key10018 in require("__KvStorage")) {

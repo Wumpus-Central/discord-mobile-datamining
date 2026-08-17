@@ -1,9 +1,9 @@
 // discord_app/modules/payments/native/utils/BillingStandaloneNativeUtils.tsx
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import ME from "ME" /* 676 */;
-import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4357 */;
-import MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG from "MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG" /* 4489 */;
+import set from "../../../../../_runtime/00002_set.js";
+import timestampDefault from "../../../debug/Logger.tsx";
+import ME from "../../../../Constants.tsx";
+import CustomCheckoutFlow2 from "../../PaymentConstants.tsx";
+import MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG from "../../utils/MobileWebRedirectCheckoutUtils.tsx";
 import { isMetaQuest } from "../../../device/MetaQuestUtils.android.tsx";
 import { goToStandalonePremiumCheckout } from "../../utils/BillingStandaloneUtils.tsx";
 

@@ -1,11 +1,11 @@
 // discord_app/modules/oauth2/AuthorizedAppsStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "isConnected" /* 5290 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/ConnectedAppsStore.tsx";
+import closure_5 from "../../stores/MessageStore.tsx";
 
 require = arg1;
 function recomputeFromAppTokens() {

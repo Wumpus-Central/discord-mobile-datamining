@@ -1,9 +1,9 @@
 // discord_app/modules/app_startup/native/executeRunnable.tsx
-import timestampDefault from "timestamp" /* 3 */;
-import setRequestedByAll from "setRequestedBy" /* 675 */;
-import getIsPausedAll from "getIsPaused" /* 13223 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import linkFromAppsFlyer from "linkFromAppsFlyer" /* 16441 */;
+import timestampDefault from "../../debug/Logger.tsx";
+import setRequestedByAll from "../../gateway/RequestGatewaySocket.tsx";
+import getIsPausedAll from "../../gateway/PauseGatewaySocket.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import linkFromAppsFlyer from "NativeAppStartup.tsx";
 
 const require = arg1;
 ({ init: c5, applicationReady: closure_6 } = linkFromAppsFlyer);

@@ -1,9 +1,9 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx
-import trackViewedEvent from "trackViewedEvent" /* 10582 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handleConnectionOpen" /* 9921 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
+import trackViewedEvent from "../shared/SafetyWarningUtils.tsx";
+import closure_2 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../ChannelSafetyWarningsStore.tsx";
+import { SafetyWarningTypes } from "../ChannelSafetyWarningsStore.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");

@@ -1,19 +1,19 @@
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
-import initializeDefault from "initialize" /* 589 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "getActiveStageChannelIds" /* 4989 */;
-import closure_11 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
-import ME from "ME" /* 676 */;
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
+import dispatcherDefault from "../../Dispatcher.tsx";
+import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import unpackStageChannelParty from "StageChannelRichPresenceUtils.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/RTCConnectionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../stores/UserStore.tsx";
+import closure_10 from "StageChannelParticipantStore.tsx";
+import closure_11 from "StageInstanceStore.tsx";
+import { STAGE_APPLICATION_ID } from "StageChannelsConstants.tsx";
+import ME from "../../Constants.tsx";
 import { unpackStageChannelParty } from "StageChannelRichPresenceUtils.tsx";
 
 require = arg1;

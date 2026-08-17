@@ -1,11 +1,11 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 712 */;
-import SearchableUserListDefault from "SearchableUserList" /* 9635 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import noopAll from "../../../../../_runtime/00019_noop.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import SearchableUserListDefault from "../../../main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { UserRowModes } from "../../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
+import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 noopAll;

@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/GatewayEncoding.tsx
-import set from "set" /* 2 */;
-import get from "get" /* 4842 */;
-import getErlpackEncoding from "getErlpackEncoding" /* 13190 */;
+import set from "../../../_runtime/00002_set.js";
+import get from "../../utils/ProcessArgs.tsx";
+import getErlpackEncoding from "GatewayEncodingErlpackEncoding.native.tsx";
 
 getErlpackEncoding = getErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {

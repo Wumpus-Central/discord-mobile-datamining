@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationsAnalytics.tsx
-import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import { AnalyticEvents } from "ME" /* 676 */;
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import { AnalyticEvents } from "../../Constants.tsx";
 
 const result = require("set").fileFinishedImporting("modules/conversations/ConversationsAnalytics.tsx");
 
