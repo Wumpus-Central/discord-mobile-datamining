@@ -1,10 +1,10 @@
 // _runtime/00885__INTERNAL_captureSerializedMetric.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import getClient from "getClient" /* 848 */;
-import mergeScopeData from "mergeScopeData" /* 871 */;
-import createMetricContainerEnvelopeItem from "createMetricContainerEnvelopeItem" /* 886 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import getClient from "00848_getClient.js";
+import mergeScopeData from "00871_mergeScopeData.js";
+import createMetricContainerEnvelopeItem from "00886_createMetricContainerEnvelopeItem.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function _INTERNAL_captureSerializedMetric(closure_0) {
   const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {

@@ -1,5 +1,5 @@
 // _runtime/06495_hitSlop.js
-import hitSlopDefault from "hitSlop" /* 6496 */;
+import hitSlopDefault from "06496_hitSlop.js";
 
 
 export default hitSlopDefault;

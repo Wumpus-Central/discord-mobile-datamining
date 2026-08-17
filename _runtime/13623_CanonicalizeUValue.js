@@ -1,5 +1,5 @@
 // _runtime/13623_CanonicalizeUValue.js
-import isMatched from "isMatched" /* 13617 */;
+import isMatched from "13617_isMatched.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
 // _runtime/02007_asyncRequireImpl.js
-import closure_2 from "asyncGeneratorStep" /* 2008 */;
+import closure_2 from "02008_asyncGeneratorStep.js";
 
 function asyncRequireImpl(closure_0) {
   const _global = closure_0;

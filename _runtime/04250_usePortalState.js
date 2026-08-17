@@ -1,6 +1,6 @@
 // _runtime/04250_usePortalState.js
-import noop from "noop" /* 19 */;
-import createContext from "createContext" /* 4247 */;
+import noop from "00019_noop.js";
+import createContext from "04247_createContext.js";
 
 const useContext = noop.useContext;
 

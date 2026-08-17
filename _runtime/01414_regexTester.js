@@ -1,5 +1,5 @@
 // _runtime/01414_regexTester.js
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
 import { isRegex } from "01415_isRegex.js";
 
 let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");

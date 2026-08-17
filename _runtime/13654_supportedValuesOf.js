@@ -1,10 +1,10 @@
 // _runtime/13654_supportedValuesOf.js
-import getSupportedCalendars from "getSupportedCalendars" /* 13655 */;
-import getSupportedCollations from "getSupportedCollations" /* 13657 */;
-import isSupportedCurrency from "isSupportedCurrency" /* 13659 */;
-import getSupportedNumberingSystems from "getSupportedNumberingSystems" /* 13661 */;
-import getSupportedTimeZones from "getSupportedTimeZones" /* 13663 */;
-import getSupportedUnits from "getSupportedUnits" /* 13665 */;
+import getSupportedCalendars from "13655_getSupportedCalendars.js";
+import getSupportedCollations from "13657_getSupportedCollations.js";
+import isSupportedCurrency from "13659_isSupportedCurrency.js";
+import getSupportedNumberingSystems from "13661_getSupportedNumberingSystems.js";
+import getSupportedTimeZones from "13663_getSupportedTimeZones.js";
+import getSupportedUnits from "13665_getSupportedUnits.js";
 
 require = arg1;
 const dependencyMap = arg6;

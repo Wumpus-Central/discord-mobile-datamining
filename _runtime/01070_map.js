@@ -1,5 +1,5 @@
 // _runtime/01070_map.js
-import triggerHandlers from "triggerHandlers" /* 1034 */;
+import triggerHandlers from "01034_triggerHandlers.js";
 
 require = arg1;
 const dependencyMap = arg6;

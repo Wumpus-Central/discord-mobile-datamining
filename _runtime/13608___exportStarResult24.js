@@ -1,10 +1,10 @@
 // _runtime/13608___exportStarResult24.js
-import digitsToString from "digitsToString" /* 13581 */;
-import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
-import __exportStarResult13 from "__exportStarResult13" /* 13596 */;
-import __exportStarResult21 from "__exportStarResult21" /* 13598 */;
-import formatToParts from "formatToParts" /* 13603 */;
-import e from "e" /* 1281 */;
+import digitsToString from "13581_digitsToString.js";
+import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
+import __exportStarResult13 from "13596___exportStarResult13.js";
+import __exportStarResult21 from "13598___exportStarResult21.js";
+import formatToParts from "13603_formatToParts.js";
+import e from "01281_e.js";
 
 let closure_2 = e.__importDefault(digitsToString);
 let closure_3 = e.__importDefault(formatToParts);

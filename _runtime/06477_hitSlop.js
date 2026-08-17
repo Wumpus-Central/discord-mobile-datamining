@@ -1,11 +1,11 @@
 // _runtime/06477_hitSlop.js
-import noopDefault from "noop" /* 19 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import tagMessage from "tagMessage" /* 6382 */;
+import noopDefault from "00019_noop.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import tagMessage from "06382_tagMessage.js";
 
 const require = arg1;
 let closure_2 = ["testOnly_pressed", "hitSlop", "pressRetentionOffset", "delayHoverIn", "delayHoverOut", "delayLongPress", "unstable_pressDelay", "onHoverIn", "onHoverOut", "onPress", "onPressIn", "onPressOut", "onLongPress", "onLayout", "style", "children", "android_disableSound", "android_ripple", "disabled", "accessible", "simultaneousWith", "requireToFail", "block"];

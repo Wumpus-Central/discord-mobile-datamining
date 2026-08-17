@@ -1,6 +1,6 @@
 // _runtime/01520_useSyncState.js
-import useEffectDefault from "useEffect" /* 1522 */;
-import closure_3 from "noop" /* 19 */;
+import useEffectDefault from "01522_useEffect.js";
+import closure_3 from "00019_noop.js";
 
 const require = arg1;
 

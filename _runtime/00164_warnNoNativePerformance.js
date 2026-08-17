@@ -1,6 +1,6 @@
 // _runtime/00164_warnNoNativePerformance.js
-import warnOnceDefault from "warnOnce" /* 165 */;
-import importDefaultResult from "NativePerformanceCxx" /* 154 */;
+import warnOnceDefault from "00165_warnOnce.js";
+import importDefaultResult from "00154_NativePerformanceCxx.js";
 
 let fn;
 if (importDefaultResult != null) {

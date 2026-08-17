@@ -1,6 +1,6 @@
 // _runtime/00960_buildMethodPath.js
-import _mod958 from "module_958" /* 958 */;
-import truncateTextByBytes from "truncateTextByBytes" /* 961 */;
+import _mod958 from "metro/00958__.js";
+import truncateTextByBytes from "00961_truncateTextByBytes.js";
 
 require = arg1;
 const dependencyMap = arg6;

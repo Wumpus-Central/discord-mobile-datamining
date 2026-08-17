@@ -1,5 +1,5 @@
 // _runtime/07073__superPropBase.js
-import _getPrototypeOf from "_getPrototypeOf" /* 7071 */;
+import _getPrototypeOf from "07071__getPrototypeOf.js";
 
 
 export default function _superPropBase(arg0, key10009) {

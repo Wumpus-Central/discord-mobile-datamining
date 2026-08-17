@@ -1,6 +1,6 @@
 // _runtime/01839_createViewDescriptorPaper.js
-import updateProps from "updateProps" /* 1754 */;
-import isJest from "isJest" /* 1657 */;
+import updateProps from "01754_updateProps.js";
+import isJest from "01657_isJest.js";
 
 function createViewDescriptorPaper(topScreenId) {
   return { tag: topScreenId, name: "RCTView" };

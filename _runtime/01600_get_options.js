@@ -1,5 +1,5 @@
 // _runtime/01600_get_options.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 const obj = {};
 Object.defineProperty(obj, "options", {

@@ -1,6 +1,6 @@
 // _runtime/06543_useCardAnimation.js
-import CardAnimationContext from "CardAnimationContext" /* 6537 */;
-import closure_2 from "noop" /* 19 */;
+import CardAnimationContext from "06537_CardAnimationContext.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

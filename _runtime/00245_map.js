@@ -1,5 +1,5 @@
 // _runtime/00245_map.js
-import frozen from "frozen" /* 257 */;
+import frozen from "00257_frozen.js";
 import { HeadlessJsTaskSupport } from "00259_HeadlessJsTaskSupport.js";
 
 require = arg1;

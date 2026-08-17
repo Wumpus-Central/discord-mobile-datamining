@@ -1,6 +1,6 @@
 // _runtime/metro/12269__.js
-import _mod12199 from "module_12199" /* 12199 */;
-import mergeDefs from "mergeDefs" /* 12203 */;
+import _mod12199 from "12199__.js";
+import mergeDefs from "../12203_mergeDefs.js";
 import { 12199__ } from "12199__.js";
 
 const self = this;

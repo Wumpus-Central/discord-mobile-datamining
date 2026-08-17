@@ -1,10 +1,10 @@
 // _runtime/01796_AnimatedScrollView.js
-import noopDefault from "noop" /* 19 */;
-import useAnimatedGestureHandler from "useAnimatedGestureHandler" /* 1797 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createAnimatedComponent from "createAnimatedComponent" /* 1688 */;
-import isReactRendering from "isReactRendering" /* 1793 */;
+import noopDefault from "00019_noop.js";
+import useAnimatedGestureHandler from "01797_useAnimatedGestureHandler.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import { jsx } from "react/00021_jsxProd.js";
+import createAnimatedComponent from "01688_createAnimatedComponent.js";
+import isReactRendering from "01793_isReactRendering.js";
 
 require = arg1;
 let closure_2 = ["scrollViewOffset"];

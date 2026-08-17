@@ -1,7 +1,7 @@
 // _runtime/03843_subDays.js
-import addDays from "addDays" /* 3620 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import addDays from "03620_addDays.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!addDays) {
   let obj = { default: null };

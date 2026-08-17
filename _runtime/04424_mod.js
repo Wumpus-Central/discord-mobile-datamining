@@ -1,5 +1,5 @@
 // _runtime/04424_mod.js
-import mod from "mod" /* 4425 */;
+import mod from "04425_mod.js";
 
 
 export default mod;

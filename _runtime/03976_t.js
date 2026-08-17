@@ -1,5 +1,5 @@
 // _runtime/03976_t.js
-import t from "t" /* 3975 */;
+import t from "03975_t.js";
 
 const fn = function t(moment) {
   const parts = "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split("_");

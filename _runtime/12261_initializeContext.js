@@ -1,5 +1,5 @@
 // _runtime/12261_initializeContext.js
-import $output from "$output" /* 12259 */;
+import $output from "12259__output.js";
 
 require = arg1;
 let exports = arg5;

@@ -1,8 +1,8 @@
 // _runtime/10344_PaginationItem.js
-import noopDefault from "noop" /* 19 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import { Pressable } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["width", "height", "borderRadius", "backgroundColor"];

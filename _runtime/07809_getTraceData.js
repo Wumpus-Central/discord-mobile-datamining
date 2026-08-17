@@ -1,8 +1,8 @@
 // _runtime/07809_getTraceData.js
-import errorCallback from "errorCallback" /* 7734 */;
-import getClient from "getClient" /* 7765 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
+import errorCallback from "07734_errorCallback.js";
+import getClient from "07765_getClient.js";
+import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
+import dateTimestampInSeconds from "07752_dateTimestampInSeconds.js";
 
 errorCallback;
 

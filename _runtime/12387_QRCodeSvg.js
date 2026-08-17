@@ -1,7 +1,7 @@
 // _runtime/12387_QRCodeSvg.js
-import inlineStyles from "inlineStyles" /* 6571 */;
-import emptyFunction from "emptyFunction" /* 12384 */;
-import noop from "noop" /* 19 */;
+import inlineStyles from "06571_inlineStyles.js";
+import emptyFunction from "12384_emptyFunction.js";
+import noop from "00019_noop.js";
 
 let fn = Object.assign;
 if (!fn) {

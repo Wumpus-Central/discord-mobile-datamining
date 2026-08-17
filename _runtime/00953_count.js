@@ -1,5 +1,5 @@
 // _runtime/00953_count.js
-import _INTERNAL_captureSerializedMetric from "_INTERNAL_captureSerializedMetric" /* 885 */;
+import _INTERNAL_captureSerializedMetric from "00885__INTERNAL_captureSerializedMetric.js";
 
 require = arg1;
 const dependencyMap = arg6;

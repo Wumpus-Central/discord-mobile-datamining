@@ -1,9 +1,9 @@
 // _runtime/00396_ScrollViewStickyHeader.js
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 ({ cloneElement: c5, useCallback: closure_6, useEffect: error, useMemo: closure_8, useRef: c9, useState: c10 } = noop);

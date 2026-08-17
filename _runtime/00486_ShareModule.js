@@ -1,5 +1,5 @@
 // _runtime/00486_ShareModule.js
-import ShareModuleDefault from "ShareModule" /* 487 */;
+import ShareModuleDefault from "00487_ShareModule.js";
 
 for (const key10016 in require("ShareModule")) {
   let tmp2 = key10016;

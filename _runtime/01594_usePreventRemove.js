@@ -1,6 +1,6 @@
 // _runtime/01594_usePreventRemove.js
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
 
 const require = arg1;
 

@@ -1,6 +1,6 @@
 // _runtime/00116_ReactFabric.js
-import get_BatchedBridge from "get BatchedBridge" /* 272 */;
-import describeBuiltInComponentFrame from "describeBuiltInComponentFrame" /* 117 */;
+import get_BatchedBridge from "00272_get_BatchedBridge.js";
+import describeBuiltInComponentFrame from "00117_describeBuiltInComponentFrame.js";
 
 global.RN$stopSurface = describeBuiltInComponentFrame.stopSurface;
 if (true !== global.RN$Bridgeless) {

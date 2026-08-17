@@ -1,5 +1,5 @@
 // _runtime/04156_useViewModelInstance.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useMemo: obj1, useRef: c3 } = noop);
 

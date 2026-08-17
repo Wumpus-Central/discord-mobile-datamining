@@ -1,11 +1,11 @@
 // _runtime/08105__getRequireWildcardCache.js
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 8107 */;
-import 08106__ from "metro/08106__.js" /* 8106 */;
-import noop from "noop" /* 19 */;
-import closure_5 from "get ActivityIndicator" /* 17 */;
-import closure_7 from "jsxProd" /* 21 */;
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import __INTERNAL_VIEW_CONFIG from "metro/08107___INTERNAL_VIEW_CONFIG.js";
+import 08106__ from "metro/08106__.js";
+import noop from "00019_noop.js";
+import closure_5 from "00017_get_ActivityIndicator.js";
+import closure_7 from "react/00021_jsxProd.js";
 
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {

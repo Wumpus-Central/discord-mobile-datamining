@@ -1,5 +1,5 @@
 // _runtime/01018_done.js
-import noop from "noop" /* 1019 */;
+import noop from "01019_noop.js";
 
 noop.prototype.done = function(arg0, arg1) {
   const self = this;

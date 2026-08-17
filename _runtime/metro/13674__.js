@@ -1,5 +1,5 @@
 // _runtime/metro/13674__.js
-import _mod13673 from "module_13673" /* 13673 */;
+import _mod13673 from "13673__.js";
 
 
 export default (arg0, arg1) => {

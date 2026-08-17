@@ -1,7 +1,7 @@
 // _runtime/01838_startScreenTransition.js
-import createViewDescriptorPaper from "createViewDescriptorPaper" /* 1839 */;
-import computeEasingProgress from "computeEasingProgress" /* 1840 */;
-import configureProps from "configureProps" /* 1753 */;
+import createViewDescriptorPaper from "01839_createViewDescriptorPaper.js";
+import computeEasingProgress from "01840_computeEasingProgress.js";
+import configureProps from "01753_configureProps.js";
 
 configureProps = configureProps.configureProps();
 function startScreenTransition(sharedEvent) {

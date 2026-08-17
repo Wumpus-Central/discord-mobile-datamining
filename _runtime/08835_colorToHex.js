@@ -1,5 +1,5 @@
 // _runtime/08835_colorToHex.js
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "metro/00032__slicedToArray.js";
 
 
 export const colorToHex = function colorToHex(arr) {

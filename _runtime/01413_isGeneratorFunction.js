@@ -1,8 +1,8 @@
 // _runtime/01413_isGeneratorFunction.js
-import getProto from "getProto" /* 546 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import hasToStringTagShams from "hasToStringTagShams" /* 1412 */;
-import regexTester from "regexTester" /* 1414 */;
+import getProto from "00546_getProto.js";
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import hasToStringTagShams from "01412_hasToStringTagShams.js";
+import regexTester from "01414_regexTester.js";
 
 let closure_3 = regexTester(/^\s*(?:function)?\*/);
 let closure_4 = hasToStringTagShams();

@@ -1,5 +1,5 @@
 // _runtime/00804_baseAssignValue.js
-import getNative from "getNative" /* 805 */;
+import getNative from "00805_getNative.js";
 
 
 export default function baseAssignValue(arg0, arg1, arg2) {

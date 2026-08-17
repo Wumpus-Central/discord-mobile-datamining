@@ -1,5 +1,5 @@
 // _runtime/01157_SEMANTIC_ATTRIBUTE_SENTRY_SOURCE.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 
 export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;

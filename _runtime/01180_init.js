@@ -1,6 +1,6 @@
 // _runtime/01180_init.js
-import NativeModules from "NativeModules" /* 1001 */;
-import closure_2 from "noop" /* 19 */;
+import NativeModules from "01001_NativeModules.js";
+import closure_2 from "00019_noop.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 require = arg1;

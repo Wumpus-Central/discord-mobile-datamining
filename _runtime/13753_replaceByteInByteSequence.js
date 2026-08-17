@@ -1,7 +1,7 @@
 // _runtime/13753_replaceByteInByteSequence.js
-import Buffer from "Buffer" /* 511 */;
-import _mod13752 from "module_13752" /* 13752 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import Buffer from "00511_Buffer.js";
+import _mod13752 from "metro/13752__.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function replaceByteInByteSequence(arr) {
   let index = arr.indexOf(43);

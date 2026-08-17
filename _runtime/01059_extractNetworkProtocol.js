@@ -1,7 +1,7 @@
 // _runtime/01059_extractNetworkProtocol.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import WINDOW from "WINDOW" /* 1039 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import WINDOW from "01039_WINDOW.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { onHidden } from "01060_onHidden.js";
 

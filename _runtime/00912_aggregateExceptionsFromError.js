@@ -1,5 +1,5 @@
 // _runtime/00912_aggregateExceptionsFromError.js
-import isInstanceOf from "isInstanceOf" /* 827 */;
+import isInstanceOf from "00827_isInstanceOf.js";
 
 require = arg1;
 let dependencyMap = arg6;

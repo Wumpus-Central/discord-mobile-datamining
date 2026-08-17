@@ -1,9 +1,9 @@
 // _runtime/01505_CommonActions.js
-import goBackAll from "goBack" /* 1507 */;
-import nanoid from "nanoid" /* 1508 */;
-import openDrawer from "openDrawer" /* 1510 */;
-import TabRouter from "TabRouter" /* 1511 */;
-import StackRouter from "StackRouter" /* 1514 */;
+import goBackAll from "01507_goBack.js";
+import nanoid from "01508_nanoid.js";
+import openDrawer from "01510_openDrawer.js";
+import TabRouter from "01511_TabRouter.js";
+import StackRouter from "01514_StackRouter.js";
 
 for (const key10013 in require("module_1506")) {
   let tmp2 = key10013;

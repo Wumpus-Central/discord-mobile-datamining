@@ -1,6 +1,6 @@
 // _runtime/07055_AverageWindow.js
-import MultiTypeAverageWindow from "_classCallCheck" /* 7050 */;
-import importDefaultResult from "_createClass" /* 7051 */;
+import MultiTypeAverageWindow from "metro/07050__classCallCheck.js";
+import importDefaultResult from "metro/07051__createClass.js";
 
 class AverageWindow {
   constructor(arg0, arg1) {

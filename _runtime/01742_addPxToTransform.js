@@ -1,9 +1,9 @@
 // _runtime/01742_addPxToTransform.js
-import TransitionType from "TransitionType" /* 1710 */;
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
-import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1741 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import TransitionType from "01710_TransitionType.js";
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
+import findDescendantWithExitingAnimation from "01741_findDescendantWithExitingAnimation.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function addPxToTransform(transform) {

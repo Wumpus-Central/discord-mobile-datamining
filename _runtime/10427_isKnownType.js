@@ -1,5 +1,5 @@
 // _runtime/10427_isKnownType.js
-import NativeDocumentPicker2 from "NativeDocumentPicker" /* 10428 */;
+import NativeDocumentPicker2 from "10428_NativeDocumentPicker.js";
 
 require = arg1;
 const dependencyMap = arg6;

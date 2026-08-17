@@ -1,6 +1,6 @@
 // _runtime/00921__shouldDropEvent.js
-import createStackParser from "createStackParser" /* 833 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import createStackParser from "00833_createStackParser.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 function _shouldDropEvent(message, message2) {
   let tmp = message2;

@@ -1,6 +1,6 @@
 // _runtime/01583_useNavigationHelpers.js
-import closure_2 from "noop" /* 19 */;
-import { PrivateValueStore } from "PrivateValueStore" /* 1504 */;
+import closure_2 from "00019_noop.js";
+import { PrivateValueStore } from "01504_PrivateValueStore.js";
 
 const require = arg1;
 

@@ -1,5 +1,5 @@
 // _runtime/01095_registerBackgroundTabDetection.js
-import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
+import ignoreNextOnError from "01028_ignoreNextOnError.js";
 
 require = arg1;
 const dependencyMap = arg6;

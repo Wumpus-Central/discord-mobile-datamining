@@ -1,5 +1,5 @@
 // _runtime/metro/04952__.js
-import getDataView from "getDataView" /* 4910 */;
+import getDataView from "../04910_getDataView.js";
 
 require = arg1;
 const dependencyMap = arg6;

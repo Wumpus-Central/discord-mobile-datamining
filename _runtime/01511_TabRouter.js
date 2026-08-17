@@ -1,5 +1,5 @@
 // _runtime/01511_TabRouter.js
-import getRouteHistory from "getRouteHistory" /* 1512 */;
+import getRouteHistory from "01512_getRouteHistory.js";
 
 require = arg1;
 const dependencyMap = arg6;

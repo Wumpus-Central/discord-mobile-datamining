@@ -1,5 +1,5 @@
 // _runtime/07053_toPrimitive.js
-import _typeof from "_typeof" /* 7054 */;
+import _typeof from "metro/07054__typeof.js";
 
 
 export default function toPrimitive(arg0, arg1) {

@@ -1,13 +1,13 @@
 // _runtime/00514_v1.js
-import v1Default from "v1" /* 515 */;
-import unsafeStringifyDefault from "unsafeStringify" /* 517 */;
-import validateDefault from "validate" /* 518 */;
-import v35Default from "v35" /* 520 */;
-import parseDefault from "parse" /* 522 */;
-import v4Default from "v4" /* 524 */;
-import v35Default2 from "v35" /* 526 */;
-import _modDef528 from "module_528" /* 528 */;
-import versionDefault from "version" /* 529 */;
+import v1Default from "00515_v1.js";
+import unsafeStringifyDefault from "00517_unsafeStringify.js";
+import validateDefault from "00518_validate.js";
+import v35Default from "00520_v35.js";
+import parseDefault from "00522_parse.js";
+import v4Default from "00524_v4.js";
+import v35Default2 from "00526_v35.js";
+import _modDef528 from "metro/00528__.js";
+import versionDefault from "00529_version.js";
 
 
 export const v1 = v1Default;

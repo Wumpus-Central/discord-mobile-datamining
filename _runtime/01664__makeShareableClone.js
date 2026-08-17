@@ -1,6 +1,6 @@
 // _runtime/01664__makeShareableClone.js
-import t from "t" /* 1665 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import t from "01665_t.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 global._makeShareableClone = () => {

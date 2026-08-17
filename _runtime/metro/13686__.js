@@ -1,6 +1,6 @@
 // _runtime/metro/13686__.js
-import withoutSetter from "withoutSetter" /* 13687 */;
-import all from "all" /* 13698 */;
+import withoutSetter from "../13687_withoutSetter.js";
+import all from "../13698_all.js";
 
 let closure_3 = withoutSetter("toPrimitive");
 

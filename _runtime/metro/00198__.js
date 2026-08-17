@@ -1,8 +1,8 @@
 // _runtime/metro/00198__.js
-import t from "t" /* 215 */;
-import URL from "URL" /* 226 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 228 */;
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import t from "../00215_t.js";
+import URL from "../00226_URL.js";
+import _isNativeReflectConstruct from "../00228__isNativeReflectConstruct.js";
+import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
 import { _isNativeReflectConstruct } from "../00199__isNativeReflectConstruct.js";
 import { Blob } from "../00203_Blob.js";
 import { FormData } from "../00211_FormData.js";

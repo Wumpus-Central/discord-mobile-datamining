@@ -1,6 +1,6 @@
 // _runtime/01602_createStaticNavigation.js
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 

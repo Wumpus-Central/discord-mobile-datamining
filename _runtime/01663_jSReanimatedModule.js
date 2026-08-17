@@ -1,7 +1,7 @@
 // _runtime/01663_jSReanimatedModule.js
-import _makeShareableClone from "_makeShareableClone" /* 1664 */;
-import importDefaultResult1 from "importDefaultResult1" /* 1680 */;
-import isJest from "isJest" /* 1657 */;
+import _makeShareableClone from "01664__makeShareableClone.js";
+import importDefaultResult1 from "01680_importDefaultResult1.js";
+import isJest from "01657_isJest.js";
 
 if (isJest.shouldBeUseWeb()) {
   const _module1 = _makeShareableClone;

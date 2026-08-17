@@ -1,8 +1,8 @@
 // _runtime/metro/01877__.js
-import noopDefault from "noop" /* 19 */;
-import TEST_ID_KEYBOARD_TOOLBAR from "TEST_ID_KEYBOARD_TOOLBAR" /* 1872 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "../00019_noop.js";
+import TEST_ID_KEYBOARD_TOOLBAR from "../01872_TEST_ID_KEYBOARD_TOOLBAR.js";
+import get_ActivityIndicator from "../00017_get_ActivityIndicator.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 require = arg1;
 noopDefault;

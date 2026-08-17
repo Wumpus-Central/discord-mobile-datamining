@@ -1,5 +1,5 @@
 // _runtime/07739_getGlobalSingleton.js
-import _mod7740 from "module_7740" /* 7740 */;
+import _mod7740 from "metro/07740__.js";
 
 require = arg1;
 const dependencyMap = arg6;

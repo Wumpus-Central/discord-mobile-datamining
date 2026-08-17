@@ -1,7 +1,7 @@
 // _runtime/metro/04743___INTERNAL_VIEW_CONFIG.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import result from "result" /* 26 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import get_ActivityIndicator from "../00017_get_ActivityIndicator.js";
+import result from "../00026_result.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
 let obj = { uiViewClassName: "RNPlainText", validAttributes: null };

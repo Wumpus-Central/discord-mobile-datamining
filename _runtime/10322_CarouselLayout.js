@@ -1,7 +1,7 @@
 // _runtime/10322_CarouselLayout.js
-import importDefaultResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importDefaultResult from "00019_noop.js";
+import { StyleSheet } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_4 = { code: "function pnpm_CarouselLayoutTsx1(){const{size,dataLength,handlerOffset,loop}=this.__closure;const totalSize=size*dataLength;const x=handlerOffset.value%totalSize;if(!loop)return handlerOffset.value;return Number.isNaN(x)?0:x;}" };

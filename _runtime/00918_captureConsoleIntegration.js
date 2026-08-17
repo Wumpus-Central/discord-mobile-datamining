@@ -1,5 +1,5 @@
 // _runtime/00918_captureConsoleIntegration.js
-import setupIntegration from "setupIntegration" /* 887 */;
+import setupIntegration from "00887_setupIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

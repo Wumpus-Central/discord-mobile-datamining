@@ -1,5 +1,5 @@
 // _runtime/01530_NavigationBuilderContext.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 
 export const NavigationBuilderContext = noopAll.createContext({

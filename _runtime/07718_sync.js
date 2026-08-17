@@ -1,5 +1,5 @@
 // _runtime/07718_sync.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const RNIapIosSk2 = get_ActivityIndicator.NativeModules.RNIapIosSk2;
 

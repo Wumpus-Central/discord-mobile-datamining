@@ -1,6 +1,6 @@
 // _runtime/13582_getMultiInternalSlots.js
-import e from "e" /* 1281 */;
-import monadic from "monadic" /* 13583 */;
+import e from "01281_e.js";
+import monadic from "13583_monadic.js";
 
 function getMultiInternalSlots(get) {
   let length;

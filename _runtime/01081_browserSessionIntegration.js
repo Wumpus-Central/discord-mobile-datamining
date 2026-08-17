@@ -1,5 +1,5 @@
 // _runtime/01081_browserSessionIntegration.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

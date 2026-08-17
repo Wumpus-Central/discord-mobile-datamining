@@ -1,8 +1,8 @@
 // _runtime/03689_eachWeekendOfYear.js
-import eachWeekendOfInterval from "eachWeekendOfInterval" /* 3686 */;
-import endOfYear from "endOfYear" /* 3690 */;
-import startOfYear from "startOfYear" /* 3691 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import eachWeekendOfInterval from "03686_eachWeekendOfInterval.js";
+import endOfYear from "03690_endOfYear.js";
+import startOfYear from "03691_startOfYear.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!eachWeekendOfInterval) {
   let obj = { default: null };

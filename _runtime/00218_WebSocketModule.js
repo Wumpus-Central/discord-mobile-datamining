@@ -1,5 +1,5 @@
 // _runtime/00218_WebSocketModule.js
-import WebSocketModuleDefault from "WebSocketModule" /* 219 */;
+import WebSocketModuleDefault from "00219_WebSocketModule.js";
 
 for (const key10016 in require("WebSocketModule")) {
   let tmp2 = key10016;

@@ -1,6 +1,6 @@
 // _runtime/06544_useGestureHandlerRef.js
-import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6376 */;
-import closure_2 from "noop" /* 19 */;
+import GestureHandlerRefContext from "06376_GestureHandlerRefContext.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

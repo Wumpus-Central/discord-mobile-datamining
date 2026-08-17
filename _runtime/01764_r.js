@@ -1,6 +1,6 @@
 // _runtime/01764_r.js
-import call from "call" /* 1697 */;
-import JEST_WORKER_ID from "JEST_WORKER_ID" /* 1765 */;
+import call from "01697_call.js";
+import JEST_WORKER_ID from "01765_JEST_WORKER_ID.js";
 
 require = arg1;
 const dependencyMap = arg6;

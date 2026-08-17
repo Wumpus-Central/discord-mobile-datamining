@@ -1,6 +1,6 @@
 // _runtime/03875_previousThursday.js
-import requiredArgs from "requiredArgs" /* 3473 */;
-import previousDay from "previousDay" /* 3870 */;
+import requiredArgs from "03473_requiredArgs.js";
+import previousDay from "03870_previousDay.js";
 
 if (!requiredArgs) {
   let obj = { default: null };

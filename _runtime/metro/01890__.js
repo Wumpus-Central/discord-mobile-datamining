@@ -1,9 +1,9 @@
 // _runtime/metro/01890__.js
-import noopDefault from "noop" /* 19 */;
-import useResizeMode from "useResizeMode" /* 1848 */;
-import KeyboardAvoidingView from "KeyboardAvoidingView" /* 1859 */;
-import { Animated } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "../00019_noop.js";
+import useResizeMode from "../01848_useResizeMode.js";
+import KeyboardAvoidingView from "../01859_KeyboardAvoidingView.js";
+import { Animated } from "../00017_get_ActivityIndicator.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 require = arg1;
 noopDefault;

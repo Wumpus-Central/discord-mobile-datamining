@@ -1,6 +1,6 @@
 // _runtime/07082_VelocityTracker.js
-import _createClassDefault from "_createClass" /* 7051 */;
-import VelocityTracker from "_classCallCheck" /* 7050 */;
+import _createClassDefault from "metro/07051__createClass.js";
+import VelocityTracker from "metro/07050__classCallCheck.js";
 
 class VelocityTracker {
   constructor() {

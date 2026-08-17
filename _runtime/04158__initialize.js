@@ -1,6 +1,6 @@
 // _runtime/04158__initialize.js
-import _initialize from "asyncGeneratorStep" /* 5 */;
-import { NitroModules } from "module_4112" /* 4112 */;
+import _initialize from "00005_asyncGeneratorStep.js";
+import { NitroModules } from "metro/04112__.js";
 
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
 _initialize = function _initialize() {

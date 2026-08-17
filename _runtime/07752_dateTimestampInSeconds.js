@@ -1,5 +1,5 @@
 // _runtime/07752_dateTimestampInSeconds.js
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
 
 function dateTimestampInSeconds() {
   return Date.now() / 1000;

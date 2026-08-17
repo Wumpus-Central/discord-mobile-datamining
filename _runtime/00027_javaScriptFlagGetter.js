@@ -1,5 +1,5 @@
 // _runtime/00027_javaScriptFlagGetter.js
-import set from "set" /* 28 */;
+import set from "00028_set.js";
 
 const javaScriptFlagGetter = set.createJavaScriptFlagGetter("jsOnlyTestFlag", false);
 const javaScriptFlagGetter1 = set.createJavaScriptFlagGetter("animatedShouldDebounceQueueFlush", false);

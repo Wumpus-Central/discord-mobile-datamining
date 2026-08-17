@@ -1,15 +1,15 @@
 // _runtime/06371_createStackNavigator.js
-import StackNavigator from "StackNavigator" /* 6372 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6373 */;
-import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6376 */;
-import AnimatedAll from "Animated" /* 6519 */;
-import Header from "Header" /* 6520 */;
-import SlideFromRightIOSAll from "SlideFromRightIOS" /* 6525 */;
-import TransitionIOSSpecAll from "TransitionIOSSpec" /* 6526 */;
-import forHorizontalIOSAll from "forHorizontalIOS" /* 6527 */;
-import CardAnimationContext from "CardAnimationContext" /* 6537 */;
-import useCardAnimation from "useCardAnimation" /* 6543 */;
-import useGestureHandlerRef from "useGestureHandlerRef" /* 6544 */;
+import StackNavigator from "06372_StackNavigator.js";
+import _isNativeReflectConstruct from "06373__isNativeReflectConstruct.js";
+import GestureHandlerRefContext from "06376_GestureHandlerRefContext.js";
+import AnimatedAll from "06519_Animated.js";
+import Header from "06520_Header.js";
+import SlideFromRightIOSAll from "06525_SlideFromRightIOS.js";
+import TransitionIOSSpecAll from "06526_TransitionIOSSpec.js";
+import forHorizontalIOSAll from "06527_forHorizontalIOS.js";
+import CardAnimationContext from "06537_CardAnimationContext.js";
+import useCardAnimation from "06543_useCardAnimation.js";
+import useGestureHandlerRef from "06544_useGestureHandlerRef.js";
 
 
 export const createStackNavigator = StackNavigator.createStackNavigator;

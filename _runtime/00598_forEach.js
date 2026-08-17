@@ -1,6 +1,6 @@
 // _runtime/00598_forEach.js
-import _mod599 from "module_599" /* 599 */;
-import castFunction from "castFunction" /* 633 */;
+import _mod599 from "metro/00599__.js";
+import castFunction from "00633_castFunction.js";
 
 
 export default function forEach(arg0, arg1) {

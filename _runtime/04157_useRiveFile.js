@@ -1,8 +1,8 @@
 // _runtime/04157_useRiveFile.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { Image } from "00017_get_ActivityIndicator.js";
 
 const require = arg1;
 ({ useState: c4, useEffect: c5, useMemo: closure_6, useRef: error } = noop);

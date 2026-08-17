@@ -1,5 +1,5 @@
 // _runtime/01551_getFocusedRouteNameFromRoute.js
-import CHILD_STATE from "CHILD_STATE" /* 1552 */;
+import CHILD_STATE from "01552_CHILD_STATE.js";
 
 require = arg1;
 const dependencyMap = arg6;

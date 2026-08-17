@@ -1,5 +1,5 @@
 // _runtime/00812_processEvent.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const require = arg1;
 function processEvent(arg0, arg1) {

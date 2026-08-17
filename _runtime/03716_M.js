@@ -1,5 +1,5 @@
 // _runtime/03716_M.js
-import addLeadingZeros from "addLeadingZeros" /* 3715 */;
+import addLeadingZeros from "03715_addLeadingZeros.js";
 
 if (!addLeadingZeros) {
   const obj = { default: null };

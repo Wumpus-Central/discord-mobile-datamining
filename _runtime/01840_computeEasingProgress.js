@@ -1,5 +1,5 @@
 // _runtime/01840_computeEasingProgress.js
-import RNScreensTurboModule2 from "RNScreensTurboModule" /* 1841 */;
+import RNScreensTurboModule2 from "01841_RNScreensTurboModule.js";
 
 require = arg1;
 const dependencyMap = arg6;

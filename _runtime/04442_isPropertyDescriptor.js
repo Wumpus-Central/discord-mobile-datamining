@@ -1,5 +1,5 @@
 // _runtime/04442_isPropertyDescriptor.js
-import bind from "bind" /* 573 */;
+import bind from "00573_bind.js";
 
 let closure_2 = Object.create(null);
 

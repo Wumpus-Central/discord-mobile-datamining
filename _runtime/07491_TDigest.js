@@ -1,5 +1,5 @@
 // _runtime/07491_TDigest.js
-import Node from "Node" /* 7492 */;
+import Node from "07492_Node.js";
 
 class TDigest {
   constructor(arg0, arg1, arg2) {

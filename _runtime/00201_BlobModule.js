@@ -1,5 +1,5 @@
 // _runtime/00201_BlobModule.js
-import BlobModuleDefault from "BlobModule" /* 202 */;
+import BlobModuleDefault from "00202_BlobModule.js";
 
 for (const key10016 in require("BlobModule")) {
   let tmp2 = key10016;

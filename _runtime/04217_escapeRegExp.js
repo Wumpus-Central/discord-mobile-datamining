@@ -1,5 +1,5 @@
 // _runtime/04217_escapeRegExp.js
-import toString from "toString" /* 762 */;
+import toString from "00762_toString.js";
 
 const tmp = /[\\^$.*+?()[\]{}|]/g;
 const re2 = tmp;

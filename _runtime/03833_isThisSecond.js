@@ -1,6 +1,6 @@
 // _runtime/03833_isThisSecond.js
-import isSameSecond from "isSameSecond" /* 3825 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import isSameSecond from "03825_isSameSecond.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!isSameSecond) {
   let obj = { default: null };

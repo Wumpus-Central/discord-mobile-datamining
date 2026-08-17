@@ -1,6 +1,6 @@
 // _runtime/01748_addTransformToKeepPosition.js
-import TransitionType from "TransitionType" /* 1710 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import TransitionType from "01710_TransitionType.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function addTransformToKeepPosition(style, style2, props, arg3) {

@@ -1,5 +1,5 @@
 // _runtime/01076__wrapTimeFunction.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 function _wrapTimeFunction(arg0) {
   closure_0 = arg0;

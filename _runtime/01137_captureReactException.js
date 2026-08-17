@@ -1,5 +1,5 @@
 // _runtime/01137_captureReactException.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 
 function captureReactException(closure_1, closure_2, arg2) {
   let weakSet = closure_1;

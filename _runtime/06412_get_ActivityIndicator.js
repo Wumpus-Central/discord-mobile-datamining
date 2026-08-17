@@ -1,5 +1,5 @@
 // _runtime/06412_get_ActivityIndicator.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 
 export default get_ActivityIndicator.findNodeHandle;

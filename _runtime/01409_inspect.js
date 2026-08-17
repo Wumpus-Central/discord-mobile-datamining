@@ -1,7 +1,7 @@
 // _runtime/01409_inspect.js
-import checkBoxedPrimitive from "checkBoxedPrimitive" /* 1410 */;
-import isBuffer from "isBuffer" /* 1427 */;
-import _mod1428 from "module_1428" /* 1428 */;
+import checkBoxedPrimitive from "01410_checkBoxedPrimitive.js";
+import isBuffer from "01427_isBuffer.js";
+import _mod1428 from "metro/01428__.js";
 
 function inspect(arg0, flag) {
   const obj = { seen: [], stylize: stylizeNoColor };

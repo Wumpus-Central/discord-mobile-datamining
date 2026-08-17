@@ -1,8 +1,8 @@
 // _runtime/00922__extractErrorData.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import consoleSandbox from "consoleSandbox" /* 824 */;
-import isInstanceOf from "isInstanceOf" /* 827 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import consoleSandbox from "00824_consoleSandbox.js";
+import isInstanceOf from "00827_isInstanceOf.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 function _extractErrorData(cause) {
   try {

@@ -1,5 +1,5 @@
 // _runtime/00702_is.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { checkIfSnapshotChanged } from "00703_checkIfSnapshotChanged.js";
 
 if (typeof Object.is === "function") {

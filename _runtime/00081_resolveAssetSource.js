@@ -1,6 +1,6 @@
 // _runtime/00081_resolveAssetSource.js
-import _mod84 from "module_84" /* 84 */;
-import pickScale from "pickScale" /* 86 */;
+import _mod84 from "metro/00084__.js";
+import pickScale from "00086_pickScale.js";
 
 function resolveAssetSource(source) {
   if (null != source) {

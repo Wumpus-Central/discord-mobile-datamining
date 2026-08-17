@@ -1,7 +1,7 @@
 // _runtime/00289_getExtendedError.js
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 189 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 189 */;
+import noopAll from "00019_noop.js";
+import _isNativeReflectConstruct from "00189__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "00189__isNativeReflectConstruct.js";
 
 require = arg1;
 function getExtendedError(value, componentStack) {

@@ -1,6 +1,6 @@
 // _runtime/03471_formatRelative.js
-import _typeof from "_typeof" /* 3472 */;
-import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
+import _typeof from "metro/03472__typeof.js";
+import isSameUTCWeek from "03474_isSameUTCWeek.js";
 
 if (!_typeof) {
   let obj = { default: null };

@@ -1,6 +1,6 @@
 // _runtime/00054__getFilterAmount.js
-import processColorDefault from "processColor" /* 50 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import processColorDefault from "00050_processColor.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function _getFilterAmount(arg0, str) {
   if (typeof str === "string") {

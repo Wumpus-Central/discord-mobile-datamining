@@ -1,7 +1,7 @@
 // _runtime/01808_useAnimatedRef.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import isJest from "isJest" /* 1657 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import isJest from "01657_isJest.js";
 
 const require = arg1;
 ({ useRef: c3, useState: c4 } = noop);

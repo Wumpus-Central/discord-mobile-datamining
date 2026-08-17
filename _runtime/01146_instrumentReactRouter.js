@@ -1,7 +1,7 @@
 // _runtime/01146_instrumentReactRouter.js
-import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "00019_noop.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 import { getStatics } from "01140_getStatics.js";

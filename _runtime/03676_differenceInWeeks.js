@@ -1,7 +1,7 @@
 // _runtime/03676_differenceInWeeks.js
-import getRoundingMethod from "getRoundingMethod" /* 3666 */;
-import compareLocalAsc from "compareLocalAsc" /* 3663 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getRoundingMethod from "03666_getRoundingMethod.js";
+import compareLocalAsc from "03663_compareLocalAsc.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!compareLocalAsc) {
   let obj = { default: null };

@@ -1,7 +1,7 @@
 // _runtime/03629_getISOWeekYear.js
-import _typeof from "_typeof" /* 3472 */;
-import startOfISOWeek from "startOfISOWeek" /* 3630 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import startOfISOWeek from "03630_startOfISOWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

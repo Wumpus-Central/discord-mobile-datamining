@@ -1,6 +1,6 @@
 // _runtime/00894_createCheckInEnvelope.js
-import dsnFromString from "dsnFromString" /* 837 */;
-import forEachEnvelopeItem from "forEachEnvelopeItem" /* 864 */;
+import dsnFromString from "00837_dsnFromString.js";
+import forEachEnvelopeItem from "00864_forEachEnvelopeItem.js";
 
 require = arg1;
 const dependencyMap = arg6;

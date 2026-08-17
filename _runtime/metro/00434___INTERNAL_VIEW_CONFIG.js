@@ -1,6 +1,6 @@
 // _runtime/metro/00434___INTERNAL_VIEW_CONFIG.js
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import weakSet from "../00106_weakSet.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "VirtualView", directEventTypes: { topModeChange: { registrationName: "onModeChange" } }, validAttributes: null };
 obj = { initialHidden: true, removeClippedSubviews: true, renderState: true };

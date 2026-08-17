@@ -1,10 +1,10 @@
 // _runtime/00269_notifyMutationObservers.js
-import isEnabledAll from "isEnabled" /* 46 */;
-import getInstanceHandle from "getInstanceHandle" /* 136 */;
-import warnOnceDefault from "warnOnce" /* 165 */;
-import NativeMutationObserverCxxDefault from "NativeMutationObserverCxx" /* 271 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { createMutationRecord } from "MutationRecord" /* 270 */;
+import isEnabledAll from "00046_isEnabled.js";
+import getInstanceHandle from "00136_getInstanceHandle.js";
+import warnOnceDefault from "00165_warnOnce.js";
+import NativeMutationObserverCxxDefault from "00271_NativeMutationObserverCxx.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import { createMutationRecord } from "00270_MutationRecord.js";
 
 require = arg1;
 function notifyMutationObservers() {

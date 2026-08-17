@@ -1,6 +1,6 @@
 // _runtime/03725_formatDistanceToNowStrict.js
-import formatDistanceStrict from "formatDistanceStrict" /* 3723 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import formatDistanceStrict from "03723_formatDistanceStrict.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!formatDistanceStrict) {
   let obj = { default: null };

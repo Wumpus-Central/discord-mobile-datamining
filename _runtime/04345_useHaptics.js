@@ -1,5 +1,5 @@
 // _runtime/04345_useHaptics.js
-import setEnabledDefault from "setEnabled" /* 4346 */;
+import setEnabledDefault from "04346_setEnabled.js";
 
 for (const key10016 in require("isRingerSilent")) {
   let tmp2 = key10016;

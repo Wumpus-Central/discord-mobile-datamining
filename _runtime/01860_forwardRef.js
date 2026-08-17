@@ -1,8 +1,8 @@
 // _runtime/01860_forwardRef.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
-import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import noop from "00019_noop.js";
+import closure_5 from "00019_noop.js";
 
 ({ useCallback: c3, useMemo: c4, forwardRef } = noop);
 const View = get_ActivityIndicator.View;

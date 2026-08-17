@@ -1,5 +1,5 @@
 // _runtime/04918_parseBox.js
-import parseBox from "parseBox" /* 4919 */;
+import parseBox from "04919_parseBox.js";
 
 require = arg1;
 const dependencyMap = arg6;

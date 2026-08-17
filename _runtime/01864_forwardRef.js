@@ -1,8 +1,8 @@
 // _runtime/01864_forwardRef.js
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
-import closure_8 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "00005_asyncGeneratorStep.js";
+import noop from "00019_noop.js";
+import closure_8 from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
 ({ useCallback: c4, useEffect: c5, useImperativeHandle: closure_6, useMemo: error, forwardRef } = noop);

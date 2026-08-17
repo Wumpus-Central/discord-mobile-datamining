@@ -1,5 +1,5 @@
 // _runtime/00213_Networking.js
-import NetworkingDefault from "Networking" /* 214 */;
+import NetworkingDefault from "00214_Networking.js";
 
 for (const key10016 in require("Networking")) {
   let tmp2 = key10016;

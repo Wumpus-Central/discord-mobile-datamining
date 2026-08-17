@@ -1,7 +1,7 @@
 // _runtime/07824_instrumentConsole.js
-import addHandler from "addHandler" /* 7736 */;
-import consoleSandbox from "consoleSandbox" /* 7738 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import addHandler from "07736_addHandler.js";
+import consoleSandbox from "07738_consoleSandbox.js";
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
 
 require = arg1;
 const dependencyMap = arg6;

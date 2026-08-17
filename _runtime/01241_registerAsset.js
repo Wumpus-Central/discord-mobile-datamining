@@ -1,5 +1,5 @@
 // _runtime/01241_registerAsset.js
-import _mod84 from "module_84" /* 84 */;
+import _mod84 from "metro/00084__.js";
 
 
 export const registerAsset = _mod84.registerAsset;

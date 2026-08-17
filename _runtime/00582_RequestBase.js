@@ -1,6 +1,6 @@
 // _runtime/00582_RequestBase.js
-import _createForOfIteratorHelper from "_createForOfIteratorHelper" /* 532 */;
-import _mod576 from "module_576" /* 576 */;
+import _createForOfIteratorHelper from "00532__createForOfIteratorHelper.js";
+import _mod576 from "metro/00576__.js";
 
 class RequestBase {
   constructor() {

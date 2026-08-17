@@ -1,5 +1,5 @@
 // _runtime/01416_isTypedArray.js
-import _mod1417 from "module_1417" /* 1417 */;
+import _mod1417 from "metro/01417__.js";
 
 
 export default function isTypedArray(arg0) {

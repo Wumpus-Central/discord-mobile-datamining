@@ -1,5 +1,5 @@
 // _runtime/13644_parseUnicodeLanguageId.js
-import e from "e" /* 1281 */;
+import e from "01281_e.js";
 
 require = arg1;
 const exports = arg5;

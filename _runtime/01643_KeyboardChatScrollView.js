@@ -1,6 +1,6 @@
 // _runtime/01643_KeyboardChatScrollView.js
-import KeyboardAvoidingView from "KeyboardAvoidingView" /* 1859 */;
-import OverKeyboardView from "OverKeyboardView" /* 1888 */;
+import KeyboardAvoidingView from "01859_KeyboardAvoidingView.js";
+import OverKeyboardView from "01888_OverKeyboardView.js";
 
 for (const key10013 in require("nativeEventEmitter")) {
   let tmp2 = key10013;

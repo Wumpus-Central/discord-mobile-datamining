@@ -1,7 +1,7 @@
 // _runtime/06680__fetchText.js
-import Buffer from "Buffer" /* 511 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
+import Buffer from "00511_Buffer.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
 
 require = arg1;
 function _fetchText() {

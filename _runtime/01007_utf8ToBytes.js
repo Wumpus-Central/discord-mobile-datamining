@@ -1,6 +1,6 @@
 // _runtime/01007_utf8ToBytes.js
-import utf8ToBytes from "utf8ToBytes" /* 1009 */;
-import base64StringFromByteArray from "base64StringFromByteArray" /* 1011 */;
+import utf8ToBytes from "01009_utf8ToBytes.js";
+import base64StringFromByteArray from "01011_base64StringFromByteArray.js";
 
 for (const key10013 in require("module_1008")) {
   let tmp2 = key10013;

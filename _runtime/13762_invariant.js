@@ -1,6 +1,6 @@
 // _runtime/13762_invariant.js
-import closure_0 from "_slicedToArray" /* 32 */;
-import monadic from "monadic" /* 13763 */;
+import closure_0 from "metro/00032__slicedToArray.js";
+import monadic from "13763_monadic.js";
 
 function invariant(arg0, arg1) {
   {

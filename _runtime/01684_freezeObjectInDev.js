@@ -1,7 +1,7 @@
 // _runtime/01684_freezeObjectInDev.js
-import weakMap from "weakMap" /* 1685 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import isJest from "isJest" /* 1657 */;
+import weakMap from "01685_weakMap.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import isJest from "01657_isJest.js";
 
 require = arg1;
 function freezeObjectInDev(arg0) {

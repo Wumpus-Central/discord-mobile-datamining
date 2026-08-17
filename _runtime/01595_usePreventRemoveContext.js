@@ -1,6 +1,6 @@
 // _runtime/01595_usePreventRemoveContext.js
-import PreventRemoveContext from "PreventRemoveContext" /* 1570 */;
-import closure_2 from "noop" /* 19 */;
+import PreventRemoveContext from "01570_PreventRemoveContext.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

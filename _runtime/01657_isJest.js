@@ -1,6 +1,6 @@
 // _runtime/01657_isJest.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import noop from "00019_noop.js";
 
 const version = noop.version;
 const Platform = get_ActivityIndicator.Platform;

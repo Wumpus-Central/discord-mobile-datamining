@@ -1,16 +1,16 @@
 // _runtime/06673__isNativeReflectConstruct.js
-import noopAll from "noop" /* 19 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import extractFontDefault from "extractFont" /* 6593 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 6670 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6674 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import _inheritsDefault from "00098__inherits.js";
+import extractFontDefault from "06593_extractFont.js";
+import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault2 from "06670__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06674___INTERNAL_VIEW_CONFIG.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const TextPath = arg1;
 function _isNativeReflectConstruct() {

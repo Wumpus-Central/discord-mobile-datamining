@@ -1,7 +1,7 @@
 // _runtime/00546_getProto.js
-import getPrototypeOf from "getPrototypeOf" /* 547 */;
-import _mod548 from "module_548" /* 548 */;
-import _mod550 from "module_550" /* 550 */;
+import getPrototypeOf from "00547_getPrototypeOf.js";
+import _mod548 from "metro/00548__.js";
+import _mod550 from "metro/00550__.js";
 
 if (getPrototypeOf) {
   function getProto(arg0) {

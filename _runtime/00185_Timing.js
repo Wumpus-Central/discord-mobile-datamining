@@ -1,5 +1,5 @@
 // _runtime/00185_Timing.js
-import TimingDefault from "Timing" /* 186 */;
+import TimingDefault from "00186_Timing.js";
 
 for (const key10016 in require("Timing")) {
   let tmp2 = key10016;

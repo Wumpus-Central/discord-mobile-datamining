@@ -1,5 +1,5 @@
 // _runtime/06526_TransitionIOSSpec.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const Easing = get_ActivityIndicator.Easing;
 let obj = { animation: "timing", config: null };

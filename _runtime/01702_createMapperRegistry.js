@@ -1,7 +1,7 @@
 // _runtime/01702_createMapperRegistry.js
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
-import isSharedValue from "isSharedValue" /* 1703 */;
-import isJest from "isJest" /* 1657 */;
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
+import isSharedValue from "01703_isSharedValue.js";
+import isJest from "01657_isJest.js";
 
 isJest = isJest.isJest();
 function createMapperRegistry() {

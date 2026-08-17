@@ -1,5 +1,5 @@
 // _runtime/metro/13160__.js
-import Comparator from "Comparator" /* 13151 */;
+import Comparator from "../13151_Comparator.js";
 import { SemVer } from "../13123_SemVer.js";
 import { Range } from "../13152_Range.js";
 import { Range } from "../13154_Range.js";

@@ -1,20 +1,20 @@
 // _runtime/01501_createStandardNavigationFactories.js
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1598 */;
-import useBuildHref from "useBuildHref" /* 1599 */;
-import get_options from "get options" /* 1600 */;
-import createStaticNavigation from "createStaticNavigation" /* 1602 */;
-import weakMap from "weakMap" /* 1603 */;
-import fonts from "fonts" /* 1604 */;
-import context from "context" /* 1611 */;
-import Link from "Link" /* 1612 */;
-import clone from "clone" /* 1613 */;
-import ServerContainer from "ServerContainer" /* 1615 */;
-import fonts2 from "fonts" /* 1617 */;
-import setLastUnhandledLink from "setLastUnhandledLink" /* 1618 */;
-import useLinkTo from "useLinkTo" /* 1619 */;
-import useLocale from "useLocale" /* 1620 */;
-import useRoutePath from "useRoutePath" /* 1621 */;
-import useScrollToTop from "useScrollToTop" /* 1622 */;
+import createStandardNavigationFactories from "01598_createStandardNavigationFactories.js";
+import useBuildHref from "01599_useBuildHref.js";
+import get_options from "01600_get_options.js";
+import createStaticNavigation from "01602_createStaticNavigation.js";
+import weakMap from "01603_weakMap.js";
+import fonts from "01604_fonts.js";
+import context from "01611_context.js";
+import Link from "01612_Link.js";
+import clone from "01613_clone.js";
+import ServerContainer from "01615_ServerContainer.js";
+import fonts2 from "01617_fonts.js";
+import setLastUnhandledLink from "01618_setLastUnhandledLink.js";
+import useLinkTo from "01619_useLinkTo.js";
+import useLocale from "01620_useLocale.js";
+import useRoutePath from "01621_useRoutePath.js";
+import useScrollToTop from "01622_useScrollToTop.js";
 
 for (const key10013 in require("module_1502")) {
   let tmp2 = key10013;

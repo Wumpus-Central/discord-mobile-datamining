@@ -1,6 +1,6 @@
 // _runtime/00722_isKey.js
-import _mod599 from "module_599" /* 599 */;
-import isSymbol from "isSymbol" /* 638 */;
+import _mod599 from "metro/00599__.js";
+import isSymbol from "00638_isSymbol.js";
 
 const re2 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/;
 const re3 = /^\w*$/;

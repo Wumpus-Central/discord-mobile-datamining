@@ -1,5 +1,5 @@
 // _runtime/07168_useClipboard.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 7170 */;
+import get_ActivityIndicator from "07170_get_ActivityIndicator.js";
 import { setString } from "07169_setString.js";
 
 

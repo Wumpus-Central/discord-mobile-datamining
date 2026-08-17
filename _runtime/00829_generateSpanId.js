@@ -1,5 +1,5 @@
 // _runtime/00829_generateSpanId.js
-import addContextToFrame from "addContextToFrame" /* 830 */;
+import addContextToFrame from "00830_addContextToFrame.js";
 
 require = arg1;
 const dependencyMap = arg6;

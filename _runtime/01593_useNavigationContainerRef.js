@@ -1,6 +1,6 @@
 // _runtime/01593_useNavigationContainerRef.js
-import createNavigationContainerRef from "createNavigationContainerRef" /* 1526 */;
-import closure_2 from "noop" /* 19 */;
+import createNavigationContainerRef from "01526_createNavigationContainerRef.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

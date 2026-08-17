@@ -1,11 +1,11 @@
 // _runtime/01882_forwardRef.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noopDefault from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import cancelAnimation from "cancelAnimation" /* 1654 */;
-import closure_8 from "module_0" /* 0 */;
-import closure_9 from "module_0" /* 0 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import noopDefault from "00019_noop.js";
+import noop from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import cancelAnimation from "01654_cancelAnimation.js";
+import closure_8 from "../discord_app/index.native.tsx";
+import closure_9 from "../discord_app/index.native.tsx";
 
 ({ useCallback: c3, useMemo: c4, forwardRef } = noop);
 noopDefault;

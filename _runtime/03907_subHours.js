@@ -1,7 +1,7 @@
 // _runtime/03907_subHours.js
-import addHours from "addHours" /* 3626 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import addHours from "03626_addHours.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!addHours) {
   let obj = { default: null };

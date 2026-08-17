@@ -1,10 +1,10 @@
 // _runtime/07040_RecyclerView.js
-import noopDefault from "noop" /* 19 */;
-import closure_3 from "_slicedToArray" /* 7041 */;
-import closure_4 from "_objectWithoutProperties" /* 7047 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import closure_3 from "metro/07041__slicedToArray.js";
+import closure_4 from "metro/07047__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_2 = ["horizontal", "renderItem", "data", "extraData", "onLoad", "CellRendererComponent", "overrideProps", "refreshing", "onRefresh", "progressViewOffset", "ListEmptyComponent", "ListHeaderComponent", "ListHeaderComponentStyle", "ListFooterComponent", "ListFooterComponentStyle", "ItemSeparatorComponent", "renderScrollComponent", "style", "stickyHeaderIndices", "maintainVisibleContentPosition", "onCommitLayoutEffect", "onChangeStickyIndex", "stickyHeaderConfig", "inverted"];

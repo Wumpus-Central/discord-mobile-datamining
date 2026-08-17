@@ -1,6 +1,6 @@
 // _runtime/01833_setGestureStateNative.js
-import addLogBoxLog from "addLogBoxLog" /* 1658 */;
-import isJest from "isJest" /* 1657 */;
+import addLogBoxLog from "01658_addLogBoxLog.js";
+import isJest from "01657_isJest.js";
 
 function setGestureStateNative(arg0, arg1) {
   if (globalThis._WORKLET) {

@@ -1,6 +1,6 @@
 // _runtime/08832_getNativeComponent.js
-import getInstallationErrorMessage from "getInstallationErrorMessage" /* 8833 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getInstallationErrorMessage from "08833_getInstallationErrorMessage.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ NativeModules: c3, Platform, TurboModuleRegistry: c4, requireNativeComponent: c5 } = get_ActivityIndicator);
 

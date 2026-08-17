@@ -1,6 +1,6 @@
 // _runtime/04880_detectFile.js
-import detectFile from "detectFile" /* 4881 */;
-import _mod4885 from "module_4885" /* 4885 */;
+import detectFile from "04881_detectFile.js";
+import _mod4885 from "metro/04885__.js";
 
 const self = this;
 let self2 = this;

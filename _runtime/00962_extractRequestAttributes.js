@@ -1,9 +1,9 @@
 // _runtime/00962_extractRequestAttributes.js
-import _mod839 from "module_839" /* 839 */;
-import _mod958 from "module_958" /* 958 */;
-import buildMethodPath from "buildMethodPath" /* 960 */;
-import getOperationName from "getOperationName" /* 963 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import _mod839 from "metro/00839__.js";
+import _mod958 from "metro/00958__.js";
+import buildMethodPath from "00960_buildMethodPath.js";
+import getOperationName from "00963_getOperationName.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function extractRequestAttributes(first, closure_1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };

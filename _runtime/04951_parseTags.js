@@ -1,6 +1,6 @@
 // _runtime/04951_parseTags.js
-import getDataView from "getDataView" /* 4910 */;
-import _mod4952 from "module_4952" /* 4952 */;
+import getDataView from "04910_getDataView.js";
+import _mod4952 from "metro/04952__.js";
 
 require = arg1;
 const dependencyMap = arg6;

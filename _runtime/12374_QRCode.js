@@ -1,9 +1,9 @@
 // _runtime/12374_QRCode.js
-import QRCode from "QRCode" /* 12375 */;
-import 12379__ from "metro/12379__.js" /* 12379 */;
-import emptyFunction from "emptyFunction" /* 12384 */;
-import noop from "noop" /* 19 */;
-import QRCodeSvg from "QRCodeSvg" /* 12387 */;
+import QRCode from "12375_QRCode.js";
+import 12379__ from "metro/12379__.js";
+import emptyFunction from "12384_emptyFunction.js";
+import noop from "00019_noop.js";
+import QRCodeSvg from "12387_QRCodeSvg.js";
 
 let fn = Object.assign;
 if (!fn) {

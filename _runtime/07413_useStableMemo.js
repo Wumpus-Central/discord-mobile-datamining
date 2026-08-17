@@ -1,6 +1,6 @@
 // _runtime/07413_useStableMemo.js
-import noop from "noop" /* 19 */;
-import areHookInputsEqualDefault from "areHookInputsEqual" /* 7414 */;
+import noop from "00019_noop.js";
+import areHookInputsEqualDefault from "07414_areHookInputsEqual.js";
 
 const useRef = noop.useRef;
 let closure_3 = [];

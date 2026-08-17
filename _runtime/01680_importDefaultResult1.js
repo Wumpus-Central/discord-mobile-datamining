@@ -1,11 +1,11 @@
 // _runtime/01680_importDefaultResult1.js
-import WorkletsModule from "WorkletsModule" /* 1670 */;
-import _mod1681 from "module_1681" /* 1681 */;
-import getShadowNodeWrapperFromRef from "getShadowNodeWrapperFromRef" /* 1682 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_4 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
+import WorkletsModule from "01670_WorkletsModule.js";
+import _mod1681 from "metro/01681__.js";
+import getShadowNodeWrapperFromRef from "01682_getShadowNodeWrapperFromRef.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_4 from "00090__classPrivateFieldBase.js";
+import importDefaultResult1 from "00091__classPrivateFieldKey.js";
 
 let DummyReanimatedModuleProxy = global;
 require = arg1;

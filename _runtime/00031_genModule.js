@@ -1,6 +1,6 @@
 // _runtime/00031_genModule.js
-import _mod38 from "module_38" /* 38 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _mod38 from "metro/00038__.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function genModule(arg0, arg1) {

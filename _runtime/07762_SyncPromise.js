@@ -1,6 +1,6 @@
 // _runtime/07762_SyncPromise.js
-import closure_3 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import closure_3 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 const SyncPromise = require;
 let obj = { PENDING: 0 };

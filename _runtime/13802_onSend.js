@@ -1,5 +1,5 @@
 // _runtime/13802_onSend.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const re3 = /^(image)\/.*$/i;
 let closure_4 = {};

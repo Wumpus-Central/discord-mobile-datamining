@@ -1,9 +1,9 @@
 // _runtime/metro/09040__.js
-import colorPropType from "colorPropType" /* 9025 */;
-import emptyFunction2 from "emptyFunction" /* 9027 */;
-import _mod9041 from "module_9041" /* 9041 */;
-import flattenStyle from "flattenStyle" /* 9030 */;
-import emptyFunction from "emptyFunction" /* 4205 */;
+import colorPropType from "../09025_colorPropType.js";
+import emptyFunction2 from "../09027_emptyFunction.js";
+import _mod9041 from "09041__.js";
+import flattenStyle from "../09030_flattenStyle.js";
+import emptyFunction from "../04205_emptyFunction.js";
 
 const obj = { ellipsizeMode: null, numberOfLines: null, textBreakStrategy: null, onLayout: null, onPress: null, onLongPress: null, pressRetentionOffset: null, selectable: null, selectionColor: null, suppressHighlighting: null, style: null, testID: null, nativeID: null, allowFontScaling: null, maxFontSizeMultiplier: null, accessible: null, adjustsFontSizeToFit: null, minimumFontScale: null, disabled: null, dataDetectorType: null };
 const module_9041 = flattenStyle(_mod9041);

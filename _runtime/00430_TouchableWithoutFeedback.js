@@ -1,8 +1,8 @@
 // _runtime/00430_TouchableWithoutFeedback.js
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "00019_noop.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 let closure_2 = ["onBlur", "onFocus"];
 ({ cloneElement: c5, useMemo: closure_6 } = noop);

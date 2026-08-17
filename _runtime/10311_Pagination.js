@@ -1,5 +1,5 @@
 // _runtime/10311_Pagination.js
-import _modDef10312 from "module_10312" /* 10312 */;
+import _modDef10312 from "metro/10312__.js";
 
 
 export default _modDef10312;

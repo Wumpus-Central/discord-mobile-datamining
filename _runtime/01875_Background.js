@@ -1,9 +1,9 @@
 // _runtime/01875_Background.js
-import noopDefault from "noop" /* 1876 */;
-import _modDef1877 from "module_1877" /* 1877 */;
-import onPressDefault from "onPress" /* 1878 */;
-import onPressDefault2 from "onPress" /* 1880 */;
-import onPressDefault3 from "onPress" /* 1881 */;
+import noopDefault from "01876_noop.js";
+import _modDef1877 from "metro/01877__.js";
+import onPressDefault from "01878_onPress.js";
+import onPressDefault2 from "01880_onPress.js";
+import onPressDefault3 from "01881_onPress.js";
 
 
 export const Background = noopDefault;

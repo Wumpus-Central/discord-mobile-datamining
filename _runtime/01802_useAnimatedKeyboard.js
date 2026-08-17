@@ -1,5 +1,5 @@
 // _runtime/01802_useAnimatedKeyboard.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 let closure_4 = { code: "function pnpm_useAnimatedKeyboardTs1(state,height){const{keyboardEventData}=this.__closure;keyboardEventData.state.value=state;keyboardEventData.height.value=height;}" };

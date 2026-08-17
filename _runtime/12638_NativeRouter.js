@@ -1,9 +1,9 @@
 // _runtime/12638_NativeRouter.js
-import noopDefault from "noop" /* 19 */;
-import emptyFunctionDefault from "emptyFunction" /* 4205 */;
-import _extends from "_extends" /* 4208 */;
-import { Alert } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import emptyFunctionDefault from "04205_emptyFunction.js";
+import _extends from "metro/04208__extends.js";
+import { Alert } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 class NativeRouter {

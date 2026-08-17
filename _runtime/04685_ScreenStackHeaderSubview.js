@@ -1,11 +1,11 @@
 // _runtime/04685_ScreenStackHeaderSubview.js
-import noopDefault from "noop" /* 19 */;
-import get_controlledBottomTabsDefault from "get controlledBottomTabs" /* 4683 */;
-import context from "context" /* 4686 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4689 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import get_controlledBottomTabsDefault from "04683_get_controlledBottomTabs.js";
+import context from "04686_context.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/04689___INTERNAL_VIEW_CONFIG.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 let closure_3 = ["style"];

@@ -1,6 +1,6 @@
 // _runtime/03643_clamp.js
-import _typeof from "_typeof" /* 3644 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03644__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

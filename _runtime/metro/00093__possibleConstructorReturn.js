@@ -1,5 +1,5 @@
 // _runtime/metro/00093__possibleConstructorReturn.js
-import _assertThisInitialized from "_assertThisInitialized" /* 94 */;
+import _assertThisInitialized from "../00094__assertThisInitialized.js";
 
 
 export default function _possibleConstructorReturn(arg0, fn) {

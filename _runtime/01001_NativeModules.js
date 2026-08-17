@@ -1,11 +1,11 @@
 // _runtime/01001_NativeModules.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import TurboModuleRegistry2 from "TurboModuleRegistry" /* 997 */;
-import convertToNormalizedObject from "convertToNormalizedObject" /* 1014 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
-import encodeUTF8 from "encodeUTF8" /* 1004 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import TurboModuleRegistry2 from "00997_TurboModuleRegistry.js";
+import convertToNormalizedObject from "01014_convertToNormalizedObject.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import isHermesEnabled from "01002_isHermesEnabled.js";
+import encodeUTF8 from "01004_encodeUTF8.js";
 
 let self = this;
 require = arg1;

@@ -1,5 +1,5 @@
 // _runtime/04214_getStatics.js
-import num2 from "num2" /* 4212 */;
+import num2 from "04212_num2.js";
 
 function getStatics(arg0) {
   obj = num2;

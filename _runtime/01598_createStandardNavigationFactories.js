@@ -1,7 +1,7 @@
 // _runtime/01598_createStandardNavigationFactories.js
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 import { BaseNavigationContainer } from "01503_BaseNavigationContainer.js";
 
 const require = arg1;

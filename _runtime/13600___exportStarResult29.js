@@ -1,9 +1,9 @@
 // _runtime/13600___exportStarResult29.js
-import digitsToString from "digitsToString" /* 13581 */;
-import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
-import TEN from "TEN" /* 13584 */;
-import __exportStarResult11 from "__exportStarResult11" /* 13594 */;
-import e from "e" /* 1281 */;
+import digitsToString from "13581_digitsToString.js";
+import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
+import TEN from "13584_TEN.js";
+import __exportStarResult11 from "13594___exportStarResult11.js";
+import e from "01281_e.js";
 
 let closure_2 = e.__importDefault(digitsToString);
 

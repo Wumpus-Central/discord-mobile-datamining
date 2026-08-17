@@ -1,7 +1,7 @@
 // _runtime/13732___core-js_shared__.js
-import call from "call" /* 13680 */;
-import __core_js_shared__ from "__core-js_shared__" /* 13689 */;
-import all from "all" /* 13699 */;
+import call from "13680_call.js";
+import __core_js_shared__ from "13689___core-js_shared__.js";
+import all from "13699_all.js";
 
 let closure_0 = call(Function.toString);
 if (!all(__core_js_shared__.inspectSource)) {

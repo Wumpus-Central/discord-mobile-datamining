@@ -1,8 +1,8 @@
 // _runtime/00384_AnimatedEvent.js
-import _modDef38 from "module_38" /* 38 */;
-import _createClassDefault from "_createClass" /* 42 */;
-import setDefault from "set" /* 357 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _modDef38 from "metro/00038__.js";
+import _createClassDefault from "metro/00042__createClass.js";
+import setDefault from "00357_set.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 
 let AnimatedEvent = arg1;
 class AnimatedEvent {

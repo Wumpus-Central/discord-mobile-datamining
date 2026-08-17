@@ -1,6 +1,6 @@
 // _runtime/00733_mapCacheClear.js
-import Hash from "Hash" /* 734 */;
-import getNative from "getNative" /* 747 */;
+import Hash from "00734_Hash.js";
+import getNative from "00747_getNative.js";
 
 
 export default function mapCacheClear() {

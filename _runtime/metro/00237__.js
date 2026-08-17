@@ -1,5 +1,5 @@
 // _runtime/metro/00237__.js
-import _mod38 from "module_38" /* 38 */;
+import _mod38 from "00038__.js";
 
 const global = arg0;
 require = arg1;

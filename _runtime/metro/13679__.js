@@ -1,7 +1,7 @@
 // _runtime/metro/13679__.js
-import _mod13677 from "module_13677" /* 13677 */;
-import call from "call" /* 13680 */;
-import call2 from "call" /* 13682 */;
+import _mod13677 from "13677__.js";
+import call from "../13680_call.js";
+import call2 from "../13682_call.js";
 
 let fn = Object;
 let closure_3 = call("".split);

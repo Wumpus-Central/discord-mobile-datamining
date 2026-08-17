@@ -1,8 +1,8 @@
 // _runtime/00068_measure.js
-import RN$LegacyInterop_UIManager_getConstants from "RN$LegacyInterop_UIManager_getConstants" /* 69 */;
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import getFabricUIManager from "getFabricUIManager" /* 71 */;
-import getConstants from "getConstants" /* 73 */;
+import RN$LegacyInterop_UIManager_getConstants from "00069_RN_LegacyInterop_UIManager_getConstants.js";
+import nullthrowsDefault from "00070_nullthrows.js";
+import getFabricUIManager from "00071_getFabricUIManager.js";
+import getConstants from "00073_getConstants.js";
 import { getFabricUIManager } from "00071_getFabricUIManager.js";
 
 if (true === global.RN$Bridgeless) {

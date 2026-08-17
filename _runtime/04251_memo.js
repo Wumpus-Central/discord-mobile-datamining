@@ -1,12 +1,12 @@
 // _runtime/04251_memo.js
-import noopDefault from "noop" /* 19 */;
-import createContext from "createContext" /* 4247 */;
-import _mod4248 from "module_4248" /* 4248 */;
-import PortalHost from "PortalHost" /* 4249 */;
-import registerHost from "registerHost" /* 4252 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import createContext from "04247_createContext.js";
+import _mod4248 from "metro/04248__.js";
+import PortalHost from "04249_PortalHost.js";
+import registerHost from "04252_registerHost.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 require = arg1;
 ({ useReducer: c3, memo } = noop);

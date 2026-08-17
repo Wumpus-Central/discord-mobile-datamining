@@ -1,6 +1,6 @@
 // _runtime/13744_BlobModule.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import parseURL from "parseURL" /* 13745 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import parseURL from "13745_parseURL.js";
 
 let closure_0 = null;
 const BlobModule = get_ActivityIndicator.NativeModules.BlobModule;

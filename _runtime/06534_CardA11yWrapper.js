@@ -1,8 +1,8 @@
 // _runtime/06534_CardA11yWrapper.js
-import closure_0 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_0 from "metro/00032__slicedToArray.js";
+import importAllResult from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 ({ Platform, StyleSheet: obj1, View: c3 } = get_ActivityIndicator);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {

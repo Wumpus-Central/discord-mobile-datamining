@@ -1,8 +1,8 @@
 // _runtime/07035_forwardRef.js
-import noopDefault from "noop" /* 19 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
 const forwardRef = noop.forwardRef;

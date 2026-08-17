@@ -1,8 +1,8 @@
 // _runtime/03686_eachWeekendOfInterval.js
-import eachDayOfInterval from "eachDayOfInterval" /* 3678 */;
-import isSunday from "isSunday" /* 3624 */;
-import isWeekend from "isWeekend" /* 3623 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import eachDayOfInterval from "03678_eachDayOfInterval.js";
+import isSunday from "03624_isSunday.js";
+import isWeekend from "03623_isWeekend.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!eachDayOfInterval) {
   let obj = { default: null };

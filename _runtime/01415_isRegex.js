@@ -1,7 +1,7 @@
 // _runtime/01415_isRegex.js
-import _mod542 from "module_542" /* 542 */;
-import bind from "bind" /* 573 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import _mod542 from "metro/00542__.js";
+import bind from "00573_bind.js";
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
 
 if (tmp) {
   let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");

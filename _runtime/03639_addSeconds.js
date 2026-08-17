@@ -1,7 +1,7 @@
 // _runtime/03639_addSeconds.js
-import toInteger from "toInteger" /* 3476 */;
-import addMilliseconds from "addMilliseconds" /* 3627 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import addMilliseconds from "03627_addMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

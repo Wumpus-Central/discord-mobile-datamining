@@ -1,6 +1,6 @@
 // _runtime/04242_createJSONStorage.js
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "_objectWithoutProperties" /* 109 */;
+import closure_0 from "metro/00032__slicedToArray.js";
+import closure_1 from "metro/00109__objectWithoutProperties.js";
 
 function createJSONStorage(arg0) {
   closure_0 = arg1;

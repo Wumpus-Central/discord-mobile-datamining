@@ -1,6 +1,6 @@
 // _runtime/metro/03797__typeof.js
-import Parser2 from "Parser" /* 3778 */;
-import setUTCDay from "setUTCDay" /* 3796 */;
+import Parser2 from "../03778_Parser.js";
+import setUTCDay from "../03796_setUTCDay.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;

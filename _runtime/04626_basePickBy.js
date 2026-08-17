@@ -1,5 +1,5 @@
 // _runtime/04626_basePickBy.js
-import baseGet from "baseGet" /* 727 */;
+import baseGet from "00727_baseGet.js";
 
 
 export default function basePickBy(arg0, arg1, arg2) {

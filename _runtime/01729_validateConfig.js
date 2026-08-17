@@ -1,5 +1,5 @@
 // _runtime/01729_validateConfig.js
-import t from "t" /* 1665 */;
+import t from "01665_t.js";
 import { isValidLayoutAnimationProp } from "01694_isValidLayoutAnimationProp.js";
 import { isValidRubberBandConfig } from "01730_isValidRubberBandConfig.js";
 import { rubberBandDecay } from "01731_rubberBandDecay.js";

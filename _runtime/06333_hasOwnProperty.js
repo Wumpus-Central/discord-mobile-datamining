@@ -1,6 +1,6 @@
 // _runtime/06333_hasOwnProperty.js
-import keys from "keys" /* 6331 */;
-import swizzle from "swizzle" /* 6334 */;
+import keys from "06331_keys.js";
+import swizzle from "06334_swizzle.js";
 
 let obj = Object.create(null);
 for (const key10013 in require("keys")) {

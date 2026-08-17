@@ -1,7 +1,7 @@
 // _runtime/01147_reactRouterV6BrowserTracingIntegration.js
-import computeLocationKey from "computeLocationKey" /* 1148 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
+import computeLocationKey from "01148_computeLocationKey.js";
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

@@ -1,9 +1,9 @@
 // _runtime/13727_defineProperty.js
-import getOwnPropertyDescriptor2 from "getOwnPropertyDescriptor" /* 13676 */;
-import text from "text" /* 13685 */;
-import _mod13708 from "module_13708" /* 13708 */;
-import all from "all" /* 13725 */;
-import getOwnPropertyDescriptor3 from "getOwnPropertyDescriptor" /* 13728 */;
+import getOwnPropertyDescriptor2 from "13676_getOwnPropertyDescriptor.js";
+import text from "13685_text.js";
+import _mod13708 from "metro/13708__.js";
+import all from "13725_all.js";
+import getOwnPropertyDescriptor3 from "13728_getOwnPropertyDescriptor.js";
 
 const enumerable = "enumerable";
 const configurable = "configurable";

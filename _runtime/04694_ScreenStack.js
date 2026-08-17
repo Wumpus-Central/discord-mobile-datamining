@@ -1,7 +1,7 @@
 // _runtime/04694_ScreenStack.js
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import closure_6 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 import { context } from "04695_context.js";
 
 const require = arg1;

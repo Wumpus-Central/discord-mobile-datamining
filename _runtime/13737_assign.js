@@ -1,10 +1,10 @@
 // _runtime/13737_assign.js
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
-import _mod13677 from "module_13677" /* 13677 */;
-import _mod13679 from "module_13679" /* 13679 */;
-import call from "call" /* 13680 */;
-import _mod13697 from "module_13697" /* 13697 */;
-import _mod13726 from "module_13726" /* 13726 */;
+import getOwnPropertyDescriptor from "13676_getOwnPropertyDescriptor.js";
+import _mod13677 from "metro/13677__.js";
+import _mod13679 from "metro/13679__.js";
+import call from "13680_call.js";
+import _mod13697 from "metro/13697__.js";
+import _mod13726 from "metro/13726__.js";
 
 let closure_4 = call([].concat);
 if (!assign) {

@@ -1,6 +1,6 @@
 // _runtime/14852_getYoutubeMeta.js
-import _regeneratorRuntime from "_regeneratorRuntime" /* 14853 */;
-import 08106__ from "metro/08106__.js" /* 8106 */;
+import _regeneratorRuntime from "14853__regeneratorRuntime.js";
+import 08106__ from "metro/08106__.js";
 
 let closure_0 = module_8106(_regeneratorRuntime);
 

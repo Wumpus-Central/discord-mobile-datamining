@@ -1,7 +1,7 @@
 // _runtime/07834_addToMetricsAggregator.js
-import errorCallback from "errorCallback" /* 7734 */;
-import _mod7835 from "module_7835" /* 7835 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import errorCallback from "07734_errorCallback.js";
+import _mod7835 from "metro/07835__.js";
+import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
 import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
 import { spanTimeInputToSeconds } from "07743_spanTimeInputToSeconds.js";
 import { dateTimestampInSeconds } from "07752_dateTimestampInSeconds.js";

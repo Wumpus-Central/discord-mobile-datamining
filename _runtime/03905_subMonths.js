@@ -1,7 +1,7 @@
 // _runtime/03905_subMonths.js
-import toInteger from "toInteger" /* 3476 */;
-import addMonths from "addMonths" /* 3621 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import addMonths from "03621_addMonths.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

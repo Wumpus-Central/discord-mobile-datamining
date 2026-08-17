@@ -1,8 +1,8 @@
 // _runtime/01704_runOnRuntime.js
-import ReanimatedModule2 from "ReanimatedModule" /* 1662 */;
-import isWorkletFunction from "isWorkletFunction" /* 1679 */;
-import freezeObjectInDev from "freezeObjectInDev" /* 1684 */;
-import isJest from "isJest" /* 1657 */;
+import ReanimatedModule2 from "01662_ReanimatedModule.js";
+import isWorkletFunction from "01679_isWorkletFunction.js";
+import freezeObjectInDev from "01684_freezeObjectInDev.js";
+import isJest from "01657_isJest.js";
 
 let closure_3 = { code: "function pnpm_runtimesTs1(){const{registerReanimatedError,registerLoggerConfig,config,setupCallGuard,setupConsole,initializer}=this.__closure;var _initializer;registerReanimatedError();registerLoggerConfig(config);setupCallGuard();setupConsole();(_initializer=initializer)===null||_initializer===void 0||_initializer();}" };
 let closure_4 = { code: "function pnpm_runtimesTs3(){const{worklet,args}=this.__closure;worklet(...args);}" };

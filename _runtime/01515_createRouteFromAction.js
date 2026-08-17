@@ -1,6 +1,6 @@
 // _runtime/01515_createRouteFromAction.js
-import nanoid from "nanoid" /* 1509 */;
-import createParamsFromAction from "createParamsFromAction" /* 1513 */;
+import nanoid from "01509_nanoid.js";
+import createParamsFromAction from "01513_createParamsFromAction.js";
 
 require = arg1;
 const dependencyMap = arg6;

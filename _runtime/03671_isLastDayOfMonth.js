@@ -1,8 +1,8 @@
 // _runtime/03671_isLastDayOfMonth.js
-import _typeof from "_typeof" /* 3472 */;
-import endOfDay from "endOfDay" /* 3672 */;
-import endOfMonth from "endOfMonth" /* 3673 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import endOfDay from "03672_endOfDay.js";
+import endOfMonth from "03673_endOfMonth.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

@@ -1,10 +1,10 @@
 // _runtime/00402_AnimatedScrollViewWithInvertedRefreshControl.js
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 349 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import _isNativeReflectConstructDefault from "00349__isNativeReflectConstruct.js";
+import createAnimatedComponentDefault from "00387_createAnimatedComponent.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 ({ cloneElement: c3, useMemo: c4 } = noop);

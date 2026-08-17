@@ -1,6 +1,6 @@
 // _runtime/13659_isSupportedCurrency.js
-import _formatToParts from "_formatToParts" /* 13576 */;
-import _mod13660 from "module_13660" /* 13660 */;
+import _formatToParts from "13576__formatToParts.js";
+import _mod13660 from "metro/13660__.js";
 
 require = arg1;
 const dependencyMap = arg6;

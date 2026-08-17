@@ -1,9 +1,9 @@
 // _runtime/00127_DOMRectList.js
-import _createClassDefault from "_createClass" /* 42 */;
-import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_classPrivateFieldBase" /* 90 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import _classPrivateFieldKeyDefault from "00091__classPrivateFieldKey.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "00090__classPrivateFieldBase.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 const DOMRectList = arg1;
 let closure_4 = _classPrivateFieldKeyDefault("length");

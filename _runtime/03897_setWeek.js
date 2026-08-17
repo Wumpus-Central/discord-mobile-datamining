@@ -1,8 +1,8 @@
 // _runtime/03897_setWeek.js
-import getWeek from "getWeek" /* 3753 */;
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import getWeek from "03753_getWeek.js";
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!getWeek) {
   let obj = { default: null };

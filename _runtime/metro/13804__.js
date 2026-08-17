@@ -1,8 +1,8 @@
 // _runtime/metro/13804__.js
-import noop from "noop" /* 19 */;
-import map from "map" /* 13786 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 13805 */;
-import closure_2 from "jsxProd" /* 21 */;
+import noop from "../00019_noop.js";
+import map from "../13786_map.js";
+import _isNativeReflectConstruct from "../13805__isNativeReflectConstruct.js";
+import closure_2 from "../react/00021_jsxProd.js";
 
 if (noop) {
   const __esModule = noop.__esModule;

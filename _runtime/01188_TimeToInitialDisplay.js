@@ -1,9 +1,9 @@
 // _runtime/01188_TimeToInitialDisplay.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1189 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { useState } from "noop" /* 19 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import _isNativeReflectConstruct from "01189__isNativeReflectConstruct.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "00019_noop.js";
+import { useState } from "00019_noop.js";
 
 require = arg1;
 class TimeToInitialDisplay {

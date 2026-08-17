@@ -1,6 +1,6 @@
 // _runtime/04919_parseBox.js
-import getDataView from "getDataView" /* 4910 */;
-import parseItemLocationBox from "parseItemLocationBox" /* 4920 */;
+import getDataView from "04910_getDataView.js";
+import parseItemLocationBox from "04920_parseItemLocationBox.js";
 
 require = arg1;
 const module = arg2;

@@ -1,5 +1,5 @@
 // _runtime/07415_useLazyValue.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 const useRef = noop.useRef;
 let closure_1 = {};

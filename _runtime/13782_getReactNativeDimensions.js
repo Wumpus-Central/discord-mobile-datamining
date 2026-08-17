@@ -1,6 +1,6 @@
 // _runtime/13782_getReactNativeDimensions.js
-import getReactNativeDimensionsWithDimensions from "getReactNativeDimensionsWithDimensions" /* 13783 */;
-import closure_2 from "get ActivityIndicator" /* 17 */;
+import getReactNativeDimensionsWithDimensions from "13783_getReactNativeDimensionsWithDimensions.js";
+import closure_2 from "00017_get_ActivityIndicator.js";
 
 
 export default function getReactNativeDimensions() {

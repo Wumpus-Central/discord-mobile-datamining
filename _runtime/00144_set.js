@@ -1,6 +1,6 @@
 // _runtime/00144_set.js
-import renderElement from "renderElement" /* 114 */;
-import Commands2 from "Commands" /* 145 */;
+import renderElement from "00114_renderElement.js";
+import Commands2 from "00145_Commands.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,7 +1,7 @@
 // _runtime/04413_trim.js
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import RequireObjectCoercible from "RequireObjectCoercible" /* 4400 */;
-import ToString from "ToString" /* 4414 */;
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import RequireObjectCoercible from "04400_RequireObjectCoercible.js";
+import ToString from "04414_ToString.js";
 
 let closure_2 = callBoundIntrinsic("String.prototype.replace");
 const isMatch = /^\s$/.test("\u180E");

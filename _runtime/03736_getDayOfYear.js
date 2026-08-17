@@ -1,8 +1,8 @@
 // _runtime/03736_getDayOfYear.js
-import _typeof from "_typeof" /* 3472 */;
-import startOfYear from "startOfYear" /* 3691 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import startOfYear from "03691_startOfYear.js";
+import differenceInCalendarDays from "03634_differenceInCalendarDays.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

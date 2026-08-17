@@ -1,5 +1,5 @@
 // _runtime/00731_memoize.js
-import MapCache from "MapCache" /* 732 */;
+import MapCache from "00732_MapCache.js";
 import { MapCache } from "00732_MapCache.js";
 
 function memoize(fn, fn2) {

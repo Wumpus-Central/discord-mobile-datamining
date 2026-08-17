@@ -1,5 +1,5 @@
 // _runtime/00364_bezier.js
-import bezier from "bezier" /* 365 */;
+import bezier from "00365_bezier.js";
 
 require = arg1;
 const dependencyMap = arg6;

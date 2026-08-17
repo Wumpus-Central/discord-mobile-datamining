@@ -1,7 +1,7 @@
 // _runtime/04119_getInstalledNitro.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 4120 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 4121 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import items from "04120_items.js";
+import _isNativeReflectConstruct from "04121__isNativeReflectConstruct.js";
 
 function getInstalledNitro() {
   return global.NitroModulesProxy;

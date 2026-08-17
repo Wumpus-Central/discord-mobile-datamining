@@ -1,6 +1,6 @@
 // _runtime/00926_flattenIssue.js
-import isMatchingPattern from "isMatchingPattern" /* 832 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import isMatchingPattern from "00832_isMatchingPattern.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 function flattenIssue(path) {
   const obj = {};

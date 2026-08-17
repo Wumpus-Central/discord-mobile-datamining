@@ -1,5 +1,5 @@
 // _runtime/10315_DATA_LENGTH.js
-import cancelAnimation from "cancelAnimation" /* 1654 */;
+import cancelAnimation from "01654_cancelAnimation.js";
 
 const obj = { easeOutQuart: null };
 const Easing = cancelAnimation.Easing;

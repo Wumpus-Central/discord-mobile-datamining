@@ -1,6 +1,6 @@
 // _runtime/01837_finishScreenTransition.js
-import startScreenTransition from "startScreenTransition" /* 1838 */;
-import n from "n" /* 1842 */;
+import startScreenTransition from "01838_startScreenTransition.js";
+import n from "01842_n.js";
 
 
 export const finishScreenTransition = startScreenTransition.finishScreenTransition;

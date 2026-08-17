@@ -1,11 +1,11 @@
 // _runtime/01567_NavigationIndependentTree.js
-import noopAll from "noop" /* 19 */;
-import NavigationIndependentTreeContext from "NavigationIndependentTreeContext" /* 1519 */;
-import context from "context" /* 1541 */;
-import context1 from "context1" /* 1542 */;
-import NavigationContext from "NavigationContext" /* 1544 */;
-import NavigationFocusedRouteStateContext from "NavigationFocusedRouteStateContext" /* 1568 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import NavigationIndependentTreeContext from "01519_NavigationIndependentTreeContext.js";
+import context from "01541_context.js";
+import context1 from "01542_context1.js";
+import NavigationContext from "01544_NavigationContext.js";
+import NavigationFocusedRouteStateContext from "01568_NavigationFocusedRouteStateContext.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

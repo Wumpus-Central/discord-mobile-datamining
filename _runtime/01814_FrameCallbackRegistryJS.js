@@ -1,8 +1,8 @@
 // _runtime/01814_FrameCallbackRegistryJS.js
-import _createClassDefault from "_createClass" /* 42 */;
-import isReanimated3 from "isReanimated3" /* 1698 */;
-import t from "t" /* 1815 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import isReanimated3 from "01698_isReanimated3.js";
+import t from "01815_t.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import { isReanimated3 } from "01698_isReanimated3.js";
 
 const FrameCallbackRegistryJS = global;

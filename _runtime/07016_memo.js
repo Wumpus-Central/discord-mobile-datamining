@@ -1,9 +1,9 @@
 // _runtime/07016_memo.js
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import closure_12 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_4 from "metro/00032__slicedToArray.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import closure_12 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];

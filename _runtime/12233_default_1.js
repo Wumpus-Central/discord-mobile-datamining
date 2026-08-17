@@ -1,5 +1,5 @@
 // _runtime/12233_default_1.js
-import mergeDefs from "mergeDefs" /* 12234 */;
+import mergeDefs from "12234_mergeDefs.js";
 
 let fn = this;
 if (this) {

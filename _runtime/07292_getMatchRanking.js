@@ -1,6 +1,6 @@
 // _runtime/07292_getMatchRanking.js
-import regExp from "regExp" /* 7294 */;
-import _extends from "_extends" /* 7293 */;
+import regExp from "07294_regExp.js";
+import _extends from "metro/07293__extends.js";
 
 function getMatchRanking(arg0, arg1, keepDiacritics) {
   const text = `${arg0}`;

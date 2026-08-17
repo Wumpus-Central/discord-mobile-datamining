@@ -1,5 +1,5 @@
 // _runtime/13688___core-js_shared__.js
-import __core_js_shared__ from "__core-js_shared__" /* 13689 */;
+import __core_js_shared__ from "13689___core-js_shared__.js";
 
 
 export default (arg0, arg1) => {

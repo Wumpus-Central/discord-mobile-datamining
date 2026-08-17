@@ -1,6 +1,6 @@
 // _runtime/07719_purchaseUpdatedListener.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _mod7709 from "module_7709" /* 7709 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import _mod7709 from "metro/07709__.js";
 import { NativeModules } from "07707_NativeModules.js";
 import { 07709__ } from "metro/07709__.js";
 

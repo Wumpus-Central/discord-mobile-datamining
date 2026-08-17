@@ -1,7 +1,7 @@
 // _runtime/00208_addListener.js
-import NativeEventEmitterDefault from "NativeEventEmitter" /* 209 */;
-import convertRequestBodyDefault from "convertRequestBody" /* 210 */;
-import NetworkingDefault from "Networking" /* 213 */;
+import NativeEventEmitterDefault from "00209_NativeEventEmitter.js";
+import convertRequestBodyDefault from "00210_convertRequestBody.js";
+import NetworkingDefault from "00213_Networking.js";
 
 let c3 = 1;
 let closure_4 = new NativeEventEmitterDefault(null);

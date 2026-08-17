@@ -1,9 +1,9 @@
 // _runtime/00088_Dimensions.js
-import EventEmitterDefault from "EventEmitter" /* 89 */;
-import getConstantsDefault from "getConstants" /* 100 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_isNativeReflectConstruct" /* 92 */;
+import EventEmitterDefault from "00089_EventEmitter.js";
+import getConstantsDefault from "00100_getConstants.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00092__isNativeReflectConstruct.js";
 
 const Dimensions = importDefault;
 let closure_4 = new EventEmitterDefault();

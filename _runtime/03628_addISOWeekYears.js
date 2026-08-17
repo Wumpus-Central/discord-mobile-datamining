@@ -1,8 +1,8 @@
 // _runtime/03628_addISOWeekYears.js
-import toInteger from "toInteger" /* 3476 */;
-import getISOWeekYear from "getISOWeekYear" /* 3629 */;
-import setISOWeekYear from "setISOWeekYear" /* 3632 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import getISOWeekYear from "03629_getISOWeekYear.js";
+import setISOWeekYear from "03632_setISOWeekYear.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

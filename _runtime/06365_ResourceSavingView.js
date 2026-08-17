@@ -1,7 +1,7 @@
 // _runtime/06365_ResourceSavingView.js
-import noopAll from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 ({ Platform, StyleSheet, View: c0 } = get_ActivityIndicator);

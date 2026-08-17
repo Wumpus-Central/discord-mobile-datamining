@@ -1,8 +1,8 @@
 // _runtime/03792_setUTCISOWeek.js
-import toInteger from "toInteger" /* 3476 */;
-import _typeof from "_typeof" /* 3472 */;
-import getUTCISOWeek from "getUTCISOWeek" /* 3708 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import _typeof from "metro/03472__typeof.js";
+import getUTCISOWeek from "03708_getUTCISOWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

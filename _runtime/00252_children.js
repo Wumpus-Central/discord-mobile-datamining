@@ -1,9 +1,9 @@
 // _runtime/00252_children.js
-import noopAll from "noop" /* 19 */;
-import ViewDefault from "View" /* 108 */;
-import RootTagContext from "RootTagContext" /* 253 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import ViewDefault from "00108_View.js";
+import RootTagContext from "00253_RootTagContext.js";
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

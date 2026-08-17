@@ -1,10 +1,10 @@
 // _runtime/00389_createCompositeKeyForProps.js
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import flattenStyleDefault from "flattenStyle" /* 148 */;
-import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 382 */;
-import AnimatedEvent from "AnimatedEvent" /* 384 */;
-import noop from "noop" /* 19 */;
+import nullthrowsDefault from "00070_nullthrows.js";
+import flattenStyleDefault from "00148_flattenStyle.js";
+import _assertNativeAnimatedModuleDefault from "00367__assertNativeAnimatedModule.js";
+import _isNativeReflectConstruct from "00382__isNativeReflectConstruct.js";
+import AnimatedEvent from "00384_AnimatedEvent.js";
+import noop from "00019_noop.js";
 
 function createCompositeKeyForProps(arg0, style) {
   const keys = Object.keys(arg0);

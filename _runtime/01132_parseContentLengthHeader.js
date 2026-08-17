@@ -1,5 +1,5 @@
 // _runtime/01132_parseContentLengthHeader.js
-import encodeUTF8 from "encodeUTF8" /* 1004 */;
+import encodeUTF8 from "01004_encodeUTF8.js";
 
 require = arg1;
 const dependencyMap = arg6;

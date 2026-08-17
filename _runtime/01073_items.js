@@ -1,6 +1,6 @@
 // _runtime/01073_items.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const re3 = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i;

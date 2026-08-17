@@ -1,5 +1,5 @@
 // _runtime/metro/00932__.js
-import getClient from "getClient" /* 848 */;
+import getClient from "../00848_getClient.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,7 +1,7 @@
 // _runtime/03912_subYears.js
-import toInteger from "toInteger" /* 3476 */;
-import addYears from "addYears" /* 3641 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import addYears from "03641_addYears.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

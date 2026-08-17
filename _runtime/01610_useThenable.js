@@ -1,7 +1,7 @@
 // _runtime/01610_useThenable.js
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import closure_1 from "_slicedToArray" /* 32 */;
-import closure_2 from "noop" /* 19 */;
+import closure_0 from "00005_asyncGeneratorStep.js";
+import closure_1 from "metro/00032__slicedToArray.js";
+import closure_2 from "00019_noop.js";
 
 
 export const useThenable = function useThenable(arg0) {

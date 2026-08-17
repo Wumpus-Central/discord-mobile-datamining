@@ -1,7 +1,7 @@
 // _runtime/06433_isSupportedGesture.js
-import isGestureEnabled from "isGestureEnabled" /* 6445 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import isGestureEnabled from "06445_isGestureEnabled.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import { context } from "06449_context.js";
 
 require = arg1;

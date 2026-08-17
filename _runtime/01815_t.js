@@ -1,5 +1,5 @@
 // _runtime/01815_t.js
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
 
 const fn = function t() {
   let obj = { frameCallbackRegistry: new Map(), activeFrameCallbacks: null, previousFrameTimestamp: null, nextCallId: 0, runCallbacks: null, registerFrameCallback: null, unregisterFrameCallback: null, manageStateFrameCallback: null };

@@ -1,5 +1,5 @@
 // _runtime/00178_valuePromise.js
-import noop from "noop" /* 177 */;
+import noop from "00177_noop.js";
 import { noop } from "00177_noop.js";
 
 function valuePromise(_z) {

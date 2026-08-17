@@ -1,6 +1,6 @@
 // _runtime/00841_getAsyncContextStrategy.js
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import withScope from "withScope" /* 842 */;
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import withScope from "00842_withScope.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,14 +1,14 @@
 // _runtime/03720_formatDistance.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import compareAsc from "compareAsc" /* 3648 */;
-import differenceInMonths from "differenceInMonths" /* 3670 */;
-import differenceInSeconds from "differenceInSeconds" /* 3675 */;
-import code from "code" /* 3718 */;
-import _typeof from "_typeof" /* 3472 */;
-import cloneObject from "cloneObject" /* 3721 */;
-import assign from "assign" /* 3722 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import compareAsc from "03648_compareAsc.js";
+import differenceInMonths from "03670_differenceInMonths.js";
+import differenceInSeconds from "03675_differenceInSeconds.js";
+import code from "03718_code.js";
+import _typeof from "metro/03472__typeof.js";
+import cloneObject from "03721_cloneObject.js";
+import assign from "03722_assign.js";
+import getTimezoneOffsetInMilliseconds from "03635_getTimezoneOffsetInMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!compareAsc) {
   let obj = { default: null };

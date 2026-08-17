@@ -1,7 +1,7 @@
 // _runtime/00163_PerformanceEntry.js
-import _createClassDefault from "_createClass" /* 42 */;
-import PerformanceEntry from "_classCallCheck" /* 41 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import PerformanceEntry from "metro/00041__classCallCheck.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 class PerformanceEntry {
   constructor(arg0, arg1) {

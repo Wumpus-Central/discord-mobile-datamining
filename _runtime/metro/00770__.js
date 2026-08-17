@@ -1,11 +1,11 @@
 // _runtime/metro/00770__.js
-import getNative2 from "getNative" /* 747 */;
-import getNative3 from "getNative" /* 772 */;
-import getNative4 from "getNative" /* 773 */;
-import getNative5 from "getNative" /* 774 */;
-import toSource from "toSource" /* 742 */;
-import toStringTag from "toStringTag" /* 607 */;
-import getNative from "getNative" /* 771 */;
+import getNative2 from "../00747_getNative.js";
+import getNative3 from "../00772_getNative.js";
+import getNative4 from "../00773_getNative.js";
+import getNative5 from "../00774_getNative.js";
+import toSource from "../00742_toSource.js";
+import toStringTag from "../00607_toStringTag.js";
+import getNative from "../00771_getNative.js";
 
 let closure_2 = toSource(getNative);
 let closure_3 = toSource(getNative2);

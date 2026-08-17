@@ -1,8 +1,8 @@
 // _runtime/06387_BaseButton.js
-import Animated from "Animated" /* 6388 */;
-import importDefaultResult1 from "importDefaultResult1" /* 6476 */;
-import hitSlopDefault from "hitSlop" /* 6477 */;
-import Touchable from "Touchable" /* 6488 */;
+import Animated from "06388_Animated.js";
+import importDefaultResult1 from "06476_importDefaultResult1.js";
+import hitSlopDefault from "06477_hitSlop.js";
+import Touchable from "06488_Touchable.js";
 
 
 export const BaseButton = Animated.BaseButton;

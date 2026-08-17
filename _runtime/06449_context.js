@@ -1,8 +1,8 @@
 // _runtime/06449_context.js
-import noopDefault from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopDefault from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ useCallback: c0, useEffect: closure_1, useMemo: obj1, useRef: c3 } = noop);
 ({ Keyboard: c4, StyleSheet, View: c5 } = get_ActivityIndicator);

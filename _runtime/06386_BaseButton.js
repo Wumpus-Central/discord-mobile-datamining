@@ -1,8 +1,8 @@
 // _runtime/06386_BaseButton.js
-import BaseButton from "BaseButton" /* 6387 */;
-import GestureDetectorType from "GestureDetectorType" /* 6390 */;
-import useCompetingGestures from "useCompetingGestures" /* 6482 */;
-import t from "t" /* 6489 */;
+import BaseButton from "06387_BaseButton.js";
+import GestureDetectorType from "06390_GestureDetectorType.js";
+import useCompetingGestures from "06482_useCompetingGestures.js";
+import t from "06489_t.js";
 
 
 export const BaseButton = BaseButton.BaseButton;

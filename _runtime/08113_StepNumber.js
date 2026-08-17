@@ -1,9 +1,9 @@
 // _runtime/08113_StepNumber.js
-import noop2 from "noop" /* 19 */;
-import styles from "styles" /* 8110 */;
-import 08106__ from "metro/08106__.js" /* 8106 */;
-import closure_2 from "get ActivityIndicator" /* 17 */;
-import closure_3 from "jsxProd" /* 21 */;
+import noop2 from "00019_noop.js";
+import styles from "08110_styles.js";
+import 08106__ from "metro/08106__.js";
+import closure_2 from "00017_get_ActivityIndicator.js";
+import closure_3 from "react/00021_jsxProd.js";
 
 const noop = module_8106(noop2);
 

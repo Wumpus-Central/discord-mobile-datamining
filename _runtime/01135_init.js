@@ -1,15 +1,15 @@
 // _runtime/01135_init.js
-import init from "init" /* 1136 */;
-import captureReactException from "captureReactException" /* 1137 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1138 */;
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1141 */;
-import createReduxEnhancer from "createReduxEnhancer" /* 1143 */;
-import reactRouterV3BrowserTracingIntegration from "reactRouterV3BrowserTracingIntegration" /* 1144 */;
-import tanstackRouterBrowserTracingIntegration from "tanstackRouterBrowserTracingIntegration" /* 1145 */;
-import instrumentReactRouter from "instrumentReactRouter" /* 1146 */;
-import reactRouterV6BrowserTracingIntegration from "reactRouterV6BrowserTracingIntegration" /* 1147 */;
-import reactRouterV7BrowserTracingIntegration from "reactRouterV7BrowserTracingIntegration" /* 1151 */;
-import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
+import init from "01136_init.js";
+import captureReactException from "01137_captureReactException.js";
+import _isNativeReflectConstruct from "01138__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct2 from "01141__isNativeReflectConstruct.js";
+import createReduxEnhancer from "01143_createReduxEnhancer.js";
+import reactRouterV3BrowserTracingIntegration from "01144_reactRouterV3BrowserTracingIntegration.js";
+import tanstackRouterBrowserTracingIntegration from "01145_tanstackRouterBrowserTracingIntegration.js";
+import instrumentReactRouter from "01146_instrumentReactRouter.js";
+import reactRouterV6BrowserTracingIntegration from "01147_reactRouterV6BrowserTracingIntegration.js";
+import reactRouterV7BrowserTracingIntegration from "01151_reactRouterV7BrowserTracingIntegration.js";
+import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let call = hasOwnProperty.call;

@@ -1,6 +1,6 @@
 // _runtime/06589_extractBrush.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import percentTo255 from "percentTo255" /* 6590 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import percentTo255 from "06590_percentTo255.js";
 
 const processColor = get_ActivityIndicator.processColor;
 const re3 = /^url\(#(.+)\)$/;

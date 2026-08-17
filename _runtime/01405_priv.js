@@ -1,6 +1,6 @@
 // _runtime/01405_priv.js
-import PseudoMap from "PseudoMap" /* 1406 */;
-import Yallist from "Yallist" /* 1408 */;
+import PseudoMap from "01406_PseudoMap.js";
+import Yallist from "01408_Yallist.js";
 
 function priv(self, lruList, max) {
   if (table[lruList]) {

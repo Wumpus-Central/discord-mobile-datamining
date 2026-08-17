@@ -1,6 +1,6 @@
 // _runtime/00342_configureNext.js
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import get_VersionDefault from "get Version" /* 273 */;
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import get_VersionDefault from "00273_get_Version.js";
 import { getFabricUIManager } from "00071_getFabricUIManager.js";
 
 const require = arg1;

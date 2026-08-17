@@ -1,6 +1,6 @@
 // _runtime/01184_createReleaseFromGlobalReleaseConstants.js
-import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 816 */;
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+import RN_GLOBAL_OBJ from "00816_RN_GLOBAL_OBJ.js";
+import isHermesEnabled from "01002_isHermesEnabled.js";
 
 require = arg1;
 const dependencyMap = arg6;

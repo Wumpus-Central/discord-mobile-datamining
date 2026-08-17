@@ -1,17 +1,17 @@
 // _runtime/00302__isNativeReflectConstruct.js
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import ViewDefault from "View" /* 108 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 304 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import { createRef } from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult2 from "get hairlineWidth" /* 254 */;
+import nullthrowsDefault from "00070_nullthrows.js";
+import ViewDefault from "00108_View.js";
+import _isNativeReflectConstructDefault from "00304__isNativeReflectConstruct.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00098__inherits.js";
+import { createRef } from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import importAllResult from "00019_noop.js";
+import importDefaultResult2 from "00254_get_hairlineWidth.js";
 
 const DrawerLayoutAndroid = arg1;
 function _isNativeReflectConstruct() {

@@ -1,5 +1,5 @@
 // _runtime/01418_availableTypedArrays.js
-import _mod1419 from "module_1419" /* 1419 */;
+import _mod1419 from "metro/01419__.js";
 
 if (typeof globalThis !== "undefined") {
   const global = globalThis;

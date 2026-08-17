@@ -1,12 +1,12 @@
 // _runtime/00941_createMcpSpan.js
-import _mod839 from "module_839" /* 839 */;
-import getClient from "getClient" /* 848 */;
-import createChildOrRootSpan from "createChildOrRootSpan" /* 866 */;
-import extractClientInfo from "extractClientInfo" /* 938 */;
-import _mod940 from "module_940" /* 940 */;
-import extractTargetInfo from "extractTargetInfo" /* 942 */;
-import getNotificationAttributes from "getNotificationAttributes" /* 943 */;
-import set from "set" /* 944 */;
+import _mod839 from "metro/00839__.js";
+import getClient from "00848_getClient.js";
+import createChildOrRootSpan from "00866_createChildOrRootSpan.js";
+import extractClientInfo from "00938_extractClientInfo.js";
+import _mod940 from "metro/00940__.js";
+import extractTargetInfo from "00942_extractTargetInfo.js";
+import getNotificationAttributes from "00943_getNotificationAttributes.js";
+import set from "00944_set.js";
 
 require = arg1;
 const dependencyMap = arg6;

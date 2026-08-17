@@ -1,5 +1,5 @@
 // _runtime/01283___exportStarResult1.js
-import _mod1284 from "module_1284" /* 1284 */;
+import _mod1284 from "metro/01284__.js";
 
 require = arg1;
 const dependencyMap = arg6;

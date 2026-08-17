@@ -1,5 +1,5 @@
 // _runtime/01537_context.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 const context = noopAll.createContext(undefined);
 context.displayName = "ThemeContext";

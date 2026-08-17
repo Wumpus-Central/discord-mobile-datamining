@@ -1,8 +1,8 @@
 // _runtime/07094_StickyHeaders.js
-import noopDefault from "noop" /* 19 */;
-import closure_2 from "_slicedToArray" /* 7041 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import closure_2 from "metro/07041__slicedToArray.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 ({ useRef: c3, useState: c4, useMemo: c5, useImperativeHandle: closure_6, useCallback: error, useEffect: closure_8 } = noop);

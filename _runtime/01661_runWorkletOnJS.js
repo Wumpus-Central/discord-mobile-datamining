@@ -1,8 +1,8 @@
 // _runtime/01661_runWorkletOnJS.js
-import ReanimatedModule2 from "ReanimatedModule" /* 1662 */;
-import isWorkletFunction from "isWorkletFunction" /* 1679 */;
-import freezeObjectInDev from "freezeObjectInDev" /* 1684 */;
-import isJest from "isJest" /* 1657 */;
+import ReanimatedModule2 from "01662_ReanimatedModule.js";
+import isWorkletFunction from "01679_isWorkletFunction.js";
+import freezeObjectInDev from "01684_freezeObjectInDev.js";
+import isJest from "01657_isJest.js";
 
 function runWorkletOnJS(arg0) {
   arg0(...HermesBuiltin.copyRestArgs());

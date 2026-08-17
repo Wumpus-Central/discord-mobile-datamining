@@ -1,6 +1,6 @@
 // _runtime/06479_PressableStateMachine.js
-import _createClassDefault from "_createClass" /* 42 */;
-import PressableStateMachine from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import PressableStateMachine from "metro/00041__classCallCheck.js";
 
 class PressableStateMachine {
   constructor() {

@@ -1,6 +1,6 @@
 // _runtime/01843_useEventHandlerRegistration.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import noop from "00019_noop.js";
 
 const useRef = noop.useRef;
 const Animated = get_ActivityIndicator.Animated;

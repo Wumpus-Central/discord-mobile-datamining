@@ -1,6 +1,6 @@
 // _runtime/06464_n.js
-import _mod6420 from "module_6420" /* 6420 */;
-import noop from "noop" /* 19 */;
+import _mod6420 from "metro/06420__.js";
+import noop from "00019_noop.js";
 import { handleStateChangeEvent } from "06463_handleStateChangeEvent.js";
 import { 06420__ } from "metro/06420__.js";
 

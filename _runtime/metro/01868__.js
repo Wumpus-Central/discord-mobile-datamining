@@ -1,8 +1,8 @@
 // _runtime/metro/01868__.js
-import noopDefault from "noop" /* 19 */;
-import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "../00019_noop.js";
+import cancelAnimationDefault from "../01654_cancelAnimation.js";
+import { Platform } from "../00017_get_ActivityIndicator.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 const require = arg1;
 noopDefault;

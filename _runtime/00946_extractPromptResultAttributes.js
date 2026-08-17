@@ -1,7 +1,7 @@
 // _runtime/00946_extractPromptResultAttributes.js
-import isJsonRpcNotification from "isJsonRpcNotification" /* 936 */;
-import _mod940 from "module_940" /* 940 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import isJsonRpcNotification from "00936_isJsonRpcNotification.js";
+import _mod940 from "metro/00940__.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

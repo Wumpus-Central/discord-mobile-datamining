@@ -1,5 +1,5 @@
 // _runtime/10428_NativeDocumentPicker.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 

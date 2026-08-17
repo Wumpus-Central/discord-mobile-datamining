@@ -1,8 +1,8 @@
 // _runtime/metro/04675___INTERNAL_VIEW_CONFIG.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import result from "result" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import get_ActivityIndicator from "../00017_get_ActivityIndicator.js";
+import result from "../00026_result.js";
+import weakSet from "../00106_weakSet.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
 let obj = { uiViewClassName: "RNSScreen", directEventTypes: { topAppear: { registrationName: "onAppear" }, topDisappear: { registrationName: "onDisappear" }, topDismissed: { registrationName: "onDismissed" }, topNativeDismissCancelled: { registrationName: "onNativeDismissCancelled" }, topWillAppear: { registrationName: "onWillAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topHeaderHeightChange: { registrationName: "onHeaderHeightChange" }, topTransitionProgress: { registrationName: "onTransitionProgress" }, topGestureCancel: { registrationName: "onGestureCancel" }, topHeaderBackButtonClicked: { registrationName: "onHeaderBackButtonClicked" }, topSheetDetentChanged: { registrationName: "onSheetDetentChanged" } }, validAttributes: null };

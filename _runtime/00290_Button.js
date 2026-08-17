@@ -1,11 +1,11 @@
 // _runtime/00290_Button.js
-import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import ViewDefault from "View" /* 108 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import useTextPressabilityDefault from "useTextPressability" /* 298 */;
-import { jsx } from "jsxProd" /* 21 */;
-import closure_3 from "_isNativeReflectConstruct" /* 291 */;
+import noopAll from "00019_noop.js";
+import _modDef38 from "metro/00038__.js";
+import ViewDefault from "00108_View.js";
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import useTextPressabilityDefault from "00298_useTextPressability.js";
+import { jsx } from "react/00021_jsxProd.js";
+import closure_3 from "00291__isNativeReflectConstruct.js";
 
 noopAll;
 class Button {

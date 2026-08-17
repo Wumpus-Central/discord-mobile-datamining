@@ -1,5 +1,5 @@
 // _runtime/01000_processEvent.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 function processEvent(arg0, arg1, arg2) {
   closure_0 = arg0;

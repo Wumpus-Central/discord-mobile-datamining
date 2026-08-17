@@ -1,7 +1,7 @@
 // _runtime/00168_structuredCloneInternal.js
-import setPlatformObject from "setPlatformObject" /* 126 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 157 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import setPlatformObject from "00126_setPlatformObject.js";
+import _isNativeReflectConstructDefault from "00157__isNativeReflectConstruct.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function structuredCloneInternal(style) {

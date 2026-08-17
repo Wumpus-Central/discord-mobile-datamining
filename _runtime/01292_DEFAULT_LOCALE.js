@@ -1,7 +1,7 @@
 // _runtime/01292_DEFAULT_LOCALE.js
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 const IntlManager = require;
 class IntlManager {

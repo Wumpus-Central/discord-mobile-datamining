@@ -1,5 +1,5 @@
 // _runtime/06537_CardAnimationContext.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 
 export const CardAnimationContext = noopAll.createContext(undefined);

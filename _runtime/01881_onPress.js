@@ -1,8 +1,8 @@
 // _runtime/01881_onPress.js
-import noopDefault from "noop" /* 19 */;
-import disabledDefault from "disabled" /* 1873 */;
-import itemsDefault from "items" /* 1874 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import disabledDefault from "01873_disabled.js";
+import itemsDefault from "01874_items.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 noopDefault;

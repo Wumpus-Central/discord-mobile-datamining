@@ -1,5 +1,5 @@
 // _runtime/07057_reactNativeVersion.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const constants = get_ActivityIndicator.Platform.constants;
 let reactNativeVersion;

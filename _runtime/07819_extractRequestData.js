@@ -1,6 +1,6 @@
 // _runtime/07819_extractRequestData.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import getNumberOfUrlSegments from "getNumberOfUrlSegments" /* 7820 */;
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import getNumberOfUrlSegments from "07820_getNumberOfUrlSegments.js";
 
 require = arg1;
 const dependencyMap = arg6;

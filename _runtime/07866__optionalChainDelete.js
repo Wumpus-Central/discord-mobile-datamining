@@ -1,5 +1,5 @@
 // _runtime/07866__optionalChainDelete.js
-import _optionalChain from "_optionalChain" /* 7865 */;
+import _optionalChain from "07865__optionalChain.js";
 
 require = arg1;
 const dependencyMap = arg6;

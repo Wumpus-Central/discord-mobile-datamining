@@ -1,6 +1,6 @@
 // _runtime/10329_useCarouselController.js
-import closure_2 from "noop" /* 19 */;
-import { useRef } from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
+import { useRef } from "00019_noop.js";
 
 const require = arg1;
 let closure_4 = { code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}" };

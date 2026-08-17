@@ -1,6 +1,6 @@
 // _runtime/03695_endOfISOWeek.js
-import endOfWeek from "endOfWeek" /* 3696 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import endOfWeek from "03696_endOfWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!endOfWeek) {
   let obj = { default: null };

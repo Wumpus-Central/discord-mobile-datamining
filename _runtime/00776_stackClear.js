@@ -1,5 +1,5 @@
 // _runtime/00776_stackClear.js
-import ListCache from "ListCache" /* 748 */;
+import ListCache from "00748_ListCache.js";
 
 
 export default function stackClear() {

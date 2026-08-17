@@ -1,5 +1,5 @@
 // _runtime/00471_IntentAndroid.js
-import IntentAndroidDefault from "IntentAndroid" /* 472 */;
+import IntentAndroidDefault from "00472_IntentAndroid.js";
 
 for (const key10016 in require("IntentAndroid")) {
   let tmp2 = key10016;

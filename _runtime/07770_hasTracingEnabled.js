@@ -1,5 +1,5 @@
 // _runtime/07770_hasTracingEnabled.js
-import getClient from "getClient" /* 7765 */;
+import getClient from "07765_getClient.js";
 
 require = arg1;
 const dependencyMap = arg6;

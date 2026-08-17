@@ -1,9 +1,9 @@
 // _runtime/00970_handleResponseError.js
-import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
-import captureCheckIn from "captureCheckIn" /* 869 */;
-import _mod958 from "module_958" /* 958 */;
-import buildMethodPath from "buildMethodPath" /* 960 */;
-import _mod971 from "module_971" /* 971 */;
+import getSpanStatusFromHttpCode from "00840_getSpanStatusFromHttpCode.js";
+import captureCheckIn from "00869_captureCheckIn.js";
+import _mod958 from "metro/00958__.js";
+import buildMethodPath from "00960_buildMethodPath.js";
+import _mod971 from "metro/00971__.js";
 
 require = arg1;
 const dependencyMap = arg6;

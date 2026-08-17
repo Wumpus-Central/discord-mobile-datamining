@@ -1,6 +1,6 @@
 // _runtime/13598___exportStarResult21.js
-import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
-import TEN from "TEN" /* 13584 */;
+import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
+import TEN from "13584_TEN.js";
 
 require = arg1;
 const dependencyMap = arg6;

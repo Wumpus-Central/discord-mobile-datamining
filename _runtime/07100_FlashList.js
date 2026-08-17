@@ -1,6 +1,6 @@
 // _runtime/07100_FlashList.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import FlashList from "FlashList" /* 7039 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import FlashList from "07039_FlashList.js";
 
 const Animated = get_ActivityIndicator.Animated;
 

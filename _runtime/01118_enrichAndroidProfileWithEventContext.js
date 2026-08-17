@@ -1,6 +1,6 @@
 // _runtime/01118_enrichAndroidProfileWithEventContext.js
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
-import getDebugMetadata from "getDebugMetadata" /* 1119 */;
+import isHermesEnabled from "01002_isHermesEnabled.js";
+import getDebugMetadata from "01119_getDebugMetadata.js";
 
 require = arg1;
 const dependencyMap = arg6;

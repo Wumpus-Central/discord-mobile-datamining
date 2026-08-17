@@ -1,14 +1,14 @@
 // _runtime/00819_spanToJSON.js
-import unwrapScopeFromWeakRef from "unwrapScopeFromWeakRef" /* 820 */;
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
-import consoleSandbox from "consoleSandbox" /* 824 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import generateSpanId from "generateSpanId" /* 829 */;
-import regExp from "regExp" /* 834 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 838 */;
-import _mod839 from "module_839" /* 839 */;
-import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
-import getAsyncContextStrategy from "getAsyncContextStrategy" /* 841 */;
+import unwrapScopeFromWeakRef from "00820_unwrapScopeFromWeakRef.js";
+import addNonEnumerableProperty from "00822_addNonEnumerableProperty.js";
+import consoleSandbox from "00824_consoleSandbox.js";
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import generateSpanId from "00829_generateSpanId.js";
+import regExp from "00834_regExp.js";
+import dateTimestampInSeconds from "00838_dateTimestampInSeconds.js";
+import _mod839 from "metro/00839__.js";
+import getSpanStatusFromHttpCode from "00840_getSpanStatusFromHttpCode.js";
+import getAsyncContextStrategy from "00841_getAsyncContextStrategy.js";
 
 require = arg1;
 const dependencyMap = arg6;

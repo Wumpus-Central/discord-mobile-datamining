@@ -1,6 +1,6 @@
 // _runtime/13709_element.js
-import _mod13673 from "module_13673" /* 13673 */;
-import all from "all" /* 13698 */;
+import _mod13673 from "metro/13673__.js";
+import all from "13698_all.js";
 
 let _moduleResult = all(_mod13673.document);
 if (_moduleResult) {

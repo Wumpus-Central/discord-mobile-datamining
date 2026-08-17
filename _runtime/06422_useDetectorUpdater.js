@@ -1,5 +1,5 @@
 // _runtime/06422_useDetectorUpdater.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { convertToHandlerTag } from "06401_convertToHandlerTag.js";
 
 noop.useCallback;

@@ -1,6 +1,6 @@
 // _runtime/13701_all.js
-import _mod13673 from "module_13673" /* 13673 */;
-import all from "all" /* 13699 */;
+import _mod13673 from "metro/13673__.js";
+import all from "13699_all.js";
 
 
 export default (arg0, arg1) => {

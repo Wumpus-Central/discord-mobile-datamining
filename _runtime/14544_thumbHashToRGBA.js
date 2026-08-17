@@ -1,5 +1,5 @@
 // _runtime/14544_thumbHashToRGBA.js
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "metro/00032__slicedToArray.js";
 
 function thumbHashToRGBA(arg0) {
   let diff3 = arg0[0] | arg0[1] << 8 | arg0[2] << 16;

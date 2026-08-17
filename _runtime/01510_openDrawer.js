@@ -1,5 +1,5 @@
 // _runtime/01510_openDrawer.js
-import TabRouter from "TabRouter" /* 1511 */;
+import TabRouter from "01511_TabRouter.js";
 
 let obj = {};
 let merged = Object.assign(TabRouter.TabActions);

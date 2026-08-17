@@ -1,17 +1,17 @@
 // _runtime/00026_result.js
-import processColorDefault from "processColor" /* 50 */;
-import _getFilterAmountDefault from "_getFilterAmount" /* 54 */;
-import parseLengthDefault from "parseLength" /* 55 */;
-import processColorStopsDefault from "processColorStops" /* 56 */;
-import getValidLengthPercentageSizeOrNullDefault from "getValidLengthPercentageSizeOrNull" /* 57 */;
-import getPositionFromCSSValueDefault from "getPositionFromCSSValue" /* 58 */;
-import isBackgroundRepeatKeywordDefault from "isBackgroundRepeatKeyword" /* 59 */;
-import _getKeyAndValueFromCSSTransformDefault from "_getKeyAndValueFromCSSTransform" /* 60 */;
-import processTransformOriginDefault from "processTransformOrigin" /* 61 */;
-import processFontVariantDefault from "processFontVariant" /* 62 */;
-import processAspectRatioDefault from "processAspectRatio" /* 63 */;
-import sizesDifferDefault from "sizesDiffer" /* 64 */;
-import importAllResult from "javaScriptFlagGetter" /* 27 */;
+import processColorDefault from "00050_processColor.js";
+import _getFilterAmountDefault from "00054__getFilterAmount.js";
+import parseLengthDefault from "00055_parseLength.js";
+import processColorStopsDefault from "00056_processColorStops.js";
+import getValidLengthPercentageSizeOrNullDefault from "00057_getValidLengthPercentageSizeOrNull.js";
+import getPositionFromCSSValueDefault from "00058_getPositionFromCSSValue.js";
+import isBackgroundRepeatKeywordDefault from "00059_isBackgroundRepeatKeyword.js";
+import _getKeyAndValueFromCSSTransformDefault from "00060__getKeyAndValueFromCSSTransform.js";
+import processTransformOriginDefault from "00061_processTransformOrigin.js";
+import processFontVariantDefault from "00062_processFontVariant.js";
+import processAspectRatioDefault from "00063_processAspectRatio.js";
+import sizesDifferDefault from "00064_sizesDiffer.js";
+import importAllResult from "00027_javaScriptFlagGetter.js";
 
 const result = importAllResult.enableNativeCSSParsing();
 let tmp3 = result;

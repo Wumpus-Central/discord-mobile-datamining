@@ -1,7 +1,7 @@
 // _runtime/01149_pickSplat.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1142 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import __SENTRY_DEBUG__ from "metro/01142___SENTRY_DEBUG__.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 
 function pickSplat(params) {
   return params.params["*"] || "";

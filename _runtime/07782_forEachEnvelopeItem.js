@@ -1,8 +1,8 @@
 // _runtime/07782_forEachEnvelopeItem.js
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import dsnFromString from "dsnFromString" /* 7785 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import dsnFromString from "07785_dsnFromString.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { getGlobalSingleton } from "07739_getGlobalSingleton.js";
 import { normalize } from "07783_normalize.js";
 

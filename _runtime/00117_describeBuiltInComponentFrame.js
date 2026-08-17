@@ -1,10 +1,10 @@
 // _runtime/00117_describeBuiltInComponentFrame.js
-import noop2 from "noop" /* 19 */;
-import get_BatchedBridge from "get BatchedBridge" /* 272 */;
-import peek from "peek" /* 287 */;
-import setUpDefaltReactNativeEnvironment from "setUpDefaltReactNativeEnvironment" /* 118 */;
-import closure_158 from "module_0" /* 0 */;
-import closure_162 from "module_0" /* 0 */;
+import noop2 from "00019_noop.js";
+import get_BatchedBridge from "00272_get_BatchedBridge.js";
+import peek from "00287_peek.js";
+import setUpDefaltReactNativeEnvironment from "00118_setUpDefaltReactNativeEnvironment.js";
+import closure_158 from "../discord_app/index.native.tsx";
+import closure_162 from "../discord_app/index.native.tsx";
 import { peek } from "00287_peek.js";
 
 function describeBuiltInComponentFrame(type) {

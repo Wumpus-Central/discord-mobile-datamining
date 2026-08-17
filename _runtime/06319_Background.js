@@ -1,9 +1,9 @@
 // _runtime/06319_Background.js
-import registerAssetDefault from "registerAsset" /* 6320 */;
-import registerAssetDefault2 from "registerAsset" /* 6321 */;
-import registerAssetDefault3 from "registerAsset" /* 6322 */;
-import registerAssetDefault4 from "registerAsset" /* 6323 */;
-import registerAssetDefault5 from "registerAsset" /* 6324 */;
+import registerAssetDefault from "06320_registerAsset.js";
+import registerAssetDefault2 from "06321_registerAsset.js";
+import registerAssetDefault3 from "06322_registerAsset.js";
+import registerAssetDefault4 from "06323_registerAsset.js";
+import registerAssetDefault5 from "06324_registerAsset.js";
 
 const items = [registerAssetDefault, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault5];
 for (const key10025 in require("module_6325")) {

@@ -1,7 +1,7 @@
 // _runtime/03710_startOfUTCISOWeekYear.js
-import getUTCISOWeekYear from "getUTCISOWeekYear" /* 3711 */;
-import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3709 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getUTCISOWeekYear from "03711_getUTCISOWeekYear.js";
+import startOfUTCISOWeek from "03709_startOfUTCISOWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getUTCISOWeekYear) {
   let obj = { default: null };

@@ -1,5 +1,5 @@
 // _runtime/01034_triggerHandlers.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
+import __SENTRY_DEBUG__ from "metro/01035___SENTRY_DEBUG__.js";
 import { observe } from "01046_observe.js";
 
 require = arg1;

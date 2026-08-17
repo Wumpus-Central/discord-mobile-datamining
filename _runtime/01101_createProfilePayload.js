@@ -1,8 +1,8 @@
 // _runtime/01101_createProfilePayload.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1072 */;
-import StringResult from "module_0" /* 0 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import ignoreNextOnError from "01028_ignoreNextOnError.js";
+import __SENTRY_DEBUG__ from "metro/01072___SENTRY_DEBUG__.js";
+import StringResult from "../discord_app/index.native.tsx";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 function createProfilePayload(arg0, arg1, resources, type) {

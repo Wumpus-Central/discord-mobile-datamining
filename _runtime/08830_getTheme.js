@@ -1,9 +1,9 @@
 // _runtime/08830_getTheme.js
-import noopDefault from "noop" /* 19 */;
-import colorToHex from "colorToHex" /* 8835 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { DatePickerAndroid } from "getStyle" /* 8831 */;
+import noopDefault from "00019_noop.js";
+import colorToHex from "08835_colorToHex.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
+import { DatePickerAndroid } from "08831_getStyle.js";
 
 require = arg1;
 ({ Appearance: obj1, Platform, Text } = get_ActivityIndicator);

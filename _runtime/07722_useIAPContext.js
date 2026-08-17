@@ -1,9 +1,9 @@
 // _runtime/07722_useIAPContext.js
-import noopDefault from "noop" /* 19 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 ({ useContext: c4, useEffect: c5, useMemo: closure_6, useState: error } = noop);

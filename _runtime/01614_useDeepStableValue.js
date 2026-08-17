@@ -1,6 +1,6 @@
 // _runtime/01614_useDeepStableValue.js
-import equalDefault from "equal" /* 1576 */;
-import closure_2 from "noop" /* 19 */;
+import equalDefault from "01576_equal.js";
+import closure_2 from "00019_noop.js";
 
 
 export const useDeepStableValue = function useDeepStableValue(current) {

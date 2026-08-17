@@ -1,6 +1,6 @@
 // _runtime/04895_OtherTypes.js
-import _createClass from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _createClass from "metro/00042__createClass.js";
+import closure_0 from "metro/00041__classCallCheck.js";
 
 class OtherTypes {
   constructor() {

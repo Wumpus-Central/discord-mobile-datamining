@@ -1,5 +1,5 @@
 // _runtime/07833_thirdPartyErrorFilterIntegration.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 let c2 = "_sentryBundlerPluginAppKey:";
 

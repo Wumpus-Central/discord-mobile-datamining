@@ -1,6 +1,6 @@
 // _runtime/04402_ToUint32.js
-import ToNumber from "ToNumber" /* 4403 */;
-import isFinite from "isFinite" /* 4420 */;
+import ToNumber from "04403_ToNumber.js";
+import isFinite from "04420_isFinite.js";
 
 
 export default function ToUint32(arg0) {

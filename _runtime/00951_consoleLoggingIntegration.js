@@ -1,6 +1,6 @@
 // _runtime/00951_consoleLoggingIntegration.js
-import _mod839 from "module_839" /* 839 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import _mod839 from "metro/00839__.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_2 = { [_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.log.console" };

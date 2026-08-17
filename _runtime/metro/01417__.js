@@ -1,11 +1,11 @@
 // _runtime/metro/01417__.js
-import _mod542 from "module_542" /* 542 */;
-import getProto from "getProto" /* 546 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import hasToStringTagShams from "hasToStringTagShams" /* 1412 */;
-import availableTypedArrays from "availableTypedArrays" /* 1418 */;
-import forEach from "forEach" /* 1420 */;
-import callBind from "callBind" /* 1422 */;
+import _mod542 from "00542__.js";
+import getProto from "../00546_getProto.js";
+import callBoundIntrinsic from "../00574_callBoundIntrinsic.js";
+import hasToStringTagShams from "../01412_hasToStringTagShams.js";
+import availableTypedArrays from "../01418_availableTypedArrays.js";
+import forEach from "../01420_forEach.js";
+import callBind from "../01422_callBind.js";
 import { forEach } from "../01420_forEach.js";
 import { 00542__ } from "00542__.js";
 

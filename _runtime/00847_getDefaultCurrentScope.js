@@ -1,5 +1,5 @@
 // _runtime/00847_getDefaultCurrentScope.js
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
 
 require = arg1;
 const dependencyMap = arg6;

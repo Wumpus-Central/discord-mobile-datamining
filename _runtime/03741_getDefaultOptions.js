@@ -1,6 +1,6 @@
 // _runtime/03741_getDefaultOptions.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import assign from "assign" /* 3722 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import assign from "03722_assign.js";
 
 if (!assign) {
   const obj = { default: null };

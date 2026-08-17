@@ -1,5 +1,5 @@
 // _runtime/08672_get_ActivityIndicator.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 let Orientation = get_ActivityIndicator.NativeModules.Orientation;
 const Platform = get_ActivityIndicator.Platform;

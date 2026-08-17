@@ -1,10 +1,10 @@
 // _runtime/06450_NativeEventsManager.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6392 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { Reanimated } from "module_6420" /* 6420 */;
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06392___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import { findNodeHandle } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
+import { Reanimated } from "metro/06420__.js";
 
 let closure_2 = ["onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedTouchEvent"];
 ({ useEffect: c4, useMemo: c5, useRef: closure_6 } = noop);

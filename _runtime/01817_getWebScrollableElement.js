@@ -1,6 +1,6 @@
 // _runtime/01817_getWebScrollableElement.js
-import noop from "noop" /* 19 */;
-import isJest from "isJest" /* 1657 */;
+import noop from "00019_noop.js";
+import isJest from "01657_isJest.js";
 
 function getWebScrollableElement(getScrollableNode) {
   let scrollableNode;

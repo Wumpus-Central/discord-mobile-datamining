@@ -1,8 +1,8 @@
 // _runtime/04433_setProto.js
-import _mod541 from "module_541" /* 541 */;
-import setPrototypeOf from "setPrototypeOf" /* 4434 */;
-import _mod4435 from "module_4435" /* 4435 */;
-import _mod4436 from "module_4436" /* 4436 */;
+import _mod541 from "metro/00541__.js";
+import setPrototypeOf from "04434_setPrototypeOf.js";
+import _mod4435 from "metro/04435__.js";
+import _mod4436 from "metro/04436__.js";
 
 if (setPrototypeOf) {
   function setProto(arg0, arg1) {

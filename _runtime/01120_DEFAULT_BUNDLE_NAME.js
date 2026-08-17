@@ -1,6 +1,6 @@
 // _runtime/01120_DEFAULT_BUNDLE_NAME.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ANDROID_DEFAULT_BUNDLE_NAME from "ANDROID_DEFAULT_BUNDLE_NAME" /* 1121 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import ANDROID_DEFAULT_BUNDLE_NAME from "01121_ANDROID_DEFAULT_BUNDLE_NAME.js";
 
 const Platform = get_ActivityIndicator.Platform;
 

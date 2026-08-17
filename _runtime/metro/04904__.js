@@ -1,6 +1,6 @@
 // _runtime/metro/04904__.js
-import _mod4905 from "module_4905" /* 4905 */;
-import _mod4906 from "module_4906" /* 4906 */;
+import _mod4905 from "04905__.js";
+import _mod4906 from "04906__.js";
 
 const self = this;
 let self2 = this;

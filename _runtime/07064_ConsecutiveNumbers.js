@@ -1,6 +1,6 @@
 // _runtime/07064_ConsecutiveNumbers.js
-import _createClassDefault from "_createClass" /* 7051 */;
-import ConsecutiveNumbers from "_classCallCheck" /* 7050 */;
+import _createClassDefault from "metro/07051__createClass.js";
+import ConsecutiveNumbers from "metro/07050__classCallCheck.js";
 
 class ConsecutiveNumbers {
   constructor(arg0, arg1) {

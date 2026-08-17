@@ -1,11 +1,11 @@
 // _runtime/01804_checkSharedValueUsage.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import t from "t" /* 1665 */;
-import updateProps from "updateProps" /* 1754 */;
-import isAnimated from "isAnimated" /* 1800 */;
-import o from "o" /* 1805 */;
-import noop from "noop" /* 19 */;
-import isJest from "isJest" /* 1657 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import t from "01665_t.js";
+import updateProps from "01754_updateProps.js";
+import isAnimated from "01800_isAnimated.js";
+import o from "01805_o.js";
+import noop from "00019_noop.js";
+import isJest from "01657_isJest.js";
 import { updateProps } from "01754_updateProps.js";
 import { isAnimated } from "01800_isAnimated.js";
 import { o } from "01805_o.js";

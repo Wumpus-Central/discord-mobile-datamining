@@ -1,6 +1,6 @@
 // _runtime/01829_dispatchCommandFabric.js
-import addLogBoxLog from "addLogBoxLog" /* 1658 */;
-import isJest from "isJest" /* 1657 */;
+import addLogBoxLog from "01658_addLogBoxLog.js";
+import isJest from "01657_isJest.js";
 
 function dispatchCommandFabric(arg0, arg1) {
   let items = arg2;

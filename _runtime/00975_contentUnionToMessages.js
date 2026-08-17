@@ -1,5 +1,5 @@
 // _runtime/00975_contentUnionToMessages.js
-import _mod974 from "module_974" /* 974 */;
+import _mod974 from "metro/00974__.js";
 
 require = arg1;
 const dependencyMap = arg6;

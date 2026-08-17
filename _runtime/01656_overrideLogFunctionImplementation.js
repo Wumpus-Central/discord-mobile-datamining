@@ -1,8 +1,8 @@
 // _runtime/01656_overrideLogFunctionImplementation.js
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
-import t from "t" /* 1665 */;
-import isJest from "isJest" /* 1657 */;
-import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
+import t from "01665_t.js";
+import isJest from "01657_isJest.js";
+import addLogBoxLog from "01658_addLogBoxLog.js";
 
 let closure_3 = isJest.isJest();
 isJest = isJest.shouldBeUseWeb();

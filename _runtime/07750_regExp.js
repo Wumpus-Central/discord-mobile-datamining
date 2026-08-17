@@ -1,6 +1,6 @@
 // _runtime/07750_regExp.js
-import generatePropagationContext from "generatePropagationContext" /* 7748 */;
-import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 7751 */;
+import generatePropagationContext from "07748_generatePropagationContext.js";
+import baggageHeaderToDynamicSamplingContext from "07751_baggageHeaderToDynamicSamplingContext.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
 // _runtime/01561_getPatternParts.js
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "metro/00032__slicedToArray.js";
 
 
 export const getPatternParts = function getPatternParts(path) {

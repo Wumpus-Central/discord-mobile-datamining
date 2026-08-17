@@ -1,6 +1,6 @@
 // _runtime/00244_AppRegistry.js
-import MessageQueueDefault from "MessageQueue" /* 236 */;
-import importAllResult from "map" /* 245 */;
+import MessageQueueDefault from "00236_MessageQueue.js";
+import importAllResult from "00245_map.js";
 
 importAllResult.registerComponent("LogBox", () => function NoOp() {
   return null;

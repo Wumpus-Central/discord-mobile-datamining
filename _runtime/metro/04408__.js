@@ -1,7 +1,7 @@
 // _runtime/metro/04408__.js
-import _Symbol from "_Symbol" /* 544 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import regexTester from "regexTester" /* 1414 */;
+import _Symbol from "../00544__Symbol.js";
+import callBoundIntrinsic from "../00574_callBoundIntrinsic.js";
+import regexTester from "../01414_regexTester.js";
 
 let closure_0 = callBoundIntrinsic("Object.prototype.toString");
 if (_Symbol()) {

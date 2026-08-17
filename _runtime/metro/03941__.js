@@ -1,7 +1,7 @@
 // _runtime/metro/03941__.js
-import localeToNumber from "localeToNumber" /* 3938 */;
-import buildMatchFn from "buildMatchFn" /* 2004 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2005 */;
+import localeToNumber from "../03938_localeToNumber.js";
+import buildMatchFn from "../02004_buildMatchFn.js";
+import buildMatchPatternFn from "../02005_buildMatchPatternFn.js";
 
 if (!buildMatchFn) {
   let obj = { default: null };

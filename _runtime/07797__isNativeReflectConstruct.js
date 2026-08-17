@@ -1,14 +1,14 @@
 // _runtime/07797__isNativeReflectConstruct.js
-import isErrorEvent from "isErrorEvent" /* 7793 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
-import closure_6 from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
+import isErrorEvent from "07793_isErrorEvent.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import closure_6 from "metro/00096__get.js";
+import _inherits from "00098__inherits.js";
+import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
+import dateTimestampInSeconds from "07752_dateTimestampInSeconds.js";
 
 const ServerRuntimeClient = require;
 function _isNativeReflectConstruct() {

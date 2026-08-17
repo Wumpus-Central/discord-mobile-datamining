@@ -1,6 +1,6 @@
 // _runtime/03656_differenceInCalendarISOWeekYears.js
-import getISOWeekYear from "getISOWeekYear" /* 3629 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getISOWeekYear from "03629_getISOWeekYear.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getISOWeekYear) {
   let obj = { default: null };

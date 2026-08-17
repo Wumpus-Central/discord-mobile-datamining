@@ -1,7 +1,7 @@
 // _runtime/04140__fromURL.js
-import _fromFileURL from "asyncGeneratorStep" /* 5 */;
-import { Image as _fromResource } from "get ActivityIndicator" /* 17 */;
-import { NitroModules } from "module_4112" /* 4112 */;
+import _fromFileURL from "00005_asyncGeneratorStep.js";
+import { Image as _fromResource } from "00017_get_ActivityIndicator.js";
+import { NitroModules } from "metro/04112__.js";
 
 let _fromBytes = NitroModules.createHybridObject("RiveFileFactory");
 let obj = {};

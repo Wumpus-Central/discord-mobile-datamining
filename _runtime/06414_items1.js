@@ -1,5 +1,5 @@
 // _runtime/06414_items1.js
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
+import _isNativeReflectConstructDefault from "06404__isNativeReflectConstruct.js";
 
 const items = ["minDurationMs", "maxDist", "numberOfPointers"];
 const obj = { name: "LongPressGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };

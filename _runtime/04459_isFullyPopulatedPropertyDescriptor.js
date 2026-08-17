@@ -1,5 +1,5 @@
 // _runtime/04459_isFullyPopulatedPropertyDescriptor.js
-import isPropertyDescriptor from "isPropertyDescriptor" /* 4442 */;
+import isPropertyDescriptor from "04442_isPropertyDescriptor.js";
 
 
 export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor) {

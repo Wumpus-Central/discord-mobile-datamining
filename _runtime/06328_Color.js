@@ -1,7 +1,7 @@
 // _runtime/06328_Color.js
-import keys2 from "keys" /* 6329 */;
-import hasOwnProperty from "hasOwnProperty" /* 6333 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import keys2 from "06329_keys.js";
+import hasOwnProperty from "06333_hasOwnProperty.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 class Color {
   constructor(arg0, arg1) {

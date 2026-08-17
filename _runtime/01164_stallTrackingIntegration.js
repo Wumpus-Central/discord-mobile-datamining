@@ -1,6 +1,6 @@
 // _runtime/01164_stallTrackingIntegration.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import { AppState } from "get ActivityIndicator" /* 17 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import { AppState } from "00017_get_ActivityIndicator.js";
 
 const require = arg1;
 

@@ -1,6 +1,6 @@
 // _runtime/01050_LayoutShiftManager.js
-import LayoutShiftManager from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import LayoutShiftManager from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LayoutShiftManager {

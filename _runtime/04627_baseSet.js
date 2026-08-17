@@ -1,7 +1,7 @@
 // _runtime/04627_baseSet.js
-import isObject from "isObject" /* 606 */;
-import toKey from "toKey" /* 725 */;
-import castPath from "castPath" /* 728 */;
+import isObject from "00606_isObject.js";
+import toKey from "00725_toKey.js";
+import castPath from "00728_castPath.js";
 
 
 export default function baseSet(arg0, arg1, arg2, arg3) {

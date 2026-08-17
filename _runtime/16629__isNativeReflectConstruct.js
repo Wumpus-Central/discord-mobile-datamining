@@ -1,12 +1,12 @@
 // _runtime/16629__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 16630 */;
-import Events from "Events" /* 16634 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _isNativeReflectConstruct2 from "16630__isNativeReflectConstruct.js";
+import Events from "16634_Events.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import _inherits from "00098__inherits.js";
 
 const PQueue = require;
 let closure_1 = dependencyMap;

@@ -1,5 +1,5 @@
 // _runtime/08110_styles.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const obj = { stepNumber: { marginTop: 20, alignItems: "center", position: "absolute" }, sliderMainContainer: { zIndex: 1, width: "100%" }, defaultSlideriOS: { height: 40 }, defaultSlider: {}, stepsIndicator: null, trackMarkContainer: null, thumbImageContainer: null, thumbImage: null, stepIndicatorElement: null, defaultIndicatorMarked: null, defaultIndicatorIdle: null };

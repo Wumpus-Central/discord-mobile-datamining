@@ -1,8 +1,8 @@
 // _runtime/04451_Call.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import getEvalledConstructor2 from "getEvalledConstructor" /* 4429 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import _mod541 from "metro/00541__.js";
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import getEvalledConstructor2 from "04429_getEvalledConstructor.js";
 
 let tmp = getEvalledConstructor("%Reflect.apply%", true);
 if (!tmp) {

@@ -1,7 +1,7 @@
 // _runtime/01536_ThemeProvider.js
-import noopAll from "noop" /* 19 */;
-import context from "context" /* 1537 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import context from "01537_context.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

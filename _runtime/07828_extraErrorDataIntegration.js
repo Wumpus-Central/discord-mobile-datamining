@@ -1,5 +1,5 @@
 // _runtime/07828_extraErrorDataIntegration.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 
 export const extraErrorDataIntegration = setupIntegration.defineIntegration(() => {

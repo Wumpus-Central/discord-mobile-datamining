@@ -1,5 +1,5 @@
 // _runtime/00795_getOwnPropertySymbols.js
-import stubArray from "stubArray" /* 796 */;
+import stubArray from "00796_stubArray.js";
 import { arrayFilter } from "00797_arrayFilter.js";
 
 if (getOwnPropertySymbols) {

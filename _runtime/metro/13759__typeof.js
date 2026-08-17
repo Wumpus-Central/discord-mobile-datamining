@@ -1,5 +1,5 @@
 // _runtime/metro/13759__typeof.js
-import _typeof from "_typeof" /* 13760 */;
+import _typeof from "13760__typeof.js";
 
 if (_typeof) {
   if (typeof _typeof === "object") {

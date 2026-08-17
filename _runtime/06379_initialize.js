@@ -1,5 +1,5 @@
 // _runtime/06379_initialize.js
-import onGestureHandlerEvent from "onGestureHandlerEvent" /* 6380 */;
+import onGestureHandlerEvent from "06380_onGestureHandlerEvent.js";
 
 require = arg1;
 const dependencyMap = arg6;

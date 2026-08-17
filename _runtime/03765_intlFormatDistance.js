@@ -1,15 +1,15 @@
 // _runtime/03765_intlFormatDistance.js
-import keys from "keys" /* 3651 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
-import differenceInCalendarMonths from "differenceInCalendarMonths" /* 3658 */;
-import differenceInCalendarQuarters from "differenceInCalendarQuarters" /* 3659 */;
-import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3661 */;
-import differenceInCalendarYears from "differenceInCalendarYears" /* 3662 */;
-import differenceInHours from "differenceInHours" /* 3664 */;
-import differenceInMinutes from "differenceInMinutes" /* 3669 */;
-import differenceInSeconds from "differenceInSeconds" /* 3675 */;
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import keys from "03651_keys.js";
+import differenceInCalendarDays from "03634_differenceInCalendarDays.js";
+import differenceInCalendarMonths from "03658_differenceInCalendarMonths.js";
+import differenceInCalendarQuarters from "03659_differenceInCalendarQuarters.js";
+import differenceInCalendarWeeks from "03661_differenceInCalendarWeeks.js";
+import differenceInCalendarYears from "03662_differenceInCalendarYears.js";
+import differenceInHours from "03664_differenceInHours.js";
+import differenceInMinutes from "03669_differenceInMinutes.js";
+import differenceInSeconds from "03675_differenceInSeconds.js";
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };

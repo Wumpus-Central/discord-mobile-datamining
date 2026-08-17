@@ -1,5 +1,5 @@
 // _runtime/01589_StaticContainer.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 
 export const StaticContainer = noopAll.memo(function StaticContainer(children) {

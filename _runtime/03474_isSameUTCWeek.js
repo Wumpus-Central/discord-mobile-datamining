@@ -1,6 +1,6 @@
 // _runtime/03474_isSameUTCWeek.js
-import requiredArgs from "requiredArgs" /* 3473 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
+import requiredArgs from "03473_requiredArgs.js";
+import startOfUTCWeek from "03475_startOfUTCWeek.js";
 
 if (!requiredArgs) {
   let obj = { default: null };

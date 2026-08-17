@@ -1,7 +1,7 @@
 // _runtime/metro/12381__.js
-import _mod12377 from "module_12377" /* 12377 */;
-import QRPolynomial from "QRPolynomial" /* 12382 */;
-import _mod12383 from "module_12383" /* 12383 */;
+import _mod12377 from "12377__.js";
+import QRPolynomial from "../12382_QRPolynomial.js";
+import _mod12383 from "12383__.js";
 
 const obj = {
   PATTERN_POSITION_TABLE: items,

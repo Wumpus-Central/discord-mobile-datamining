@@ -1,6 +1,6 @@
 // _runtime/00419_noop.js
-import noopAll from "noop" /* 19 */;
-import ViewDefault from "View" /* 108 */;
+import noopAll from "00019_noop.js";
+import ViewDefault from "00108_View.js";
 
 noopAll;
 

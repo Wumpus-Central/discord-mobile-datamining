@@ -1,5 +1,5 @@
 // _runtime/12378_QRRSBlock.js
-import _mod12379 from "module_12379" /* 12379 */;
+import _mod12379 from "metro/12379__.js";
 
 class QRRSBlock {
   constructor(arg0, arg1) {

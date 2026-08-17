@@ -1,15 +1,15 @@
 // _runtime/metro/06497__.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6397 */;
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 6418 */;
-import _isNativeReflectConstruct3 from "_isNativeReflectConstruct" /* 6498 */;
-import _isNativeReflectConstruct4 from "_isNativeReflectConstruct" /* 6499 */;
-import _isNativeReflectConstruct5 from "_isNativeReflectConstruct" /* 6500 */;
-import _isNativeReflectConstruct6 from "_isNativeReflectConstruct" /* 6501 */;
-import _isNativeReflectConstruct7 from "_isNativeReflectConstruct" /* 6502 */;
-import _isNativeReflectConstruct8 from "_isNativeReflectConstruct" /* 6503 */;
-import _isNativeReflectConstruct9 from "_isNativeReflectConstruct" /* 6504 */;
-import _isNativeReflectConstruct10 from "_isNativeReflectConstruct" /* 6505 */;
-import _isNativeReflectConstruct11 from "_isNativeReflectConstruct" /* 6506 */;
+import _isNativeReflectConstruct from "../06397__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct2 from "../06418__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct3 from "../06498__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct4 from "../06499__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct5 from "../06500__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct6 from "../06501__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct7 from "../06502__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct8 from "../06503__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct9 from "../06504__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct10 from "../06505__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct11 from "../06506__isNativeReflectConstruct.js";
 
 require = arg1;
 const dependencyMap = arg6;

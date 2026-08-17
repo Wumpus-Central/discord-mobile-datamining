@@ -1,6 +1,6 @@
 // _runtime/07088_useOnLoad.js
-import closure_2 from "_slicedToArray" /* 7041 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "metro/07041__slicedToArray.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 ({ useEffect: c3, useMemo: c4, useRef: c5, useState: closure_6 } = noop);

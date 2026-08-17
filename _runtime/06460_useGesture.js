@@ -1,5 +1,5 @@
 // _runtime/06460_useGesture.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { tagMessage } from "06382_tagMessage.js";
 import { useGestureCallbacks } from "06461_useGestureCallbacks.js";
 

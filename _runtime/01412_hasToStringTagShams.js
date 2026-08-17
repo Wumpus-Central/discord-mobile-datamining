@@ -1,5 +1,5 @@
 // _runtime/01412_hasToStringTagShams.js
-import hasSymbols from "hasSymbols" /* 545 */;
+import hasSymbols from "00545_hasSymbols.js";
 
 
 export default function hasToStringTagShams() {

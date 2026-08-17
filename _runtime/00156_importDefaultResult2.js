@@ -1,13 +1,13 @@
 // _runtime/00156_importDefaultResult2.js
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 157 */;
-import structuredCloneInternalDefault from "structuredCloneInternal" /* 168 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import nullthrowsDefault from "00070_nullthrows.js";
+import NativePerformanceCxxDefault from "00154_NativePerformanceCxx.js";
+import _isNativeReflectConstructDefault from "00157__isNativeReflectConstruct.js";
+import structuredCloneInternalDefault from "00168_structuredCloneInternal.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "00090__classPrivateFieldBase.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00091__classPrivateFieldKey.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 import { importDefaultResult1 } from "00166_importDefaultResult1.js";
 import { importDefaultResult1 } from "00167_importDefaultResult1.js";
 

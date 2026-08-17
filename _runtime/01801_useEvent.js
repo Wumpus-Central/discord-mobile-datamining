@@ -1,6 +1,6 @@
 // _runtime/01801_useEvent.js
-import noop from "noop" /* 19 */;
-import importDefaultResult1 from "importDefaultResult1" /* 1759 */;
+import noop from "00019_noop.js";
+import importDefaultResult1 from "01759_importDefaultResult1.js";
 
 const useRef = noop.useRef;
 

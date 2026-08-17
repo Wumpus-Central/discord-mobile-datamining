@@ -1,18 +1,18 @@
 // _runtime/06575__isNativeReflectConstruct.js
-import noopAll from "noop" /* 19 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import extractOpacityDefault from "extractOpacity" /* 6577 */;
-import keysDefault from "keys" /* 6578 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6583 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6585 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 6595 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import _inheritsDefault from "00098__inherits.js";
+import extractOpacityDefault from "06577_extractOpacity.js";
+import keysDefault from "06578_keys.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06583___INTERNAL_VIEW_CONFIG.js";
+import _isNativeReflectConstructDefault from "06585__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault2 from "06595__isNativeReflectConstruct.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const Svg = arg1;
 function _isNativeReflectConstruct() {

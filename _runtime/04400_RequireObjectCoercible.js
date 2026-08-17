@@ -1,5 +1,5 @@
 // _runtime/04400_RequireObjectCoercible.js
-import _mod541 from "module_541" /* 541 */;
+import _mod541 from "metro/00541__.js";
 
 
 export default function RequireObjectCoercible(arg0) {

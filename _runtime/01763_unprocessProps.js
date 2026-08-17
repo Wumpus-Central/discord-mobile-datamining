@@ -1,6 +1,6 @@
 // _runtime/01763_unprocessProps.js
-import ReanimatedModule2 from "ReanimatedModule" /* 1662 */;
-import r from "r" /* 1764 */;
+import ReanimatedModule2 from "01662_ReanimatedModule.js";
+import r from "01764_r.js";
 
 require = arg1;
 const dependencyMap = arg6;

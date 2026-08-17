@@ -1,6 +1,6 @@
 // _runtime/07837_addToMetricsAggregator.js
-import addToMetricsAggregator from "addToMetricsAggregator" /* 7834 */;
-import MetricsAggregator from "MetricsAggregator" /* 7838 */;
+import addToMetricsAggregator from "07834_addToMetricsAggregator.js";
+import MetricsAggregator from "07838_MetricsAggregator.js";
 
 require = arg1;
 const dependencyMap = arg6;

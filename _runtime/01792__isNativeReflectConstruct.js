@@ -1,13 +1,13 @@
 // _runtime/01792__isNativeReflectConstruct.js
-import noopDefault from "noop" /* 19 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import isJest from "isJest" /* 1657 */;
+import noopDefault from "00019_noop.js";
+import _inheritsDefault from "00098__inherits.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
+import isJest from "01657_isJest.js";
 
 const LayoutAnimationConfig = arg1;
 function _isNativeReflectConstruct() {

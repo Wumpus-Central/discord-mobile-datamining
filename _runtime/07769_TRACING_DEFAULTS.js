@@ -1,5 +1,5 @@
 // _runtime/07769_TRACING_DEFAULTS.js
-import closure_2 from "_toArray" /* 853 */;
+import closure_2 from "00853__toArray.js";
 
 let obj = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
 

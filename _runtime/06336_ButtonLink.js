@@ -1,11 +1,11 @@
 // _runtime/06336_ButtonLink.js
-import noopAll from "noop" /* 19 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import ColorDefault from "Color" /* 6328 */;
-import Animated from "Animated" /* 6337 */;
-import Text from "Text" /* 6338 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
+import ColorDefault from "06328_Color.js";
+import Animated from "06337_Animated.js";
+import Text from "06338_Text.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 function ButtonLink(arg0) {

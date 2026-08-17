@@ -1,5 +1,5 @@
 // _runtime/metro/00474__.js
-import _mod475 from "module_475" /* 475 */;
+import _mod475 from "00475__.js";
 
 let closure_0 = _mod475.default.currentCentroidXOfTouchesChangedAfter;
 let closure_1 = _mod475.default.currentCentroidYOfTouchesChangedAfter;

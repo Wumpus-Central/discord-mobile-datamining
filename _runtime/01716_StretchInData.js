@@ -1,5 +1,5 @@
 // _runtime/01716_StretchInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
 obj = { StretchInX: { name: "StretchInX", style: obj, duration: 0.3 }, StretchInY: { name: "StretchInY", style: obj, duration: 0.3 } };
 obj = { 0: { transform: items }, 100: null };

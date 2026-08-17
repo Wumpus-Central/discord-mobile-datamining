@@ -1,5 +1,5 @@
 // _runtime/00469_reject.js
-import _mod38 from "module_38" /* 38 */;
+import _mod38 from "metro/00038__.js";
 
 require = arg1;
 const dependencyMap = arg6;

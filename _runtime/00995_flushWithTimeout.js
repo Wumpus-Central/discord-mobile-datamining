@@ -1,5 +1,5 @@
 // _runtime/00995_flushWithTimeout.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function flushWithTimeout(arg0) {
   const self = this;

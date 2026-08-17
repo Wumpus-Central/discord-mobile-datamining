@@ -1,5 +1,5 @@
 // _runtime/00267_setUpMutationObserver.js
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import polyfillObjectProperty from "00123_polyfillObjectProperty.js";
 
 require = arg1;
 const dependencyMap = arg6;

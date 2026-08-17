@@ -1,5 +1,5 @@
 // _runtime/01712_convertAnimationObjectToKeyframes.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 import { getEasingByName } from "01713_getEasingByName.js";
 
 const require = arg1;

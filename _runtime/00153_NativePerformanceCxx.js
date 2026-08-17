@@ -1,6 +1,6 @@
 // _runtime/00153_NativePerformanceCxx.js
-import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import setUpPerformanceModernDefault from "setUpPerformanceModern" /* 155 */;
+import NativePerformanceCxxDefault from "00154_NativePerformanceCxx.js";
+import setUpPerformanceModernDefault from "00155_setUpPerformanceModern.js";
 
 if (NativePerformanceCxxDefault) {
   setUpPerformanceModernDefault();

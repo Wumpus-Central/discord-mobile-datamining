@@ -1,5 +1,5 @@
 // _runtime/00639_baseTrim.js
-import trimmedEndIndex from "trimmedEndIndex" /* 640 */;
+import trimmedEndIndex from "00640_trimmedEndIndex.js";
 
 const re2 = /^\s+/;
 

@@ -1,8 +1,8 @@
 // _runtime/06372_StackNavigator.js
-import createStandardNavigationFactories2 from "createStandardNavigationFactories" /* 1501 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import createStandardNavigationFactories2 from "01501_createStandardNavigationFactories.js";
+import closure_2 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
+import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
 
 require = arg1;
 function StackNavigator(arg0) {

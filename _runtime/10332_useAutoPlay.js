@@ -1,5 +1,5 @@
 // _runtime/10332_useAutoPlay.js
-import closure_0 from "noop" /* 19 */;
+import closure_0 from "00019_noop.js";
 
 
 export const useAutoPlay = function useAutoPlay(autoPlay) {

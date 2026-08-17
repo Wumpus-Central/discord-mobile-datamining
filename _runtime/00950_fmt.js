@@ -1,6 +1,6 @@
 // _runtime/00950_fmt.js
-import _INTERNAL_captureSerializedLog from "_INTERNAL_captureSerializedLog" /* 880 */;
-import parameterize from "parameterize" /* 901 */;
+import _INTERNAL_captureSerializedLog from "00880__INTERNAL_captureSerializedLog.js";
+import parameterize from "00901_parameterize.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

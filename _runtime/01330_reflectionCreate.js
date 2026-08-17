@@ -1,6 +1,6 @@
 // _runtime/01330_reflectionCreate.js
-import _mod1318 from "module_1318" /* 1318 */;
-import reflectionScalarDefault from "reflectionScalarDefault" /* 1328 */;
+import _mod1318 from "metro/01318__.js";
+import reflectionScalarDefault from "01328_reflectionScalarDefault.js";
 
 require = arg1;
 const dependencyMap = arg6;

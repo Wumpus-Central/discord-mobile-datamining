@@ -1,5 +1,5 @@
 // _runtime/01523_useLazyValue.js
-import closure_0 from "noop" /* 19 */;
+import closure_0 from "00019_noop.js";
 
 
 export const useLazyValue = function useLazyValue(arg0) {

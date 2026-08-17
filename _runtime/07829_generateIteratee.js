@@ -1,5 +1,5 @@
 // _runtime/07829_generateIteratee.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 
 export const generateIteratee = function generateIteratee(arg0) {

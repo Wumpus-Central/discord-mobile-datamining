@@ -1,7 +1,7 @@
 // _runtime/03911_subWeeks.js
-import toInteger from "toInteger" /* 3476 */;
-import addWeeks from "addWeeks" /* 3640 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import addWeeks from "03640_addWeeks.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

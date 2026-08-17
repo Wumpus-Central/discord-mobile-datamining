@@ -1,10 +1,10 @@
 // _runtime/metro/12265__.js
-import _mod12199 from "module_12199" /* 12199 */;
-import stringProcessor from "stringProcessor" /* 12262 */;
-import _mod12266 from "module_12266" /* 12266 */;
-import _mod12267 from "module_12267" /* 12267 */;
-import _mod12268 from "module_12268" /* 12268 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import _mod12199 from "12199__.js";
+import stringProcessor from "../12262_stringProcessor.js";
+import _mod12266 from "12266__.js";
+import _mod12267 from "12267__.js";
+import _mod12268 from "12268__.js";
+import closure_3 from "../00005_asyncGeneratorStep.js";
 import { initializeContext } from "../12261_initializeContext.js";
 import { 12199__ } from "12199__.js";
 

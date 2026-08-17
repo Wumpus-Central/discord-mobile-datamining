@@ -1,7 +1,7 @@
 // _runtime/08111__getRequireWildcardCache.js
-import noop from "noop" /* 19 */;
-import closure_3 from "get ActivityIndicator" /* 17 */;
-import closure_4 from "jsxProd" /* 21 */;
+import noop from "00019_noop.js";
+import closure_3 from "00017_get_ActivityIndicator.js";
+import closure_4 from "react/00021_jsxProd.js";
 
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {

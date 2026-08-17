@@ -1,8 +1,8 @@
 // _runtime/04142_resolveWeight.js
-import _loadFont from "_slicedToArray" /* 32 */;
-import _setFallbackFonts from "asyncGeneratorStep" /* 5 */;
-import { Image as _clearFallbackFonts } from "get ActivityIndicator" /* 17 */;
-import { NitroModules } from "module_4112" /* 4112 */;
+import _loadFont from "metro/00032__slicedToArray.js";
+import _setFallbackFonts from "00005_asyncGeneratorStep.js";
+import { Image as _clearFallbackFonts } from "00017_get_ActivityIndicator.js";
+import { NitroModules } from "metro/04112__.js";
 
 function resolveWeight(arg0) {
   let num = 0;

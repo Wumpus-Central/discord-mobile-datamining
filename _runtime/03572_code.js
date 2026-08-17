@@ -1,9 +1,9 @@
 // _runtime/03572_code.js
-import formatDistance from "formatDistance" /* 3573 */;
-import buildFormatLongFn from "buildFormatLongFn" /* 3574 */;
-import dayAndTimeWithAdjective from "dayAndTimeWithAdjective" /* 3575 */;
-import buildLocalizeFn from "buildLocalizeFn" /* 3576 */;
-import 03577__ from "metro/03577__.js" /* 3577 */;
+import formatDistance from "03573_formatDistance.js";
+import buildFormatLongFn from "03574_buildFormatLongFn.js";
+import dayAndTimeWithAdjective from "03575_dayAndTimeWithAdjective.js";
+import buildLocalizeFn from "03576_buildLocalizeFn.js";
+import 03577__ from "metro/03577__.js";
 
 if (!formatDistance) {
   let obj = { default: null };

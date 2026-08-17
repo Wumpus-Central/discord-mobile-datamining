@@ -1,7 +1,7 @@
 // _runtime/07027_BottomSheetDraggableScrollable.js
-import noopDefault from "noop" /* 19 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import LegacyBaseButton from "06377_LegacyBaseButton.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 noopDefault;

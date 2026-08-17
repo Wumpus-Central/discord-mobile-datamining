@@ -1,5 +1,5 @@
 // _runtime/07078_areDimensionsNotEqual.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 

@@ -1,6 +1,6 @@
 // _runtime/04421_truncate.js
-import _mod541 from "module_541" /* 541 */;
-import floor from "floor" /* 4422 */;
+import _mod541 from "metro/00541__.js";
+import floor from "04422_floor.js";
 
 
 export default function truncate(num) {

@@ -1,5 +1,5 @@
 // _runtime/06529_getDistanceForDirection.js
-import getInvertedMultiplier from "getInvertedMultiplier" /* 6530 */;
+import getInvertedMultiplier from "06530_getInvertedMultiplier.js";
 
 require = arg1;
 const dependencyMap = arg6;

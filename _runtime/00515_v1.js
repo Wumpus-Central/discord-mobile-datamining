@@ -1,5 +1,5 @@
 // _runtime/00515_v1.js
-import unsafeStringify from "unsafeStringify" /* 517 */;
+import unsafeStringify from "00517_unsafeStringify.js";
 
 require = arg1;
 const module = arg2;

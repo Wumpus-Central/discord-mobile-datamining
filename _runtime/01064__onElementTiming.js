@@ -1,5 +1,5 @@
 // _runtime/01064__onElementTiming.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 function _onElementTiming(arg0) {

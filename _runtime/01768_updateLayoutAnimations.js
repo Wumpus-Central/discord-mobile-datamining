@@ -1,5 +1,5 @@
 // _runtime/01768_updateLayoutAnimations.js
-import isJest from "isJest" /* 1657 */;
+import isJest from "01657_isJest.js";
 
 let closure_0 = require;
 let closure_1 = dependencyMap;

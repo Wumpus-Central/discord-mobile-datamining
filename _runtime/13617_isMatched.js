@@ -1,5 +1,5 @@
 // _runtime/13617_isMatched.js
-import _mod13618 from "module_13618" /* 13618 */;
+import _mod13618 from "metro/13618__.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
 // _runtime/00899_isSentryRequestUrl.js
-import getHttpSpanDetailsFromUrlObject from "getHttpSpanDetailsFromUrlObject" /* 900 */;
+import getHttpSpanDetailsFromUrlObject from "00900_getHttpSpanDetailsFromUrlObject.js";
 
 require = arg1;
 const dependencyMap = arg6;

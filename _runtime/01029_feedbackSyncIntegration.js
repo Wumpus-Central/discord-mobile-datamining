@@ -1,5 +1,5 @@
 // _runtime/01029_feedbackSyncIntegration.js
-import mergeOptions from "mergeOptions" /* 1026 */;
+import mergeOptions from "01026_mergeOptions.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

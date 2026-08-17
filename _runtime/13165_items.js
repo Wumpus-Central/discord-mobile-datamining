@@ -1,8 +1,8 @@
 // _runtime/13165_items.js
-import SemVer from "SemVer" /* 13137 */;
-import Comparator from "Comparator" /* 13151 */;
-import Range from "Range" /* 13152 */;
-import Range2 from "Range" /* 13154 */;
+import SemVer from "13137_SemVer.js";
+import Comparator from "13151_Comparator.js";
+import Range from "13152_Range.js";
+import Range2 from "13154_Range.js";
 
 const items = [new Comparator(">=0.0.0-0")];
 let tmp = new Comparator(">=0.0.0-0");

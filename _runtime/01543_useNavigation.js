@@ -1,7 +1,7 @@
 // _runtime/01543_useNavigation.js
-import NavigationContainerRefContext from "NavigationContainerRefContext" /* 1531 */;
-import NavigationContext from "NavigationContext" /* 1544 */;
-import closure_2 from "noop" /* 19 */;
+import NavigationContainerRefContext from "01531_NavigationContainerRefContext.js";
+import NavigationContext from "01544_NavigationContext.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

@@ -1,5 +1,5 @@
 // _runtime/00739_baseIsNative.js
-import isObject from "isObject" /* 606 */;
+import isObject from "00606_isObject.js";
 
 const re2 = /^\[object .+?Constructor\]$/;
 const call = toString.call;

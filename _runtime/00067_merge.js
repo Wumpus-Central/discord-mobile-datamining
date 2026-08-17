@@ -1,12 +1,12 @@
 // _runtime/00067_merge.js
-import result from "result" /* 26 */;
-import getValidLengthPercentageSizeOrNull from "getValidLengthPercentageSizeOrNull" /* 57 */;
-import sizesDiffer from "sizesDiffer" /* 64 */;
-import measure from "measure" /* 68 */;
-import nullthrows from "nullthrows" /* 70 */;
-import matricesDiffer from "matricesDiffer" /* 77 */;
-import pointsDiffer from "pointsDiffer" /* 78 */;
-import insetsDiffer from "insetsDiffer" /* 79 */;
+import result from "00026_result.js";
+import getValidLengthPercentageSizeOrNull from "00057_getValidLengthPercentageSizeOrNull.js";
+import sizesDiffer from "00064_sizesDiffer.js";
+import measure from "00068_measure.js";
+import nullthrows from "00070_nullthrows.js";
+import matricesDiffer from "00077_matricesDiffer.js";
+import pointsDiffer from "00078_pointsDiffer.js";
+import insetsDiffer from "00079_insetsDiffer.js";
 
 require = arg1;
 const module = arg2;

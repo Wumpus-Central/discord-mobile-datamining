@@ -1,12 +1,12 @@
 // _runtime/04945__isNativeReflectConstruct.js
-import _inheritsDefault from "_inherits" /* 98 */;
-import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
-import calculateGPSValueDefault from "calculateGPSValue" /* 4948 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
+import _inheritsDefault from "00098__inherits.js";
+import _wrapNativeSuperDefault from "metro/00158__wrapNativeSuper.js";
+import calculateGPSValueDefault from "04948_calculateGPSValue.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
 
 const ParseError = arg1;
 function _isNativeReflectConstruct() {

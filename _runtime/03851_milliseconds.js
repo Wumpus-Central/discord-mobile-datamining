@@ -1,5 +1,5 @@
 // _runtime/03851_milliseconds.js
-import requiredArgs from "requiredArgs" /* 3473 */;
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!requiredArgs) {
   const obj = { default: null };

@@ -1,5 +1,5 @@
 // _runtime/00301_usePressability.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useInsertionEffect: obj1, useRef: c3 } = noop);
 

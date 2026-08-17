@@ -1,6 +1,6 @@
 // _runtime/04154_useRiveTrigger.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import { useDisposableMemo } from "04149_useDisposableMemo.js";
 
 const require = arg1;

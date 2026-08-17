@@ -1,10 +1,10 @@
 // _runtime/06446_map.js
-import _mod6420 from "module_6420" /* 6420 */;
-import hash from "hash" /* 6434 */;
-import items2 from "items2" /* 6435 */;
-import isNativeEvent from "isNativeEvent" /* 6447 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
+import _mod6420 from "metro/06420__.js";
+import hash from "06434_hash.js";
+import items2 from "06435_items2.js";
+import isNativeEvent from "06447_isNativeEvent.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import { useMemo } from "00019_noop.js";
 
 require = arg1;
 const map = new Map();

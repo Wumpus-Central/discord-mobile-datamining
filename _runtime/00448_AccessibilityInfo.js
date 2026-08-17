@@ -1,5 +1,5 @@
 // _runtime/00448_AccessibilityInfo.js
-import AccessibilityInfoDefault from "AccessibilityInfo" /* 449 */;
+import AccessibilityInfoDefault from "00449_AccessibilityInfo.js";
 
 for (const key10013 in require("AccessibilityInfo")) {
   let tmp2 = key10013;

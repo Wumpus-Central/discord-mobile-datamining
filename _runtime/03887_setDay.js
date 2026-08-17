@@ -1,9 +1,9 @@
 // _runtime/03887_setDay.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import addDays from "addDays" /* 3620 */;
-import _typeof from "_typeof" /* 3472 */;
-import toInteger from "toInteger" /* 3476 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import addDays from "03620_addDays.js";
+import _typeof from "metro/03472__typeof.js";
+import toInteger from "03476_toInteger.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!addDays) {
   let obj = { default: null };

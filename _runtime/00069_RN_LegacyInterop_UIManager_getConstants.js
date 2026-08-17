@@ -1,5 +1,5 @@
 // _runtime/00069_RN_LegacyInterop_UIManager_getConstants.js
-import nullthrowsDefault from "nullthrows" /* 70 */;
+import nullthrowsDefault from "00070_nullthrows.js";
 
 let c0 = arg1;
 let c1 = importDefault;

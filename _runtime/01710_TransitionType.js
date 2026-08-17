@@ -1,14 +1,14 @@
 // _runtime/01710_TransitionType.js
-import FadeInData from "FadeInData" /* 1711 */;
-import BounceInData from "BounceInData" /* 1714 */;
-import FlipInData from "FlipInData" /* 1715 */;
-import StretchInData from "StretchInData" /* 1716 */;
-import ZoomInData from "ZoomInData" /* 1717 */;
-import SlideInData from "SlideInData" /* 1718 */;
-import LightSpeedInData from "LightSpeedInData" /* 1719 */;
-import PinwheelData from "PinwheelData" /* 1720 */;
-import RotateInData from "RotateInData" /* 1721 */;
-import RollInData from "RollInData" /* 1722 */;
+import FadeInData from "01711_FadeInData.js";
+import BounceInData from "01714_BounceInData.js";
+import FlipInData from "01715_FlipInData.js";
+import StretchInData from "01716_StretchInData.js";
+import ZoomInData from "01717_ZoomInData.js";
+import SlideInData from "01718_SlideInData.js";
+import LightSpeedInData from "01719_LightSpeedInData.js";
+import PinwheelData from "01720_PinwheelData.js";
+import RotateInData from "01721_RotateInData.js";
+import RollInData from "01722_RollInData.js";
 
 let obj = {};
 const merged = Object.assign(FadeInData.FadeInData);

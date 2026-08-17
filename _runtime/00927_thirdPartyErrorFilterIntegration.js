@@ -1,5 +1,5 @@
 // _runtime/00927_thirdPartyErrorFilterIntegration.js
-import setupIntegration from "setupIntegration" /* 887 */;
+import setupIntegration from "00887_setupIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c2 = "_sentryBundlerPluginAppKey:";

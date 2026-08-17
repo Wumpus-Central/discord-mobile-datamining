@@ -1,6 +1,6 @@
 // _runtime/04113_installWorkletsSupport.js
-import _mod4114 from "module_4114" /* 4114 */;
-import getInstalledNitro from "getInstalledNitro" /* 4118 */;
+import _mod4114 from "../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
+import getInstalledNitro from "04118_getInstalledNitro.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,6 +1,6 @@
 // _runtime/04612_baseIsMap.js
-import isObjectLike from "isObjectLike" /* 620 */;
-import _mod770 from "module_770" /* 770 */;
+import isObjectLike from "00620_isObjectLike.js";
+import _mod770 from "metro/00770__.js";
 
 
 export default function baseIsMap(arg0) {

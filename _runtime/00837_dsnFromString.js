@@ -1,5 +1,5 @@
 // _runtime/00837_dsnFromString.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 import { consoleSandbox } from "00824_consoleSandbox.js";
 
 function dsnFromString(arg0) {

@@ -1,5 +1,5 @@
 // _runtime/00142_getElementSibling.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 131 */;
+import _isNativeReflectConstruct from "00131__isNativeReflectConstruct.js";
 
 require = arg1;
 const dependencyMap = arg6;

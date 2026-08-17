@@ -1,6 +1,6 @@
 // _runtime/metro/03583__.js
-import buildMatchFn from "buildMatchFn" /* 2004 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2005 */;
+import buildMatchFn from "../02004_buildMatchFn.js";
+import buildMatchPatternFn from "../02005_buildMatchPatternFn.js";
 
 if (!buildMatchFn) {
   let obj = { default: null };

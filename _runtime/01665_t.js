@@ -1,5 +1,5 @@
 // _runtime/01665_t.js
-import closure_1 from "_slicedToArray" /* 32 */;
+import closure_1 from "metro/00032__slicedToArray.js";
 
 const fn = function t(arg0) {
   let str = "[Reanimated]";

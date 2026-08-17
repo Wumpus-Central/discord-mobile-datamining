@@ -1,5 +1,5 @@
 // _runtime/01812_useDerivedValue.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 let closure_4 = { code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}" };

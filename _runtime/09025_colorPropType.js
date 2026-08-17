@@ -1,5 +1,5 @@
 // _runtime/09025_colorPropType.js
-import hslToRgb from "hslToRgb" /* 9026 */;
+import hslToRgb from "09026_hslToRgb.js";
 
 function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
   let tmp = arg5;

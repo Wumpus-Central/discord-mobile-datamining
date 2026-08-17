@@ -1,6 +1,6 @@
 // _runtime/metro/13693__.js
-import _mod13673 from "module_13673" /* 13673 */;
-import _mod13694 from "module_13694" /* 13694 */;
+import _mod13673 from "13673__.js";
+import _mod13694 from "13694__.js";
 
 let tmp = _mod13673.process && _mod13673.process.versions;
 if (!tmp) {

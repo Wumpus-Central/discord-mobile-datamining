@@ -1,8 +1,8 @@
 // _runtime/00866_createChildOrRootSpan.js
-import _mod839 from "module_839" /* 839 */;
-import getClient from "getClient" /* 848 */;
-import hasSpansEnabled from "hasSpansEnabled" /* 855 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod839 from "metro/00839__.js";
+import getClient from "00848_getClient.js";
+import hasSpansEnabled from "00855_hasSpansEnabled.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { getAsyncContextStrategy } from "00841_getAsyncContextStrategy.js";
 import { getClient } from "00848_getClient.js";

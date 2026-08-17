@@ -1,6 +1,6 @@
 // _runtime/00619_baseIsArguments.js
-import toStringTag from "toStringTag" /* 607 */;
-import isObjectLike from "isObjectLike" /* 620 */;
+import toStringTag from "00607_toStringTag.js";
+import isObjectLike from "00620_isObjectLike.js";
 
 
 export default function baseIsArguments(arg0) {

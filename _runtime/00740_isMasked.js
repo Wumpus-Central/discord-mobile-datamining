@@ -1,5 +1,5 @@
 // _runtime/00740_isMasked.js
-import _mod741 from "module_741" /* 741 */;
+import _mod741 from "metro/00741__.js";
 
 const match = /[^.]+$/.exec(_mod741 && _mod741.keys && _mod741.keys.IE_PROTO || "");
 let str = "";

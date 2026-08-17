@@ -1,5 +1,5 @@
 // _runtime/10436_releaseLongTermAccess.js
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult from "00005_asyncGeneratorStep.js";
 
 let closure_0 = arg1;
 closure_0 = importDefaultResult((arg0) => {

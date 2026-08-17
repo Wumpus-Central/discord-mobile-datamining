@@ -1,19 +1,19 @@
 // _runtime/00380__isNativeReflectConstruct.js
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import _modDef38 from "module_38" /* 38 */;
-import flattenStyleDefault from "flattenStyle" /* 148 */;
-import setDefault from "set" /* 357 */;
-import _assertNativeAnimatedModuleDefault from "_assertNativeAnimatedModule" /* 367 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 381 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
-import closure_8 from "_get" /* 96 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_9 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import _modDef38 from "metro/00038__.js";
+import flattenStyleDefault from "00148_flattenStyle.js";
+import setDefault from "00357_set.js";
+import _assertNativeAnimatedModuleDefault from "00367__assertNativeAnimatedModule.js";
+import _isNativeReflectConstructDefault from "00381__isNativeReflectConstruct.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
+import closure_8 from "metro/00096__get.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_9 from "00090__classPrivateFieldBase.js";
+import importDefaultResult2 from "00091__classPrivateFieldKey.js";
+import importDefaultResult1 from "00098__inherits.js";
 
 const AnimatedProps = arg1;
 function _isNativeReflectConstruct() {

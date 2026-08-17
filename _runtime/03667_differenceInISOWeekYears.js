@@ -1,9 +1,9 @@
 // _runtime/03667_differenceInISOWeekYears.js
-import _typeof from "_typeof" /* 3472 */;
-import differenceInCalendarISOWeekYears from "differenceInCalendarISOWeekYears" /* 3656 */;
-import compareAsc from "compareAsc" /* 3648 */;
-import subISOWeekYears from "subISOWeekYears" /* 3668 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import differenceInCalendarISOWeekYears from "03656_differenceInCalendarISOWeekYears.js";
+import compareAsc from "03648_compareAsc.js";
+import subISOWeekYears from "03668_subISOWeekYears.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

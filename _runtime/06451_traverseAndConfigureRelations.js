@@ -1,5 +1,5 @@
 // _runtime/06451_traverseAndConfigureRelations.js
-import tagMessage from "tagMessage" /* 6382 */;
+import tagMessage from "06382_tagMessage.js";
 import { isComposedGesture } from "06444_isComposedGesture.js";
 
 require = arg1;

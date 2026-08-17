@@ -1,7 +1,7 @@
 // _runtime/10341_Basic.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noopDefault from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import noopDefault from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const View = get_ActivityIndicator.View;
 noopDefault;

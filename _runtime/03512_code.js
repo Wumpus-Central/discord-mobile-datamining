@@ -1,9 +1,9 @@
 // _runtime/03512_code.js
-import futureSeconds from "futureSeconds" /* 3513 */;
-import buildFormatLongFn from "buildFormatLongFn" /* 3514 */;
-import formatRelative from "formatRelative" /* 3515 */;
-import buildLocalizeFn from "buildLocalizeFn" /* 3516 */;
-import 03517__ from "metro/03517__.js" /* 3517 */;
+import futureSeconds from "03513_futureSeconds.js";
+import buildFormatLongFn from "03514_buildFormatLongFn.js";
+import formatRelative from "03515_formatRelative.js";
+import buildLocalizeFn from "03516_buildLocalizeFn.js";
+import 03517__ from "metro/03517__.js";
 
 if (!futureSeconds) {
   let obj = { default: null };

@@ -1,5 +1,5 @@
 // _runtime/01040_set.js
-import addPageListener from "addPageListener" /* 1041 */;
+import addPageListener from "01041_addPageListener.js";
 import { WINDOW } from "01039_WINDOW.js";
 
 require = arg1;

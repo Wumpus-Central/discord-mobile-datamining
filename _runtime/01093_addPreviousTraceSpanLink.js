@@ -1,15 +1,15 @@
 // _runtime/01093_addPreviousTraceSpanLink.js
-import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
-import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1072 */;
-import items from "items" /* 1073 */;
-import breadcrumbsIntegration from "breadcrumbsIntegration" /* 1077 */;
-import _wrapTimeFunction from "_wrapTimeFunction" /* 1076 */;
-import browserSessionIntegration from "browserSessionIntegration" /* 1081 */;
-import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 1078 */;
-import httpContextIntegration from "httpContextIntegration" /* 1080 */;
-import linkedErrorsIntegration from "linkedErrorsIntegration" /* 1079 */;
-import INTEGRATION_NAME from "INTEGRATION_NAME" /* 1094 */;
+import ignoreNextOnError from "01028_ignoreNextOnError.js";
+import addClsInstrumentationHandler from "01033_addClsInstrumentationHandler.js";
+import __SENTRY_DEBUG__ from "metro/01072___SENTRY_DEBUG__.js";
+import items from "01073_items.js";
+import breadcrumbsIntegration from "01077_breadcrumbsIntegration.js";
+import _wrapTimeFunction from "01076__wrapTimeFunction.js";
+import browserSessionIntegration from "01081_browserSessionIntegration.js";
+import _getUnhandledRejectionError from "01078__getUnhandledRejectionError.js";
+import httpContextIntegration from "01080_httpContextIntegration.js";
+import linkedErrorsIntegration from "01079_linkedErrorsIntegration.js";
+import INTEGRATION_NAME from "01094_INTEGRATION_NAME.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {

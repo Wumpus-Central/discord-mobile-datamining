@@ -1,5 +1,5 @@
 // _runtime/00194_ExceptionsManager.js
-import getAll from "get" /* 30 */;
+import getAll from "00030_get.js";
 
 const enforcing = getAll.getEnforcing("ExceptionsManager");
 const obj = {

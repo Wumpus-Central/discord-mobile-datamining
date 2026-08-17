@@ -1,5 +1,5 @@
 // _runtime/00307_getConstants.js
-import getConstantsDefault from "getConstants" /* 308 */;
+import getConstantsDefault from "00308_getConstants.js";
 
 for (const key10013 in require("getConstants")) {
   let tmp2 = key10013;

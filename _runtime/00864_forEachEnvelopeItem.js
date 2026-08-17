@@ -1,8 +1,8 @@
 // _runtime/00864_forEachEnvelopeItem.js
-import _mod821 from "module_821" /* 821 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import dsnFromString from "dsnFromString" /* 837 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod821 from "metro/00821__.js";
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import dsnFromString from "00837_dsnFromString.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { normalize } from "00865_normalize.js";
 import { 00821__ } from "metro/00821__.js";

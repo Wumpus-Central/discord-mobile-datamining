@@ -1,5 +1,5 @@
 // _runtime/07816_moduleMetadataIntegration.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 
 export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({

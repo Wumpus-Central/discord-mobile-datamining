@@ -1,7 +1,7 @@
 // _runtime/00183__callTimer.js
-import _mod38 from "module_38" /* 38 */;
-import toError from "toError" /* 184 */;
-import TimingDefault from "Timing" /* 185 */;
+import _mod38 from "metro/00038__.js";
+import toError from "00184_toError.js";
+import TimingDefault from "00185_Timing.js";
 import { 00038__ } from "metro/00038__.js";
 
 require = arg1;

@@ -1,13 +1,13 @@
 // _runtime/06458_useTapGesture.js
-import map from "map" /* 6459 */;
-import useFlingGesture from "useFlingGesture" /* 6465 */;
-import transformLongPressProps from "transformLongPressProps" /* 6466 */;
-import transformPinchProps from "transformPinchProps" /* 6467 */;
-import transformRotationProps from "transformRotationProps" /* 6468 */;
-import transformHoverProps from "transformHoverProps" /* 6469 */;
-import useManualGesture from "useManualGesture" /* 6470 */;
-import useNativeGesture from "useNativeGesture" /* 6471 */;
-import transformPanProps from "transformPanProps" /* 6472 */;
+import map from "06459_map.js";
+import useFlingGesture from "06465_useFlingGesture.js";
+import transformLongPressProps from "06466_transformLongPressProps.js";
+import transformPinchProps from "06467_transformPinchProps.js";
+import transformRotationProps from "06468_transformRotationProps.js";
+import transformHoverProps from "06469_transformHoverProps.js";
+import useManualGesture from "06470_useManualGesture.js";
+import useNativeGesture from "06471_useNativeGesture.js";
+import transformPanProps from "06472_transformPanProps.js";
 
 
 export const useTapGesture = map.useTapGesture;

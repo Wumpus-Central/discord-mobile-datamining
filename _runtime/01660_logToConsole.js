@@ -1,5 +1,5 @@
 // _runtime/01660_logToConsole.js
-import addLogBoxLog from "addLogBoxLog" /* 1659 */;
+import addLogBoxLog from "01659_addLogBoxLog.js";
 
 const global = arg0;
 require = arg1;

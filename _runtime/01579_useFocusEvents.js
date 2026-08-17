@@ -1,5 +1,5 @@
 // _runtime/01579_useFocusEvents.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 
 const require = arg1;
 

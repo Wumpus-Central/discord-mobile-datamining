@@ -1,7 +1,7 @@
 // _runtime/01124_mapSamples.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import DEFAULT_BUNDLE_NAME from "DEFAULT_BUNDLE_NAME" /* 1120 */;
-import _mod1123 from "module_1123" /* 1123 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import DEFAULT_BUNDLE_NAME from "01120_DEFAULT_BUNDLE_NAME.js";
+import _mod1123 from "metro/01123__.js";
 
 function mapSamples(samples) {
   let tmp = arg1;

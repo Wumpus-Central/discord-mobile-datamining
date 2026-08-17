@@ -1,5 +1,5 @@
 // _runtime/01841_RNScreensTurboModule.js
-import addLogBoxLog from "addLogBoxLog" /* 1658 */;
+import addLogBoxLog from "01658_addLogBoxLog.js";
 
 let c0 = require;
 let RNScreensTurboModule = global.RNScreensTurboModule;

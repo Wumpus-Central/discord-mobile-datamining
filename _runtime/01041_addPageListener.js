@@ -1,5 +1,5 @@
 // _runtime/01041_addPageListener.js
-import WINDOW2 from "WINDOW" /* 1039 */;
+import WINDOW2 from "01039_WINDOW.js";
 
 require = arg1;
 const dependencyMap = arg6;

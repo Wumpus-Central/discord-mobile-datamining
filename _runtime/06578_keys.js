@@ -1,5 +1,5 @@
 // _runtime/06578_keys.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const PanResponder = get_ActivityIndicator.PanResponder;
 const keys = Object.keys(PanResponder.create({}).panHandlers);

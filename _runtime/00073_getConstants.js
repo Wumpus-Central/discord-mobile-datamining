@@ -1,6 +1,6 @@
 // _runtime/00073_getConstants.js
-import defineLazyObjectProperty from "defineLazyObjectProperty" /* 49 */;
-import UIManagerDefault from "UIManager" /* 74 */;
+import defineLazyObjectProperty from "00049_defineLazyObjectProperty.js";
+import UIManagerDefault from "00074_UIManager.js";
 
 require = arg1;
 function getConstants() {

@@ -1,6 +1,6 @@
 // _runtime/03837_isToday.js
-import isSameDay from "isSameDay" /* 3653 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import isSameDay from "03653_isSameDay.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!isSameDay) {
   let obj = { default: null };

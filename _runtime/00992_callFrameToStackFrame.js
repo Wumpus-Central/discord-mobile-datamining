@@ -1,6 +1,6 @@
 // _runtime/00992_callFrameToStackFrame.js
-import createStackParser from "createStackParser" /* 833 */;
-import filenameIsInApp from "filenameIsInApp" /* 991 */;
+import createStackParser from "00833_createStackParser.js";
+import filenameIsInApp from "00991_filenameIsInApp.js";
 
 require = arg1;
 const dependencyMap = arg6;

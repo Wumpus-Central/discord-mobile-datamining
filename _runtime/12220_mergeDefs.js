@@ -1,5 +1,5 @@
 // _runtime/12220_mergeDefs.js
-import mergeDefs from "mergeDefs" /* 12203 */;
+import mergeDefs from "12203_mergeDefs.js";
 
 const self = this;
 let self2 = this;

@@ -1,6 +1,6 @@
 // _runtime/01803_useAnimatedPropsJS.js
-import checkSharedValueUsage from "checkSharedValueUsage" /* 1804 */;
-import isJest from "isJest" /* 1657 */;
+import checkSharedValueUsage from "01804_checkSharedValueUsage.js";
+import isJest from "01657_isJest.js";
 
 if (isJest.shouldBeUseWeb()) {
   function useAnimatedPropsJS(fn, items) {

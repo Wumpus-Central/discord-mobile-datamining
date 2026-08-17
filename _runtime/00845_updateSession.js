@@ -1,6 +1,6 @@
 // _runtime/00845_updateSession.js
-import addContextToFrame from "addContextToFrame" /* 830 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 838 */;
+import addContextToFrame from "00830_addContextToFrame.js";
+import dateTimestampInSeconds from "00838_dateTimestampInSeconds.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,9 +1,9 @@
 // _runtime/13785_OverlayCreator.js
-import noop from "noop" /* 19 */;
-import closure_0 from "get ActivityIndicator" /* 17 */;
-import map from "map" /* 13786 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 13787 */;
-import closure_3 from "jsxProd" /* 21 */;
+import noop from "00019_noop.js";
+import closure_0 from "00017_get_ActivityIndicator.js";
+import map from "13786_map.js";
+import _isNativeReflectConstruct from "13787__isNativeReflectConstruct.js";
+import closure_3 from "react/00021_jsxProd.js";
 
 if (noop) {
   const __esModule = noop.__esModule;

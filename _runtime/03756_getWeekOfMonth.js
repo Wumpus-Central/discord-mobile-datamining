@@ -1,10 +1,10 @@
 // _runtime/03756_getWeekOfMonth.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import getDate from "getDate" /* 3734 */;
-import getDay from "getDay" /* 3735 */;
-import startOfMonth from "startOfMonth" /* 3688 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import getDate from "03734_getDate.js";
+import getDay from "03735_getDay.js";
+import startOfMonth from "03688_startOfMonth.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!getDate) {
   let obj = { default: null };

@@ -1,5 +1,5 @@
 // _runtime/01328_reflectionScalarDefault.js
-import RepeatType from "RepeatType" /* 1320 */;
+import RepeatType from "01320_RepeatType.js";
 
 require = arg1;
 const dependencyMap = arg6;

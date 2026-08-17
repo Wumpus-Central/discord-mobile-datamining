@@ -1,6 +1,6 @@
 // _runtime/03913_weeksToDays.js
-import keys from "keys" /* 3651 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import keys from "03651_keys.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!requiredArgs) {
   const obj = { default: null };

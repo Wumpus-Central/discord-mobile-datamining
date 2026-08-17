@@ -1,5 +1,5 @@
 // _runtime/06964_createContext.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 const createContext = noop.createContext;
 const context = createContext(null);

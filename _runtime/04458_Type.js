@@ -1,5 +1,5 @@
 // _runtime/04458_Type.js
-import Type from "Type" /* 4390 */;
+import Type from "04390_Type.js";
 
 
 export default function Type(arg0) {

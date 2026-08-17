@@ -1,5 +1,5 @@
 // _runtime/01599_useBuildHref.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 
 const require = arg1;
 function useBuildHref() {

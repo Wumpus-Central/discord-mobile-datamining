@@ -1,7 +1,7 @@
 // _runtime/06401_convertToHandlerTag.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import _isNativeReflectConstruct from "06398__isNativeReflectConstruct.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 
 require = arg1;
 function convertToHandlerTag(num) {

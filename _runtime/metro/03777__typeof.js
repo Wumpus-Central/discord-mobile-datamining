@@ -1,5 +1,5 @@
 // _runtime/metro/03777__typeof.js
-import Parser2 from "Parser" /* 3778 */;
+import Parser2 from "../03778_Parser.js";
 
 let _createSuperInternal = function _typeof(arg0) {
   if (typeof Symbol === "function") {

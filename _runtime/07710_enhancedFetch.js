@@ -1,5 +1,5 @@
 // _runtime/07710_enhancedFetch.js
-import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStepDefault from "00005_asyncGeneratorStep.js";
 
 let closure_0 = asyncGeneratorStepDefault((arg0, arg1) => {
   closure_0 = arg0;

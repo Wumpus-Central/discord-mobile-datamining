@@ -1,8 +1,8 @@
 // _runtime/00871_mergeScopeData.js
-import spanToJSON from "spanToJSON" /* 819 */;
-import merge from "merge" /* 846 */;
-import getClient from "getClient" /* 848 */;
-import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 857 */;
+import spanToJSON from "00819_spanToJSON.js";
+import merge from "00846_merge.js";
+import getClient from "00848_getClient.js";
+import getDynamicSamplingContextFromSpan from "00857_getDynamicSamplingContextFromSpan.js";
 
 require = arg1;
 const dependencyMap = arg6;

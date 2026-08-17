@@ -1,8 +1,8 @@
 // _runtime/metro/00339__.js
-import noopAll from "noop" /* 19 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 340 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../00019_noop.js";
+import get_hairlineWidthDefault from "../00254_get_hairlineWidth.js";
+import useWindowDimensionsDefault from "../00340_useWindowDimensions.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 noopAll;
 get_hairlineWidthDefault.create({ container: { position: "absolute" }, safeAreaView: { flex: 1 } });

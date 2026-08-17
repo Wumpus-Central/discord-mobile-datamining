@@ -1,5 +1,5 @@
 // _runtime/04392_iterateValue.js
-import getIterator from "getIterator" /* 4393 */;
+import getIterator from "04393_getIterator.js";
 
 
 export default function iterateValue(arg0) {

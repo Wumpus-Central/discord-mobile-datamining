@@ -1,6 +1,6 @@
 // _runtime/00763_toString.js
-import _mod599 from "module_599" /* 599 */;
-import _mod608 from "module_608" /* 608 */;
+import _mod599 from "metro/00599__.js";
+import _mod608 from "metro/00608__.js";
 
 let prototype;
 if (_mod608) {

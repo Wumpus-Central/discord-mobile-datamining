@@ -1,7 +1,7 @@
 // _runtime/metro/06351__.js
-import noopAll from "noop" /* 19 */;
-import { UIManager } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../00019_noop.js";
+import { UIManager } from "../00017_get_ActivityIndicator.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 noopAll;
 try {

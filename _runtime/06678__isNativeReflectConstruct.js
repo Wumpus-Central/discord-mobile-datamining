@@ -1,14 +1,14 @@
 // _runtime/06678__isNativeReflectConstruct.js
-import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
-import noopAll from "noop" /* 19 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import importDefaultResult1 from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult2 from "_inherits" /* 98 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import asyncGeneratorStepDefault from "00005_asyncGeneratorStep.js";
+import noopAll from "00019_noop.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import importDefaultResult1 from "metro/00042__createClass.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import importDefaultResult2 from "00098__inherits.js";
+import closure_5 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 let SvgFromUri = arg1;
 let closure_1 = dependencyMap;

@@ -1,10 +1,10 @@
 // _runtime/07068__isNativeReflectConstruct.js
-import _inheritsDefault from "_inherits" /* 7074 */;
-import RVMasonryLayoutManagerImpl from "_classCallCheck" /* 7050 */;
-import closure_1 from "_possibleConstructorReturn" /* 7069 */;
-import closure_2 from "_getPrototypeOf" /* 7071 */;
-import closure_3 from "_get" /* 7072 */;
-import importDefaultResult from "_createClass" /* 7051 */;
+import _inheritsDefault from "07074__inherits.js";
+import RVMasonryLayoutManagerImpl from "metro/07050__classCallCheck.js";
+import closure_1 from "metro/07069__possibleConstructorReturn.js";
+import closure_2 from "07071__getPrototypeOf.js";
+import closure_3 from "metro/07072__get.js";
+import importDefaultResult from "metro/07051__createClass.js";
 
 function _isNativeReflectConstruct() {
   try {

@@ -1,10 +1,10 @@
 // _runtime/06343_useFrameSize.js
-import useEffectDefault from "useEffect" /* 1522 */;
-import is from "is" /* 6345 */;
-import closure_3 from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import __react_navigation__elements_contexts from "__react_navigation__elements_contexts" /* 6344 */;
+import useEffectDefault from "01522_useEffect.js";
+import is from "06345_is.js";
+import closure_3 from "00019_noop.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import __react_navigation__elements_contexts from "06344___react_navigation__elements_contexts.js";
 
 require = arg1;
 ({ jsx, jsxs: c4 } = jsxProd);

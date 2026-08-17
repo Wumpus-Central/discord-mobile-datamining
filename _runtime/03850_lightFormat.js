@@ -1,10 +1,10 @@
 // _runtime/03850_lightFormat.js
-import _typeof from "_typeof" /* 3472 */;
-import M from "M" /* 3716 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import isValid from "isValid" /* 3654 */;
-import subMilliseconds from "subMilliseconds" /* 3705 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import M from "03716_M.js";
+import getTimezoneOffsetInMilliseconds from "03635_getTimezoneOffsetInMilliseconds.js";
+import isValid from "03654_isValid.js";
+import subMilliseconds from "03705_subMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

@@ -1,7 +1,7 @@
 // _runtime/06400_GestureDetector.js
-import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
-import closure_6 from "noop" /* 19 */;
+import jsxProd from "react/00021_jsxProd.js";
+import noop from "00019_noop.js";
+import closure_6 from "00019_noop.js";
 
 ({ useEffect: c3, useMemo: c4, useRef: c5 } = noop);
 const jsx = jsxProd.jsx;

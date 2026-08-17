@@ -1,5 +1,5 @@
 // _runtime/14853__regeneratorRuntime.js
-import _regeneratorRuntime from "_regeneratorRuntime" /* 14854 */;
+import _regeneratorRuntime from "14854__regeneratorRuntime.js";
 
 const tmp3 = _regeneratorRuntime();
 try {

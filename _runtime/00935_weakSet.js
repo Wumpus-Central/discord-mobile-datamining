@@ -1,5 +1,5 @@
 // _runtime/00935_weakSet.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakSet = new WeakSet();

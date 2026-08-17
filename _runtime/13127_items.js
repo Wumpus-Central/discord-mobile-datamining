@@ -1,7 +1,7 @@
 // _runtime/13127_items.js
-import _mod13125 from "module_13125" /* 13125 */;
-import _mod13126 from "module_13126" /* 13126 */;
-import closure_0 from "_slicedToArray" /* 32 */;
+import _mod13125 from "metro/13125__.js";
+import _mod13126 from "metro/13126__.js";
+import closure_0 from "metro/00032__slicedToArray.js";
 
 let obj = {};
 const items = [];

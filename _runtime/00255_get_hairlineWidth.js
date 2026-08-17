@@ -1,7 +1,7 @@
 // _runtime/00255_get_hairlineWidth.js
-import resultDefault from "result" /* 26 */;
-import flattenStyleDefault from "flattenStyle" /* 148 */;
-import composeStylesDefault from "composeStyles" /* 256 */;
+import resultDefault from "00026_result.js";
+import flattenStyleDefault from "00148_flattenStyle.js";
+import composeStylesDefault from "00256_composeStyles.js";
 import { PixelRatio } from "00087_PixelRatio.js";
 
 const require = arg1;

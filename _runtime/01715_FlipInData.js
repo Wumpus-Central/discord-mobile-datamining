@@ -1,5 +1,5 @@
 // _runtime/01715_FlipInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
 obj = { FlipInYRight: { name: "FlipInYRight", style: obj, duration: 0.3 }, FlipInYLeft: { name: "FlipInYLeft", style: obj, duration: 0.3 }, FlipInXUp: { name: "FlipInXUp", style: obj1, duration: 0.3 }, FlipInXDown: { name: "FlipInXDown", style: obj2, duration: 0.3 }, FlipInEasyX: { name: "FlipInEasyX", style: obj3, duration: 0.3 }, FlipInEasyY: { name: "FlipInEasyY", style: obj4, duration: 0.3 } };
 obj = { 0: { transform: items }, 100: null };

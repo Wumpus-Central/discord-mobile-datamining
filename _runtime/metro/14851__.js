@@ -1,6 +1,6 @@
 // _runtime/metro/14851__.js
-import _mod14856 from "module_14856" /* 14856 */;
-import 08106__ from "08106__.js" /* 8106 */;
+import _mod14856 from "14856__.js";
+import 08106__ from "08106__.js";
 import { 14855__ } from "14855__.js";
 
 

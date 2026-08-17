@@ -1,13 +1,13 @@
 // _runtime/03732_formatRelative.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
-import format from "format" /* 3704 */;
-import code from "code" /* 3718 */;
-import subMilliseconds from "subMilliseconds" /* 3705 */;
-import _typeof from "_typeof" /* 3472 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import differenceInCalendarDays from "03634_differenceInCalendarDays.js";
+import format from "03704_format.js";
+import code from "03718_code.js";
+import subMilliseconds from "03705_subMilliseconds.js";
+import _typeof from "metro/03472__typeof.js";
+import getTimezoneOffsetInMilliseconds from "03635_getTimezoneOffsetInMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };

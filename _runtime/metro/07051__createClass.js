@@ -1,5 +1,5 @@
 // _runtime/metro/07051__createClass.js
-import toPropertyKey from "toPropertyKey" /* 7052 */;
+import toPropertyKey from "../07052_toPropertyKey.js";
 
 
 export default function _createClass(arg0, arg1, arg2) {

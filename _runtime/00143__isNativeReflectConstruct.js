@@ -1,12 +1,12 @@
 // _runtime/00143__isNativeReflectConstruct.js
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 141 */;
-import setDefault from "set" /* 144 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import _inheritsDefault from "00098__inherits.js";
+import _isNativeReflectConstructDefault from "00141__isNativeReflectConstruct.js";
+import setDefault from "00144_set.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
 import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReactNativeElement = arg1;

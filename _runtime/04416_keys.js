@@ -1,5 +1,5 @@
 // _runtime/04416_keys.js
-import isArguments from "isArguments" /* 4417 */;
+import isArguments from "04417_isArguments.js";
 
 if (keys) {
   let keys2 = function keys(arg0) {

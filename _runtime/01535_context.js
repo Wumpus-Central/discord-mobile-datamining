@@ -1,6 +1,6 @@
 // _runtime/01535_context.js
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 let c0 = importAllResult;
 const context = importAllResult.createContext(undefined);

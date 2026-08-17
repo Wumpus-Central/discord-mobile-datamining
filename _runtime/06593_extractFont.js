@@ -1,9 +1,9 @@
 // _runtime/06593_extractFont.js
-import noopAll from "noop" /* 19 */;
-import pickNotNil from "pickNotNil" /* 6587 */;
-import extractLengthListDefault from "extractLengthList" /* 6592 */;
-import { Children } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import pickNotNil from "06587_pickNotNil.js";
+import extractLengthListDefault from "06592_extractLengthList.js";
+import { Children } from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 function extractFont(propsAndStylesResult) {

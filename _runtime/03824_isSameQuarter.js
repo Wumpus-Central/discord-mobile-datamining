@@ -1,6 +1,6 @@
 // _runtime/03824_isSameQuarter.js
-import startOfQuarter from "startOfQuarter" /* 3684 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfQuarter from "03684_startOfQuarter.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfQuarter) {
   let obj = { default: null };

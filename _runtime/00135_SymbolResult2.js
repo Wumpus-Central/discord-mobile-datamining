@@ -1,5 +1,5 @@
 // _runtime/00135_SymbolResult2.js
-import SymbolResult1 from "SymbolResult1" /* 134 */;
+import SymbolResult1 from "00134_SymbolResult1.js";
 
 require = arg1;
 const dependencyMap = arg6;

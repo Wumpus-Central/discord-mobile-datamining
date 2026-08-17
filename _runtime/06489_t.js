@@ -1,6 +1,6 @@
 // _runtime/06489_t.js
-import tagMessage from "tagMessage" /* 6382 */;
-import _mod6383 from "module_6383" /* 6383 */;
+import tagMessage from "06382_tagMessage.js";
+import _mod6383 from "metro/06383__.js";
 
 require = arg1;
 const dependencyMap = arg6;

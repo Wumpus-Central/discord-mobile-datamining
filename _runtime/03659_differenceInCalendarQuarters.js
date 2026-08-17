@@ -1,7 +1,7 @@
 // _runtime/03659_differenceInCalendarQuarters.js
-import getQuarter from "getQuarter" /* 3660 */;
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getQuarter from "03660_getQuarter.js";
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getQuarter) {
   let obj = { default: null };

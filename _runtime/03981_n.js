@@ -1,5 +1,5 @@
 // _runtime/03981_n.js
-import t from "t" /* 3975 */;
+import t from "03975_t.js";
 
 const fn = function n(moment) {
   closure_0 = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_");

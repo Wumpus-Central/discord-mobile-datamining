@@ -1,10 +1,10 @@
 // _runtime/07023_createBottomSheetScrollableComponent.js
-import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent" /* 7024 */;
-import BottomSheetSectionListDefault from "BottomSheetSectionList" /* 7031 */;
-import BottomSheetFlatListDefault from "BottomSheetFlatList" /* 7032 */;
-import BottomSheetScrollViewDefault from "BottomSheetScrollView" /* 7033 */;
-import BottomSheetVirtualizedListDefault from "BottomSheetVirtualizedList" /* 7034 */;
-import forwardRefDefault from "forwardRef" /* 7035 */;
+import createBottomSheetScrollableComponent from "07024_createBottomSheetScrollableComponent.js";
+import BottomSheetSectionListDefault from "07031_BottomSheetSectionList.js";
+import BottomSheetFlatListDefault from "07032_BottomSheetFlatList.js";
+import BottomSheetScrollViewDefault from "07033_BottomSheetScrollView.js";
+import BottomSheetVirtualizedListDefault from "07034_BottomSheetVirtualizedList.js";
+import forwardRefDefault from "07035_forwardRef.js";
 
 
 export const createBottomSheetScrollableComponent = createBottomSheetScrollableComponent.createBottomSheetScrollableComponent;

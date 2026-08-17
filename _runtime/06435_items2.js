@@ -1,11 +1,11 @@
 // _runtime/06435_items2.js
-import ComposedGestureName from "ComposedGestureName" /* 6436 */;
-import set6 from "set" /* 6438 */;
-import set7 from "set" /* 6439 */;
-import set8 from "set" /* 6440 */;
-import set9 from "set" /* 6441 */;
-import set10 from "set" /* 6442 */;
-import set11 from "set" /* 6443 */;
+import ComposedGestureName from "06436_ComposedGestureName.js";
+import set6 from "06438_set.js";
+import set7 from "06439_set.js";
+import set8 from "06440_set.js";
+import set9 from "06441_set.js";
+import set10 from "06442_set.js";
+import set11 from "06443_set.js";
 
 const set = new Set(["enabled", "shouldCancelWhenOutside", "hitSlop", "activeCursor", "mouseButton", "testID", "cancelsTouchesInView", "cancelsJSResponder", "manualActivation"]);
 const items = [...set, "userSelect", "enableContextMenu", "touchAction", "dispatchesAnimatedEvents", "needsPointerData"];

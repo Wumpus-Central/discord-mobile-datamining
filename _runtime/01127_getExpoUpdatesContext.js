@@ -1,5 +1,5 @@
 // _runtime/01127_getExpoUpdatesContext.js
-import getExpoConstants from "getExpoConstants" /* 1003 */;
+import getExpoConstants from "01003_getExpoConstants.js";
 
 require = arg1;
 const dependencyMap = arg6;

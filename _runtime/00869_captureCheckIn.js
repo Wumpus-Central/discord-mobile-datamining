@@ -1,9 +1,9 @@
 // _runtime/00869_captureCheckIn.js
-import _mod821 from "module_821" /* 821 */;
-import addContextToFrame from "addContextToFrame" /* 830 */;
-import getClient from "getClient" /* 848 */;
-import applyClientOptions from "applyClientOptions" /* 870 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import _mod821 from "metro/00821__.js";
+import addContextToFrame from "00830_addContextToFrame.js";
+import getClient from "00848_getClient.js";
+import applyClientOptions from "00870_applyClientOptions.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { getClient } from "00848_getClient.js";
 
 function captureCheckIn(arg0, arg1) {

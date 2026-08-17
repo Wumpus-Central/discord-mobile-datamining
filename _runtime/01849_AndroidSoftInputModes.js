@@ -1,5 +1,5 @@
 // _runtime/01849_AndroidSoftInputModes.js
-import nativeEventEmitter from "nativeEventEmitter" /* 1644 */;
+import nativeEventEmitter from "01644_nativeEventEmitter.js";
 
 const KeyboardControllerNative = nativeEventEmitter.KeyboardControllerNative;
 

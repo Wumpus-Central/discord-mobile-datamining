@@ -1,7 +1,7 @@
 // _runtime/00023_ProgressBarAndroid.js
-import jsxProd from "jsxProd" /* 21 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 24 */;
-import noop from "noop" /* 19 */;
+import jsxProd from "react/00021_jsxProd.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/00024___INTERNAL_VIEW_CONFIG.js";
+import noop from "00019_noop.js";
 
 const jsx = jsxProd.jsx;
 

@@ -1,7 +1,7 @@
 // _runtime/06349_HeaderIcon.js
-import jsxProd from "jsxProd" /* 21 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "react/00021_jsxProd.js";
+import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ Image: obj1, Platform, StyleSheet } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;

@@ -1,5 +1,5 @@
 // _runtime/04443_ToPropertyDescriptor.js
-import isObject from "isObject" /* 4391 */;
+import isObject from "04391_isObject.js";
 
 
 export default function ToPropertyDescriptor(enumerable) {

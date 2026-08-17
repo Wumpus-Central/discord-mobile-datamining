@@ -1,9 +1,9 @@
 // _runtime/01723_setElementAnimation.js
-import isWorkletFunction from "isWorkletFunction" /* 1679 */;
-import isReducedMotionEnabledInSystem from "isReducedMotionEnabledInSystem" /* 1695 */;
-import TransitionType from "TransitionType" /* 1710 */;
-import BaseAnimationBuilder from "BaseAnimationBuilder" /* 1724 */;
-import weakMap from "weakMap" /* 1740 */;
+import isWorkletFunction from "01679_isWorkletFunction.js";
+import isReducedMotionEnabledInSystem from "01695_isReducedMotionEnabledInSystem.js";
+import TransitionType from "01710_TransitionType.js";
+import BaseAnimationBuilder from "01724_BaseAnimationBuilder.js";
+import weakMap from "01740_weakMap.js";
 import { isWorkletFunction } from "01679_isWorkletFunction.js";
 import { TransitionType } from "01710_TransitionType.js";
 import { weakMap } from "01740_weakMap.js";

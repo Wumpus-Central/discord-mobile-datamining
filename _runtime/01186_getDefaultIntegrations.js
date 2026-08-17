@@ -1,6 +1,6 @@
 // _runtime/01186_getDefaultIntegrations.js
-import debugSymbolicatorIntegration from "debugSymbolicatorIntegration" /* 811 */;
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+import debugSymbolicatorIntegration from "00811_debugSymbolicatorIntegration.js";
+import isHermesEnabled from "01002_isHermesEnabled.js";
 
 require = arg1;
 const dependencyMap = arg6;

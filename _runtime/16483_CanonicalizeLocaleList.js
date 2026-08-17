@@ -1,6 +1,6 @@
 // _runtime/16483_CanonicalizeLocaleList.js
-import RegExpResult1 from "RegExpResult1" /* 16484 */;
-import createDateTimeFormat from "createDateTimeFormat" /* 16485 */;
+import RegExpResult1 from "16484_RegExpResult1.js";
+import createDateTimeFormat from "16485_createDateTimeFormat.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,8 +1,8 @@
 // _runtime/00388_addListenersToPropsValue.js
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 356 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import _isNativeReflectConstructDefault from "00356__isNativeReflectConstruct.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import { createCompositeKeyForProps } from "00389_createCompositeKeyForProps.js";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // _runtime/06985_useKeyboard.js
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const useEffect = noop.useEffect;
 ({ Keyboard: c3, Platform } = get_ActivityIndicator);

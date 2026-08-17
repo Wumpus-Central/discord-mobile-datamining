@@ -1,5 +1,5 @@
 // _runtime/07823_captureConsoleIntegration.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 
 export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {

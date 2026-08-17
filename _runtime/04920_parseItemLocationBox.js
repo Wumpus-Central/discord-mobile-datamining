@@ -1,5 +1,5 @@
 // _runtime/04920_parseItemLocationBox.js
-import get64BitValue from "get64BitValue" /* 4921 */;
+import get64BitValue from "04921_get64BitValue.js";
 
 require = arg1;
 const dependencyMap = arg6;

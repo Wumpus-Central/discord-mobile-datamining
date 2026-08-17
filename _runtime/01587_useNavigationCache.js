@@ -1,6 +1,6 @@
 // _runtime/01587_useNavigationCache.js
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "noop" /* 19 */;
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "00019_noop.js";
 
 const require = arg1;
 let closure_2 = ["emit"];

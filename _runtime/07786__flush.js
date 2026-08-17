@@ -1,9 +1,9 @@
 // _runtime/07786__flush.js
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
-import addContextToFrame from "addContextToFrame" /* 7749 */;
-import getClient from "getClient" /* 7765 */;
-import applyClientOptions from "applyClientOptions" /* 7787 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
+import addContextToFrame from "07749_addContextToFrame.js";
+import getClient from "07765_getClient.js";
+import applyClientOptions from "07787_applyClientOptions.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { addContextToFrame } from "07749_addContextToFrame.js";
 import { getClient } from "07765_getClient.js";
 

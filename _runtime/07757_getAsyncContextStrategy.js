@@ -1,6 +1,6 @@
 // _runtime/07757_getAsyncContextStrategy.js
-import getMainCarrier from "getMainCarrier" /* 7756 */;
-import withScope from "withScope" /* 7758 */;
+import getMainCarrier from "07756_getMainCarrier.js";
+import withScope from "07758_withScope.js";
 
 require = arg1;
 const dependencyMap = arg6;

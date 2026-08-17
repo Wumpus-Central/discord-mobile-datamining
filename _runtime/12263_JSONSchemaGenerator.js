@@ -1,7 +1,7 @@
 // _runtime/12263_JSONSchemaGenerator.js
-import closure_2 from "_objectWithoutProperties" /* 109 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import closure_2 from "metro/00109__objectWithoutProperties.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 const JSONSchemaGenerator = require;
 let closure_4 = ["~standard"];

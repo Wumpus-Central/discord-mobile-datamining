@@ -1,5 +1,5 @@
 // _runtime/07746__htmlElementAsString.js
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,6 +1,6 @@
 // _runtime/00293_PressabilityPerformanceEventEmitter.js
-import _createClassDefault from "_createClass" /* 42 */;
-import PressabilityPerformanceEventEmitter from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import PressabilityPerformanceEventEmitter from "metro/00041__classCallCheck.js";
 
 class PressabilityPerformanceEventEmitter {
   constructor() {

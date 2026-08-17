@@ -1,5 +1,5 @@
 // _runtime/07804_MIN_DELAY.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 let c3 = 100;
 let c4 = 5000;

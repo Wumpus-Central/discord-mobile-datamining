@@ -1,7 +1,7 @@
 // _runtime/metro/04436__.js
-import _mod541 from "module_541" /* 541 */;
-import _mod542 from "module_542" /* 542 */;
-import callBindBasic from "callBindBasic" /* 551 */;
+import _mod541 from "00541__.js";
+import _mod542 from "00542__.js";
+import callBindBasic from "../00551_callBindBasic.js";
 
 const obj = {};
 try {

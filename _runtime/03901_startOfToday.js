@@ -1,5 +1,5 @@
 // _runtime/03901_startOfToday.js
-import startOfDay from "startOfDay" /* 3636 */;
+import startOfDay from "03636_startOfDay.js";
 
 if (!startOfDay) {
   const obj = { default: null };

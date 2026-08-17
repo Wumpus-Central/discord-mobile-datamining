@@ -1,8 +1,8 @@
 // _runtime/metro/09039__.js
-import colorPropType from "colorPropType" /* 9025 */;
-import _mod9029 from "module_9029" /* 9029 */;
-import _mod9040 from "module_9040" /* 9040 */;
-import emptyFunction from "emptyFunction" /* 4205 */;
+import colorPropType from "../09025_colorPropType.js";
+import _mod9029 from "09029__.js";
+import _mod9040 from "09040__.js";
+import emptyFunction from "../04205_emptyFunction.js";
 
 const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
 let obj = {};

@@ -1,7 +1,7 @@
 // _runtime/01160_startIdleSpan.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import _mod1158 from "module_1158" /* 1158 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import _mod1158 from "metro/01158__.js";
 
 const AppState = get_ActivityIndicator.AppState;
 let c3 = "Route Change";

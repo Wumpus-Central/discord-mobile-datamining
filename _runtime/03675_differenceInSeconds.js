@@ -1,7 +1,7 @@
 // _runtime/03675_differenceInSeconds.js
-import getRoundingMethod from "getRoundingMethod" /* 3666 */;
-import differenceInMilliseconds from "differenceInMilliseconds" /* 3665 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getRoundingMethod from "03666_getRoundingMethod.js";
+import differenceInMilliseconds from "03665_differenceInMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!differenceInMilliseconds) {
   let obj = { default: null };

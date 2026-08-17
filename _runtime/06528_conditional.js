@@ -1,5 +1,5 @@
 // _runtime/06528_conditional.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ add: c0, multiply: closure_1 } = get_ActivityIndicator.Animated);
 

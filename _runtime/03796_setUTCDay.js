@@ -1,8 +1,8 @@
 // _runtime/03796_setUTCDay.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!_typeof) {
   let obj = { default: null };

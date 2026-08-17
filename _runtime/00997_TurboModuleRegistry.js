@@ -1,10 +1,10 @@
 // _runtime/00997_TurboModuleRegistry.js
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
-import _mod175 from "finally" /* 175 */;
-import parseErrorStack from "parseErrorStack" /* 190 */;
-import _symbolicateStackTrace from "_symbolicateStackTrace" /* 998 */;
-import getDevServer from "getDevServer" /* 999 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import polyfillObjectProperty from "00123_polyfillObjectProperty.js";
+import _mod175 from "00175_finally.js";
+import parseErrorStack from "00190_parseErrorStack.js";
+import _symbolicateStackTrace from "00998__symbolicateStackTrace.js";
+import getDevServer from "00999_getDevServer.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 obj = { Devtools: obj, Promise: _mod175, Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
 obj = {

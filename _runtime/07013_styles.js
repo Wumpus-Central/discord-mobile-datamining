@@ -1,6 +1,6 @@
 // _runtime/07013_styles.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6953 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import GESTURE_SOURCE from "06953_GESTURE_SOURCE.js";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let obj = { container: { padding: 10, cursor: "grab" }, indicator: null };

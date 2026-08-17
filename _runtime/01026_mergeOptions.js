@@ -1,7 +1,7 @@
 // _runtime/01026_mergeOptions.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "00005_asyncGeneratorStep.js";
 
 function mergeOptions(tags, tags2) {
   closure_0 = tags;

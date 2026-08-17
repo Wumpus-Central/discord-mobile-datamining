@@ -1,8 +1,8 @@
 // _runtime/07090_useSecondaryProps.js
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "noop" /* 19 */;
+import noop from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import closure_4 from "00019_noop.js";
 
 ({ Animated: obj1, RefreshControl: c3 } = get_ActivityIndicator);
 const useMemo = noop.useMemo;

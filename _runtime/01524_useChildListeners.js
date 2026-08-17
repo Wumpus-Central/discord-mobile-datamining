@@ -1,5 +1,5 @@
 // _runtime/01524_useChildListeners.js
-import closure_0 from "noop" /* 19 */;
+import closure_0 from "00019_noop.js";
 
 
 export const useChildListeners = function useChildListeners() {

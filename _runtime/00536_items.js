@@ -1,5 +1,5 @@
 // _runtime/00536_items.js
-import _mod534 from "module_534" /* 534 */;
+import _mod534 from "metro/00534__.js";
 
 let items = [];
 let num = 0;

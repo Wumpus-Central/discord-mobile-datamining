@@ -1,5 +1,5 @@
 // _runtime/04673_isNativePlatformSupported.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ Platform, UIManager: c0 } = get_ActivityIndicator);
 let c1 = true;

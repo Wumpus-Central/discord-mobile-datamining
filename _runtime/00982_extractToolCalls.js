@@ -1,6 +1,6 @@
 // _runtime/00982_extractToolCalls.js
-import _mod958 from "module_958" /* 958 */;
-import asString from "asString" /* 978 */;
+import _mod958 from "metro/00958__.js";
+import asString from "00978_asString.js";
 
 require = arg1;
 const dependencyMap = arg6;

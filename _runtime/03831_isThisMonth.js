@@ -1,6 +1,6 @@
 // _runtime/03831_isThisMonth.js
-import isSameMonth from "isSameMonth" /* 3823 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import isSameMonth from "03823_isSameMonth.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!isSameMonth) {
   let obj = { default: null };

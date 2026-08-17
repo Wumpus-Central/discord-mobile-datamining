@@ -1,9 +1,9 @@
 // _runtime/00969_addPrivateRequestAttributes.js
-import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
-import captureCheckIn from "captureCheckIn" /* 869 */;
-import _mod958 from "module_958" /* 958 */;
-import handleResponseError from "handleResponseError" /* 970 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import getSpanStatusFromHttpCode from "00840_getSpanStatusFromHttpCode.js";
+import captureCheckIn from "00869_captureCheckIn.js";
+import _mod958 from "metro/00958__.js";
+import handleResponseError from "00970_handleResponseError.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function addPrivateRequestAttributes(setAttributes, prompt) {
   let obj = handleResponseError;

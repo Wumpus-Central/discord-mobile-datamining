@@ -1,5 +1,5 @@
 // _runtime/13725_all.js
-import all from "all" /* 13698 */;
+import all from "13698_all.js";
 
 
 export default (arg0) => {

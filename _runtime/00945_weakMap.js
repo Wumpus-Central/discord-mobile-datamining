@@ -1,8 +1,8 @@
 // _runtime/00945_weakMap.js
-import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 840 */;
-import extractClientInfo from "extractClientInfo" /* 938 */;
-import extractPromptResultAttributes from "extractPromptResultAttributes" /* 946 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import getSpanStatusFromHttpCode from "00840_getSpanStatusFromHttpCode.js";
+import extractClientInfo from "00938_extractClientInfo.js";
+import extractPromptResultAttributes from "00946_extractPromptResultAttributes.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();

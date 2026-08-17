@@ -1,10 +1,10 @@
 // _runtime/15363_frozen.js
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15306 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import closure_10 from "get ActivityIndicator" /* 17 */;
-import cancelAnimation from "cancelAnimation" /* 1654 */;
+import toNativeHorizontalOffset from "15306_toNativeHorizontalOffset.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import closure_10 from "00017_get_ActivityIndicator.js";
+import cancelAnimation from "01654_cancelAnimation.js";
 
 let noop = require;
 let obj = dependencyMap;

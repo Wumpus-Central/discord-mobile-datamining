@@ -1,5 +1,5 @@
 // _runtime/00844__getSpanForScope.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
+import addNonEnumerableProperty from "00822_addNonEnumerableProperty.js";
 
 require = arg1;
 const dependencyMap = arg6;

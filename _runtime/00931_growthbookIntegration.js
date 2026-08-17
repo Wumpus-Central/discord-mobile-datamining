@@ -1,5 +1,5 @@
 // _runtime/00931_growthbookIntegration.js
-import setupIntegration from "setupIntegration" /* 887 */;
+import setupIntegration from "00887_setupIntegration.js";
 
 function _wrapAndCaptureBooleanResult(arg0) {
   closure_0 = arg0;

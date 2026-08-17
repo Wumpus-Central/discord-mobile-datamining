@@ -1,5 +1,5 @@
 // _runtime/00488_SHORT.js
-import ToastAndroidDefault from "ToastAndroid" /* 489 */;
+import ToastAndroidDefault from "00489_ToastAndroid.js";
 
 const constants = ToastAndroidDefault.getConstants();
 

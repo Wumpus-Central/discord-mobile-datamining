@@ -1,6 +1,6 @@
 // _runtime/04414_ToString.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import _mod541 from "metro/00541__.js";
 
 let closure_2 = getEvalledConstructor("%String%");
 

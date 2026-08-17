@@ -1,8 +1,8 @@
 // _runtime/metro/00443__.js
-import noopAll from "noop" /* 19 */;
-import _modDef444 from "module_444" /* 444 */;
-import jsxProd from "jsxProd" /* 21 */;
-import defaultItemToKey from "defaultItemToKey" /* 438 */;
+import noopAll from "../00019_noop.js";
+import _modDef444 from "00444__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import defaultItemToKey from "../00438_defaultItemToKey.js";
 
 noopAll;
 ({ Fragment: c0, jsxs: closure_1 } = jsxProd);

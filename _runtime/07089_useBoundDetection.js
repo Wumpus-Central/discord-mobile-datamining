@@ -1,5 +1,5 @@
 // _runtime/07089_useBoundDetection.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { useUnmountAwareTimeout } from "07086_useUnmountAwareTimeout.js";
 
 ({ useCallback: obj1, useEffect: c3, useMemo: c4, useRef: c5 } = noop);

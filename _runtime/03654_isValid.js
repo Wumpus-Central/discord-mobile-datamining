@@ -1,6 +1,6 @@
 // _runtime/03654_isValid.js
-import _typeof from "_typeof" /* 3655 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03655__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

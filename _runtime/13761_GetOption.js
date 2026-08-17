@@ -1,6 +1,6 @@
 // _runtime/13761_GetOption.js
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_createClass" /* 42 */;
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00042__createClass.js";
 
 let require = arg1;
 function GetOption(obj, arg1, arg2, arr) {

@@ -1,5 +1,5 @@
 // _runtime/00354__combineCallbacks.js
-import AnimatedEvent from "AnimatedEvent" /* 384 */;
+import AnimatedEvent from "00384_AnimatedEvent.js";
 import { AnimatedEvent } from "00384_AnimatedEvent.js";
 
 require = arg1;

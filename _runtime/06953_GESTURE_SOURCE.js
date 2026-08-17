@@ -1,6 +1,6 @@
 // _runtime/06953_GESTURE_SOURCE.js
-import cancelAnimation from "cancelAnimation" /* 1654 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import cancelAnimation from "01654_cancelAnimation.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ Dimensions, Platform } = get_ActivityIndicator);
 let value = Dimensions.get("window");

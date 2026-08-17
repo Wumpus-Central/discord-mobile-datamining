@@ -1,6 +1,6 @@
 // _runtime/01682_getShadowNodeWrapperFromRef.js
-import t from "t" /* 1665 */;
-import findHostInstance from "findHostInstance" /* 1683 */;
+import t from "01665_t.js";
+import findHostInstance from "01683_findHostInstance.js";
 
 require = arg1;
 const dependencyMap = arg6;

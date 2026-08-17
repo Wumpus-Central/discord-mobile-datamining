@@ -1,5 +1,5 @@
 // _runtime/03721_cloneObject.js
-import assign from "assign" /* 3722 */;
+import assign from "03722_assign.js";
 
 if (!assign) {
   const obj = { default: null };

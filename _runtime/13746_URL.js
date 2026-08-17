@@ -1,6 +1,6 @@
 // _runtime/13746_URL.js
-import _mod13747 from "module_13747" /* 13747 */;
-import _mod13754 from "module_13754" /* 13754 */;
+import _mod13747 from "metro/13747__.js";
+import _mod13754 from "metro/13754__.js";
 
 
 export const URL = _mod13747;

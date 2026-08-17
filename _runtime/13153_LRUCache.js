@@ -1,6 +1,6 @@
 // _runtime/13153_LRUCache.js
-import _createClass from "_createClass" /* 42 */;
-import LRUCache from "_classCallCheck" /* 41 */;
+import _createClass from "metro/00042__createClass.js";
+import LRUCache from "metro/00041__classCallCheck.js";
 
 class LRUCache {
   constructor() {

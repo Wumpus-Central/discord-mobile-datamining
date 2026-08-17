@@ -1,5 +1,5 @@
 // _runtime/01577_useScheduleUpdate.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 import { NavigationBuilderContext } from "01530_NavigationBuilderContext.js";
 import { useEffect } from "01578_useEffect.js";
 

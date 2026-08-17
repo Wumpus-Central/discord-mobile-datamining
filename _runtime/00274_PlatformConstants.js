@@ -1,5 +1,5 @@
 // _runtime/00274_PlatformConstants.js
-import PlatformConstantsDefault from "PlatformConstants" /* 275 */;
+import PlatformConstantsDefault from "00275_PlatformConstants.js";
 
 for (const key10016 in require("PlatformConstants")) {
   let tmp2 = key10016;

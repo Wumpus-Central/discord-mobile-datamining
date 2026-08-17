@@ -1,8 +1,8 @@
 // _runtime/01541_context.js
-import context12 from "context1" /* 1542 */;
-import NavigationContext from "NavigationContext" /* 1544 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import context12 from "01542_context1.js";
+import NavigationContext from "01544_NavigationContext.js";
+import importAllResult from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 let context = importAllResult.createContext(undefined);

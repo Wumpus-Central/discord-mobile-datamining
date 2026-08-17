@@ -1,7 +1,7 @@
 // _runtime/06428_getHandler.js
-import tagMessage from "tagMessage" /* 6382 */;
-import _mod6385 from "module_6385" /* 6385 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
+import tagMessage from "06382_tagMessage.js";
+import _mod6385 from "metro/06385__.js";
+import _isNativeReflectConstruct from "06398__isNativeReflectConstruct.js";
 
 require = arg1;
 const dependencyMap = arg6;

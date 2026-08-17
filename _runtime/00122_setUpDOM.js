@@ -1,5 +1,5 @@
 // _runtime/00122_setUpDOM.js
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import polyfillObjectProperty from "00123_polyfillObjectProperty.js";
 
 const global = arg0;
 require = arg1;

@@ -1,6 +1,6 @@
 // _runtime/01518_useNavigationIndependentTree.js
-import NavigationIndependentTreeContext from "NavigationIndependentTreeContext" /* 1519 */;
-import closure_2 from "noop" /* 19 */;
+import NavigationIndependentTreeContext from "01519_NavigationIndependentTreeContext.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

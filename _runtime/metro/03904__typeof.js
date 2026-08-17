@@ -1,8 +1,8 @@
 // _runtime/metro/03904__typeof.js
-import subDays from "subDays" /* 3843 */;
-import subMonths from "subMonths" /* 3905 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import subDays from "../03843_subDays.js";
+import subMonths from "../03905_subMonths.js";
+import requiredArgs from "../03473_requiredArgs.js";
+import toInteger from "../03476_toInteger.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {

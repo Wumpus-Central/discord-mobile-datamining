@@ -1,7 +1,7 @@
 // _runtime/03697_endOfISOWeekYear.js
-import getISOWeekYear from "getISOWeekYear" /* 3629 */;
-import startOfISOWeek from "startOfISOWeek" /* 3630 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getISOWeekYear from "03629_getISOWeekYear.js";
+import startOfISOWeek from "03630_startOfISOWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getISOWeekYear) {
   let obj = { default: null };

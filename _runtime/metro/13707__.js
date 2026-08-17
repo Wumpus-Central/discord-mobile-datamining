@@ -1,5 +1,5 @@
 // _runtime/metro/13707__.js
-import all from "all" /* 13699 */;
+import all from "../13699_all.js";
 
 
 export default (arg0, arg1) => {

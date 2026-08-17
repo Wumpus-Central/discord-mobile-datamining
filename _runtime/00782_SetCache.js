@@ -1,7 +1,7 @@
 // _runtime/00782_SetCache.js
-import MapCache from "MapCache" /* 732 */;
-import setCacheHas from "setCacheHas" /* 784 */;
-import setCacheAdd from "setCacheAdd" /* 783 */;
+import MapCache from "00732_MapCache.js";
+import setCacheHas from "00784_setCacheHas.js";
+import setCacheAdd from "00783_setCacheAdd.js";
 
 class SetCache {
   constructor(arg0) {

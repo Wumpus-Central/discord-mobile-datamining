@@ -1,5 +1,5 @@
 // _runtime/metro/06628___INTERNAL_VIEW_CONFIG.js
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const obj = { uiViewClassName: "RNSVGFeMerge", validAttributes: { x: true, y: true, width: true, height: true, result: true, nodes: true } };
 

@@ -1,6 +1,6 @@
 // _runtime/01697_call.js
-import isReanimated3 from "isReanimated3" /* 1698 */;
-import isJest from "isJest" /* 1657 */;
+import isReanimated3 from "01698_isReanimated3.js";
+import isJest from "01657_isJest.js";
 
 function call(arg0, arg1, arg2) {
   const items = [...arguments];

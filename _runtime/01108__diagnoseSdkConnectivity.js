@@ -1,5 +1,5 @@
 // _runtime/01108__diagnoseSdkConnectivity.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function _diagnoseSdkConnectivity() {
   const self = this;

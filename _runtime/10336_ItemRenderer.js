@@ -1,9 +1,9 @@
 // _runtime/10336_ItemRenderer.js
-import cancelAnimation from "cancelAnimation" /* 1654 */;
-import isArraysEqual from "isArraysEqual" /* 10337 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import cancelAnimation from "01654_cancelAnimation.js";
+import isArraysEqual from "10337_isArraysEqual.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: c4, Fragment: c5 } = jsxProd);

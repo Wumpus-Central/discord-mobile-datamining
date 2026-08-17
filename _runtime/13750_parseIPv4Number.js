@@ -1,8 +1,8 @@
 // _runtime/13750_parseIPv4Number.js
-import Buffer from "Buffer" /* 511 */;
-import error from "error" /* 13751 */;
-import _mod13752 from "module_13752" /* 13752 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 13753 */;
+import Buffer from "00511_Buffer.js";
+import error from "13751_error.js";
+import _mod13752 from "metro/13752__.js";
+import replaceByteInByteSequence from "13753_replaceByteInByteSequence.js";
 
 require = arg1;
 let dependencyMap = exports;

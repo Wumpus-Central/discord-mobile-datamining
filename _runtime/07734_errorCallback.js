@@ -1,7 +1,7 @@
 // _runtime/07734_errorCallback.js
-import instrumentError from "instrumentError" /* 7735 */;
-import instrumentUnhandledRejection from "instrumentUnhandledRejection" /* 7742 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 7743 */;
+import instrumentError from "07735_instrumentError.js";
+import instrumentUnhandledRejection from "07742_instrumentUnhandledRejection.js";
+import spanTimeInputToSeconds from "07743_spanTimeInputToSeconds.js";
 
 require = arg1;
 const dependencyMap = arg6;

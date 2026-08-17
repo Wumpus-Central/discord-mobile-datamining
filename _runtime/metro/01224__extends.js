@@ -1,8 +1,8 @@
 // _runtime/metro/01224__extends.js
-import resolvePathname from "resolvePathname" /* 1225 */;
-import valueEqual from "valueEqual" /* 1227 */;
-import warning from "warning" /* 1229 */;
-import invariant from "invariant" /* 1230 */;
+import resolvePathname from "../01225_resolvePathname.js";
+import valueEqual from "../01227_valueEqual.js";
+import warning from "../01229_warning.js";
+import invariant from "../01230_invariant.js";
 
 function _extends() {
   let tmp = Object.assign || ((arg0) => {

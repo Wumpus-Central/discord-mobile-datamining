@@ -1,7 +1,7 @@
 // _runtime/metro/00400__.js
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 311 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
+import noopAll from "../00019_noop.js";
+import _isNativeReflectConstructDefault from "../00311__isNativeReflectConstruct.js";
+import createAnimatedComponentDefault from "../00387_createAnimatedComponent.js";
 
 noopAll;
 

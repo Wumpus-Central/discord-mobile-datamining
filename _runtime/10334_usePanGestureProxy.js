@@ -1,5 +1,5 @@
 // _runtime/10334_usePanGestureProxy.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 const useMemo = noop.useMemo;
 let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };

@@ -1,9 +1,9 @@
 // _runtime/01002_isHermesEnabled.js
-import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 816 */;
-import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
-import getExpoConstants from "getExpoConstants" /* 1003 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
+import RN_GLOBAL_OBJ from "00816_RN_GLOBAL_OBJ.js";
+import TurboModuleRegistry from "00997_TurboModuleRegistry.js";
+import getExpoConstants from "01003_getExpoConstants.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
 
 require = arg1;
 

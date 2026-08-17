@@ -1,13 +1,13 @@
 // _runtime/03763_intervalToDuration.js
-import compareAsc from "compareAsc" /* 3648 */;
-import _typeof from "_typeof" /* 3619 */;
-import compareLocalAsc from "compareLocalAsc" /* 3663 */;
-import differenceInHours from "differenceInHours" /* 3664 */;
-import differenceInMinutes from "differenceInMinutes" /* 3669 */;
-import differenceInMonths from "differenceInMonths" /* 3670 */;
-import differenceInSeconds from "differenceInSeconds" /* 3675 */;
-import differenceInYears from "differenceInYears" /* 3677 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import compareAsc from "03648_compareAsc.js";
+import _typeof from "metro/03619__typeof.js";
+import compareLocalAsc from "03663_compareLocalAsc.js";
+import differenceInHours from "03664_differenceInHours.js";
+import differenceInMinutes from "03669_differenceInMinutes.js";
+import differenceInMonths from "03670_differenceInMonths.js";
+import differenceInSeconds from "03675_differenceInSeconds.js";
+import differenceInYears from "03677_differenceInYears.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!compareAsc) {
   let obj = { default: null };

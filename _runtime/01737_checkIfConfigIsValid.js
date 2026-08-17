@@ -1,5 +1,5 @@
 // _runtime/01737_checkIfConfigIsValid.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 import { addLogBoxLog } from "01658_addLogBoxLog.js";
 
 const require = arg1;

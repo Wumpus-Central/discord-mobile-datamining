@@ -1,5 +1,5 @@
 // _runtime/06473_ButtonComponent.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6474 */;
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06474___INTERNAL_VIEW_CONFIG.js";
 
 
 export default __INTERNAL_VIEW_CONFIGDefault;

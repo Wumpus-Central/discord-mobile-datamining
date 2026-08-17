@@ -1,6 +1,6 @@
 // _runtime/07845_captureFeedback.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import getClient from "getClient" /* 7765 */;
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import getClient from "07765_getClient.js";
 
 require = arg1;
 const dependencyMap = arg6;

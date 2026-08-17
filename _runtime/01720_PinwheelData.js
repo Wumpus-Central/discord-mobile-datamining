@@ -1,5 +1,5 @@
 // _runtime/01720_PinwheelData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
 obj = { PinwheelIn: { name: "PinwheelIn", style: obj, duration: 0.3 }, PinwheelOut: { name: "PinwheelOut", style: obj, duration: 0.3 } };
 obj = { 0: { transform: items, opacity: 0 }, 100: null };

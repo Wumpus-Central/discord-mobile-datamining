@@ -1,6 +1,6 @@
 // _runtime/03835_isThisYear.js
-import isSameYear from "isSameYear" /* 3827 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import isSameYear from "03827_isSameYear.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!isSameYear) {
   let obj = { default: null };

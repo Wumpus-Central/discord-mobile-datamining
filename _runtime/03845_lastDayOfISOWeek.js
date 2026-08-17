@@ -1,6 +1,6 @@
 // _runtime/03845_lastDayOfISOWeek.js
-import lastDayOfWeek from "lastDayOfWeek" /* 3846 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import lastDayOfWeek from "03846_lastDayOfWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!lastDayOfWeek) {
   let obj = { default: null };

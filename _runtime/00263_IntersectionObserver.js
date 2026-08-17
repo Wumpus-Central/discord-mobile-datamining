@@ -1,8 +1,8 @@
 // _runtime/00263_IntersectionObserver.js
-import _createClassDefault from "_createClass" /* 42 */;
-import getTargetFromInstanceHandleAll from "getTargetFromInstanceHandle" /* 264 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import getTargetFromInstanceHandleAll from "00264_getTargetFromInstanceHandle.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 const IntersectionObserver = importDefault;
 class IntersectionObserver {

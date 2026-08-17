@@ -1,6 +1,6 @@
 // _runtime/07749_addContextToFrame.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import isMatchingPattern from "isMatchingPattern" /* 7747 */;
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import isMatchingPattern from "07747_isMatchingPattern.js";
 
 require = arg1;
 const dependencyMap = arg6;

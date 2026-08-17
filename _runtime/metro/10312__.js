@@ -1,11 +1,11 @@
 // _runtime/metro/10312__.js
-import noopDefault from "noop" /* 19 */;
-import useInitProps from "useInitProps" /* 10313 */;
-import useCommonVariables from "useCommonVariables" /* 10316 */;
-import usePropsErrorBoundary from "usePropsErrorBoundary" /* 10320 */;
-import context from "context" /* 10321 */;
-import CarouselLayout from "CarouselLayout" /* 10322 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "../00019_noop.js";
+import useInitProps from "../10313_useInitProps.js";
+import useCommonVariables from "../10316_useCommonVariables.js";
+import usePropsErrorBoundary from "../10320_usePropsErrorBoundary.js";
+import context from "../10321_context.js";
+import CarouselLayout from "../10322_CarouselLayout.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 require = arg1;
 

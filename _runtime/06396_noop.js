@@ -1,5 +1,5 @@
 // _runtime/06396_noop.js
-import noopDefault from "noop" /* 19 */;
+import noopDefault from "00019_noop.js";
 
 
 export default noopDefault.createContext(false);

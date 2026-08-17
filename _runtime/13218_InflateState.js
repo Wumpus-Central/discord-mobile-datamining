@@ -1,8 +1,8 @@
 // _runtime/13218_InflateState.js
-import assign from "assign" /* 13208 */;
-import _mod13215 from "module_13215" /* 13215 */;
-import inflate_table from "inflate_table" /* 13219 */;
-import inflate_fast from "inflate_fast" /* 13220 */;
+import assign from "13208_assign.js";
+import _mod13215 from "metro/13215__.js";
+import inflate_table from "13219_inflate_table.js";
+import inflate_fast from "13220_inflate_fast.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,9 +1,9 @@
 // _runtime/00167_importDefaultResult1.js
-import _createClassDefault from "_createClass" /* 42 */;
-import ReactNativeStartupTiming from "_classCallCheck" /* 41 */;
-import closure_1 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import ReactNativeStartupTiming from "metro/00041__classCallCheck.js";
+import closure_1 from "00090__classPrivateFieldBase.js";
+import importDefaultResult1 from "00091__classPrivateFieldKey.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 let closure_2 = importDefaultResult1("startTime");
 let closure_3 = importDefaultResult1("initializeRuntimeStart");

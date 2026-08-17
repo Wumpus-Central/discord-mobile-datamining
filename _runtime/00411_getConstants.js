@@ -1,5 +1,5 @@
 // _runtime/00411_getConstants.js
-import I18nManagerDefault from "I18nManager" /* 412 */;
+import I18nManagerDefault from "00412_I18nManager.js";
 
 if (I18nManagerDefault) {
   const constants = I18nManagerDefault.getConstants();

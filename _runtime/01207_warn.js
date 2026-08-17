@@ -1,8 +1,8 @@
 // _runtime/01207_warn.js
-import closure_0 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
-import { debug } from "registerSpanErrorInstrumentation" /* 817 */;
+import closure_0 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import isHermesEnabled from "01002_isHermesEnabled.js";
+import { debug } from "00817_registerSpanErrorInstrumentation.js";
 
 ({ UIManager, View: closure_1 } = get_ActivityIndicator);
 const RNSentryReplayMask = "RNSentryReplayMask";

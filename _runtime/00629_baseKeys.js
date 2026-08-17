@@ -1,6 +1,6 @@
 // _runtime/00629_baseKeys.js
-import isPrototype from "isPrototype" /* 630 */;
-import overArg from "overArg" /* 631 */;
+import isPrototype from "00630_isPrototype.js";
+import overArg from "00631_overArg.js";
 
 
 export default function baseKeys(arg0) {

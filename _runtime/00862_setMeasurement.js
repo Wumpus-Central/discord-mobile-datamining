@@ -1,7 +1,7 @@
 // _runtime/00862_setMeasurement.js
-import spanToJSON from "spanToJSON" /* 819 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import _mod839 from "module_839" /* 839 */;
+import spanToJSON from "00819_spanToJSON.js";
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import _mod839 from "metro/00839__.js";
 
 require = arg1;
 const dependencyMap = arg6;

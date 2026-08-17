@@ -1,6 +1,6 @@
 // _runtime/06461_useGestureCallbacks.js
-import isGestureEnabled from "isGestureEnabled" /* 6445 */;
-import useGestureEventHandler from "useGestureEventHandler" /* 6462 */;
+import isGestureEnabled from "06445_isGestureEnabled.js";
+import useGestureEventHandler from "06462_useGestureEventHandler.js";
 
 require = arg1;
 const dependencyMap = arg6;

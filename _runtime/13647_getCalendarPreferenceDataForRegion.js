@@ -1,9 +1,9 @@
 // _runtime/13647_getCalendarPreferenceDataForRegion.js
-import e from "e" /* 1281 */;
-import _mod13648 from "module_13648" /* 13648 */;
-import _mod13649 from "module_13649" /* 13649 */;
-import _mod13650 from "module_13650" /* 13650 */;
-import _mod13651 from "module_13651" /* 13651 */;
+import e from "01281_e.js";
+import _mod13648 from "metro/13648__.js";
+import _mod13649 from "metro/13649__.js";
+import _mod13650 from "metro/13650__.js";
+import _mod13651 from "metro/13651__.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,8 +1,8 @@
 // _runtime/00925_markAsInstrumented.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_toArray" /* 853 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "00853__toArray.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 function markAsInstrumented(arg0) {
   try {

@@ -1,6 +1,6 @@
 // _runtime/00700_identity.js
-import is from "is" /* 701 */;
-import closure_2 from "noop" /* 19 */;
+import is from "00701_is.js";
+import closure_2 from "00019_noop.js";
 
 function identity(arg0) {
   return arg0;

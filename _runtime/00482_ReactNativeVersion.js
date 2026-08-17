@@ -1,6 +1,6 @@
 // _runtime/00482_ReactNativeVersion.js
-import _createClassDefault from "_createClass" /* 42 */;
-import ReactNativeVersion from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import ReactNativeVersion from "metro/00041__classCallCheck.js";
 
 class ReactNativeVersion {
   constructor() {

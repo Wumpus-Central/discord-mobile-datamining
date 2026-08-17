@@ -1,5 +1,5 @@
 // _runtime/00451_ActionSheetManager.js
-import ActionSheetManagerDefault from "ActionSheetManager" /* 452 */;
+import ActionSheetManagerDefault from "00452_ActionSheetManager.js";
 
 for (const key10016 in require("ActionSheetManager")) {
   let tmp2 = key10016;

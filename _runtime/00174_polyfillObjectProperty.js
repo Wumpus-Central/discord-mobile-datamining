@@ -1,5 +1,5 @@
 // _runtime/00174_polyfillObjectProperty.js
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import polyfillObjectProperty from "00123_polyfillObjectProperty.js";
 import { finally } from "00175_finally.js";
 
 let hasPromiseResult;

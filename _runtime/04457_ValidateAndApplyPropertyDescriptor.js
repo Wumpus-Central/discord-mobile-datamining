@@ -1,6 +1,6 @@
 // _runtime/04457_ValidateAndApplyPropertyDescriptor.js
-import isPropertyKey from "isPropertyKey" /* 4438 */;
-import Type from "Type" /* 4458 */;
+import isPropertyKey from "04438_isPropertyKey.js";
+import Type from "04458_Type.js";
 
 
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {

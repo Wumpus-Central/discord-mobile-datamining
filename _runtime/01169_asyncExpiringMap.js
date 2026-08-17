@@ -1,5 +1,5 @@
 // _runtime/01169_asyncExpiringMap.js
-import AsyncExpiringMap from "AsyncExpiringMap" /* 1163 */;
+import AsyncExpiringMap from "01163_AsyncExpiringMap.js";
 
 let fn = this;
 if (this) {

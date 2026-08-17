@@ -1,6 +1,6 @@
 // _runtime/13584_TEN.js
-import digitsToString2 from "digitsToString" /* 13581 */;
-import e from "e" /* 1281 */;
+import digitsToString2 from "13581_digitsToString.js";
+import e from "01281_e.js";
 
 const digitsToString = e.__importDefault(digitsToString2);
 const _default = new digitsToString.default(10);

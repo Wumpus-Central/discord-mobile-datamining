@@ -1,5 +1,5 @@
 // _runtime/01078__getUnhandledRejectionError.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 function _getUnhandledRejectionError(reason) {
   if (obj.isPrimitive(reason)) {

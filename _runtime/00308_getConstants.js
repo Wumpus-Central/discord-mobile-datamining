@@ -1,5 +1,5 @@
 // _runtime/00308_getConstants.js
-import getAll from "get" /* 30 */;
+import getAll from "00030_get.js";
 
 const enforcing = getAll.getEnforcing("StatusBarManager");
 let c1 = null;

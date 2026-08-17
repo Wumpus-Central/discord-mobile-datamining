@@ -1,5 +1,5 @@
 // _runtime/07121_TouchableOpacity.js
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import LegacyBaseButton from "06377_LegacyBaseButton.js";
 
 
 export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;

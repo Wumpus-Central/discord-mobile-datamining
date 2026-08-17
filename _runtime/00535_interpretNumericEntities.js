@@ -1,5 +1,5 @@
 // _runtime/00535_interpretNumericEntities.js
-import items3 from "items" /* 536 */;
+import items3 from "00536_items.js";
 
 let obj = { allowDots: false, allowEmptyArrays: false, allowPrototypes: false, allowSparse: false, arrayLimit: 20, charset: "utf-8", charsetSentinel: false, comma: false, decodeDotInKeys: false, decoder: items3.decode, delimiter: "&", depth: 5, duplicates: "combine", ignoreQueryPrefix: false, interpretNumericEntities: false, parameterLimit: 1000, parseArrays: true, plainObjects: false, strictDepth: false, strictNullHandling: false, throwOnLimitExceeded: false };
 function interpretNumericEntities(arg0) {

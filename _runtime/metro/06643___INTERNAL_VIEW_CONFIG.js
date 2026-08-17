@@ -1,8 +1,8 @@
 // _runtime/metro/06643___INTERNAL_VIEW_CONFIG.js
-import result from "result" /* 26 */;
-import resolveAssetSource from "resolveAssetSource" /* 81 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import result from "../00026_result.js";
+import resolveAssetSource from "../00081_resolveAssetSource.js";
+import weakSet from "../00106_weakSet.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 let obj = { uiViewClassName: "RNSVGImage", directEventTypes: { topLoad: { registrationName: "onLoad" }, topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
 obj = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: result.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, width: true, height: true, src: null, align: true, meetOrSlice: true };

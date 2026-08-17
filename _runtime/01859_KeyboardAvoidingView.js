@@ -1,9 +1,9 @@
 // _runtime/01859_KeyboardAvoidingView.js
-import forwardRefDefault from "forwardRef" /* 1860 */;
-import forwardRefDefault2 from "forwardRef" /* 1863 */;
-import forwardRefDefault3 from "forwardRef" /* 1864 */;
-import KeyboardToolbarDefault from "KeyboardToolbar" /* 1870 */;
-import forwardRefDefault4 from "forwardRef" /* 1882 */;
+import forwardRefDefault from "01860_forwardRef.js";
+import forwardRefDefault2 from "01863_forwardRef.js";
+import forwardRefDefault3 from "01864_forwardRef.js";
+import KeyboardToolbarDefault from "01870_KeyboardToolbar.js";
+import forwardRefDefault4 from "01882_forwardRef.js";
 
 
 export const KeyboardAvoidingView = forwardRefDefault;

@@ -1,5 +1,5 @@
 // _runtime/08054_compareMultiple.js
-import compareAscending from "compareAscending" /* 8055 */;
+import compareAscending from "08055_compareAscending.js";
 
 
 export default function compareMultiple(criteria, index) {

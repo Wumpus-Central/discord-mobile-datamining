@@ -1,6 +1,6 @@
 // _runtime/metro/00550__.js
-import _mod542 from "module_542" /* 542 */;
-import callBindBasic from "callBindBasic" /* 551 */;
+import _mod542 from "00542__.js";
+import callBindBasic from "../00551_callBindBasic.js";
 
 try {
   const _Array = Array;

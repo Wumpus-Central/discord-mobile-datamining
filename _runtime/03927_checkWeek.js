@@ -1,5 +1,5 @@
 // _runtime/03927_checkWeek.js
-import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
+import isSameUTCWeek from "03474_isSameUTCWeek.js";
 
 if (!isSameUTCWeek) {
   const obj = { default: null };

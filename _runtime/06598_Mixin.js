@@ -1,5 +1,5 @@
 // _runtime/06598_Mixin.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 let closure_0 = { top: 20, left: 20, right: 20, bottom: 30 };
 const Mixin = get_ActivityIndicator.Touchable.Mixin;

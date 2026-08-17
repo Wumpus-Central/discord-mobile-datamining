@@ -1,7 +1,7 @@
 // _runtime/metro/04883__.js
-import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "FILE_TYPES_REQUIRED_ADDITIONAL_CHECK" /* 4884 */;
-import _mod4896 from "module_4896" /* 4896 */;
-import _mod4904 from "module_4904" /* 4904 */;
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "../04884_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js";
+import _mod4896 from "04896__.js";
+import _mod4904 from "04904__.js";
 
 const self = this;
 let self2 = this;

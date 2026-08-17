@@ -1,12 +1,12 @@
 // _runtime/00246_renderApplication.js
-import _modDef38 from "module_38" /* 38 */;
-import renderElementAll from "renderElement" /* 114 */;
-import childrenDefault from "children" /* 251 */;
-import RootTagContext from "RootTagContext" /* 253 */;
-import frozenDefault from "frozen" /* 257 */;
-import closure_4 from "noop" /* 19 */;
-import 00247__ from "metro/00247__.js" /* 247 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef38 from "metro/00038__.js";
+import renderElementAll from "00114_renderElement.js";
+import childrenDefault from "00251_children.js";
+import RootTagContext from "00253_RootTagContext.js";
+import frozenDefault from "00257_frozen.js";
+import closure_4 from "00019_noop.js";
+import 00247__ from "metro/00247__.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 

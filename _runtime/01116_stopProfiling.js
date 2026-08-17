@@ -1,6 +1,6 @@
 // _runtime/01116_stopProfiling.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NativeModules from "NativeModules" /* 1001 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import NativeModules from "01001_NativeModules.js";
 
 function stopProfiling(arg0) {
   const NATIVE = NativeModules.NATIVE;

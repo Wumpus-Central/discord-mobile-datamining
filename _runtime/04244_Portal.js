@@ -1,9 +1,9 @@
 // _runtime/04244_Portal.js
-import Portal from "Portal" /* 4245 */;
-import usePortal from "usePortal" /* 4246 */;
-import PortalHost from "PortalHost" /* 4249 */;
-import memo from "memo" /* 4251 */;
-import print from "print" /* 4253 */;
+import Portal from "04245_Portal.js";
+import usePortal from "04246_usePortal.js";
+import PortalHost from "04249_PortalHost.js";
+import memo from "04251_memo.js";
+import print from "04253_print.js";
 
 
 export const Portal = Portal.Portal;

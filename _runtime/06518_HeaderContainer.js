@@ -1,9 +1,9 @@
 // _runtime/06518_HeaderContainer.js
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import Background from "Background" /* 6319 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
+import Background from "06319_Background.js";
+import closure_2 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);

@@ -1,7 +1,7 @@
 // _runtime/03773_isMatch.js
-import _typeof from "_typeof" /* 3774 */;
-import isValid from "isValid" /* 3654 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03774__typeof.js";
+import isValid from "03654_isValid.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

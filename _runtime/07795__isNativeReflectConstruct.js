@@ -1,10 +1,10 @@
 // _runtime/07795__isNativeReflectConstruct.js
-import _createClass from "_createClass" /* 42 */;
-import SentryError from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
+import _createClass from "metro/00042__createClass.js";
+import SentryError from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import _inherits from "00098__inherits.js";
+import _wrapNativeSuper from "metro/00158__wrapNativeSuper.js";
 
 function _isNativeReflectConstruct() {
   try {

@@ -1,8 +1,8 @@
 // _runtime/07744_addNonEnumerableProperty.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
-import isInstanceOf from "isInstanceOf" /* 7745 */;
-import _htmlElementAsString from "_htmlElementAsString" /* 7746 */;
-import isMatchingPattern from "isMatchingPattern" /* 7747 */;
+import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
+import isInstanceOf from "07745_isInstanceOf.js";
+import _htmlElementAsString from "07746__htmlElementAsString.js";
+import isMatchingPattern from "07747_isMatchingPattern.js";
 
 require = arg1;
 const dependencyMap = arg6;

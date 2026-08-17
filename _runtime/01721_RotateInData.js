@@ -1,5 +1,5 @@
 // _runtime/01721_RotateInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
 obj = { RotateInDownLeft: { name: "RotateInDownLeft", style: obj, duration: 0.3 }, RotateInDownRight: { name: "RotateInDownRight", style: obj, duration: 0.3 }, RotateInUpLeft: { name: "RotateInUpLeft", style: obj1, duration: 0.3 }, RotateInUpRight: { name: "RotateInUpRight", style: obj2, duration: 0.3 } };
 obj = { 0: { transform: items, opacity: 0 }, 100: null };

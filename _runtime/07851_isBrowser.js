@@ -1,5 +1,5 @@
 // _runtime/07851_isBrowser.js
-import dynamicRequire from "dynamicRequire" /* 7852 */;
+import dynamicRequire from "07852_dynamicRequire.js";
 
 require = arg1;
 const dependencyMap = arg6;

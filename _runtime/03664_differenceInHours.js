@@ -1,8 +1,8 @@
 // _runtime/03664_differenceInHours.js
-import keys from "keys" /* 3651 */;
-import getRoundingMethod from "getRoundingMethod" /* 3666 */;
-import differenceInMilliseconds from "differenceInMilliseconds" /* 3665 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import keys from "03651_keys.js";
+import getRoundingMethod from "03666_getRoundingMethod.js";
+import differenceInMilliseconds from "03665_differenceInMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!differenceInMilliseconds) {
   let obj = { default: null };

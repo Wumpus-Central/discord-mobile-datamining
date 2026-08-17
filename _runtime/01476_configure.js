@@ -1,10 +1,10 @@
 // _runtime/01476_configure.js
-import StateDefault from "State" /* 1478 */;
-import _modAll1483 from "module_1483" /* 1483 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "module_1477" /* 1477 */;
+import StateDefault from "01478_State.js";
+import _modAll1483 from "metro/01483__.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import closure_7 from "metro/01477__.js";
 
 function configure(arg0) {
   const obj = {};

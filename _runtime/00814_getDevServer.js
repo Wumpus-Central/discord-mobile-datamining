@@ -1,5 +1,5 @@
 // _runtime/00814_getDevServer.js
-import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
+import TurboModuleRegistry from "00997_TurboModuleRegistry.js";
 
 require = arg1;
 const dependencyMap = arg6;

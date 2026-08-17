@@ -1,5 +1,5 @@
 // _runtime/01581_shouldPreventRemove.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 
 const require = arg1;
 let closure_3 = Symbol("VISITED_ROUTE_KEYS");

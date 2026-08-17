@@ -1,11 +1,11 @@
 // _runtime/13731_text.js
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
-import _mod13677 from "module_13677" /* 13677 */;
-import call from "call" /* 13680 */;
-import call2 from "call" /* 13696 */;
-import all from "all" /* 13699 */;
-import state from "state" /* 13734 */;
-import closure_2 from "__core-js_shared__" /* 13732 */;
+import getOwnPropertyDescriptor from "13676_getOwnPropertyDescriptor.js";
+import _mod13677 from "metro/13677__.js";
+import call from "13680_call.js";
+import call2 from "13696_call.js";
+import all from "13699_all.js";
+import state from "13734_state.js";
+import closure_2 from "13732___core-js_shared__.js";
 
 let closure_5 = call("".slice);
 let closure_6 = call("".replace);

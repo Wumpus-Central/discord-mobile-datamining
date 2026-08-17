@@ -1,8 +1,8 @@
 // _runtime/01539_getItemsFromScreens.js
-import useRoute from "useRoute" /* 1540 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useRoute from "01540_useRoute.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import importAllResult from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 let closure_2 = ["screen", "if"];

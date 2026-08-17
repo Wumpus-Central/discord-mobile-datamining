@@ -1,7 +1,7 @@
 // _runtime/04462_PromiseResolve.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod562 from "module_562" /* 562 */;
-import callBind from "callBind" /* 1422 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import _mod562 from "metro/00562__.js";
+import callBind from "01422_callBind.js";
 
 const tmp = getEvalledConstructor("%Promise.resolve%", true);
 let tmp2 = tmp;

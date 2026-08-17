@@ -1,9 +1,9 @@
 // _runtime/10467_str2.js
-import noopDefault from "noop" /* 19 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["ref", "leftThreshold", "rightThreshold", "enabled", "containerStyle", "childrenContainerStyle", "animationOptions", "overshootLeft", "overshootRight", "testID", "children", "enableTrackpadTwoFingerGesture", "dragOffsetFromLeft", "dragOffsetFromRight", "friction", "overshootFriction", "onSwipeableOpenStartDrag", "onSwipeableCloseStartDrag", "onSwipeableWillOpen", "onSwipeableWillClose", "onSwipeableOpen", "onSwipeableClose", "renderLeftActions", "renderRightActions", "simultaneousWith", "requireToFail", "block", "hitSlop"];

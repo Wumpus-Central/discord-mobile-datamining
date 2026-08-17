@@ -1,6 +1,6 @@
 // _runtime/01806_useSharedValue.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);

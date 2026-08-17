@@ -1,5 +1,5 @@
 // _runtime/00331_getImageSourcesFromImageProps.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 
 
 export const getImageSourcesFromImageProps = function getImageSourcesFromImageProps(source) {

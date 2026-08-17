@@ -1,5 +1,5 @@
 // _runtime/00883_isAttributeObject.js
-import closure_0 from "_slicedToArray" /* 32 */;
+import closure_0 from "metro/00032__slicedToArray.js";
 
 function isAttributeObject(obj) {
   let hasItem = typeof obj === "object";

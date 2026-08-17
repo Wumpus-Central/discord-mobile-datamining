@@ -1,8 +1,8 @@
 // _runtime/06525_SlideFromRightIOS.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import Animated from "Animated" /* 6519 */;
-import TransitionIOSSpec from "TransitionIOSSpec" /* 6526 */;
-import forHorizontalIOS from "forHorizontalIOS" /* 6527 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import Animated from "06519_Animated.js";
+import TransitionIOSSpec from "06526_TransitionIOSSpec.js";
+import forHorizontalIOS from "06527_forHorizontalIOS.js";
 
 const Platform = get_ActivityIndicator.Platform;
 let obj = { gestureDirection: "horizontal", transitionSpec: null, cardStyleInterpolator: null, headerStyleInterpolator: null };

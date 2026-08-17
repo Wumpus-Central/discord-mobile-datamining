@@ -1,11 +1,11 @@
 // _runtime/03706_G.js
-import getUTCDayOfYear from "getUTCDayOfYear" /* 3707 */;
-import getUTCISOWeek from "getUTCISOWeek" /* 3708 */;
-import getUTCISOWeekYear from "getUTCISOWeekYear" /* 3711 */;
-import getUTCWeek from "getUTCWeek" /* 3712 */;
-import getUTCWeekYear from "getUTCWeekYear" /* 3714 */;
-import addLeadingZeros from "addLeadingZeros" /* 3715 */;
-import M from "M" /* 3716 */;
+import getUTCDayOfYear from "03707_getUTCDayOfYear.js";
+import getUTCISOWeek from "03708_getUTCISOWeek.js";
+import getUTCISOWeekYear from "03711_getUTCISOWeekYear.js";
+import getUTCWeek from "03712_getUTCWeek.js";
+import getUTCWeekYear from "03714_getUTCWeekYear.js";
+import addLeadingZeros from "03715_addLeadingZeros.js";
+import M from "03716_M.js";
 
 if (!getUTCDayOfYear) {
   let obj = { default: null };

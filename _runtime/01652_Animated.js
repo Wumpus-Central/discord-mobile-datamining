@@ -1,12 +1,12 @@
 // _runtime/01652_Animated.js
-import noopDefault from "noop" /* 19 */;
-import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import controlEdgeToEdgeValues from "controlEdgeToEdgeValues" /* 1653 */;
+import noopDefault from "00019_noop.js";
+import cancelAnimationDefault from "01654_cancelAnimation.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import controlEdgeToEdgeValues from "01653_controlEdgeToEdgeValues.js";
 import { cancelAnimation } from "01654_cancelAnimation.js";
 import { useEventHandlerRegistration } from "01843_useEventHandlerRegistration.js";
 import { useAnimatedKeyboardHandler } from "01845_useAnimatedKeyboardHandler.js";

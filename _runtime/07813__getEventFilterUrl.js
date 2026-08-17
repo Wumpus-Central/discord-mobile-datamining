@@ -1,6 +1,6 @@
 // _runtime/07813__getEventFilterUrl.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7766 */;
-import setupIntegration from "setupIntegration" /* 7794 */;
+import __SENTRY_DEBUG__ from "metro/07766___SENTRY_DEBUG__.js";
+import setupIntegration from "07794_setupIntegration.js";
 
 function _getEventFilterUrl(arg0) {
   try {

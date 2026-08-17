@@ -1,5 +1,5 @@
 // _runtime/00575_addNumericSeparator.js
-import _mod576 from "module_576" /* 576 */;
+import _mod576 from "metro/00576__.js";
 import { 00576__ } from "metro/00576__.js";
 
 function addNumericSeparator(cause, typeError1) {

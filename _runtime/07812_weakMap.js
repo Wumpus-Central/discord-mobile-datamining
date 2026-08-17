@@ -1,5 +1,5 @@
 // _runtime/07812_weakMap.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 const weakMap = new WeakMap();
 

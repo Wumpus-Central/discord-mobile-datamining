@@ -1,5 +1,5 @@
 // _runtime/13808_getReactNativePlatformConstants.js
-import closure_0 from "get ActivityIndicator" /* 17 */;
+import closure_0 from "00017_get_ActivityIndicator.js";
 
 
 export default function getReactNativePlatformConstants() {

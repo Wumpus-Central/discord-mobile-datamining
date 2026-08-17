@@ -1,6 +1,6 @@
 // _runtime/01590_useCurrentRender.js
-import CurrentRenderContext from "CurrentRenderContext" /* 1549 */;
-import closure_2 from "noop" /* 19 */;
+import CurrentRenderContext from "01549_CurrentRenderContext.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

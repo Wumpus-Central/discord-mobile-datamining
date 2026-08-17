@@ -1,9 +1,9 @@
 // _runtime/12375_QRCode.js
-import QR8bitByte from "QR8bitByte" /* 12376 */;
-import QRRSBlock from "QRRSBlock" /* 12378 */;
-import QRBitBuffer from "QRBitBuffer" /* 12380 */;
-import _mod12381 from "module_12381" /* 12381 */;
-import QRPolynomial from "QRPolynomial" /* 12382 */;
+import QR8bitByte from "12376_QR8bitByte.js";
+import QRRSBlock from "12378_QRRSBlock.js";
+import QRBitBuffer from "12380_QRBitBuffer.js";
+import _mod12381 from "metro/12381__.js";
+import QRPolynomial from "12382_QRPolynomial.js";
 
 class QRCode {
   constructor(arg0, arg1) {

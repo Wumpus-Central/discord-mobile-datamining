@@ -1,5 +1,5 @@
 // _runtime/01821_ReducedMotionConfig.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 const useEffect = noop.useEffect;
 

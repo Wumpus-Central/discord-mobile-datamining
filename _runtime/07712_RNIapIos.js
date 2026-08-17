@@ -1,6 +1,6 @@
 // _runtime/07712_RNIapIos.js
-import PurchaseError from "PurchaseError" /* 7713 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import PurchaseError from "07713_PurchaseError.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ NativeModules, Platform } = get_ActivityIndicator);
 const RNIapIos = NativeModules.RNIapIos;

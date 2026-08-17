@@ -1,5 +1,5 @@
 // _runtime/01279_hydrateSingle.js
-import closure_2 from "_slicedToArray" /* 32 */;
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function hydrateSingle(str) {
   let length;

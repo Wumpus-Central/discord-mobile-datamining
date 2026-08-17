@@ -1,7 +1,7 @@
 // _runtime/09931_createNativeStackNavigator.js
-import NativeStackNavigator from "NativeStackNavigator" /* 9932 */;
-import StyleSheet from "StyleSheet" /* 9933 */;
-import context from "context" /* 9937 */;
+import NativeStackNavigator from "09932_NativeStackNavigator.js";
+import StyleSheet from "09933_StyleSheet.js";
+import context from "09937_context.js";
 
 
 export const createNativeStackNavigator = NativeStackNavigator.createNativeStackNavigator;

@@ -1,7 +1,7 @@
 // _runtime/01324_ReflectionJsonReader.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 const ReflectionJsonReader = require;
 class ReflectionJsonReader {

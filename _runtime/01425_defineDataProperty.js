@@ -1,7 +1,7 @@
 // _runtime/01425_defineDataProperty.js
-import _mod541 from "module_541" /* 541 */;
-import _mod542 from "module_542" /* 542 */;
-import flag from "flag" /* 564 */;
+import _mod541 from "metro/00541__.js";
+import _mod542 from "metro/00542__.js";
+import flag from "00564_flag.js";
 
 
 export default function defineDataProperty(obj, str) {

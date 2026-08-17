@@ -1,7 +1,7 @@
 // _runtime/00226_URL.js
-import BlobModuleDefault from "BlobModule" /* 201 */;
-import URL from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
+import BlobModuleDefault from "00201_BlobModule.js";
+import URL from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
 
 let closure_1 = null;
 if (BlobModuleDefault) {

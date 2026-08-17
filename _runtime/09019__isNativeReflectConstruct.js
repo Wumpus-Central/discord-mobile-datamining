@@ -1,17 +1,17 @@
 // _runtime/09019__isNativeReflectConstruct.js
-import noopDefault from "noop" /* 19 */;
-import _modDef9022 from "module_9022" /* 9022 */;
-import _modDef9023 from "module_9023" /* 9023 */;
-import _modDef9042 from "module_9042" /* 9042 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import importDefaultResult3 from "emptyFunction" /* 4205 */;
+import noopDefault from "00019_noop.js";
+import _modDef9022 from "metro/09022__.js";
+import _modDef9023 from "metro/09023__.js";
+import _modDef9042 from "metro/09042__.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import importDefaultResult1 from "00098__inherits.js";
+import importDefaultResult3 from "04205_emptyFunction.js";
 
 const Video = importDefault;
 function _isNativeReflectConstruct() {

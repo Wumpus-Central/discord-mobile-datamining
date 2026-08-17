@@ -1,5 +1,5 @@
 // _runtime/00101_getConstants.js
-import getAll from "get" /* 30 */;
+import getAll from "00030_get.js";
 
 const enforcing = getAll.getEnforcing("DeviceInfo");
 let c1 = null;

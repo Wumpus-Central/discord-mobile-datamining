@@ -1,6 +1,6 @@
 // _runtime/07086_useUnmountAwareTimeout.js
-import closure_1 from "_slicedToArray" /* 7041 */;
-import noop from "noop" /* 19 */;
+import closure_1 from "metro/07041__slicedToArray.js";
+import noop from "00019_noop.js";
 
 ({ useCallback: obj1, useEffect: c3, useState: c4 } = noop);
 

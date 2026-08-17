@@ -1,6 +1,6 @@
 // _runtime/04957_constructTag.js
-import getDataView from "getDataView" /* 4910 */;
-import _mod4917 from "module_4917" /* 4917 */;
+import getDataView from "04910_getDataView.js";
+import _mod4917 from "metro/04917__.js";
 
 require = arg1;
 const module = arg2;

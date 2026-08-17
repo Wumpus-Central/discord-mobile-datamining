@@ -1,5 +1,5 @@
 // _runtime/03989_n.js
-import t from "t" /* 3975 */;
+import t from "03975_t.js";
 
 const fn = function n(moment) {
   function translateSingular(arg0, arg1, arg2, arg3) {

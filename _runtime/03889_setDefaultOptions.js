@@ -1,6 +1,6 @@
 // _runtime/03889_setDefaultOptions.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!requiredArgs) {
   let obj = { default: null };

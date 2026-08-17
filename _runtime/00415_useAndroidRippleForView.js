@@ -1,6 +1,6 @@
 // _runtime/00415_useAndroidRippleForView.js
-import noopAll from "noop" /* 19 */;
-import { useMemo } from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
+import { useMemo } from "00019_noop.js";
 
 const require = arg1;
 noopAll;

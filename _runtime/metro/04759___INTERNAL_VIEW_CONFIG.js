@@ -1,7 +1,7 @@
 // _runtime/metro/04759___INTERNAL_VIEW_CONFIG.js
-import pointsDiffer from "pointsDiffer" /* 78 */;
-import processColorElement from "processColorElement" /* 80 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import pointsDiffer from "../00078_pointsDiffer.js";
+import processColorElement from "../00080_processColorElement.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 if ("default" in pointsDiffer) {
   pointsDiffer = pointsDiffer.default;

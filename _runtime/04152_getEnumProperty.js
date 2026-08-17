@@ -1,7 +1,7 @@
 // _runtime/04152_getEnumProperty.js
-import c from "c" /* 4135 */;
-import useRiveProperty from "useRiveProperty" /* 4148 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import c from "04135_c.js";
+import useRiveProperty from "04148_useRiveProperty.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function getEnumProperty(enumProperty) {

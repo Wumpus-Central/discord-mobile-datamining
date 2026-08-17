@@ -1,6 +1,6 @@
 // _runtime/00231_Alert.js
-import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 let Alert = arg1;
 class Alert {

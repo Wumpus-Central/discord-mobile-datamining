@@ -1,5 +1,5 @@
 // _runtime/05261_uniqueId.js
-import toString from "toString" /* 762 */;
+import toString from "00762_toString.js";
 
 let c2 = 0;
 

@@ -1,7 +1,7 @@
 // _runtime/04681_Suspender.js
-import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "noop" /* 19 */;
+import jsxProd from "react/00021_jsxProd.js";
+import noop from "00019_noop.js";
+import closure_3 from "00019_noop.js";
 
 function Suspender(children) {
   const freeze = children.freeze;

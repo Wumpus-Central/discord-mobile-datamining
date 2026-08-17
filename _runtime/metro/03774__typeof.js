@@ -1,12 +1,12 @@
 // _runtime/metro/03774__typeof.js
-import code from "code" /* 3718 */;
-import subMilliseconds from "subMilliseconds" /* 3705 */;
-import _typeof from "_typeof" /* 3472 */;
-import assign from "assign" /* 3722 */;
-import dateLongFormatter from "dateLongFormatter" /* 3717 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import toInteger from "toInteger" /* 3476 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import code from "../03718_code.js";
+import subMilliseconds from "../03705_subMilliseconds.js";
+import _typeof from "03472__typeof.js";
+import assign from "../03722_assign.js";
+import dateLongFormatter from "../03717_dateLongFormatter.js";
+import getTimezoneOffsetInMilliseconds from "../03635_getTimezoneOffsetInMilliseconds.js";
+import toInteger from "../03476_toInteger.js";
+import requiredArgs from "../03473_requiredArgs.js";
 import { getDefaultOptions } from "../03477_getDefaultOptions.js";
 
 function _typeof(arg0) {

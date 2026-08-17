@@ -1,5 +1,5 @@
 // _runtime/13789_objectifyError.js
-import install from "install" /* 473 */;
+import install from "00473_install.js";
 
 if (!install) {
   let obj = { default: null };

@@ -1,6 +1,6 @@
 // _runtime/00282_dispatchNativeEvent.js
-import map from "map" /* 66 */;
-import getHandler from "getHandler" /* 283 */;
+import map from "00066_map.js";
+import getHandler from "00283_getHandler.js";
 
 require = arg1;
 const module = arg2;

@@ -1,12 +1,12 @@
 // _runtime/00904_getTraceData.js
-import spanToJSON from "spanToJSON" /* 819 */;
-import consoleSandbox from "consoleSandbox" /* 824 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import regExp from "regExp" /* 834 */;
-import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 835 */;
-import getAsyncContextStrategy from "getAsyncContextStrategy" /* 841 */;
-import getClient from "getClient" /* 848 */;
-import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 857 */;
+import spanToJSON from "00819_spanToJSON.js";
+import consoleSandbox from "00824_consoleSandbox.js";
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import regExp from "00834_regExp.js";
+import baggageHeaderToDynamicSamplingContext from "00835_baggageHeaderToDynamicSamplingContext.js";
+import getAsyncContextStrategy from "00841_getAsyncContextStrategy.js";
+import getClient from "00848_getClient.js";
+import getDynamicSamplingContextFromSpan from "00857_getDynamicSamplingContextFromSpan.js";
 
 require = arg1;
 const dependencyMap = arg6;

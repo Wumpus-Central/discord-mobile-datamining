@@ -1,11 +1,11 @@
 // _runtime/06969_normalizeSnapPoint.js
-import n from "n" /* 6970 */;
-import n2 from "n" /* 6971 */;
-import n3 from "n" /* 6972 */;
-import print from "print" /* 6973 */;
-import o from "o" /* 6974 */;
-import isFabricInstalled from "isFabricInstalled" /* 6975 */;
-import findNodeHandle from "findNodeHandle" /* 6976 */;
+import n from "06970_n.js";
+import n2 from "06971_n.js";
+import n3 from "06972_n.js";
+import print from "06973_print.js";
+import o from "06974_o.js";
+import isFabricInstalled from "06975_isFabricInstalled.js";
+import findNodeHandle from "06976_findNodeHandle.js";
 
 
 export const normalizeSnapPoint = n.normalizeSnapPoint;

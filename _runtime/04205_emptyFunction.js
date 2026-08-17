@@ -1,5 +1,5 @@
 // _runtime/04205_emptyFunction.js
-import emptyFunction from "emptyFunction" /* 4206 */;
+import emptyFunction from "04206_emptyFunction.js";
 
 
 export default emptyFunction();

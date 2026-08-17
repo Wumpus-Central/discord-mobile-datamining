@@ -1,6 +1,6 @@
 // _runtime/01695_isReducedMotionEnabledInSystem.js
-import isJest from "isJest" /* 1657 */;
-import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet" /* 1691 */;
+import isJest from "01657_isJest.js";
+import addCompilerSafeGetAndSet from "01691_addCompilerSafeGetAndSet.js";
 
 if (isJest.isWeb()) {
   const _module1 = isJest;

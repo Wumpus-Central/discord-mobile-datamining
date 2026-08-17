@@ -1,5 +1,5 @@
 // _runtime/01131_enrichXhrBreadcrumbsForMobileReplay.js
-import parseContentLengthHeader from "parseContentLengthHeader" /* 1132 */;
+import parseContentLengthHeader from "01132_parseContentLengthHeader.js";
 
 require = arg1;
 const dependencyMap = arg6;

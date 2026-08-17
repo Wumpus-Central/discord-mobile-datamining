@@ -1,12 +1,12 @@
 // _runtime/01644_nativeEventEmitter.js
-import KeyboardController from "KeyboardController" /* 1645 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 1646 */;
-import __INTERNAL_VIEW_CONFIG2 from "__INTERNAL_VIEW_CONFIG" /* 1647 */;
-import __INTERNAL_VIEW_CONFIG3 from "__INTERNAL_VIEW_CONFIG" /* 1648 */;
-import __INTERNAL_VIEW_CONFIG4 from "__INTERNAL_VIEW_CONFIG" /* 1649 */;
-import __INTERNAL_VIEW_CONFIG5 from "__INTERNAL_VIEW_CONFIG" /* 1650 */;
-import __INTERNAL_VIEW_CONFIG6 from "__INTERNAL_VIEW_CONFIG" /* 1651 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import KeyboardController from "01645_KeyboardController.js";
+import __INTERNAL_VIEW_CONFIG from "metro/01646___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIG2 from "metro/01647___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIG3 from "metro/01648___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIG4 from "metro/01649___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIG5 from "metro/01650___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIG6 from "metro/01651___INTERNAL_VIEW_CONFIG.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ NativeEventEmitter, Platform } = get_ActivityIndicator);
 if (KeyboardController.default) {

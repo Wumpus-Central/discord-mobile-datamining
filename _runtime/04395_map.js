@@ -1,11 +1,11 @@
 // _runtime/04395_map.js
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import getPolyfill from "getPolyfill" /* 4396 */;
-import map2 from "map" /* 4398 */;
-import RequireObjectCoercible from "RequireObjectCoercible" /* 4400 */;
-import shimArrayPrototypeMap from "shimArrayPrototypeMap" /* 4461 */;
-import callBind from "callBind" /* 1422 */;
-import defineProperty from "defineProperty" /* 4415 */;
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import getPolyfill from "04396_getPolyfill.js";
+import map2 from "04398_map.js";
+import RequireObjectCoercible from "04400_RequireObjectCoercible.js";
+import shimArrayPrototypeMap from "04461_shimArrayPrototypeMap.js";
+import callBind from "01422_callBind.js";
+import defineProperty from "04415_defineProperty.js";
 
 let closure_2 = callBind.apply(getPolyfill());
 let closure_3 = callBoundIntrinsic("Array.prototype.slice");

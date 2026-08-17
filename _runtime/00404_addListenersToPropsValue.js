@@ -1,5 +1,5 @@
 // _runtime/00404_addListenersToPropsValue.js
-import addListenersToPropsValueDefault from "addListenersToPropsValue" /* 388 */;
+import addListenersToPropsValueDefault from "00388_addListenersToPropsValue.js";
 
 
 export default addListenersToPropsValueDefault(null);

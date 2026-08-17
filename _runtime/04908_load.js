@@ -1,5 +1,5 @@
 // _runtime/04908_load.js
-import errorDefault from "error" /* 4909 */;
+import errorDefault from "04909_error.js";
 
 const require = arg1;
 function load(response, then) {

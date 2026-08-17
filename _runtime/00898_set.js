@@ -1,6 +1,6 @@
 // _runtime/00898_set.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import consoleSandbox from "consoleSandbox" /* 824 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import consoleSandbox from "00824_consoleSandbox.js";
 
 require = arg1;
 const dependencyMap = arg6;

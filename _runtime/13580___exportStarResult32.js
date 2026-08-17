@@ -1,7 +1,7 @@
 // _runtime/13580___exportStarResult32.js
-import digitsToString from "digitsToString" /* 13581 */;
-import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
-import TEN from "TEN" /* 13584 */;
+import digitsToString from "13581_digitsToString.js";
+import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
+import TEN from "13584_TEN.js";
 
 require = arg1;
 const dependencyMap = arg6;

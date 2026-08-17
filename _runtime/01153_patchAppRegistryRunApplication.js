@@ -1,5 +1,5 @@
 // _runtime/01153_patchAppRegistryRunApplication.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 import { fillTyped } from "01154_fillTyped.js";
 

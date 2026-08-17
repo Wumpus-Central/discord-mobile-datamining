@@ -1,7 +1,7 @@
 // _runtime/13642_compareKV.js
-import e from "e" /* 1281 */;
-import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 13641 */;
-import _mod13643 from "module_13643" /* 13643 */;
+import e from "01281_e.js";
+import emitUnicodeLanguageId from "13641_emitUnicodeLanguageId.js";
+import _mod13643 from "metro/13643__.js";
 
 require = arg1;
 const dependencyMap = arg6;

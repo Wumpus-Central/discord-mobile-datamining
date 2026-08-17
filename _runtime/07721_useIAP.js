@@ -1,6 +1,6 @@
 // _runtime/07721_useIAP.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import noop from "noop" /* 19 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 ({ useCallback: c3, useEffect: c4 } = noop);

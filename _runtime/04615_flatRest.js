@@ -1,7 +1,7 @@
 // _runtime/04615_flatRest.js
-import shortOut from "shortOut" /* 4616 */;
-import overRest from "overRest" /* 4620 */;
-import flatten from "flatten" /* 4622 */;
+import shortOut from "04616_shortOut.js";
+import overRest from "04620_overRest.js";
+import flatten from "04622_flatten.js";
 
 
 export default function flatRest(arg0) {

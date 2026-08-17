@@ -1,12 +1,12 @@
 // _runtime/metro/07843__addTracingHeadersToFetchRequest.js
-import errorCallback from "errorCallback" /* 7734 */;
-import SyncPromise from "SyncPromise" /* 7762 */;
-import hasTracingEnabled from "hasTracingEnabled" /* 7770 */;
-import getTraceData from "getTraceData" /* 7809 */;
-import closure_2 from "_toArray" /* 853 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
-import consoleSandbox from "consoleSandbox" /* 7738 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
+import errorCallback from "../07734_errorCallback.js";
+import SyncPromise from "../07762_SyncPromise.js";
+import hasTracingEnabled from "../07770_hasTracingEnabled.js";
+import getTraceData from "../07809_getTraceData.js";
+import closure_2 from "../00853__toArray.js";
+import __SENTRY_DEBUG__ from "07737___SENTRY_DEBUG__.js";
+import consoleSandbox from "../07738_consoleSandbox.js";
+import dateTimestampInSeconds from "../07752_dateTimestampInSeconds.js";
 
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
   let obj = getTraceData;

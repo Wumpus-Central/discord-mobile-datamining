@@ -1,5 +1,5 @@
 // _runtime/06346_is.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 if (typeof Object.is === "function") {
   const _Object = Object;

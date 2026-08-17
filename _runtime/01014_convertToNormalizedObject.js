@@ -1,5 +1,5 @@
 // _runtime/01014_convertToNormalizedObject.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 require = arg1;
 const dependencyMap = arg6;

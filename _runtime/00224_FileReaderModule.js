@@ -1,5 +1,5 @@
 // _runtime/00224_FileReaderModule.js
-import FileReaderModuleDefault from "FileReaderModule" /* 225 */;
+import FileReaderModuleDefault from "00225_FileReaderModule.js";
 
 for (const key10016 in require("FileReaderModule")) {
   let tmp2 = key10016;

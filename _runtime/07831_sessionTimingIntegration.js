@@ -1,5 +1,5 @@
 // _runtime/07831_sessionTimingIntegration.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 import { dateTimestampInSeconds } from "07752_dateTimestampInSeconds.js";
 
 

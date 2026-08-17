@@ -1,5 +1,5 @@
 // _runtime/07810_getTraceMetaTags.js
-import getTraceData from "getTraceData" /* 7809 */;
+import getTraceData from "07809_getTraceData.js";
 
 require = arg1;
 const dependencyMap = arg6;

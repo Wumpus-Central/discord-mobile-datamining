@@ -1,6 +1,6 @@
 // _runtime/00056_processColorStops.js
-import processColor from "processColor" /* 50 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import processColor from "00050_processColor.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function processColorStops(nextResult) {

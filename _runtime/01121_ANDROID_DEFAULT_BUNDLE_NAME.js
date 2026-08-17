@@ -1,6 +1,6 @@
 // _runtime/01121_ANDROID_DEFAULT_BUNDLE_NAME.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 const Platform = get_ActivityIndicator.Platform;
 let c2 = "app:///index.android.bundle";

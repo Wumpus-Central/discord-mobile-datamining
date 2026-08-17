@@ -1,7 +1,7 @@
 // _runtime/00607_toStringTag.js
-import _mod608 from "module_608" /* 608 */;
-import toStringTag2 from "toStringTag" /* 611 */;
-import objectToString from "objectToString" /* 612 */;
+import _mod608 from "metro/00608__.js";
+import toStringTag2 from "00611_toStringTag.js";
+import objectToString from "00612_objectToString.js";
 
 let toStringTag;
 if (_mod608) {

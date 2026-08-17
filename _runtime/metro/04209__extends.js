@@ -1,11 +1,11 @@
 // _runtime/metro/04209__extends.js
-import num2 from "num2" /* 4212 */;
-import noop from "noop" /* 19 */;
-import emptyFunction from "emptyFunction" /* 4205 */;
-import warning from "warning" /* 1229 */;
-import invariant from "invariant" /* 1230 */;
-import parse from "parse" /* 4210 */;
-import getStatics from "getStatics" /* 4214 */;
+import num2 from "../04212_num2.js";
+import noop from "../00019_noop.js";
+import emptyFunction from "../04205_emptyFunction.js";
+import warning from "../01229_warning.js";
+import invariant from "../01230_invariant.js";
+import parse from "../04210_parse.js";
+import getStatics from "../04214_getStatics.js";
 
 let Component6 = require;
 let closure_1 = dependencyMap;

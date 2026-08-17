@@ -1,5 +1,5 @@
 // _runtime/01043_getNavigationEntry.js
-import WINDOW from "WINDOW" /* 1039 */;
+import WINDOW from "01039_WINDOW.js";
 
 require = arg1;
 const dependencyMap = arg6;

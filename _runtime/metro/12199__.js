@@ -1,20 +1,20 @@
 // _runtime/metro/12199__.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
-import _mod12201 from "module_12201" /* 12201 */;
-import toDotPath from "toDotPath" /* 12202 */;
-import mergeDefs from "mergeDefs" /* 12203 */;
-import isValidBase64 from "isValidBase64" /* 12204 */;
-import _mod12205 from "module_12205" /* 12205 */;
-import mergeDefs2 from "mergeDefs" /* 12206 */;
-import _mod12207 from "module_12207" /* 12207 */;
-import Doc from "Doc" /* 12208 */;
-import _mod12209 from "module_12209" /* 12209 */;
-import $output from "$output" /* 12259 */;
-import _mod12260 from "module_12260" /* 12260 */;
-import initializeContext from "initializeContext" /* 12261 */;
-import stringProcessor from "stringProcessor" /* 12262 */;
-import JSONSchemaGenerator from "JSONSchemaGenerator" /* 12263 */;
-import _mod12264 from "module_12264" /* 12264 */;
+import _isNativeReflectConstruct from "../12200__isNativeReflectConstruct.js";
+import _mod12201 from "12201__.js";
+import toDotPath from "../12202_toDotPath.js";
+import mergeDefs from "../12203_mergeDefs.js";
+import isValidBase64 from "../12204_isValidBase64.js";
+import _mod12205 from "12205__.js";
+import mergeDefs2 from "../12206_mergeDefs.js";
+import _mod12207 from "12207__.js";
+import Doc from "../12208_Doc.js";
+import _mod12209 from "12209__.js";
+import $output from "../12259__output.js";
+import _mod12260 from "12260__.js";
+import initializeContext from "../12261_initializeContext.js";
+import stringProcessor from "../12262_stringProcessor.js";
+import JSONSchemaGenerator from "../12263_JSONSchemaGenerator.js";
+import _mod12264 from "12264__.js";
 
 const self = this;
 let self2 = this;

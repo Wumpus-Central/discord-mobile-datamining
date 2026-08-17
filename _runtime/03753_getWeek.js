@@ -1,8 +1,8 @@
 // _runtime/03753_getWeek.js
-import startOfWeek from "startOfWeek" /* 3631 */;
-import startOfWeekYear from "startOfWeekYear" /* 3754 */;
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfWeek from "03631_startOfWeek.js";
+import startOfWeekYear from "03754_startOfWeekYear.js";
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfWeek) {
   let obj = { default: null };

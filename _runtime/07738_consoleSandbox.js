@@ -1,5 +1,5 @@
 // _runtime/07738_consoleSandbox.js
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
 
 function consoleSandbox(arg0) {
   if ("console" in console(7739).GLOBAL_OBJ) {

@@ -1,11 +1,11 @@
 // _runtime/06388_Animated.js
-import noopDefault from "noop" /* 19 */;
-import createNativeWrapperDefault from "createNativeWrapper" /* 6389 */;
-import ButtonComponentDefault from "ButtonComponent" /* 6473 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import { useRef } from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import createNativeWrapperDefault from "06389_createNativeWrapper.js";
+import ButtonComponentDefault from "06473_ButtonComponent.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import { useRef } from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];

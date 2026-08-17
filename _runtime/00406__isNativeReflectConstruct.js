@@ -1,12 +1,12 @@
 // _runtime/00406__isNativeReflectConstruct.js
-import noopAll from "noop" /* 19 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00098__inherits.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const SectionList = importDefault;
 function _isNativeReflectConstruct() {

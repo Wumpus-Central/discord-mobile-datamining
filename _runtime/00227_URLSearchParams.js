@@ -1,7 +1,7 @@
 // _runtime/00227_URLSearchParams.js
-import _createClassDefault from "_createClass" /* 42 */;
-import URLSearchParams from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import URLSearchParams from "metro/00032__slicedToArray.js";
+import closure_1 from "metro/00041__classCallCheck.js";
 
 class URLSearchParams {
   constructor(arg0) {

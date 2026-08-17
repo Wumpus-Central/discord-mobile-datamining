@@ -1,5 +1,5 @@
 // _runtime/09035_merged2.js
-import emptyFunction from "emptyFunction" /* 4205 */;
+import emptyFunction from "04205_emptyFunction.js";
 
 let obj = { transform: null, transformMatrix: null, decomposedMatrix: null, scaleX: null, scaleY: null, rotation: null, translateX: null, translateY: null };
 obj = { perspective: emptyFunction.number };

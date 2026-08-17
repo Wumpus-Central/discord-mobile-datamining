@@ -1,10 +1,10 @@
 // _runtime/01574_isNavigationState.js
-import useEffectDefault from "useEffect" /* 1522 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { PrivateValueStore } from "PrivateValueStore" /* 1504 */;
+import useEffectDefault from "01522_useEffect.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import closure_6 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
+import { PrivateValueStore } from "01504_PrivateValueStore.js";
 import { useLazyValue } from "01523_useLazyValue.js";
 import { NavigationBuilderContext } from "01530_NavigationBuilderContext.js";
 import { ConsumedParamsContext } from "01532_ConsumedParamsContext.js";

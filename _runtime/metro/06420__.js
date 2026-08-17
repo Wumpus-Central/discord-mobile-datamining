@@ -1,9 +1,9 @@
 // _runtime/metro/06420__.js
-import cancelAnimation from "cancelAnimation" /* 1654 */;
-import _mod4114 from "module_4114" /* 4114 */;
-import tagMessage from "tagMessage" /* 6382 */;
-import _mod6409 from "module_6409" /* 6409 */;
-import n from "n" /* 6421 */;
+import cancelAnimation from "../01654_cancelAnimation.js";
+import _mod4114 from "../../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
+import tagMessage from "../06382_tagMessage.js";
+import _mod6409 from "06409__.js";
+import n from "../06421_n.js";
 
 try {
   const _module = cancelAnimation;

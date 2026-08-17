@@ -1,5 +1,5 @@
 // _runtime/04632_isEqual.js
-import baseIsEqual from "baseIsEqual" /* 768 */;
+import baseIsEqual from "00768_baseIsEqual.js";
 
 
 export default function isEqual(arg0, arg1) {

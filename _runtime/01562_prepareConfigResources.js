@@ -1,8 +1,8 @@
 // _runtime/01562_prepareConfigResources.js
-import findFocusedRoute from "findFocusedRoute" /* 1527 */;
-import validateArrayFormatSeparatorAll from "validateArrayFormatSeparator" /* 1556 */;
-import arrayStartsWith from "arrayStartsWith" /* 1565 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import findFocusedRoute from "01527_findFocusedRoute.js";
+import validateArrayFormatSeparatorAll from "01556_validateArrayFormatSeparator.js";
+import arrayStartsWith from "01565_arrayStartsWith.js";
+import closure_4 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function prepareConfigResources(screens) {

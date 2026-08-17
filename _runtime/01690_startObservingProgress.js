@@ -1,9 +1,9 @@
 // _runtime/01690_startObservingProgress.js
-import isWorkletFunction from "isWorkletFunction" /* 1679 */;
-import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet" /* 1691 */;
-import resolvePath from "resolvePath" /* 1693 */;
-import isJest from "isJest" /* 1657 */;
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
+import isWorkletFunction from "01679_isWorkletFunction.js";
+import addCompilerSafeGetAndSet from "01691_addCompilerSafeGetAndSet.js";
+import resolvePath from "01693_resolvePath.js";
+import isJest from "01657_isJest.js";
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
 import { isWorkletFunction } from "01679_isWorkletFunction.js";
 
 isJest = isJest.isAndroid();

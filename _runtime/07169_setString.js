@@ -1,5 +1,5 @@
 // _runtime/07169_setString.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 
 function setString(arg0) {
   const _require = arg0;

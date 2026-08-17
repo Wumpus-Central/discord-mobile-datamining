@@ -1,9 +1,9 @@
 // _runtime/06535_StyleSheet.js
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import getShadowStyle from "getShadowStyle" /* 6540 */;
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import getShadowStyle from "06540_getShadowStyle.js";
 
 const require = arg1;
 ({ Animated: c5, Platform, StyleSheet } = get_ActivityIndicator);

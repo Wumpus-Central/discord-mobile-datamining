@@ -1,7 +1,7 @@
 // _runtime/06579_appendTransformProps.js
-import append from "append" /* 6580 */;
-import peg$SyntaxError from "peg$SyntaxError" /* 6581 */;
-import peg$SyntaxError2 from "peg$SyntaxError" /* 6582 */;
+import append from "06580_append.js";
+import peg$SyntaxError from "06581_peg_SyntaxError.js";
+import peg$SyntaxError2 from "06582_peg_SyntaxError.js";
 
 require = arg1;
 const dependencyMap = arg6;

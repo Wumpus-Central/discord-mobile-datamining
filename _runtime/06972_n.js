@@ -1,5 +1,5 @@
 // _runtime/06972_n.js
-import cancelAnimation from "cancelAnimation" /* 1654 */;
+import cancelAnimation from "01654_cancelAnimation.js";
 
 require = arg1;
 const dependencyMap = arg6;

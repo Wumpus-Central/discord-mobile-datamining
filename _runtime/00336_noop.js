@@ -1,5 +1,5 @@
 // _runtime/00336_noop.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 noopAll;
 

@@ -1,7 +1,7 @@
 // _runtime/03908_subMinutes.js
-import addMinutes from "addMinutes" /* 3637 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import toInteger from "toInteger" /* 3476 */;
+import addMinutes from "03637_addMinutes.js";
+import requiredArgs from "03473_requiredArgs.js";
+import toInteger from "03476_toInteger.js";
 
 if (!addMinutes) {
   let obj = { default: null };

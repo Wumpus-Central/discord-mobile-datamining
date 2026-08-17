@@ -1,5 +1,5 @@
 // _runtime/04420_isFinite.js
-import isNaN from "isNaN" /* 572 */;
+import isNaN from "00572_isNaN.js";
 
 
 export default function isFinite(num) {

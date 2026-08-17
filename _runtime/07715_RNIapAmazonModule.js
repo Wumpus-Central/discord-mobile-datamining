@@ -1,5 +1,5 @@
 // _runtime/07715_RNIapAmazonModule.js
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult from "00005_asyncGeneratorStep.js";
 
 let closure_0 = arg1;
 const RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;

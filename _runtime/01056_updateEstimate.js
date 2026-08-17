@@ -1,5 +1,5 @@
 // _runtime/01056_updateEstimate.js
-import observe from "observe" /* 1046 */;
+import observe from "01046_observe.js";
 
 require = arg1;
 const dependencyMap = arg6;

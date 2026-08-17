@@ -1,6 +1,6 @@
 // _runtime/12203_mergeDefs.js
-import _createClass from "_createClass" /* 42 */;
-import f53362 from "_classCallCheck" /* 41 */;
+import _createClass from "metro/00042__createClass.js";
+import f53362 from "metro/00041__classCallCheck.js";
 
 function mergeDefs(def, arg1) {
   const items = [...arguments];

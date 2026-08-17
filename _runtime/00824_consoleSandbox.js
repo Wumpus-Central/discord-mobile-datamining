@@ -1,6 +1,6 @@
 // _runtime/00824_consoleSandbox.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;

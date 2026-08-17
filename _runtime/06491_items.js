@@ -1,7 +1,7 @@
 // _runtime/06491_items.js
-import noopAll from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;

@@ -1,5 +1,5 @@
 // _runtime/00442_DEFAULT_INITIAL_NUM_TO_RENDER.js
-import importDefaultResult from "Dimensions" /* 88 */;
+import importDefaultResult from "00088_Dimensions.js";
 
 const result = importDefaultResult.get("window").height / 7;
 

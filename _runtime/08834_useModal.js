@@ -1,7 +1,7 @@
 // _runtime/08834_useModal.js
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getNativeComponent from "getNativeComponent" /* 8832 */;
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import getNativeComponent from "08832_getNativeComponent.js";
 
 ({ useCallback: c0, useEffect: closure_1, useRef: obj1 } = noop);
 ({ NativeEventEmitter: c3, Platform } = get_ActivityIndicator);

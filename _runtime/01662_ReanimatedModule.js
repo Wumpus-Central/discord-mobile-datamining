@@ -1,5 +1,5 @@
 // _runtime/01662_ReanimatedModule.js
-import jSReanimatedModule from "jSReanimatedModule" /* 1663 */;
+import jSReanimatedModule from "01663_jSReanimatedModule.js";
 
 
 export const ReanimatedModule = jSReanimatedModule.ReanimatedModule;

@@ -1,6 +1,6 @@
 // _runtime/07756_getMainCarrier.js
-import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
-import _mod7740 from "module_7740" /* 7740 */;
+import getGlobalSingleton from "07739_getGlobalSingleton.js";
+import _mod7740 from "metro/07740__.js";
 
 require = arg1;
 const dependencyMap = arg6;

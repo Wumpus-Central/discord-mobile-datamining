@@ -1,5 +1,5 @@
 // _runtime/07805_eventFromEnvelope.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { forEachEnvelopeItem } from "07782_forEachEnvelopeItem.js";
 
 function eventFromEnvelope(arg0, arg1) {

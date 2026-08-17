@@ -1,6 +1,6 @@
 // _runtime/01867_useSmoothKeyboardHandler.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import cancelAnimation from "cancelAnimation" /* 1654 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import cancelAnimation from "01654_cancelAnimation.js";
 
 let closure_2 = get_ActivityIndicator.Platform.Version >= 30 || false;
 let obj = { duration: 250, easing: null };

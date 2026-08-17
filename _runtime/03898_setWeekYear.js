@@ -1,10 +1,10 @@
 // _runtime/03898_setWeekYear.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
-import startOfWeekYear from "startOfWeekYear" /* 3754 */;
-import _typeof from "_typeof" /* 3472 */;
-import toInteger from "toInteger" /* 3476 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import differenceInCalendarDays from "03634_differenceInCalendarDays.js";
+import startOfWeekYear from "03754_startOfWeekYear.js";
+import _typeof from "metro/03472__typeof.js";
+import toInteger from "03476_toInteger.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!differenceInCalendarDays) {
   let obj = { default: null };

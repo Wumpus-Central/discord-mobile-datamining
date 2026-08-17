@@ -1,10 +1,10 @@
 // _runtime/metro/04697__.js
-import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
-import AnimatedDefault from "Animated" /* 4674 */;
-import warnOnceDefault from "warnOnce" /* 4679 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _objectWithoutPropertiesDefault from "00109__objectWithoutProperties.js";
+import AnimatedDefault from "../04674_Animated.js";
+import warnOnceDefault from "../04679_warnOnce.js";
+import importAllResult from "../00019_noop.js";
+import get_ActivityIndicator from "../00017_get_ActivityIndicator.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
 const require = arg1;
 _objectWithoutPropertiesDefault;

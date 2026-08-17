@@ -1,5 +1,5 @@
 // _runtime/10335_useUpdateGestureConfig.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 let useEffect = noop.useEffect;
 

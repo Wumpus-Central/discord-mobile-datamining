@@ -1,13 +1,13 @@
 // _runtime/00328__queryCache.js
-import noopAll from "noop" /* 19 */;
-import resolveAssetSourceDefault from "resolveAssetSource" /* 81 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import ImageLoaderDefault from "ImageLoader" /* 329 */;
-import getImageSourcesFromImageProps from "getImageSourcesFromImageProps" /* 331 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { use } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 333 */;
+import noopAll from "00019_noop.js";
+import resolveAssetSourceDefault from "00081_resolveAssetSource.js";
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import ImageLoaderDefault from "00329_ImageLoader.js";
+import getImageSourcesFromImageProps from "00331_getImageSourcesFromImageProps.js";
+import closure_3 from "00005_asyncGeneratorStep.js";
+import { use } from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
+import set from "00333_set.js";
 
 require = arg1;
 function _queryCache() {

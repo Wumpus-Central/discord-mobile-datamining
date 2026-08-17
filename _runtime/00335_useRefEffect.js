@@ -1,5 +1,5 @@
 // _runtime/00335_useRefEffect.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useCallback: c0, useRef: closure_1 } = noop);
 

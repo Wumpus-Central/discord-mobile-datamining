@@ -1,10 +1,10 @@
 // _runtime/00283_getHandler.js
-import getFabricUIManager from "getFabricUIManager" /* 71 */;
-import SymbolResult1 from "SymbolResult1" /* 134 */;
-import getInstanceHandle from "getInstanceHandle" /* 136 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 141 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 285 */;
-import closure_3 from "recordTouchStart" /* 284 */;
+import getFabricUIManager from "00071_getFabricUIManager.js";
+import SymbolResult1 from "00134_SymbolResult1.js";
+import getInstanceHandle from "00136_getInstanceHandle.js";
+import _isNativeReflectConstructDefault from "00141__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault2 from "00285__isNativeReflectConstruct.js";
+import closure_3 from "00284_recordTouchStart.js";
 
 require = arg1;
 function getHandler(arg0, arg1) {

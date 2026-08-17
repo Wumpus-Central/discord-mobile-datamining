@@ -1,7 +1,7 @@
 // _runtime/03860_nextDay.js
-import addDays from "addDays" /* 3620 */;
-import getDay from "getDay" /* 3735 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import addDays from "03620_addDays.js";
+import getDay from "03735_getDay.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!addDays) {
   let obj = { default: null };

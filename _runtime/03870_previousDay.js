@@ -1,7 +1,7 @@
 // _runtime/03870_previousDay.js
-import requiredArgs from "requiredArgs" /* 3473 */;
-import getDay from "getDay" /* 3735 */;
-import subDays from "subDays" /* 3843 */;
+import requiredArgs from "03473_requiredArgs.js";
+import getDay from "03735_getDay.js";
+import subDays from "03843_subDays.js";
 
 if (!requiredArgs) {
   let obj = { default: null };

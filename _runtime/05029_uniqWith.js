@@ -1,5 +1,5 @@
 // _runtime/05029_uniqWith.js
-import baseUniq from "baseUniq" /* 5030 */;
+import baseUniq from "05030_baseUniq.js";
 
 
 export default function uniqWith(arg0, fn) {

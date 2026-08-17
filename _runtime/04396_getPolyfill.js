@@ -1,6 +1,6 @@
 // _runtime/04396_getPolyfill.js
-import properlyBoxed from "properlyBoxed" /* 4397 */;
-import map2 from "map" /* 4398 */;
+import properlyBoxed from "04397_properlyBoxed.js";
+import map2 from "04398_map.js";
 
 
 export default function getPolyfill() {

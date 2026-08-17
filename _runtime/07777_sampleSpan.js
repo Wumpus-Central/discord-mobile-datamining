@@ -1,5 +1,5 @@
 // _runtime/07777_sampleSpan.js
-import hasTracingEnabled from "hasTracingEnabled" /* 7770 */;
+import hasTracingEnabled from "07770_hasTracingEnabled.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,6 +1,6 @@
 // _runtime/04593_copySymbolsIn.js
-import copyObject from "copyObject" /* 4594 */;
-import _mod4596 from "module_4596" /* 4596 */;
+import copyObject from "04594_copyObject.js";
+import _mod4596 from "metro/04596__.js";
 
 
 export default function copySymbolsIn(arg0, arg1) {

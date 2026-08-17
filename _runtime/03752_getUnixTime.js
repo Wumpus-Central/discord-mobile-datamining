@@ -1,6 +1,6 @@
 // _runtime/03752_getUnixTime.js
-import getTime from "getTime" /* 3751 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getTime from "03751_getTime.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getTime) {
   let obj = { default: null };

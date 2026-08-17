@@ -1,9 +1,9 @@
 // _runtime/00170_rawToPerformanceEntry.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 162 */;
-import PerformanceEntry from "PerformanceEntry" /* 163 */;
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 169 */;
-import _isNativeReflectConstruct3 from "_isNativeReflectConstruct" /* 171 */;
-import _isNativeReflectConstruct4 from "_isNativeReflectConstruct" /* 172 */;
+import _isNativeReflectConstruct from "00162__isNativeReflectConstruct.js";
+import PerformanceEntry from "00163_PerformanceEntry.js";
+import _isNativeReflectConstruct2 from "00169__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct3 from "00171__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct4 from "00172__isNativeReflectConstruct.js";
 
 require = arg1;
 const dependencyMap = arg6;

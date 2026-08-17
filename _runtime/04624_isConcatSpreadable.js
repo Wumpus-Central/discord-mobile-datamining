@@ -1,7 +1,7 @@
 // _runtime/04624_isConcatSpreadable.js
-import _mod599 from "module_599" /* 599 */;
-import _mod608 from "module_608" /* 608 */;
-import baseIsArguments from "baseIsArguments" /* 618 */;
+import _mod599 from "metro/00599__.js";
+import _mod608 from "metro/00608__.js";
+import baseIsArguments from "00618_baseIsArguments.js";
 
 let isConcatSpreadable;
 if (_mod608) {

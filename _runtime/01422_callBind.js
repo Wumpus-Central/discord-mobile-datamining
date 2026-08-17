@@ -1,8 +1,8 @@
 // _runtime/01422_callBind.js
-import callBindBasic from "callBindBasic" /* 551 */;
-import flag from "flag" /* 564 */;
-import setFunctionLength from "setFunctionLength" /* 1423 */;
-import applyBind from "applyBind" /* 1426 */;
+import callBindBasic from "00551_callBindBasic.js";
+import flag from "00564_flag.js";
+import setFunctionLength from "01423_setFunctionLength.js";
+import applyBind from "01426_applyBind.js";
 
 if (flag) {
   const obj = { value: null };

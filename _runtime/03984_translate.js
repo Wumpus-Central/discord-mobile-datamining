@@ -1,5 +1,5 @@
 // _runtime/03984_translate.js
-import t from "t" /* 3975 */;
+import t from "03975_t.js";
 
 if (typeof exports === "object") {
   if (undefined !== module) {

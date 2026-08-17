@@ -1,21 +1,21 @@
 // _runtime/04670_enableScreens.js
-import isNativePlatformSupported from "isNativePlatformSupported" /* 4673 */;
-import Animated from "Animated" /* 4674 */;
-import AnimatedDefault from "Animated" /* 4674 */;
-import isSearchBarAvailableForCurrentPlatform from "isSearchBarAvailableForCurrentPlatform" /* 4682 */;
-import get_controlledBottomTabs from "get controlledBottomTabs" /* 4683 */;
-import ScreenStackHeaderSubview from "ScreenStackHeaderSubview" /* 4685 */;
-import context from "context" /* 4686 */;
-import _modDef4690 from "module_4690" /* 4690 */;
-import ScreenContainerDefault from "ScreenContainer" /* 4692 */;
-import ScreenStackDefault from "ScreenStack" /* 4694 */;
-import _modDef4697 from "module_4697" /* 4697 */;
-import ScreenContentWrapperDefault from "ScreenContentWrapper" /* 4699 */;
-import ScreenFooterDefault from "ScreenFooter" /* 4701 */;
-import FullWindowOverlayDefault from "FullWindowOverlay" /* 4703 */;
-import useTransitionProgressDefault from "useTransitionProgress" /* 4705 */;
-import TabsHostDefault from "TabsHost" /* 4706 */;
-import RNSModule from "RNSModule" /* 4671 */;
+import isNativePlatformSupported from "04673_isNativePlatformSupported.js";
+import Animated from "04674_Animated.js";
+import AnimatedDefault from "04674_Animated.js";
+import isSearchBarAvailableForCurrentPlatform from "04682_isSearchBarAvailableForCurrentPlatform.js";
+import get_controlledBottomTabs from "04683_get_controlledBottomTabs.js";
+import ScreenStackHeaderSubview from "04685_ScreenStackHeaderSubview.js";
+import context from "04686_context.js";
+import _modDef4690 from "metro/04690__.js";
+import ScreenContainerDefault from "04692_ScreenContainer.js";
+import ScreenStackDefault from "04694_ScreenStack.js";
+import _modDef4697 from "metro/04697__.js";
+import ScreenContentWrapperDefault from "04699_ScreenContentWrapper.js";
+import ScreenFooterDefault from "04701_ScreenFooter.js";
+import FullWindowOverlayDefault from "04703_FullWindowOverlay.js";
+import useTransitionProgressDefault from "04705_useTransitionProgress.js";
+import TabsHostDefault from "04706_TabsHost.js";
+import RNSModule from "04671_RNSModule.js";
 
 for (const key10015 in require("module_4672")) {
   let tmp3 = key10015;

@@ -1,10 +1,10 @@
 // _runtime/04398_map.js
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import ToObject from "ToObject" /* 4399 */;
-import ToUint32 from "ToUint32" /* 4402 */;
-import ToString from "ToString" /* 4414 */;
-import apply from "apply" /* 4426 */;
-import HasProperty from "HasProperty" /* 4450 */;
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import ToObject from "04399_ToObject.js";
+import ToUint32 from "04402_ToUint32.js";
+import ToString from "04414_ToString.js";
+import apply from "04426_apply.js";
+import HasProperty from "04450_HasProperty.js";
 
 const ObjectResult = Object("a");
 let tmp2 = "a" !== ObjectResult[0];

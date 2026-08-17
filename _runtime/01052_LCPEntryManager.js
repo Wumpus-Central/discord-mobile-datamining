@@ -1,6 +1,6 @@
 // _runtime/01052_LCPEntryManager.js
-import LCPEntryManager from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import LCPEntryManager from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LCPEntryManager {

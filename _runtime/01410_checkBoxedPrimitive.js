@@ -1,8 +1,8 @@
 // _runtime/01410_checkBoxedPrimitive.js
-import isArguments from "isArguments" /* 1411 */;
-import isGeneratorFunction from "isGeneratorFunction" /* 1413 */;
-import isTypedArray from "isTypedArray" /* 1416 */;
-import _mod1417 from "module_1417" /* 1417 */;
+import isArguments from "01411_isArguments.js";
+import isGeneratorFunction from "01413_isGeneratorFunction.js";
+import isTypedArray from "01416_isTypedArray.js";
+import _mod1417 from "metro/01417__.js";
 
 function checkBoxedPrimitive(obj, closure_6) {
   if (typeof obj !== "object") {

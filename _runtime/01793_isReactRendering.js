@@ -1,7 +1,7 @@
 // _runtime/01793_isReactRendering.js
-import closure_0 from "noop" /* 19 */;
-import { forwardRef } from "noop" /* 19 */;
-import isJest from "isJest" /* 1657 */;
+import closure_0 from "00019_noop.js";
+import { forwardRef } from "00019_noop.js";
+import isJest from "01657_isJest.js";
 
 let closure_2 = isJest.isReact19();
 

@@ -1,9 +1,9 @@
 // _runtime/01423_setFunctionLength.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
-import _mod542 from "module_542" /* 542 */;
-import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1424 */;
-import defineDataProperty from "defineDataProperty" /* 1425 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import _mod541 from "metro/00541__.js";
+import _mod542 from "metro/00542__.js";
+import hasPropertyDescriptors from "01424_hasPropertyDescriptors.js";
+import defineDataProperty from "01425_defineDataProperty.js";
 
 let closure_2 = hasPropertyDescriptors();
 let closure_3 = getEvalledConstructor("%Math.floor%");

@@ -1,5 +1,5 @@
 // _runtime/00409_context.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 noopAll;
 const context = require("noop").createContext(null);

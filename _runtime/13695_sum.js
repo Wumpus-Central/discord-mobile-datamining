@@ -1,5 +1,5 @@
 // _runtime/13695_sum.js
-import call from "call" /* 13680 */;
+import call from "13680_call.js";
 
 let c0 = 0;
 let closure_1 = Math.random();

@@ -1,9 +1,9 @@
 // _runtime/01478_State.js
-import _createClassDefault from "_createClass" /* 42 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 1479 */;
-import InternetReachabilityDefault from "InternetReachability" /* 1481 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import get_ActivityIndicatorDefault from "01479_get_ActivityIndicator.js";
+import InternetReachabilityDefault from "01481_InternetReachability.js";
+import closure_3 from "00005_asyncGeneratorStep.js";
+import closure_4 from "metro/00041__classCallCheck.js";
 
 class State {
   constructor(arg0) {

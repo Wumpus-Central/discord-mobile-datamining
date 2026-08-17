@@ -1,10 +1,10 @@
 // _runtime/06306_originWhitelistToRegex.js
-import noopDefault from "noop" /* 19 */;
-import _modDef6307 from "module_6307" /* 6307 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 6308 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import _modDef6307 from "metro/06307__.js";
+import get_ActivityIndicatorDefault from "06308_get_ActivityIndicator.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 ({ useCallback: obj1, useMemo: c3, useRef: c4, useState: c5 } = noop);
 noopDefault;

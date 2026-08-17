@@ -1,8 +1,8 @@
 // _runtime/00268_MutationObserver.js
-import _createClassDefault from "_createClass" /* 42 */;
-import notifyMutationObserversAll from "notifyMutationObservers" /* 269 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import notifyMutationObserversAll from "00269_notifyMutationObservers.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 const MutationObserver = importDefault;
 class MutationObserver {

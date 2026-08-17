@@ -1,6 +1,6 @@
 // _runtime/07787_applyClientOptions.js
-import isMatchingPattern from "isMatchingPattern" /* 7747 */;
-import _mod7775 from "module_7775" /* 7775 */;
+import isMatchingPattern from "07747_isMatchingPattern.js";
+import _mod7775 from "metro/07775__.js";
 import { getFilenameToDebugIdMap } from "07790_getFilenameToDebugIdMap.js";
 
 require = arg1;

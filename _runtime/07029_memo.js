@@ -1,9 +1,9 @@
 // _runtime/07029_memo.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noopDefault from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import noop from "noop" /* 19 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import noopDefault from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import cancelAnimationDefault from "01654_cancelAnimation.js";
+import noop from "00019_noop.js";
 
 ({ useContext: obj1, useMemo: c3, memo } = noop);
 noopDefault;

@@ -1,8 +1,8 @@
 // _runtime/01850_useWindowDimensions.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { Dimensions } from "get ActivityIndicator" /* 17 */;
-import { WindowDimensionsEvents } from "nativeEventEmitter" /* 1644 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { Dimensions } from "00017_get_ActivityIndicator.js";
+import { WindowDimensionsEvents } from "01644_nativeEventEmitter.js";
 
 const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);

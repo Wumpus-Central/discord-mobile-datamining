@@ -1,5 +1,5 @@
 // _runtime/13609___exportStarResult18.js
-import __exportStarResult25 from "__exportStarResult25" /* 13610 */;
+import __exportStarResult25 from "13610___exportStarResult25.js";
 
 require = arg1;
 const dependencyMap = arg6;

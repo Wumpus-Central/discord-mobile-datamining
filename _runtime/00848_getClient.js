@@ -1,7 +1,7 @@
 // _runtime/00848_getClient.js
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import generateSpanId from "generateSpanId" /* 829 */;
-import getAsyncContextStrategy from "getAsyncContextStrategy" /* 841 */;
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import generateSpanId from "00829_generateSpanId.js";
+import getAsyncContextStrategy from "00841_getAsyncContextStrategy.js";
 
 require = arg1;
 const dependencyMap = arg6;

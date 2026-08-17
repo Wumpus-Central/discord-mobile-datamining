@@ -1,8 +1,8 @@
 // _runtime/metro/07041__slicedToArray.js
-import _arrayWithHoles from "_arrayWithHoles" /* 7042 */;
-import _iterableToArrayLimit from "_iterableToArrayLimit" /* 7043 */;
-import _unsupportedIterableToArray from "_unsupportedIterableToArray" /* 7044 */;
-import _nonIterableRest from "_nonIterableRest" /* 7046 */;
+import _arrayWithHoles from "../07042__arrayWithHoles.js";
+import _iterableToArrayLimit from "../07043__iterableToArrayLimit.js";
+import _unsupportedIterableToArray from "../07044__unsupportedIterableToArray.js";
+import _nonIterableRest from "../07046__nonIterableRest.js";
 
 
 export default function _slicedToArray(arg0, arg1) {

@@ -1,6 +1,6 @@
 // _runtime/06486_useExclusiveGestures.js
-import ComposedGestureName from "ComposedGestureName" /* 6436 */;
-import useComposedGesture from "useComposedGesture" /* 6485 */;
+import ComposedGestureName from "06436_ComposedGestureName.js";
+import useComposedGesture from "06485_useComposedGesture.js";
 
 require = arg1;
 const dependencyMap = arg6;

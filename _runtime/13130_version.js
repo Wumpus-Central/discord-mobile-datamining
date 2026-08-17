@@ -1,5 +1,5 @@
 // _runtime/13130_version.js
-import SemVer from "SemVer" /* 13122 */;
+import SemVer from "13122_SemVer.js";
 
 
 export default (str) => {

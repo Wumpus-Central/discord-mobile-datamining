@@ -1,8 +1,8 @@
 // _runtime/03683_eachQuarterOfInterval.js
-import addQuarters from "addQuarters" /* 3638 */;
-import startOfQuarter from "startOfQuarter" /* 3684 */;
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import addQuarters from "03638_addQuarters.js";
+import startOfQuarter from "03684_startOfQuarter.js";
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!addQuarters) {
   let obj = { default: null };

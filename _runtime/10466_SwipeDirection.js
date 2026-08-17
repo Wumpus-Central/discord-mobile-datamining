@@ -1,5 +1,5 @@
 // _runtime/10466_SwipeDirection.js
-import str2Default from "str2" /* 10467 */;
+import str2Default from "10467_str2.js";
 
 
 export default str2Default;

@@ -1,11 +1,11 @@
 // _runtime/00420_returnsFalse.js
-import noopAll from "noop" /* 19 */;
-import useMergeRefsDefault from "useMergeRefs" /* 334 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 421 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import useMergeRefsDefault from "00334_useMergeRefs.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/00421___INTERNAL_VIEW_CONFIG.js";
+import closure_5 from "metro/00032__slicedToArray.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["disabled", "ios_backgroundColor", "onChange", "onValueChange", "style", "thumbColor", "trackColor", "value"];

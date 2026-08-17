@@ -1,5 +1,5 @@
 // _runtime/06452_useGestureRelationsUpdater.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useEffect: obj1, useMemo: c3 } = noop);
 

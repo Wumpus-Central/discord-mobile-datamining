@@ -1,5 +1,5 @@
 // _runtime/04412_getPolyfill.js
-import trim6 from "trim" /* 4413 */;
+import trim6 from "04413_trim.js";
 
 
 export default function getPolyfill() {

@@ -1,7 +1,7 @@
 // _runtime/07007_memo.js
-import noopDefault from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
+import noopDefault from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import noop from "00019_noop.js";
 
 ({ useCallback: c3, useMemo: c4, useRef: c5, memo } = noop);
 noopDefault;

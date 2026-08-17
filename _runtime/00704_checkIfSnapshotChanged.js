@@ -1,5 +1,5 @@
 // _runtime/00704_checkIfSnapshotChanged.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 function checkIfSnapshotChanged(arg0) {
   try {

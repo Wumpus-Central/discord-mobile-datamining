@@ -1,7 +1,7 @@
 // _runtime/13745_parseURL.js
-import URL from "URL" /* 13746 */;
-import parseIPv4Number from "parseIPv4Number" /* 13750 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 13753 */;
+import URL from "13746_URL.js";
+import parseIPv4Number from "13750_parseIPv4Number.js";
+import replaceByteInByteSequence from "13753_replaceByteInByteSequence.js";
 
 const obj = {};
 const _URL = URL.URL;

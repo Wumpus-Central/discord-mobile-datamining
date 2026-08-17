@@ -1,8 +1,8 @@
 // _runtime/06463_handleStateChangeEvent.js
-import _mod6383 from "module_6383" /* 6383 */;
-import _mod6385 from "module_6385" /* 6385 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
-import isGestureEnabled from "isGestureEnabled" /* 6445 */;
+import _mod6383 from "metro/06383__.js";
+import _mod6385 from "metro/06385__.js";
+import _isNativeReflectConstruct from "06398__isNativeReflectConstruct.js";
+import isGestureEnabled from "06445_isGestureEnabled.js";
 
 require = arg1;
 const dependencyMap = arg6;

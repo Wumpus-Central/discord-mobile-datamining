@@ -1,6 +1,6 @@
 // _runtime/04705_useTransitionProgress.js
-import noopDefault from "noop" /* 4684 */;
-import closure_2 from "noop" /* 19 */;
+import noopDefault from "04684_noop.js";
+import closure_2 from "00019_noop.js";
 
 
 export default function useTransitionProgress() {

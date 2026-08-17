@@ -1,6 +1,6 @@
 // _runtime/04298_ref.js
-import closure_0 from "noop" /* 19 */;
-import shallowEqual from "shallowEqual" /* 4299 */;
+import closure_0 from "00019_noop.js";
+import shallowEqual from "04299_shallowEqual.js";
 
 if (shallowEqual) {
   if (typeof shallowEqual === "object") {

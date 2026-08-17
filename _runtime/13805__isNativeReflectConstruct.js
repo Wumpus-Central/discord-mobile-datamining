@@ -1,12 +1,12 @@
 // _runtime/13805__isNativeReflectConstruct.js
-import StorybookSwitcher from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "get ActivityIndicator" /* 17 */;
-import closure_5 from "jsxProd" /* 21 */;
+import StorybookSwitcher from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import _inherits from "00098__inherits.js";
+import noop from "00019_noop.js";
+import closure_4 from "00017_get_ActivityIndicator.js";
+import closure_5 from "react/00021_jsxProd.js";
 
 function _isNativeReflectConstruct() {
   try {

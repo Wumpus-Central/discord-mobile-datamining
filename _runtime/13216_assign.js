@@ -1,5 +1,5 @@
 // _runtime/13216_assign.js
-import assign from "assign" /* 13208 */;
+import assign from "13208_assign.js";
 
 let c2 = true;
 let c3 = true;

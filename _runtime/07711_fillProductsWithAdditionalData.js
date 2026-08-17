@@ -1,5 +1,5 @@
 // _runtime/07711_fillProductsWithAdditionalData.js
-import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStepDefault from "00005_asyncGeneratorStep.js";
 
 let RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
 RNIapAmazonModule = asyncGeneratorStepDefault((arg0) => {

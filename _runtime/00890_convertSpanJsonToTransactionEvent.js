@@ -1,5 +1,5 @@
 // _runtime/00890_convertSpanJsonToTransactionEvent.js
-import _mod839 from "module_839" /* 839 */;
+import _mod839 from "metro/00839__.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,7 +1,7 @@
 // _runtime/01571_transformPreventedRoutes.js
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 function transformPreventedRoutes(arr) {

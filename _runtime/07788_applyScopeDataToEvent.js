@@ -1,6 +1,6 @@
 // _runtime/07788_applyScopeDataToEvent.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import merge from "merge" /* 7763 */;
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import merge from "07763_merge.js";
 
 require = arg1;
 const dependencyMap = arg6;

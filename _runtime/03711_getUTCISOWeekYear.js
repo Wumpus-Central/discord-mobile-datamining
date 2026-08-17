@@ -1,7 +1,7 @@
 // _runtime/03711_getUTCISOWeekYear.js
-import _typeof from "_typeof" /* 3472 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import startOfUTCISOWeek from "startOfUTCISOWeek" /* 3709 */;
+import _typeof from "metro/03472__typeof.js";
+import requiredArgs from "03473_requiredArgs.js";
+import startOfUTCISOWeek from "03709_startOfUTCISOWeek.js";
 
 if (!_typeof) {
   let obj = { default: null };

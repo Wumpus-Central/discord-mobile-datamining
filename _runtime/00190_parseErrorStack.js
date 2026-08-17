@@ -1,5 +1,5 @@
 // _runtime/00190_parseErrorStack.js
-import parse from "parse" /* 191 */;
+import parse from "00191_parse.js";
 
 const global = arg0;
 require = arg1;

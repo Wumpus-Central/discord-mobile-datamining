@@ -1,8 +1,8 @@
 // _runtime/16447_MessageFormat.js
-import extend2 from "extend" /* 16449 */;
-import SyntaxError from "SyntaxError" /* 16450 */;
-import StringFormat from "StringFormat" /* 16452 */;
-import extend from "extend" /* 16448 */;
+import extend2 from "16449_extend.js";
+import SyntaxError from "16450_SyntaxError.js";
+import StringFormat from "16452_StringFormat.js";
+import extend from "16448_extend.js";
 
 class MessageFormat {
   constructor(arg0, arg1, arg2) {

@@ -1,8 +1,8 @@
 // _runtime/00551_callBindBasic.js
-import _mod541 from "module_541" /* 541 */;
-import _mod552 from "module_552" /* 552 */;
-import bind from "bind" /* 554 */;
-import _mod556 from "module_556" /* 556 */;
+import _mod541 from "metro/00541__.js";
+import _mod552 from "metro/00552__.js";
+import bind from "00554_bind.js";
+import _mod556 from "metro/00556__.js";
 
 
 export default function callBindBasic(items) {

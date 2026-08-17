@@ -1,6 +1,6 @@
 // _runtime/13685_text.js
-import _mod13686 from "module_13686" /* 13686 */;
-import _mod13700 from "module_13700" /* 13700 */;
+import _mod13686 from "metro/13686__.js";
+import _mod13700 from "metro/13700__.js";
 
 
 export default (arg0) => {

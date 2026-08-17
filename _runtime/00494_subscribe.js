@@ -1,6 +1,6 @@
 // _runtime/00494_subscribe.js
-import noop from "noop" /* 19 */;
-import getColorScheme from "getColorScheme" /* 453 */;
+import noop from "00019_noop.js";
+import getColorScheme from "00453_getColorScheme.js";
 import { getColorScheme } from "00453_getColorScheme.js";
 
 const useSyncExternalStore = noop.useSyncExternalStore;

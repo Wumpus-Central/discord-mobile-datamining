@@ -1,8 +1,8 @@
 // _runtime/04712_TabsAccessoryContent.js
-import noopDefault from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4713 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/04713___INTERNAL_VIEW_CONFIG.js";
+import { StyleSheet } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopDefault;
 

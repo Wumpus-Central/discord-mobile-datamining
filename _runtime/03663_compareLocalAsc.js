@@ -1,7 +1,7 @@
 // _runtime/03663_compareLocalAsc.js
-import _typeof from "_typeof" /* 3472 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import differenceInCalendarDays from "03634_differenceInCalendarDays.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 function compareLocalAsc(defaultResult1, defaultResult2) {
   const fullYear = defaultResult1.getFullYear();

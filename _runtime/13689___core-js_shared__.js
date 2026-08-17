@@ -1,7 +1,7 @@
 // _runtime/13689___core-js_shared__.js
-import _mod13673 from "module_13673" /* 13673 */;
-import _mod13674 from "module_13674" /* 13674 */;
-import _mod13690 from "module_13690" /* 13690 */;
+import _mod13673 from "metro/13673__.js";
+import _mod13674 from "metro/13674__.js";
+import _mod13690 from "metro/13690__.js";
 
 __core_js_shared__ = _mod13673["__core-js_shared__"];
 if (!__core_js_shared__) {

@@ -1,13 +1,13 @@
 // _runtime/00199__isNativeReflectConstruct.js
-import dispatchDefault from "dispatch" /* 132 */;
-import EventDefault from "Event" /* 133 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 207 */;
-import closure_3 from "_get" /* 96 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
+import dispatchDefault from "00132_dispatch.js";
+import EventDefault from "00133_Event.js";
+import _isNativeReflectConstructDefault from "00207__isNativeReflectConstruct.js";
+import closure_3 from "metro/00096__get.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import importDefaultResult1 from "00098__inherits.js";
 
 let XMLHttpRequest = arg1;
 function _isNativeReflectConstruct() {

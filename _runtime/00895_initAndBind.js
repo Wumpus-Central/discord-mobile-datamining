@@ -1,7 +1,7 @@
 // _runtime/00895_initAndBind.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import consoleSandbox from "consoleSandbox" /* 824 */;
-import getClient from "getClient" /* 848 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import consoleSandbox from "00824_consoleSandbox.js";
+import getClient from "00848_getClient.js";
 
 require = arg1;
 const dependencyMap = arg6;

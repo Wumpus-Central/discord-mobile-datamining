@@ -1,7 +1,7 @@
 // _runtime/metro/06513__.js
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "../00019_noop.js";
+import _isNativeReflectConstructDefault from "../06510__isNativeReflectConstruct.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 noopAll;
 

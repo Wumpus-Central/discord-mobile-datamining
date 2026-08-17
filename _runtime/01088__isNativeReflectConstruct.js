@@ -1,14 +1,14 @@
 // _runtime/01088__isNativeReflectConstruct.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_inherits" /* 98 */;
-import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
-import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "_classCallCheck" /* 41 */;
-import closure_8 from "_createClass" /* 42 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import addClsInstrumentationHandler from "01033_addClsInstrumentationHandler.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import closure_5 from "00098__inherits.js";
+import _wrapNativeSuper from "metro/00158__wrapNativeSuper.js";
+import closure_6 from "metro/00032__slicedToArray.js";
+import closure_7 from "metro/00041__classCallCheck.js";
+import closure_8 from "metro/00042__createClass.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 function _isNativeReflectConstruct() {

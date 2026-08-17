@@ -1,6 +1,6 @@
 // _runtime/metro/13733__.js
-import call from "call" /* 13696 */;
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
+import call from "../13696_call.js";
+import getOwnPropertyDescriptor from "../13676_getOwnPropertyDescriptor.js";
 
 if (getOwnPropertyDescriptor) {
   const _Object = Object;

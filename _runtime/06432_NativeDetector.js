@@ -1,9 +1,9 @@
 // _runtime/06432_NativeDetector.js
-import noopDefault from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6392 */;
-import { useMemo } from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06392___INTERNAL_VIEW_CONFIG.js";
+import { useMemo } from "00019_noop.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 noopDefault;

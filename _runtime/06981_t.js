@@ -1,6 +1,6 @@
 // _runtime/06981_t.js
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6953 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import GESTURE_SOURCE from "06953_GESTURE_SOURCE.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const Platform = get_ActivityIndicator.Platform;
 let obj = { initialPosition: 0, initialKeyboardState: GESTURE_SOURCE.KEYBOARD_STATE.UNDETERMINED, isScrollablePositionLocked: false };

@@ -1,6 +1,6 @@
 // _runtime/04597_baseAssignIn.js
-import copyObject from "copyObject" /* 4594 */;
-import keysIn from "keysIn" /* 4598 */;
+import copyObject from "04594_copyObject.js";
+import keysIn from "04598_keysIn.js";
 
 
 export default function baseAssignIn(arg0, arg1) {

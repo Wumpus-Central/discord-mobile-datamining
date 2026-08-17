@@ -1,7 +1,7 @@
 // _runtime/01092_BROWSER_TRACING_INTEGRATION_ID.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
-import shouldAttachHeaders from "shouldAttachHeaders" /* 1090 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import ignoreNextOnError from "01028_ignoreNextOnError.js";
+import shouldAttachHeaders from "01090_shouldAttachHeaders.js";
 import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

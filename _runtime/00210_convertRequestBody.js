@@ -1,5 +1,5 @@
 // _runtime/00210_convertRequestBody.js
-import Blob from "Blob" /* 203 */;
+import Blob from "00203_Blob.js";
 
 require = arg1;
 const dependencyMap = arg6;

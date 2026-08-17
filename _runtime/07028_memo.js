@@ -1,5 +1,5 @@
 // _runtime/07028_memo.js
-import memoDefault from "memo" /* 7029 */;
+import memoDefault from "07029_memo.js";
 
 
 export default memoDefault;

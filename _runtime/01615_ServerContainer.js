@@ -1,6 +1,6 @@
 // _runtime/01615_ServerContainer.js
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 

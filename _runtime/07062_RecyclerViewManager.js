@@ -1,7 +1,7 @@
 // _runtime/07062_RecyclerViewManager.js
-import _createClassDefault from "_createClass" /* 7051 */;
-import ViewabilityManagerDefault from "ViewabilityManager" /* 7066 */;
-import closure_3 from "_classCallCheck" /* 7050 */;
+import _createClassDefault from "metro/07051__createClass.js";
+import ViewabilityManagerDefault from "07066_ViewabilityManager.js";
+import closure_3 from "metro/07050__classCallCheck.js";
 
 const RecyclerViewManager = arg1;
 class RecyclerViewManager {

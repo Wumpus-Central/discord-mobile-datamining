@@ -1,10 +1,10 @@
 // _runtime/06572_inlineStyles.js
-import CircleDefault from "Circle" /* 6574 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
-import showErrorCSS from "showErrorCSS" /* 6677 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6678 */;
-import _fetchText from "_fetchText" /* 6680 */;
-import RNSVGCircle from "RNSVGCircle" /* 6681 */;
+import CircleDefault from "06574_Circle.js";
+import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
+import showErrorCSS from "06677_showErrorCSS.js";
+import _isNativeReflectConstruct from "06678__isNativeReflectConstruct.js";
+import _fetchText from "06680__fetchText.js";
+import RNSVGCircle from "06681_RNSVGCircle.js";
 
 for (const key10013 in require("module_6573")) {
   let tmp2 = key10013;

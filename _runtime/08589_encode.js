@@ -1,5 +1,5 @@
 // _runtime/08589_encode.js
-import encode from "encode" /* 8590 */;
+import encode from "08590_encode.js";
 
 
 export const encode = encode.encode;

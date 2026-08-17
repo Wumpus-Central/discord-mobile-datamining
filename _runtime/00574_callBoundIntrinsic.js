@@ -1,6 +1,6 @@
 // _runtime/00574_callBoundIntrinsic.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import callBindBasic from "callBindBasic" /* 551 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import callBindBasic from "00551_callBindBasic.js";
 
 let items = [getEvalledConstructor("%String.prototype.indexOf%")];
 let closure_2 = callBindBasic(items);

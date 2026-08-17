@@ -1,5 +1,5 @@
 // _runtime/04210_parse.js
-import _mod4211 from "module_4211" /* 4211 */;
+import _mod4211 from "metro/04211__.js";
 
 function parse(str, delimiter) {
   str = delimiter;

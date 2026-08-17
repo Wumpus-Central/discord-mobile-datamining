@@ -1,6 +1,6 @@
 // _runtime/13755_URLSearchParamsImpl.js
-import _createClass from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _createClass from "metro/00042__createClass.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const URLSearchParamsImpl = require;
 class URLSearchParamsImpl {

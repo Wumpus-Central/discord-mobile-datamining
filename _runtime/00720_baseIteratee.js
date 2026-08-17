@@ -1,7 +1,7 @@
 // _runtime/00720_baseIteratee.js
-import _mod599 from "module_599" /* 599 */;
-import identity from "identity" /* 634 */;
-import property from "property" /* 801 */;
+import _mod599 from "metro/00599__.js";
+import identity from "00634_identity.js";
+import property from "00801_property.js";
 
 
 export default function baseIteratee(fn) {

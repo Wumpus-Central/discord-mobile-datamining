@@ -1,6 +1,6 @@
 // _runtime/00830_addContextToFrame.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
-import isMatchingPattern from "isMatchingPattern" /* 832 */;
+import addNonEnumerableProperty from "00822_addNonEnumerableProperty.js";
+import isMatchingPattern from "00832_isMatchingPattern.js";
 import { safeDateNow } from "00831_safeDateNow.js";
 
 require = arg1;

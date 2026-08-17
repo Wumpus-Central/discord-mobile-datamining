@@ -1,5 +1,5 @@
 // _runtime/01020_finally.js
-import noop from "noop" /* 1019 */;
+import noop from "01019_noop.js";
 
 noop.prototype.finally = function(arg0) {
   closure_0 = arg0;

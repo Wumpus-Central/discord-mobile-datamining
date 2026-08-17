@@ -1,5 +1,5 @@
 // _runtime/00637_toNumber.js
-import isSymbol from "isSymbol" /* 638 */;
+import isSymbol from "00638_isSymbol.js";
 
 const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;

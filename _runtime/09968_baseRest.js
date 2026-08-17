@@ -1,6 +1,6 @@
 // _runtime/09968_baseRest.js
-import baseRest from "baseRest" /* 8049 */;
-import baseDelay from "baseDelay" /* 9969 */;
+import baseRest from "08049_baseRest.js";
+import baseDelay from "09969_baseDelay.js";
 
 
 export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

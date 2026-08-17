@@ -1,7 +1,7 @@
 // _runtime/06483_useCompetingGestures.js
-import useCompetingGestures from "useCompetingGestures" /* 6484 */;
-import useExclusiveGestures from "useExclusiveGestures" /* 6486 */;
-import useSimultaneousGestures from "useSimultaneousGestures" /* 6487 */;
+import useCompetingGestures from "06484_useCompetingGestures.js";
+import useExclusiveGestures from "06486_useExclusiveGestures.js";
+import useSimultaneousGestures from "06487_useSimultaneousGestures.js";
 
 
 export const useCompetingGestures = useCompetingGestures.useCompetingGestures;

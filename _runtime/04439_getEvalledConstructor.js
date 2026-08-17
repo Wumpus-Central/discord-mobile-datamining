@@ -1,6 +1,6 @@
 // _runtime/04439_getEvalledConstructor.js
-import getEvalledConstructor from "getEvalledConstructor" /* 4440 */;
-import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 4441 */;
+import getEvalledConstructor from "04440_getEvalledConstructor.js";
+import DefinePropertyOrThrow from "04441_DefinePropertyOrThrow.js";
 
 const tmp = getEvalledConstructor("%Reflect.construct%", true);
 let closure_0 = tmp;

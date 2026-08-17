@@ -1,7 +1,7 @@
 // _runtime/metro/05036__.js
-import getNative from "getNative" /* 773 */;
-import setToArray from "setToArray" /* 790 */;
-import noop from "noop" /* 5037 */;
+import getNative from "../00773_getNative.js";
+import setToArray from "../00790_setToArray.js";
+import noop from "../05037_noop.js";
 
 if (getNative) {
   const _module = setToArray;

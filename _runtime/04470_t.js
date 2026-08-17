@@ -1,5 +1,5 @@
 // _runtime/04470_t.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 let fn = function t(exports, React) {
   c0 = React;

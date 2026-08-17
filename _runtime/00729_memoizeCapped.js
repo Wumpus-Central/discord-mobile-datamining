@@ -1,5 +1,5 @@
 // _runtime/00729_memoizeCapped.js
-import memoizeCapped from "memoizeCapped" /* 730 */;
+import memoizeCapped from "00730_memoizeCapped.js";
 
 const re0 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
 const re1 = /\\(\\)?/g;

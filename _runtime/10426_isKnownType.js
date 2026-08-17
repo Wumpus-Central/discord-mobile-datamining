@@ -1,12 +1,12 @@
 // _runtime/10426_isKnownType.js
-import isKnownType from "isKnownType" /* 10427 */;
-import keepLocalCopy from "keepLocalCopy" /* 10429 */;
-import frozen from "frozen" /* 10430 */;
-import isErrorWithCode from "isErrorWithCode" /* 10431 */;
-import _pickDirectory from "_pickDirectory" /* 10432 */;
-import _pick from "_pick" /* 10433 */;
-import _saveDocuments from "_saveDocuments" /* 10435 */;
-import releaseLongTermAccess from "releaseLongTermAccess" /* 10436 */;
+import isKnownType from "10427_isKnownType.js";
+import keepLocalCopy from "10429_keepLocalCopy.js";
+import frozen from "10430_frozen.js";
+import isErrorWithCode from "10431_isErrorWithCode.js";
+import _pickDirectory from "10432__pickDirectory.js";
+import _pick from "10433__pick.js";
+import _saveDocuments from "10435__saveDocuments.js";
+import releaseLongTermAccess from "10436_releaseLongTermAccess.js";
 
 
 export const isKnownType = isKnownType.isKnownType;

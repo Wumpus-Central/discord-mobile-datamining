@@ -1,6 +1,6 @@
 // _runtime/06411_MountRegistry.js
-import _createClassDefault from "_createClass" /* 42 */;
-import MountRegistry from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import MountRegistry from "metro/00041__classCallCheck.js";
 
 class MountRegistry {
   constructor() {

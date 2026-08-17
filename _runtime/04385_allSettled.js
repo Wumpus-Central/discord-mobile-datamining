@@ -1,10 +1,10 @@
 // _runtime/04385_allSettled.js
-import requirePromise from "requirePromise" /* 4386 */;
-import getPolyfill from "getPolyfill" /* 4387 */;
-import allSettled2 from "allSettled" /* 4388 */;
-import shimAllSettled from "shimAllSettled" /* 4463 */;
-import callBind from "callBind" /* 1422 */;
-import defineProperty from "defineProperty" /* 4415 */;
+import requirePromise from "04386_requirePromise.js";
+import getPolyfill from "04387_getPolyfill.js";
+import allSettled2 from "04388_allSettled.js";
+import shimAllSettled from "04463_shimAllSettled.js";
+import callBind from "01422_callBind.js";
+import defineProperty from "04415_defineProperty.js";
 
 requirePromise();
 let closure_0 = callBind(getPolyfill());

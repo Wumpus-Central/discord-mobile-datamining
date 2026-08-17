@@ -1,5 +1,5 @@
 // _runtime/01028_ignoreNextOnError.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 function ignoreNextOnError() {
   closure_2 = closure_2 + 1;

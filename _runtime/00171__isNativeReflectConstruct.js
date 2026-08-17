@@ -1,10 +1,10 @@
 // _runtime/00171__isNativeReflectConstruct.js
-import PerformanceLongTaskTiming from "_get" /* 96 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_1 from "_classCallCheck" /* 41 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
+import PerformanceLongTaskTiming from "metro/00096__get.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_1 from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
+import importDefaultResult1 from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
   try {

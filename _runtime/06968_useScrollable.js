@@ -1,5 +1,5 @@
 // _runtime/06968_useScrollable.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { cancelAnimation } from "01654_cancelAnimation.js";
 import { GESTURE_SOURCE } from "06953_GESTURE_SOURCE.js";
 

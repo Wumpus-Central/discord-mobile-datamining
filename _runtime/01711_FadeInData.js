@@ -1,5 +1,5 @@
 // _runtime/01711_FadeInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
 obj = { FadeIn: { name: "FadeIn", style: obj, duration: 0.3 }, FadeInRight: { name: "FadeInRight", style: obj, duration: 0.3 }, FadeInLeft: { name: "FadeInLeft", style: obj1, duration: 0.3 }, FadeInUp: { name: "FadeInUp", style: obj2, duration: 0.3 }, FadeInDown: { name: "FadeInDown", style: obj3, duration: 0.3 } };
 obj = { 0: { opacity: 0 }, 100: null };

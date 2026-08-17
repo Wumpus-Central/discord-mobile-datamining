@@ -1,6 +1,6 @@
 // _runtime/06380_onGestureHandlerEvent.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import map2 from "map" /* 6381 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import map2 from "06381_map.js";
 
 function onGestureHandlerEvent(handlerTag) {
   let obj = map2;

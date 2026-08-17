@@ -1,6 +1,6 @@
 // _runtime/00942_extractTargetInfo.js
-import _mod940 from "module_940" /* 940 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod940 from "metro/00940__.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let obj = { "tools/call": null, "resources/read": null, "resources/subscribe": null, "resources/unsubscribe": null, "prompts/get": null };

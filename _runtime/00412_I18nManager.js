@@ -1,5 +1,5 @@
 // _runtime/00412_I18nManager.js
-import I18nManagerDefault from "I18nManager" /* 413 */;
+import I18nManagerDefault from "00413_I18nManager.js";
 
 for (const key10016 in require("I18nManager")) {
   let tmp2 = key10016;

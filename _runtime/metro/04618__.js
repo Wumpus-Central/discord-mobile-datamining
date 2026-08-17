@@ -1,7 +1,7 @@
 // _runtime/metro/04618__.js
-import identity from "identity" /* 634 */;
-import getNative from "getNative" /* 805 */;
-import constant from "constant" /* 4619 */;
+import identity from "../00634_identity.js";
+import getNative from "../00805_getNative.js";
+import constant from "../04619_constant.js";
 
 if (getNative) {
   let fn = (arg0, arg1) => {

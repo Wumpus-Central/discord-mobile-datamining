@@ -1,10 +1,10 @@
 // _runtime/06445_isGestureEnabled.js
-import hash from "hash" /* 6434 */;
-import items2 from "items2" /* 6435 */;
-import isComposedGesture from "isComposedGesture" /* 6444 */;
-import map from "map" /* 6446 */;
-import isNativeEvent from "isNativeEvent" /* 6447 */;
-import getHandler from "getHandler" /* 6448 */;
+import hash from "06434_hash.js";
+import items2 from "06435_items2.js";
+import isComposedGesture from "06444_isComposedGesture.js";
+import map from "06446_map.js";
+import isNativeEvent from "06447_isNativeEvent.js";
+import getHandler from "06448_getHandler.js";
 
 
 export const isGestureEnabled = map.isGestureEnabled;

@@ -1,6 +1,6 @@
 // _runtime/metro/04929__.js
-import readTag from "readTag" /* 4930 */;
-import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+import readTag from "../04930_readTag.js";
+import importDefaultResult1 from "../04931_importDefaultResult1.js";
 
 require = arg1;
 const module = arg2;

@@ -1,6 +1,6 @@
 // _runtime/10321_context.js
-import importDefaultResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import importDefaultResult from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let context = importDefaultResult.createContext({});

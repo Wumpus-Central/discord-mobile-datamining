@@ -1,7 +1,7 @@
 // _runtime/06424_dropHandlers.js
-import map from "map" /* 6381 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
-import MountRegistry2 from "MountRegistry" /* 6411 */;
+import map from "06381_map.js";
+import transformIntoHandlerTags from "06408_transformIntoHandlerTags.js";
+import MountRegistry2 from "06411_MountRegistry.js";
 
 require = arg1;
 const module = arg2;

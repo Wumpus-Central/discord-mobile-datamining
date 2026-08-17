@@ -1,7 +1,7 @@
 // _runtime/01196_isModalSupported.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import TurboModuleRegistry from "TurboModuleRegistry" /* 997 */;
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import TurboModuleRegistry from "00997_TurboModuleRegistry.js";
+import isHermesEnabled from "01002_isHermesEnabled.js";
 
 const Alert = get_ActivityIndicator.Alert;
 

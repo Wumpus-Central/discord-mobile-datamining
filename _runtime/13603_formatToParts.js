@@ -1,7 +1,7 @@
 // _runtime/13603_formatToParts.js
-import digitsToString from "digitsToString" /* 13581 */;
-import _mod13604 from "module_13604" /* 13604 */;
-import e from "e" /* 1281 */;
+import digitsToString from "13581_digitsToString.js";
+import _mod13604 from "metro/13604__.js";
+import e from "01281_e.js";
 
 let closure_2 = e.__importDefault(digitsToString);
 const regExp = new RegExp("^".concat(_mod13604.S_UNICODE_REGEX.source));

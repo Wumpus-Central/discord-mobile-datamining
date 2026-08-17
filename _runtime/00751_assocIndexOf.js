@@ -1,5 +1,5 @@
 // _runtime/00751_assocIndexOf.js
-import eq from "eq" /* 752 */;
+import eq from "00752_eq.js";
 
 
 export default function assocIndexOf(arg0, arg1) {

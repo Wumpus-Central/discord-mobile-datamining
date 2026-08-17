@@ -1,12 +1,12 @@
 // _runtime/00172__isNativeReflectConstruct.js
-import _inheritsDefault from "_inherits" /* 98 */;
-import PerformanceResourceTiming from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_4 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
+import _inheritsDefault from "00098__inherits.js";
+import PerformanceResourceTiming from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00096__get.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_4 from "00090__classPrivateFieldBase.js";
+import importDefaultResult2 from "00091__classPrivateFieldKey.js";
 
 function _isNativeReflectConstruct() {
   try {

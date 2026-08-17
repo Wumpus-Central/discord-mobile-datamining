@@ -1,8 +1,8 @@
 // _runtime/03757_getWeeksInMonth.js
-import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3661 */;
-import lastDayOfMonth from "lastDayOfMonth" /* 3758 */;
-import startOfMonth from "startOfMonth" /* 3688 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import differenceInCalendarWeeks from "03661_differenceInCalendarWeeks.js";
+import lastDayOfMonth from "03758_lastDayOfMonth.js";
+import startOfMonth from "03688_startOfMonth.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!differenceInCalendarWeeks) {
   let obj = { default: null };

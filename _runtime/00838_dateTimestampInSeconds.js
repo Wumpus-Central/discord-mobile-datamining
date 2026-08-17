@@ -1,5 +1,5 @@
 // _runtime/00838_dateTimestampInSeconds.js
-import safeDateNow from "safeDateNow" /* 831 */;
+import safeDateNow from "00831_safeDateNow.js";
 
 require = arg1;
 const dependencyMap = arg6;

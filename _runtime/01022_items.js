@@ -1,5 +1,5 @@
 // _runtime/01022_items.js
-import noop from "noop" /* 1019 */;
+import noop from "01019_noop.js";
 
 require = arg1;
 let dependencyMap = arg6;

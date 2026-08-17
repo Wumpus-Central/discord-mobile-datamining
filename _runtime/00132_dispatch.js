@@ -1,9 +1,9 @@
 // _runtime/00132_dispatch.js
-import EventDefault from "Event" /* 133 */;
-import SymbolResult1 from "SymbolResult1" /* 134 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import EventDefault from "00133_Event.js";
+import SymbolResult1 from "00134_SymbolResult1.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 const EventTarget = global;
 require = arg1;

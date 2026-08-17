@@ -1,9 +1,9 @@
 // _runtime/12634_MemoryRouter.js
-import _extends from "_extends" /* 4208 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 12635 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 12636 */;
-import _isNativeReflectConstructDefault3 from "_isNativeReflectConstruct" /* 12637 */;
-import NativeRouterDefault from "NativeRouter" /* 12638 */;
+import _extends from "metro/04208__extends.js";
+import _isNativeReflectConstructDefault from "12635__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault2 from "12636__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault3 from "12637__isNativeReflectConstruct.js";
+import NativeRouterDefault from "12638_NativeRouter.js";
 
 
 export const MemoryRouter = _extends.MemoryRouter;

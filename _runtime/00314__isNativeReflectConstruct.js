@@ -1,24 +1,24 @@
 // _runtime/00314__isNativeReflectConstruct.js
-import _modDef38 from "module_38" /* 38 */;
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import ListMetricsAggregatorDefault from "ListMetricsAggregator" /* 315 */;
-import ChildListCollectionDefault from "ChildListCollection" /* 316 */;
-import infoLogDefault from "infoLog" /* 317 */;
-import InfoDefault from "Info" /* 318 */;
-import ViewabilityHelperDefault from "ViewabilityHelper" /* 319 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 321 */;
-import clampDefault from "clamp" /* 323 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 325 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "_classCallCheck" /* 41 */;
-import closure_7 from "_possibleConstructorReturn" /* 93 */;
-import closure_8 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_9 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _modDef38 from "metro/00038__.js";
+import nullthrowsDefault from "00070_nullthrows.js";
+import _inheritsDefault from "00098__inherits.js";
+import ListMetricsAggregatorDefault from "00315_ListMetricsAggregator.js";
+import ChildListCollectionDefault from "00316_ChildListCollection.js";
+import infoLogDefault from "00317_infoLog.js";
+import InfoDefault from "00318_Info.js";
+import ViewabilityHelperDefault from "00319_ViewabilityHelper.js";
+import _isNativeReflectConstructDefault from "00321__isNativeReflectConstruct.js";
+import clampDefault from "00323_clamp.js";
+import _isNativeReflectConstructDefault2 from "00325__isNativeReflectConstruct.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import closure_6 from "metro/00041__classCallCheck.js";
+import closure_7 from "metro/00093__possibleConstructorReturn.js";
+import closure_8 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_9 from "00019_noop.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 let VirtualizedList = arg1;
 function _isNativeReflectConstruct() {

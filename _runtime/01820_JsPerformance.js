@@ -1,10 +1,10 @@
 // _runtime/01820_JsPerformance.js
-import noopDefault from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import configureProps from "configureProps" /* 1753 */;
-import createAnimatedComponent from "createAnimatedComponent" /* 1688 */;
+import noopDefault from "00019_noop.js";
+import noop from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import configureProps from "01753_configureProps.js";
+import createAnimatedComponent from "01688_createAnimatedComponent.js";
 
 function JsPerformance(smoothingFrames) {
   smoothingFrames = smoothingFrames.smoothingFrames;

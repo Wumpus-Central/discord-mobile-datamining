@@ -1,5 +1,5 @@
 // _runtime/07720_productSk2Map.js
-import _mod7708 from "module_7708" /* 7708 */;
+import _mod7708 from "metro/07708__.js";
 
 require = arg1;
 const dependencyMap = arg6;

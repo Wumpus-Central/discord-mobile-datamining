@@ -1,5 +1,5 @@
 // _runtime/metro/12197__.js
-import _mod12198 from "module_12198" /* 12198 */;
+import _mod12198 from "12198__.js";
 
 const self = this;
 let self2 = this;

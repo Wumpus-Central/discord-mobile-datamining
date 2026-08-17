@@ -1,5 +1,5 @@
 // _runtime/04417_isArguments.js
-import isArguments from "isArguments" /* 4418 */;
+import isArguments from "04418_isArguments.js";
 
 if (Object.keys) {
   module.exports = undefined;

@@ -1,6 +1,6 @@
 // _runtime/01004_encodeUTF8.js
-import getSentryCarrier from "getSentryCarrier" /* 1005 */;
-import globalEncodeFactory from "globalEncodeFactory" /* 1006 */;
+import getSentryCarrier from "01005_getSentryCarrier.js";
+import globalEncodeFactory from "01006_globalEncodeFactory.js";
 
 require = arg1;
 const dependencyMap = arg6;

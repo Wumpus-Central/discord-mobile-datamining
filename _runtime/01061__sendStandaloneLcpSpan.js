@@ -1,7 +1,7 @@
 // _runtime/01061__sendStandaloneLcpSpan.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
-import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import __SENTRY_DEBUG__ from "metro/01035___SENTRY_DEBUG__.js";
+import extractNetworkProtocol from "01059_extractNetworkProtocol.js";
 
 require = arg1;
 let dependencyMap = arg6;

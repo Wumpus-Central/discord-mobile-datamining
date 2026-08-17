@@ -1,6 +1,6 @@
 // _runtime/metro/13150__.js
-import SemVer from "SemVer" /* 13122 */;
-import SemVer2 from "SemVer" /* 13123 */;
+import SemVer from "../13122_SemVer.js";
+import SemVer2 from "../13123_SemVer.js";
 
 
 export default (num) => {

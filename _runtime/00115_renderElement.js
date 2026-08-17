@@ -1,7 +1,7 @@
 // _runtime/00115_renderElement.js
-import noopAll from "noop" /* 19 */;
-import ReactFabricDefault from "ReactFabric" /* 116 */;
-import getExtendedError from "getExtendedError" /* 289 */;
+import noopAll from "00019_noop.js";
+import ReactFabricDefault from "00116_ReactFabric.js";
+import getExtendedError from "00289_getExtendedError.js";
 
 require = arg1;
 noopAll;

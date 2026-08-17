@@ -1,8 +1,8 @@
 // _runtime/00450_showActionSheetWithOptions.js
-import _mod38 from "module_38" /* 38 */;
-import processColor from "processColor" /* 50 */;
-import ActionSheetManagerDefault from "ActionSheetManager" /* 451 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _mod38 from "metro/00038__.js";
+import processColor from "00050_processColor.js";
+import ActionSheetManagerDefault from "00451_ActionSheetManager.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
 
 require = arg1;
 let closure_3 = ["tintColor", "cancelButtonTintColor", "disabledButtonTintColor", "destructiveButtonIndex"];

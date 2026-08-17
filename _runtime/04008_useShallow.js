@@ -1,5 +1,5 @@
 // _runtime/04008_useShallow.js
-import closure_2 from "noop" /* 19 */;
+import closure_2 from "00019_noop.js";
 
 
 export const useShallow = function useShallow(arg0) {

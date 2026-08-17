@@ -1,6 +1,6 @@
 // _runtime/04888_isAVIF.js
-import getFileChunk from "getFileChunk" /* 4882 */;
-import _mod4883 from "module_4883" /* 4883 */;
+import getFileChunk from "04882_getFileChunk.js";
+import _mod4883 from "metro/04883__.js";
 
 require = arg1;
 const dependencyMap = arg6;

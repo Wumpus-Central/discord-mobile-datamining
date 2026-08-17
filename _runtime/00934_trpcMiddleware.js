@@ -1,5 +1,5 @@
 // _runtime/00934_trpcMiddleware.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = { mechanism: { handled: false, type: "auto.rpc.trpc.middleware" } };

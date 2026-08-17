@@ -1,6 +1,6 @@
 // _runtime/03864_nextSunday.js
-import nextDay from "nextDay" /* 3860 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import nextDay from "03860_nextDay.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!nextDay) {
   let obj = { default: null };

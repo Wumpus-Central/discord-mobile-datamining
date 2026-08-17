@@ -1,5 +1,5 @@
 // _runtime/01717_ZoomInData.js
-import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
+import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
 obj = { ZoomIn: { name: "ZoomIn", style: obj, duration: 0.3 }, ZoomInRotate: { name: "ZoomInRotate", style: obj, duration: 0.3 }, ZoomInRight: { name: "ZoomInRight", style: obj1, duration: 0.3 }, ZoomInLeft: { name: "ZoomInLeft", style: obj2, duration: 0.3 }, ZoomInUp: { name: "ZoomInUp", style: obj3, duration: 0.3 }, ZoomInDown: { name: "ZoomInDown", style: obj4, duration: 0.3 }, ZoomInEasyUp: { name: "ZoomInEasyUp", style: obj5, duration: 0.3 }, ZoomInEasyDown: { name: "ZoomInEasyDown", style: obj6, duration: 0.3 } };
 obj = { 0: { transform: items }, 100: null };

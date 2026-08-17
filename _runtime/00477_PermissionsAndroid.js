@@ -1,5 +1,5 @@
 // _runtime/00477_PermissionsAndroid.js
-import PermissionsAndroidDefault from "PermissionsAndroid" /* 478 */;
+import PermissionsAndroidDefault from "00478_PermissionsAndroid.js";
 
 for (const key10016 in require("PermissionsAndroid")) {
   let tmp2 = key10016;

@@ -1,5 +1,5 @@
 // _runtime/09937_context.js
-import importAllResult from "noop" /* 19 */;
+import importAllResult from "00019_noop.js";
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(undefined);

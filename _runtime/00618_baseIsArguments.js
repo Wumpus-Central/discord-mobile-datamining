@@ -1,6 +1,6 @@
 // _runtime/00618_baseIsArguments.js
-import isObjectLike from "isObjectLike" /* 620 */;
-import baseIsArguments from "baseIsArguments" /* 619 */;
+import isObjectLike from "00620_isObjectLike.js";
+import baseIsArguments from "00619_baseIsArguments.js";
 
 ({ hasOwnProperty: obj1, propertyIsEnumerable: c3 } = Object.prototype);
 if (baseIsArguments((() => arguments)())) {

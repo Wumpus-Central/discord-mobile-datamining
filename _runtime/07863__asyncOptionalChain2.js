@@ -1,5 +1,5 @@
 // _runtime/07863__asyncOptionalChain2.js
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import closure_0 from "00005_asyncGeneratorStep.js";
 
 function _asyncOptionalChain2() {
   const self = this;

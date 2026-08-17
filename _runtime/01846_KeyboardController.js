@@ -1,6 +1,6 @@
 // _runtime/01846_KeyboardController.js
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import { KeyboardEvents, KeyboardEvents as KeyboardEvents2 } from "nativeEventEmitter" /* 1644 */;
+import importDefaultResult from "00005_asyncGeneratorStep.js";
+import { KeyboardEvents, KeyboardEvents as KeyboardEvents2 } from "01644_nativeEventEmitter.js";
 
 let closure_0 = arg1;
 let c2 = true;

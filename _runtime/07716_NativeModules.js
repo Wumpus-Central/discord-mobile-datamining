@@ -1,6 +1,6 @@
 // _runtime/07716_NativeModules.js
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import importDefaultResult from "00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 let closure_0 = arg1;
 ({ Linking: obj1, NativeModules } = get_ActivityIndicator);

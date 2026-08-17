@@ -1,7 +1,7 @@
 // _runtime/03661_differenceInCalendarWeeks.js
-import startOfWeek from "startOfWeek" /* 3631 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfWeek from "03631_startOfWeek.js";
+import getTimezoneOffsetInMilliseconds from "03635_getTimezoneOffsetInMilliseconds.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfWeek) {
   let obj = { default: null };

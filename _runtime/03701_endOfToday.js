@@ -1,5 +1,5 @@
 // _runtime/03701_endOfToday.js
-import endOfDay from "endOfDay" /* 3672 */;
+import endOfDay from "03672_endOfDay.js";
 
 if (!endOfDay) {
   const obj = { default: null };

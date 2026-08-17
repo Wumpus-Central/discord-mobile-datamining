@@ -1,10 +1,10 @@
 // _runtime/01187_reactNativeTracingIntegration.js
-import startIdleSpan from "startIdleSpan" /* 1160 */;
-import INTEGRATION_NAME from "INTEGRATION_NAME" /* 1166 */;
-import reactNavigationIntegration from "reactNavigationIntegration" /* 1168 */;
-import reactNativeNavigationIntegration from "reactNativeNavigationIntegration" /* 1190 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1191 */;
-import addGestureBreadcrumb from "addGestureBreadcrumb" /* 1193 */;
+import startIdleSpan from "01160_startIdleSpan.js";
+import INTEGRATION_NAME from "01166_INTEGRATION_NAME.js";
+import reactNavigationIntegration from "01168_reactNavigationIntegration.js";
+import reactNativeNavigationIntegration from "01190_reactNativeNavigationIntegration.js";
+import _isNativeReflectConstruct from "01191__isNativeReflectConstruct.js";
+import addGestureBreadcrumb from "01193_addGestureBreadcrumb.js";
 
 for (const key10013 in require("module_1155")) {
   let tmp2 = key10013;

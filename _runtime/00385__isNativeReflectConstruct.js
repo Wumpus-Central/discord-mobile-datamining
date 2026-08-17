@@ -1,13 +1,13 @@
 // _runtime/00385__isNativeReflectConstruct.js
-import _inheritsDefault from "_inherits" /* 98 */;
-import bezier from "bezier" /* 364 */;
-import _readOnlyErrorDefault from "_readOnlyError" /* 377 */;
-import AnimationDefault from "Animation" /* 379 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import closure_7 from "_get" /* 96 */;
-import importDefaultResult1 from "_createClass" /* 42 */;
+import _inheritsDefault from "00098__inherits.js";
+import bezier from "00364_bezier.js";
+import _readOnlyErrorDefault from "metro/00377__readOnlyError.js";
+import AnimationDefault from "00379_Animation.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import closure_7 from "metro/00096__get.js";
+import importDefaultResult1 from "metro/00042__createClass.js";
 
 const TimingAnimation = global;
 require = arg1;

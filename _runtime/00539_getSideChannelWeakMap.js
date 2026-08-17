@@ -1,7 +1,7 @@
 // _runtime/00539_getSideChannelWeakMap.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import _mod577 from "module_577" /* 577 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import _mod577 from "metro/00577__.js";
 
 let tmp = getEvalledConstructor("%WeakMap%", true);
 let closure_2 = tmp;

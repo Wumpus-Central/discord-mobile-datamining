@@ -1,6 +1,6 @@
 // _runtime/04350__playHaptic.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
 
 function _playHaptic() {
   const self = this;

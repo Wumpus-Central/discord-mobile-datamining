@@ -1,5 +1,5 @@
 // _runtime/04604_cloneArrayBuffer.js
-import _mod788 from "module_788" /* 788 */;
+import _mod788 from "metro/00788__.js";
 
 
 export default function cloneArrayBuffer(byteLength) {

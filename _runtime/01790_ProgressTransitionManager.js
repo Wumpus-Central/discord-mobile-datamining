@@ -1,11 +1,11 @@
 // _runtime/01790_ProgressTransitionManager.js
-import isJest2 from "isJest" /* 1657 */;
-import t from "t" /* 1665 */;
-import isReanimated3 from "isReanimated3" /* 1698 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import isJest from "isJest" /* 1657 */;
+import isJest2 from "01657_isJest.js";
+import t from "01665_t.js";
+import isReanimated3 from "01698_isReanimated3.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import isJest from "01657_isJest.js";
 import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
 
 const ProgressTransitionManager = global;

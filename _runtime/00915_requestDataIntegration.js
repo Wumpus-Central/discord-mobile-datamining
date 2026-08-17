@@ -1,5 +1,5 @@
 // _runtime/00915_requestDataIntegration.js
-import setupIntegration from "setupIntegration" /* 887 */;
+import setupIntegration from "00887_setupIntegration.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_2 = { cookies: true, data: true, headers: true, query_string: true, url: true };

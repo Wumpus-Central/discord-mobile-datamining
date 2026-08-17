@@ -1,6 +1,6 @@
 // _runtime/06967_useBottomSheetModalInternal.js
-import noop from "noop" /* 19 */;
-import BottomSheetContext from "BottomSheetContext" /* 6963 */;
+import noop from "00019_noop.js";
+import BottomSheetContext from "06963_BottomSheetContext.js";
 
 const useContext = noop.useContext;
 

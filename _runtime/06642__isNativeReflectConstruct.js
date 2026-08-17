@@ -1,14 +1,14 @@
 // _runtime/06642__isNativeReflectConstruct.js
-import noopAll from "noop" /* 19 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6643 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import _inheritsDefault from "00098__inherits.js";
+import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06643___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import { Image } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const SvgImage = arg1;
 function _isNativeReflectConstruct() {

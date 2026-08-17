@@ -1,6 +1,6 @@
 // _runtime/07796_createClientReportEnvelope.js
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
-import forEachEnvelopeItem from "forEachEnvelopeItem" /* 7782 */;
+import dateTimestampInSeconds from "07752_dateTimestampInSeconds.js";
+import forEachEnvelopeItem from "07782_forEachEnvelopeItem.js";
 
 require = arg1;
 const dependencyMap = arg6;

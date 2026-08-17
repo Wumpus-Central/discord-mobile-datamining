@@ -1,5 +1,5 @@
 // _runtime/00611_toStringTag.js
-import _mod608 from "module_608" /* 608 */;
+import _mod608 from "metro/00608__.js";
 
 ({ hasOwnProperty: c0, toString: closure_1 } = Object.prototype);
 let toStringTag;

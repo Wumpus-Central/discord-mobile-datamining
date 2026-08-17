@@ -1,9 +1,9 @@
 // _runtime/01759_importDefaultResult1.js
-import closure_2 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_3 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
-import isJest from "isJest" /* 1657 */;
+import closure_2 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_3 from "00090__classPrivateFieldBase.js";
+import importDefaultResult1 from "00091__classPrivateFieldKey.js";
+import isJest from "01657_isJest.js";
 
 let WorkletEventHandlerWeb = arg1;
 isJest = isJest.shouldBeUseWeb();

@@ -1,5 +1,5 @@
 // _runtime/10320_usePropsErrorBoundary.js
-import closure_0 from "noop" /* 19 */;
+import closure_0 from "00019_noop.js";
 
 
 export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {

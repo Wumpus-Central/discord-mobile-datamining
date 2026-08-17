@@ -1,7 +1,7 @@
 // _runtime/04249_PortalHost.js
-import noopDefault from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import noop from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 import { usePortal } from "04246_usePortal.js";
 import { usePortalState } from "04250_usePortalState.js";
 

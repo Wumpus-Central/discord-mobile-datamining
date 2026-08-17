@@ -1,7 +1,7 @@
 // _runtime/07818_requestDataIntegration.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import setupIntegration from "setupIntegration" /* 7794 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import setupIntegration from "07794_setupIntegration.js";
 
 let closure_4 = ["ip", "user"];
 let closure_5 = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };

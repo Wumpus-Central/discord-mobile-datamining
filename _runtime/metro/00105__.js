@@ -1,7 +1,7 @@
 // _runtime/metro/00105__.js
-import result from "result" /* 26 */;
-import resultDefault from "result" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
+import result from "../00026_result.js";
+import resultDefault from "../00026_result.js";
+import weakSet from "../00106_weakSet.js";
 
 let obj = { directEventTypes: null, bubblingEventTypes: null, validAttributes: null };
 obj = { topAccessibilityAction: { registrationName: "onAccessibilityAction" }, onGestureHandlerEvent: null, onGestureHandlerStateChange: null, topContentSizeChange: null, topScrollBeginDrag: null, topMessage: null, topSelectionChange: null, topLoadingFinish: null, topMomentumScrollEnd: null, topLoadingStart: null, topLoadingError: null, topMomentumScrollBegin: null, topScrollEndDrag: null, topScroll: null, topLayout: null };

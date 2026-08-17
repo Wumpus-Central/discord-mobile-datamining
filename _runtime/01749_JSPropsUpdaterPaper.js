@@ -1,9 +1,9 @@
 // _runtime/01749_JSPropsUpdaterPaper.js
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isJest from "isJest" /* 1657 */;
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import isJest from "01657_isJest.js";
 
 let JSPropsUpdaterWeb = global;
 require = arg1;

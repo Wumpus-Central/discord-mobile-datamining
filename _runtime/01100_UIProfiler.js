@@ -1,7 +1,7 @@
 // _runtime/01100_UIProfiler.js
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 let closure_0 = require;
 const UIProfiler = dependencyMap;

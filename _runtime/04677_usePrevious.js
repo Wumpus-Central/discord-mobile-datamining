@@ -1,5 +1,5 @@
 // _runtime/04677_usePrevious.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 

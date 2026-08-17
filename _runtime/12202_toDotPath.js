@@ -1,6 +1,6 @@
 // _runtime/12202_toDotPath.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
-import mergeDefs from "mergeDefs" /* 12203 */;
+import _isNativeReflectConstruct from "12200__isNativeReflectConstruct.js";
+import mergeDefs from "12203_mergeDefs.js";
 
 const self = this;
 function toDotPath(path) {

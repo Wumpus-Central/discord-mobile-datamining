@@ -1,6 +1,6 @@
 // _runtime/09034_merged1.js
-import colorPropType from "colorPropType" /* 9025 */;
-import emptyFunction from "emptyFunction" /* 4205 */;
+import colorPropType from "09025_colorPropType.js";
+import emptyFunction from "04205_emptyFunction.js";
 
 let obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
 obj = { width: emptyFunction.number, height: emptyFunction.number };

@@ -1,17 +1,17 @@
 // _runtime/00810_addBreadcrumb.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import NativeModules from "NativeModules" /* 1001 */;
-import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
-import _mod1113 from "module_1113" /* 1113 */;
-import init from "init" /* 1135 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1176 */;
-import init2 from "init" /* 1180 */;
-import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 1187 */;
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1194 */;
-import _isNativeReflectConstruct3 from "_isNativeReflectConstruct" /* 1197 */;
-import _isNativeReflectConstruct4 from "_isNativeReflectConstruct" /* 1200 */;
-import _isNativeReflectConstruct5 from "_isNativeReflectConstruct" /* 1205 */;
-import warn from "warn" /* 1207 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import NativeModules from "01001_NativeModules.js";
+import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
+import _mod1113 from "metro/01113__.js";
+import init from "01135_init.js";
+import _isNativeReflectConstruct from "01176__isNativeReflectConstruct.js";
+import init2 from "01180_init.js";
+import reactNativeTracingIntegration from "01187_reactNativeTracingIntegration.js";
+import _isNativeReflectConstruct2 from "01194__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct3 from "01197__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct4 from "01200__isNativeReflectConstruct.js";
+import _isNativeReflectConstruct5 from "01205__isNativeReflectConstruct.js";
+import warn from "01207_warn.js";
 
 for (const key10013 in require("debugSymbolicatorIntegration")) {
   let tmp2 = key10013;

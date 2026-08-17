@@ -1,6 +1,6 @@
 // _runtime/04403_ToNumber.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import isPrimitive from "isPrimitive" /* 4404 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import isPrimitive from "04404_isPrimitive.js";
 
 let closure_2 = getEvalledConstructor("%Number%");
 

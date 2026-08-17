@@ -1,5 +1,5 @@
 // _runtime/07768_addTracingExtensions.js
-import errorCallback from "errorCallback" /* 7734 */;
+import errorCallback from "07734_errorCallback.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,12 +1,12 @@
 // _runtime/00223__isNativeReflectConstruct.js
-import _inheritsDefault from "_inherits" /* 98 */;
-import dispatchDefault from "dispatch" /* 132 */;
-import EventDefault from "Event" /* 133 */;
-import FileReaderModuleDefault from "FileReaderModule" /* 224 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
+import _inheritsDefault from "00098__inherits.js";
+import dispatchDefault from "00132_dispatch.js";
+import EventDefault from "00133_Event.js";
+import FileReaderModuleDefault from "00224_FileReaderModule.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
 
 const FileReader = arg1;
 function _isNativeReflectConstruct() {

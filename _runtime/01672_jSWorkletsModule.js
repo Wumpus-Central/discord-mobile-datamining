@@ -1,7 +1,7 @@
 // _runtime/01672_jSWorkletsModule.js
-import JSWorklets from "JSWorklets" /* 1673 */;
-import NativeWorklets from "NativeWorklets" /* 1674 */;
-import isJest from "isJest" /* 1657 */;
+import JSWorklets from "01673_JSWorklets.js";
+import NativeWorklets from "01674_NativeWorklets.js";
+import isJest from "01657_isJest.js";
 
 if (isJest.shouldBeUseWeb()) {
   const _module1 = JSWorklets;

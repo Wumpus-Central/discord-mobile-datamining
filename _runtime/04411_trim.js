@@ -1,10 +1,10 @@
 // _runtime/04411_trim.js
-import RequireObjectCoercible from "RequireObjectCoercible" /* 4400 */;
-import getPolyfill from "getPolyfill" /* 4412 */;
-import trim2 from "trim" /* 4413 */;
-import shimStringTrim from "shimStringTrim" /* 4419 */;
-import callBind from "callBind" /* 1422 */;
-import defineProperty from "defineProperty" /* 4415 */;
+import RequireObjectCoercible from "04400_RequireObjectCoercible.js";
+import getPolyfill from "04412_getPolyfill.js";
+import trim2 from "04413_trim.js";
+import shimStringTrim from "04419_shimStringTrim.js";
+import callBind from "01422_callBind.js";
+import defineProperty from "04415_defineProperty.js";
 
 let closure_2 = callBind(getPolyfill());
 function trim(arg0) {

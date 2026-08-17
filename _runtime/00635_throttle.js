@@ -1,6 +1,6 @@
 // _runtime/00635_throttle.js
-import isObject from "isObject" /* 606 */;
-import debounce from "debounce" /* 636 */;
+import isObject from "00606_isObject.js";
+import debounce from "00636_debounce.js";
 
 
 export default function throttle(fn, arg1, leading) {

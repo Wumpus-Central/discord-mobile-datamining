@@ -1,12 +1,12 @@
 // _runtime/06476_importDefaultResult1.js
-import isGestureEnabled from "isGestureEnabled" /* 6445 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import closure_7 from "noop" /* 19 */;
-import { useState } from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importDefaultResult from "createNativeWrapper" /* 6389 */;
+import isGestureEnabled from "06445_isGestureEnabled.js";
+import closure_5 from "metro/00032__slicedToArray.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import closure_7 from "00019_noop.js";
+import { useState } from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
+import importDefaultResult from "06389_createNativeWrapper.js";
 
 require = arg1;
 let closure_3 = ["children", "refreshControl", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER", "keyboardShouldPersistTaps"];

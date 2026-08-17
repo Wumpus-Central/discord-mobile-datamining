@@ -1,7 +1,7 @@
 // _runtime/13209_Deflate.js
-import assign from "assign" /* 13208 */;
-import _mod13212 from "module_13212" /* 13212 */;
-import assign2 from "assign" /* 13216 */;
+import assign from "13208_assign.js";
+import _mod13212 from "metro/13212__.js";
+import assign2 from "13216_assign.js";
 
 require = arg1;
 const dependencyMap = arg6;

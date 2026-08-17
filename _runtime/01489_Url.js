@@ -1,6 +1,6 @@
 // _runtime/01489_Url.js
-import _mod533 from "module_533" /* 533 */;
-import decode from "decode" /* 1490 */;
+import _mod533 from "metro/00533__.js";
+import decode from "01490_decode.js";
 
 require = arg1;
 const dependencyMap = arg6;

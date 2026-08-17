@@ -1,7 +1,7 @@
 // _runtime/00538_getSideChannel.js
-import getSideChannelWeakMap from "getSideChannelWeakMap" /* 539 */;
-import _mod577 from "module_577" /* 577 */;
-import getSideChannelList from "getSideChannelList" /* 578 */;
+import getSideChannelWeakMap from "00539_getSideChannelWeakMap.js";
+import _mod577 from "metro/00577__.js";
+import getSideChannelList from "00578_getSideChannelList.js";
 
 let closure_2 = getSideChannelWeakMap || _mod577 || getSideChannelList;
 

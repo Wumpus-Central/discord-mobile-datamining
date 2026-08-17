@@ -1,5 +1,5 @@
 // _runtime/00914_map.js
-import _mod821 from "module_821" /* 821 */;
+import _mod821 from "metro/00821__.js";
 
 require = arg1;
 const dependencyMap = arg6;

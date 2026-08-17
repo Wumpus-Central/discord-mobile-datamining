@@ -1,8 +1,8 @@
 // _runtime/00344_LayoutConformance.js
-import noopAll from "noop" /* 19 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import LayoutConformanceDefault from "LayoutConformance" /* 345 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import LayoutConformanceDefault from "00345_LayoutConformance.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 let closure_3 = get_hairlineWidthDefault.create({ container: { display: "contents" } });

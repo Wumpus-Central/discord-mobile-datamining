@@ -1,7 +1,7 @@
 // _runtime/01724_BaseAnimationBuilder.js
-import BaseAnimationBuilder from "BaseAnimationBuilder" /* 1725 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1738 */;
-import InnerKeyframe from "InnerKeyframe" /* 1739 */;
+import BaseAnimationBuilder from "01725_BaseAnimationBuilder.js";
+import _isNativeReflectConstruct from "01738__isNativeReflectConstruct.js";
+import InnerKeyframe from "01739_InnerKeyframe.js";
 
 
 export const BaseAnimationBuilder = BaseAnimationBuilder.BaseAnimationBuilder;

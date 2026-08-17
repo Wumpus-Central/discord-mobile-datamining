@@ -1,6 +1,6 @@
 // _runtime/04387_getPolyfill.js
-import requirePromise from "requirePromise" /* 4386 */;
-import allSettled2 from "allSettled" /* 4388 */;
+import requirePromise from "04386_requirePromise.js";
+import allSettled2 from "04388_allSettled.js";
 
 
 export default function getPolyfill() {

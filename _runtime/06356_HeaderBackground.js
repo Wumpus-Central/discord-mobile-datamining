@@ -1,8 +1,8 @@
 // _runtime/06356_HeaderBackground.js
-import noopAll from "noop" /* 19 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;

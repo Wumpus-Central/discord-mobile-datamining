@@ -1,6 +1,6 @@
 // _runtime/00910__mergeOptions.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 function _mergeOptions() {
   let obj = arg0;

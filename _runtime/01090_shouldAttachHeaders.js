@@ -1,6 +1,6 @@
 // _runtime/01090_shouldAttachHeaders.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import addClsInstrumentationHandler from "01033_addClsInstrumentationHandler.js";
 
 require = arg1;
 const dependencyMap = arg6;

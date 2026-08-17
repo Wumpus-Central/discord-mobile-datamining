@@ -1,6 +1,6 @@
 // _runtime/01481_InternetReachability.js
-import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import closure_0 from "metro/00041__classCallCheck.js";
 
 class InternetReachability {
   constructor(arg0, arg1) {

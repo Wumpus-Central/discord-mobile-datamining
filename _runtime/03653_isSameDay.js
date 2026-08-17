@@ -1,6 +1,6 @@
 // _runtime/03653_isSameDay.js
-import startOfDay from "startOfDay" /* 3636 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfDay from "03636_startOfDay.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfDay) {
   let obj = { default: null };

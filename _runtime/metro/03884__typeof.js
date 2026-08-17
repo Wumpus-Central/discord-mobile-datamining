@@ -1,8 +1,8 @@
 // _runtime/metro/03884__typeof.js
-import _typeof from "_typeof" /* 3472 */;
-import setMonth from "setMonth" /* 3885 */;
-import toInteger from "toInteger" /* 3476 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "03472__typeof.js";
+import setMonth from "../03885_setMonth.js";
+import toInteger from "../03476_toInteger.js";
+import requiredArgs from "../03473_requiredArgs.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {

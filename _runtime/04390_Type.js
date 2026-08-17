@@ -1,5 +1,5 @@
 // _runtime/04390_Type.js
-import isObject from "isObject" /* 4391 */;
+import isObject from "04391_isObject.js";
 
 
 export default function Type(num) {

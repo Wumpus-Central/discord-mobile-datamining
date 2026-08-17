@@ -1,5 +1,5 @@
 // _runtime/07074__inherits.js
-import _setPrototypeOf from "_setPrototypeOf" /* 7075 */;
+import _setPrototypeOf from "07075__setPrototypeOf.js";
 
 
 export default function _inherits(value, fn) {

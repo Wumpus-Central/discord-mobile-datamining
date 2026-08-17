@@ -1,5 +1,5 @@
 // _runtime/00236_MessageQueue.js
-import MessageQueue from "MessageQueue" /* 39 */;
+import MessageQueue from "00039_MessageQueue.js";
 
 let closure_0 = global;
 closure_0 = undefined;

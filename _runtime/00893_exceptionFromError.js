@@ -1,8 +1,8 @@
 // _runtime/00893_exceptionFromError.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
-import isInstanceOf from "isInstanceOf" /* 827 */;
-import addContextToFrame from "addContextToFrame" /* 830 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import addNonEnumerableProperty from "00822_addNonEnumerableProperty.js";
+import isInstanceOf from "00827_isInstanceOf.js";
+import addContextToFrame from "00830_addContextToFrame.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function exceptionFromError(arg0, name) {
   let obj = { type: name.name || name.constructor.name, value: null };

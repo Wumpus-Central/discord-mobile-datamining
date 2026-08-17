@@ -1,6 +1,6 @@
 // _runtime/07754_getMetricSummaryJsonForSpan.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const _sentryMetrics = "_sentryMetrics";
 

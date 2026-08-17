@@ -1,6 +1,6 @@
 // _runtime/04595_assignValue.js
-import eq from "eq" /* 752 */;
-import baseAssignValue from "baseAssignValue" /* 804 */;
+import eq from "00752_eq.js";
+import baseAssignValue from "00804_baseAssignValue.js";
 
 
 export default function assignValue(arg0, arg1, arg2) {

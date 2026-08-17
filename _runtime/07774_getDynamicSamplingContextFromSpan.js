@@ -1,8 +1,8 @@
 // _runtime/07774_getDynamicSamplingContextFromSpan.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
-import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 7751 */;
-import getClient from "getClient" /* 7765 */;
-import _mod7775 from "module_7775" /* 7775 */;
+import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
+import baggageHeaderToDynamicSamplingContext from "07751_baggageHeaderToDynamicSamplingContext.js";
+import getClient from "07765_getClient.js";
+import _mod7775 from "metro/07775__.js";
 
 require = arg1;
 const dependencyMap = arg6;

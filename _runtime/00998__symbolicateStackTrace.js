@@ -1,5 +1,5 @@
 // _runtime/00998__symbolicateStackTrace.js
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function _symbolicateStackTrace() {

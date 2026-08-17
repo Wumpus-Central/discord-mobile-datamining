@@ -1,6 +1,6 @@
 // _runtime/07412_useForceUpdate.js
-import closure_0 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import closure_0 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 
 ({ useCallback: closure_1, useState: obj1 } = noop);
 

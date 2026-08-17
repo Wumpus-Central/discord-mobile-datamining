@@ -1,6 +1,6 @@
 // _runtime/00772_getNative.js
-import _mod609 from "module_609" /* 609 */;
-import getNative from "getNative" /* 737 */;
+import _mod609 from "metro/00609__.js";
+import getNative from "00737_getNative.js";
 
 
 export default getNative(_mod609, "Promise");

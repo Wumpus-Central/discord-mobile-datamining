@@ -1,6 +1,6 @@
 // _runtime/00930__INTERNAL_addFeatureFlagToActiveSpan.js
-import spanToJSON from "spanToJSON" /* 819 */;
-import getClient from "getClient" /* 848 */;
+import spanToJSON from "00819_spanToJSON.js";
+import getClient from "00848_getClient.js";
 import { getClient } from "00848_getClient.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 

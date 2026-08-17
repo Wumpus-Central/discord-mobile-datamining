@@ -1,6 +1,6 @@
 // _runtime/16482__default2.js
-import CanonicalizeLocaleList from "CanonicalizeLocaleList" /* 16483 */;
-import 00576__ from "metro/00576__.js" /* 576 */;
+import CanonicalizeLocaleList from "16483_CanonicalizeLocaleList.js";
+import 00576__ from "metro/00576__.js";
 
 global.IntlPolyfill = CanonicalizeLocaleList.default;
 if (!global.Intl) {

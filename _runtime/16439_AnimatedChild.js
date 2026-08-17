@@ -1,8 +1,8 @@
 // _runtime/16439_AnimatedChild.js
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet, View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "metro/00032__slicedToArray.js";
+import importAllResult from "00019_noop.js";
+import { StyleSheet, View } from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
 let c4 = importAllResult;

@@ -1,7 +1,7 @@
 // _runtime/metro/00195__.js
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
-import isNativeFunction from "isNativeFunction" /* 196 */;
-import define from "define" /* 197 */;
+import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
+import isNativeFunction from "../00196_isNativeFunction.js";
+import define from "../00197_define.js";
 
 try {
   const _module = isNativeFunction;

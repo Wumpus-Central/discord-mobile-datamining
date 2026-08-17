@@ -1,9 +1,9 @@
 // _runtime/04698_style.js
-import noopAll from "noop" /* 19 */;
-import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
-import ScreenContentWrapperDefault from "ScreenContentWrapper" /* 4699 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import _objectWithoutPropertiesDefault from "metro/00109__objectWithoutProperties.js";
+import ScreenContentWrapperDefault from "04699_ScreenContentWrapper.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 _objectWithoutPropertiesDefault;
 noopAll;

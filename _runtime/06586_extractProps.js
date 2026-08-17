@@ -1,5 +1,5 @@
 // _runtime/06586_extractProps.js
-import pickNotNil from "pickNotNil" /* 6587 */;
+import pickNotNil from "06587_pickNotNil.js";
 
 require = arg1;
 const module = arg2;

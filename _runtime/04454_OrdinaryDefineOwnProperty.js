@@ -1,5 +1,5 @@
 // _runtime/04454_OrdinaryDefineOwnProperty.js
-import isObject from "isObject" /* 4391 */;
+import isObject from "04391_isObject.js";
 
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {

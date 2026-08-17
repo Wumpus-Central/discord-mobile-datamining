@@ -1,6 +1,6 @@
 // _runtime/03780_dayPeriodEnumToHours.js
-import keys from "keys" /* 3651 */;
-import _mod3781 from "module_3781" /* 3781 */;
+import keys from "03651_keys.js";
+import _mod3781 from "metro/03781__.js";
 
 require = arg1;
 const dependencyMap = arg6;

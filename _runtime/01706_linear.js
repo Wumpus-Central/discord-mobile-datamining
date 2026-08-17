@@ -1,6 +1,6 @@
 // _runtime/01706_linear.js
-import calcBezier from "calcBezier" /* 1707 */;
-import importDefaultResult from "_slicedToArray" /* 32 */;
+import calcBezier from "01707_calcBezier.js";
+import importDefaultResult from "metro/00032__slicedToArray.js";
 
 require = arg1;
 let closure_2 = { code: "function linear_Pnpm_EasingTs1(t){return t;}" };

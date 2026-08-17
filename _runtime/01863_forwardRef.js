@@ -1,7 +1,7 @@
 // _runtime/01863_forwardRef.js
-import noopDefault from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
+import noopDefault from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
+import noop from "00019_noop.js";
 
 ({ useMemo: c3, forwardRef } = noop);
 noopDefault;

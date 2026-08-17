@@ -1,5 +1,5 @@
 // _runtime/01862_items.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 noop.useCallback;
 

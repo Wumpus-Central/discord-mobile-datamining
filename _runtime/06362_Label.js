@@ -1,7 +1,7 @@
 // _runtime/06362_Label.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import Text from "Text" /* 6338 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
+import Text from "06338_Text.js";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const jsx = jsxProd.jsx;

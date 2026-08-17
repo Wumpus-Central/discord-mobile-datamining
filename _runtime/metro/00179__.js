@@ -1,5 +1,5 @@
 // _runtime/metro/00179__.js
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
 
 if (true === global.RN$Bridgeless) {
   global.RN$enableMicrotasksInReact = true;

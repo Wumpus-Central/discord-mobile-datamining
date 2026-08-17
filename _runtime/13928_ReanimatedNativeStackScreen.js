@@ -1,9 +1,9 @@
 // _runtime/13928_ReanimatedNativeStackScreen.js
-import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importDefaultResult from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import cancelAnimationDefault from "01654_cancelAnimation.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import importDefaultResult from "00019_noop.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["children"];

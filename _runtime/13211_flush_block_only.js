@@ -1,9 +1,9 @@
 // _runtime/13211_flush_block_only.js
-import assign from "assign" /* 13208 */;
-import _mod13212 from "module_13212" /* 13212 */;
-import StaticTreeDesc from "StaticTreeDesc" /* 13213 */;
-import adler32 from "adler32" /* 13214 */;
-import _mod13215 from "module_13215" /* 13215 */;
+import assign from "13208_assign.js";
+import _mod13212 from "metro/13212__.js";
+import StaticTreeDesc from "13213_StaticTreeDesc.js";
+import adler32 from "13214_adler32.js";
+import _mod13215 from "metro/13215__.js";
 
 require = arg1;
 const dependencyMap = arg6;

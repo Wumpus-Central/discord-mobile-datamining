@@ -1,7 +1,7 @@
 // _runtime/metro/00188__.js
-import _mod47 from "module_47" /* 47 */;
-import toError from "toError" /* 184 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 189 */;
+import _mod47 from "00047__.js";
+import toError from "../00184_toError.js";
+import _isNativeReflectConstruct from "../00189__isNativeReflectConstruct.js";
 
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
   const _default = _isNativeReflectConstruct.default;

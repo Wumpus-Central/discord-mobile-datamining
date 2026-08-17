@@ -1,7 +1,7 @@
 // _runtime/01136_init.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
-import closure_2 from "noop" /* 19 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
+import closure_2 from "00019_noop.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

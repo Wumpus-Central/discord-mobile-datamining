@@ -1,5 +1,5 @@
 // _runtime/01872_TEST_ID_KEYBOARD_TOOLBAR.js
-import AndroidSoftInputModes from "AndroidSoftInputModes" /* 1849 */;
+import AndroidSoftInputModes from "01849_AndroidSoftInputModes.js";
 
 const combined = "" + "keyboard.toolbar" + ".previous";
 const combined1 = "" + "keyboard.toolbar" + ".next";

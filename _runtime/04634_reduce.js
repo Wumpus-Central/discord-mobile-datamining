@@ -1,7 +1,7 @@
 // _runtime/04634_reduce.js
-import _mod599 from "module_599" /* 599 */;
-import baseForOwn from "baseForOwn" /* 601 */;
-import baseIteratee from "baseIteratee" /* 720 */;
+import _mod599 from "metro/00599__.js";
+import baseForOwn from "00601_baseForOwn.js";
+import baseIteratee from "00720_baseIteratee.js";
 
 
 export default function reduce(arg0, arg1, arg2) {

@@ -1,5 +1,5 @@
 // _runtime/00295_SoundManager.js
-import SoundManagerDefault from "SoundManager" /* 296 */;
+import SoundManagerDefault from "00296_SoundManager.js";
 
 for (const key10013 in require("SoundManager")) {
   let tmp2 = key10013;

@@ -1,7 +1,7 @@
 // _runtime/13931_ReanimatedScreen.js
-import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importDefaultResult from "noop" /* 19 */;
+import cancelAnimationDefault from "01654_cancelAnimation.js";
+import { jsx } from "react/00021_jsxProd.js";
+import importDefaultResult from "00019_noop.js";
 
 let closure_1 = cancelAnimationDefault.createAnimatedComponent(require("Animated").InnerScreen);
 const forwardRefResult = importDefaultResult.forwardRef((arg0, ref) => {

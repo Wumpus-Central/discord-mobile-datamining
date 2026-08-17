@@ -1,5 +1,5 @@
 // _runtime/metro/00347___INTERNAL_VIEW_CONFIG.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 348 */;
+import __INTERNAL_VIEW_CONFIGDefault from "00348___INTERNAL_VIEW_CONFIG.js";
 
 for (const key10016 in require("__INTERNAL_VIEW_CONFIG")) {
   let tmp2 = key10016;

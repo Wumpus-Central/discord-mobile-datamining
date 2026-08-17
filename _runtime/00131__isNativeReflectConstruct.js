@@ -1,13 +1,13 @@
 // _runtime/00131__isNativeReflectConstruct.js
-import dispatchDefault from "dispatch" /* 132 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import importAllResult from "javaScriptFlagGetter" /* 27 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import dispatchDefault from "00132_dispatch.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00098__inherits.js";
+import importAllResult from "00027_javaScriptFlagGetter.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
 const ReadOnlyNode = arg1;

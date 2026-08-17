@@ -1,9 +1,9 @@
 // _runtime/00734_Hash.js
-import hashClear from "hashClear" /* 735 */;
-import hashDelete from "hashDelete" /* 743 */;
-import hashGet from "hashGet" /* 744 */;
-import hashHas from "hashHas" /* 745 */;
-import hashSet from "hashSet" /* 746 */;
+import hashClear from "00735_hashClear.js";
+import hashDelete from "00743_hashDelete.js";
+import hashGet from "00744_hashGet.js";
+import hashHas from "00745_hashHas.js";
+import hashSet from "00746_hashSet.js";
 
 class Hash {
   constructor(arg0) {

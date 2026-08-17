@@ -1,6 +1,6 @@
 // _runtime/03822_isSameMinute.js
-import startOfMinute from "startOfMinute" /* 3681 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfMinute from "03681_startOfMinute.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfMinute) {
   let obj = { default: null };

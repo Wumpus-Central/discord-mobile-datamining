@@ -1,16 +1,16 @@
 // _runtime/00217__isNativeReflectConstruct.js
-import _modDef38 from "module_38" /* 38 */;
-import _inheritsDefault from "_inherits" /* 98 */;
-import dispatchDefault from "dispatch" /* 132 */;
-import BlobManagerDefault from "BlobManager" /* 200 */;
-import BlobDefault from "Blob" /* 203 */;
-import NativeEventEmitterDefault from "NativeEventEmitter" /* 209 */;
-import WebSocketModuleDefault from "WebSocketModule" /* 218 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
+import _modDef38 from "metro/00038__.js";
+import _inheritsDefault from "00098__inherits.js";
+import dispatchDefault from "00132_dispatch.js";
+import BlobManagerDefault from "00200_BlobManager.js";
+import BlobDefault from "00203_Blob.js";
+import NativeEventEmitterDefault from "00209_NativeEventEmitter.js";
+import WebSocketModuleDefault from "00218_WebSocketModule.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
 
 const WebSocket = arg1;
 function _isNativeReflectConstruct() {

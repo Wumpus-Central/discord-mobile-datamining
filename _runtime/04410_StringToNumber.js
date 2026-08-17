@@ -1,9 +1,9 @@
 // _runtime/04410_StringToNumber.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import _mod541 from "module_541" /* 541 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import regexTester from "regexTester" /* 1414 */;
-import trim from "trim" /* 4411 */;
+import getEvalledConstructor from "00540_getEvalledConstructor.js";
+import _mod541 from "metro/00541__.js";
+import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
+import regexTester from "01414_regexTester.js";
+import trim from "04411_trim.js";
 
 let tmp = getEvalledConstructor("%RegExp%");
 let closure_2 = getEvalledConstructor("%parseInt%");

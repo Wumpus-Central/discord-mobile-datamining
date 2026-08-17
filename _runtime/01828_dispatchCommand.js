@@ -1,10 +1,10 @@
 // _runtime/01828_dispatchCommand.js
-import dispatchCommandFabric from "dispatchCommandFabric" /* 1829 */;
-import getRelativeCoords from "getRelativeCoords" /* 1830 */;
-import measureFabric from "measureFabric" /* 1831 */;
-import scrollToFabric from "scrollToFabric" /* 1832 */;
-import setGestureStateNative from "setGestureStateNative" /* 1833 */;
-import setNativePropsFabric from "setNativePropsFabric" /* 1834 */;
+import dispatchCommandFabric from "01829_dispatchCommandFabric.js";
+import getRelativeCoords from "01830_getRelativeCoords.js";
+import measureFabric from "01831_measureFabric.js";
+import scrollToFabric from "01832_scrollToFabric.js";
+import setGestureStateNative from "01833_setGestureStateNative.js";
+import setNativePropsFabric from "01834_setNativePropsFabric.js";
 
 
 export const dispatchCommand = dispatchCommandFabric.dispatchCommand;

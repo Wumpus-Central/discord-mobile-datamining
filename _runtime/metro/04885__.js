@@ -1,11 +1,11 @@
 // _runtime/metro/04885__.js
-import getFileChunk from "getFileChunk" /* 4882 */;
-import _mod4883 from "module_4883" /* 4883 */;
-import isAAC from "isAAC" /* 4886 */;
-import is7Z from "is7Z" /* 4887 */;
-import isAVIF from "isAVIF" /* 4888 */;
-import isBLEND from "isBLEND" /* 4889 */;
-import isAVI from "isAVI" /* 4890 */;
+import getFileChunk from "../04882_getFileChunk.js";
+import _mod4883 from "04883__.js";
+import isAAC from "../04886_isAAC.js";
+import is7Z from "../04887_is7Z.js";
+import isAVIF from "../04888_isAVIF.js";
+import isBLEND from "../04889_isBLEND.js";
+import isAVI from "../04890_isAVI.js";
 
 const self = this;
 let self2 = this;

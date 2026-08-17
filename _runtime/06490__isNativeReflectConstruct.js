@@ -1,15 +1,15 @@
 // _runtime/06490__isNativeReflectConstruct.js
-import ButtonComponentDefault from "ButtonComponent" /* 6473 */;
-import itemsDefault from "items" /* 6491 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import closure_7 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_8 from "_possibleConstructorReturn" /* 93 */;
-import closure_9 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ButtonComponentDefault from "06473_ButtonComponent.js";
+import itemsDefault from "06491_items.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import closure_7 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_8 from "metro/00093__possibleConstructorReturn.js";
+import closure_9 from "00095__getPrototypeOf.js";
+import importDefaultResult1 from "00098__inherits.js";
+import importAllResult from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 let InnerBorderlessButton = arg1;
 function _isNativeReflectConstruct() {

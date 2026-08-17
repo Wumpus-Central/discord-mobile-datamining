@@ -1,5 +1,5 @@
 // _runtime/01320_RepeatType.js
-import lowerCamelCase from "lowerCamelCase" /* 1321 */;
+import lowerCamelCase from "01321_lowerCamelCase.js";
 
 require = arg1;
 const dependencyMap = arg6;

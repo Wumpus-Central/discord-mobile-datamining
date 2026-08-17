@@ -1,7 +1,7 @@
 // _runtime/00357_set.js
-import shouldUseTurboAnimatedModuleDefault from "shouldUseTurboAnimatedModule" /* 361 */;
-import importDefaultResult from "shouldUseTurboAnimatedModule" /* 358 */;
-import importAllResult1 from "javaScriptFlagGetter" /* 27 */;
+import shouldUseTurboAnimatedModuleDefault from "00361_shouldUseTurboAnimatedModule.js";
+import importDefaultResult from "00358_shouldUseTurboAnimatedModule.js";
+import importAllResult1 from "00027_javaScriptFlagGetter.js";
 
 let closure_0 = importDefault;
 if (importDefaultResult == null) {

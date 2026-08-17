@@ -1,7 +1,7 @@
 // _runtime/04415_defineProperty.js
-import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1424 */;
-import defineDataProperty from "defineDataProperty" /* 1425 */;
-import keys from "keys" /* 4416 */;
+import hasPropertyDescriptors from "01424_hasPropertyDescriptors.js";
+import defineDataProperty from "01425_defineDataProperty.js";
+import keys from "04416_keys.js";
 
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {

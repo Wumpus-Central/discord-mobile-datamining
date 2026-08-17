@@ -1,7 +1,7 @@
 // _runtime/01636_SafeAreaView.js
-import noopAll from "noop" /* 19 */;
-import { useMemo } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import { useMemo } from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 let closure_4 = { top: "additive", left: "additive", bottom: "additive", right: "additive" };
 

@@ -1,5 +1,5 @@
 // _runtime/00571_sign.js
-import isNaN from "isNaN" /* 572 */;
+import isNaN from "00572_isNaN.js";
 
 
 export default function sign(arg0) {

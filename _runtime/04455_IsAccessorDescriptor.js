@@ -1,5 +1,5 @@
 // _runtime/04455_IsAccessorDescriptor.js
-import isPropertyDescriptor from "isPropertyDescriptor" /* 4442 */;
+import isPropertyDescriptor from "04442_isPropertyDescriptor.js";
 
 
 export default function IsAccessorDescriptor(arg0) {

@@ -1,8 +1,8 @@
 // _runtime/metro/13700__.js
-import prop from "prop" /* 13691 */;
-import all from "all" /* 13699 */;
-import all2 from "all" /* 13701 */;
-import call from "call" /* 13702 */;
+import prop from "../13691_prop.js";
+import all from "../13699_all.js";
+import all2 from "../13701_all.js";
+import call from "../13702_call.js";
 
 
 export default prop ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {

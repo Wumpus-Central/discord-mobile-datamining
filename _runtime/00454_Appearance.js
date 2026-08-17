@@ -1,5 +1,5 @@
 // _runtime/00454_Appearance.js
-import AppearanceDefault from "Appearance" /* 455 */;
+import AppearanceDefault from "00455_Appearance.js";
 
 
 export default AppearanceDefault;

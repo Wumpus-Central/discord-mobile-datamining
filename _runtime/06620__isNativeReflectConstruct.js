@@ -1,12 +1,12 @@
 // _runtime/06620__isNativeReflectConstruct.js
-import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_5 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _inheritsDefault from "00098__inherits.js";
+import _isNativeReflectConstructDefault from "06610__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_5 from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {

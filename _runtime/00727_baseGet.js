@@ -1,6 +1,6 @@
 // _runtime/00727_baseGet.js
-import toKey from "toKey" /* 725 */;
-import castPath from "castPath" /* 728 */;
+import toKey from "00725_toKey.js";
+import castPath from "00728_castPath.js";
 
 
 export default function baseGet(arg0, arg1) {

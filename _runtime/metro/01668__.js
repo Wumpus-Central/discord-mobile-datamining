@@ -1,9 +1,9 @@
 // _runtime/metro/01668__.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import isJest from "isJest" /* 1657 */;
-import { mockedRequestAnimationFrame } from "mockedRequestAnimationFrame" /* 1669 */;
+import closure_2 from "00032__slicedToArray.js";
+import closure_3 from "00041__classCallCheck.js";
+import importDefaultResult from "00042__createClass.js";
+import isJest from "../01657_isJest.js";
+import { mockedRequestAnimationFrame } from "../01669_mockedRequestAnimationFrame.js";
 
 const JSReanimated = arg1;
 if (!isJest.isJest()) {

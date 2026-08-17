@@ -1,8 +1,8 @@
 // _runtime/00264_getTargetFromInstanceHandle.js
-import isEnabledAll from "isEnabled" /* 46 */;
-import getInstanceHandle from "getInstanceHandle" /* 136 */;
-import NativeIntersectionObserverCxxDefault from "NativeIntersectionObserverCxx" /* 265 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import isEnabledAll from "00046_isEnabled.js";
+import getInstanceHandle from "00136_getInstanceHandle.js";
+import NativeIntersectionObserverCxxDefault from "00265_NativeIntersectionObserverCxx.js";
+import closure_4 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function getTargetFromInstanceHandle(arg0) {

@@ -1,6 +1,6 @@
 // _runtime/00849_instrumentError.js
-import _mod821 from "module_821" /* 821 */;
-import addHandler from "addHandler" /* 850 */;
+import _mod821 from "metro/00821__.js";
+import addHandler from "00850_addHandler.js";
 
 require = arg1;
 const dependencyMap = arg6;

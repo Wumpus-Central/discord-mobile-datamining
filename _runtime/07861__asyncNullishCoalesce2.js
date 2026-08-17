@@ -1,5 +1,5 @@
 // _runtime/07861__asyncNullishCoalesce2.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function _asyncNullishCoalesce2() {
   const self = this;

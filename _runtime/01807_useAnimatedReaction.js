@@ -1,5 +1,5 @@
 // _runtime/01807_useAnimatedReaction.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { isJest } from "01657_isJest.js";
 import { useSharedValue } from "01806_useSharedValue.js";
 

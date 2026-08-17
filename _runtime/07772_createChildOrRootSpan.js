@@ -1,8 +1,8 @@
 // _runtime/07772_createChildOrRootSpan.js
-import _mod7753 from "module_7753" /* 7753 */;
-import getClient from "getClient" /* 7765 */;
-import hasTracingEnabled from "hasTracingEnabled" /* 7770 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod7753 from "metro/07753__.js";
+import getClient from "07765_getClient.js";
+import hasTracingEnabled from "07770_hasTracingEnabled.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { getMainCarrier } from "07756_getMainCarrier.js";
 import { getAsyncContextStrategy } from "07757_getAsyncContextStrategy.js";
 import { getClient } from "07765_getClient.js";

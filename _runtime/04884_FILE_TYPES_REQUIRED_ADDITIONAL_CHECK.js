@@ -1,11 +1,11 @@
 // _runtime/04884_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js
-import AudioTypes from "AudioTypes" /* 4891 */;
-import ImageTypes from "ImageTypes" /* 4892 */;
-import VideoTypes from "VideoTypes" /* 4893 */;
-import CompressedTypes from "CompressedTypes" /* 4894 */;
-import OtherTypes from "OtherTypes" /* 4895 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import AudioTypes from "04891_AudioTypes.js";
+import ImageTypes from "04892_ImageTypes.js";
+import VideoTypes from "04893_VideoTypes.js";
+import CompressedTypes from "04894_CompressedTypes.js";
+import OtherTypes from "04895_OtherTypes.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 const FileTypes = require;
 class FileTypes {

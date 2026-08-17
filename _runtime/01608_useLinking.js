@@ -1,6 +1,6 @@
 // _runtime/01608_useLinking.js
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_2 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const require = arg1;
 ({ Linking: c3, Platform } = get_ActivityIndicator);

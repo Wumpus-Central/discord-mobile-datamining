@@ -1,10 +1,10 @@
 // _runtime/00775_Stack.js
-import ListCache from "ListCache" /* 748 */;
-import stackClear from "stackClear" /* 776 */;
-import stackDelete from "stackDelete" /* 777 */;
-import stackGet from "stackGet" /* 778 */;
-import stackHas from "stackHas" /* 779 */;
-import stackSet from "stackSet" /* 780 */;
+import ListCache from "00748_ListCache.js";
+import stackClear from "00776_stackClear.js";
+import stackDelete from "00777_stackDelete.js";
+import stackGet from "00778_stackGet.js";
+import stackHas from "00779_stackHas.js";
+import stackSet from "00780_stackSet.js";
 
 class Stack {
   constructor(arg0) {

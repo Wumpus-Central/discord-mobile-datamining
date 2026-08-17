@@ -1,9 +1,9 @@
 // _runtime/13687_withoutSetter.js
-import _mod13673 from "module_13673" /* 13673 */;
-import __core_js_shared__ from "__core-js_shared__" /* 13688 */;
-import sum from "sum" /* 13695 */;
-import call from "call" /* 13696 */;
-import prop from "prop" /* 13691 */;
+import _mod13673 from "metro/13673__.js";
+import __core_js_shared__ from "13688___core-js_shared__.js";
+import sum from "13695_sum.js";
+import call from "13696_call.js";
+import prop from "13691_prop.js";
 
 let closure_2 = __core_js_shared__("wks");
 let _Symbol = _mod13673.Symbol;

@@ -1,6 +1,6 @@
 // _runtime/01185_shouldEnableNativeNagger.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isHermesEnabled from "isHermesEnabled" /* 1002 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import isHermesEnabled from "01002_isHermesEnabled.js";
 
 const Platform = get_ActivityIndicator.Platform;
 

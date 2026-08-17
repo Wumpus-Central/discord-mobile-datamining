@@ -1,6 +1,6 @@
 // _runtime/01848_useResizeMode.js
-import NOOP from "NOOP" /* 1847 */;
-import noop from "noop" /* 19 */;
+import NOOP from "01847_NOOP.js";
+import noop from "00019_noop.js";
 import { cancelAnimation } from "01654_cancelAnimation.js";
 import { NOOP } from "01847_NOOP.js";
 

@@ -1,7 +1,7 @@
 // _runtime/06448_getHandler.js
-import noop from "noop" /* 19 */;
-import _mod6385 from "module_6385" /* 6385 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 6398 */;
+import noop from "00019_noop.js";
+import _mod6385 from "metro/06385__.js";
+import _isNativeReflectConstruct from "06398__isNativeReflectConstruct.js";
 
 const useMemo = noop.useMemo;
 function getHandler(arg0, onBegin) {

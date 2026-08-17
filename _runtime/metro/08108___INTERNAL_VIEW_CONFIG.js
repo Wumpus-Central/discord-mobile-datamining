@@ -1,10 +1,10 @@
 // _runtime/metro/08108___INTERNAL_VIEW_CONFIG.js
-import processColor from "processColor" /* 50 */;
-import resolveAssetSource from "resolveAssetSource" /* 81 */;
-import codegenNativeComponent2 from "codegenNativeComponent" /* 463 */;
-import 08106__ from "08106__.js" /* 8106 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import processColor from "../00050_processColor.js";
+import resolveAssetSource from "../00081_resolveAssetSource.js";
+import codegenNativeComponent2 from "../00463_codegenNativeComponent.js";
+import 08106__ from "08106__.js";
+import weakSet from "../00106_weakSet.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 const codegenNativeComponent = module_8106(codegenNativeComponent2);
 let obj = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };

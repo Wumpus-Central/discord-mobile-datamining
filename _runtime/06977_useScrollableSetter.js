@@ -1,5 +1,5 @@
 // _runtime/06977_useScrollableSetter.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { useBottomSheetInternal } from "06960_useBottomSheetInternal.js";
 
 ({ useCallback: obj1, useEffect: c3 } = noop);

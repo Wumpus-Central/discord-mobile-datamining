@@ -1,7 +1,7 @@
 // _runtime/00537_pushToArray.js
-import _mod534 from "module_534" /* 534 */;
-import items5 from "items" /* 536 */;
-import getSideChannel from "getSideChannel" /* 538 */;
+import _mod534 from "metro/00534__.js";
+import items5 from "00536_items.js";
+import getSideChannel from "00538_getSideChannel.js";
 import { items } from "00536_items.js";
 import { getSideChannel } from "00538_getSideChannel.js";
 

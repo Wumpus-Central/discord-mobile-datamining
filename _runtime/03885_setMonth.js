@@ -1,8 +1,8 @@
 // _runtime/03885_setMonth.js
-import toInteger from "toInteger" /* 3476 */;
-import _typeof from "_typeof" /* 3472 */;
-import getDaysInMonth from "getDaysInMonth" /* 3737 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import _typeof from "metro/03472__typeof.js";
+import getDaysInMonth from "03737_getDaysInMonth.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

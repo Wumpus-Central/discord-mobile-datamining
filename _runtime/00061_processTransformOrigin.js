@@ -1,6 +1,6 @@
 // _runtime/00061_processTransformOrigin.js
-import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
-import _modDef38 from "module_38" /* 38 */;
+import _slicedToArrayDefault from "metro/00032__slicedToArray.js";
+import _modDef38 from "metro/00038__.js";
 
 _slicedToArrayDefault;
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;

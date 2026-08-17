@@ -1,5 +1,5 @@
 // _runtime/12382_QRPolynomial.js
-import _mod12383 from "module_12383" /* 12383 */;
+import _mod12383 from "metro/12383__.js";
 
 class QRPolynomial {
   constructor(arg0, arg1) {

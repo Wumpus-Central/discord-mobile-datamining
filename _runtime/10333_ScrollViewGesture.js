@@ -1,6 +1,6 @@
 // _runtime/10333_ScrollViewGesture.js
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_3 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 require("noop").useCallback;

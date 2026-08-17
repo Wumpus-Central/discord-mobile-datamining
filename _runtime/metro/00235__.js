@@ -1,5 +1,5 @@
 // _runtime/metro/00235__.js
-import MessageQueueDefault from "MessageQueue" /* 236 */;
+import MessageQueueDefault from "../00236_MessageQueue.js";
 import { isEnabled } from "../00046_isEnabled.js";
 import { _isNativeReflectConstruct } from "../00092__isNativeReflectConstruct.js";
 import { _callTimer } from "../00183__callTimer.js";

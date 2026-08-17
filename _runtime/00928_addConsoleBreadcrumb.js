@@ -1,8 +1,8 @@
 // _runtime/00928_addConsoleBreadcrumb.js
-import _mod821 from "module_821" /* 821 */;
-import isMatchingPattern from "isMatchingPattern" /* 832 */;
-import severityLevelFromString from "severityLevelFromString" /* 920 */;
-import setupIntegration from "setupIntegration" /* 887 */;
+import _mod821 from "metro/00821__.js";
+import isMatchingPattern from "00832_isMatchingPattern.js";
+import severityLevelFromString from "00920_severityLevelFromString.js";
+import setupIntegration from "00887_setupIntegration.js";
 
 function addConsoleBreadcrumb(arg0, arguments) {
   obj = { category: "console", data: obj, level: null, message: null };

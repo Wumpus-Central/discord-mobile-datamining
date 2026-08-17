@@ -1,11 +1,11 @@
 // _runtime/00108_View.js
-import noopAll from "noop" /* 19 */;
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import noopDefault from "noop" /* 111 */;
-import CommandsDefault from "Commands" /* 112 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { use } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import noopDefault from "00111_noop.js";
+import CommandsDefault from "00112_Commands.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import { use } from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 let closure_3 = ["accessibilityState", "accessibilityValue", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "tabIndex"];
 const forwardRefResult = noopAll.forwardRef(function View_withRef(arg0, ref) {

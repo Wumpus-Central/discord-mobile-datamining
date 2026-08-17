@@ -1,7 +1,7 @@
 // _runtime/metro/04955__.js
-import getDataView from "getDataView" /* 4910 */;
-import readTag from "readTag" /* 4930 */;
-import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+import getDataView from "../04910_getDataView.js";
+import readTag from "../04930_readTag.js";
+import importDefaultResult1 from "../04931_importDefaultResult1.js";
 
 require = arg1;
 const module = arg2;

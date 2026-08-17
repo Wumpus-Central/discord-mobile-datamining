@@ -1,6 +1,6 @@
 // _runtime/01888_OverKeyboardView.js
-import heightDefault from "height" /* 1889 */;
-import _modDef1890 from "module_1890" /* 1890 */;
+import heightDefault from "01889_height.js";
+import _modDef1890 from "metro/01890__.js";
 
 
 export const OverKeyboardView = heightDefault;

@@ -1,5 +1,5 @@
 // _runtime/07131__isNativeReflectConstruct.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 7132 */;
+import _isNativeReflectConstruct from "07132__isNativeReflectConstruct.js";
 
 for (const key10016 in require("module_7135")) {
   let tmp2 = key10016;

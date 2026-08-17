@@ -1,6 +1,6 @@
 // _runtime/04131_getHostComponent.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setRuntimeConfigProviderAll from "setRuntimeConfigProvider" /* 65 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import setRuntimeConfigProviderAll from "00065_setRuntimeConfigProvider.js";
 
 const Platform = get_ActivityIndicator.Platform;
 

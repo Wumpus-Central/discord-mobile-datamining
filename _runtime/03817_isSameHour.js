@@ -1,6 +1,6 @@
 // _runtime/03817_isSameHour.js
-import startOfHour from "startOfHour" /* 3818 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfHour from "03818_startOfHour.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfHour) {
   let obj = { default: null };

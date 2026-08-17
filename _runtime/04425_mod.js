@@ -1,5 +1,5 @@
 // _runtime/04425_mod.js
-import _mod566 from "module_566" /* 566 */;
+import _mod566 from "metro/00566__.js";
 
 
 export default function mod(arg0, arg1) {

@@ -1,6 +1,6 @@
 // _runtime/06363_Lazy.js
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import closure_0 from "metro/00032__slicedToArray.js";
+import closure_1 from "00019_noop.js";
 
 
 export const Lazy = function Lazy(arg0) {

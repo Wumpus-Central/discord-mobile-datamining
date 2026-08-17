@@ -1,6 +1,6 @@
 // _runtime/06391_GestureDetectorType.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6392 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06392___INTERNAL_VIEW_CONFIG.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ Animated, StyleSheet } = get_ActivityIndicator);
 const animatedComponent = Animated.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);

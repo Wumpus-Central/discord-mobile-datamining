@@ -1,5 +1,5 @@
 // _runtime/00030_get.js
-import genModule from "genModule" /* 31 */;
+import genModule from "00031_genModule.js";
 
 require = arg1;
 const module = arg2;

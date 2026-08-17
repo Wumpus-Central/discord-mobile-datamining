@@ -1,7 +1,7 @@
 // _runtime/06395_useEnsureGestureHandlerRootView.js
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
-import noopDefault from "noop" /* 6396 */;
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import noop from "00019_noop.js";
+import noopDefault from "06396_noop.js";
 
 const use = noop.use;
 const Platform = get_ActivityIndicator.Platform;

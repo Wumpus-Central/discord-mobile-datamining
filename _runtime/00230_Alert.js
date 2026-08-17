@@ -1,5 +1,5 @@
 // _runtime/00230_Alert.js
-import Alert from "Alert" /* 231 */;
+import Alert from "00231_Alert.js";
 
 require = arg1;
 const dependencyMap = arg6;

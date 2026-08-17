@@ -1,7 +1,7 @@
 // _runtime/00938_extractClientInfo.js
-import isJsonRpcNotification from "isJsonRpcNotification" /* 936 */;
-import weakMap from "weakMap" /* 939 */;
-import _mod940 from "module_940" /* 940 */;
+import isJsonRpcNotification from "00936_isJsonRpcNotification.js";
+import weakMap from "00939_weakMap.js";
+import _mod940 from "metro/00940__.js";
 
 require = arg1;
 const dependencyMap = arg6;

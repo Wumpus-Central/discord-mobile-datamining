@@ -1,5 +1,5 @@
 // _runtime/06989_useReactiveSharedValue.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 import { cancelAnimation } from "01654_cancelAnimation.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);

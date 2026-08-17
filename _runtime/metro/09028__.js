@@ -1,8 +1,8 @@
 // _runtime/metro/09028__.js
-import _mod9029 from "module_9029" /* 9029 */;
-import _mod9037 from "module_9037" /* 9037 */;
-import flattenStyle from "flattenStyle" /* 9030 */;
-import emptyFunction from "emptyFunction" /* 4205 */;
+import _mod9029 from "09029__.js";
+import _mod9037 from "09037__.js";
+import flattenStyle from "../09030_flattenStyle.js";
+import emptyFunction from "../04205_emptyFunction.js";
 
 let obj = {};
 const module_9029 = Object.assign(_mod9029);

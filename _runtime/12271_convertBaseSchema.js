@@ -1,9 +1,9 @@
 // _runtime/12271_convertBaseSchema.js
-import $output from "$output" /* 12259 */;
-import _mod12265 from "module_12265" /* 12265 */;
-import _mod12266 from "module_12266" /* 12266 */;
-import _mod12267 from "module_12267" /* 12267 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import $output from "12259__output.js";
+import _mod12265 from "metro/12265__.js";
+import _mod12266 from "metro/12266__.js";
+import _mod12267 from "metro/12267__.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const self = this;
 function convertBaseSchema(not, refs) {

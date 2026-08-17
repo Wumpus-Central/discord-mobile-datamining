@@ -1,5 +1,5 @@
 // _runtime/00259_HeadlessJsTaskSupport.js
-import HeadlessJsTaskSupportDefault from "HeadlessJsTaskSupport" /* 260 */;
+import HeadlessJsTaskSupportDefault from "00260_HeadlessJsTaskSupport.js";
 
 for (const key10016 in require("HeadlessJsTaskSupport")) {
   let tmp2 = key10016;

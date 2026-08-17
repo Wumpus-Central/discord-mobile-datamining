@@ -1,10 +1,10 @@
 // _runtime/metro/14856__.js
-import noop2 from "noop" /* 19 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _extends from "_extends" /* 14858 */;
-import 08106__ from "08106__.js" /* 8106 */;
-import _getRequireWildcardCache from "_getRequireWildcardCache" /* 14857 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop2 from "../00019_noop.js";
+import _slicedToArray from "00032__slicedToArray.js";
+import _extends from "14858__extends.js";
+import 08106__ from "08106__.js";
+import _getRequireWildcardCache from "../14857__getRequireWildcardCache.js";
+import get_ActivityIndicator from "../00017_get_ActivityIndicator.js";
 
 let closure_2 = module_8106(_extends);
 let closure_3 = module_8106(_slicedToArray);

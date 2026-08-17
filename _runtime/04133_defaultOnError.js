@@ -1,8 +1,8 @@
 // _runtime/04133_defaultOnError.js
-import _mod4134 from "module_4134" /* 4134 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _mod4134 from "metro/04134__.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 import { NitroRiveView } from "04111_NitroRiveView.js";
 import { c } from "04135_c.js";
 

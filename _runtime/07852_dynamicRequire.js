@@ -1,5 +1,5 @@
 // _runtime/07852_dynamicRequire.js
-import getSDKSource from "getSDKSource" /* 7853 */;
+import getSDKSource from "07853_getSDKSource.js";
 
 require = arg1;
 let dependencyMap = arg4;

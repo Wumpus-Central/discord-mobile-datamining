@@ -1,7 +1,7 @@
 // _runtime/03838_isTomorrow.js
-import addDays from "addDays" /* 3620 */;
-import isSameDay from "isSameDay" /* 3653 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import addDays from "03620_addDays.js";
+import isSameDay from "03653_isSameDay.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!addDays) {
   let obj = { default: null };

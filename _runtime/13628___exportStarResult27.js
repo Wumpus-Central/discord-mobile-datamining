@@ -1,6 +1,6 @@
 // _runtime/13628___exportStarResult27.js
-import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
-import __exportStarResult4 from "__exportStarResult4" /* 13587 */;
+import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
+import __exportStarResult4 from "13587___exportStarResult4.js";
 
 require = arg1;
 const dependencyMap = arg6;

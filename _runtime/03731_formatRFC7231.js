@@ -1,7 +1,7 @@
 // _runtime/03731_formatRFC7231.js
-import _typeof from "_typeof" /* 3472 */;
-import isValid from "isValid" /* 3654 */;
-import addLeadingZeros from "addLeadingZeros" /* 3715 */;
+import _typeof from "metro/03472__typeof.js";
+import isValid from "03654_isValid.js";
+import addLeadingZeros from "03715_addLeadingZeros.js";
 
 if (!_typeof) {
   let obj = { default: null };

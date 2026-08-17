@@ -1,6 +1,6 @@
 // _runtime/03834_isThisWeek.js
-import isSameWeek from "isSameWeek" /* 3820 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import isSameWeek from "03820_isSameWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!isSameWeek) {
   let obj = { default: null };

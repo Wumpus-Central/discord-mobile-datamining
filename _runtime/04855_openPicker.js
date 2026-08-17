@@ -1,5 +1,5 @@
 // _runtime/04855_openPicker.js
-import RNCImageCropPickerDefault from "RNCImageCropPicker" /* 4856 */;
+import RNCImageCropPickerDefault from "04856_RNCImageCropPicker.js";
 
 
 export default RNCImageCropPickerDefault;

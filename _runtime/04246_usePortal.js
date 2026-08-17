@@ -1,5 +1,5 @@
 // _runtime/04246_usePortal.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 ({ useCallback: obj1, useContext: c3 } = noop);
 

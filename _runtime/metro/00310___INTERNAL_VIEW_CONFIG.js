@@ -1,8 +1,8 @@
 // _runtime/metro/00310___INTERNAL_VIEW_CONFIG.js
-import noopAll from "noop" /* 19 */;
-import renderElement from "renderElement" /* 114 */;
-import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import noopAll from "../00019_noop.js";
+import renderElement from "../00114_renderElement.js";
+import weakSet from "../00106_weakSet.js";
+import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 require = arg1;
 noopAll;

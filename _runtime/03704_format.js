@@ -1,13 +1,13 @@
 // _runtime/03704_format.js
-import isValid from "isValid" /* 3654 */;
-import subMilliseconds from "subMilliseconds" /* 3705 */;
-import _typeof from "_typeof" /* 3472 */;
-import G from "G" /* 3706 */;
-import dateLongFormatter from "dateLongFormatter" /* 3717 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import toInteger from "toInteger" /* 3476 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
-import code from "code" /* 3718 */;
+import isValid from "03654_isValid.js";
+import subMilliseconds from "03705_subMilliseconds.js";
+import _typeof from "metro/03472__typeof.js";
+import G from "03706_G.js";
+import dateLongFormatter from "03717_dateLongFormatter.js";
+import getTimezoneOffsetInMilliseconds from "03635_getTimezoneOffsetInMilliseconds.js";
+import toInteger from "03476_toInteger.js";
+import requiredArgs from "03473_requiredArgs.js";
+import code from "03718_code.js";
 import { getDefaultOptions } from "03477_getDefaultOptions.js";
 
 if (!isValid) {

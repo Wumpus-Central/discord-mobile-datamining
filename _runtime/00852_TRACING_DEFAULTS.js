@@ -1,5 +1,5 @@
 // _runtime/00852_TRACING_DEFAULTS.js
-import closure_2 from "_toArray" /* 853 */;
+import closure_2 from "00853__toArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let obj = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };

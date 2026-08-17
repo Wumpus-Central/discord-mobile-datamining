@@ -1,5 +1,5 @@
 // _runtime/00769_baseIsEqualDeep.js
-import _mod599 from "module_599" /* 599 */;
+import _mod599 from "metro/00599__.js";
 
 
 export default function baseIsEqualDeep(value, value2) {

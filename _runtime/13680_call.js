@@ -1,5 +1,5 @@
 // _runtime/13680_call.js
-import 13681__ from "metro/13681__.js" /* 13681 */;
+import 13681__ from "metro/13681__.js";
 
 const call = prototype.call;
 if (module_13681) {

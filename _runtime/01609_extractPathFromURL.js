@@ -1,6 +1,6 @@
 // _runtime/01609_extractPathFromURL.js
-import _modDef1563 from "module_1563" /* 1563 */;
-import closure_2 from "_toArray" /* 853 */;
+import _modDef1563 from "metro/01563__.js";
+import closure_2 from "00853__toArray.js";
 
 
 export const extractPathFromURL = function extractPathFromURL(current, AUTO_DISMISS) {

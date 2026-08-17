@@ -1,8 +1,8 @@
 // _runtime/00978_asString.js
-import _mod839 from "module_839" /* 839 */;
-import _mod958 from "module_958" /* 958 */;
-import truncateTextByBytes from "truncateTextByBytes" /* 961 */;
-import _mod979 from "module_979" /* 979 */;
+import _mod839 from "metro/00839__.js";
+import _mod958 from "metro/00958__.js";
+import truncateTextByBytes from "00961_truncateTextByBytes.js";
+import _mod979 from "metro/00979__.js";
 
 require = arg1;
 const dependencyMap = arg6;

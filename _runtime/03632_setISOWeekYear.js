@@ -1,9 +1,9 @@
 // _runtime/03632_setISOWeekYear.js
-import toInteger from "toInteger" /* 3476 */;
-import _typeof from "_typeof" /* 3472 */;
-import startOfISOWeekYear from "startOfISOWeekYear" /* 3633 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3634 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import _typeof from "metro/03472__typeof.js";
+import startOfISOWeekYear from "03633_startOfISOWeekYear.js";
+import differenceInCalendarDays from "03634_differenceInCalendarDays.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

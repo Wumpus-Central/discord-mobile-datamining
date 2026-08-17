@@ -1,5 +1,5 @@
 // _runtime/01094_INTEGRATION_NAME.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const SpotlightBrowser = "SpotlightBrowser";

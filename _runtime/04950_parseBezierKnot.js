@@ -1,7 +1,7 @@
 // _runtime/04950_parseBezierKnot.js
-import getDataView from "getDataView" /* 4910 */;
-import _modDef4927 from "module_4927" /* 4927 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import getDataView from "04910_getDataView.js";
+import _modDef4927 from "metro/04927__.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function parseBezierKnot(dataView) {

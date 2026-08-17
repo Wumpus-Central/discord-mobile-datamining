@@ -1,6 +1,6 @@
 // _runtime/01831_measureFabric.js
-import addLogBoxLog from "addLogBoxLog" /* 1658 */;
-import isJest from "isJest" /* 1657 */;
+import addLogBoxLog from "01658_addLogBoxLog.js";
+import isJest from "01657_isJest.js";
 
 function measureFabric(arg0) {
   if (globalThis._WORKLET) {

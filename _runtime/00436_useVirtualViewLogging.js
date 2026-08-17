@@ -1,5 +1,5 @@
 // _runtime/00436_useVirtualViewLogging.js
-import noop from "noop" /* 19 */;
+import noop from "00019_noop.js";
 
 const useRef = noop.useRef;
 

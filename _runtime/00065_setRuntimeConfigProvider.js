@@ -1,7 +1,7 @@
 // _runtime/00065_setRuntimeConfigProvider.js
-import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import mapAll from "map" /* 66 */;
+import noopAll from "00019_noop.js";
+import _modDef38 from "metro/00038__.js";
+import mapAll from "00066_map.js";
 
 const require = arg1;
 noopAll;

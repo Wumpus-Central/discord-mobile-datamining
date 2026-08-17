@@ -1,7 +1,7 @@
 // _runtime/07095_ViewHolder.js
-import noopDefault from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import noop from "00019_noop.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 ({ useCallback: obj1, useLayoutEffect: c3, useMemo: c4, useRef: c5 } = noop);
 ({ jsx: closure_6, jsxs: error } = jsxProd);

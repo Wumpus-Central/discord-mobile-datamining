@@ -1,5 +1,5 @@
 // _runtime/00358_shouldUseTurboAnimatedModule.js
-import shouldUseTurboAnimatedModuleDefault from "shouldUseTurboAnimatedModule" /* 359 */;
+import shouldUseTurboAnimatedModuleDefault from "00359_shouldUseTurboAnimatedModule.js";
 
 for (const key10016 in require("shouldUseTurboAnimatedModule")) {
   let tmp2 = key10016;

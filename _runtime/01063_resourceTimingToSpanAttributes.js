@@ -1,5 +1,5 @@
 // _runtime/01063_resourceTimingToSpanAttributes.js
-import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
+import extractNetworkProtocol from "01059_extractNetworkProtocol.js";
 
 require = arg1;
 const dependencyMap = arg6;

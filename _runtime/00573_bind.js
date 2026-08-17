@@ -1,5 +1,5 @@
 // _runtime/00573_bind.js
-import bind from "bind" /* 554 */;
+import bind from "00554_bind.js";
 
 const call2 = bind.call;
 

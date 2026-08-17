@@ -1,5 +1,5 @@
 // _runtime/00300_get_BatchedBridge.js
-import get_BatchedBridge from "get BatchedBridge" /* 272 */;
+import get_BatchedBridge from "00272_get_BatchedBridge.js";
 
 const register = get_BatchedBridge.ReactNativeViewConfigRegistry.register;
 

@@ -1,6 +1,6 @@
 // _runtime/01691_addCompilerSafeGetAndSet.js
-import valueSetter from "valueSetter" /* 1692 */;
-import isJest from "isJest" /* 1657 */;
+import valueSetter from "01692_valueSetter.js";
+import isJest from "01657_isJest.js";
 
 isJest = isJest.shouldBeUseWeb();
 let closure_2 = isJest.isJest();

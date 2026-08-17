@@ -1,5 +1,5 @@
 // _runtime/00874_getFilenameToDebugIdMap.js
-import createStackParser from "createStackParser" /* 833 */;
+import createStackParser from "00833_createStackParser.js";
 import { 00821__ } from "metro/00821__.js";
 
 require = arg1;

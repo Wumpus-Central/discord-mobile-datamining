@@ -1,5 +1,5 @@
 // _runtime/00701_is.js
-import is from "is" /* 702 */;
+import is from "00702_is.js";
 
 
 export default is;

@@ -1,5 +1,5 @@
 // _runtime/06429_noop.js
-import importDefaultResult from "noop" /* 19 */;
+import importDefaultResult from "00019_noop.js";
 
 let tmp3 = typeof window === "undefined";
 if (typeof window !== "undefined") {

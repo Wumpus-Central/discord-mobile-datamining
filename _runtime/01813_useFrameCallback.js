@@ -1,6 +1,6 @@
 // _runtime/01813_useFrameCallback.js
-import FrameCallbackRegistryJSDefault from "FrameCallbackRegistryJS" /* 1814 */;
-import noop from "noop" /* 19 */;
+import FrameCallbackRegistryJSDefault from "01814_FrameCallbackRegistryJS.js";
+import noop from "00019_noop.js";
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 let closure_2 = new FrameCallbackRegistryJSDefault();

@@ -1,6 +1,6 @@
 // _runtime/07794_setupIntegration.js
-import getClient from "getClient" /* 7765 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import getClient from "07765_getClient.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { __SENTRY_DEBUG__ } from "metro/07766___SENTRY_DEBUG__.js";
 
 function setupIntegration(on, name) {

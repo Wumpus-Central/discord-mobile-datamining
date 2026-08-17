@@ -1,9 +1,9 @@
 // _runtime/metro/04690__.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4691 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importDefaultResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import __INTERNAL_VIEW_CONFIGDefault from "04691___INTERNAL_VIEW_CONFIG.js";
+import closure_4 from "00109__objectWithoutProperties.js";
+import importDefaultResult from "../00019_noop.js";
+import { View } from "../00017_get_ActivityIndicator.js";
+import { jsx } from "../react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText"];

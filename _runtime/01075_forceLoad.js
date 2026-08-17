@@ -1,14 +1,14 @@
 // _runtime/01075_forceLoad.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1030 */;
-import makeFetchTransport from "makeFetchTransport" /* 1032 */;
-import _wrapTimeFunction from "_wrapTimeFunction" /* 1076 */;
-import breadcrumbsIntegration from "breadcrumbsIntegration" /* 1077 */;
-import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 1078 */;
-import linkedErrorsIntegration from "linkedErrorsIntegration" /* 1079 */;
-import httpContextIntegration from "httpContextIntegration" /* 1080 */;
-import browserSessionIntegration from "browserSessionIntegration" /* 1081 */;
-import checkAndWarnIfIsEmbeddedBrowserExtension from "checkAndWarnIfIsEmbeddedBrowserExtension" /* 1082 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import _isNativeReflectConstruct from "01030__isNativeReflectConstruct.js";
+import makeFetchTransport from "01032_makeFetchTransport.js";
+import _wrapTimeFunction from "01076__wrapTimeFunction.js";
+import breadcrumbsIntegration from "01077_breadcrumbsIntegration.js";
+import _getUnhandledRejectionError from "01078__getUnhandledRejectionError.js";
+import linkedErrorsIntegration from "01079_linkedErrorsIntegration.js";
+import httpContextIntegration from "01080_httpContextIntegration.js";
+import browserSessionIntegration from "01081_browserSessionIntegration.js";
+import checkAndWarnIfIsEmbeddedBrowserExtension from "01082_checkAndWarnIfIsEmbeddedBrowserExtension.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,8 +1,8 @@
 // _runtime/01603_weakMap.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { I18nManager } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import importAllResult from "00019_noop.js";
+import { I18nManager } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;

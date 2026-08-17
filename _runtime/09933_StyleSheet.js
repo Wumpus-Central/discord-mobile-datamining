@@ -1,8 +1,8 @@
 // _runtime/09933_StyleSheet.js
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 const require = arg1;
 ({ Animated: c5, Platform, StatusBar: closure_6, StyleSheet } = get_ActivityIndicator);

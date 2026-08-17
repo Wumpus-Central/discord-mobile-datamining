@@ -1,5 +1,5 @@
 // _runtime/00624__process.js
-import _mod610 from "module_610" /* 610 */;
+import _mod610 from "metro/00610__.js";
 
 let tmp = typeof exports === "object";
 if (typeof exports === "object") {

@@ -1,11 +1,11 @@
 // _runtime/07707_NativeModules.js
-import _mod7709 from "module_7709" /* 7709 */;
-import RNIapAmazonModuleAll from "RNIapAmazonModule" /* 7715 */;
-import NativeModulesAll from "NativeModules" /* 7716 */;
-import fetchJsonOrThrowAll from "fetchJsonOrThrow" /* 7717 */;
-import syncAll from "sync" /* 7718 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod7709 from "metro/07709__.js";
+import RNIapAmazonModuleAll from "07715_RNIapAmazonModule.js";
+import NativeModulesAll from "07716_NativeModules.js";
+import fetchJsonOrThrowAll from "07717_fetchJsonOrThrow.js";
+import syncAll from "07718_sync.js";
+import closure_3 from "00005_asyncGeneratorStep.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 require = arg1;
 ({ NativeModules, Platform } = get_ActivityIndicator);

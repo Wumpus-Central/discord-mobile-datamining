@@ -1,11 +1,11 @@
 // _runtime/01755_updatePropsOnReactJS.js
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
-import _makeShareableClone from "_makeShareableClone" /* 1664 */;
-import t from "t" /* 1665 */;
-import call from "call" /* 1697 */;
-import validateTransformOrigin from "validateTransformOrigin" /* 1756 */;
-import map from "map" /* 1757 */;
-import isJest from "isJest" /* 1657 */;
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
+import _makeShareableClone from "01664__makeShareableClone.js";
+import t from "01665_t.js";
+import call from "01697_call.js";
+import validateTransformOrigin from "01756_validateTransformOrigin.js";
+import map from "01757_map.js";
+import isJest from "01657_isJest.js";
 
 function updatePropsOnReactJS(arg0, arg1) {
   const ComponentRegistry = map.ComponentRegistry;

@@ -1,5 +1,5 @@
 // _runtime/01105__wrappedIsEnabled.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 function _wrappedIsEnabled(arg0) {
   closure_0 = arg0;

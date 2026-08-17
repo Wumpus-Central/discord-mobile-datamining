@@ -1,5 +1,5 @@
 // _runtime/00334_useMergeRefs.js
-import noopAll from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
 
 noopAll;
 require("noop").useCallback;

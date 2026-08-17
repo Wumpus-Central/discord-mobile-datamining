@@ -1,6 +1,6 @@
 // _runtime/00856_SentryNonRecordingSpan.js
-import closure_2 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import closure_2 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 const SentryNonRecordingSpan = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

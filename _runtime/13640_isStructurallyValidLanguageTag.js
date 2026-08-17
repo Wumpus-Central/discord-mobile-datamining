@@ -1,9 +1,9 @@
 // _runtime/13640_isStructurallyValidLanguageTag.js
-import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 13641 */;
-import compareKV from "compareKV" /* 13642 */;
-import __exportStarResult2 from "__exportStarResult2" /* 13645 */;
-import __exportStarResult1 from "__exportStarResult1" /* 13646 */;
-import e from "e" /* 1281 */;
+import emitUnicodeLanguageId from "13641_emitUnicodeLanguageId.js";
+import compareKV from "13642_compareKV.js";
+import __exportStarResult2 from "13645___exportStarResult2.js";
+import __exportStarResult1 from "13646___exportStarResult1.js";
+import e from "01281_e.js";
 import { parseUnicodeLanguageId } from "13644_parseUnicodeLanguageId.js";
 
 e.__exportStar(emitUnicodeLanguageId, exports);

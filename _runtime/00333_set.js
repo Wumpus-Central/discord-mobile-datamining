@@ -1,7 +1,7 @@
 // _runtime/00333_set.js
-import noopAll from "noop" /* 19 */;
-import useMergeRefsDefault from "useMergeRefs" /* 334 */;
-import { useRef } from "noop" /* 19 */;
+import noopAll from "00019_noop.js";
+import useMergeRefsDefault from "00334_useMergeRefs.js";
+import { useRef } from "00019_noop.js";
 
 noopAll;
 const set = new Set();

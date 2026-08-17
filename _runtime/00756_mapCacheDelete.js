@@ -1,5 +1,5 @@
 // _runtime/00756_mapCacheDelete.js
-import getMapData from "getMapData" /* 757 */;
+import getMapData from "00757_getMapData.js";
 
 
 export default function mapCacheDelete(arg0) {

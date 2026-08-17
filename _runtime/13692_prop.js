@@ -1,6 +1,6 @@
 // _runtime/13692_prop.js
-import _mod13673 from "module_13673" /* 13673 */;
-import _mod13677 from "module_13677" /* 13677 */;
+import _mod13673 from "metro/13673__.js";
+import _mod13677 from "metro/13677__.js";
 
 let prop = Object.getOwnPropertySymbols;
 if (prop) {

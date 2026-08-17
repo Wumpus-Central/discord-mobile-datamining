@@ -1,6 +1,6 @@
 // _runtime/00621_isBuffer.js
-import _mod609 from "module_609" /* 609 */;
-import stubFalse from "stubFalse" /* 622 */;
+import _mod609 from "metro/00609__.js";
+import stubFalse from "00622_stubFalse.js";
 
 let tmp = typeof exports === "object";
 if (typeof exports === "object") {

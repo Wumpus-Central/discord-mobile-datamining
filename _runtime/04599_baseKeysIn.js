@@ -1,5 +1,5 @@
 // _runtime/04599_baseKeysIn.js
-import isObject from "isObject" /* 606 */;
+import isObject from "00606_isObject.js";
 
 
 export default function baseKeysIn(obj) {

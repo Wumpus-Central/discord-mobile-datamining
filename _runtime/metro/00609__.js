@@ -1,5 +1,5 @@
 // _runtime/metro/00609__.js
-import _mod610 from "module_610" /* 610 */;
+import _mod610 from "00610__.js";
 
 let _self = typeof self === "object";
 if (typeof self === "object") {

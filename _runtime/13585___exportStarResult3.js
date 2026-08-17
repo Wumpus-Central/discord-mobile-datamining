@@ -1,5 +1,5 @@
 // _runtime/13585___exportStarResult3.js
-import DefaultNumberOption from "DefaultNumberOption" /* 13586 */;
+import DefaultNumberOption from "13586_DefaultNumberOption.js";
 
 require = arg1;
 const dependencyMap = arg6;

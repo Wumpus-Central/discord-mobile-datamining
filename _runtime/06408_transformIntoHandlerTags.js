@@ -1,7 +1,7 @@
 // _runtime/06408_transformIntoHandlerTags.js
-import tagMessage from "tagMessage" /* 6382 */;
-import _mod6409 from "module_6409" /* 6409 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import tagMessage from "06382_tagMessage.js";
+import _mod6409 from "metro/06409__.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 function transformIntoHandlerTags(arg0) {
   const obj = tagMessage;

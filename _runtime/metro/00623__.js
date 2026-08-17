@@ -1,7 +1,7 @@
 // _runtime/metro/00623__.js
-import _process from "_process" /* 624 */;
-import baseUnary from "baseUnary" /* 625 */;
-import baseIsTypedArray from "baseIsTypedArray" /* 626 */;
+import _process from "../00624__process.js";
+import baseUnary from "../00625_baseUnary.js";
+import baseIsTypedArray from "../00626_baseIsTypedArray.js";
 
 const tmp = _process && _process.isTypedArray;
 if (tmp) {

@@ -1,5 +1,5 @@
 // _runtime/13682_call.js
-import call from "call" /* 13680 */;
+import call from "13680_call.js";
 
 let closure_0 = call({}.toString);
 let closure_1 = call("".slice);

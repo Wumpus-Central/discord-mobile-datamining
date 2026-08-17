@@ -1,5 +1,5 @@
 // _runtime/07732_BAGGAGE_HEADER_NAME.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 7733 */;
+import registerSpanErrorInstrumentation from "07733_registerSpanErrorInstrumentation.js";
 
 
 export const BAGGAGE_HEADER_NAME = registerSpanErrorInstrumentation.BAGGAGE_HEADER_NAME;

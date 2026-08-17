@@ -1,9 +1,9 @@
 // _runtime/01058__addMeasureSpans.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import triggerHandlers from "triggerHandlers" /* 1034 */;
-import getNavigationEntry from "getNavigationEntry" /* 1043 */;
-import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import triggerHandlers from "01034_triggerHandlers.js";
+import getNavigationEntry from "01043_getNavigationEntry.js";
+import extractNetworkProtocol from "01059_extractNetworkProtocol.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 

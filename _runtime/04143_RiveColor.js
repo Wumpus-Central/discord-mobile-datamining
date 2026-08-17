@@ -1,6 +1,6 @@
 // _runtime/04143_RiveColor.js
-import _createClassDefault from "_createClass" /* 42 */;
-import RiveColor from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import RiveColor from "metro/00041__classCallCheck.js";
 
 class RiveColor {
   constructor(arg0, arg1, arg2, arg3) {

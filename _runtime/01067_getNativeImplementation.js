@@ -1,6 +1,6 @@
 // _runtime/01067_getNativeImplementation.js
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import WINDOW from "WINDOW" /* 1039 */;
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
+import WINDOW from "01039_WINDOW.js";
 
 require = arg1;
 const dependencyMap = arg6;

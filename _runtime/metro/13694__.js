@@ -1,5 +1,5 @@
 // _runtime/metro/13694__.js
-import _mod13673 from "module_13673" /* 13673 */;
+import _mod13673 from "13673__.js";
 
 const tmp = _mod13673.navigator && _mod13673.navigator.userAgent;
 let str = "";

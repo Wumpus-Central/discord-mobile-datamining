@@ -1,6 +1,6 @@
 // _runtime/06304_WebView.js
-import NativeModulesDefault from "NativeModules" /* 6305 */;
-import getWebViewProxyDefault from "getWebViewProxy" /* 6310 */;
+import NativeModulesDefault from "06305_NativeModules.js";
+import getWebViewProxyDefault from "06310_getWebViewProxy.js";
 
 
 export default NativeModulesDefault;

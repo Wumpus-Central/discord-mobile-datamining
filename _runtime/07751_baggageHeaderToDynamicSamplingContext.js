@@ -1,5 +1,5 @@
 // _runtime/07751_baggageHeaderToDynamicSamplingContext.js
-import isInstanceOf from "isInstanceOf" /* 7745 */;
+import isInstanceOf from "07745_isInstanceOf.js";
 
 require = arg1;
 const dependencyMap = arg6;

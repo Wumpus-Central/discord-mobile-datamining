@@ -1,8 +1,8 @@
 // _runtime/metro/13207__.js
-import _mod13221 from "module_13221" /* 13221 */;
-import assign from "assign" /* 13208 */;
-import Deflate from "Deflate" /* 13209 */;
-import Inflate from "Inflate" /* 13217 */;
+import _mod13221 from "13221__.js";
+import assign from "../13208_assign.js";
+import Deflate from "../13209_Deflate.js";
+import Inflate from "../13217_Inflate.js";
 
 let obj = {};
 obj = assign.assign(obj, Deflate, Inflate, _mod13221);

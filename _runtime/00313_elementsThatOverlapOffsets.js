@@ -1,6 +1,6 @@
 // _runtime/00313_elementsThatOverlapOffsets.js
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, arg3) {
   let num = arg3;

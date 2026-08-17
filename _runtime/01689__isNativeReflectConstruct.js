@@ -1,21 +1,21 @@
 // _runtime/01689__isNativeReflectConstruct.js
-import _modDef38 from "module_38" /* 38 */;
-import isJest2 from "isJest" /* 1657 */;
-import JSPropsUpdaterPaperDefault from "JSPropsUpdaterPaper" /* 1749 */;
-import isInlineStyleTransform from "isInlineStyleTransform" /* 1750 */;
-import dummyListener from "dummyListener" /* 1758 */;
-import setAndForwardRefDefault from "setAndForwardRef" /* 1760 */;
-import updateLayoutAnimations from "updateLayoutAnimations" /* 1768 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_createClass" /* 42 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import closure_7 from "_inherits" /* 98 */;
-import startObservingProgress from "startObservingProgress" /* 1690 */;
-import closure_8 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import isJest from "isJest" /* 1657 */;
+import _modDef38 from "metro/00038__.js";
+import isJest2 from "01657_isJest.js";
+import JSPropsUpdaterPaperDefault from "01749_JSPropsUpdaterPaper.js";
+import isInlineStyleTransform from "01750_isInlineStyleTransform.js";
+import dummyListener from "01758_dummyListener.js";
+import setAndForwardRefDefault from "01760_setAndForwardRef.js";
+import updateLayoutAnimations from "01768_updateLayoutAnimations.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00042__createClass.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import closure_7 from "00098__inherits.js";
+import startObservingProgress from "01690_startObservingProgress.js";
+import closure_8 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
+import isJest from "01657_isJest.js";
 
 require = arg1;
 function _isNativeReflectConstruct() {

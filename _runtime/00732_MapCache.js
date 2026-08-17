@@ -1,9 +1,9 @@
 // _runtime/00732_MapCache.js
-import mapCacheClear from "mapCacheClear" /* 733 */;
-import mapCacheDelete from "mapCacheDelete" /* 756 */;
-import mapCacheGet from "mapCacheGet" /* 759 */;
-import mapCacheHas from "mapCacheHas" /* 760 */;
-import mapCacheSet from "mapCacheSet" /* 761 */;
+import mapCacheClear from "00733_mapCacheClear.js";
+import mapCacheDelete from "00756_mapCacheDelete.js";
+import mapCacheGet from "00759_mapCacheGet.js";
+import mapCacheHas from "00760_mapCacheHas.js";
+import mapCacheSet from "00761_mapCacheSet.js";
 
 class MapCache {
   constructor(arg0) {

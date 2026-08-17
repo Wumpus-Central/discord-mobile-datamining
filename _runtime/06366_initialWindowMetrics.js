@@ -1,9 +1,9 @@
 // _runtime/06366_initialWindowMetrics.js
-import _mod1632 from "module_1632" /* 1632 */;
-import useFrameSize from "useFrameSize" /* 6343 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _mod1632 from "metro/01632__.js";
+import useFrameSize from "06343_useFrameSize.js";
+import closure_2 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 ({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);

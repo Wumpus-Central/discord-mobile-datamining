@@ -1,6 +1,6 @@
 // _runtime/01591_NavigationContent.js
-import closure_0 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_0 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 function NavigationContent(render) {
   return render.render(render.children);

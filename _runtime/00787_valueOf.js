@@ -1,5 +1,5 @@
 // _runtime/00787_valueOf.js
-import _mod608 from "module_608" /* 608 */;
+import _mod608 from "metro/00608__.js";
 
 let prototype;
 if (_mod608) {

@@ -1,7 +1,7 @@
 // _runtime/01552_CHILD_STATE.js
-import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArrayDefault from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "00019_noop.js";
 
 const require = arg1;
 let closure_2 = ["state"];

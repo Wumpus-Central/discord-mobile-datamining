@@ -1,5 +1,5 @@
 // _runtime/07052_toPropertyKey.js
-import toPrimitive from "toPrimitive" /* 7053 */;
+import toPrimitive from "07053_toPrimitive.js";
 
 
 export default function toPropertyKey(arg0) {

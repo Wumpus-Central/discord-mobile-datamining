@@ -1,6 +1,6 @@
 // _runtime/01087__getGraphQLOperation.js
-import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import addClsInstrumentationHandler from "01033_addClsInstrumentationHandler.js";
+import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 function _getGraphQLOperation(obj) {
   let tmp = typeof obj === "object";

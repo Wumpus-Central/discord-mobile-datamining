@@ -1,5 +1,5 @@
 // _runtime/00281_createPublicRootInstance.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 140 */;
+import _isNativeReflectConstruct from "00140__isNativeReflectConstruct.js";
 
 require = arg1;
 const module = arg2;

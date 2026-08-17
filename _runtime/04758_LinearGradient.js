@@ -1,5 +1,5 @@
 // _runtime/04758_LinearGradient.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4759 */;
+import __INTERNAL_VIEW_CONFIGDefault from "metro/04759___INTERNAL_VIEW_CONFIG.js";
 
 for (const key10016 in require("__INTERNAL_VIEW_CONFIG")) {
   let tmp2 = key10016;

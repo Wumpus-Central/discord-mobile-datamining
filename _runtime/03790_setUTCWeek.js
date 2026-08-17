@@ -1,8 +1,8 @@
 // _runtime/03790_setUTCWeek.js
-import toInteger from "toInteger" /* 3476 */;
-import _typeof from "_typeof" /* 3472 */;
-import getUTCWeek from "getUTCWeek" /* 3712 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import _typeof from "metro/03472__typeof.js";
+import getUTCWeek from "03712_getUTCWeek.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

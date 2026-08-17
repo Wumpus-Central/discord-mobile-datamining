@@ -1,8 +1,8 @@
 // _runtime/07097_ViewHolderCollection.js
-import closure_2 from "_slicedToArray" /* 7041 */;
-import noop from "noop" /* 19 */;
-import closure_6 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "metro/07041__slicedToArray.js";
+import noop from "00019_noop.js";
+import closure_6 from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 ({ useEffect: c3, useImperativeHandle: c4, useLayoutEffect: c5 } = noop);

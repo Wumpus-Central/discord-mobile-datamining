@@ -1,8 +1,8 @@
 // _runtime/06390_GestureDetectorType.js
-import GestureDetectorType from "GestureDetectorType" /* 6391 */;
-import GestureDetector from "GestureDetector" /* 6394 */;
-import InterceptingGestureDetector from "InterceptingGestureDetector" /* 6454 */;
-import VirtualDetector from "VirtualDetector" /* 6456 */;
+import GestureDetectorType from "06391_GestureDetectorType.js";
+import GestureDetector from "06394_GestureDetector.js";
+import InterceptingGestureDetector from "06454_InterceptingGestureDetector.js";
+import VirtualDetector from "06456_VirtualDetector.js";
 
 
 export const GestureDetectorType = GestureDetectorType.GestureDetectorType;

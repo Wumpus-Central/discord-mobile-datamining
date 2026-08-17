@@ -1,5 +1,5 @@
 // _runtime/13213_StaticTreeDesc.js
-import assign from "assign" /* 13208 */;
+import assign from "13208_assign.js";
 
 require = arg1;
 const dependencyMap = arg6;

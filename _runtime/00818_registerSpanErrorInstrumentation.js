@@ -1,6 +1,6 @@
 // _runtime/00818_registerSpanErrorInstrumentation.js
-import instrumentError from "instrumentError" /* 849 */;
-import instrumentUnhandledRejection from "instrumentUnhandledRejection" /* 851 */;
+import instrumentError from "00849_instrumentError.js";
+import instrumentUnhandledRejection from "00851_instrumentUnhandledRejection.js";
 
 require = arg1;
 const dependencyMap = arg6;

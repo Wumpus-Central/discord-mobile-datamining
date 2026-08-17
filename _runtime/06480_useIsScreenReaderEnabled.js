@@ -1,8 +1,8 @@
 // _runtime/06480_useIsScreenReaderEnabled.js
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import closure_1 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { AccessibilityInfo } from "get ActivityIndicator" /* 17 */;
+import closure_0 from "00005_asyncGeneratorStep.js";
+import closure_1 from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
+import { AccessibilityInfo } from "00017_get_ActivityIndicator.js";
 
 ({ useEffect: obj1, useState: c3 } = noop);
 

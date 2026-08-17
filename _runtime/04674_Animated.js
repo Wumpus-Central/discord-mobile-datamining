@@ -1,10 +1,10 @@
 // _runtime/04674_Animated.js
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4675 */;
-import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 4676 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import importDefaultResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import __INTERNAL_VIEW_CONFIGDefault from "metro/04675___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIGDefault2 from "metro/04676___INTERNAL_VIEW_CONFIG.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import importDefaultResult from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let closure_3 = ["enabled", "freezeOnBlur", "shouldFreeze"];

@@ -1,9 +1,9 @@
 // _runtime/00748_ListCache.js
-import listCacheClear from "listCacheClear" /* 749 */;
-import listCacheDelete from "listCacheDelete" /* 750 */;
-import listCacheGet from "listCacheGet" /* 753 */;
-import listCacheHas from "listCacheHas" /* 754 */;
-import listCacheSet from "listCacheSet" /* 755 */;
+import listCacheClear from "00749_listCacheClear.js";
+import listCacheDelete from "00750_listCacheDelete.js";
+import listCacheGet from "00753_listCacheGet.js";
+import listCacheHas from "00754_listCacheHas.js";
+import listCacheSet from "00755_listCacheSet.js";
 
 class ListCache {
   constructor(arg0) {

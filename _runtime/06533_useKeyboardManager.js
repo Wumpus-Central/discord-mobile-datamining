@@ -1,6 +1,6 @@
 // _runtime/06533_useKeyboardManager.js
-import closure_0 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_0 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 ({ Keyboard: closure_1, TextInput: obj1 } = get_ActivityIndicator);
 

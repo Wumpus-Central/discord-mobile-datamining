@@ -1,6 +1,6 @@
 // _runtime/00136_getInstanceHandle.js
-import renderElement from "renderElement" /* 114 */;
-import createReactNativeDocumentInstanceHandle from "createReactNativeDocumentInstanceHandle" /* 137 */;
+import renderElement from "00114_renderElement.js";
+import createReactNativeDocumentInstanceHandle from "00137_createReactNativeDocumentInstanceHandle.js";
 
 require = arg1;
 const dependencyMap = arg6;

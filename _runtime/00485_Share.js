@@ -1,7 +1,7 @@
 // _runtime/00485_Share.js
-import _createClassDefault from "_createClass" /* 42 */;
-import ShareModuleDefault from "ShareModule" /* 486 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import ShareModuleDefault from "00486_ShareModule.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 
 const Share = arg1;
 class Share {

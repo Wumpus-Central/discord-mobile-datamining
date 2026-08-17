@@ -1,8 +1,8 @@
 // _runtime/01592_useNavigationState.js
-import useEffectDefault from "useEffect" /* 1522 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useEffectDefault from "01522_useEffect.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import importAllResult from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 const require = arg1;
 let c4 = importAllResult;

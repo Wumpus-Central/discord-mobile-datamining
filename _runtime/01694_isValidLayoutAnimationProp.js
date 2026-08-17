@@ -1,11 +1,11 @@
 // _runtime/01694_isValidLayoutAnimationProp.js
-import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
-import t from "t" /* 1665 */;
-import isWorkletFunction from "isWorkletFunction" /* 1679 */;
-import isReducedMotionEnabledInSystem from "isReducedMotionEnabledInSystem" /* 1695 */;
-import isAffineMatrixFlat from "isAffineMatrixFlat" /* 1696 */;
-import call from "call" /* 1697 */;
-import isJest from "isJest" /* 1657 */;
+import runWorkletOnJS from "01661_runWorkletOnJS.js";
+import t from "01665_t.js";
+import isWorkletFunction from "01679_isWorkletFunction.js";
+import isReducedMotionEnabledInSystem from "01695_isReducedMotionEnabledInSystem.js";
+import isAffineMatrixFlat from "01696_isAffineMatrixFlat.js";
+import call from "01697_call.js";
+import isJest from "01657_isJest.js";
 import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
 
 let c2 = false;

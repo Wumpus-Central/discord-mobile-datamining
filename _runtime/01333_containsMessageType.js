@@ -1,5 +1,5 @@
 // _runtime/01333_containsMessageType.js
-import _mod1318 from "module_1318" /* 1318 */;
+import _mod1318 from "metro/01318__.js";
 
 require = arg1;
 const dependencyMap = arg6;

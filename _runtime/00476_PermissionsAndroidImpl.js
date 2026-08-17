@@ -1,7 +1,7 @@
 // _runtime/00476_PermissionsAndroidImpl.js
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import PermissionsAndroidImpl from "_classCallCheck" /* 41 */;
-import importDefaultResult1 from "_createClass" /* 42 */;
+import importDefaultResult from "00005_asyncGeneratorStep.js";
+import PermissionsAndroidImpl from "metro/00041__classCallCheck.js";
+import importDefaultResult1 from "metro/00042__createClass.js";
 
 let closure_0 = importDefault;
 let closure_1 = dependencyMap;

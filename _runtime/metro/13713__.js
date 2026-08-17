@@ -1,6 +1,6 @@
 // _runtime/metro/13713__.js
-import call from "call" /* 13696 */;
-import _mod13714 from "module_13714" /* 13714 */;
+import call from "../13696_call.js";
+import _mod13714 from "13714__.js";
 
 
 export default (arg0, arg1, arg2) => {

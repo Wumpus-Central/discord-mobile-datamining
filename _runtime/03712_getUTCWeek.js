@@ -1,8 +1,8 @@
 // _runtime/03712_getUTCWeek.js
-import _typeof from "_typeof" /* 3472 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
-import startOfUTCWeekYear from "startOfUTCWeekYear" /* 3713 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import startOfUTCWeek from "03475_startOfUTCWeek.js";
+import startOfUTCWeekYear from "03713_startOfUTCWeekYear.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

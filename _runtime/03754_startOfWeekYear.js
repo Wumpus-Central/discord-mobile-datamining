@@ -1,9 +1,9 @@
 // _runtime/03754_startOfWeekYear.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import getWeekYear from "getWeekYear" /* 3755 */;
-import startOfWeek from "startOfWeek" /* 3631 */;
-import toInteger from "toInteger" /* 3476 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import getWeekYear from "03755_getWeekYear.js";
+import startOfWeek from "03631_startOfWeek.js";
+import toInteger from "03476_toInteger.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getWeekYear) {
   let obj = { default: null };

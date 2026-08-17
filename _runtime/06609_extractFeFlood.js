@@ -1,7 +1,7 @@
 // _runtime/06609_extractFeFlood.js
-import extractOpacityDefault from "extractOpacity" /* 6577 */;
-import extractBrushDefault from "extractBrush" /* 6589 */;
-import closure_2 from "noop" /* 19 */;
+import extractOpacityDefault from "06577_extractOpacity.js";
+import extractBrushDefault from "06589_extractBrush.js";
+import closure_2 from "00019_noop.js";
 
 const re3 = /\s+/;
 let obj = { type: 0, payload: require("get ActivityIndicator").processColor("black") };

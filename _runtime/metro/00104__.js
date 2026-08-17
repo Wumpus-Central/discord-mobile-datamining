@@ -1,5 +1,5 @@
 // _runtime/metro/00104__.js
-import _modDef105 from "module_105" /* 105 */;
+import _modDef105 from "00105__.js";
 
 
 export default _modDef105;

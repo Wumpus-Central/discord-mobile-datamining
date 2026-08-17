@@ -1,6 +1,6 @@
 // _runtime/03830_isThisMinute.js
-import isSameMinute from "isSameMinute" /* 3822 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import isSameMinute from "03822_isSameMinute.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!isSameMinute) {
   let obj = { default: null };

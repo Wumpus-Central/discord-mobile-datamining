@@ -1,6 +1,6 @@
 // _runtime/07006_BottomSheetFooter.js
-import memo from "memo" /* 7007 */;
-import BottomSheetFooterContainer from "BottomSheetFooterContainer" /* 7009 */;
+import memo from "07007_memo.js";
+import BottomSheetFooterContainer from "07009_BottomSheetFooterContainer.js";
 
 
 export const BottomSheetFooter = memo.BottomSheetFooter;

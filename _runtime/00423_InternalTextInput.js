@@ -1,12 +1,12 @@
 // _runtime/00423_InternalTextInput.js
-import setDefault from "set" /* 144 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import closure_7 from "_slicedToArray" /* 32 */;
-import closure_8 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { default as Commands, Commands } from "Commands" /* 145 */;
+import setDefault from "00144_set.js";
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import closure_7 from "metro/00032__slicedToArray.js";
+import closure_8 from "00019_noop.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
+import { default as Commands, Commands } from "00145_Commands.js";
 
 function InternalTextInput(value) {
   importDefault = value;

@@ -1,6 +1,6 @@
 // _runtime/00737_getNative.js
-import getValue from "getValue" /* 738 */;
-import baseIsNative from "baseIsNative" /* 739 */;
+import getValue from "00738_getValue.js";
+import baseIsNative from "00739_baseIsNative.js";
 
 
 export default function getNative(arg0, arg1) {

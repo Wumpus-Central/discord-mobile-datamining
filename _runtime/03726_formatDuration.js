@@ -1,5 +1,5 @@
 // _runtime/03726_formatDuration.js
-import code from "code" /* 3718 */;
+import code from "03718_code.js";
 
 if (!code) {
   const obj = { default: null };

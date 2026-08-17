@@ -1,8 +1,8 @@
 // _runtime/07411_useForceUpdate.js
-import useForceUpdateDefault from "useForceUpdate" /* 7412 */;
-import useStableMemoDefault from "useStableMemo" /* 7413 */;
-import areHookInputsEqualDefault from "areHookInputsEqual" /* 7414 */;
-import useLazyValueDefault from "useLazyValue" /* 7415 */;
+import useForceUpdateDefault from "07412_useForceUpdate.js";
+import useStableMemoDefault from "07413_useStableMemo.js";
+import areHookInputsEqualDefault from "07414_areHookInputsEqual.js";
+import useLazyValueDefault from "07415_useLazyValue.js";
 
 
 export const useForceUpdate = useForceUpdateDefault;

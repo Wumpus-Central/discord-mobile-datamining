@@ -1,9 +1,9 @@
 // _runtime/00387_createAnimatedComponent.js
-import noopAll from "noop" /* 19 */;
-import addListenersToPropsValueDefault from "addListenersToPropsValue" /* 388 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import addListenersToPropsValueDefault from "00388_addListenersToPropsValue.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import { useMemo } from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 

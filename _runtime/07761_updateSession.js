@@ -1,9 +1,9 @@
 // _runtime/07761_updateSession.js
-import addContextToFrame from "addContextToFrame" /* 7749 */;
-import dateTimestampInSeconds from "dateTimestampInSeconds" /* 7752 */;
-import SyncPromise from "SyncPromise" /* 7762 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
-import consoleSandbox from "consoleSandbox" /* 7738 */;
+import addContextToFrame from "07749_addContextToFrame.js";
+import dateTimestampInSeconds from "07752_dateTimestampInSeconds.js";
+import SyncPromise from "07762_SyncPromise.js";
+import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
+import consoleSandbox from "07738_consoleSandbox.js";
 
 function updateSession(ipAddress) {
   let obj = arg1;

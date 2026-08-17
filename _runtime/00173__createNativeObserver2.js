@@ -1,10 +1,10 @@
 // _runtime/00173__createNativeObserver2.js
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_4 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
+import nullthrowsDefault from "00070_nullthrows.js";
+import NativePerformanceCxxDefault from "00154_NativePerformanceCxx.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_4 from "00090__classPrivateFieldBase.js";
+import importDefaultResult1 from "00091__classPrivateFieldKey.js";
 
 let PerformanceObserver = arg1;
 function _createNativeObserver2() {

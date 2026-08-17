@@ -1,6 +1,6 @@
 // _runtime/06527_forHorizontalIOS.js
-import conditional from "conditional" /* 6528 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import conditional from "06528_conditional.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 function forHorizontalIOS(layouts) {
   ({ current, next, inverted } = layouts);

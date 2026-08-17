@@ -1,9 +1,9 @@
 // _runtime/06493_GestureHandlerRootView.js
-import noopAll from "noop" /* 19 */;
-import noopDefault from "noop" /* 6396 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6494 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import noopDefault from "06396_noop.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06494___INTERNAL_VIEW_CONFIG.js";
+import { StyleSheet } from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 const styles = StyleSheet.create({ container: { flex: 1 } });

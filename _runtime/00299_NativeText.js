@@ -1,8 +1,8 @@
 // _runtime/00299_NativeText.js
-import measureDefault from "measure" /* 68 */;
-import createViewConfig from "createViewConfig" /* 103 */;
-import get_BatchedBridgeDefault from "get BatchedBridge" /* 300 */;
-import javaScriptFlagGetter from "javaScriptFlagGetter" /* 27 */;
+import measureDefault from "00068_measure.js";
+import createViewConfig from "00103_createViewConfig.js";
+import get_BatchedBridgeDefault from "00300_get_BatchedBridge.js";
+import javaScriptFlagGetter from "00027_javaScriptFlagGetter.js";
 
 require = arg1;
 let closure_2 = { validAttributes: { isHighlighted: true, isPressable: true, numberOfLines: true, ellipsizeMode: true, allowFontScaling: true, dynamicTypeRamp: true, maxFontSizeMultiplier: true, disabled: true, selectable: true, selectionColor: true, adjustsFontSizeToFit: true, minimumFontScale: true, textBreakStrategy: true, onTextLayout: true, dataDetectorType: true, android_hyphenationFrequency: true, lineBreakStrategyIOS: true, gradientColors: true, gradientAngle: true, gradientLength: true, gradientMode: true, textStrokeWidth: true, textStrokeColor: true }, directEventTypes: { topTextLayout: { registrationName: "onTextLayout" } }, uiViewClassName: "RCTText" };

@@ -1,8 +1,8 @@
 // _runtime/metro/08048__.js
-import baseFlatten from "baseFlatten" /* 4623 */;
-import baseRest from "baseRest" /* 8049 */;
-import isIterateeCall from "isIterateeCall" /* 8050 */;
-import baseOrderBy from "baseOrderBy" /* 8051 */;
+import baseFlatten from "../04623_baseFlatten.js";
+import baseRest from "../08049_baseRest.js";
+import isIterateeCall from "../08050_isIterateeCall.js";
+import baseOrderBy from "../08051_baseOrderBy.js";
 
 
 export default baseRest((arg0, arg1) => {

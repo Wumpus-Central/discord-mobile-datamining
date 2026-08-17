@@ -1,6 +1,6 @@
 // _runtime/14411_CircularProgress.js
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 14412 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 14413 */;
+import _isNativeReflectConstructDefault from "14412__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault2 from "14413__isNativeReflectConstruct.js";
 
 
 export const CircularProgress = _isNativeReflectConstructDefault;

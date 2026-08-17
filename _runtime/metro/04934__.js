@@ -1,5 +1,5 @@
 // _runtime/metro/04934__.js
-import getStringValue from "getStringValue" /* 4935 */;
+import getStringValue from "../04935_getStringValue.js";
 
 require = arg1;
 const dependencyMap = arg6;

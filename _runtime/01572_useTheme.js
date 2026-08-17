@@ -1,6 +1,6 @@
 // _runtime/01572_useTheme.js
-import context2 from "context" /* 1537 */;
-import closure_2 from "noop" /* 19 */;
+import context2 from "01537_context.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

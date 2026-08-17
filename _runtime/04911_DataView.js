@@ -1,6 +1,6 @@
 // _runtime/04911_DataView.js
-import _createClassDefault from "_createClass" /* 42 */;
-import DataView from "_classCallCheck" /* 41 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import DataView from "metro/00041__classCallCheck.js";
 
 class DataView {
   constructor(arg0) {

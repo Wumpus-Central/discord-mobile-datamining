@@ -1,7 +1,7 @@
 // _runtime/03909_subQuarters.js
-import toInteger from "toInteger" /* 3476 */;
-import addQuarters from "addQuarters" /* 3638 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import toInteger from "03476_toInteger.js";
+import addQuarters from "03638_addQuarters.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!toInteger) {
   let obj = { default: null };

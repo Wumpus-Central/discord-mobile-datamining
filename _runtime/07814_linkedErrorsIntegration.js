@@ -1,5 +1,5 @@
 // _runtime/07814_linkedErrorsIntegration.js
-import setupIntegration from "setupIntegration" /* 7794 */;
+import setupIntegration from "07794_setupIntegration.js";
 
 
 export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {

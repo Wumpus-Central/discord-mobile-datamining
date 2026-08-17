@@ -1,6 +1,6 @@
 // _runtime/03617_formatRelative.js
-import _mod3618 from "module_3618" /* 3618 */;
-import isSameUTCWeek from "isSameUTCWeek" /* 3474 */;
+import _mod3618 from "metro/03618__.js";
+import isSameUTCWeek from "03474_isSameUTCWeek.js";
 
 if (!isSameUTCWeek) {
   const obj = { default: null };

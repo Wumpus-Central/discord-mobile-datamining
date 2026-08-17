@@ -1,5 +1,5 @@
 // _runtime/16448_extend.js
-import extend from "extend" /* 16449 */;
+import extend from "16449_extend.js";
 
 require = arg1;
 const dependencyMap = arg6;

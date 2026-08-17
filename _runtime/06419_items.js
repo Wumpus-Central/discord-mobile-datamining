@@ -1,5 +1,5 @@
 // _runtime/06419_items.js
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
+import _isNativeReflectConstructDefault from "06404__isNativeReflectConstruct.js";
 
 const items = ["shouldActivateOnStart", "disallowInterruption"];
 const items1 = [...items];

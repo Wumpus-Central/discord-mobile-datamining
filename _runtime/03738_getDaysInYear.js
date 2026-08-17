@@ -1,7 +1,7 @@
 // _runtime/03738_getDaysInYear.js
-import _typeof from "_typeof" /* 3472 */;
-import isLeapYear from "isLeapYear" /* 3739 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import isLeapYear from "03739_isLeapYear.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

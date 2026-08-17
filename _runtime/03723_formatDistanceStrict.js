@@ -1,12 +1,12 @@
 // _runtime/03723_formatDistanceStrict.js
-import getDefaultOptions from "getDefaultOptions" /* 3477 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3635 */;
-import compareAsc from "compareAsc" /* 3648 */;
-import _typeof from "_typeof" /* 3472 */;
-import cloneObject from "cloneObject" /* 3721 */;
-import assign from "assign" /* 3722 */;
-import code from "code" /* 3718 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import getDefaultOptions from "03477_getDefaultOptions.js";
+import getTimezoneOffsetInMilliseconds from "03635_getTimezoneOffsetInMilliseconds.js";
+import compareAsc from "03648_compareAsc.js";
+import _typeof from "metro/03472__typeof.js";
+import cloneObject from "03721_cloneObject.js";
+import assign from "03722_assign.js";
+import code from "03718_code.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!getTimezoneOffsetInMilliseconds) {
   let obj = { default: null };

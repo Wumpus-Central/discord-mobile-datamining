@@ -1,8 +1,8 @@
 // _runtime/metro/12205__.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
-import mergeDefs from "mergeDefs" /* 12203 */;
-import mergeDefs2 from "mergeDefs" /* 12206 */;
-import closure_1 from "_slicedToArray" /* 32 */;
+import _isNativeReflectConstruct from "../12200__isNativeReflectConstruct.js";
+import mergeDefs from "../12203_mergeDefs.js";
+import mergeDefs2 from "../12206_mergeDefs.js";
+import closure_1 from "00032__slicedToArray.js";
 
 const self = this;
 let self2 = this;

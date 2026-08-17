@@ -1,9 +1,9 @@
 // _runtime/13217_Inflate.js
-import assign from "assign" /* 13208 */;
-import ZStream from "ZStream" /* 13210 */;
-import _mod13212 from "module_13212" /* 13212 */;
-import assign2 from "assign" /* 13216 */;
-import _mod13221 from "module_13221" /* 13221 */;
+import assign from "13208_assign.js";
+import ZStream from "13210_ZStream.js";
+import _mod13212 from "metro/13212__.js";
+import assign2 from "13216_assign.js";
+import _mod13221 from "metro/13221__.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
 // _runtime/04553_toInteger.js
-import toFinite from "toFinite" /* 4554 */;
+import toFinite from "04554_toFinite.js";
 
 
 export default function toInteger(arg0) {

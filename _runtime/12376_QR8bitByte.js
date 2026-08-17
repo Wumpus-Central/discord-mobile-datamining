@@ -1,5 +1,5 @@
 // _runtime/12376_QR8bitByte.js
-import _mod12377 from "module_12377" /* 12377 */;
+import _mod12377 from "metro/12377__.js";
 
 class QR8bitByte {
   constructor(arg0) {

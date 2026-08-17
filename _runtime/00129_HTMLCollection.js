@@ -1,7 +1,7 @@
 // _runtime/00129_HTMLCollection.js
-import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _createClassDefault from "metro/00042__createClass.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 const HTMLCollection = arg1;
 let closure_3 = { value: {}, enumerable: true, configurable: false, writable: false };

@@ -1,11 +1,11 @@
 // _runtime/06348_HeaderBackButton.js
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import registerAssetDefault from "registerAsset" /* 6320 */;
-import HeaderButton from "HeaderButton" /* 6354 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
+import registerAssetDefault from "06320_registerAsset.js";
+import HeaderButton from "06354_HeaderButton.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 require = arg1;
 ({ Animated: c5, Image, Platform, StyleSheet, View: closure_6 } = get_ActivityIndicator);

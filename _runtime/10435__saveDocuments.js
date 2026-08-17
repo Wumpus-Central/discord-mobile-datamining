@@ -1,6 +1,6 @@
 // _runtime/10435__saveDocuments.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
 
 const require = arg1;
 function _saveDocuments() {

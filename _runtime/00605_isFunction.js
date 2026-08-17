@@ -1,6 +1,6 @@
 // _runtime/00605_isFunction.js
-import isObject from "isObject" /* 606 */;
-import toStringTag from "toStringTag" /* 607 */;
+import isObject from "00606_isObject.js";
+import toStringTag from "00607_toStringTag.js";
 
 
 export default function isFunction(arg0) {

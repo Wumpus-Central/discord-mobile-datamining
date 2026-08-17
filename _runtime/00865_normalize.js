@@ -1,6 +1,6 @@
 // _runtime/00865_normalize.js
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 822 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import addNonEnumerableProperty from "00822_addNonEnumerableProperty.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 
 function normalize(arg0) {
   let num = arg1;

@@ -1,8 +1,8 @@
 // _runtime/00955_onVercelAiSpanStart.js
-import spanToJSON from "spanToJSON" /* 819 */;
-import _mod956 from "module_956" /* 956 */;
-import convertPromptToMessages from "convertPromptToMessages" /* 957 */;
-import _mod958 from "module_958" /* 958 */;
+import spanToJSON from "00819_spanToJSON.js";
+import _mod956 from "metro/00956__.js";
+import convertPromptToMessages from "00957_convertPromptToMessages.js";
+import _mod958 from "metro/00958__.js";
 
 require = arg1;
 const dependencyMap = arg6;

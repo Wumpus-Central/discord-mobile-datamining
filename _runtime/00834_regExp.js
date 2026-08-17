@@ -1,7 +1,7 @@
 // _runtime/00834_regExp.js
-import generateSpanId from "generateSpanId" /* 829 */;
-import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 835 */;
-import dsnFromString from "dsnFromString" /* 837 */;
+import generateSpanId from "00829_generateSpanId.js";
+import baggageHeaderToDynamicSamplingContext from "00835_baggageHeaderToDynamicSamplingContext.js";
+import dsnFromString from "00837_dsnFromString.js";
 
 require = arg1;
 const dependencyMap = arg6;

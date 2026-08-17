@@ -1,14 +1,14 @@
 // _runtime/00298_useTextPressability.js
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
-import processColorDefault from "processColor" /* 50 */;
-import noopDefault from "noop" /* 111 */;
-import flattenStyleDefault from "flattenStyle" /* 148 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import NativeText2 from "NativeText" /* 299 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
+import processColorDefault from "00050_processColor.js";
+import noopDefault from "00111_noop.js";
+import flattenStyleDefault from "00148_flattenStyle.js";
+import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
+import NativeText2 from "00299_NativeText.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import importAllResult from "00019_noop.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 function useTextPressability(textPressabilityProps) {

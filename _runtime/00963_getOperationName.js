@@ -1,6 +1,6 @@
 // _runtime/00963_getOperationName.js
-import _mod958 from "module_958" /* 958 */;
-import items2 from "items" /* 964 */;
+import _mod958 from "metro/00958__.js";
+import items2 from "00964_items.js";
 
 require = arg1;
 const dependencyMap = arg6;

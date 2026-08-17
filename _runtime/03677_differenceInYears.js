@@ -1,8 +1,8 @@
 // _runtime/03677_differenceInYears.js
-import _typeof from "_typeof" /* 3472 */;
-import differenceInCalendarYears from "differenceInCalendarYears" /* 3662 */;
-import compareAsc from "compareAsc" /* 3648 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import _typeof from "metro/03472__typeof.js";
+import differenceInCalendarYears from "03662_differenceInCalendarYears.js";
+import compareAsc from "03648_compareAsc.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: null };

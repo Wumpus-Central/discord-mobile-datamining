@@ -1,15 +1,15 @@
 // _runtime/01033_addClsInstrumentationHandler.js
-import triggerHandlers from "triggerHandlers" /* 1034 */;
-import _addMeasureSpans from "_addMeasureSpans" /* 1058 */;
-import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
-import resourceTimingToSpanAttributes from "resourceTimingToSpanAttributes" /* 1063 */;
-import _onElementTiming from "_onElementTiming" /* 1064 */;
-import instrumentDOM from "instrumentDOM" /* 1065 */;
-import instrumentHistory from "instrumentHistory" /* 1066 */;
-import getNativeImplementation from "getNativeImplementation" /* 1067 */;
-import instrumentXHR from "instrumentXHR" /* 1068 */;
-import serializeFormData from "serializeFormData" /* 1069 */;
-import map from "map" /* 1070 */;
+import triggerHandlers from "01034_triggerHandlers.js";
+import _addMeasureSpans from "01058__addMeasureSpans.js";
+import extractNetworkProtocol from "01059_extractNetworkProtocol.js";
+import resourceTimingToSpanAttributes from "01063_resourceTimingToSpanAttributes.js";
+import _onElementTiming from "01064__onElementTiming.js";
+import instrumentDOM from "01065_instrumentDOM.js";
+import instrumentHistory from "01066_instrumentHistory.js";
+import getNativeImplementation from "01067_getNativeImplementation.js";
+import instrumentXHR from "01068_instrumentXHR.js";
+import serializeFormData from "01069_serializeFormData.js";
+import map from "01070_map.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

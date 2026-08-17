@@ -1,6 +1,6 @@
 // _runtime/00825_getGlobalSingleton.js
-import _mod821 from "module_821" /* 821 */;
-import _mod826 from "module_826" /* 826 */;
+import _mod821 from "metro/00821__.js";
+import _mod826 from "metro/00826__.js";
 
 require = arg1;
 const dependencyMap = arg6;

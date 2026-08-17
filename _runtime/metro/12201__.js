@@ -1,8 +1,8 @@
 // _runtime/metro/12201__.js
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 12200 */;
-import toDotPath from "toDotPath" /* 12202 */;
-import mergeDefs from "mergeDefs" /* 12203 */;
-import closure_1 from "asyncGeneratorStep" /* 5 */;
+import _isNativeReflectConstruct from "../12200__isNativeReflectConstruct.js";
+import toDotPath from "../12202_toDotPath.js";
+import mergeDefs from "../12203_mergeDefs.js";
+import closure_1 from "../00005_asyncGeneratorStep.js";
 
 let self = this;
 let self2 = this;

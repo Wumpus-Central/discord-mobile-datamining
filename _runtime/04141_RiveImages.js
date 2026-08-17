@@ -1,5 +1,5 @@
 // _runtime/04141_RiveImages.js
-import _mod4112 from "module_4112" /* 4112 */;
+import _mod4112 from "metro/04112__.js";
 
 const NitroModules = _mod4112.NitroModules;
 

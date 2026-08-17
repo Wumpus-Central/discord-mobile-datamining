@@ -1,9 +1,9 @@
 // _runtime/01089_distanceToMatch.js
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import closure_1 from "_slicedToArray" /* 32 */;
-import closure_2 from "_objectWithoutProperties" /* 109 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_createClass" /* 42 */;
+import closure_0 from "00005_asyncGeneratorStep.js";
+import closure_1 from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00109__objectWithoutProperties.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00042__createClass.js";
 
 function distanceToMatch(nodeType) {
   let num = arg2;

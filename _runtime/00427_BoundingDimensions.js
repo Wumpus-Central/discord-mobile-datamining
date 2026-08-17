@@ -1,5 +1,5 @@
 // _runtime/00427_BoundingDimensions.js
-import oneArgumentPoolerDefault from "oneArgumentPooler" /* 426 */;
+import oneArgumentPoolerDefault from "00426_oneArgumentPooler.js";
 
 class BoundingDimensions {
   constructor(arg0, arg1) {

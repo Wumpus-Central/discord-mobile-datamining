@@ -1,15 +1,15 @@
 // _runtime/14413__isNativeReflectConstruct.js
-import noopDefault from "noop" /* 19 */;
-import emptyFunctionDefault from "emptyFunction" /* 12384 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 14412 */;
-import closure_1 from "_objectWithoutProperties" /* 109 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopDefault from "00019_noop.js";
+import emptyFunctionDefault from "12384_emptyFunction.js";
+import _isNativeReflectConstructDefault from "14412__isNativeReflectConstruct.js";
+import closure_1 from "metro/00109__objectWithoutProperties.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00098__inherits.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 function _isNativeReflectConstruct() {
   try {

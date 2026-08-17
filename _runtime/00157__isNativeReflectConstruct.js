@@ -1,13 +1,13 @@
 // _runtime/00157__isNativeReflectConstruct.js
-import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
-import DOMException from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
-import closure_3 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult3 from "_classPrivateFieldKey" /* 91 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _wrapNativeSuperDefault from "metro/00158__wrapNativeSuper.js";
+import DOMException from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import importDefaultResult1 from "00098__inherits.js";
+import closure_3 from "00090__classPrivateFieldBase.js";
+import importDefaultResult3 from "00091__classPrivateFieldKey.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 function _isNativeReflectConstruct() {
   try {

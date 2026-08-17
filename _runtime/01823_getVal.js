@@ -1,5 +1,5 @@
 // _runtime/01823_getVal.js
-import t from "t" /* 1665 */;
+import t from "01665_t.js";
 
 require = arg1;
 const dependencyMap = arg6;

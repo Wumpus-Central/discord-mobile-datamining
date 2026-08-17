@@ -1,7 +1,7 @@
 // _runtime/04930_readTag.js
-import _modDef4913 from "module_4913" /* 4913 */;
-import _modDef4927 from "module_4927" /* 4927 */;
-import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+import _modDef4913 from "metro/04913__.js";
+import _modDef4927 from "metro/04927__.js";
+import importDefaultResult1 from "04931_importDefaultResult1.js";
 
 require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {

@@ -1,7 +1,7 @@
 // _runtime/00880__INTERNAL_captureSerializedLog.js
-import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
-import createLogContainerEnvelopeItem from "createLogContainerEnvelopeItem" /* 884 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import getGlobalSingleton from "00825_getGlobalSingleton.js";
+import createLogContainerEnvelopeItem from "00884_createLogContainerEnvelopeItem.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function _INTERNAL_captureSerializedLog(closure_0) {
   const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {

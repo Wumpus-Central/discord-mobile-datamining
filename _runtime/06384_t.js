@@ -1,5 +1,5 @@
 // _runtime/06384_t.js
-import tagMessage from "tagMessage" /* 6382 */;
+import tagMessage from "06382_tagMessage.js";
 import { 06383__ } from "metro/06383__.js";
 
 require = arg1;

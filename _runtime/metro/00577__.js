@@ -1,6 +1,6 @@
 // _runtime/metro/00577__.js
-import getEvalledConstructor from "getEvalledConstructor" /* 540 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
+import getEvalledConstructor from "../00540_getEvalledConstructor.js";
+import callBoundIntrinsic from "../00574_callBoundIntrinsic.js";
 
 let tmp = getEvalledConstructor("%Map%", true);
 let closure_2 = tmp;

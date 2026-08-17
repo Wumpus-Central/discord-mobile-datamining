@@ -1,12 +1,12 @@
 // _runtime/00424_Mixin.js
-import noopAll from "noop" /* 19 */;
-import measureDefault from "measure" /* 68 */;
-import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
-import get_VersionDefault from "get Version" /* 273 */;
-import SoundManagerDefault from "SoundManager" /* 294 */;
-import PositionDefault from "Position" /* 425 */;
-import BoundingDimensionsDefault from "BoundingDimensions" /* 427 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noopAll from "00019_noop.js";
+import measureDefault from "00068_measure.js";
+import _objectWithoutPropertiesDefault from "metro/00109__objectWithoutProperties.js";
+import get_VersionDefault from "00273_get_Version.js";
+import SoundManagerDefault from "00294_SoundManager.js";
+import PositionDefault from "00425_Position.js";
+import BoundingDimensionsDefault from "00427_BoundingDimensions.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 noopAll;
 const f18646 = (arg0) => {

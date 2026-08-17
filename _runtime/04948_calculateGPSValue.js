@@ -1,6 +1,6 @@
 // _runtime/04948_calculateGPSValue.js
-import _modDef4933 from "module_4933" /* 4933 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _modDef4933 from "metro/04933__.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function calculateGPSValue(str) {
   [tmp2, str] = callback(str.split(","), 2);

@@ -1,6 +1,6 @@
 // _runtime/01827_getStylesFromObject.js
-import t from "t" /* 1665 */;
-import isJest from "isJest" /* 1657 */;
+import t from "01665_t.js";
+import isJest from "01657_isJest.js";
 
 let obj = { fps: 60 };
 function getStylesFromObject(jestInlineStyle) {

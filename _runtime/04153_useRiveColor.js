@@ -1,8 +1,8 @@
 // _runtime/04153_useRiveColor.js
-import c from "c" /* 4135 */;
-import RiveColor2 from "RiveColor" /* 4143 */;
-import useRiveProperty from "useRiveProperty" /* 4148 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import c from "04135_c.js";
+import RiveColor2 from "04143_RiveColor.js";
+import useRiveProperty from "04148_useRiveProperty.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 require("noop").useCallback;

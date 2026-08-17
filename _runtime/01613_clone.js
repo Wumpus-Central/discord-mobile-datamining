@@ -1,8 +1,8 @@
 // _runtime/01613_clone.js
-import BaseNavigationContainer from "BaseNavigationContainer" /* 1503 */;
-import useEffectDefault from "useEffect" /* 1522 */;
-import closure_3 from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
+import BaseNavigationContainer from "01503_BaseNavigationContainer.js";
+import useEffectDefault from "01522_useEffect.js";
+import closure_3 from "00019_noop.js";
+import { Platform } from "00017_get_ActivityIndicator.js";
 
 require = arg1;
 function clone(obj, arg1, get) {

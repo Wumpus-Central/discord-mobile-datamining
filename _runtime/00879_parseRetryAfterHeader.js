@@ -1,6 +1,6 @@
 // _runtime/00879_parseRetryAfterHeader.js
-import safeDateNow from "safeDateNow" /* 831 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import safeDateNow from "00831_safeDateNow.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function parseRetryAfterHeader(arg0) {
   let safeDateNowResult = arg1;

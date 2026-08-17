@@ -1,5 +1,5 @@
 // _runtime/01102_startProfileForSpan.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { createProfilePayload } from "01101_createProfilePayload.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

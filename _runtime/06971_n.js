@@ -1,6 +1,6 @@
 // _runtime/06971_n.js
-import cancelAnimation from "cancelAnimation" /* 1654 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6953 */;
+import cancelAnimation from "01654_cancelAnimation.js";
+import GESTURE_SOURCE from "06953_GESTURE_SOURCE.js";
 
 require = arg1;
 const dependencyMap = arg6;

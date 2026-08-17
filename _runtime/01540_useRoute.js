@@ -1,6 +1,6 @@
 // _runtime/01540_useRoute.js
-import context2 from "context" /* 1541 */;
-import closure_2 from "noop" /* 19 */;
+import context2 from "01541_context.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

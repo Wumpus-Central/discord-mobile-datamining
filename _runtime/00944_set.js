@@ -1,5 +1,5 @@
 // _runtime/00944_set.js
-import _mod940 from "module_940" /* 940 */;
+import _mod940 from "metro/00940__.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const items = [_mod940.CLIENT_ADDRESS_ATTRIBUTE, _mod940.CLIENT_PORT_ATTRIBUTE, _mod940.MCP_RESOURCE_URI_ATTRIBUTE];

@@ -1,5 +1,5 @@
 // _runtime/05318_add.js
-import Decimal from "module_1" /* 1 */;
+import Decimal from "../discord_app/modules/debug/logAppStart.tsx";
 
 function add(s, s2) {
   let diff2;

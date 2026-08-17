@@ -1,9 +1,9 @@
 // _runtime/metro/09037__.js
-import colorPropType from "colorPropType" /* 9025 */;
-import _mod9033 from "module_9033" /* 9033 */;
-import merged12 from "merged1" /* 9034 */;
-import merged22 from "merged2" /* 9035 */;
-import emptyFunction from "emptyFunction" /* 4205 */;
+import colorPropType from "../09025_colorPropType.js";
+import _mod9033 from "09033__.js";
+import merged12 from "../09034_merged1.js";
+import merged22 from "../09035_merged2.js";
+import emptyFunction from "../04205_emptyFunction.js";
 
 const obj = {};
 const module_9033 = Object.assign(_mod9033);

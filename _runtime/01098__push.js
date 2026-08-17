@@ -1,5 +1,5 @@
 // _runtime/01098__push.js
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { makeFetchTransport } from "01032_makeFetchTransport.js";
 

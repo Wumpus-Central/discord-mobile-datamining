@@ -1,6 +1,6 @@
 // _runtime/03825_isSameSecond.js
-import startOfSecond from "startOfSecond" /* 3826 */;
-import requiredArgs from "requiredArgs" /* 3473 */;
+import startOfSecond from "03826_startOfSecond.js";
+import requiredArgs from "03473_requiredArgs.js";
 
 if (!startOfSecond) {
   let obj = { default: null };

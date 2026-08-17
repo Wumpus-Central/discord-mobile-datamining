@@ -1,5 +1,5 @@
 // _runtime/00511_Buffer.js
-import read from "read" /* 512 */;
+import read from "00512_read.js";
 
 require = arg1;
 const exports = arg5;

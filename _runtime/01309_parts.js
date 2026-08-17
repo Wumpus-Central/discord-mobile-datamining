@@ -1,5 +1,5 @@
 // _runtime/01309_parts.js
-import charCodeAtResult from "module_0" /* 0 */;
+import charCodeAtResult from "../discord_app/index.native.tsx";
 
 let length;
 arg5.base64decode = undefined;

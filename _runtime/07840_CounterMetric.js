@@ -1,7 +1,7 @@
 // _runtime/07840_CounterMetric.js
-import _mod7835 from "module_7835" /* 7835 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod7835 from "metro/07835__.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 
 let SetMetric = require;
 class CounterMetric {

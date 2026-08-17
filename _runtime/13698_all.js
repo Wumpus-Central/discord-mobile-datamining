@@ -1,5 +1,5 @@
 // _runtime/13698_all.js
-import all from "all" /* 13699 */;
+import all from "13699_all.js";
 
 
 export default (obj) => {

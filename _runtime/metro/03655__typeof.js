@@ -1,5 +1,5 @@
 // _runtime/metro/03655__typeof.js
-import requiredArgs from "requiredArgs" /* 3473 */;
+import requiredArgs from "../03473_requiredArgs.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {

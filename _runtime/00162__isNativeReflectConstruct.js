@@ -1,14 +1,14 @@
 // _runtime/00162__isNativeReflectConstruct.js
-import nullthrowsDefault from "nullthrows" /* 70 */;
-import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import closure_1 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
-import closure_4 from "_get" /* 96 */;
-import closure_5 from "_classPrivateFieldBase" /* 90 */;
-import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
-import importDefaultResult1 from "_inherits" /* 98 */;
+import nullthrowsDefault from "00070_nullthrows.js";
+import NativePerformanceCxxDefault from "00154_NativePerformanceCxx.js";
+import closure_1 from "metro/00041__classCallCheck.js";
+import importDefaultResult from "metro/00042__createClass.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00096__get.js";
+import closure_5 from "00090__classPrivateFieldBase.js";
+import importDefaultResult2 from "00091__classPrivateFieldKey.js";
+import importDefaultResult1 from "00098__inherits.js";
 
 let EventCounts = global;
 function _isNativeReflectConstruct() {

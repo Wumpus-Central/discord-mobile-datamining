@@ -1,5 +1,5 @@
 // _runtime/00580_ResponseBase.js
-import _createForOfIteratorHelper from "_createForOfIteratorHelper" /* 532 */;
+import _createForOfIteratorHelper from "00532__createForOfIteratorHelper.js";
 
 class ResponseBase {
   constructor() {

@@ -1,5 +1,5 @@
 // _runtime/06515_pinchHandlerName.js
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6404 */;
+import _isNativeReflectConstructDefault from "06404__isNativeReflectConstruct.js";
 
 const obj = { name: "PinchGestureHandler", allowedProps: require("items1").baseGestureHandlerProps, config: {} };
 

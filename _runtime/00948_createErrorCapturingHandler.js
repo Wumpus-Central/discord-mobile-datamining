@@ -1,5 +1,5 @@
 // _runtime/00948_createErrorCapturingHandler.js
-import captureError from "captureError" /* 947 */;
+import captureError from "00947_captureError.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
 // _runtime/00887_setupIntegration.js
-import getClient from "getClient" /* 848 */;
+import getClient from "00848_getClient.js";
 import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;

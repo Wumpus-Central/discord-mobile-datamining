@@ -1,5 +1,5 @@
 // _runtime/07493_Node.js
-import Iterator from "Iterator" /* 7494 */;
+import Iterator from "07494_Iterator.js";
 
 class Node {
   constructor(arg0) {

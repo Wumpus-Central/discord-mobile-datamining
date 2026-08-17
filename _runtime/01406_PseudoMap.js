@@ -1,5 +1,5 @@
 // _runtime/01406_PseudoMap.js
-import PseudoMap from "PseudoMap" /* 1407 */;
+import PseudoMap from "01407_PseudoMap.js";
 
 let tmp = "pseudomap" === process.env.npm_package_name;
 if (tmp) {

@@ -1,5 +1,5 @@
 // _runtime/00850_addHandler.js
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;
 const dependencyMap = arg6;

@@ -1,5 +1,5 @@
 // _runtime/00954_createConsolaReporter.js
-import closure_2 from "_objectWithoutProperties" /* 109 */;
+import closure_2 from "metro/00109__objectWithoutProperties.js";
 
 let closure_3 = ["type", "level", "message", "args", "tag", "date"];
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

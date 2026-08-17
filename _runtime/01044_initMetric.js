@@ -1,5 +1,5 @@
 // _runtime/01044_initMetric.js
-import getNavigationEntry from "getNavigationEntry" /* 1043 */;
+import getNavigationEntry from "01043_getNavigationEntry.js";
 
 require = arg1;
 const dependencyMap = arg6;

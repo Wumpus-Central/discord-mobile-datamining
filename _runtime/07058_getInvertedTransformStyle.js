@@ -1,5 +1,5 @@
 // _runtime/07058_getInvertedTransformStyle.js
-import PlatformConfig2 from "PlatformConfig" /* 7056 */;
+import PlatformConfig2 from "07056_PlatformConfig.js";
 
 require = arg1;
 const dependencyMap = arg6;

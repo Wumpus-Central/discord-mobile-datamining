@@ -1,5 +1,5 @@
 // _runtime/01685_weakMap.js
-import isJest from "isJest" /* 1657 */;
+import isJest from "01657_isJest.js";
 
 isJest = isJest.shouldBeUseWeb();
 const SymbolResult = Symbol("shareable flag");

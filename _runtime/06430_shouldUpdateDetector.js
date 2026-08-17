@@ -1,6 +1,6 @@
 // _runtime/06430_shouldUpdateDetector.js
-import noop from "noop" /* 19 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
+import noop from "00019_noop.js";
+import transformIntoHandlerTags from "06408_transformIntoHandlerTags.js";
 
 function shouldUpdateDetector(arg0, handlerTag) {
   if (undefined === arg0) {

@@ -1,7 +1,7 @@
 // _runtime/metro/03782__typeof.js
-import Parser2 from "Parser" /* 3778 */;
-import getUTCWeekYear from "getUTCWeekYear" /* 3714 */;
-import startOfUTCWeek from "startOfUTCWeek" /* 3475 */;
+import Parser2 from "../03778_Parser.js";
+import getUTCWeekYear from "../03714_getUTCWeekYear.js";
+import startOfUTCWeek from "../03475_startOfUTCWeek.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;

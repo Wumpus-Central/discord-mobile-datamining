@@ -1,8 +1,8 @@
 // _runtime/01633_context.js
-import closure_2 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_2 from "metro/00032__slicedToArray.js";
+import importAllResult from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 import { NativeSafeAreaProvider } from "01634_NativeSafeAreaProvider.js";
 
 const require = arg1;

@@ -1,18 +1,18 @@
 // _runtime/00120_setUpDefaltReactNativeEnvironment.js
-import javaScriptFlagGetter from "javaScriptFlagGetter" /* 27 */;
-import env from "env" /* 121 */;
-import setUpDOM from "setUpDOM" /* 122 */;
-import NativePerformanceCxx from "NativePerformanceCxx" /* 153 */;
-import polyfillObjectProperty from "polyfillObjectProperty" /* 174 */;
-import _mod179 from "module_179" /* 179 */;
-import _mod188 from "module_188" /* 188 */;
-import _mod195 from "module_195" /* 195 */;
-import _mod198 from "module_198" /* 198 */;
-import Alert from "Alert" /* 230 */;
-import polyfillObjectProperty2 from "polyfillObjectProperty" /* 234 */;
-import _mod235 from "module_235" /* 235 */;
-import __fetchSegment from "__fetchSegment" /* 241 */;
-import AppRegistry from "AppRegistry" /* 244 */;
+import javaScriptFlagGetter from "00027_javaScriptFlagGetter.js";
+import env from "00121_env.js";
+import setUpDOM from "00122_setUpDOM.js";
+import NativePerformanceCxx from "00153_NativePerformanceCxx.js";
+import polyfillObjectProperty from "00174_polyfillObjectProperty.js";
+import _mod179 from "metro/00179__.js";
+import _mod188 from "metro/00188__.js";
+import _mod195 from "metro/00195__.js";
+import _mod198 from "metro/00198__.js";
+import Alert from "00230_Alert.js";
+import polyfillObjectProperty2 from "00234_polyfillObjectProperty.js";
+import _mod235 from "metro/00235__.js";
+import __fetchSegment from "00241___fetchSegment.js";
+import AppRegistry from "00244_AppRegistry.js";
 
 require = arg1;
 const dependencyMap = arg6;

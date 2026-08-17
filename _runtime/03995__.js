@@ -1,5 +1,5 @@
 // _runtime/03995__.js
-import t from "t" /* 3975 */;
+import t from "03975_t.js";
 
 const fn = function _(moment) {
   function relativeTimeWithPlural(arg0, arg1, arg2) {

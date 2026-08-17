@@ -1,16 +1,16 @@
 // _runtime/06404__isNativeReflectConstruct.js
-import map from "map" /* 6381 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
-import _mod6409 from "module_6409" /* 6409 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 6412 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_createClass" /* 42 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import closure_7 from "_inherits" /* 98 */;
-import closure_8 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import map from "06381_map.js";
+import transformIntoHandlerTags from "06408_transformIntoHandlerTags.js";
+import _mod6409 from "metro/06409__.js";
+import get_ActivityIndicatorDefault from "06412_get_ActivityIndicator.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00042__createClass.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import closure_7 from "00098__inherits.js";
+import closure_8 from "00019_noop.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import { jsx } from "react/00021_jsxProd.js";
 
 require = arg1;
 function _isNativeReflectConstruct() {
